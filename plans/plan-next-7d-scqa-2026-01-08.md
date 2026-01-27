@@ -1,5 +1,12 @@
 # Next 7–10 Days Web Work Plan SCQA as of 2026-01-08
 
+For the next 7–10 days, priority is placed on **shipping two live sites** on a FlowerShow-style stack:
+
+1. The **Life Itself main website** (minimal, hub-of-hubs). See [[brief-life-itself-website]]
+2. The **Life Itself Research sub-site** (substantively complete). See [[brief-research-website]]
+
+---
+
 ## Situation
 
 - Life Itself now comprises multiple distinct but related web properties (main site, research sub-site, hubs, courses), with substantial prior work already completed on information architecture and visual/UX concepts.
