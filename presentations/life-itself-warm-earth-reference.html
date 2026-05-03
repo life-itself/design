@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscious Cultural Evolution — Presentation</title>
+
+    <!-- Fonts: Cormorant Garamond for display/quotes, DM Sans for utility -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (THEME)
+           Warm earth palette: sand, clay, charcoal
+           =========================================== */
+        :root {
+            /* Colors — warm earth tones */
+            --sand: #c2a97e;
+            --sand-dark: #a8925f;
+            --sand-light: #d4c4a0;
+            --cream: #f5f0e6;
+            --cream-dark: #ebe4d6;
+            --parchment: #e8e0d0;
+            --charcoal: #1a1a1a;
+            --charcoal-light: #2d2d2d;
+            --clay: #8b6f47;
+            --clay-dark: #6b5535;
+            --text-dark: #1a1a1a;
+            --text-light: #f5f0e6;
+            --text-muted: #7a7468;
+
+            /* Typography — all clamp() */
+            --font-display: 'Cormorant Garamond', serif;
+            --font-quote: 'Cormorant Garamond', serif;
+            --font-body: 'Cormorant Garamond', serif;
+            --font-utility: 'DM Sans', sans-serif;
+            --title-size: clamp(2.8rem, 7vw, 5.5rem);
+            --section-title-size: clamp(2.8rem, 8vw, 6.5rem);
+            --subsection-title-size: clamp(2rem, 5.5vw, 4.5rem);
+            --h2-size: clamp(2rem, 4.5vw, 3.8rem);
+            --h3-size: clamp(1.4rem, 3vw, 2.5rem);
+            --body-size: clamp(1.3rem, 2.5vw, 2.1rem);
+            --small-size: clamp(1rem, 1.8vw, 1.5rem);
+            --label-size: clamp(0.9rem, 1.4vw, 1.2rem);
+            --quote-size: clamp(1.4rem, 3vw, 2.6rem);
+
+            /* Spacing */
+            --slide-padding: clamp(1.5rem, 5vw, 5rem);
+            --content-gap: clamp(0.75rem, 2vw, 2rem);
+            --element-gap: clamp(0.25rem, 1vw, 1rem);
+
+            /* Animation */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.7s;
+            --duration-slow: 1s;
+        }
+
+        /* ===========================================
+           BASE STYLES
+           =========================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* === VIEWPORT BASE STYLES (MANDATORY) === */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+        }
+        .card, .container, .content-box {
+            max-width: min(90vw, 1000px);
+            max-height: min(80vh, 700px);
+        }
+        .feature-list, .bullet-list {
+            gap: clamp(0.4rem, 1vh, 1rem);
+        }
+        .feature-list li, .bullet-list li {
+            font-size: var(--body-size);
+            line-height: 1.4;
+        }
+        img, .image-container {
+            max-width: 100%;
+            max-height: min(50vh, 400px);
+            object-fit: contain;
+        }
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(0.75rem, 3vw, 2rem);
+                --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+                --title-size: clamp(2rem, 5.5vw, 3.5rem);
+                --h2-size: clamp(1.5rem, 3.5vw, 2.5rem);
+                --body-size: clamp(1.1rem, 2vw, 1.6rem);
+                --section-title-size: clamp(2rem, 6vw, 4rem);
+                --subsection-title-size: clamp(1.7rem, 4vw, 3rem);
+            }
+        }
+        @media (max-height: 600px) {
+            :root {
+                --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+                --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+                --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+                --body-size: clamp(0.8rem, 1.4vw, 1.1rem);
+            }
+            .nav-dots, .keyboard-hint, .decorative {
+                display: none;
+            }
+        }
+        @media (max-height: 500px) {
+            :root {
+                --slide-padding: clamp(0.4rem, 2vw, 1rem);
+                --title-size: clamp(1rem, 3.5vw, 1.5rem);
+                --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+                --body-size: clamp(0.65rem, 1vw, 0.85rem);
+            }
+        }
+        @media (max-width: 600px) {
+            :root {
+                --title-size: clamp(1.25rem, 7vw, 2.5rem);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+        /* === END VIEWPORT BASE === */
+
+        /* ===========================================
+           GLOBAL TYPOGRAPHY
+           =========================================== */
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--charcoal);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===========================================
+           PROGRESS BAR
+           Thin sand line at top of viewport
+           =========================================== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--sand);
+            z-index: 1000;
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+
+        /* ===========================================
+           NAVIGATION DOTS
+           Right side, vertical
+           =========================================== */
+        .nav-dots {
+            position: fixed;
+            right: clamp(0.75rem, 1.5vw, 1.5rem);
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: clamp(4px, 0.5vh, 8px);
+            z-index: 100;
+        }
+        .nav-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            opacity: 0.3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+        .nav-dot.active {
+            opacity: 1;
+            background: var(--sand);
+            transform: scale(1.5);
+        }
+        .nav-dot.on-dark {
+            background: var(--cream);
+        }
+
+        /* ===========================================
+           SLIDE TYPES
+           =========================================== */
+
+        /* --- Content slides: warm cream background --- */
+        .slide-content-type {
+            background: var(--cream);
+        }
+        .slide-content-type .slide-content {
+            max-width: min(90vw, 900px);
+            margin: 0 auto;
+        }
+
+        /* --- Section divider slides: warm sand --- */
+        .slide-section {
+            background: var(--sand);
+            color: var(--text-dark);
+        }
+        .slide-section .slide-content {
+            align-items: center;
+            text-align: center;
+        }
+        .slide-section .section-number {
+            font-family: var(--font-utility);
+            font-size: var(--small-size);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: var(--element-gap);
+        }
+        .slide-section .section-title {
+            font-family: var(--font-display);
+            font-size: var(--section-title-size);
+            font-weight: 700;
+            line-height: 1.05;
+            max-width: min(80vw, 700px);
+        }
+        .slide-section .section-subtitle {
+            font-family: var(--font-utility);
+            font-size: var(--body-size);
+            font-weight: 400;
+            opacity: 0.7;
+            margin-top: var(--element-gap);
+            font-style: italic;
+        }
+
+        /* --- Subsection divider slides: dark charcoal --- */
+        .slide-subsection {
+            background: var(--charcoal);
+            color: var(--text-light);
+        }
+        .slide-subsection .slide-content {
+            align-items: center;
+            text-align: center;
+        }
+        .slide-subsection .subsection-title {
+            font-family: var(--font-display);
+            font-size: var(--subsection-title-size);
+            font-weight: 700;
+            line-height: 1.1;
+            max-width: min(80vw, 700px);
+        }
+        .slide-subsection .subsection-subtitle {
+            font-family: var(--font-utility);
+            font-size: var(--body-size);
+            opacity: 0.6;
+            margin-top: var(--element-gap);
+        }
+        .slide-subsection .subsection-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--sand);
+            margin: var(--content-gap) auto 0;
+        }
+
+        /* --- Title slide: clay-toned --- */
+        .slide-title {
+            background: var(--clay);
+            color: var(--text-light);
+        }
+        .slide-title .slide-content {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: var(--content-gap);
+        }
+        .slide-title h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+        }
+        .slide-title .subtitle {
+            font-family: var(--font-quote);
+            font-size: clamp(1rem, 2.2vw, 1.6rem);
+            font-style: italic;
+            line-height: 1.4;
+            opacity: 0.8;
+            max-width: 550px;
+        }
+
+        /* ===========================================
+           CONTENT SLIDE ELEMENTS
+           =========================================== */
+
+        /* Slide titles */
+        .slide-heading {
+            font-family: var(--font-display);
+            font-size: var(--h2-size);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--charcoal);
+            margin-bottom: var(--content-gap);
+        }
+        .slide-heading::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--sand);
+            margin-top: clamp(0.3rem, 0.8vw, 0.6rem);
+        }
+
+        /* Body text */
+        .slide-body {
+            font-family: var(--font-body);
+            font-size: var(--body-size);
+            line-height: 1.65;
+            color: var(--charcoal-light);
+            max-width: min(75ch, 100%);
+        }
+        .slide-body + .slide-body {
+            margin-top: var(--element-gap);
+        }
+
+        /* Emphasis text */
+        .slide-emphasis {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2.5vw, 2rem);
+            font-weight: 400;
+            line-height: 1.35;
+            color: var(--charcoal);
+            max-width: min(65ch, 100%);
+        }
+        .slide-emphasis em {
+            font-style: italic;
+            color: var(--clay);
+        }
+        .slide-emphasis strong {
+            font-weight: 700;
+        }
+
+        /* Blockquotes */
+        .slide-quote {
+            position: relative;
+            padding-left: clamp(1.2rem, 3vw, 2.5rem);
+            max-width: min(70ch, 100%);
+        }
+        .slide-quote::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--sand);
+        }
+        .slide-quote p {
+            font-family: var(--font-quote);
+            font-size: var(--quote-size);
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--charcoal);
+        }
+        .slide-quote .attribution {
+            font-family: var(--font-utility);
+            font-size: var(--small-size);
+            font-style: normal;
+            color: var(--text-muted);
+            margin-top: var(--element-gap);
+            letter-spacing: 0.03em;
+        }
+
+        /* Large centered quote */
+        .slide-quote-centered {
+            text-align: center;
+            max-width: min(75ch, 85vw);
+            margin: 0 auto;
+        }
+        .slide-quote-centered .slide-content {
+            align-items: center;
+            max-width: min(75ch, 85vw);
+        }
+        .slide-quote-centered .slide-quote {
+            padding-left: 0;
+            max-width: none;
+        }
+        .slide-quote-centered .slide-quote::before {
+            display: none;
+        }
+        .slide-quote-centered .slide-quote p {
+            font-size: clamp(1rem, 2.2vw, 1.6rem);
+        }
+        .slide-quote-centered .slide-quote::after {
+            content: '\201C';
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 8rem);
+            color: var(--sand);
+            opacity: 0.2;
+            position: absolute;
+            top: calc(-1 * clamp(1.5rem, 4vw, 4rem));
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 1;
+        }
+
+        /* Bullet lists */
+        .slide-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.5rem, 1.2vh, 1rem);
+        }
+        .slide-list li {
+            font-family: var(--font-body);
+            font-size: var(--body-size);
+            line-height: 1.55;
+            padding-left: clamp(1rem, 2vw, 1.5rem);
+            position: relative;
+            color: var(--charcoal-light);
+        }
+        .slide-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: clamp(0.4rem, 0.8vw, 0.6rem);
+            width: 6px;
+            height: 6px;
+            background: var(--sand);
+            border-radius: 50%;
+        }
+        .slide-list li strong {
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        /* Numbered lists */
+        .slide-list-numbered {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.4rem, 1vh, 0.8rem);
+            counter-reset: slide-counter;
+        }
+        .slide-list-numbered li {
+            font-family: var(--font-body);
+            font-size: var(--body-size);
+            line-height: 1.55;
+            padding-left: clamp(1.5rem, 2.5vw, 2rem);
+            position: relative;
+            color: var(--charcoal-light);
+            counter-increment: slide-counter;
+        }
+        .slide-list-numbered li::before {
+            content: counter(slide-counter) ".";
+            position: absolute;
+            left: 0;
+            font-family: var(--font-utility);
+            font-weight: 700;
+            font-size: var(--small-size);
+            color: var(--sand-dark);
+        }
+        .slide-list-numbered li strong {
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        /* Statement slides */
+        .slide-statement .slide-content {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .slide-statement .slide-emphasis {
+            max-width: min(55ch, 80vw);
+            text-align: center;
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            max-width: min(85vw, 800px);
+            border-collapse: collapse;
+            font-family: var(--font-body);
+            font-size: clamp(0.75rem, 1.4vw, 1.1rem);
+        }
+        .comparison-table th {
+            font-family: var(--font-utility);
+            font-size: var(--small-size);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--clay);
+            padding: clamp(0.3rem, 0.7vw, 0.6rem) clamp(0.5rem, 1vw, 1rem);
+            text-align: left;
+            border-bottom: 2px solid var(--sand);
+        }
+        .comparison-table td {
+            padding: clamp(0.3rem, 0.7vw, 0.6rem) clamp(0.5rem, 1vw, 1rem);
+            border-bottom: 1px solid var(--cream-dark);
+            vertical-align: top;
+            line-height: 1.45;
+            color: var(--charcoal-light);
+        }
+        .comparison-table td:first-child {
+            font-family: var(--font-utility);
+            font-size: var(--small-size);
+            font-weight: 700;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        /* ===========================================
+           DECORATIVE ELEMENTS
+           Paper texture overlay on cream slides
+           =========================================== */
+        .slide-content-type::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        .slide-content-type .slide-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===========================================
+           LIFE ITSELF LOGO
+           Title slide: centered inline image
+           All other slides: CSS ::after bottom-right
+           =========================================== */
+        .title-logo-link { display: inline-block; margin-top: var(--content-gap); }
+        .title-logo { max-height: clamp(40px, 6vh, 70px); opacity: 0.85; display: block; }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            bottom: clamp(0.75rem, 1.5vw, 1.5rem);
+            right: clamp(1rem, 2vw, 2rem);
+            width: clamp(60px, 7vw, 110px);
+            height: clamp(24px, 3.5vh, 40px);
+            background-image: url('life-itself-logotype.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 0.55;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .slide-title::after { display: none; }
+        .slide-subsection::after,
+        .slide-clay-dark::after { opacity: 0.35; }
+
+        /* Slide number */
+        .slide-number {
+            position: absolute;
+            bottom: clamp(0.75rem, 1.5vw, 1.5rem);
+            left: clamp(1rem, 2vw, 2rem);
+            font-family: var(--font-utility);
+            font-size: var(--small-size);
+            color: var(--text-muted);
+            opacity: 0.5;
+            z-index: 2;
+        }
+        .slide-section .slide-number,
+        .slide-subsection .slide-number,
+        .slide-title .slide-number {
+            color: var(--text-light);
+            opacity: 0.3;
+        }
+        .slide-section .slide-number {
+            color: var(--text-dark);
+            opacity: 0.3;
+        }
+
+        /* ===========================================
+           ANIMATIONS
+           Editorial: measured, elegant reveals
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                        transform var(--duration-normal) var(--ease-out-expo);
+        }
+        .reveal-slow {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity var(--duration-slow) var(--ease-out-expo),
+                        transform var(--duration-slow) var(--ease-out-expo);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity var(--duration-slow) var(--ease-out-expo),
+                        transform var(--duration-slow) var(--ease-out-expo);
+        }
+        .slide.visible .reveal,
+        .slide.visible .reveal-slow,
+        .slide.visible .reveal-scale {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Stagger children */
+        .reveal:nth-child(1) { transition-delay: 0.05s; }
+        .reveal:nth-child(2) { transition-delay: 0.15s; }
+        .reveal:nth-child(3) { transition-delay: 0.25s; }
+        .reveal:nth-child(4) { transition-delay: 0.35s; }
+        .reveal:nth-child(5) { transition-delay: 0.45s; }
+        .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+        .reveal-slow:nth-child(1) { transition-delay: 0.1s; }
+        .reveal-slow:nth-child(2) { transition-delay: 0.25s; }
+        .reveal-slow:nth-child(3) { transition-delay: 0.4s; }
+
+        /* List item stagger */
+        .slide-list li, .slide-list-numbered li {
+            opacity: 0;
+            transform: translateX(-15px);
+            transition: opacity 0.5s var(--ease-out-expo),
+                        transform 0.5s var(--ease-out-expo);
+        }
+        .slide.visible .slide-list li,
+        .slide.visible .slide-list-numbered li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-list li:nth-child(1),
+        .slide-list-numbered li:nth-child(1) { transition-delay: 0.15s; }
+        .slide-list li:nth-child(2),
+        .slide-list-numbered li:nth-child(2) { transition-delay: 0.25s; }
+        .slide-list li:nth-child(3),
+        .slide-list-numbered li:nth-child(3) { transition-delay: 0.3s; }
+        .slide-list li:nth-child(4),
+        .slide-list-numbered li:nth-child(4) { transition-delay: 0.4s; }
+        .slide-list li:nth-child(5),
+        .slide-list-numbered li:nth-child(5) { transition-delay: 0.5s; }
+
+        /* Section slide entrance */
+        .slide-section .section-title,
+        .slide-subsection .subsection-title {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity var(--duration-slow) var(--ease-out-expo),
+                        transform var(--duration-slow) var(--ease-out-expo);
+        }
+        .slide-section.visible .section-title,
+        .slide-subsection.visible .subsection-title {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Table row stagger */
+        .comparison-table tbody tr {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s var(--ease-out-expo),
+                        transform 0.5s var(--ease-out-expo);
+        }
+        .slide.visible .comparison-table tbody tr {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .comparison-table tbody tr:nth-child(1) { transition-delay: 0.15s; }
+        .comparison-table tbody tr:nth-child(2) { transition-delay: 0.25s; }
+        .comparison-table tbody tr:nth-child(3) { transition-delay: 0.35s; }
+        .comparison-table tbody tr:nth-child(4) { transition-delay: 0.45s; }
+
+        /* Parchment slide variant — slightly darker cream */
+        .slide-parchment {
+            background: var(--parchment);
+        }
+        .slide-parchment .slide-content {
+            max-width: min(90vw, 900px);
+            margin: 0 auto;
+        }
+        .slide-parchment::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        .slide-parchment .slide-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Clay dark slide variant */
+        .slide-clay-dark {
+            background: var(--clay-dark);
+            color: var(--text-light);
+        }
+        .slide-clay-dark .slide-content {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .slide-clay-dark .slide-heading {
+            color: var(--text-light);
+        }
+        .slide-clay-dark .slide-heading::after {
+            background: var(--sand-light);
+        }
+        .slide-clay-dark .slide-body,
+        .slide-clay-dark .slide-emphasis {
+            color: var(--cream-dark);
+        }
+        .slide-clay-dark .slide-emphasis strong {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation dots -->
+    <nav class="nav-dots" id="navDots"></nav>
+
+    <!-- ===========================================
+         SLIDE 1: TITLE
+         =========================================== -->
+    <section class="slide slide-title" data-theme="dark">
+        <div class="slide-content">
+            <h1 class="reveal-slow">Conscious Cultural Evolution</h1>
+            <p class="subtitle reveal-slow">Cultivating conditions that shape our future</p>
+            <p class="reveal-slow" style="font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 600; opacity: 0.9; margin-top: var(--element-gap);">Rufus Pollock</p>
+            <a href="https://lifeitself.org" target="_blank" rel="noopener" class="title-logo-link reveal-slow">
+                <img src="life-itself-logotype.webp" alt="Life Itself" class="title-logo">
+            </a>
+        </div>
+        <span class="slide-number">1</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 2: WHAT IS CULTURE?
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">What is culture?</h2>
+            <div class="slide-quote reveal">
+                <p>"Cultures are adaptive responses, just as feathers are for birds and fur is for mammals. Cultures prescribe norms, evolve goals, build beliefs that help us tackle the challenges of existence."</p>
+                <div class="attribution">— Csikszentmihalyi (via David Sloan Wilson)</div>
+            </div>
+            <p class="slide-body reveal" style="margin-top: var(--content-gap);">Culture is the shared views, values, beliefs and norms that bond and organise human groups — and shape how we perceive reality itself.</p>
+        </div>
+        <span class="slide-number">2</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 3: CULTURE VS. INSTITUTIONS
+         =========================================== -->
+    <section class="slide slide-parchment" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">Culture vs. institutions &amp; technology</h2>
+            <table class="comparison-table reveal">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Culture</th>
+                        <th>Institutions &amp; Technology</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>What</td>
+                        <td>Shared views, values, beliefs, norms</td>
+                        <td>Laws, organisations, markets, tools</td>
+                    </tr>
+                    <tr>
+                        <td>Where</td>
+                        <td>Internally embodied — minds, habits, perception</td>
+                        <td>Externally represented — structures, artifacts</td>
+                    </tr>
+                    <tr>
+                        <td>Visibility</td>
+                        <td>Largely invisible, taken for granted</td>
+                        <td>Visible, measurable, designable</td>
+                    </tr>
+                    <tr>
+                        <td>Changes by</td>
+                        <td>Social learning, imitation, meaning-making</td>
+                        <td>Policy, engineering, investment</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="slide-emphasis reveal" style="margin-top: var(--content-gap);">You can change a law without changing the culture.<br>When that happens, <em>the law often fails.</em></p>
+        </div>
+        <span class="slide-number">3</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 4: THE DUEL STORY
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">The duel that proves the point</h2>
+            <p class="slide-body reveal">Berlin, 1856. Police chief von Hinckeldey enforced the law against the aristocracy, shutting down an illegal gaming club.</p>
+            <p class="slide-body reveal">An aristocrat challenged him to a pistol duel. Duelling was <strong>illegal</strong>. Yet:</p>
+            <ul class="slide-list">
+                <li>The chief of police felt compelled to accept</li>
+                <li>A member of parliament served as referee</li>
+                <li>The affair was organised openly</li>
+            </ul>
+            <p class="slide-body reveal" style="margin-top: var(--element-gap);">Hinckeldey was shot dead. Wife and seven children left behind.</p>
+        </div>
+        <span class="slide-number">4</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 5: EVEN A KING WAS POWERLESS
+         =========================================== -->
+    <section class="slide slide-content-type slide-quote-centered" data-theme="light">
+        <div class="slide-content">
+            <p class="slide-emphasis reveal" style="max-width: min(60ch, 80vw); margin-bottom: var(--content-gap);"><strong>The aristocratic code of honour — culture — was more powerful than the law, the police, and the king.</strong></p>
+            <div class="slide-quote reveal" style="position: relative;">
+                <p>"It is impossible to understand the social life of people if one relies solely on official sources such as written laws."</p>
+                <div class="attribution">— Norbert Elias, <em>The Germans</em></div>
+            </div>
+        </div>
+        <span class="slide-number">5</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 6: SECTION DIVIDER — CULTURAL EVOLUTION
+         =========================================== -->
+    <section class="slide slide-section" data-theme="light">
+        <div class="slide-content">
+            <div class="section-number reveal">Part II</div>
+            <h2 class="section-title">Cultural Evolution</h2>
+            <p class="section-subtitle reveal">How cultures change — and why it matters</p>
+        </div>
+        <span class="slide-number">6</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 7: WHAT IS CULTURAL EVOLUTION?
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">What is cultural evolution?</h2>
+            <p class="slide-body reveal">Cultures change over time. This happens at several levels:</p>
+            <ol class="slide-list-numbered">
+                <li><strong>Social learning</strong> — traits are copied, modified, abandoned across generations</li>
+                <li><strong>Institutional reorganisation</strong> — stable patterns of ideas and norms that function with autonomy from genes</li>
+                <li><strong>Group competition</strong> — societies with stronger cooperation outlast others</li>
+                <li><strong>Paradigm shifts</strong> — foundational assumptions about reality periodically reorganise</li>
+            </ol>
+        </div>
+        <span class="slide-number">7</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 8: WE ARE A CULTURAL SPECIES
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">We are a cultural species</h2>
+            <p class="slide-body reveal">Physically weak, slow, can't tell poisonous from edible plants, can't survive without cooked food. Yet we colonised every terrestrial ecosystem on Earth.</p>
+            <div class="slide-quote reveal">
+                <p>"Imagine 20 of you vs. 20 capuchin monkeys, parachuted into an African forest. After 6 months, who survives? The monkeys."</p>
+                <div class="attribution">— Chudek, Muthukrishna &amp; Henrich (2015)</div>
+            </div>
+            <p class="slide-body reveal" style="margin-top: var(--element-gap);">Our success is <strong>cumulative cultural evolution</strong>: knowledge that accumulates across generations, becoming more sophisticated than any individual could devise alone.</p>
+        </div>
+        <span class="slide-number">8</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 9: CULTURE REALLY DOES EVOLVE
+         =========================================== -->
+    <section class="slide slide-parchment" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">Culture really does evolve</h2>
+            <p class="slide-body reveal">Evolution requires: (1) variation, (2) inheritance, (3) selection. Culture meets all three.</p>
+            <p class="slide-body reveal">A young hunter watches the three best hunters, averages their arrow length. Nothing "replicates" — but there is inheritance, selection, and adaptation. Arrow lengths converge on the optimum without anyone understanding aerodynamics.</p>
+            <div class="slide-quote reveal">
+                <p>"Neither evolution nor adaptation requires discrete traits, 'replicators,' low mutation rates, vertical transmission, or random variation."</p>
+                <div class="attribution">— Henrich, Boyd &amp; Richerson</div>
+            </div>
+        </div>
+        <span class="slide-number">9</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 10: CULTURE SHAPES US BACK
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">Culture shapes us back</h2>
+            <p class="slide-body reveal">Culture doesn't just pass through our minds — it reshapes them.</p>
+            <ul class="slide-list">
+                <li>Humans are born averse to chilli. Yet many cultures incorporate it — societies in pathogen-rich climates evolved spicier cuisines through social learning, overriding innate taste</li>
+                <li>Cultural learning physically alters brains, preferences, hormonal reactions</li>
+                <li>Growing up in different societies produces different perceptions and judgments</li>
+            </ul>
+            <p class="slide-emphasis reveal" style="margin-top: var(--content-gap);">Genes and culture are <strong>two interacting inheritance systems</strong> driving human evolution together.</p>
+        </div>
+        <span class="slide-number">10</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 11: WHY DOES THIS MATTER NOW?
+         =========================================== -->
+    <section class="slide slide-subsection" data-theme="dark">
+        <div class="slide-content">
+            <h2 class="subsection-title">Why does this matter now?</h2>
+            <p class="subsection-subtitle reveal">The crises we face are downstream of deeper cultural paradigms</p>
+        </div>
+        <span class="slide-number">11</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 12: THE CULTURAL CRISIS
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">A culture undoing itself</h2>
+            <p class="slide-body reveal">The crises are downstream of deeper <strong>cultural paradigms</strong>:</p>
+            <ul class="slide-list">
+                <li>Hyper-individualism and market fundamentalism</li>
+                <li>The myth of limitless growth</li>
+                <li>The deification of technology</li>
+                <li>A worldview of fundamental separateness</li>
+            </ul>
+            <p class="slide-body reveal" style="margin-top: var(--element-gap);">We don't lack knowledge or resources to tackle climate change. We lack the cultural capacity for <strong>collective restraint</strong>. Any actor that restrains itself unilaterally risks disadvantage.</p>
+        </div>
+        <span class="slide-number">12</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 13: TOWARDS CONSCIOUS CULTURAL EVOLUTION
+         =========================================== -->
+    <section class="slide slide-content-type" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">Towards conscious cultural evolution</h2>
+            <p class="slide-body reveal">Cultural paradigms can and do transform. What's new is our growing capacity to <strong>comprehend</strong> these patterns — and participate intentionally.</p>
+            <p class="slide-body reveal">Not engineering culture from above. But recognising our role in shaping what we reproduce.</p>
+            <div class="slide-quote reveal">
+                <p>"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has."</p>
+                <div class="attribution">— Margaret Mead</div>
+            </div>
+        </div>
+        <span class="slide-number">13</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 14: CLOSING — WHAT KIND OF CULTURE?
+         =========================================== -->
+    <section class="slide slide-clay-dark" data-theme="dark">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal" style="text-align: center;">What kind of culture sustains life?</h2>
+            <p class="slide-emphasis reveal" style="max-width: min(60ch, 80vw); text-align: center;">A worldview founded on <strong>interdependency</strong> — recognising life as fundamentally interconnected.</p>
+            <p class="slide-body reveal" style="text-align: center; max-width: min(60ch, 80vw); margin-top: var(--element-gap);">Genes formed genomes. Cells formed organisms. Individuals formed societies. Each transition: independent entities forming new levels of cooperative organisation.</p>
+            <p class="slide-emphasis reveal" style="max-width: min(60ch, 80vw); text-align: center; margin-top: var(--content-gap);"><em>An invitation to choose what to create and reproduce — guided by love.</em></p>
+        </div>
+        <span class="slide-number">14</span>
+    </section>
+
+    <!-- ===========================================
+         SLIDE 15: SOURCES
+         =========================================== -->
+    <section class="slide slide-parchment" data-theme="light">
+        <div class="slide-content">
+            <h2 class="slide-heading reveal">Key sources</h2>
+            <ul class="slide-list">
+                <li>Chudek, M., Muthukrishna, M. &amp; Henrich, J. (2015). "Cultural Evolution" in <em>Handbook of Evolutionary Psychology</em>, Vol. 2</li>
+                <li>Elias, N. <em>The Germans</em> (pp. 66–67)</li>
+                <li>Henrich, J. (2015). <em>The Secret of Our Success</em></li>
+                <li>Boyd, R. &amp; Richerson, P.J. <em>Culture and the Evolutionary Process</em></li>
+                <li>Pollock, R. &amp; Bell, R. (2025). "Conscious Cultural Evolution"</li>
+            </ul>
+        </div>
+        <span class="slide-number">15</span>
+    </section>
+
+    <!-- ===========================================
+       SLIDE PRESENTATION CONTROLLER
+       =========================================== -->
+    <script>
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.setupIntersectionObserver();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.setupProgressBar();
+                this.setupNavDots();
+            }
+
+            /* --- Intersection Observer: trigger .visible class --- */
+            setupIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            const index = Array.from(this.slides).indexOf(entry.target);
+                            this.currentSlide = index;
+                            this.updateProgressBar();
+                            this.updateNavDots();
+                        }
+                    });
+                }, { threshold: 0.5 });
+                this.slides.forEach(slide => observer.observe(slide));
+            }
+
+            /* --- Keyboard: arrows, space, page up/down --- */
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (e) => {
+                    switch(e.key) {
+                        case 'ArrowDown':
+                        case 'ArrowRight':
+                        case ' ':
+                        case 'PageDown':
+                            e.preventDefault();
+                            this.goToSlide(this.currentSlide + 1);
+                            break;
+                        case 'ArrowUp':
+                        case 'ArrowLeft':
+                        case 'PageUp':
+                            e.preventDefault();
+                            this.goToSlide(this.currentSlide - 1);
+                            break;
+                        case 'Home':
+                            e.preventDefault();
+                            this.goToSlide(0);
+                            break;
+                        case 'End':
+                            e.preventDefault();
+                            this.goToSlide(this.slides.length - 1);
+                            break;
+                    }
+                });
+            }
+
+            /* --- Touch/swipe for mobile --- */
+            setupTouchNav() {
+                let touchStartY = 0;
+                document.addEventListener('touchstart', (e) => {
+                    touchStartY = e.touches[0].clientY;
+                }, { passive: true });
+                document.addEventListener('touchend', (e) => {
+                    const diff = touchStartY - e.changedTouches[0].clientY;
+                    if (Math.abs(diff) > 50) {
+                        this.goToSlide(this.currentSlide + (diff > 0 ? 1 : -1));
+                    }
+                }, { passive: true });
+            }
+
+            /* --- Mouse wheel with debounce --- */
+            setupWheelNav() {
+                let lastWheel = 0;
+                document.addEventListener('wheel', (e) => {
+                    const now = Date.now();
+                    if (now - lastWheel < 800) return;
+                    lastWheel = now;
+                    if (Math.abs(e.deltaY) > 30) {
+                        this.goToSlide(this.currentSlide + (e.deltaY > 0 ? 1 : -1));
+                    }
+                }, { passive: true });
+            }
+
+            /* --- Navigate to slide --- */
+            goToSlide(index) {
+                if (index < 0 || index >= this.slides.length) return;
+                this.currentSlide = index;
+                this.slides[index].scrollIntoView({ behavior: 'smooth' });
+                this.updateProgressBar();
+                this.updateNavDots();
+            }
+
+            /* --- Progress bar --- */
+            setupProgressBar() {
+                this.progressBar = document.getElementById('progressBar');
+                this.updateProgressBar();
+            }
+            updateProgressBar() {
+                if (!this.progressBar) return;
+                const progress = ((this.currentSlide + 1) / this.slides.length) * 100;
+                this.progressBar.style.width = progress + '%';
+            }
+
+            /* --- Navigation dots --- */
+            setupNavDots() {
+                const container = document.getElementById('navDots');
+                if (!container) return;
+                this.slides.forEach((slide, i) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('nav-dot');
+                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    container.appendChild(dot);
+                });
+                this.navDotElements = container.querySelectorAll('.nav-dot');
+                this.updateNavDots();
+            }
+            updateNavDots() {
+                if (!this.navDotElements) return;
+                const isDark = this.slides[this.currentSlide]?.dataset.theme === 'dark';
+                this.navDotElements.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === this.currentSlide);
+                    dot.classList.toggle('on-dark', isDark);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new SlidePresentation();
+        });
+    </script>
+
+</body>
+</html>
