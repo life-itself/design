@@ -2,7 +2,7 @@
 title: "Second Renaissance"
 subtitle: "A time of civilizational crisis and awakening"
 author: "Sylvie Barbier, Rosie Bell and Rufus Pollock"
-date: "Draft v1.0-r1 — published May 2024"
+date: "Draft v1.0-r1 – published May 2024"
 ---
 
 # Introduction
@@ -29,8 +29,10 @@ Likewise, we have adopted the imperfect term “Second Renaissance’ in the und
 
 At the same time, the term renaissance has certain useful resonances. The current dominant cultural paradigm of modernity was born in the first renaissance in Europe – though we emphasize that this next transition will have many roots all over the world. In addition, the basic meaning of the term – “rebirth” – seems appropriate to this “time between worlds” and offers a framing of possibility whilst also implicitly acknowledging the risks of breakdown and collapse – birth and death are profoundly intertwined.
 
+```{=typst}
+#pagebreak()
+```
 ## Back-story
-
 **Sylvie:**
 
 *“I believe that all of us contain seeds of a possible future; and that in showing up here we’re responding to a call from that future. Having spent some years living in Florence, the cradle of the first Renaissance, that idea of a great rebirth has stayed with me. And in the years since, it has become clear to me that mere adjustments to the way we live aren't going to be enough. When the pandemic started, I was holding a three-month-old baby. Becoming a mother brought home to me in new ways the cascading crises we face if we maintain our current trajectory. Ecological breakdown. Famines. Conflict over resources, where the weakest always lose. Wars. I have one job - to protect my child - and I don’t know how I’m supposed to do that in such a world. The only real hope lies in the idea of significant transformation - not just for my son but for all children. Confronting the darkness, and within that the potential for rebirth.”*
@@ -39,7 +41,7 @@ At the same time, the term renaissance has certain useful resonances. The curren
 
 *“Very often in work like this there’s a personal origin story that lies in the background. For me it was the experience of bullying – partly my own, but mostly of another young boy at my school who was my friend. It created in me at an early age a visceral sense of injustice. Initially this energy got channeled into various kinds of activism. Over time I saw that often whatever I was doing didn’t really get to the heart of the issue – or even made things worse. This led me to look deeper for the true roots of our personal and collective suffering, and ways to wisely address them. Put more simply: what is at the true source of people’s poor treatment of each other? How do we really transform ourselves and the system?*
 
-# 1. Modern Civilization: cracks in the walls
+# Modern Civilization: cracks in the walls
 
 From poverty and spiraling inequality to ecological breakdown, rising authoritarianism and social fragmentation, globalized modern civilisation faces major threats. For the good of all life, we urgently require meaningful solutions. But we’ve known this for a while, and thus far our interventions aren’t working very well. Good sense suggests that we interrogate our approach: if our solutions are failing, could we be misdiagnosing the problems?
 
@@ -51,7 +53,10 @@ It’s tempting to keep plastering over each crack as best we can. But those sym
 
 The case for a **Second Renaissance** begins with the suggestion that our global challenges represent profound structural issues that we can no longer afford simply to plaster over. Without proper diagnosis the visible cracks in our systems threaten partial or total collapse in the near term - and importantly, upon closer examination they seem to be deeply interconnected. The root causes that they share might be properly termed **foundational,** and without attention to these it is likely that we will keep recreating the same worsening problems.
 
-# 2. What are the ‘foundations’ of civilization?
+```{=typst}
+#pagebreak()
+```
+# What are the ‘foundations’ of civilization?
 
 *“Two young fish are swimming along and they meet an older fish swimming the other way. The older fish nods at them and says “Morning, boys. How’s the water?” The two young fish swim on for a while. Then  one of them looks over at the other and goes “What the hell is ‘water’?”*
 
@@ -84,7 +89,7 @@ Take poverty, for example. We don’t lack the resources to end poverty, and som
 
 Or take the climate crisis. Is this just a question or more renewable energy and electrifying key systems like transport? Or does a core belief in limitless economic growth tend towards exploitation and ecological destruction in ways that will continue to trouble us if we simply fix the symptoms? In that case, carry on as we are, and the problems will likely get worse. 
 
-# 3. Cultural evolution
+# Cultural evolution
 
 Societal views and values do transform over time, however their entrenchment is such that  change is often the product of generational shift: rather than particular humans switching views, old views die out as new generations arise, influenced by different conditions. Think of the last century’s progress on womens’ rights, for example - or on gay marriage. 
 
@@ -92,7 +97,7 @@ This diagram by Ronald Inglehart presents data from the last 50 years, demonstra
 
 Importantly, this tendency of cultural ideas to evolve suggests the possibility for ***conscious*** **cultural evolution** in the context of our currently failing systems. A Second Renaissance as we have begun to imagine it would entail active participation in imagining the foundational views and values on which our future systems are built, and in embodying those views and values through new forms of social organization. First however, we require a shared understanding of our current foundation, and how we got here.
 
-# 4. Evolving Cultural Paradigms
+# Evolving Cultural Paradigms
 
 Biological evolution supplies only a rough analogy for cultural evolution, but offers illuminating parallels. Within cultures, successful ideas or ‘memes’ are reproduced and passed between people. Like genes, memes aren’t selected on their own - rather they come together in packages - groups of ideas, like DNA. Like biological species, examples of these cultural codes vary in their attributes. But just as people with different skin color, height, athleticism etc share the same fundamental genetic code, different societies throughout history have shared similar **base cultural paradigms** comprising particular sets of core views and values.
 
@@ -104,7 +109,7 @@ As commonly understood, the spiral represents the gradual, non-linear developmen
 
 The spiral begins in hunter-gatherer territory, then progresses over centuries, sometimes millennia, in stages: classical, premodern, modern and postmodern - advancing hypothetically into a coming age of ‘metamodernity’. Different systems give various labels to historical phases and their paradigms, and we don’t wish to get too hung up on any one map given that each is at best a radical simplification of a subtle and complex phenomenon. Despite its many limitations however, it’s useful to have a working knowledge of this model.
 
-# 5. Navigating by paradigmatic features
+# Navigating by paradigmatic features
 
 Features of culture and the views and values they embody allow us to determine where we might be standing relative to our map of cultural evolution. We’ll unpack the particular features of the current paradigm in detail presently, however the diagram offers a brief introduction to this landscape:
 
@@ -123,7 +128,10 @@ Picasso 1937: plural perspective
 
 Observable paradigm shifts in philosophy and social movements often move in parallel with art, then afterwards, business, politics, mainstream society and so on. This staggered adoption gives rise to an (often uneasy) blend of paradigms operating in societies. For example, right now in the United States, while leading-edge art is arguably dabbling in a metamodern phase (consider films such as Everything, Everywhere All At Once) much popular culture exhibits post-modern traits - fragmented, media-driven and hyperreal - and elite institutions like universities and some media are largely postmodern, while economics remains anchored in the modern, and large parts of the population still operate with pre-modern, religious views. As we’ll discuss in section 7, significant friction arises from the coexistence of multiple paradigms.
 
-# 6. The first Renaissance and the journey to Modernity
+```{=typst}
+#pagebreak()
+```
+# The first Renaissance and the journey to Modernity
 
 **Claim: many cultures across the world share a dominant foundational paradigm known as Modernity; a particular complex of views and values whose influence took seed in Europe during the historical period known as the Renaissance. The Modern era is currently in decline.**
 
@@ -138,7 +146,7 @@ The  **Mediaeval** or Traditional period in Europe spanned roughly 1,000 years f
 
 The aftermath of this decisive societal collapse was the cradle of the first Renaissance (‘rebirth’). During this transitional period the rediscovery of classical texts repressed by the Catholic church saw a resurgence of ideologies and philosophies based in concepts like rationality, and revolutions in art, science, literature and mathematics. The Renaissance is generally thought of as the cradle of the Enlightenment; a period of extraordinary flourishing in science and technology during which the foundational views of Modernity became established. 
 
-# 7. Modernity
+# Modernity
 
 The **Modern** era is considered properly to have begun during the 15th century; distilled throughout centuries of rapid **scientific and technological progress** and **secular liberalism** into the dominant cultural paradigm still operating globally today. 
 
@@ -179,7 +187,7 @@ An evolving set of interrelated core views and values was coextensive with scien
 
 The interrelated views and values discussed above allowed humanity to wield extraordinary power over the material world that underpinned centuries of unprecedented progress. Throughout the evolving modern era, revolutionary advancements were brought about in medicine, energy, technology, food, communication and comfort, not to mention the cultural advancements associated with liberalism - albeit partial. From antibiotics and sanitation all the way through to democracy, global transport and digital technology, the average citizen in wealthy countries today enjoys a quality of life that even royalty couldn’t have dreamed of a few centuries ago. 
 
-# 8. Modernity and the inner world
+# Modernity and the inner world
 
 Throughout early western modern society, most people still maintained pre-modern belief in an immortal soul; humanity’s ineffable, transcendent conscious essence destined to live eternally after physical death. The typical citizen was concerned ethically with the state of their own soul and its fitness for paradise (or otherwise) in the afterlife, and as such inner life was treated as both real and important. As scientific materialism became gradually more dominant however, religious belief began to decline. 
 
@@ -193,13 +201,13 @@ This impoverished model of the inner has profound consequences for societal orga
 
 A lack of focus on inner realities has led to a paradigmatic blindness to the ways in which inner conditions shape outer systems - a major factor in the difficulties we have in diagnosing the cracks in our walls. Modernity’s highly successful focus on material progress and economic growth has tended to neglect humanity’s considerable capacity for inner cultivation - and the development of many inner capacities fundamental to human flourishing. (see also section 12)
 
-# 9. Modernity in decline
+# Modernity in decline
 
 Modernity brought unprecedented gifts, but each casts a long shadow. Increasingly we are able to interpret Enlightenment ideals, pursued to their illogical conclusion, as foundational to the alarming cracks we now see in the walls. For example, while the scientific revolution yielded unprecedented technological progress and previously unimaginable leaps in comfort for many, its reductionist legacy has ultimately wreaked havoc: blind to the interconnectedness of life we have exploited our planet to the point of ecological breakdown. The first boom of tech utopianism has been succeeded by widespread unease about the implications of escalating AI. The beauties of individualism and personal freedom have descended into social fragmentation and competitive consumption; the success of rationalism into de-prioritisation of inner dimensions of human life; empiricism into the disenchantment of the material world and a widespread deficit of meaning. Meanwhile a terrifying climate crisis has arisen from a pursuit of human technological progress at the expense of a natural world perceived as external and separate. Some thinkers define the current meta-crisis specifically *as* the underlying narrative of separateness or disconnection underpinning social alienation and the destruction of complex living systems.
 
 ![](assets/modernity-in-decline-cracks-diagram.png)
 
-# 9.1 Postmodernity
+## 9.1 Postmodernity
 
 **Features:**  
 Collectivism, multiculturalism, ethical and ontological relativism, deconstruction, scepticism, globalisation, simulacra, hyper-reality, inclusivity, multi-perspectival, anti-hierarchical
@@ -208,7 +216,7 @@ Following the end of the Second World War, **Postmodern** thinkers began explici
 
 New paradigmatic thinking often explicitly rejects the old. However, noting that deconstruction tends towards cynicism and even nihilism, critics question whether postmodernism is a destination, or rather a necessary gateway to a more generative relationship with truth and reality. (Like all maps, ours is somewhat arbitrary, and we needn’t get too entangled in defining the boundaries of a paradigm.)
 
-# 9.2 Cross-paradigmatic friction
+## 9.2 Cross-paradigmatic friction
 
 In today’s globalised society, ‘culture wars’ emerge from a struggle for dominance between premodern, modern and postmodern values. In particular, between modern (absolutist) and postmodern (relativist) conceptions of reality, agreement on what counts as truth has broken down - a huge epistemic shift that makes consensus very difficult, particularly without *awareness* of these confounding factors.
 
@@ -218,9 +226,9 @@ Within these staggered paradigm shifts, the logic of new ideas can take decades 
 
 While closely associated with gay rights, cultural friction around transgender issues may reflect paradigmatic conflict between modernity and post-modernity. Whereas equality before the law is a core principle of modernity, transgender issues involve deconstruction of notions such as biological gender. To question science as the authority on gender is a postmodern challenge to core structures of reality in the modern (and pre-modern) view, demanding a significant epistemic shift and generating strong resistance among those rooted cognitively in modernity. Conversely, allied with corresponding shifts in art and philosophy, an increasingly normalised and visible cause like transgender rights itself has potential over time to become a vehicle of more widespread paradigm shift.
 
-# 10. Towards a Second Renaissance?
+# Towards a Second Renaissance?
 
-# 10.1 Conscious cultural evolution
+## 10.1 Conscious cultural evolution
 
 What does any of this have to do with a movement for a Second Renaissance? If postmodernism clearly has the business of new-paradigm thinking in hand, what’s the use of interfering? Certainly, paradigms come and go - however, this being the first truly global civilization likely means that wholesale collapse could be catastrophic in ways that history has not yet given us cause to imagine. Perhaps more urgently than in any previous phase shift, then, we require **conscious cultural evolution:** *awareness of paradigms themselves*, and collective efforts to seed regenerative views and values. 
 
@@ -228,17 +236,17 @@ The decline of a cultural paradigm needn’t be cause for despair. Breakdown is 
 
 We might imagine ourselves building a greenhouse, in which to nurture the most precious seedlings throughout this cold and dark period, so they may grow anew in Spring. The current moment may represent a unique opportunity to identify which structures and ideas we wish to preserve and strategise ways to support them on different foundations, while imagining new ways for humanity to flourish. 
 
-# 10.2 Darkness before the dawn
+## 10.2 Darkness before the dawn
 
 By naming this cycle of death and rebirth we don’t mean to trivialise the threats that humanity currently faces. In fact it’s vital at such a time to acknowledge the darkness and fear that arise in response to societal decline. A sense that ‘something is wrong’ is increasingly widespread - and data shows a decline in hope for the future relative to the past. But whereas *unprocessed* fear risks denial and nihilism, by facing the depth of our crises and understanding their sources together, we can encounter more fully our personal and collective power to make a difference.
 
-# 10.3 Laying our ghosts to rest
+## 10.3 Laying our ghosts to rest
 
  If Modernity truly is dying, reckonings are called for. The figure of the ghost haunting the site of unfinished business is familiar across cultures for good reason: only when we properly acknowledge and lay to rest our past can we avoid bringing it with us into the future. If we aren’t at peace with Modernity, both with its gifts and its dysfunction, we are likely doomed to be haunted by the same problems. 
 
 Technofuturist visions present us with Frankenstein’s monster scenarios sewn together from pieces of a dying paradigm. Conversely, manifestos for the future can look a lot like misplaced nostalgia - consider Jordan Peterson’s backward-looking social philosophy, or ‘green’ tendencies to project our desires onto an idealised Indigenous past. Alternatively, the past can haunt us in the form of reactivity or blind rebellion, which are not always liberating responses. In envisioning the new and courting cultural evolution, we must maintain awareness of our own unconscious impulses to fix the unhealed past, resurrect it or rebel against it. Discernment is key to understanding which aspects of the past we truly wish to bring along into the future, and which to lay consciously to rest.
 
-# 11. What’s next - and how do we get there?
+# What’s next - and how do we get there?
 
  
 
@@ -246,7 +254,7 @@ There are no clean switches between paradigms - and indeed one paradigm may be �
 
 We needn’t expect that what we’re aiming to bring into being will somehow ‘get it right’, for all time. Conversely, we needn’t condemn old paradigms as ‘wrong’ because they eventually declined and were replaced. We can do our best to be midwives for something hopeful and new, while understanding that this too will likely meet its downfall in ways we can’t yet imagine, as conditions change.
 
-# 11.1 Qualities of the Next Paradigm?
+## 11.1 Qualities of the Next Paradigm?
 
 In art and social philosophy, **metamodernism** has come to name both ‘whatever paradigm comes after postmodernism’, and more specifically, emerging thought that **both mediates and moves beyond** the poles of modernism and postmodernism on a number of paradigmatic dimensions.  First theorised within the Integral movement and now a movement in its own right, we needn’t strictly accept any particular articulation of metamodernism to explore its emerging features.
 
@@ -329,7 +337,7 @@ Similarly in Buddhism, while releasing excessive attachment to views (and implic
 
 If the modern era is characterised by a dominant paradigm enforcing itself across globalised society, and the postmodern era is marked by the friction arising from multiple paradigms jostling for primacy, we may hope that the meta-modern era fulfils the ideal of ‘transcending and including’ previous paradigms. A key feature of metamodernism in the Integral model is **awareness that there is a paradigm, and that paradigms can evolve**. Metamodernism does not suppose that we ‘have the answer’ - rather that there will always be better or more appropriate answers. Conscious cultural evolution might entail intentionally holding space for multiple ways of looking to coexist and express their value - not just within society at large but in individual life.
 
-# 12. Living into a new paradigm
+# Living into a new paradigm
 
 Frameworks and theories of cultural evolution are important, but as ever the map is not the territory, and intellectual grasp of a desirable model is not the same as cultural embodiment of views and values. Indeed humanity tends to suffer from a knowledge-action gap: new knowledge doesn’t automatically transform into new behaviour and outcomes.
 
@@ -358,6 +366,9 @@ History is written by those who show up, and if you feel called to show up, then
 
  
 
+```{=typst}
+#pagebreak()
+```
 # Further Reading
 
 There is large potential literature to explore. Here we provide a very brief list of some of the best starting points.
@@ -370,6 +381,13 @@ There is large potential literature to explore. Here we provide a very brief lis
 * Sri Aurobindo  
 * Critical Realism
 
+```{=typst}
+#pagebreak()
+```
+
+```{=typst}
+#pagebreak()
+```
 # Appendix A
 
 **The role of views and values in perception.**
