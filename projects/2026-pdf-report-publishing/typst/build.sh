@@ -22,7 +22,7 @@ PY
 
 mkdir -p assets
 cp -f ../source/assets/*.png assets/
-cp -f ../source/brand/life-itself-logotype.png assets/
+cp -f ../source/brand/*.png assets/
 
 echo "==> typst compile"
 mkdir -p ../output

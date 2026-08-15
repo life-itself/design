@@ -64,8 +64,22 @@ still open). The `typst/` template (v2) is now matched directly against
 this exact essay that Rufus supplied as the target — rather than just the
 cover. Colours and structure were sampled/measured from it directly:
 
-- Cover: cream `#FFFFE3`, gold `#B99A54` rule, matches the reference exactly
-  (same source image — `2rbook/assets/whitepaper-1-cover.webp`).
+- Cover: uses the actual reference artwork (`2rbook/assets/whitepaper-1-cover.webp`,
+  full-bleed) rather than a re-creation — first attempt rebuilt the cover
+  from scratch (logo + typst-rendered title + a couple of cropped
+  illustration fragments) and it looked flat and slightly wrong: missing
+  the gold sun/swallows/botanical artwork entirely in v1, then overlapping
+  the title in v2 once the illustrations were added back in (the crop
+  boundaries couldn't cleanly separate "title text" from "bird artwork"
+  pixel-by-pixel — they occupy overlapping regions of the image). Using
+  the artwork directly sidesteps that: pixel-perfect, zero overlap risk.
+  Cost: this cover is bespoke to this title, not template-driven — same as
+  how professional covers normally work (designed per issue), but worth
+  flagging since the rest of the template is meant to be reusable. A new
+  **title/colophon page** (page 2, after the cover) now carries what the
+  cover doesn't: title/subtitle repeated smaller, authors, draft date, and
+  a placeholder copyright/licence line — this is new, not in the
+  reference, following up on Rufus's steer to think about that page.
 - Body pages: **sans-serif throughout** (not serif — that was my first guess
   and it was wrong; the reference uses one sans family for everything).
   Heading colour `#4C2E2D` (dark maroon), body ink `#3A2C2B`, italics/quotes
@@ -118,6 +132,12 @@ investment right now.
 ## Known gaps / next steps
 
 - **Heading font** — biggest visual gap, see "Brand" above.
+- **Copyright/licence line is placeholder text** — needs a real decision
+  (All Rights Reserved? CC BY-SA? something else?) before this ships.
+- **Cover is bespoke, not templated** — see "Brand" above. Fine for this
+  prototype (imitating one specific reference), but a real reusable
+  template needs either a designer producing per-report cover art, or a
+  simpler generated-cover fallback style for reports without bespoke art.
 - No Google Docs → Markdown step exercised yet (source was already
   Markdown) — that's the other half of the real pipeline and its own
   source of lossiness (esp. tables/footnotes/comments).

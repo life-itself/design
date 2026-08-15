@@ -40,30 +40,50 @@
   authors: "",
   date: "",
   logo: none,
+  cover-image: none,
+  colophon: none,
   body,
 ) = {
   set document(title: title, author: authors)
 
   // ---- Cover page --------------------------------------------------
-  set page(paper: "a4", fill: cream, margin: (x: 3.2cm, top: 4.2cm, bottom: 3.2cm))
-  set text(font: sans, fill: rgb("#191512"))
-
-  if logo != none {
-    align(top + left)[#image(logo, width: 3.4cm)]
-    v(2.6cm)
+  // Full-bleed bespoke artwork (title/subtitle are baked into the image
+  // itself, same as the reference) — this is how the reference report's
+  // cover works, and how covers work in general publishing: bespoke per
+  // issue, not template-generated. See README for the reusable-template
+  // implication.
+  set page(paper: "a4", fill: cream, margin: 0pt)
+  if cover-image != none {
+    image(cover-image, width: 100%, height: 100%, fit: "cover")
   }
 
-  align(left)[
-    #text(size: 40pt, weight: 800)[#title]
-    #v(0.5cm)
-    #text(size: 17pt, weight: 400)[#subtitle]
-    #v(1.2cm)
-    #line(length: 3.2cm, stroke: 2pt + rgb("#B99A54"))
-    #v(0.6cm)
-    #text(size: 12pt, weight: 600)[#authors]
-    #v(0.15cm)
-    #text(size: 10pt, fill: rgb("#191512").lighten(35%))[#date]
-  ]
+  pagebreak()
+
+  // ---- Title / colophon page -----------------------------------------
+  // Combines what the cover doesn't carry (authors, date) with a
+  // placeholder copyright/licence line — needs a real decision, see
+  // README.
+  set page(paper: "a4", fill: white, margin: (x: 3.2cm, top: 4.2cm, bottom: 3.2cm))
+  set text(font: sans, fill: ink)
+  if logo != none {
+    image(logo, width: 2.6cm)
+    v(2cm)
+  }
+  text(size: 26pt, weight: 800, fill: maroon)[#title]
+  v(0.3cm)
+  text(size: 13pt, weight: 400, fill: ink.lighten(10%))[#subtitle]
+  v(0.9cm)
+  line(length: 2.4cm, stroke: 1.5pt + rgb("#B99A54"))
+  v(0.5cm)
+  text(size: 10.5pt, weight: 600)[#authors]
+  linebreak()
+  text(size: 9pt, fill: muted)[#date]
+  v(1fr)
+  if colophon != none {
+    line(length: 2.2cm, stroke: 0.6pt + muted)
+    v(0.5cm)
+    text(size: 8pt, fill: muted)[#colophon]
+  }
 
   pagebreak()
 
@@ -74,7 +94,7 @@
   context {
     let heads = query(heading.where(level: 1).or(heading.where(level: 2)))
     for h in heads {
-      toc-entry(h.body, str(h.location().page() - 1), h.level)
+      toc-entry(h.body, str(h.location().page() - 2), h.level)
     }
   }
 
