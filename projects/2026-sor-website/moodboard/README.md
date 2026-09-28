@@ -1,6 +1,6 @@
 # Moodboard
 
-Inspiration, not instructions. The visual search starts clean: no palette, type or layout carried over from existing 2R, Canva or earlier design work.
+Inspiration, not instructions. **These references are mainly for fonts and feel, not the site model.** Most are magazines or studios, but SoR's essence is a **movement and community** (see brand.md). Take their type, texture and atmosphere, not their structure. The visual search starts clean: no palette, type or layout carried over from existing 2R, Canva or earlier design work.
 
 ## Reference websites (from Rufus, 2026-09-28)
 

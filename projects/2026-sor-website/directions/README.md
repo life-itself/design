@@ -2,6 +2,12 @@
 
 *2026-09-28. Four deliberately different directions for the look and feel. They come from [brand.md](../brand.md) and the [reference review](../moodboard/README.md), not from existing 2R or Canva design. Colour and type notes here are fresh proposals to test, not decisions.*
 
+**Correction (Rufus, 2026-09-28):** the references are mainly for **fonts and feel**, and several are magazines. SoR's essence is **vision and movement for civilisational renewal**: a movement and community first, with media as the way in. So in every direction:
+
+- **Home leads with people and belonging**, not content: faces, gatherings, voices, "you're not alone", and clear ways to join (come to a gathering, take a course, join the community, start a Garden of Change). Media (latest episode, essay, issue) sits in support.
+- **Movement signals** are first-class components: upcoming gatherings, where people are (local gardens, a constellation or map), participant voices, founders present as people, and a simple "how to take part" path.
+- The magazine is one expression, not the model for the whole site. This raises the **generic-magazine risk for A**.
+
 Each direction answers the same question differently: **how does one living world hold the artist and the philosopher, the poetic and the lucid, together?**
 
 ---
@@ -16,7 +22,7 @@ Each direction answers the same question differently: **how does one living worl
 - **Imagery:** large and full-bleed. Documentary photography of people and places, plus artworks given room like plates in a book.
 - **Layout:** generous margins, a staggered two-column list of pieces, content labelled by form (ESSAY · POEM · PODCAST · COURSE).
 - **Motion:** minimal. Slow fades.
-- **Home:** a full-bleed image with the one-line hero, a short "what we believe" statement, then the latest from Media House and Gardens of Change.
+- **Home:** a full-bleed photo of people gathered with the one-line hero, a short "what we believe" statement, then ways to take part and upcoming gatherings, with the latest media below.
 - **Manifesto:** a reading page with a great italic serif, and the 21 lines as a quiet litany.
 - **Magazine:** the issue as an object, spreads and a contributor list.
 - **Essay:** excellent long read with sidenotes.
@@ -33,7 +39,7 @@ Each direction answers the same question differently: **how does one living worl
 - **Imagery:** in index grids, engravings and plates, publications photographed as objects. Images **resolve from coarse to clear**: the seed becoming.
 - **Layout:** lists and indexes (numbered works, dated entries), dense in places and empty in others. It reads like a studio wall.
 - **Motion:** purposeful quirks: text resolving, images sharpening, cursor traces.
-- **Home:** a large plain-spoken statement paragraph, then an index of everything alive right now (episodes, essays, gatherings) with dates.
+- **Home:** a large plain-spoken statement paragraph, then a live index of the movement: gatherings, gardens and people, alongside episodes and essays, all with dates and places.
 - **Manifesto:** the 21 lines as a numbered index, one per line, very large.
 - **Magazine:** the issue as art object, with spreads in a grid.
 - **Essay:** a plain, precise reading column with numbered premises.
@@ -67,7 +73,7 @@ Each direction answers the same question differently: **how does one living worl
 - **Colour:** built around a deep night tone and a clear dawn light, with one warm accent (fire or first light) bridging them. **Fresh proposal to test, not inherited from any brand doc.**
 - **Imagery:** at dusk, archival plates (eclipse, the Doré sun), fire, night gatherings, B&W photography. At dawn, daylight documentary photography.
 - **Motion:** slow light transitions: gradients, the page "brightening" as you scroll toward invitation.
-- **Home:** opens at dusk ("something is ending") and scrolls into dawn ("something is being born" → join, listen, read). The brand narrative becomes the scroll.
+- **Home:** opens at dusk ("something is ending") and scrolls into dawn ("something is being born"), where it arrives at people, gatherings and ways to join. The brand narrative becomes the scroll.
 - **Manifesto:** full dusk, a litany in light type on dark.
 - **Magazine:** dusk.
 - **Essay:** dawn.

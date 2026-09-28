@@ -4,9 +4,13 @@
 
 ## One line
 
-**For those who sense the old world is ending and want to help seed the new.**
+**Tagline: Vision and movement for civilisational renewal.** (Rufus, 2026-09-28)
 
-Tagline: *Planting the seeds of civilisational renewal.*
+Hero line: *For those who sense the old world is ending and want to help seed the new.*
+
+Earlier tagline: *Planting the seeds of civilisational renewal.*
+
+**Essence: a movement and a community.** Media (podcast, magazine, essays) is how people find us and make sense. Belonging and practice together are what we are. The site should feel like joining a living movement of people, not subscribing to a publication.
 
 Dedication (from the manifesto): *For all the living beings whose heart burns to see a new world emerge.*
 
