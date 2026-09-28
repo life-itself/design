@@ -15,6 +15,13 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
 5. **Choose a direction**, then complete the page mocks and Instagram templates.
 6. **Design system**: tokens and components from the chosen direction.
 
+## Inbox (to process)
+
+- **2026-09-28: Sylvie's early moodboards.** Not yet reviewed.
+  - Cosmos (first gist): https://www.cosmos.so/sylvieshiwei/sor
+  - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-blue/
+  - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-2026-branding/
+
 Tracking: beads epic `design-lpe` (`bd show design-lpe`).
 
 ## Related
