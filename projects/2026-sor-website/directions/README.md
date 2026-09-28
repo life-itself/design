@@ -82,6 +82,15 @@ Each direction answers the same question differently: **how does one living worl
 
 ---
 
+## E. Warm Emergence (added 2026-09-28, on request)
+
+**Emergence Magazine's layout and pace, warmer.** A centred wordmark, full-bleed feature modules, a short "what we believe" statement, "selected work" labelled by form with a hover image, the print issue shown as an object, and three "engage" options. The lead feature is a **gathering**, and a take-part row sits high, so it stays movement-first.
+
+- **Type:** Fraunces (light, soft, wonky axes) as a free stand-in for **Restora**, which is paid and needs a web licence to embed. Newsreader for reading, Karla for labels.
+- **Colour:** linen ground, warm ink, one mulberry accent, vellum for the print module. Colour mostly comes from imagery.
+- **Manifesto:** an Emergence-style story page, with a full-bleed art hero, a drop cap, the four "We are" lines as a pull quote, and the litany.
+- **Risk:** reads as an Emergence imitation. Ownability is low to medium unless the gatherings and people stay on top.
+
 ## Comparison
 
 | | A. Living Magazine | B. Studio Index | C. Honest Workshop | D. Dusk & Dawn |
