@@ -8,9 +8,9 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
 
 ## Status
 
-1. **Brief** → [brief.md](brief.md). Draft 2026-09-28, awaiting Rufus/Sylvie input.
-2. **Content** → [content/](content/). Real pages to rebuild: manifesto, magazine, intro essay.
-3. **Moodboard** → [moodboard/](moodboard/). Waiting on inputs.
+1. **Brand** → [brand.md](brand.md): single source for substance (no visuals). **Brief** → [brief.md](brief.md): the design job. Drafts 2026-09-28.
+2. **Content** → [content/](content/). Real pages to rebuild (SoR manifesto opening, magazine, intro essay) plus [image shortlist](content/images.md).
+3. **Moodboard** → [moodboard/](moodboard/). Five reference sites from Rufus, to review.
 4. **Directions** → [directions/](directions/). 3–4 distinct directions, shown by rebuilding the real pages.
 5. **Choose a direction**, then complete the page mocks and Instagram templates.
 6. **Design system**: tokens and components from the chosen direction.
@@ -21,6 +21,7 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
   - Cosmos (first gist): https://www.cosmos.so/sylvieshiwei/sor
   - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-blue/
   - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-2026-branding/
+- ✅ Processed into brand.md (2026-09-28): 2R brand narrative doc and SoR manifesto (opening snapshot in content/manifesto.md). Colour notes deliberately not used.
 - Google drive folder: https://drive.google.com/drive/folders/1b1Wo1k9FDG4VykRs9ICQhQHjz-jSB38b - really only thing is high level 2R/SoR brand narrative in https://docs.google.com/document/d/1sWb8n6hryXfbT0uB5hGvAct9dqbYPNLJ594JIzAo4uc/edit?tab=t.0#heading=h.b4nh0xsy71jq
     - but we may use this for artefacts that don't fit in git going forward
 - The SoR manifesto: https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit?tab=t.0
