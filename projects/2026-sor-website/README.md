@@ -10,8 +10,8 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
 
 1. **Brand** → [brand.md](brand.md): single source for substance (no visuals). **Brief** → [brief.md](brief.md): the design job. Drafts 2026-09-28.
 2. **Content** → [content/](content/). Real pages to rebuild (SoR manifesto opening, magazine, intro essay) plus [image shortlist](content/images.md).
-3. **Moodboard** → [moodboard/](moodboard/). Five reference sites from Rufus, to review.
-4. **Directions** → [directions/](directions/). 3–4 distinct directions, shown by rebuilding the real pages.
+3. **Moodboard** → [moodboard/](moodboard/). Five reference sites reviewed 2026-09-28.
+4. **Directions** → [directions/](directions/). Draft 1: A Living Magazine, B Studio Index, C Honest Workshop, D Dusk & Dawn. Next: side-by-side mock artifact.
 5. **Choose a direction**, then complete the page mocks and Instagram templates.
 6. **Design system**: tokens and components from the chosen direction.
 
