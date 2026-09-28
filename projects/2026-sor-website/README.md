@@ -21,6 +21,9 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
   - Cosmos (first gist): https://www.cosmos.so/sylvieshiwei/sor
   - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-blue/
   - Pinterest, more recent: https://fr.pinterest.com/barbier3595/2r-2026-branding/
+- Google drive folder: https://drive.google.com/drive/folders/1b1Wo1k9FDG4VykRs9ICQhQHjz-jSB38b - really only thing is high level 2R/SoR brand narrative in https://docs.google.com/document/d/1sWb8n6hryXfbT0uB5hGvAct9dqbYPNLJ594JIzAo4uc/edit?tab=t.0#heading=h.b4nh0xsy71jq
+    - but we may use this for artefacts that don't fit in git going forward
+- The SoR manifesto: https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit?tab=t.0
 
 Tracking: beads epic `design-lpe` (`bd show design-lpe`).
 
