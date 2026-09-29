@@ -1,0 +1,178 @@
+<title>SoR Arrival · Dawn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Italiana&display=swap">
+<style>
+  /* Layout: full-height frames stacked on a scroll. Frame 1 white (placeholder), frame 2 black, text centred.
+     Single deliberate look: frame colours are fixed by the brief, not by viewer theme. */
+  :root {
+    color-scheme: dark;
+    --paper: #fbfaf7;        /* frame 1 white */
+    --ink: #121110;          /* frame 1 text */
+    --night: #080707;        /* frame 2 black */
+    --ember: #2a2725;        /* dawn start: off-dark grey, barely legible */
+    --daylight: #efebe4;     /* dawn end: warm white */
+    --muted: #8a847c;        /* prototype controls, invitation */
+    --serif: "Polyamine", "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+    --display: "Polyamine", "Italiana", "Didot", "Bodoni 72", serif;
+    --dawn: 16s;             /* overridden by controls */
+  }
+  html { scroll-snap-type: y proximity; }
+  body { background: var(--night); color: var(--daylight); margin: 0; }
+
+  .frame {
+    min-height: 100vh; min-height: 100svh;
+    display: grid; place-items: center;
+    padding-inline: max(16px, 6vw); padding-block: 12vh;
+    box-sizing: border-box; scroll-snap-align: start;
+  }
+
+  /* Frame 1: placeholder for the real Claude Design mockup */
+  .f1 { background: var(--paper); color: var(--ink); position: relative; }
+  .f1 p {
+    font-family: var(--display); font-size: clamp(1.8rem, 4.2vw, 3.4rem);
+    line-height: 1.2; text-align: center; max-width: 22ch; margin: 0; text-wrap: balance;
+  }
+  .f1 small {
+    position: absolute; bottom: 24px; left: 0; right: 0; text-align: center;
+    font: 12px/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* Frame 2: Dawn */
+  .f2 { background: var(--night); }
+  .f2-inner { display: grid; gap: clamp(3rem, 10vh, 7rem); justify-items: center; max-width: 60rem; }
+
+  .dawn {
+    font-family: var(--serif); font-size: clamp(1.1rem, 1.9vw, 1.55rem); line-height: 1.6;
+    text-align: center; max-width: 52ch; margin: 0; text-wrap: pretty;
+    color: var(--ember);
+    /* ease-in: imperceptible at first, like first light */
+    transition: color var(--dawn) cubic-bezier(.55, 0, .75, .45);
+  }
+  .dawn b { font-weight: 700; }
+  .lit .dawn { color: var(--daylight); }
+
+  .statement {
+    font-family: var(--display); font-weight: 400; text-transform: uppercase;
+    font-size: clamp(1.5rem, 3.4vw, 2.7rem); line-height: 1.25; letter-spacing: .06em;
+    text-align: center; margin: 0; max-width: 24ch; text-wrap: balance; color: var(--daylight);
+    transition: opacity 2.4s ease, transform 2.4s ease;
+  }
+  .statement-after .statement { opacity: 0; transform: translateY(.4rem); }
+  .statement-after.lit-done .statement { opacity: 1; transform: none; }
+
+  .invite {
+    font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--muted);
+    display: flex; gap: 1.2em; flex-wrap: wrap; justify-content: center;
+    opacity: 0; transition: opacity 3s ease 1.5s;
+  }
+  .lit-done .invite { opacity: 1; }
+  .invite a { color: inherit; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+  .invite a:hover, .invite a:focus-visible { color: var(--daylight); }
+
+  /* Frame 3 stub, so the scroll has somewhere to go */
+  .f3 { background: #1b1c1d; color: var(--muted); font: 13px/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+
+  /* Prototype controls */
+  .proto {
+    position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 10;
+    font: 12px/1.4 system-ui, sans-serif; color: var(--daylight);
+    background: rgba(20, 19, 18, .88); border: 1px solid #3a3632; border-radius: 8px;
+    padding: 10px 12px; display: grid; gap: 8px; max-width: calc(100vw - 32px); box-sizing: border-box;
+    backdrop-filter: blur(6px);
+  }
+  .proto summary { cursor: pointer; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .proto[open] summary { margin-bottom: 8px; }
+  .proto label { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+  .proto input[type=range] { width: 120px; }
+  .proto output { font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; }
+  .proto button {
+    font: inherit; color: var(--night); background: var(--daylight); border: 0; border-radius: 4px;
+    padding: 6px 10px; cursor: pointer;
+  }
+  .proto button:focus-visible, .proto input:focus-visible, .proto select:focus-visible { outline: 2px solid var(--daylight); outline-offset: 2px; }
+  .proto select { font: inherit; }
+  .proto .row { display: flex; gap: 8px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dawn, .statement, .invite { transition-duration: .01s !important; transition-delay: 0s !important; }
+  }
+</style>
+
+<section class="frame f1" aria-label="Frame 1, Seeds (placeholder)">
+  <p>For all the living beings whose heart burns to see a new world emerge.</p>
+  <small>Frame 1 placeholder · scroll ↓</small>
+</section>
+
+<section class="frame f2" id="dawn" aria-label="Frame 2, Dawn">
+  <div class="f2-inner">
+    <p class="dawn">Human history has always been a story of transformation – of <b>old worlds dying and new ones being born</b>. Every great crisis carries within it the <b>seed of rebirth</b>. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, <i>Revoligion</i>, Complexity and beyond capitalism.</p>
+    <h2 class="statement">We are a vision and movement for civilizational renewal.</h2>
+    <nav class="invite" aria-label="Invitation">
+      <a href="https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit" target="_blank" rel="noopener">Read the full manifesto</a>
+      <span>or continue ↓</span>
+    </nav>
+  </div>
+</section>
+
+<section class="frame f3" aria-label="Frame 3, the Leap (to come)">Frame 3 · the Leap · to come</section>
+
+<details class="proto" open>
+  <summary>Prototype</summary>
+  <label for="dur">Dawn length <input id="dur" type="range" min="4" max="40" step="1" value="16"><output id="durOut">16s</output></label>
+  <label for="stmt">Statement
+    <select id="stmt">
+      <option value="start">visible from start</option>
+      <option value="after">appears after dawn</option>
+    </select>
+  </label>
+  <div class="row"><button id="replay" type="button">Replay dawn</button></div>
+</details>
+
+<script>
+  const root = document.documentElement;
+  const f2 = document.getElementById('dawn');
+  const dur = document.getElementById('dur');
+  const durOut = document.getElementById('durOut');
+  const stmt = document.getElementById('stmt');
+  let doneTimer = null;
+
+  function seconds() { return Number(dur.value); }
+
+  function light() {
+    if (f2.classList.contains('lit')) return;
+    f2.classList.add('lit');
+    clearTimeout(doneTimer);
+    doneTimer = setTimeout(() => f2.classList.add('lit-done'), seconds() * 1000 * 0.85);
+  }
+
+  function reset() {
+    clearTimeout(doneTimer);
+    f2.style.transition = 'none';
+    f2.querySelectorAll('.dawn, .statement, .invite').forEach(el => el.style.transition = 'none');
+    f2.classList.remove('lit', 'lit-done');
+    void f2.offsetHeight; // commit the dark state before re-enabling transitions
+    f2.querySelectorAll('.dawn, .statement, .invite').forEach(el => el.style.transition = '');
+    f2.style.transition = '';
+  }
+
+  dur.addEventListener('input', () => {
+    durOut.textContent = dur.value + 's';
+    root.style.setProperty('--dawn', dur.value + 's');
+  });
+
+  stmt.addEventListener('change', () => {
+    f2.classList.toggle('statement-after', stmt.value === 'after');
+  });
+
+  document.getElementById('replay').addEventListener('click', () => {
+    reset();
+    f2.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(light, 600);
+  });
+
+  // Dawn begins once most of frame 2 is on screen
+  new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) light(); });
+  }, { threshold: 0.6 }).observe(f2);
+</script>
