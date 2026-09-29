@@ -24,6 +24,8 @@ Most likely a scrollable web experience, where scrolling moves you through the b
 
 Four frames (sections of the page). Each frame can hold several beats.
 
+**Build approach:** build and perfect one frame at a time as a standalone piece, then stitch them into the page. Frames with their own experience folder (Leap, Book) keep their brief and moodboard there.
+
 ### Frame 1: Seeds
 
 - **Background:** white.
@@ -36,13 +38,13 @@ Four frames (sections of the page). Each frame can hold several beats.
 - **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: slow enough that readers don't notice it happening until they can read it fully. Not tied to scroll position.
   > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
 - **2b. Six words (possible).** Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism light up, perhaps each in its own colour.
-- **Look** (static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Fonts: to be named; use unlicensed for sketching.
+- **Look** (static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Font: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font); unlicensed for sketching.
 - **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
 - **2d. Light invitation:** read the full manifesto, or keep going. Not in the mockup; appears at some point, low priority.
 
 ### Frame 3: The leap
 
-- See experience 3 in [experiences.md](../../experiences.md). People walk into the image, it rips, "Come join our call".
+- Own brief: [../03-leap/brief.md](../03-leap/brief.md). Scroll-driven: the people in the collage walk up the road, the paper tears to reveal the yellow field, "Come join our call".
 - **The join offer lives here** (meetup), alongside a "keep learning" path onward to the book. Many won't join now, but they know the invitation is there.
 
 ### Frame 4: The book
@@ -62,7 +64,7 @@ Parked: each keyword becoming a different blooming tree.
 - **Frame 1 design**: exists (Claude Design); HTML export to come.
 - **Frame 2 static mockup**: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png).
 - **SoR logo**: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png). Black swallow at the centre of a radiating burst of red fingerprints (the seeds).
-- **Fonts**: to be named.
+- **Font**: Polyamine (link above); needs installing locally / self-hosting for prototypes.
 - **Sound**: wanted (ambient wind/birds, or music). Not defined yet.
 
 ## Open questions

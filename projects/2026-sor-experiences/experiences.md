@@ -14,6 +14,8 @@ A book you open. Pages reveal the courses as things that pop up out of the page:
 
 ## 3. Movement: the leap
 
+Brief → [experiences/03-leap/brief.md](experiences/03-leap/brief.md). Frame 3 of Arrival.
+
 A photograph (the Magnum image). Little people gradually walk into it, through darkness towards possibility. As they walk in, the image rips open: a leap of faith. Then "Come join our call", rip, "Enjoy".
 
 ## 4. Temple of the sacred world
