@@ -184,7 +184,6 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const seg = (p, a, b) => clamp((p - a) / (b - a));
   const ease = t => .5 - .5 * Math.cos(Math.PI * t);                // in-out sine: gentle
-  const easeOut = t => 1 - Math.pow(1 - t, 1.7);
   function rng(s) { return () => { s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
   function noise(seed) {
     const r = rng(seed), v = Array.from({ length: 256 }, r);
@@ -210,6 +209,7 @@
 
   /* ---------- the tear: a fixed torn outline, revealed top-down ---------- */
   const Y0 = .072, YB = .618, ROWS = 240, TAPER = .085;
+  const SLIT = [.43, .53, .11];               // the first small rip: top, bottom, width — straddles the horizon
   const shapeY = [Y0, .1, .14, .19, .25, .31, .4, .5, .57, YB];
   const shapeL = [.608, .592, .566, .545, .518, .503, .489, .474, .463, .456];
   const shapeR = [.628, .648, .664, .676, .69, .699, .708, .714, .72, .726];
@@ -238,24 +238,26 @@
     return out;
   })();
 
-  function tearGeometry(t) {
-    const T = Y0 + (YB + TAPER - Y0) * t;
-    const f = y => Math.pow(clamp((T - y) / TAPER), .55);
+  // the hole between heights top…bot, tapering to soft points at both ends; W scales its width
+  function tearGeometry(top, bot, W) {
+    const f = y => W * Math.pow(Math.min(clamp((y - top) / TAPER), clamp((bot - y) / TAPER)), .55);
     const L = [], R = [], RL = [], RR = [];
-    for (const row of rows) {
-      if (row.y > T) break;
+    let j0 = -1, j1 = -1;
+    rows.forEach((row, j) => {
+      if (row.y < top || row.y > bot) return;
+      if (j0 < 0) j0 = j; j1 = j;
       const k = f(row.y), c = (row.l + row.r) / 2 + nC(row.y) * (1 - k);
       const l = lerp(c, row.l, k), r = lerp(c, row.r, k);
       L.push([l, row.y]); R.push([r, row.y]);
       RL.push([l - row.rl * k, row.y]); RR.push([r + row.rr * k, row.y]);
-    }
-    if (!L.length) return null;
+    });
+    if (L.length < 2) return null;
     const hole = [], rim = [];
-    const topLift = .012 * f(Y0);
-    rim.push([(RL[0][0] + RR[0][0]) / 2, Y0 - topLift]);
+    const first = rows[j0], last = rows[j1];
+    rim.push([(RL[0][0] + RR[0][0]) / 2, first.y - .004 - .012 * f(first.y)]);
+    hole.push([(L[0][0] + R[0][0]) / 2, first.y - .003]);
     hole.push(...L); rim.push(...RL);
-    const last = rows[L.length - 1];
-    if (L.length === ROWS) {                  // the tear has reached the road: close along a rough bottom edge
+    if (j1 === ROWS - 1) {                    // the tear has reached the road: close along a rough bottom edge
       const kb = f(YB), l = L[L.length - 1][0], r = R[R.length - 1][0];
       for (const u of BOTTOM) {
         const x = lerp(l, r, u), wob = nB(x) * kb;
@@ -264,23 +266,30 @@
       }
     } else {                                  // still tearing: close at a soft point
       const tipX = (L[L.length - 1][0] + R[R.length - 1][0]) / 2;
-      hole.push([tipX, Math.min(T, last.y + .004)]);
-      rim.push([tipX, Math.min(T, last.y + .004) + .006]);
+      hole.push([tipX, last.y + .003]);
+      rim.push([tipX, last.y + .004 + .006 * f(last.y) / Math.max(W, .01)]);
     }
     hole.push(...R.reverse()); rim.push(...RR.reverse());
-    return { hole, rim, f, count: L.length };
+    return { hole, rim, f, j0, j1 };
   }
 
-  /* ---------- walkers: order, lane, where they stop ---------- */
+  /* ---------- walkers: order, lane, pace ---------- */
   const ORDER = [1, 4, 6, 3, 7, 2, 5, 0];                  // leader first; the man with the bag comes last, nearest to us
   const LANES = [0, -.17, .14, -.22, .2, -.08, .19, -.04];
   const HEIGHT = [1, .97, 1.02, .98, .95, 1.03, .96, 1.01];
-  const walkers = ORDER.map((sprite, i) => ({
-    sprite, lane: LANES[i], hf: HEIGHT[i],
-    a: .09 + i * .04, b: .56 - i * .012,                  // walking window (scroll progress)
-    z0: .6, z1: 3.45 - i * .33,                           // from behind the viewer to their place on the road
-    c: .735 + i * .012, d: .885 + i * .008, dz: 3.4,      // then on into the field
-  }));
+  // No stopping: each walks at a steady pace from behind the viewer, crosses the road's end at
+  // progress m (by then the paper has opened) and slows to a halt in the field by e.
+  const Z_EDGE = 4, TAIL = .08;
+  const walkers = ORDER.map((sprite, i) => {
+    const a = .09 + i * .04, m = .64 + i * .03, e = .92 + i * .008, z0 = .6;
+    return { sprite, lane: LANES[i], hf: HEIGHT[i], a, e, z0, v: (Z_EDGE - z0) / (m - a) };
+  });
+  function walkerAt(w, p) {                                // depth and stride amplitude at progress p
+    const L = w.e - w.a, t = clamp(p - w.a, 0, L), run = L - TAIL;
+    if (t <= run) return { z: w.z0 + w.v * t, moving: Math.min(1, t * 25) };
+    const s = (t - run) / TAIL;                            // speed falls linearly to zero over the tail
+    return { z: w.z0 + w.v * (run + TAIL * (s - s * s / 2)), moving: 1 - s };
+  }
   const STEPS = 6.5;                                      // strides per unit of depth
 
   /* ---------- images ---------- */
@@ -341,8 +350,12 @@
 
   function render(p) {
     if (!S) return;
-    const tearT = ease(seg(p, .52, .74));
-    const open = ease(seg(p, .6, .92));
+    // a small slit is there from the start; as the leader nears, it tears up to the top and down to the road
+    const rip = seg(p, .34, .56);
+    const top = lerp(SLIT[0], Y0 - TAPER, ease(seg(p, .34, .48)));
+    const bot = lerp(SLIT[1], YB + TAPER, ease(seg(p, .36, .56)));
+    const width = lerp(SLIT[2], 1, ease(seg(p, .34, .5)));
+    const open = ease(seg(p, .45, .9));
     const zoom = lerp(1, ZOOM, ease(seg(p, .84, 1)));
 
     ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -352,12 +365,12 @@
     const px = 1 / (S * zoom);                // one CSS pixel in scene units
 
     ctx.drawImage(plate, 0, 0, 1, 1);
-    if (SPILL > 0 && tearT > 0) {             // open question: does colour leak out of the tear?
+    if (SPILL > 0 && rip > 0) {             // open question: does colour leak out of the tear?
       ctx.save(); ctx.globalCompositeOperation = 'color'; ctx.globalAlpha = SPILL * open;
       ctx.drawImage(field, -.35, -.25, 1.7, 1.7); ctx.restore();
     }
 
-    const geo = tearT > 0 ? tearGeometry(tearT) : null;
+    const geo = tearGeometry(top, bot, width);
     if (geo) {
       paperPat.setTransform(new DOMMatrix([px, 0, 0, px, 0, 0]));
       // 1. the exposed white paper
@@ -374,17 +387,16 @@
       ctx.fillStyle = PAPER; ctx.fill('evenodd'); ctx.restore();
       // 4. loose fibres over the edge
       ctx.save(); ctx.lineCap = 'round';
-      const n = geo.count;
       for (const fb of fibres) {
         let x0, y0, x1, y1;
         if (fb.j >= 0) {
-          if (fb.j >= n - 2) continue;
+          if (fb.j < geo.j0 + 2 || fb.j > geo.j1 - 2) continue;
           const row = rows[fb.j], k = geo.f(row.y), c = (row.l + row.r) / 2;
           const edge = lerp(c, fb.side < 0 ? row.l : row.r, k), rimW = (fb.side < 0 ? row.rl : row.rr) * k;
           x0 = edge + fb.side * rimW * fb.a * .7; y0 = row.y;
           x1 = edge - fb.side * fb.len * k; y1 = row.y + fb.dy * k;
         } else {
-          if (n < ROWS) continue;
+          if (geo.j1 < ROWS - 1) continue;
           const row = rows[ROWS - 1], x = lerp(row.l, row.r, fb.u), k = geo.f(YB);
           x0 = x + fb.dx; y0 = YB + .004 + nB(x) * k + .008 * fb.a; x1 = x + fb.dx * 1.6; y1 = y0 - fb.len - .008 * fb.a;
         }
@@ -396,11 +408,9 @@
 
     // walkers, far to near
     const placed = walkers.map(w => {
-      const u = seg(p, w.a, w.b), v = seg(p, w.c, w.d);
-      const z = lerp(w.z0, w.z1, easeOut(u)) + w.dz * ease(v);
-      const moving = (u > 0 && u < 1) ? Math.min(1, u * 25, (1 - u) * 10) : (v > 0 && v < 1) ? Math.min(1, v * 12, (1 - v) * 8) : 0;
-      return { w, z, u, moving };
-    }).filter(o => o.u > 0).sort((a, b) => b.z - a.z);
+      const { z, moving } = walkerAt(w, p);
+      return { w, z, moving, on: p > w.a };
+    }).filter(o => o.on).sort((a, b) => b.z - a.z);
     for (const { w, z, moving } of placed) {
       const y = zToY(z), x = roadCentre(y) + w.lane * roadWidth(y);
       const H = .66 * (y - VY) * w.hf;
