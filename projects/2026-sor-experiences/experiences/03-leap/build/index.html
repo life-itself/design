@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Leap · Seeds of Renaissance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Stand-ins for Polyamine: Libre Caslon Text (lines), Italiana (display capitals) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Italiana&display=swap">
+<link rel="preload" as="image" href="assets/plate.jpg">
+<style>
+  .x-leap {
+    --leap-bg: #161616;
+    --daylight: #efebe4;
+    --night: #080707;
+    --serif: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+    --display: "Italiana", "Didot", "Bodoni 72", serif;
+    position: relative;
+    background: var(--leap-bg);
+    color: var(--daylight);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+  .x-leap *, .x-leap *::before, .x-leap *::after { box-sizing: border-box; }
+
+  /* tall scroll track; the stage sticks while scroll scrubs the scene */
+  .x-leap__track { position: relative; height: 600vh; }
+  .x-leap__stage {
+    position: sticky; top: 0;
+    height: 100vh; height: 100svh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: clamp(14px, 3svh, 30px);
+    padding: clamp(12px, 3svh, 28px) 0;
+    overflow: hidden;
+  }
+  .x-leap__frame {
+    position: relative;
+    width: min(92vw, 78vh, calc(100vh - 10.5rem));
+    width: min(92vw, 78svh, calc(100svh - 10.5rem));
+    aspect-ratio: 1;
+    flex: none;
+  }
+  .x-leap__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* words live below the image, in one slot, crossfading */
+  .x-leap__words {
+    position: relative;
+    width: min(92vw, 40rem);
+    height: clamp(5.25rem, 13svh, 7.5rem);
+    flex: none;
+  }
+  .x-leap__line, .x-leap__invite {
+    position: absolute; inset: 0 0 auto;
+    margin: 0; text-align: center;
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+  .x-leap__line {
+    font-size: clamp(1.05rem, 2.1vw, 1.45rem);
+    line-height: 1.5;
+    text-wrap: balance;
+    padding-top: .35em;
+  }
+  .x-leap__join {
+    margin: 0;
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(1.5rem, 7vw, 3.1rem);
+    text-wrap: balance;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-left: .2em; /* balance the trailing tracking so the capitals sit centred */
+  }
+  .x-leap__ways {
+    margin: .7em 0 0;
+    font-size: clamp(1rem, 1.7vw, 1.15rem);
+    line-height: 1.5;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
+    gap: .2em .8em;
+  }
+  .x-leap__ways span[aria-hidden] { opacity: .55; }
+  .x-leap a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in oklch, var(--daylight) 55%, transparent);
+    text-underline-offset: .28em;
+    transition: text-decoration-color .25s ease, text-underline-offset .25s ease;
+    border-radius: 2px;
+  }
+  .x-leap a:hover { text-decoration-color: var(--daylight); text-underline-offset: .36em; }
+  .x-leap a:focus-visible { outline: 1.5px solid var(--daylight); outline-offset: 5px; }
+  .x-leap__invite[data-hidden] { visibility: hidden; }
+
+  /* a quiet cue before the first scroll */
+  .x-leap__cue {
+    position: absolute; left: 50%; top: 0; width: 1px; height: 2.6rem;
+    background: linear-gradient(var(--daylight), transparent);
+    opacity: .5; transform-origin: top;
+    animation: x-leap-cue 2.8s ease-in-out infinite;
+  }
+  @keyframes x-leap-cue { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+
+  .x-leap__ph { opacity: .45; font-size: .8em; }
+
+  /* what follows (in the full page: the Book) */
+  .x-leap__next {
+    min-height: 60vh; background: var(--night);
+    display: grid; place-items: center;
+    font-size: .95rem; letter-spacing: .02em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .x-leap__track { height: auto; }
+    .x-leap__stage { position: relative; height: auto; min-height: 100svh; }
+    .x-leap__words { height: auto; display: grid; gap: 1.1rem; }
+    .x-leap__line, .x-leap__invite { position: static; opacity: 1 !important; transform: none !important; }
+    .x-leap__invite[data-hidden] { visibility: visible; }
+    .x-leap__cue { display: none; }
+    .x-leap a { transition: none; }
+  }
+</style>
+</head>
+<body style="margin:0;background:#161616">
+
+<!--
+  THE LEAP · Seeds of Renaissance, part 3
+  Scroll scrubs the scene. Deep link to a moment: #leap-72 (72% through).
+  Colour spill (open question): data-spill="0" keeps colour inside the tear;
+  try data-spill="0.5" (or ?spill=0.5 in the URL) to let the field's colour
+  bleed into the grey once the paper is open.
+-->
+<main class="x-leap" id="leap" data-spill="0" data-od-id="leap">
+  <section class="x-leap__track" data-od-id="leap-scroll" aria-label="The Leap">
+    <div class="x-leap__stage" data-od-id="leap-stage">
+      <div class="x-leap__frame" data-od-id="leap-image">
+        <canvas class="x-leap__canvas" role="img"
+          aria-label="A black-and-white collage: people in dark coats walk up a road that ends in grey clouds; the paper tears open onto a yellow field under blue sky, and they walk into it."></canvas>
+      </div>
+      <div class="x-leap__words" data-od-id="leap-words">
+        <span class="x-leap__cue" aria-hidden="true"></span>
+        <p class="x-leap__line" data-od-id="leap-line-1">Walking into the unknown can be frightening.</p>
+        <p class="x-leap__line" data-od-id="leap-line-2">But as we walk, we hold the possibility of renewal.</p>
+        <div class="x-leap__invite" data-od-id="leap-invite" data-hidden>
+          <h2 class="x-leap__join" data-od-id="leap-join">Come join us</h2>
+          <p class="x-leap__ways">
+            <a href="#" data-od-id="leap-calls">Meet others on our Thursday calls</a>
+            <span aria-hidden="true">·</span>
+            <a href="#leap-next" data-od-id="leap-keep-learning">or keep learning ↓</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="x-leap__next" id="leap-next" data-od-id="leap-next">
+    <p class="x-leap__ph">[next: the Book]</p>
+  </section>
+</main>
+
+<script>
+(() => {
+  const root = document.getElementById('leap');
+  const track = root.querySelector('.x-leap__track');
+  const frame = root.querySelector('.x-leap__frame');
+  const canvas = root.querySelector('.x-leap__canvas');
+  const ctx = canvas.getContext('2d');
+  const [line1, line2] = root.querySelectorAll('.x-leap__line');
+  const invite = root.querySelector('.x-leap__invite');
+  const cue = root.querySelector('.x-leap__cue');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- tuning ---------- */
+  const SPILL = +(new URLSearchParams(location.search).get('spill') ?? root.dataset.spill ?? 0);
+  const ZOOM = 1.4;                          // how far we push into the field at the end
+  const ZOOM_AT = [.59, .3];                // …and where
+  const PAPER = '#eeebe3';
+
+  /* walker sprites: [body | left leg | right leg] panels, 720px tall, cut by src/prep_leap.py */
+  const META = [{"w":295,"h":720,"legTop":539,"footX":143.6},{"w":275,"h":720,"legTop":532,"footX":117.0},{"w":266,"h":720,"legTop":445,"footX":108.3},{"w":261,"h":720,"legTop":452,"footX":106.9},{"w":265,"h":720,"legTop":437,"footX":134.3},{"w":291,"h":720,"legTop":482,"footX":122.9},{"w":314,"h":720,"legTop":485,"footX":140.6},{"w":289,"h":720,"legTop":381,"footX":131.0}];
+
+  /* ---------- helpers ---------- */
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const ease = t => .5 - .5 * Math.cos(Math.PI * t);                // in-out sine: gentle
+  const easeOut = t => 1 - Math.pow(1 - t, 1.7);
+  function rng(s) { return () => { s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function noise(seed) {
+    const r = rng(seed), v = Array.from({ length: 256 }, r);
+    return x => { const i = Math.floor(x), f = x - i, s = f * f * (3 - 2 * f), a = v[i & 255], b = v[(i + 1) & 255]; return (a + (b - a) * s) * 2 - 1; };
+  }
+  function fbm(seed, octaves) {             // octaves: [[amplitude, frequency], …]
+    const ns = octaves.map((_, i) => noise(seed * 31 + i * 7));
+    return x => octaves.reduce((s, [a, f], i) => s + a * ns[i](x * f), 0);
+  }
+  function spline(ys, xs, y) {              // Catmull-Rom through (ys[i], xs[i]), ys ascending
+    let i = 0; while (i < ys.length - 2 && y > ys[i + 1]) i++;
+    const t = clamp((y - ys[i]) / (ys[i + 1] - ys[i]));
+    const p0 = xs[Math.max(0, i - 1)], p1 = xs[i], p2 = xs[i + 1], p3 = xs[Math.min(xs.length - 1, i + 2)];
+    return .5 * (2 * p1 + (-p0 + p2) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t * t + (-p0 + 3 * p1 - 3 * p2 + p3) * t * t * t);
+  }
+
+  /* ---------- the road (measured on plate.jpg, image = unit square) ---------- */
+  const VY = .467;                           // vanishing height of the road
+  const ROAD_END = .6;
+  const roadCentre = y => .58 - .855 * (y - ROAD_END);
+  const roadWidth = y => 1.3125 * (y - VY);
+  const zToY = z => VY + .533 / z;           // depth → screen height (z = 1 at the bottom edge)
+
+  /* ---------- the tear: a fixed torn outline, revealed top-down ---------- */
+  const Y0 = .072, YB = .618, ROWS = 240, TAPER = .085;
+  const shapeY = [Y0, .1, .14, .19, .25, .31, .4, .5, .57, YB];
+  const shapeL = [.608, .592, .566, .545, .518, .503, .489, .474, .463, .456];
+  const shapeR = [.628, .648, .664, .676, .69, .699, .708, .714, .72, .726];
+  const nL = fbm(1, [[.011, 7], [.006, 23], [.0028, 71], [.0012, 210]]);
+  const nR = fbm(2, [[.012, 6], [.006, 21], [.003, 67], [.0012, 200]]);
+  const nB = fbm(3, [[.005, 9], [.0025, 40], [.001, 150]]);
+  const nWL = fbm(4, [[1, 9], [.6, 37]]), nWR = fbm(5, [[1, 7], [.6, 33]]), nC = fbm(6, [[.004, 11]]);
+  const rows = Array.from({ length: ROWS }, (_, j) => {
+    const y = Y0 + (YB - Y0) * j / (ROWS - 1);
+    const k = clamp((y - Y0) / .05);           // pinch to a point at the top
+    let l = spline(shapeY, shapeL, y) + nL(y) * k, r = spline(shapeY, shapeR, y) + nR(y) * k;
+    const c = (l + r) / 2; l = lerp(c, l, .25 + .75 * k); r = lerp(c, r, .25 + .75 * k);
+    return { y, l, r,
+      rl: .005 + .0045 * (nWL(y) + 1),         // white rim widths: thin on the left…
+      rr: .009 + .01 * (nWR(y) + 1) };          // …wide and ragged on the right, as in the collage
+  });
+  const BOTTOM = Array.from({ length: 48 }, (_, i) => i / 47);   // bottom edge across the road
+
+  // fibres: loose white hairs reaching from the rim over the hole
+  const fibres = (() => {
+    const r = rng(9), out = [];
+    rows.forEach((row, j) => {
+      for (const side of [-1, 1]) if (r() < .55) out.push({ j, side, a: r(), len: .002 + r() * r() * .011, dy: (r() - .5) * .01, w: .5 + r() * .8, o: .35 + r() * .5 });
+    });
+    for (let i = 0; i < 60; i++) out.push({ j: -1, u: r(), a: r(), len: .002 + r() * r() * .009, dx: (r() - .5) * .008, w: .5 + r() * .8, o: .35 + r() * .5 });
+    return out;
+  })();
+
+  function tearGeometry(t) {
+    const T = Y0 + (YB + TAPER - Y0) * t;
+    const f = y => Math.pow(clamp((T - y) / TAPER), .55);
+    const L = [], R = [], RL = [], RR = [];
+    for (const row of rows) {
+      if (row.y > T) break;
+      const k = f(row.y), c = (row.l + row.r) / 2 + nC(row.y) * (1 - k);
+      const l = lerp(c, row.l, k), r = lerp(c, row.r, k);
+      L.push([l, row.y]); R.push([r, row.y]);
+      RL.push([l - row.rl * k, row.y]); RR.push([r + row.rr * k, row.y]);
+    }
+    if (!L.length) return null;
+    const hole = [], rim = [];
+    const topLift = .012 * f(Y0);
+    rim.push([(RL[0][0] + RR[0][0]) / 2, Y0 - topLift]);
+    hole.push(...L); rim.push(...RL);
+    const last = rows[L.length - 1];
+    if (L.length === ROWS) {                  // the tear has reached the road: close along a rough bottom edge
+      const kb = f(YB), l = L[L.length - 1][0], r = R[R.length - 1][0];
+      for (const u of BOTTOM) {
+        const x = lerp(l, r, u), wob = nB(x) * kb;
+        hole.push([x, YB + .004 + wob]);
+        rim.push([lerp(RL[RL.length - 1][0], RR[RR.length - 1][0], u), YB + .012 * kb + .004 + wob * 1.3]);
+      }
+    } else {                                  // still tearing: close at a soft point
+      const tipX = (L[L.length - 1][0] + R[R.length - 1][0]) / 2;
+      hole.push([tipX, Math.min(T, last.y + .004)]);
+      rim.push([tipX, Math.min(T, last.y + .004) + .006]);
+    }
+    hole.push(...R.reverse()); rim.push(...RR.reverse());
+    return { hole, rim, f, count: L.length };
+  }
+
+  /* ---------- walkers: order, lane, where they stop ---------- */
+  const ORDER = [1, 4, 6, 3, 7, 2, 5, 0];                  // leader first; the man with the bag comes last, nearest to us
+  const LANES = [0, -.17, .14, -.22, .2, -.08, .19, -.04];
+  const HEIGHT = [1, .97, 1.02, .98, .95, 1.03, .96, 1.01];
+  const walkers = ORDER.map((sprite, i) => ({
+    sprite, lane: LANES[i], hf: HEIGHT[i],
+    a: .09 + i * .04, b: .56 - i * .012,                  // walking window (scroll progress)
+    z0: .6, z1: 3.45 - i * .33,                           // from behind the viewer to their place on the road
+    c: .735 + i * .012, d: .885 + i * .008, dz: 3.4,      // then on into the field
+  }));
+  const STEPS = 6.5;                                      // strides per unit of depth
+
+  /* ---------- images ---------- */
+  const load = src => new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = src; });
+  let plate, field, sprites, grainPat, paperPat;
+
+  function makeGrain() {
+    const c = document.createElement('canvas'); c.width = c.height = 192;
+    const g = c.getContext('2d'), d = g.createImageData(192, 192), r = rng(7);
+    for (let i = 0; i < d.data.length; i += 4) { const v = 64 + r() * 128 | 0; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+    g.putImageData(d, 0, 0); return c;
+  }
+  function makePaper() {                    // pale paper with a few long fibres
+    const c = document.createElement('canvas'); c.width = c.height = 160;
+    const g = c.getContext('2d'), r = rng(11);
+    g.fillStyle = PAPER; g.fillRect(0, 0, 160, 160);
+    for (let i = 0; i < 260; i++) {
+      g.strokeStyle = r() < .5 ? 'rgba(255,255,255,.7)' : 'rgba(150,142,128,.16)';
+      g.lineWidth = .5 + r() * .7; g.beginPath();
+      const x = r() * 160, y = r() * 160, a = r() * Math.PI, l = 3 + r() * 14;
+      g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a) * l * .5 + (r() - .5) * 4, y + Math.sin(a) * l * .5, x + Math.cos(a) * l, y + Math.sin(a) * l); g.stroke();
+    }
+    return c;
+  }
+
+  /* ---------- drawing ---------- */
+  let S = 0, K = 1;                         // canvas CSS size, device scale
+  function resize() {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    S = frame.clientWidth; K = S * dpr;
+    canvas.width = canvas.height = Math.round(K);
+    need = true;
+  }
+  const path = pts => { ctx.beginPath(); pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath(); };
+  const FIELD = { x: -.005, y: .467 - .363 * 1.2, s: 1.2 };  // field horizon sits on the road's vanishing line
+  const drawField = () => ctx.drawImage(field, FIELD.x, FIELD.y, FIELD.s, FIELD.s);
+
+  function drawWalker(w, fx, fy, H, phase, amp) {
+    const m = META[w.sprite], img = sprites[w.sprite], s = H / m.h;
+    const st = Math.sin(phase) * amp;
+    const bob = Math.abs(Math.sin(phase)) * amp * .014 * m.h;   // highest mid-stride
+    ctx.save();
+    ctx.translate(fx + st * .008 * H, fy);                      // weight shifts over the planted foot
+    ctx.rotate(st * .014);
+    ctx.scale(s, s);
+    ctx.translate(-m.footX, -m.h);
+    const lt = m.legTop - 6, lh = m.h - lt;          // legs start a little under the hem
+    for (const side of [1, 2]) {
+      const lift = Math.max(0, side === 1 ? st : -st);          // the swinging leg shortens as its foot travels away from us
+      ctx.save();
+      ctx.translate(0, lt); ctx.scale(1, 1 - lift * .13); ctx.translate((side === 1 ? 1 : -1) * lift * .025 * m.w, -lt);
+      ctx.drawImage(img, m.w * side, lt, m.w, lh, 0, lt, m.w, lh);
+      ctx.restore();
+    }
+    ctx.drawImage(img, 0, 0, m.w, m.legTop + 14, 0, -bob, m.w, m.legTop + 14);
+    ctx.restore();
+  }
+
+  function render(p) {
+    if (!S) return;
+    const tearT = ease(seg(p, .52, .74));
+    const open = ease(seg(p, .6, .92));
+    const zoom = lerp(1, ZOOM, ease(seg(p, .84, 1)));
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = '#161616'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const [cx, cy] = ZOOM_AT;
+    ctx.setTransform(K * zoom, 0, 0, K * zoom, K * (cx - zoom * cx), K * (cy - zoom * cy));
+    const px = 1 / (S * zoom);                // one CSS pixel in scene units
+
+    ctx.drawImage(plate, 0, 0, 1, 1);
+    if (SPILL > 0 && tearT > 0) {             // open question: does colour leak out of the tear?
+      ctx.save(); ctx.globalCompositeOperation = 'color'; ctx.globalAlpha = SPILL * open;
+      ctx.drawImage(field, -.35, -.25, 1.7, 1.7); ctx.restore();
+    }
+
+    const geo = tearT > 0 ? tearGeometry(tearT) : null;
+    if (geo) {
+      paperPat.setTransform(new DOMMatrix([px, 0, 0, px, 0, 0]));
+      // 1. the exposed white paper
+      path(geo.rim); ctx.fillStyle = paperPat; ctx.fill();
+      // 2. the grey sheet's torn edge throws a little shadow onto the white
+      ctx.save(); path(geo.rim); ctx.clip();
+      ctx.beginPath(); ctx.rect(-1, -1, 3, 3); geo.rim.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath();
+      ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 5 * px * K * zoom; ctx.shadowOffsetY = 1 * px * K * zoom;
+      ctx.fillStyle = '#000'; ctx.fill('evenodd'); ctx.restore();
+      // 3. the field, seen through the hole, with the paper's shadow on it
+      ctx.save(); path(geo.hole); ctx.clip(); drawField();
+      ctx.beginPath(); ctx.rect(-1, -1, 3, 3); geo.hole.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath();
+      ctx.shadowColor = 'rgba(20,18,10,.5)'; ctx.shadowBlur = 9 * px * K * zoom; ctx.shadowOffsetY = 2 * px * K * zoom;
+      ctx.fillStyle = PAPER; ctx.fill('evenodd'); ctx.restore();
+      // 4. loose fibres over the edge
+      ctx.save(); ctx.lineCap = 'round';
+      const n = geo.count;
+      for (const fb of fibres) {
+        let x0, y0, x1, y1;
+        if (fb.j >= 0) {
+          if (fb.j >= n - 2) continue;
+          const row = rows[fb.j], k = geo.f(row.y), c = (row.l + row.r) / 2;
+          const edge = lerp(c, fb.side < 0 ? row.l : row.r, k), rimW = (fb.side < 0 ? row.rl : row.rr) * k;
+          x0 = edge + fb.side * rimW * fb.a * .7; y0 = row.y;
+          x1 = edge - fb.side * fb.len * k; y1 = row.y + fb.dy * k;
+        } else {
+          if (n < ROWS) continue;
+          const row = rows[ROWS - 1], x = lerp(row.l, row.r, fb.u), k = geo.f(YB);
+          x0 = x + fb.dx; y0 = YB + .004 + nB(x) * k + .008 * fb.a; x1 = x + fb.dx * 1.6; y1 = y0 - fb.len - .008 * fb.a;
+        }
+        ctx.strokeStyle = `rgba(250,248,242,${fb.o})`; ctx.lineWidth = fb.w * px;
+        ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo((x0 + x1) / 2 + (y1 - y0) * .3, (y0 + y1) / 2, x1, y1); ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    // walkers, far to near
+    const placed = walkers.map(w => {
+      const u = seg(p, w.a, w.b), v = seg(p, w.c, w.d);
+      const z = lerp(w.z0, w.z1, easeOut(u)) + w.dz * ease(v);
+      const moving = (u > 0 && u < 1) ? Math.min(1, u * 25, (1 - u) * 10) : (v > 0 && v < 1) ? Math.min(1, v * 12, (1 - v) * 8) : 0;
+      return { w, z, u, moving };
+    }).filter(o => o.u > 0).sort((a, b) => b.z - a.z);
+    for (const { w, z, moving } of placed) {
+      const y = zToY(z), x = roadCentre(y) + w.lane * roadWidth(y);
+      const H = .66 * (y - VY) * w.hf;
+      const inField = geo && y < YB - .003;
+      ctx.save();
+      if (inField) { path(geo.hole); ctx.clip(); }
+      else {                                   // a soft contact shadow on the road
+        ctx.fillStyle = 'rgba(0,0,0,.28)';
+        ctx.beginPath(); ctx.ellipse(x, y, H * .12, H * .018, 0, 0, Math.PI * 2); ctx.fill();
+      }
+      drawWalker(w, x, y, H, z * STEPS * Math.PI, moving);
+      if (inField) {                           // wading: the flowers close over their legs
+        const wade = clamp((YB - y) / .025);
+        ctx.beginPath(); ctx.rect(x - H * .4, y - H * .28 * wade, H * .8, H * .4); ctx.clip(); drawField();
+      }
+      ctx.restore();
+    }
+
+    // light: the grey world is heavy at first, and lifts a little once the field is open
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const W = canvas.width;
+    const vg = ctx.createRadialGradient(W * .58, W * .44, W * .12, W * .5, W * .5, W * .78);
+    vg.addColorStop(0, 'rgba(8,7,7,0)'); vg.addColorStop(1, `rgba(8,7,7,${lerp(.72, .22, open)})`);
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, W);
+    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, W); ctx.restore(); }
+    ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = .22;
+    ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, W); ctx.restore();
+  }
+
+  /* ---------- words ---------- */
+  function words(p) {
+    const show = (el, o) => { el.style.opacity = o.toFixed(3); el.style.transform = `translateY(${((1 - o) * 8).toFixed(2)}px)`; };
+    show(line1, seg(p, .015, .075) * (1 - seg(p, .25, .3)));
+    show(line2, seg(p, .31, .37) * (1 - seg(p, .52, .57)));
+    const j = seg(p, .82, .9);
+    show(invite, j);
+    invite.toggleAttribute('data-hidden', j < .05);
+    cue.style.opacity = (.5 * (1 - seg(p, 0, .015))).toFixed(3);
+  }
+
+  /* ---------- scroll ---------- */
+  const target = () => { const r = track.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
+  let shown = 0, need = true, ready = false;
+  function tick() {
+    const t = target();
+    const next = Math.abs(t - shown) < .0004 ? t : shown + (t - shown) * .14;   // a little inertia so the scrub glides
+    if (next !== shown || need) { shown = next; need = false; if (ready) render(shown); words(shown); }
+    requestAnimationFrame(tick);
+  }
+
+  function jumpToHash() {                    // #leap-72 → 72% through the scene
+    const m = location.hash.match(/^#leap-(\d{1,3})$/); if (!m || reduced) return;
+    const top = track.getBoundingClientRect().top + scrollY;
+    scrollTo(0, top + (track.offsetHeight - innerHeight) * clamp(+m[1] / 100));
+    shown = clamp(+m[1] / 100); need = true;
+  }
+
+  Promise.all([load('assets/plate.jpg'), load('assets/field.jpg'), ...META.map((_, i) => load(`assets/walker-${i}.webp`))])
+    .then(([pl, fi, ...sp]) => {
+      plate = pl; field = fi; sprites = sp; grainPat = ctx.createPattern(makeGrain(), 'repeat');
+      paperPat = ctx.createPattern(makePaper(), 'repeat');
+      ready = true; need = true;
+      if (reduced) render(1);
+    });
+
+  new ResizeObserver(() => { resize(); if (reduced && ready) render(1); }).observe(frame);
+  if (reduced) { words(1); }
+  else { jumpToHash(); addEventListener('hashchange', jumpToHash); requestAnimationFrame(tick); }
+})();
+</script>
+</body>
+</html>
