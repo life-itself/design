@@ -40,7 +40,7 @@ Five frames (sections of the page). Each frame can hold several beats.
 - **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: about 12s, quicker at first and lingering at the end. Not tied to scroll position.
   > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
 - **2b. Six words:** stay plain text within the paragraph. They come alive later as the trees of frame 5.
-- **Look** (static mockup: [../02-dawn/moodboard/frame-2-mockup-static.png](../02-dawn/moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Font: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font); unlicensed for sketching.
+- **Look** (static mockup: [../02-dawn/moodboard/frame-2-mockup-static.png](../02-dawn/moodboard/frame-2-mockup-static.png)): paragraph centred, statement below in a light, spaced, all-caps display face. The mockup shows key phrases in bold; that is dropped — body is one weight, no bold and no italic. Display face: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font), unlicensed for sketching. Body face undecided.
 - **Prototype v1:** [../02-dawn/prototype.html](../02-dawn/prototype.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY). Controls for dawn length and statement timing. Stand-in fonts until Polyamine is installed.
 - **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
 - **2d. Light invitation:** read the full manifesto, or keep going. Dawns together with the paragraph, same colour, not italic.
@@ -69,7 +69,7 @@ The ending: a story of hope, authentic and credible. No further acknowledgement 
 - **Frame 1 design**: exists (Claude Design); HTML export to come.
 - **Frame 2 static mockup**: [../02-dawn/moodboard/frame-2-mockup-static.png](../02-dawn/moodboard/frame-2-mockup-static.png).
 - **SoR logo**: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png). Black swallow at the centre of a radiating burst of red fingerprints (the seeds).
-- **Font**: Polyamine (link above); needs installing locally / self-hosting for prototypes.
+- **Font**: Polyamine (link above) for display; needs installing locally / self-hosting for prototypes — today it is loaded via `local()` only, so anyone without it installed sees the Italiana fallback. Body face still to choose.
 - **Sound**: wanted (ambient wind/birds, or music). Not defined yet.
 
 ## Open questions

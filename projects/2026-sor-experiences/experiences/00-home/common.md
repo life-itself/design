@@ -8,10 +8,11 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
-- **Polyamine** ([source](https://uicreative.net/products/polyamine-modern-classy-serif-font)) for display and body. Unlicensed for sketching.
+- **Polyamine** ([source](https://uicreative.net/products/polyamine-modern-classy-serif-font)) for major headings (and maybe elsewhere). Unlicensed for sketching.
 - Display: light, widely spaced capitals (e.g. the Dawn statement).
-- Body: centred serif; key phrases in bold.
-- Stand-ins until the font files are in: Italiana (display), Libre Caslon Text (body). Name any stand-in you use.
+- Body: centred serif, one weight. **No bold, no italic** — emphasis comes from rhythm and space, not from weight.
+- Body face is undecided. Crimson Text is a stand-in and not the answer. It must survive both grounds: the black frames (Dawn, Book) and the white ones (Arrival, Flight), so moderate stroke contrast and sturdy stems. A variable face lets the same font run lighter on black and heavier on paper.
+- Stand-ins until the font files are in: Italiana (display), Crimson Text (body). Name any stand-in you use.
 - Exception: the Book's rising letters use an illuminated, gold display face (sketch: Cinzel Decorative).
 
 ## Colour
@@ -40,10 +41,9 @@ Mostly black and white; colour arrives as events (the yellow field, the gold let
 
 ## Words
 
-- **Revoligion**: keep, gloss "(the evolution of religion)" on first use, set in italics.
+- **Revoligion**: keep, gloss "(the evolution of religion)" on first use.
 - The six principles: Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism.
 - **Papers**, not "white papers".
-- Avoid "building a movement".
 
 ## Assets
 
