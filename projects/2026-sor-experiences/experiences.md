@@ -2,6 +2,10 @@
 
 Candidate experiences, distilled from [raw/2026-09-29-first-outflow-experiences-vision.md](raw/2026-09-29-first-outflow-experiences-vision.md). Each is a self-contained, animated piece. Once one is chosen for development it gets its own folder (`experiences/NN-slug/`) with brief, script and moodboard.
 
+## 0. Home page (integration)
+
+Stitches the Arrival frames into one page and writes the frame contract → [experiences/00-home/HANDOFF.md](experiences/00-home/HANDOFF.md).
+
 ## 1. Arrival: the seed
 
 **Now the landing-page spine**: flows on into Movement (3) and the Book (2). Brief → [experiences/01-arrival/brief.md](experiences/01-arrival/brief.md).
