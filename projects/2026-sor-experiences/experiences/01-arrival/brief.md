@@ -24,6 +24,8 @@ Most likely a scrollable web experience, where scrolling moves you through the b
 
 Five frames (sections of the page). Each frame can hold several beats.
 
+**Rough sketch v1 (all five frames):** [sketch/index.html](sketch/index.html) · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Leap layers cut from the collage by `sketch/prep_assets.py` (rough; empty-road fill is smudgy).
+
 **Build approach:** build and perfect one frame at a time as a standalone piece, then stitch them into the page. Frames with their own experience folder (Leap, Book) keep their brief and moodboard there.
 
 ### Frame 1: Seeds
