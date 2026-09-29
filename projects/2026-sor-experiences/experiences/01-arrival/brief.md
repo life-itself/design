@@ -49,7 +49,7 @@ Four frames (sections of the page). Each frame can hold several beats.
 
 ### Frame 4: The book
 
-- A giant Anselm Kiefer lead book arrives and glows. Reference: [moodboard/kiefer-lead-book-open.webp](moodboard/kiefer-lead-book-open.webp): open, heavy, rippled lead pages, oxidised patina with streaks of rust red, verdigris blue and pale yellow, on black.
+- A giant Anselm Kiefer lead book arrives and glows. Reference: [../02-book/moodboard/kiefer-lead-book-open.webp](../02-book/moodboard/kiefer-lead-book-open.webp): open, heavy, rippled lead pages, oxidised patina with streaks of rust red, verdigris blue and pale yellow, on black.
 - Heavy pages that flicker as they turn. Holds courses, white papers, maybe the podcast.
 - **Text:** e.g. *Sharing what we have learned on our journey over the past decades* (placeholder).
 
