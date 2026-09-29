@@ -30,5 +30,6 @@ Tracking: beads epic `design-lpe` (`bd show design-lpe`).
 
 ## Related
 
+- Sibling project: [../2026-sor-experiences/](../2026-sor-experiences/), standalone poetic/animated experiences (seed, pop-up book, leap, temple)
 - Content site: `secondrenaissance.net/`
 - Planning: `planning/projects/2609-seeds-of-renaissance-website.md` (`lip-1ie.1`), rebrand `2608-…` (`lip-42k`)
