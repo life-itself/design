@@ -6,17 +6,9 @@ Page brief: [../01-arrival/brief.md](../01-arrival/brief.md). Frame handoffs: [.
 
 Suggested model: **Opus 5.5**.
 
-## Frame status
+## Readiness
 
-| # | Frame | Standalone | Integrated |
-|---|---|---|---|
-| 1 | Seeds | Done elsewhere (Claude Design); not yet in repo | No |
-| 2 | Dawn | Prototype v1 (timing agreed); polish to do | No |
-| 3 | The Leap | Rough sketch only | No |
-| 4 | The Book | Rough sketch only | No |
-| 5 | Flight | Rough sketch only | No |
-
-A frame is ready to integrate when its `build/` plays on its own and its HANDOFF Status records start/end background and how it's driven.
+A frame is ready to integrate when its `build/` plays on its own. Per-frame progress (standalone, integrated) is tracked in beads, not here: `bd list --parent design-323`.
 
 ## Goal
 
@@ -29,8 +21,4 @@ A frame is ready to integrate when its `build/` plays on its own and its HANDOFF
 
 - `build/index.html` plays all five frames in one scroll.
 - Frame contract written to `CONTRACT.md` here.
-- Table above updated.
-
-## Status
-
-Not started. Waits for standalone frames (frame 1 is the first candidate).
+- Beads updated for each frame integrated.

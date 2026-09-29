@@ -1,6 +1,6 @@
 # Movement: the Leap — brief (draft)
 
-Status: in progress, 2026-09-29. Used as **frame 3** of the [Arrival](../01-arrival/brief.md) landing page; can also stand alone (e.g. on a join/movement page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [animation detail](../../raw/2026-09-29-leap-animation-detail.md).
+Used as **frame 3** of the [Arrival](../01-arrival/brief.md) landing page; can also stand alone (e.g. on a join/movement page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [animation detail](../../raw/2026-09-29-leap-animation-detail.md).
 
 ## Feeling
 

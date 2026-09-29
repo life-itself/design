@@ -2,7 +2,9 @@
 
 How to take one frame into its own working session (Claude Code, Claude Design, Open Design with Claude), and bring it back.
 
-One HANDOFF file per frame. Each frame is first **completed standalone** (its own `build/`). **Integrating** frames into the home page is a separate exploration: [../00-home/HANDOFF.md](../00-home/HANDOFF.md), which also tracks each frame's standalone/integrated status.
+One HANDOFF file per frame. Each frame is first **completed standalone** (its own `build/`). **Integrating** frames into the home page is a separate exploration: [../00-home/HANDOFF.md](../00-home/HANDOFF.md).
+
+**Progress lives in beads, not in these files:** `bd list --parent design-323`. Handoffs and briefs hold the what and how; beads hold where things stand.
 
 Whole-page brief: [brief.md](brief.md). Rough sketch of all five frames: [sketch/index.html](sketch/index.html) · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Deep links jump to a moment, e.g. `#f3-70` = frame 3 at 70% of its scroll.
 
@@ -22,7 +24,7 @@ Whole-page brief: [brief.md](brief.md). Rough sketch of all five frames: [sketch
 
 Open the session in this repo (or attach the frame folder) and paste:
 
-> Work on frame N of the Seeds of Renaissance Arrival page. Read `projects/2026-sor-experiences/experiences/<path>/HANDOFF.md` and everything it links. Build the frame as a standalone piece following the handoff rules. Save work into that folder's `build/`, and update the Status section of the HANDOFF when done.
+> Work on frame N of the Seeds of Renaissance Arrival page. Read `projects/2026-sor-experiences/experiences/<path>/HANDOFF.md` and everything it links. Build the frame as a standalone piece following the handoff rules. Save work into that folder's `build/`, and record progress on the frame's beads task (`bd update <id> --notes ...`, `bd close <id>`).
 
 In Open Design / Claude Design without repo access: paste the HANDOFF text and attach the listed assets and screenshots. Export HTML back into the frame's `build/` folder.
 
@@ -32,7 +34,7 @@ Loose on purpose: we reconcile and stitch after the frames exist, then write the
 
 - **One standalone HTML page per frame**, playable on its own. Assets in a sibling `assets/` folder.
 - **Scope styles** under one frame class (e.g. `.frame-leap`) so frames can later share a page without clashing.
-- **State the start and end background** (e.g. "starts black, ends black") in the Status section.
+- **Keep to the stated start and end background** (each handoff says, e.g. "starts black, ends black"); note any change in the bead.
 - **State how it's driven:** scroll-scrubbed (tall section, sticky stage) or plays once reached.
 - **Fonts:** Polyamine (display and body). Stand-ins are fine while sketching; name them.
 - **No sound yet**, but leave room for it.

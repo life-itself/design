@@ -18,7 +18,7 @@ Part of the Arrival page ([brief](../brief.md), [all handoffs](../HANDOFFS.md)).
 - SoR logo: [ref/sor-logo-bird-prints.png](../../../../../ref/sor-logo-bird-prints.png).
 - Font: Polyamine.
 
-## Current state
+## Starting point
 
 The sketch uses a placeholder (opening line plus six drifting red dots).
 
@@ -27,8 +27,4 @@ Screenshots to capture into `screens/`: `sketch-v1-f1.png` from `#f1`, plus a sc
 ## Done when
 
 - `build/index.html` plays on its own and matches the mockup.
-- Status below records start/end background (white/white) and whether it's scroll-driven or plays on load.
-
-## Status
-
-Standalone complete elsewhere; not yet in repo; not integrated.
+- Starts white, ends white.

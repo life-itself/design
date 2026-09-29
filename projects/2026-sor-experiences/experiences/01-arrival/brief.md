@@ -1,6 +1,6 @@
 # Arrival: brief (draft)
 
-Status: in progress, 2026-09-29. Approach: finish the brief for the whole sequence before mocking up. Source: [raw/2026-09-29-arrival-feeling-and-beats.md](../../raw/2026-09-29-arrival-feeling-and-beats.md).
+Source: [raw/2026-09-29-arrival-feeling-and-beats.md](../../raw/2026-09-29-arrival-feeling-and-beats.md).
 
 ## What it is
 

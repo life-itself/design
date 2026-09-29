@@ -28,7 +28,7 @@ Authentic, credible hope. Lightness after the weight of the Book. High contrast:
 - Split layers from the sketch: [../sketch/assets/logo-ring.png](../sketch/assets/logo-ring.png) (red fingerprints, transparent), [../sketch/assets/swallow.png](../sketch/assets/swallow.png) (swallow silhouette).
 - Font: Polyamine.
 
-## Current state
+## Starting point
 
 In the sketch at `#f5`: swallow loops out and back, ring scales up while swallows stream in, flock circles, six simple line trees grow with words at their feet, birds settle on branch tips. Birds are the static logo swallow (no wingbeat); trees are plain lines.
 
@@ -42,8 +42,4 @@ Screenshots to capture into `screens/`: `sketch-v1-f5-05.png` (`#f5-5`), `-40` (
 ## Done when
 
 - `build/index.html` plays on its own, scroll-driven.
-- Status records: starts white, ends white; scroll-driven.
-
-## Status
-
-Rough sketch v1 only.
+- Starts white, ends white; scroll-driven.

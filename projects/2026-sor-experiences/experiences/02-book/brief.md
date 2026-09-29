@@ -1,6 +1,6 @@
 # Courses: the Book — brief (draft)
 
-Status: in progress, 2026-09-29. Used as **frame 4** of the [Arrival](../01-arrival/brief.md) landing page; can also stand alone (e.g. on a courses/learning page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [book detail](../../raw/2026-09-29-book-detail.md).
+Used as **frame 4** of the [Arrival](../01-arrival/brief.md) landing page; can also stand alone (e.g. on a courses/learning page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [book detail](../../raw/2026-09-29-book-detail.md).
 
 ## Feeling
 

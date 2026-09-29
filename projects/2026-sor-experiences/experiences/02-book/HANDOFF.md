@@ -31,7 +31,7 @@ No page turning. Don't write onto the pages themselves (it looks fake); the lett
 - Reference: [moodboard/kiefer-lead-book-open.webp](moodboard/kiefer-lead-book-open.webp). Open question: animate this photo directly, or recreate the book (3D / motion graphics) for more control.
 - Font: Polyamine for the caption; an illuminated display face for the gold letters (sketch uses Cinzel Decorative).
 
-## Current state
+## Starting point
 
 In the sketch at `#f4`: photo drops in (already open), gold glow, letters rise and assemble. Edges of the photo faded with a mask.
 
@@ -40,8 +40,4 @@ Screenshots to capture into `screens/`: `sketch-v1-f4-10.png` (`#f4-10`), `-35` 
 ## Done when
 
 - `build/index.html` plays on its own, scroll-driven.
-- Status records: starts black, ends black; scroll-driven.
-
-## Status
-
-Rough sketch v1 only.
+- Starts black, ends black; scroll-driven.

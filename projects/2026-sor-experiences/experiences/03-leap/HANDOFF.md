@@ -32,9 +32,9 @@ Walking into the unknown: scary, yet we hold the possibility of renewal. Tension
 - Rough layers cut by script ([../01-arrival/sketch/prep_assets.py](../01-arrival/sketch/prep_assets.py)) in [../01-arrival/sketch/assets/](../01-arrival/sketch/assets/): `leap-plate.jpg` (empty road; the people-area fill is smudgy), `leap-tear.png`, `leap-people.png` (all walkers as one layer).
 - Font: Polyamine.
 
-## Current state
+## Starting point
 
-In the sketch at `#f3`. Works end to end but rough: smudgy empty road, walkers slide as one group, tear edge is a simple zigzag clip.
+In the sketch at `#f3`. Works end to end; rough spots: smudgy empty road, walkers slide as one group, tear edge is a simple zigzag clip.
 
 Screenshots to capture into `screens/`: `sketch-v1-f3-05.png` (`#f3-5`), `-45` (`#f3-45`), `-72` (`#f3-72`), `-95` (`#f3-95`).
 
@@ -52,8 +52,4 @@ Screenshots to capture into `screens/`: `sketch-v1-f3-05.png` (`#f3-5`), `-45` (
 ## Done when
 
 - `build/index.html` plays on its own, scroll-driven, and reads as the brief.
-- Status records: starts dark grey, ends with the field; scroll-driven.
-
-## Status
-
-Rough sketch v1 only.
+- Starts dark grey, ends on the field; scroll-driven.

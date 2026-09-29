@@ -32,7 +32,7 @@ The six words stay plain text here; they come alive as trees in frame 5.
 - Static mockup: [../moodboard/frame-2-mockup-static.png](../moodboard/frame-2-mockup-static.png) (the look to match).
 - Font: Polyamine (paragraph serif with bold phrases; statement in light, spaced caps).
 
-## Current state
+## Starting point
 
 Prototype: [index.html](index.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY) (has a timing panel). Same frame in the sketch at `#f2`. Stand-in fonts: Libre Caslon Text, Italiana.
 
@@ -42,8 +42,4 @@ Screenshots to capture into `screens/`: `sketch-v1-f2-dark.png` (just after arri
 
 - `build/index.html` plays on its own with Polyamine, matches the mockup's look, timing feels right.
 - Prototype panel removed (or behind a flag).
-- Status records: starts black, ends black; plays once reached.
-
-## Status
-
-Prototype v1 done; timing agreed (12s ease-out). Polish not started.
+- Starts black, ends black; plays once reached.
