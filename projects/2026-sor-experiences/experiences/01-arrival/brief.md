@@ -1,6 +1,6 @@
 # Arrival: brief (draft)
 
-Status: in progress, 2026-09-29. Source: [raw/2026-09-29-arrival-feeling-and-beats.md](../../raw/2026-09-29-arrival-feeling-and-beats.md).
+Status: in progress, 2026-09-29. Approach: finish the brief for the whole sequence before mocking up. Source: [raw/2026-09-29-arrival-feeling-and-beats.md](../../raw/2026-09-29-arrival-feeling-and-beats.md).
 
 ## What it is
 
@@ -27,7 +27,7 @@ Four frames (sections of the page). Each frame can hold several beats.
 ### Frame 1: Seeds
 
 - **Background:** white.
-- Existing design: good type, SoR seeds floating. Tidy only. (No link to frame 2 for now.)
+- **Already mocked up** in a separate Claude Design session, fairly final. Good type, SoR seeds floating. Handover: HTML export into `frame-1/` when convenient; bind in at build time. (No link to frame 2 for now.)
 - **Text:** *For all the living beings whose heart burns to see a new world emerge.*
 
 ### Frame 2: Dawn
@@ -36,8 +36,9 @@ Four frames (sections of the page). Each frame can hold several beats.
 - **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: slow enough that readers don't notice it happening until they can read it fully. Not tied to scroll position.
   > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
 - **2b. Six words (possible).** Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism light up, perhaps each in its own colour.
+- **Look** (static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Fonts: to be named; use unlicensed for sketching.
 - **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
-- **2d. Light invitation:** read the full manifesto, or keep going.
+- **2d. Light invitation:** read the full manifesto, or keep going. Not in the mockup; appears at some point, low priority.
 
 ### Frame 3: The leap
 
@@ -58,9 +59,10 @@ Parked: each keyword becoming a different blooming tree.
 
 ## Assets
 
-- **Frame 1 design** (screenshot/animation): to be supplied.
-- **Frame 2 rough sketch**: offered, to be supplied.
-- **SoR seed logo mark**: to be supplied (not in the repo; may be in `../../../2026-sor-website/assets/Seeds of Renaissance Brand Narrative Visual.pdf`).
+- **Frame 1 design**: exists (Claude Design); HTML export to come.
+- **Frame 2 static mockup**: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png).
+- **SoR logo**: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png). Black swallow at the centre of a radiating burst of red fingerprints (the seeds).
+- **Fonts**: to be named.
 - **Sound**: wanted (ambient wind/birds, or music). Not defined yet.
 
 ## Open questions
