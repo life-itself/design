@@ -209,7 +209,6 @@
 
   /* ---------- the tear: a fixed torn outline, revealed top-down ---------- */
   const Y0 = .072, YB = .618, ROWS = 240, TAPER = .085;
-  const SLIT = [.55, .64, .11];               // the first small rip: top, bottom, width — at the road's end, yellow only
   const shapeY = [Y0, .1, .14, .19, .25, .31, .4, .5, .57, YB];
   const shapeL = [.608, .592, .566, .545, .518, .503, .489, .474, .463, .456];
   const shapeR = [.628, .648, .664, .676, .69, .699, .708, .714, .72, .726];
@@ -350,11 +349,9 @@
 
   function render(p) {
     if (!S) return;
-    // a small slit sits at the road's end from the start; as the walkers near, it rips open upwards
-    const rip = seg(p, .34, .56);
-    const top = lerp(SLIT[0], Y0 - TAPER, ease(seg(p, .34, .54)));
-    const bot = lerp(SLIT[1], YB + TAPER, ease(seg(p, .34, .44)));
-    const width = lerp(SLIT[2], 1, ease(seg(p, .34, .52)));
+    // as the walkers near the edge the paper tears gently from the top down, open before the leader arrives
+    const rip = ease(seg(p, .34, .58));
+    const bot = Y0 + (YB + TAPER - Y0) * rip;
     const open = ease(seg(p, .45, .9));
     const zoom = lerp(1, ZOOM, ease(seg(p, .84, 1)));
 
@@ -370,7 +367,7 @@
       ctx.drawImage(field, -.35, -.25, 1.7, 1.7); ctx.restore();
     }
 
-    const geo = tearGeometry(top, bot, width);
+    const geo = rip > 0 ? tearGeometry(Y0 - TAPER, bot, 1) : null;
     if (geo) {
       paperPat.setTransform(new DOMMatrix([px, 0, 0, px, 0, 0]));
       // 1. the exposed white paper
