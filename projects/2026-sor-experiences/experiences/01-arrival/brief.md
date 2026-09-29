@@ -22,7 +22,7 @@ Most likely a scrollable web experience, where scrolling moves you through the b
 
 ## Script
 
-Four frames (sections of the page). Each frame can hold several beats.
+Five frames (sections of the page). Each frame can hold several beats.
 
 **Build approach:** build and perfect one frame at a time as a standalone piece, then stitch them into the page. Frames with their own experience folder (Leap, Book) keep their brief and moodboard there.
 
@@ -49,13 +49,17 @@ Four frames (sections of the page). Each frame can hold several beats.
 
 ### Frame 4: The book
 
-- Own brief: [../02-book/brief.md](../02-book/brief.md). A heavy Kiefer-like lead book drops in from the top and falls open. Golden illuminated letters glow on the pages, rise and assemble above it: *Courses · White papers*. Caption below: *Sharing what we have learned on our journey over the past decades.* No page turning.
+- Own brief: [../02-book/brief.md](../02-book/brief.md). A heavy Kiefer-like lead book drops in from the top and falls open. Golden illuminated letters glow on the pages, rise and assemble above it: *Courses · Papers*. Caption below: *Sharing what we have learned on our journey over the past decades.* No page turning.
 
-### Frame 5+
+### Frame 5: Flight (closing)
 
-To define.
+The ending: a story of hope, authentic and credible. No further acknowledgement of darkness needed; frames 2–3 carry it.
 
-Parked: each keyword becoming a different blooming tree.
+- **Background:** white, high contrast. Swallows in black, like the logo. Spirit of a Japanese print (Hokusai-like treatment of space), or simply clean black on white.
+- **5a. Logo.** The SoR logo (swallow in a ring of red fingerprints) with a short line. Wording to find: not "building a movement", not "a vision for civilizational renewal" (used in frame 2).
+- **5b. Portal.** The swallow flies out of the logo and into the ring of fingerprints, now a portal. More swallows arrive and fly through. The portal keeps widening until it passes the edges of the screen and the red is gone: only swallows flying, in flocks.
+- **5c. Trees.** From the bottom of the page, trees grow up. Each tree holds one of the principles in its letters (Wisdom, Interbeing, Inner growth, Revoligion, Complexity, Beyond capitalism). The seeds have become trees. (Flagged as possibly too much; try it.)
+- **5d. Settle.** The swallows come to rest on the trees. End.
 
 ## Assets
 
