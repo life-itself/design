@@ -10,6 +10,8 @@ Full dark or full white void. Text emerges: a quote "for the one whose heart lon
 
 ## 2. Courses: the pop-up book
 
+Brief → [experiences/02-book/brief.md](experiences/02-book/brief.md). Frame 4 of Arrival; now a Kiefer-like lead book with rising gold letters (pop-ups parked).
+
 A book you open. Pages reveal the courses as things that pop up out of the page: the Zen monastery, the lay monastic path, etc. Playful, no care for conventional navigation.
 
 ## 3. Movement: the leap
