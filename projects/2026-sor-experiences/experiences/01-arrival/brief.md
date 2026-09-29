@@ -35,13 +35,13 @@ Five frames (sections of the page). Each frame can hold several beats.
 ### Frame 2: Dawn
 
 - **Background:** black (sudden switch from white).
-- **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: slow enough that readers don't notice it happening until they can read it fully. Not tied to scroll position.
+- **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: about 12s, quicker at first and lingering at the end. Not tied to scroll position.
   > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
 - **2b. Six words:** stay plain text within the paragraph. They come alive later as the trees of frame 5.
 - **Look** (static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Font: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font); unlicensed for sketching.
 - **Prototype v1:** [frame-2/index.html](frame-2/index.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY). Controls for dawn length and statement timing. Stand-in fonts until Polyamine is installed.
 - **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
-- **2d. Light invitation:** read the full manifesto, or keep going. Not in the mockup; appears at some point, low priority.
+- **2d. Light invitation:** read the full manifesto, or keep going. Dawns together with the paragraph, same colour, not italic.
 
 ### Frame 3: The leap
 
