@@ -22,27 +22,49 @@ Most likely a scrollable web experience, where scrolling moves you through the b
 
 ## Script
 
-| Beat | Background | What happens | Text |
-|---|---|---|---|
-| 1. Seeds | White | Existing design: good type, SoR seeds floating. **Six seeds**, one per word in beat 2c; you almost sense them heading towards those words. Tidy only. | *For all the living beings whose heart burns to see a new world emerge.* |
-| 2a. Emergence | Black (sudden switch) | Text starts off-dark grey, barely legible. The line you're reading brightens to white as you scroll; text already passed stays lit. Gradual enough that readers don't notice it happening. | *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.* |
-| 2b. Six words | Black | The six words come out, perhaps each with its own colour, echoing the six seeds of beat 1. | Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism |
-| 2c. Statement | Black | Larger type. | *We are a vision and movement for civilizational renewal.* |
-| 2d. Invitation | Black | A light invitation: read the full manifesto, or keep going. | e.g. *Read the full manifesto · or continue* |
-| 3. Movement | ? | **The leap** (see experience 3): people walk into the image, it rips, "Come join our call". Leads to the meetup. Answers "How can I join?" | |
-| 4. Book | ? | **The book** (see experience 2): a giant, handsome Anselm Kiefer-like book arrives and glows. Heavy pages that flicker as they turn. Holds courses, white papers, maybe the podcast. For people who want to know more before joining. | e.g. *Sharing what we have learned on our journey over the past decades* |
-| 5+ | ? | To define. | |
+Four frames (sections of the page). Each frame can hold several beats.
+
+### Frame 1: Seeds
+
+- **Background:** white.
+- Existing design: good type, SoR seeds floating. Tidy only. (No link to frame 2 for now.)
+- **Text:** *For all the living beings whose heart burns to see a new world emerge.*
+
+### Frame 2: Dawn
+
+- **Background:** black (sudden switch from white).
+- **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: slow enough that readers don't notice it happening until they can read it fully. Not tied to scroll position.
+  > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
+- **2b. Six words (possible).** Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism light up, perhaps each in its own colour.
+- **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
+- **2d. Light invitation:** read the full manifesto, or keep going.
+
+### Frame 3: The leap
+
+- See experience 3 in [experiences.md](../../experiences.md). People walk into the image, it rips, "Come join our call".
+- **The join offer lives here** (meetup), alongside a "keep learning" path onward to the book. Many won't join now, but they know the invitation is there.
+
+### Frame 4: The book
+
+- A giant Anselm Kiefer lead book arrives and glows. Reference: [moodboard/kiefer-lead-book-open.webp](moodboard/kiefer-lead-book-open.webp): open, heavy, rippled lead pages, oxidised patina with streaks of rust red, verdigris blue and pale yellow, on black.
+- Heavy pages that flicker as they turn. Holds courses, white papers, maybe the podcast.
+- **Text:** e.g. *Sharing what we have learned on our journey over the past decades* (placeholder).
+
+### Frame 5+
+
+To define.
 
 Parked: each keyword becoming a different blooming tree.
 
 ## Assets
 
-- **Beat 1 design** (screenshot/animation): to be supplied.
+- **Frame 1 design** (screenshot/animation): to be supplied.
+- **Frame 2 rough sketch**: offered, to be supplied.
 - **SoR seed logo mark**: to be supplied (not in the repo; may be in `../../../2026-sor-website/assets/Seeds of Renaissance Brand Narrative Visual.pdf`).
 - **Sound**: wanted (ambient wind/birds, or music). Not defined yet.
 
 ## Open questions
 
-- "Revoligion": keep, or rename (transcript suggests "Evoligion"?).
-- Kiefer reference and book line: confirm transcription.
-- Colour: none needed yet, beyond maybe the six words.
+- Book line: final wording.
+- Colour: none needed yet, beyond maybe the six words and the book's patina.
+- "Revoligion" chosen for now. Keep the gloss "(the evolution of religion)" on first use, since readers may take the word for a typo.
