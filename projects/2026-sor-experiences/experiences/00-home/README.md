@@ -16,7 +16,7 @@ Leap and Book can also stand alone on their own pages (join/movement, courses).
 
 - [brief.md](brief.md): the whole page: feeling, medium, and the script across all five experiences.
 - [common.md](common.md): shared context every experience uses (fonts, colours, words, tone). Read before working on any experience.
-- [HANDOFF.md](HANDOFF.md): the integration job: joining the experiences into one page and writing the frame contract.
+- [HANDOFF.md](HANDOFF.md): build brief for joining the experiences into one page and writing the frame contract.
 - [sketch/](sketch/index.html): rough sketch v1 of the whole page · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Deep links jump to a moment, e.g. `#f3-70` = experience 3 at 70% of its scroll.
 
 Progress lives in beads (`bd list --parent design-323`), not in these files.
@@ -25,11 +25,7 @@ Progress lives in beads (`bd list --parent design-323`), not in these files.
 
 Each experience is first **completed standalone** in its folder's `build/`. **Integrating** it into the page is separate ([HANDOFF.md](HANDOFF.md)).
 
-Open a session in this repo and paste:
-
-> Work on the <name> experience of the Seeds of Renaissance home page. Read `projects/2026-sor-experiences/experiences/00-home/common.md`, then `experiences/<folder>/HANDOFF.md` and everything it links. Build it as a standalone piece following the handoff rules. Save work into that folder's `build/` and record progress on its beads task (`bd update <id> --notes ...`, `bd close <id>`).
-
-In Open Design / Claude Design without repo access: paste common.md and the HANDOFF, attach the listed assets and screenshots, and export HTML back into the folder's `build/`.
+Each folder's `HANDOFF.md` is a complete build brief: open a new session in this repo, copy everything below its line, and paste. Outside the repo (Claude Design, Open Design), also paste `common.md` and attach the files the brief names.
 
 **Model notes.** Opus 5.5 (`claude-opus-5-5`) for real animation logic: scroll-scrubbed scenes, canvas/WebGL, 3D. Sonnet 5.5 (`claude-sonnet-5-5`) for type-and-timing pieces. Visual fine-tuning is best done where you can see and nudge: Claude Design or Open Design. Asset production (clean plates, walk cycles, a 3D book) may need tools beyond a coding model; each handoff says where.
 

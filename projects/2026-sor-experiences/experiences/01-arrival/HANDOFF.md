@@ -1,30 +1,44 @@
-# Arrival (the seeds) — handoff
+# Build brief: Arrival (the seeds)
 
-Part 1 of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)). Suggested model: Sonnet 5.5 (import and tidy only).
+Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Sonnet 5.5.
 
-## Goal
+---
 
-**Standalone: done elsewhere** (Claude Design / Open Design). What's left here is bringing that export into this repo as `build/`, tidy only. Integration into the home page happens separately in [../00-home/HANDOFF.md](../00-home/HANDOFF.md).
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+
+## Your task
+
+Bring the **Arrival** piece into the repo as a standalone web page. The design already exists and is close to final: it was made in Claude Design / Open Design. Your job is to get its HTML export into `projects/2026-sor-experiences/experiences/01-arrival/build/index.html` (assets in `build/assets/`), tidy it, and make it play correctly on its own. Don't redesign it.
+
+If you don't have the export, ask the user for it (HTML export or a link) before doing anything else.
 
 ## What it is
 
-- White background. Good type, the SoR seeds floating.
-- Text: *For all the living beings whose heart burns to see a new world emerge.*
-- No link to frame 2 for now; frame 2 cuts to black.
+The very first screen of the site. A white page, beautiful type, the SoR "seeds" (red fingerprint marks from the logo) floating gently. One line of text:
+
+> For all the living beings whose heart burns to see a new world emerge.
+
+Feeling: awe and beauty from the first second. Quiet, alive, a little mysterious. It is the calm before the next piece (which cuts hard to black), but you don't need to build that.
+
+## Look
+
+- White ground (`--paper` `#fbfaf7`), ink text (`--ink` `#121110`), seed red `#e11414`.
+- Font: Polyamine (stand-in: Italiana). Keep whatever the existing design uses if it differs, and note it.
+- Starts white, ends white. Full viewport height.
 
 ## Assets
 
-- The Claude Design / Open Design mockup: **export HTML into `build/`** (the main task).
-- SoR logo: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png).
-- Font: Polyamine.
+- The Claude Design / Open Design export (from the user).
+- SoR logo: `ref/sor-logo-bird-prints.png` (black swallow in a burst of red fingerprints).
 
-## Starting point
+## Rules
 
-The sketch uses a placeholder (opening line plus six drifting red dots).
-
-Screenshots to capture into `screens/`: `sketch-v1-f1.png` from `#f1`, plus a screenshot of the real mockup as `mockup.png`.
+- One self-contained page; scope all CSS under `.x-arrival` so it can later sit on a page with other pieces.
+- Works at phone width and desktop; respects `prefers-reduced-motion`.
+- No sound.
 
 ## Done when
 
-- `build/index.html` plays on its own and matches the mockup.
-- Starts white, ends white.
+- `build/index.html` opens in a browser and matches the existing design.
+- Tell the user what you changed during tidying, and whether the animation plays on load or is driven by scroll.
+- Record progress on beads task `design-323.2` (`bd update design-323.2 --notes "..."`; `bd close design-323.2` when done).

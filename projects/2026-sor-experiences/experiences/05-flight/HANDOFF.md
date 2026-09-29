@@ -1,45 +1,58 @@
-# Flight — handoff
+# Build brief: Flight
 
-Part 5 (closing) of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)). Suggested model: **Opus 5.5** (canvas/WebGL, flocking, growing trees).
+Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Opus 5.5.
 
-## Goal
+---
 
-End on hope: the swallow leaves the logo, flocks pour through the fingerprint portal, trees grow from the seeds, and the birds come to rest on them.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+
+## Your task
+
+Build **Flight** as a standalone, scroll-driven page at `projects/2026-sor-experiences/experiences/05-flight/build/index.html` (assets in `build/assets/`). The swallow leaves the SoR logo, flocks of swallows pour through the logo's ring of fingerprints as it opens like a portal, six trees grow from the ground, and the birds come to rest on them. It is the closing scene of the site.
+
+## The logo
+
+`ref/sor-logo-bird-prints.png`: a black swallow in flight at the centre of a radiating burst of red fingerprints (the fingerprints are the "seeds"). Split layers already cut: `projects/2026-sor-experiences/experiences/00-home/sketch/assets/swallow.png` (the swallow, black on transparent, facing up-right) and `.../00-home/sketch/assets/logo-ring.png` (the red fingerprints on transparent).
 
 ## Feeling
 
-Authentic, credible hope. Lightness after the weight of the Book. High contrast: black swallows on white, with the spirit of a Japanese print (Hokusai-like use of space), or simply clean black on white.
+Authentic, credible hope. Lightness and release after heavier scenes. High contrast: black swallows on white, in the spirit of a Japanese print (Hokusai-like use of empty space), or simply clean black on white.
 
-## Beats (scroll-driven)
+## What happens (scroll-driven)
 
-1. **Logo.** The SoR logo (black swallow in a ring of red fingerprints) with a short line.
-2. **Portal.** The swallow flies out and into the fingerprint ring, now a portal. More swallows arrive and fly through. The portal widens past the screen edges until the red is gone: only swallows, in flocks.
-3. **Trees.** From the bottom, six trees grow, each holding one principle: Wisdom, Interbeing, Inner growth, Revoligion, Complexity, Beyond capitalism. The seeds have become trees. (Flagged as possibly too much; try it.)
-4. **Settle.** The swallows come to rest on the trees. End.
+The section is tall (about 6 viewports) with a sticky full-screen white stage; scroll scrubs the animation. Percentages are suggested scroll progress.
+
+1. **Logo (0–10%).** The logo, centred, with a short line of text beneath.
+2. **Take-off (8–25%).** The swallow flies out of the logo, loops, and flies back into the ring of fingerprints, now a portal.
+3. **Portal (20–62%).** More and more swallows fly in from the edges of the screen and through the portal. The ring keeps widening until it passes the edges of the screen and the red is gone: only swallows, flying in flocks.
+4. **Trees (62–86%).** From the bottom of the screen, six trees grow up, each holding one principle: **Wisdom · Interbeing · Inner growth · Revoligion · Complexity · Beyond capitalism**. The seeds have become trees. (This may be too much; build it and let the user judge.)
+5. **Settle (86–100%).** The swallows come to rest on the branches. End.
 
 ## Text
 
-- Line with the logo: **to find.** Not "building a movement", not "a vision for civilizational renewal" (used in Dawn).
-- Tree words as above.
+- Under the logo: **line to be decided**. Use *Seeds of Renaissance* as a placeholder. Don't use "building a movement".
+- The six tree words as above (spelling exact; *Revoligion* is deliberate).
 
-## Assets
+## Look
 
-- Logo: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png).
-- Split layers from the sketch: [../00-home/sketch/assets/logo-ring.png](../00-home/sketch/assets/logo-ring.png) (red fingerprints, transparent), [../00-home/sketch/assets/swallow.png](../00-home/sketch/assets/swallow.png) (swallow silhouette).
-- Font: Polyamine.
+- White ground `#fbfaf7`, ink `#121110` for swallows and trees, the ring in its own red.
+- Swallows: ideally with a wingbeat (a few drawn frames or a simple procedural flap) and natural flocking, not static stamps.
+- Trees: brush or ink style rather than plain lines; the word carried in the tree (canopy or trunk) rather than as a label under it, if you can make it readable.
+- Words in Polyamine display capitals (stand-in: Italiana).
+- Starts white, ends white.
 
-## Starting point
+## Reference build
 
-In the sketch at `#f5`: swallow loops out and back, ring scales up while swallows stream in, flock circles, six simple line trees grow with words at their feet, birds settle on branch tips. Birds are the static logo swallow (no wingbeat); trees are plain lines.
+A rough working version exists in the whole-page sketch: `projects/2026-sor-experiences/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f5 (e.g. `#f5-40`, `#f5-100` to jump). Screenshots may be in `05-flight/screens/`. It uses canvas for birds and trees; improve on it.
 
-Screenshots to capture into `screens/`: `sketch-v1-f5-05.png` (`#f5-5`), `-40` (`#f5-40`), `-70` (`#f5-70`), `-100` (`#f5-100`).
+## Rules
 
-## Ideas for the real build
-
-- Swallows with a wingbeat (a few drawn frames) and natural flocking.
-- Trees drawn in a brush / ink style; the word carried in the canopy or trunk rather than as a label.
+- One self-contained page; scope all CSS under `.x-flight`.
+- Works at phone width and desktop. With `prefers-reduced-motion`, show the final state (trees with birds).
+- No sound.
 
 ## Done when
 
-- `build/index.html` plays on its own, scroll-driven.
-- Starts white, ends white; scroll-driven.
+- `build/index.html` plays on its own, scroll-driven, and ends on the birds settled in the trees.
+- Tell the user what's still rough and any wording you need.
+- Record progress on beads task `design-323.6` (`bd update design-323.6 --notes "..."`; `bd close design-323.6` when done).
