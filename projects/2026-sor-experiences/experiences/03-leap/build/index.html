@@ -209,7 +209,7 @@
 
   /* ---------- the tear: a fixed torn outline, revealed top-down ---------- */
   const Y0 = .072, YB = .618, ROWS = 240, TAPER = .085;
-  const SLIT = [.43, .53, .11];               // the first small rip: top, bottom, width — straddles the horizon
+  const SLIT = [.55, .64, .11];               // the first small rip: top, bottom, width — at the road's end, yellow only
   const shapeY = [Y0, .1, .14, .19, .25, .31, .4, .5, .57, YB];
   const shapeL = [.608, .592, .566, .545, .518, .503, .489, .474, .463, .456];
   const shapeR = [.628, .648, .664, .676, .69, .699, .708, .714, .72, .726];
@@ -350,11 +350,11 @@
 
   function render(p) {
     if (!S) return;
-    // a small slit is there from the start; as the leader nears, it tears up to the top and down to the road
+    // a small slit sits at the road's end from the start; as the walkers near, it rips open upwards
     const rip = seg(p, .34, .56);
-    const top = lerp(SLIT[0], Y0 - TAPER, ease(seg(p, .34, .48)));
-    const bot = lerp(SLIT[1], YB + TAPER, ease(seg(p, .36, .56)));
-    const width = lerp(SLIT[2], 1, ease(seg(p, .34, .5)));
+    const top = lerp(SLIT[0], Y0 - TAPER, ease(seg(p, .34, .54)));
+    const bot = lerp(SLIT[1], YB + TAPER, ease(seg(p, .34, .44)));
+    const width = lerp(SLIT[2], 1, ease(seg(p, .34, .52)));
     const open = ease(seg(p, .45, .9));
     const zoom = lerp(1, ZOOM, ease(seg(p, .84, 1)));
 
@@ -397,7 +397,7 @@
           x1 = edge - fb.side * fb.len * k; y1 = row.y + fb.dy * k;
         } else {
           if (geo.j1 < ROWS - 1) continue;
-          const row = rows[ROWS - 1], x = lerp(row.l, row.r, fb.u), k = geo.f(YB);
+          const row = rows[ROWS - 1], k = geo.f(YB), x = lerp((row.l + row.r) / 2, lerp(row.l, row.r, fb.u), k);
           x0 = x + fb.dx; y0 = YB + .004 + nB(x) * k + .008 * fb.a; x1 = x + fb.dx * 1.6; y1 = y0 - fb.len - .008 * fb.a;
         }
         ctx.strokeStyle = `rgba(250,248,242,${fb.o})`; ctx.lineWidth = fb.w * px;
