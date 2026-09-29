@@ -10,3 +10,10 @@ It is focused on clarifying the brand of Life Itself and the development of the 
 
 At some point more specific design recommendations may emerge including a style guide.
 
+
+## Layout
+
+- `docs/`: how we do things (process, design system how-to)
+- `projects/`: one folder per project, with its own brief, plans and content
+- `ref/`: reference material (templates, inspiration, notes)
+- `Excalidraw/`: drawings, kept at root for the Obsidian plugin

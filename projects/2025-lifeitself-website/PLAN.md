@@ -1,6 +1,6 @@
 ## Goals
 
-Derived from [[plans/plan-next-7d-scqa-2026-01-08|plan-next-7d-scqa-2026-01-08]]
+Derived from [[plan-next-7d-scqa-2026-01-08]]
 
 - [ ] Life Itself Research designed 🚧
     - [ ] What is MVP to here ...
@@ -12,7 +12,7 @@ Derived from [[plans/plan-next-7d-scqa-2026-01-08|plan-next-7d-scqa-2026-01-08]]
 - [x] Stub this design vault **✅2026-01-08**
 - [x] Create on github **✅2026-01-08**
 - [x] 📥 of generated materials
-    - [x] Process Plan created today 2026-01-08 about what to do with SCQ **✅2026-01-09 in [[plans/plan-next-7d-scqa-2026-01-08|plan-next-7d-scqa-2026-01-08]]**
+    - [x] Process Plan created today 2026-01-08 about what to do with SCQ **✅2026-01-09 in [[plan-next-7d-scqa-2026-01-08]]**
     - [x] Design for Life Itself Research
         - [x] Brief
         - [ ] Designs
