@@ -12,6 +12,6 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 
 1. **Raw visions** → [raw/](raw/). First outflow 2026-09-29.
 2. **Candidates** → [experiences.md](experiences.md): arrival seed, courses pop-up book, movement leap, temple, magazine.
-3. **Next:** pick one or two, question them into a handoff brief (script + moodboard) for build or mockup.
+3. **Focus: Arrival, then Movement.** Arrival brief in progress → [experiences/01-arrival/brief.md](experiences/01-arrival/brief.md). Goal: handoff brief (script + moodboard) for build or mockup.
 
 Tracking: beads epic `design-323`.
