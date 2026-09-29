@@ -8,6 +8,8 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
+The reasoning, candidates and open questions: [type.md](../../type.md).
+
 - **Polyamine** ([source](https://uicreative.net/products/polyamine-modern-classy-serif-font)) for major headings (and maybe elsewhere). Unlicensed for sketching.
 - Display: light, widely spaced capitals (e.g. the Dawn statement).
 - Body: centred serif, one weight. **No bold, no italic** — emphasis comes from rhythm and space, not from weight.

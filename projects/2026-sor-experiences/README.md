@@ -17,6 +17,7 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 
 - [raw/](raw/): unedited outflows, for reference.
 - [experiences.md](experiences.md): the candidate experiences (arrival, book, leap, temple, magazine).
+- [type.md](type.md): choosing the typefaces — roles, decisions, taste, and where to look.
 - [experiences/00-home/](experiences/00-home/): the home page: brief, common context, rough sketch, and how the parts join.
 - experiences/01-arrival … 05-flight: one folder per part, each with a HANDOFF.
 
