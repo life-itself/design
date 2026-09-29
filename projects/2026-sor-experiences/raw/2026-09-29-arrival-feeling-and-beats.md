@@ -6,7 +6,7 @@ experience: 01-arrival
 
 # Arrival: feeling, beats and answers (2026-09-29)
 
-Raw reference. Distilled into [../experiences/01-arrival/brief.md](../experiences/01-arrival/brief.md).
+Raw reference. Distilled into [../experiences/00-home/brief.md](../experiences/00-home/brief.md).
 
 ## Feeling
 

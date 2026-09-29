@@ -1,6 +1,6 @@
-# Frame 4: The Book — handoff
+# The Book — handoff
 
-Frame 4 of the Arrival page ([Arrival brief](../01-arrival/brief.md), [all handoffs](../01-arrival/HANDOFFS.md)); can also stand alone on a courses/learning page. Full brief: [brief.md](brief.md).
+Part 4 of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)); can also stand alone on a courses/learning page. Full brief: [brief.md](brief.md).
 
 Suggested model: **Opus 5.5**. The book itself may be best made as 3D (Three.js) or motion graphics (After Effects exported to video/Lottie), so it can land closed and heave open.
 

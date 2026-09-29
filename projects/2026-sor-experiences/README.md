@@ -11,14 +11,14 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 ## Start here
 
 - **Where we are:** `bd show design-323` (epic) and `bd list --parent design-323` (tasks).
-- **Arrival page** (current focus): [brief](experiences/01-arrival/brief.md) · [rough sketch](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3) · [frame handoffs](experiences/01-arrival/HANDOFFS.md) (one per frame, completed standalone) · [home page](experiences/00-home/HANDOFF.md) (integration: stitching frames together).
+- **Home page** (current focus): [overview](experiences/00-home/README.md) · [brief](experiences/00-home/brief.md) · [common context](experiences/00-home/common.md) · [rough sketch](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Parts in parallel folders: 01-arrival, 02-dawn, 03-leap, 04-book, 05-flight.
 
 ## Contents
 
 - [raw/](raw/): unedited outflows, for reference.
 - [experiences.md](experiences.md): the candidate experiences (arrival, book, leap, temple, magazine).
-- [experiences/01-arrival/](experiences/01-arrival/): the Arrival (home) page brief, rough sketch, and per-frame handoffs. It folds in [03-leap](experiences/03-leap/) and [02-book](experiences/02-book/).
-- [experiences/00-home/](experiences/00-home/): integrating the frames into the one page.
+- [experiences/00-home/](experiences/00-home/): the home page: brief, common context, rough sketch, and how the parts join.
+- experiences/01-arrival … 05-flight: one folder per part, each with a HANDOFF.
 
 Progress and next steps live in beads, not in these files.
 

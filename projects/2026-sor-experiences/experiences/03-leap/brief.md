@@ -1,6 +1,6 @@
 # Movement: the Leap — brief (draft)
 
-Used as **frame 3** of the [Arrival](../01-arrival/brief.md) landing page; can also stand alone (e.g. on a join/movement page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [animation detail](../../raw/2026-09-29-leap-animation-detail.md).
+Part 3 of the [home page](../00-home/brief.md); can also stand alone (e.g. on a join/movement page). Sources: [first outflow](../../raw/2026-09-29-first-outflow-experiences-vision.md), [animation detail](../../raw/2026-09-29-leap-animation-detail.md).
 
 ## Feeling
 
@@ -22,7 +22,7 @@ Scroll-driven throughout.
 | 2. Walking | The people walk in and up the road, one by one. Real walking figures (walk cycles), not sliding cutouts if possible. Tension builds: they are about to walk off the edge of the sky. | *…but as we walk, we hold the possibility of renewal / of a renaissance.* |
 | 3. The rip | As the leaders near the edge, the paper tears **gently, top down**, as if pulled from the top. Not violent. Reveals the yellow field and blue sky; the road now leads into it and the walkers step into the field. | |
 | 4. Join | A concrete invitation once the scene settles. | e.g. *Come join us. Meet others on our Thursday calls.* (Final wording and link to come; generic "Join us" is fine.) |
-| 5. Onward | A "keep learning" path on to the Book (frame 4). | |
+| 5. Onward | A "keep learning" path on to the Book (part 4). | |
 
 ## Craft notes
 

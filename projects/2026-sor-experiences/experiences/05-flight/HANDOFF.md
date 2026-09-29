@@ -1,6 +1,6 @@
-# Frame 5: Flight — handoff
+# Flight — handoff
 
-Closing frame of the Arrival page ([brief](../brief.md), [all handoffs](../HANDOFFS.md)). Suggested model: **Opus 5.5** (canvas/WebGL, flocking, growing trees).
+Part 5 (closing) of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)). Suggested model: **Opus 5.5** (canvas/WebGL, flocking, growing trees).
 
 ## Goal
 
@@ -19,13 +19,13 @@ Authentic, credible hope. Lightness after the weight of the Book. High contrast:
 
 ## Text
 
-- Line with the logo: **to find.** Not "building a movement", not "a vision for civilizational renewal" (used in frame 2).
+- Line with the logo: **to find.** Not "building a movement", not "a vision for civilizational renewal" (used in Dawn).
 - Tree words as above.
 
 ## Assets
 
-- Logo: [ref/sor-logo-bird-prints.png](../../../../../ref/sor-logo-bird-prints.png).
-- Split layers from the sketch: [../sketch/assets/logo-ring.png](../sketch/assets/logo-ring.png) (red fingerprints, transparent), [../sketch/assets/swallow.png](../sketch/assets/swallow.png) (swallow silhouette).
+- Logo: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png).
+- Split layers from the sketch: [../00-home/sketch/assets/logo-ring.png](../00-home/sketch/assets/logo-ring.png) (red fingerprints, transparent), [../00-home/sketch/assets/swallow.png](../00-home/sketch/assets/swallow.png) (swallow silhouette).
 - Font: Polyamine.
 
 ## Starting point

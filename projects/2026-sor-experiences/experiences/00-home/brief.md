@@ -1,4 +1,4 @@
-# Arrival: brief (draft)
+# Home page: brief (draft)
 
 Source: [raw/2026-09-29-arrival-feeling-and-beats.md](../../raw/2026-09-29-arrival-feeling-and-beats.md).
 
@@ -26,12 +26,12 @@ Five frames (sections of the page). Each frame can hold several beats.
 
 **Rough sketch v1 (all five frames):** [sketch/index.html](sketch/index.html) · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Leap layers cut from the collage by `sketch/prep_assets.py` (rough; empty-road fill is smudgy).
 
-**Build approach:** build and perfect one frame at a time as a standalone piece, then stitch them into the page. Frames with their own experience folder (Leap, Book) keep their brief and moodboard there.
+**Build approach:** build and perfect one frame at a time as a standalone piece, then stitch them into the page. Each part has its own parallel folder (01-arrival … 05-flight) with its handoff; this brief is the whole-page view.
 
 ### Frame 1: Seeds
 
 - **Background:** white.
-- **Already mocked up** in a separate Claude Design session, fairly final. Good type, SoR seeds floating. Handover: HTML export into `frame-1/` when convenient; bind in at build time. (No link to frame 2 for now.)
+- **Already mocked up** in a separate Claude Design session, fairly final. Good type, SoR seeds floating. Handover: HTML export into `../01-arrival/build/`; bind in at build time. (No link to frame 2 for now.)
 - **Text:** *For all the living beings whose heart burns to see a new world emerge.*
 
 ### Frame 2: Dawn
@@ -40,8 +40,8 @@ Five frames (sections of the page). Each frame can hold several beats.
 - **2a. Paragraph lights up like a dawn.** The whole paragraph starts off-dark grey, barely legible, and brightens evenly to white at the pace of a dawn: about 12s, quicker at first and lingering at the end. Not tied to scroll position.
   > *Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in wisdom, interbeing, inner growth, revoligion (the evolution of religion), complexity and going beyond capitalism.*
 - **2b. Six words:** stay plain text within the paragraph. They come alive later as the trees of frame 5.
-- **Look** (static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Font: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font); unlicensed for sketching.
-- **Prototype v1:** [frame-2/index.html](frame-2/index.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY). Controls for dawn length and statement timing. Stand-in fonts until Polyamine is installed.
+- **Look** (static mockup: [../02-dawn/moodboard/frame-2-mockup-static.png](../02-dawn/moodboard/frame-2-mockup-static.png)): paragraph centred in a serif, key phrases in bold (*old worlds dying and new ones being born*, *seed of rebirth*). Statement below in a light, spaced, all-caps display face. Font: [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font); unlicensed for sketching.
+- **Prototype v1:** [../02-dawn/prototype.html](../02-dawn/prototype.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY). Controls for dawn length and statement timing. Stand-in fonts until Polyamine is installed.
 - **2c. Statement,** larger type: *We are a vision and movement for civilizational renewal.*
 - **2d. Light invitation:** read the full manifesto, or keep going. Dawns together with the paragraph, same colour, not italic.
 
@@ -52,7 +52,7 @@ Five frames (sections of the page). Each frame can hold several beats.
 
 ### Frame 4: The book
 
-- Own brief: [../02-book/brief.md](../02-book/brief.md). A heavy Kiefer-like lead book drops in from the top and falls open. Golden illuminated letters glow on the pages, rise and assemble above it: *Courses · Papers*. Caption below: *Sharing what we have learned on our journey over the past decades.* No page turning.
+- Own brief: [../04-book/brief.md](../04-book/brief.md). A heavy Kiefer-like lead book drops in from the top and falls open. Golden illuminated letters glow on the pages, rise and assemble above it: *Courses · Papers*. Caption below: *Sharing what we have learned on our journey over the past decades.* No page turning.
 
 ### Frame 5: Flight (closing)
 
@@ -67,7 +67,7 @@ The ending: a story of hope, authentic and credible. No further acknowledgement 
 ## Assets
 
 - **Frame 1 design**: exists (Claude Design); HTML export to come.
-- **Frame 2 static mockup**: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png).
+- **Frame 2 static mockup**: [../02-dawn/moodboard/frame-2-mockup-static.png](../02-dawn/moodboard/frame-2-mockup-static.png).
 - **SoR logo**: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png). Black swallow at the centre of a radiating burst of red fingerprints (the seeds).
 - **Font**: Polyamine (link above); needs installing locally / self-hosting for prototypes.
 - **Sound**: wanted (ambient wind/birds, or music). Not defined yet.

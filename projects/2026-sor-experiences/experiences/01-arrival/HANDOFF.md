@@ -1,10 +1,10 @@
-# Frame 1: Seeds — handoff
+# Arrival (the seeds) — handoff
 
-Part of the Arrival page ([brief](../brief.md), [all handoffs](../HANDOFFS.md)). Suggested model: Sonnet 5.5 (import and tidy only).
+Part 1 of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)). Suggested model: Sonnet 5.5 (import and tidy only).
 
 ## Goal
 
-**Standalone: done elsewhere** (Claude Design / Open Design). What's left here is bringing that export into this repo as `build/`, tidy only. Integration into the home page happens separately in [../../00-home/HANDOFF.md](../../00-home/HANDOFF.md).
+**Standalone: done elsewhere** (Claude Design / Open Design). What's left here is bringing that export into this repo as `build/`, tidy only. Integration into the home page happens separately in [../00-home/HANDOFF.md](../00-home/HANDOFF.md).
 
 ## What it is
 
@@ -15,7 +15,7 @@ Part of the Arrival page ([brief](../brief.md), [all handoffs](../HANDOFFS.md)).
 ## Assets
 
 - The Claude Design / Open Design mockup: **export HTML into `build/`** (the main task).
-- SoR logo: [ref/sor-logo-bird-prints.png](../../../../../ref/sor-logo-bird-prints.png).
+- SoR logo: [ref/sor-logo-bird-prints.png](../../../../ref/sor-logo-bird-prints.png).
 - Font: Polyamine.
 
 ## Starting point

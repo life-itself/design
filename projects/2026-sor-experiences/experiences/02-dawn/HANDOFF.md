@@ -1,6 +1,6 @@
-# Frame 2: Dawn — handoff
+# Dawn — handoff
 
-Part of the Arrival page ([brief](../brief.md), [all handoffs](../HANDOFFS.md)). Suggested model: Sonnet 5.5; fine-tune visuals in Claude Design / Open Design.
+Part 2 of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)). Suggested model: Sonnet 5.5; fine-tune visuals in Claude Design / Open Design.
 
 ## Goal
 
@@ -8,7 +8,7 @@ Polish the Dawn frame from prototype to near-final.
 
 ## Feeling
 
-After the white of frame 1, a sudden cut to black. Text you can barely read slowly becomes readable, like first light. Calm, deep, a little mysterious.
+After the white of the Arrival, a sudden cut to black. Text you can barely read slowly becomes readable, like first light. Calm, deep, a little mysterious.
 
 ## Beats
 
@@ -25,16 +25,16 @@ After the white of frame 1, a sudden cut to black. Text you can barely read slow
 
 Read the full manifesto ([Google Doc](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit)) · or continue ↓
 
-The six words stay plain text here; they come alive as trees in frame 5.
+The six words stay plain text here; they come alive as trees in Flight.
 
 ## Assets
 
-- Static mockup: [../moodboard/frame-2-mockup-static.png](../moodboard/frame-2-mockup-static.png) (the look to match).
+- Static mockup: [moodboard/frame-2-mockup-static.png](moodboard/frame-2-mockup-static.png) (the look to match).
 - Font: Polyamine (paragraph serif with bold phrases; statement in light, spaced caps).
 
 ## Starting point
 
-Prototype: [index.html](index.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY) (has a timing panel). Same frame in the sketch at `#f2`. Stand-in fonts: Libre Caslon Text, Italiana.
+Prototype: [prototype.html](prototype.html) · [artifact](https://claude.ai/artifact/X6nxz5T2J9ykKvXFLiYbrY) (has a timing panel). Same frame in the sketch at `#f2`. Stand-in fonts: Libre Caslon Text, Italiana.
 
 Screenshots to capture into `screens/`: `sketch-v1-f2-dark.png` (just after arriving), `sketch-v1-f2-lit.png` (after ~12s).
 

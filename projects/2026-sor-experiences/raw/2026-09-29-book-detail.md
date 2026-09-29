@@ -1,12 +1,12 @@
 ---
 date: 2026-09-29
 source: spoken outflow (dictated) plus typed note, unedited
-experience: 02-book
+experience: 04-book
 ---
 
 # Book: detail (2026-09-29)
 
-Raw reference. Distilled into [../experiences/02-book/brief.md](../experiences/02-book/brief.md).
+Raw reference. Distilled into [../experiences/04-book/brief.md](../experiences/04-book/brief.md).
 
 On frame 4, how does it arise out of the dark? Does it drop in or fade up as if lit by a lamp? It falls in from the top, so it drops in heavily. Is it already open, or is it closed? When it falls, it falls open, as in the photograph we have.
 

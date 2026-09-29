@@ -1,6 +1,6 @@
-# Frame 3: The Leap — handoff
+# The Leap — handoff
 
-Frame 3 of the Arrival page ([Arrival brief](../01-arrival/brief.md), [all handoffs](../01-arrival/HANDOFFS.md)); can also stand alone on a join/movement page. Full brief: [brief.md](brief.md).
+Part 3 of the home page ([page brief](../00-home/brief.md), [overview](../00-home/README.md), [common context](../00-home/common.md)); can also stand alone on a join/movement page. Full brief: [brief.md](brief.md).
 
 Suggested model: **Opus 5.5** for the scroll scene. Asset work (clean plate, walk cycles) needs image/video tools: Photoshop generative fill or an image model for the plate; cutout puppetry (After Effects, Rive) or an image-to-video model for walking figures.
 
@@ -29,7 +29,7 @@ Walking into the unknown: scary, yet we hold the possibility of renewal. Tension
 ## Assets
 
 - Source collage: [moodboard/leap-collage-walkers-torn-field.png](moodboard/leap-collage-walkers-torn-field.png) (512×512; higher-res or the original photo would help a lot: try a reverse image search).
-- Rough layers cut by script ([../01-arrival/sketch/prep_assets.py](../01-arrival/sketch/prep_assets.py)) in [../01-arrival/sketch/assets/](../01-arrival/sketch/assets/): `leap-plate.jpg` (empty road; the people-area fill is smudgy), `leap-tear.png`, `leap-people.png` (all walkers as one layer).
+- Rough layers cut by script ([../00-home/sketch/prep_assets.py](../00-home/sketch/prep_assets.py)) in [../00-home/sketch/assets/](../00-home/sketch/assets/): `leap-plate.jpg` (empty road; the people-area fill is smudgy), `leap-tear.png`, `leap-people.png` (all walkers as one layer).
 - Font: Polyamine.
 
 ## Starting point

@@ -1,12 +1,12 @@
 ---
 date: 2026-09-29
 source: spoken outflow (dictated) plus typed note, unedited
-experience: 01-arrival (closing frame), 02-book
+experience: 05-flight, 04-book
 ---
 
 # Closing frame: swallows, portal, trees (2026-09-29)
 
-Raw reference. Distilled into [../experiences/01-arrival/brief.md](../experiences/01-arrival/brief.md) (frame 5) and [../experiences/02-book/brief.md](../experiences/02-book/brief.md).
+Raw reference. Distilled into [../experiences/00-home/brief.md](../experiences/00-home/brief.md) (Flight) and [../experiences/04-book/brief.md](../experiences/04-book/brief.md).
 
 Typed note: BTW i would say just "Papers" (not white papers)
 

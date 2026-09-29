@@ -1,8 +1,8 @@
 # Home page: stitching the frames — handoff
 
-The integration exploration: takes the standalone frames and assembles them into the one scrolling home (Arrival) page. Kept separate from the frames on purpose: **completing a frame standalone** and **integrating it** are two different jobs.
+The integration exploration: takes the standalone frames and assembles them into the one scrolling home page. Kept separate from the frames on purpose: **completing a frame standalone** and **integrating it** are two different jobs.
 
-Page brief: [../01-arrival/brief.md](../01-arrival/brief.md). Frame handoffs: [../01-arrival/HANDOFFS.md](../01-arrival/HANDOFFS.md). Rough sketch v1 of the whole page (the reference for order and rhythm): [../01-arrival/sketch/index.html](../01-arrival/sketch/index.html) · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3).
+Page brief: [brief.md](brief.md). Overview and per-experience handoffs: [README.md](README.md). Shared context: [common.md](common.md). Rough sketch v1 of the whole page (the reference for order and rhythm): [sketch/index.html](sketch/index.html) · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3).
 
 Suggested model: **Opus 5.5**.
 

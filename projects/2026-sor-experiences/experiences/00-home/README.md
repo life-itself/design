@@ -1,0 +1,49 @@
+# Home page
+
+The SoR home page is one long scroll made of five experiences, each built on its own in a parallel folder and then joined here.
+
+| # | Experience | Folder | Suggested model |
+|---|---|---|---|
+| 1 | Arrival (the seeds) | [../01-arrival/](../01-arrival/HANDOFF.md) | Sonnet 5.5 (import only) |
+| 2 | Dawn | [../02-dawn/](../02-dawn/HANDOFF.md) | Sonnet 5.5 |
+| 3 | The Leap | [../03-leap/](../03-leap/HANDOFF.md) | Opus 5.5 + image/video tools for assets |
+| 4 | The Book | [../04-book/](../04-book/HANDOFF.md) | Opus 5.5 (+ 3D / motion tool) |
+| 5 | Flight | [../05-flight/](../05-flight/HANDOFF.md) | Opus 5.5 |
+
+Leap and Book can also stand alone on their own pages (join/movement, courses).
+
+## In this folder
+
+- [brief.md](brief.md): the whole page: feeling, medium, and the script across all five experiences.
+- [common.md](common.md): shared context every experience uses (fonts, colours, words, tone). Read before working on any experience.
+- [HANDOFF.md](HANDOFF.md): the integration job: joining the experiences into one page and writing the frame contract.
+- [sketch/](sketch/index.html): rough sketch v1 of the whole page · [artifact](https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3). Deep links jump to a moment, e.g. `#f3-70` = experience 3 at 70% of its scroll.
+
+Progress lives in beads (`bd list --parent design-323`), not in these files.
+
+## Working on one experience in its own session
+
+Each experience is first **completed standalone** in its folder's `build/`. **Integrating** it into the page is separate ([HANDOFF.md](HANDOFF.md)).
+
+Open a session in this repo and paste:
+
+> Work on the <name> experience of the Seeds of Renaissance home page. Read `projects/2026-sor-experiences/experiences/00-home/common.md`, then `experiences/<folder>/HANDOFF.md` and everything it links. Build it as a standalone piece following the handoff rules. Save work into that folder's `build/` and record progress on its beads task (`bd update <id> --notes ...`, `bd close <id>`).
+
+In Open Design / Claude Design without repo access: paste common.md and the HANDOFF, attach the listed assets and screenshots, and export HTML back into the folder's `build/`.
+
+**Model notes.** Opus 5.5 (`claude-opus-5-5`) for real animation logic: scroll-scrubbed scenes, canvas/WebGL, 3D. Sonnet 5.5 (`claude-sonnet-5-5`) for type-and-timing pieces. Visual fine-tuning is best done where you can see and nudge: Claude Design or Open Design. Asset production (clean plates, walk cycles, a 3D book) may need tools beyond a coding model; each handoff says where.
+
+## Handoff rules (provisional)
+
+Loose on purpose: we reconcile when joining, then write the formal frame contract ([HANDOFF.md](HANDOFF.md)).
+
+- **One standalone HTML page per experience**, playable on its own. Assets in a sibling `assets/` folder.
+- **Scope styles** under one class (e.g. `.x-leap`) so experiences can later share a page without clashing.
+- **Keep to the stated start and end background**; note any change in the bead.
+- **Keep to how it's driven:** scroll-scrubbed (tall section, sticky stage) or plays once reached.
+- **Use [common.md](common.md)** for fonts, colours and words.
+- **No sound yet**, but leave room for it.
+
+## Screenshots
+
+Each handoff lists the moments to capture from the sketch. Save them in that experience's `screens/` folder with the given names.

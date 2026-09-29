@@ -1,6 +1,6 @@
 import cv2, numpy as np
 from PIL import Image
-out='experiences/01-arrival/sketch/assets/'
+out='experiences/00-home/sketch/assets/'
 img=cv2.imread('experiences/03-leap/moodboard/leap-collage-walkers-torn-field.png')
 H,W=img.shape[:2]
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -56,5 +56,5 @@ ring=np.dstack([np.full_like(r,225),np.full_like(r,20),np.full_like(r,20),(redne
 Image.fromarray(ring,'RGBA').save(out+'logo-ring.png',optimize=True)
 sw=np.dstack([np.zeros_like(r),np.zeros_like(r),np.zeros_like(r),(darkm*255)]).astype(np.uint8)
 im=Image.fromarray(sw,'RGBA'); bb=im.getbbox(); im.crop(bb).save(out+'swallow.png',optimize=True); print('swallow bbox',bb)
-Image.open('experiences/02-book/moodboard/kiefer-lead-book-open.webp').save(out+'kiefer-book.webp')
+Image.open('experiences/04-book/moodboard/kiefer-lead-book-open.webp').save(out+'kiefer-book.webp')
 cv2.imwrite(out+'debug-masks.png',np.hstack([tear*255,people*255]))
