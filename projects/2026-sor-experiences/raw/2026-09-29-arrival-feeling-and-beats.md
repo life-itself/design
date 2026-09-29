@@ -45,3 +45,27 @@ Page 2: Human history has always been a story of transformation - of old worlds 
 the below that on page 2 (in larger font): We are a vision and movement for civilizational renewal
 
 finally note: these may be an animmation but more likely a scrollable website experience ... (but we are open)
+
+## Round 2: answers and the flow beyond beat 2
+
+Typed answers:
+
+1. yes that is the quote ...
+2. we'll answer below
+3. we don't need color yet - don't worry
+4. maybe - we'll answer below
+5. ...
+
+Dictated (transcription errors likely, e.g. "Hagens Kiefer" = Anselm Kiefer?):
+
+There should be six seeds at the beginning: Seeds of Revelation. You should almost see them going to those. It should be six, and then we'll see about that.
+
+There is the thing: the seeds. You scroll down, and it's dark. The text goes from almost invisible, but we only see where we are in white, in vision. The dark text above it then appears. I do think that the sixth thing could come out in colour: the six words, "Wisdom into Being Integrated Religion." I think "Revolution" by the way should become "Eveligion Revolution," which has this tone to it, but anyway, "Complexity and Beyond Capitalism."
+
+Then there are things I'm not super sure about, because here I'm like, "Oh, they could be like, 'Download the manifesto. Oh, see the manifesto, for example. People might want to discover more.'" The logical thing, I wouldn't want if I focus on experience and not call to action and stuff. It's like, then you go, and that's when there's this big book that arrives. It's like those Hagens Kiefer books, giant, this size. It says, "Share our heart learning that we've from our past day, from our journey over the past decades." Something like that.
+
+There's this big book, and it's like a handsome, big Hagens Kiefer book, and a big, handsome Kiefer heart that comes and glows. Each page, I'd love the flickering of turning the pages. The page where they're heavy pages is hard. They're a bit heavy, and that's where the courses and other things, possibly the podcast, or I don't know. I see almost the white papers and the courses in that, or it's after that. I don't know if that goes there or if it's like, "We are a vision and a movement," and then you see the people that walk into this, into the thing, into becoming a movement, and then here is the meetup. We integrate other experiences that we've described at this moment. At this moment, we transition.
+
+Yes, there would be a call to action at the end of almost page 2, which is, "If you want to read our full manifesto, you can go read it, or continue," or kind of an invitation to keep discovering. What's the first invitation? I think, for people coming here, it's like, "How can I join the movement?" The next one is "Movement," and then probably the thing below that is "Courses and Papers." If you want to know more before you already know you could join a movement, but then you might want to know more before you do.
+
+We actually see how some of these experiences are joined together. They could exist also independently, in that the movement experience could exist on the movement page or join-in page, but we're using it also on this landing page. Folding in, that makes sense now how some of these experiences join together. What we're just saying was that experiences, movement, leap, and courses book now show up, probably on this flowing-through experience here. That's helpful. Anything else? No, we're good.

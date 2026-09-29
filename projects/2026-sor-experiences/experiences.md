@@ -4,6 +4,8 @@ Candidate experiences, distilled from [raw/2026-09-29-first-outflow-experiences-
 
 ## 1. Arrival: the seed
 
+**Now the landing-page spine**: flows on into Movement (3) and the Book (2). Brief → [experiences/01-arrival/brief.md](experiences/01-arrival/brief.md).
+
 Full dark or full white void. Text emerges: a quote "for the one whose heart longs for…". Scroll: a seed symbol spins on itself and starts to bloom. A manifesto quote explains what SoR is. Each word ("Wisdom", "Interbeing", …) becomes a different tree that blooms.
 
 ## 2. Courses: the pop-up book
