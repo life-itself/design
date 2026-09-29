@@ -1,5 +1,7 @@
 # Directions — draft 1
 
+Claude output (2026-09-28): https://claude.ai/artifact/1JL3JW7bQHykeuAtFDMBbe
+
 *2026-09-28. Four deliberately different directions for the look and feel. They come from [brand.md](../brand.md) and the [reference review](../moodboard/README.md), not from existing 2R or Canva design. Colour and type notes here are fresh proposals to test, not decisions.*
 
 **Correction (Rufus, 2026-09-28):** the references are mainly for **fonts and feel**, and several are magazines. SoR's essence is **vision and movement for civilisational renewal**: a movement and community first, with media as the way in. So in every direction:
