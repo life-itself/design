@@ -11,6 +11,9 @@ Tracking: beads `design-2pk`.
 - **Round one: heading faces** — nineteen candidates in the real frame, each carrying the verdict it got. Kept as a record so a later round does not re-propose what was turned down.
   - To read or share: **[artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR)**.
   - In the repo: [type/round-01-headings.html](type/round-01-headings.html), which opens straight from disk. `type/build-round-01.py` regenerates both copies; the publishable one is derived and gitignored.
+- **Round two: body and eyebrow faces** — six body candidates and three eyebrow candidates in the real frame, one variable per block.
+  - To read or share: **[artifact](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L)**.
+  - In the repo: [type/round-02-body.html](type/round-02-body.html). `type/build-round-02.py` regenerates it.
 - Superseded and unmaintained: an interactive comparator with 33 faces and live controls ([link](https://claude.ai/artifact/2TkRgn44LBQdLedo1C5cr6)). Too much choice, and a worse tool than the ones that already exist.
 
 ## The roles
