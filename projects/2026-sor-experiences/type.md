@@ -6,6 +6,15 @@ Shared constraints live in [experiences/00-home/common.md](experiences/00-home/c
 
 Tracking: beads `design-2pk` (closed).
 
+## The rounds
+
+| | What | Read and share | Archived here |
+|---|---|---|---|
+| **One** | Heading and billboard faces, nineteen candidates | [artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) | [type/round-01-headings.html](type/round-01-headings.html) |
+| **Two** | Body faces, then eyebrow faces | [artifact](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L) | [type/round-02-body.html](type/round-02-body.html) |
+
+Both pages are **archived in this repo** as standalone HTML with the fonts embedded, so they open offline and do not depend on the artifacts surviving. The artifact links are for reading and sharing. No need to archive them again. Each page carries the verdict every candidate got, so a later round can check what has already been turned down. Rebuild either with its `build-round-0N.py`.
+
 ## The four faces
 
 | Role | Face | Licence |

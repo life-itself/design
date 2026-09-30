@@ -11,6 +11,8 @@ Two rounds, both September 2026. Every candidate was rendered in the real frame 
 | **Round one** | Heading and billboard faces. Nineteen candidates. | [artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) · [round-01-headings.html](round-01-headings.html) · `build-round-01.py` |
 | **Round two** | Body faces, then eyebrow faces. | [artifact](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L) · [round-02-body.html](round-02-body.html) · `build-round-02.py` |
 
+Both pages are **archived in this repo** as standalone HTML with the fonts embedded, so they open offline and do not depend on the artifacts surviving. The artifact links are for reading and sharing. No need to archive them again.
+
 Superseded, unmaintained: an [interactive comparator](https://claude.ai/artifact/2TkRgn44LBQdLedo1C5cr6) with 33 faces and live controls. Abandoned because it offered choice instead of judgement, and was a worse tool than the ones that already exist. The lesson is in [Method](#method) below.
 
 Both build scripts download their font files at build time and embed them; `fonts/` is a gitignored cache, so a clean checkout rebuilds from nothing.

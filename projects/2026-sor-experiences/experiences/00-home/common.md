@@ -8,7 +8,7 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
-Chosen, with how to apply them: [type.md](../../type.md).
+Chosen, with how to apply them: [type.md](../../type.md). The rounds they came out of: [one](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) · [two](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L), both also archived in [type/](../../type/).
 
 - **Billboard** — [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font). Heroes and the experience pages only, used sparingly. Five to ten words maximum; not for pull quotes, not for small headings. Unlicensed so far, and loaded via `local()`, so it falls back for anyone without it installed.
 - **Heading** — Restora (Nasir Udin). Headings and subheadings in running text, pull quotes, larger quotations. Subheads are Restora at another size or weight, not a fifth face. Unlicensed so far.

@@ -17,7 +17,7 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 
 - [raw/](raw/): unedited outflows, for reference.
 - [experiences.md](experiences.md): the candidate experiences (arrival, book, leap, temple, magazine).
-- [type.md](type.md): the four typefaces and where each is used. Working and rejections in [type/research-notes.md](type/research-notes.md).
+- [type.md](type.md): the four typefaces and where each is used. Working and rejections in [type/research-notes.md](type/research-notes.md). The two selection rounds: [one](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) · [two](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L), archived locally in [type/](type/).
 - [experiences/00-home/](experiences/00-home/): the home page: brief, common context, rough sketch, and how the parts join.
 - experiences/01-arrival … 05-flight: one folder per part, each with a HANDOFF.
 
