@@ -347,6 +347,20 @@ footer.fin p{{margin:0 0 10px}}
 </body>
 </html>'''
 
+ascii_page = PAGE.encode("ascii", "xmlcharrefreplace").decode("ascii")
+
+# Standalone copy: opens straight from disk, needs its own document skeleton.
 out = HERE / "round-01-headings.html"
-out.write_text(PAGE.encode("ascii", "xmlcharrefreplace").decode("ascii"))
-print(f"{out.stat().st_size/1024:.0f} KB  {out.name}")
+out.write_text(ascii_page)
+
+# Artifact copy: the platform supplies the skeleton, so ship the parts bare.
+# Generated on demand and kept out of the repo, since it duplicates the above.
+bare = ascii_page[ascii_page.index("<title>"):ascii_page.rindex("</body>")]
+bare = bare.replace("</head>\n<body>\n", "")   # the slice spans the head/body boundary
+for tag in ("<!doctype", "<html", "<body>", "</body>", "</head>"):
+    assert tag not in bare, "skeleton tag leaked into the artifact copy: " + tag
+alt = HERE / "round-01-headings.artifact.html"
+alt.write_text(bare)
+
+for f in (out, alt):
+    print(f"{f.stat().st_size/1024:.0f} KB  {f.name}")

@@ -8,8 +8,9 @@ Tracking: beads `design-2pk`.
 
 ## Current output
 
-- **[Round one: heading faces](type/round-01-headings.html)** — nineteen candidates in the real frame, each carrying the verdict it got. Kept as a record so a later round does not re-propose what was turned down. Rebuild with `type/build-round-01.py`.
-- Live version of the same round, for sharing: [artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR).
+- **Round one: heading faces** — nineteen candidates in the real frame, each carrying the verdict it got. Kept as a record so a later round does not re-propose what was turned down.
+  - To read or share: **[artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR)**.
+  - In the repo: [type/round-01-headings.html](type/round-01-headings.html), which opens straight from disk. `type/build-round-01.py` regenerates both copies; the publishable one is derived and gitignored.
 - Superseded and unmaintained: an interactive comparator with 33 faces and live controls ([link](https://claude.ai/artifact/2TkRgn44LBQdLedo1C5cr6)). Too much choice, and a worse tool than the ones that already exist.
 
 ## The roles
