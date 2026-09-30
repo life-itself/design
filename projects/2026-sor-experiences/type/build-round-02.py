@@ -96,18 +96,18 @@ DROPPED = [
 ]
 
 EYEBROWS = [
-    dict(name="Apfel Grotezk", css="'Apfel Grotezk',system-ui,sans-serif", flag="My pick",
+    dict(name="Apfel Grotezk", css="'Apfel Grotezk',system-ui,sans-serif", flag="Chosen",
          who="Collletttivo · free, SIL OFL",
          note="Flat terminals and slightly odd proportions — the quality you liked in Karla. "
               "Warm rather than cold-Swiss, sturdy at 12px reversed out, and it carries the "
               "down arrow and middot, which several candidates do not."),
-    dict(name="Azeret Mono", css="'Azeret Mono',ui-monospace,monospace", flag="If you want texture",
+    dict(name="Azeret Mono", css="'Azeret Mono',ui-monospace,monospace", flag="Out",
          who="Displaay · free, SIL OFL",
          note="Mono gives the most tension against an elegant serif. It reads forward-looking "
               "rather than retro-terminal, which most monos fail at. The reservation: mono adds "
               "a fourth texture to the system and reads technical, which pulls against "
               "groundedness and wholeness."),
-    dict(name="Ysabeau Office", css="'Ysabeau Office',system-ui,sans-serif", flag="The warm one",
+    dict(name="Ysabeau Office", css="'Ysabeau Office',system-ui,sans-serif", flag="Out",
          who="Christian Thalmann · free, SIL OFL",
          note="A humanist sans with Garamond bones — the most grounded and whole of the three, "
               "and the least edgy. Use 500 or above; the light weights disappear on black."),
@@ -163,7 +163,7 @@ def eyebrow_block(f):
     <div class="col label">
       <div class="lhead">
         <div class="lname"><h2>{html.escape(f["name"])}</h2><p class="src">{f["who"]}</p></div>
-        <span class="flag{' pick' if f["flag"] == "My pick" else ''}">{html.escape(f["flag"])}</span>
+        <span class="flag{' pick' if f["flag"] == "Chosen" else ''}">{html.escape(f["flag"])}</span>
       </div>
       <p class="note">{f["note"]}</p>
     </div>
@@ -301,7 +301,7 @@ footer.fin p{{margin:0 0 10px}}
 <header class="top col">
   <div class="inner">
     <p class="kicker">Seeds of Renaissance &middot; type &middot; round two</p>
-    <h1>Body faces, and the small voice underneath</h1>
+    <h1>Body and eyebrow faces, and how they were chosen</h1>
     <p>Two body faces in the real frame, then three for the eyebrow line. <b>Only one thing changes per block.</b> Through the body section the eyebrow is held at Apfel Grotezk; through the eyebrow section the body is held at Bricolage Grotesque, the face you chose.</p>
     <p>The statement is set in <b>Polyamine</b>, standing in for Restora, which is commercial and cannot be embedded. It renders only on a machine with Polyamine installed — elsewhere that line falls back and should be ignored.</p>
 
@@ -310,7 +310,7 @@ footer.fin p{{margin:0 0 10px}}
       <p class="said">&ldquo;If you take that, then you have to compensate with something more weighty and grounded in the body.&rdquo;</p>
       <p>Two survive, against Polyamine: <b>Bricolage Grotesque</b> first, <b>Bespoke Serif</b> second. Everything else is out and has been moved to the bottom of this page.</p>
       <p>Worth noting what that result says, because it is not what I predicted. My pick was Bespoke Slab, on the grounds that it was the most weighty without being fat &mdash; and it lost, along with every other serif except one. A <b>sans</b> came first. So the contrast wanted between display and body is <b>wider</b> than a shift of weight inside the same family of shapes: it is a change of kind, not of degree. Slab weight was not the answer; a different skeleton was.</p>
-      <p>The eyebrow is still open, and is the section in the middle.</p>
+      <p>The eyebrow is settled too: <b>Apfel Grotezk</b>, in the section below. That gives all four roles — Polyamine for the billboard, Restora for headings, Bricolage for body, Apfel for the small voice.</p>
     </div>
   </div>
 </header>
@@ -323,7 +323,7 @@ footer.fin p{{margin:0 0 10px}}
 
 <section class="sect col"><div class="inner">
   <h2>Part two</h2><h3>The eyebrow</h3>
-  <p>The smallest voice on the page: labels, captions, and the invitation line. It has never been chosen — the build falls back to the system font by accident.</p>
+  <p>The smallest voice on the page: labels, captions, and the invitation line. <b>Apfel Grotezk</b> was chosen — flat terminals and slightly odd proportions, warm rather than cold-Swiss. The other two are kept for the record.</p>
   <p>One practical constraint that decided more than taste did: the line ends in a down arrow, and <b>several otherwise good faces have no arrow glyph at all</b>. Everything shown here carries both the arrow and the middot.</p>
 </div></section>
 {"".join(eyebrow_block(f) for f in EYEBROWS)}

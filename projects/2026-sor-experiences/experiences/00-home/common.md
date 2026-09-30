@@ -8,13 +8,13 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
-The reasoning, candidates and open questions: [type.md](../../type.md).
+Chosen, with how to apply them: [type.md](../../type.md).
 
-- **Polyamine** ([source](https://uicreative.net/products/polyamine-modern-classy-serif-font)) for major headings (and maybe elsewhere). Unlicensed for sketching.
-- Display: light, widely spaced capitals (e.g. the Dawn statement).
-- Body: centred serif, one weight. **No bold, no italic** — emphasis comes from rhythm and space, not from weight.
-- Body face is undecided. Crimson Text is a stand-in and not the answer. It must survive both grounds: the black frames (Dawn, Book) and the white ones (Arrival, Flight), so moderate stroke contrast and sturdy stems. A variable face lets the same font run lighter on black and heavier on paper.
-- Stand-ins until the font files are in: Italiana (display), Crimson Text (body). Name any stand-in you use.
+- **Billboard** — [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font). Heroes and the experience pages only, used sparingly. Five to ten words maximum; not for pull quotes, not for small headings. Unlicensed so far, and loaded via `local()`, so it falls back for anyone without it installed.
+- **Heading** — Restora (Nasir Udin). Headings and subheadings in running text, pull quotes, larger quotations. Subheads are Restora at another size or weight, not a fifth face. Unlicensed so far.
+- **Body** — Bricolage Grotesque. One weight. **No bold, no italic** — emphasis comes from rhythm and space. Free, SIL OFL.
+- **Eyebrow / meta** — Apfel Grotezk. Labels, captions, credits, invitation lines: 11–14px, uppercase, letterspaced. Free, SIL OFL.
+- Body has to hold on both grounds: the black frames (Dawn, Book) and the white ones (Arrival, Flight).
 - Exception: the Book's rising letters use an illuminated, gold display face (sketch: Cinzel Decorative).
 
 ## Colour
