@@ -13,7 +13,7 @@ Design exploration for the new Seeds of Renaissance website (the successor to se
 3. **Moodboard** → [moodboard/](moodboard/). Five reference sites reviewed 2026-09-28.
 4. **Directions** → [directions/](directions/). Draft 1: A Living Magazine, B Studio Index, C Honest Workshop, D Dusk & Dawn. Mockups v1 (A, B, D, E; home + manifesto): [artifact](https://claude.ai/artifact/1JL3JW7bQHykeuAtFDMBbe), source `directions/v1/`.
 5. **Choose a direction**, then complete the page mocks and Instagram templates.
-6. **Design system**: tokens and components from the chosen direction.
+6. **Design system** → [../2026-sor-design-system/](../2026-sor-design-system/), shared with the experiences project. The typefaces are already decided there and sit above the direction choice; tokens and components still come from the chosen direction.
 
 ## Inbox (to process)
 
@@ -31,5 +31,6 @@ Tracking: beads epic `design-lpe` (`bd show design-lpe`).
 ## Related
 
 - Sibling project: [../2026-sor-experiences/](../2026-sor-experiences/), standalone poetic/animated experiences (seed, pop-up book, leap, temple)
+- Shared design system: [../2026-sor-design-system/](../2026-sor-design-system/) — stub; type decided, colour and components not started
 - Content site: `secondrenaissance.net/`
 - Planning: `planning/projects/2609-seeds-of-renaissance-website.md` (`lip-1ie.1`), rebrand `2608-…` (`lip-42k`)

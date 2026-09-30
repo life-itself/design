@@ -6,6 +6,8 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 
 **Look:** rich colour in the animations. No house style imposed across experiences yet.
 
+**Shared visual decisions** live in [../2026-sor-design-system/](../2026-sor-design-system/) — the typefaces are settled there, used by both this project and the website.
+
 **Separate from** [../2026-sor-website/](../2026-sor-website/), which follows a conventional design process (brief, directions, sitemap). Shared substance lives there: [brand.md](../2026-sor-website/brand.md), [manifesto](../2026-sor-website/content/manifesto.md).
 
 ## Start here
