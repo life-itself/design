@@ -49,53 +49,50 @@ def b64(name):
 
 
 BODIES = [
-    dict(rank="B1", name="Bespoke Slab", css="'Bespoke Slab',Georgia,serif", size="1.32rem", lh="1.6",
-         who="Indian Type Foundry, via Fontshare · free for commercial use",
-         flag="My pick",
-         gist="The most genuinely weighty of them, without being fat.",
-         note="Even, low-contrast strokes and warm slab details. It holds its colour on black "
-              "where a finer serif goes grey, and it gives the page the ballast the brief asks "
-              "for while staying contemporary rather than Victorian. Against a sleek display "
-              "face this is a real contrast rather than a quieter version of the same thing."),
-    dict(rank="B2", name="Bespoke Serif", css="'Bespoke Serif',Georgia,serif", size="1.34rem", lh="1.6",
-         who="Indian Type Foundry, via Fontshare · free for commercial use",
-         flag="Close second",
-         gist="Sturdy and wide, with flared, slightly odd details.",
-         note="The same family as the slab, without the slabs. A little more elegant and a "
-              "little less grounded, so it depends which way you want to lean. Low contrast "
-              "means no hairlines to flicker out on the dark frames."),
-    dict(rank="B3", name="Bricolage Grotesque", css="'Bricolage Grotesque',system-ui,sans-serif",
+    dict(rank="B1", name="Bricolage Grotesque", css="'Bricolage Grotesque',system-ui,sans-serif",
          size="1.26rem", lh="1.62",
-         who="Mathieu Triay · free, SIL OFL",
-         flag="The sans option",
-         gist="The strongest contrast, and unmistakably forward-looking.",
-         note="A grotesque with ink traps and deliberately awkward details — the ink traps are "
-              "the giveaway that it is drawn now rather than revived. Chunky enough to act as a "
-              "foil to a delicate display serif. The biggest departure on the page, so it is "
-              "either obviously right or obviously wrong."),
-    dict(rank="B4", name="Hoover", css="'Hoover',Georgia,serif", size="1.34rem", lh="1.6",
-         who="Gaëtan Baehr, via Fontshare · free for commercial use",
-         flag="Most personality",
-         gist="Compact and mannered. Real presence, possibly too much of it.",
-         note="Narrow, slab-ish and full of character — look at the W and the g. It has more "
-              "personality than anything else here, which is what you have been asking for. The "
-              "risk is the opposite of boring: it may tire over a long manifesto."),
-    dict(rank="B5", name="Sentient", css="'Sentient',Georgia,serif", size="1.3rem", lh="1.6",
-         who="Noopur Choksi, Indian Type Foundry · free for commercial use",
-         flag="Competes with the heading",
-         gist="Elegant and warm — but it is in the display register.",
-         note="Well drawn and it reads beautifully, but the contrast is high and the mood is "
-              "close to Polyamine and Restora. That makes it a smaller cousin of the heading "
-              "rather than a counterweight to it, which is exactly what the brief says not to "
-              "do. Included so you can see the failure mode."),
-    dict(rank="B6", name="Literata", css="'Literata',Georgia,serif", size="1.3rem", lh="1.6",
-         who="TypeTogether · free, SIL OFL",
-         flag="The safe one",
-         gist="Solid, screen-first, and probably boring.",
-         note="Drawn for Google Books, so extended screen reading is the whole brief. Sturdy "
-              "stems, no hairlines, dependable on both grounds. Here as the baseline: if "
-              "everything above feels like too much, this is what restraint looks like, and "
-              "it is very likely the one you call boring."),
+         who="Mathieu Triay \u00b7 free, SIL OFL",
+         flag="Chosen \u00b7 first",
+         gist="The strongest contrast against the display face, and unmistakably drawn now.",
+         note="A grotesque with ink traps and deliberately awkward details \u2014 the ink traps are the "
+              "giveaway that it is contemporary rather than revived, which matters given how much "
+              "has been rejected for looking backwards. Chunky enough to act as a real foil to a "
+              "sleek display serif rather than a quieter echo of it."),
+    dict(rank="B2", name="Bespoke Serif", css="'Bespoke Serif',Georgia,serif", size="1.34rem", lh="1.6",
+         who="Indian Type Foundry, via Fontshare \u00b7 free for commercial use",
+         flag="Chosen \u00b7 second",
+         gist="Sturdy and wide, with flared, slightly odd details.",
+         note="The serif answer to the same brief. Low contrast, so no hairlines to flicker out on "
+              "the dark frames, and the flared terminals keep it from reading as a neutral "
+              "workhorse. Warmer and less of a departure than Bricolage."),
+]
+
+DROPPED = [
+    dict(rank="\u2014", name="Bespoke Slab", css="'Bespoke Slab',Georgia,serif", size="1.32rem", lh="1.6",
+         who="Indian Type Foundry, via Fontshare",
+         flag="Out",
+         gist="Out. The slabs were too much.",
+         note="This was my pick, on the grounds that it was the most genuinely weighty without "
+              "being fat. Turned down against Polyamine, which suggests the weight wanted is not "
+              "slab weight."),
+    dict(rank="\u2014", name="Hoover", css="'Hoover',Georgia,serif", size="1.34rem", lh="1.6",
+         who="Ga\u00ebtan Baehr, via Fontshare",
+         flag="Out",
+         gist="Out. Most personality of the six, and still no.",
+         note="Narrow, slab-ish and mannered."),
+    dict(rank="\u2014", name="Sentient", css="'Sentient',Georgia,serif", size="1.3rem", lh="1.6",
+         who="Noopur Choksi, Indian Type Foundry",
+         flag="Out",
+         gist="Out, as expected \u2014 it sat in the display register.",
+         note="Included as a demonstration rather than a candidate: a body face picked from the "
+              "same register as the heading becomes a smaller cousin of it instead of a "
+              "counterweight."),
+    dict(rank="\u2014", name="Literata", css="'Literata',Georgia,serif", size="1.3rem", lh="1.6",
+         who="TypeTogether",
+         flag="Out",
+         gist="Out. The baseline did its job.",
+         note="Here to show what pure restraint looks like. It was never going to survive a brief "
+              "that keeps rejecting things for being boring."),
 ]
 
 EYEBROWS = [
@@ -140,6 +137,26 @@ def body_block(f):
   </section>'''
 
 
+def dropped_block(f):
+    return f'''
+    <div class="cand">
+      <div class="col label">
+        <div class="lhead">
+          <div class="lname"><h2>{html.escape(f["name"])}</h2><p class="src">{f["who"]}</p></div>
+          <span class="flag">{html.escape(f["flag"])}</span>
+        </div>
+        <p class="gist">{html.escape(f["gist"])}</p>
+        <p class="note">{f["note"]}</p>
+      </div>
+      <div class="frame frame-short">
+        <span class="tag">{html.escape(f["name"])}</span>
+        <div class="finner">
+          <p class="ftext" style="font-family:{f['css']};font-size:{f['size']};line-height:{f['lh']}">{PARA}</p>
+        </div>
+      </div>
+    </div>'''
+
+
 def eyebrow_block(f):
     return f'''
   <section class="cand">
@@ -153,7 +170,7 @@ def eyebrow_block(f):
     <div class="frame frame-short">
       <span class="tag">{html.escape(f["name"])}</span>
       <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem">{PARA}</p>
+        <p class="ftext" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.26rem;line-height:1.62">{PARA}</p>
         <p class="finvite" style="font-family:{f['css']}">{INVITE}</p>
       </div>
     </div>
@@ -260,6 +277,19 @@ header.top b{{font-weight:600;color:var(--fg)}}
 .sect p{{margin:0 0 10px;color:var(--muted)}}
 .sect b{{color:var(--fg);font-weight:600}}
 
+.dropped{{margin-top:64px;border-top:1px solid var(--line);padding-top:22px}}
+.dropped > summary{{cursor:pointer;list-style:none;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;
+  padding-right:22px;display:inline-block}}
+.dropped > summary::-webkit-details-marker{{display:none}}
+.dropped > summary::after{{content:"";position:absolute;right:2px;top:4px;width:7px;height:7px;
+  border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+  transform:rotate(45deg)}}
+.dropped[open] > summary::after{{transform:rotate(225deg)}}
+.dropped .cand{{margin-top:34px;opacity:.72}}
+.dropped .cand:hover{{opacity:1}}
+.dropped > p{{color:var(--muted);margin:10px 0 0;max-width:66ch}}
+
 footer.fin{{padding-block:34px 72px;margin-top:56px;border-top:1px solid var(--line)}}
 footer.fin .inner{{max-width:66ch;color:var(--muted);font-size:14.5px}}
 footer.fin h2{{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);
@@ -272,15 +302,15 @@ footer.fin p{{margin:0 0 10px}}
   <div class="inner">
     <p class="kicker">Seeds of Renaissance &middot; type &middot; round two</p>
     <h1>Body faces, and the small voice underneath</h1>
-    <p>Six body faces in the real frame, then three for the eyebrow line. <b>Only one thing changes per block.</b> Through the body section the eyebrow is held at Apfel Grotezk; through the eyebrow section the body is held at Bespoke Slab.</p>
+    <p>Two body faces in the real frame, then three for the eyebrow line. <b>Only one thing changes per block.</b> Through the body section the eyebrow is held at Apfel Grotezk; through the eyebrow section the body is held at Bricolage Grotesque, the face you chose.</p>
     <p>The statement is set in <b>Polyamine</b>, standing in for Restora, which is commercial and cannot be embedded. It renders only on a machine with Polyamine installed — elsewhere that line falls back and should be ignored.</p>
 
     <div class="rec">
-      <h2>What I think</h2>
+      <h2>Where this landed</h2>
       <p class="said">&ldquo;If you take that, then you have to compensate with something more weighty and grounded in the body.&rdquo;</p>
-      <p>That is the whole test. The body is not a neutral container here, it is the ballast — so the usual advice of pairing a display serif with a quiet workhorse is exactly wrong, and a face that is merely well-behaved will fail the same way the classical headings did.</p>
-      <p>My pick is <b>Bespoke Slab</b>: the most genuinely weighty of them without tipping into fat, contemporary rather than revived, and a real counterweight rather than a smaller echo of the heading. <b>Bespoke Serif</b> is the same idea with a little more elegance and a little less heft.</p>
-      <p>Two are here as arguments rather than candidates. <b>Sentient</b> shows the failure mode of picking a body face from the display register. <b>Literata</b> shows what pure restraint looks like, and is the one I expect you to call boring.</p>
+      <p>Two survive, against Polyamine: <b>Bricolage Grotesque</b> first, <b>Bespoke Serif</b> second. Everything else is out and has been moved to the bottom of this page.</p>
+      <p>Worth noting what that result says, because it is not what I predicted. My pick was Bespoke Slab, on the grounds that it was the most weighty without being fat &mdash; and it lost, along with every other serif except one. A <b>sans</b> came first. So the contrast wanted between display and body is <b>wider</b> than a shift of weight inside the same family of shapes: it is a change of kind, not of degree. Slab weight was not the answer; a different skeleton was.</p>
+      <p>The eyebrow is still open, and is the section in the middle.</p>
     </div>
   </div>
 </header>
@@ -297,6 +327,12 @@ footer.fin p{{margin:0 0 10px}}
   <p>One practical constraint that decided more than taste did: the line ends in a down arrow, and <b>several otherwise good faces have no arrow glyph at all</b>. Everything shown here carries both the arrow and the middot.</p>
 </div></section>
 {"".join(eyebrow_block(f) for f in EYEBROWS)}
+
+<details class="dropped col">
+  <summary>Not pursued &mdash; four body faces</summary>
+  <p>Kept visible but out of the way, so a later round does not re-propose them. Shown shorter, and without the statement line, since the point is only the body text.</p>
+  {"".join(dropped_block(f) for f in DROPPED)}
+</details>
 
 <footer class="fin">
   <div class="inner">

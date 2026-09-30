@@ -98,6 +98,19 @@ header.top b{font-weight:600;color:var(--fg)}
 .sect p{margin:0 0 10px;color:var(--muted)}
 .sect b{color:var(--fg);font-weight:600}
 
+.dropped{margin-top:64px;border-top:1px solid var(--line);padding-top:22px}
+.dropped > summary{cursor:pointer;list-style:none;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;
+  padding-right:22px;display:inline-block}
+.dropped > summary::-webkit-details-marker{display:none}
+.dropped > summary::after{content:"";position:absolute;right:2px;top:4px;width:7px;height:7px;
+  border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+  transform:rotate(45deg)}
+.dropped[open] > summary::after{transform:rotate(225deg)}
+.dropped .cand{margin-top:34px;opacity:.72}
+.dropped .cand:hover{opacity:1}
+.dropped > p{color:var(--muted);margin:10px 0 0;max-width:66ch}
+
 footer.fin{padding-block:34px 72px;margin-top:56px;border-top:1px solid var(--line)}
 footer.fin .inner{max-width:66ch;color:var(--muted);font-size:14.5px}
 footer.fin h2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);
@@ -110,15 +123,15 @@ footer.fin p{margin:0 0 10px}
   <div class="inner">
     <p class="kicker">Seeds of Renaissance &middot; type &middot; round two</p>
     <h1>Body faces, and the small voice underneath</h1>
-    <p>Six body faces in the real frame, then three for the eyebrow line. <b>Only one thing changes per block.</b> Through the body section the eyebrow is held at Apfel Grotezk; through the eyebrow section the body is held at Bespoke Slab.</p>
+    <p>Two body faces in the real frame, then three for the eyebrow line. <b>Only one thing changes per block.</b> Through the body section the eyebrow is held at Apfel Grotezk; through the eyebrow section the body is held at Bricolage Grotesque, the face you chose.</p>
     <p>The statement is set in <b>Polyamine</b>, standing in for Restora, which is commercial and cannot be embedded. It renders only on a machine with Polyamine installed &#8212; elsewhere that line falls back and should be ignored.</p>
 
     <div class="rec">
-      <h2>What I think</h2>
+      <h2>Where this landed</h2>
       <p class="said">&ldquo;If you take that, then you have to compensate with something more weighty and grounded in the body.&rdquo;</p>
-      <p>That is the whole test. The body is not a neutral container here, it is the ballast &#8212; so the usual advice of pairing a display serif with a quiet workhorse is exactly wrong, and a face that is merely well-behaved will fail the same way the classical headings did.</p>
-      <p>My pick is <b>Bespoke Slab</b>: the most genuinely weighty of them without tipping into fat, contemporary rather than revived, and a real counterweight rather than a smaller echo of the heading. <b>Bespoke Serif</b> is the same idea with a little more elegance and a little less heft.</p>
-      <p>Two are here as arguments rather than candidates. <b>Sentient</b> shows the failure mode of picking a body face from the display register. <b>Literata</b> shows what pure restraint looks like, and is the one I expect you to call boring.</p>
+      <p>Two survive, against Polyamine: <b>Bricolage Grotesque</b> first, <b>Bespoke Serif</b> second. Everything else is out and has been moved to the bottom of this page.</p>
+      <p>Worth noting what that result says, because it is not what I predicted. My pick was Bespoke Slab, on the grounds that it was the most weighty without being fat &mdash; and it lost, along with every other serif except one. A <b>sans</b> came first. So the contrast wanted between display and body is <b>wider</b> than a shift of weight inside the same family of shapes: it is a change of kind, not of degree. Slab weight was not the answer; a different skeleton was.</p>
+      <p>The eyebrow is still open, and is the section in the middle.</p>
     </div>
   </div>
 </header>
@@ -132,52 +145,14 @@ footer.fin p{margin:0 0 10px}
     <div class="col label">
       <div class="lhead">
         <span class="rank">B1</span>
-        <div class="lname"><h2>Bespoke Slab</h2><p class="src">Indian Type Foundry, via Fontshare &#183; free for commercial use</p></div>
-        <span class="flag pick">My pick</span>
-      </div>
-      <p class="gist">The most genuinely weighty of them, without being fat.</p>
-      <p class="note">Even, low-contrast strokes and warm slab details. It holds its colour on black where a finer serif goes grey, and it gives the page the ballast the brief asks for while staying contemporary rather than Victorian. Against a sleek display face this is a real contrast rather than a quieter version of the same thing.</p>
-    </div>
-    <div class="frame">
-      <span class="tag">B1 &middot; Bespoke Slab</span>
-      <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
-        <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
-        <p class="finvite">Read the full manifesto &middot; or continue &darr;</p>
-      </div>
-    </div>
-  </section>
-  <section class="cand">
-    <div class="col label">
-      <div class="lhead">
-        <span class="rank">B2</span>
-        <div class="lname"><h2>Bespoke Serif</h2><p class="src">Indian Type Foundry, via Fontshare &#183; free for commercial use</p></div>
-        <span class="flag">Close second</span>
-      </div>
-      <p class="gist">Sturdy and wide, with flared, slightly odd details.</p>
-      <p class="note">The same family as the slab, without the slabs. A little more elegant and a little less grounded, so it depends which way you want to lean. Low contrast means no hairlines to flicker out on the dark frames.</p>
-    </div>
-    <div class="frame">
-      <span class="tag">B2 &middot; Bespoke Serif</span>
-      <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Serif',Georgia,serif;font-size:1.34rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
-        <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
-        <p class="finvite">Read the full manifesto &middot; or continue &darr;</p>
-      </div>
-    </div>
-  </section>
-  <section class="cand">
-    <div class="col label">
-      <div class="lhead">
-        <span class="rank">B3</span>
         <div class="lname"><h2>Bricolage Grotesque</h2><p class="src">Mathieu Triay &#183; free, SIL OFL</p></div>
-        <span class="flag">The sans option</span>
+        <span class="flag pick">Chosen &#183; first</span>
       </div>
-      <p class="gist">The strongest contrast, and unmistakably forward-looking.</p>
-      <p class="note">A grotesque with ink traps and deliberately awkward details &#8212; the ink traps are the giveaway that it is drawn now rather than revived. Chunky enough to act as a foil to a delicate display serif. The biggest departure on the page, so it is either obviously right or obviously wrong.</p>
+      <p class="gist">The strongest contrast against the display face, and unmistakably drawn now.</p>
+      <p class="note">A grotesque with ink traps and deliberately awkward details &#8212; the ink traps are the giveaway that it is contemporary rather than revived, which matters given how much has been rejected for looking backwards. Chunky enough to act as a real foil to a sleek display serif rather than a quieter echo of it.</p>
     </div>
     <div class="frame">
-      <span class="tag">B3 &middot; Bricolage Grotesque</span>
+      <span class="tag">B1 &middot; Bricolage Grotesque</span>
       <div class="finner">
         <p class="ftext" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.26rem;line-height:1.62">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
         <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
@@ -188,55 +163,17 @@ footer.fin p{margin:0 0 10px}
   <section class="cand">
     <div class="col label">
       <div class="lhead">
-        <span class="rank">B4</span>
-        <div class="lname"><h2>Hoover</h2><p class="src">Ga&#235;tan Baehr, via Fontshare &#183; free for commercial use</p></div>
-        <span class="flag">Most personality</span>
+        <span class="rank">B2</span>
+        <div class="lname"><h2>Bespoke Serif</h2><p class="src">Indian Type Foundry, via Fontshare &#183; free for commercial use</p></div>
+        <span class="flag">Chosen &#183; second</span>
       </div>
-      <p class="gist">Compact and mannered. Real presence, possibly too much of it.</p>
-      <p class="note">Narrow, slab-ish and full of character &#8212; look at the W and the g. It has more personality than anything else here, which is what you have been asking for. The risk is the opposite of boring: it may tire over a long manifesto.</p>
+      <p class="gist">Sturdy and wide, with flared, slightly odd details.</p>
+      <p class="note">The serif answer to the same brief. Low contrast, so no hairlines to flicker out on the dark frames, and the flared terminals keep it from reading as a neutral workhorse. Warmer and less of a departure than Bricolage.</p>
     </div>
     <div class="frame">
-      <span class="tag">B4 &middot; Hoover</span>
+      <span class="tag">B2 &middot; Bespoke Serif</span>
       <div class="finner">
-        <p class="ftext" style="font-family:'Hoover',Georgia,serif;font-size:1.34rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
-        <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
-        <p class="finvite">Read the full manifesto &middot; or continue &darr;</p>
-      </div>
-    </div>
-  </section>
-  <section class="cand">
-    <div class="col label">
-      <div class="lhead">
-        <span class="rank">B5</span>
-        <div class="lname"><h2>Sentient</h2><p class="src">Noopur Choksi, Indian Type Foundry &#183; free for commercial use</p></div>
-        <span class="flag">Competes with the heading</span>
-      </div>
-      <p class="gist">Elegant and warm &#8212; but it is in the display register.</p>
-      <p class="note">Well drawn and it reads beautifully, but the contrast is high and the mood is close to Polyamine and Restora. That makes it a smaller cousin of the heading rather than a counterweight to it, which is exactly what the brief says not to do. Included so you can see the failure mode.</p>
-    </div>
-    <div class="frame">
-      <span class="tag">B5 &middot; Sentient</span>
-      <div class="finner">
-        <p class="ftext" style="font-family:'Sentient',Georgia,serif;font-size:1.3rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
-        <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
-        <p class="finvite">Read the full manifesto &middot; or continue &darr;</p>
-      </div>
-    </div>
-  </section>
-  <section class="cand">
-    <div class="col label">
-      <div class="lhead">
-        <span class="rank">B6</span>
-        <div class="lname"><h2>Literata</h2><p class="src">TypeTogether &#183; free, SIL OFL</p></div>
-        <span class="flag">The safe one</span>
-      </div>
-      <p class="gist">Solid, screen-first, and probably boring.</p>
-      <p class="note">Drawn for Google Books, so extended screen reading is the whole brief. Sturdy stems, no hairlines, dependable on both grounds. Here as the baseline: if everything above feels like too much, this is what restraint looks like, and it is very likely the one you call boring.</p>
-    </div>
-    <div class="frame">
-      <span class="tag">B6 &middot; Literata</span>
-      <div class="finner">
-        <p class="ftext" style="font-family:'Literata',Georgia,serif;font-size:1.3rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        <p class="ftext" style="font-family:'Bespoke Serif',Georgia,serif;font-size:1.34rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
         <h3 class="fstatement">We are a vision and movement for civilizational renewal.</h3>
         <p class="finvite">Read the full manifesto &middot; or continue &darr;</p>
       </div>
@@ -260,7 +197,7 @@ footer.fin p{margin:0 0 10px}
     <div class="frame frame-short">
       <span class="tag">Apfel Grotezk</span>
       <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        <p class="ftext" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.26rem;line-height:1.62">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
         <p class="finvite" style="font-family:'Apfel Grotezk',system-ui,sans-serif">Read the full manifesto &middot; or continue &darr;</p>
       </div>
     </div>
@@ -276,7 +213,7 @@ footer.fin p{margin:0 0 10px}
     <div class="frame frame-short">
       <span class="tag">Azeret Mono</span>
       <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        <p class="ftext" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.26rem;line-height:1.62">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
         <p class="finvite" style="font-family:'Azeret Mono',ui-monospace,monospace">Read the full manifesto &middot; or continue &darr;</p>
       </div>
     </div>
@@ -292,11 +229,81 @@ footer.fin p{margin:0 0 10px}
     <div class="frame frame-short">
       <span class="tag">Ysabeau Office</span>
       <div class="finner">
-        <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        <p class="ftext" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.26rem;line-height:1.62">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
         <p class="finvite" style="font-family:'Ysabeau Office',system-ui,sans-serif">Read the full manifesto &middot; or continue &darr;</p>
       </div>
     </div>
   </section>
+
+<details class="dropped col">
+  <summary>Not pursued &mdash; four body faces</summary>
+  <p>Kept visible but out of the way, so a later round does not re-propose them. Shown shorter, and without the statement line, since the point is only the body text.</p>
+  
+    <div class="cand">
+      <div class="col label">
+        <div class="lhead">
+          <div class="lname"><h2>Bespoke Slab</h2><p class="src">Indian Type Foundry, via Fontshare</p></div>
+          <span class="flag">Out</span>
+        </div>
+        <p class="gist">Out. The slabs were too much.</p>
+        <p class="note">This was my pick, on the grounds that it was the most genuinely weighty without being fat. Turned down against Polyamine, which suggests the weight wanted is not slab weight.</p>
+      </div>
+      <div class="frame frame-short">
+        <span class="tag">Bespoke Slab</span>
+        <div class="finner">
+          <p class="ftext" style="font-family:'Bespoke Slab',Georgia,serif;font-size:1.32rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cand">
+      <div class="col label">
+        <div class="lhead">
+          <div class="lname"><h2>Hoover</h2><p class="src">Ga&#235;tan Baehr, via Fontshare</p></div>
+          <span class="flag">Out</span>
+        </div>
+        <p class="gist">Out. Most personality of the six, and still no.</p>
+        <p class="note">Narrow, slab-ish and mannered.</p>
+      </div>
+      <div class="frame frame-short">
+        <span class="tag">Hoover</span>
+        <div class="finner">
+          <p class="ftext" style="font-family:'Hoover',Georgia,serif;font-size:1.34rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cand">
+      <div class="col label">
+        <div class="lhead">
+          <div class="lname"><h2>Sentient</h2><p class="src">Noopur Choksi, Indian Type Foundry</p></div>
+          <span class="flag">Out</span>
+        </div>
+        <p class="gist">Out, as expected &#8212; it sat in the display register.</p>
+        <p class="note">Included as a demonstration rather than a candidate: a body face picked from the same register as the heading becomes a smaller cousin of it instead of a counterweight.</p>
+      </div>
+      <div class="frame frame-short">
+        <span class="tag">Sentient</span>
+        <div class="finner">
+          <p class="ftext" style="font-family:'Sentient',Georgia,serif;font-size:1.3rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cand">
+      <div class="col label">
+        <div class="lhead">
+          <div class="lname"><h2>Literata</h2><p class="src">TypeTogether</p></div>
+          <span class="flag">Out</span>
+        </div>
+        <p class="gist">Out. The baseline did its job.</p>
+        <p class="note">Here to show what pure restraint looks like. It was never going to survive a brief that keeps rejecting things for being boring.</p>
+      </div>
+      <div class="frame frame-short">
+        <span class="tag">Literata</span>
+        <div class="finner">
+          <p class="ftext" style="font-family:'Literata',Georgia,serif;font-size:1.3rem;line-height:1.6">Human history has always been a story of transformation &#8211; of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
+        </div>
+      </div>
+    </div>
+</details>
 
 <footer class="fin">
   <div class="inner">

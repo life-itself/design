@@ -11,7 +11,7 @@ Tracking: beads `design-2pk`.
 - **Round one: heading faces** — nineteen candidates in the real frame, each carrying the verdict it got. Kept as a record so a later round does not re-propose what was turned down.
   - To read or share: **[artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR)**.
   - In the repo: [type/round-01-headings.html](type/round-01-headings.html), which opens straight from disk. `type/build-round-01.py` regenerates both copies; the publishable one is derived and gitignored.
-- **Round two: body and eyebrow faces** — six body candidates and three eyebrow candidates in the real frame, one variable per block.
+- **Round two: body and eyebrow faces** — the two chosen body faces, then three eyebrow candidates, with the four rejected bodies collapsed at the bottom. One variable per block.
   - To read or share: **[artifact](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L)**.
   - In the repo: [type/round-02-body.html](type/round-02-body.html). `type/build-round-02.py` regenerates it.
 - Superseded and unmaintained: an interactive comparator with 33 faces and live controls ([link](https://claude.ai/artifact/2TkRgn44LBQdLedo1C5cr6)). Too much choice, and a worse tool than the ones that already exist.
@@ -75,18 +75,24 @@ The other thing that came out of round one, and it sets the body brief:
 
 So the system is a deliberate **contrast**, not a match. A sleek, elegant, faintly luxurious display face over a body face that supplies the weight and groundedness the heading does not. That rules out the obvious move of pairing the display serif with a quiet neutral workhorse: neutral is not the same as grounded, and a neutral body would leave the page with no ballast at all.
 
-## The body brief
+## The body brief, and how it resolved
 
-Everything reviewed in round one was judged as a **billboard** — one line at around 45px on black. Nothing has yet been seen at working heading size among body copy, and nothing at all has been seen as body text.
+Round two settled it: **Bricolage Grotesque** first, **Bespoke Serif** second, against Polyamine. Bespoke Slab, Hoover, Sentient and Literata are out.
 
-So the body face is the open question, and it now has a real brief rather than a vague one:
+The brief that produced them:
 
-- **Weighty and grounded.** It supplies the ballast the sleek display faces do not. Neutral is not the same as grounded; a quiet workhorse would leave the page with no weight anywhere.
-- **Alive, not kitsch.** The same wants and rejects above apply.
-- **Holds on both grounds** — black for Dawn and the Book, white for Arrival and Flight.
-- **One weight.** No bold, no italic.
-- **Long-form.** 52 characters a line and up, at 1.2 to 1.75rem.
-- Serif, sans or something in between are all open. Buying is fine.
+- **Weighty and grounded.** The body supplies the ballast the sleek display faces do not. Neutral is not grounded; a quiet workhorse would leave the page with no weight anywhere.
+- Alive rather than kitsch, holds on both grounds, one weight, long-form at 52 characters and up.
+
+**What the result taught us, which the brief did not predict.** A sans came first, and every serif but one was rejected — including the slab that was recommended as the most genuinely weighty option. So the contrast wanted between display and body is a **change of kind, not of degree**: not more weight inside the same family of shapes, but a different skeleton altogether. Ink traps and contemporary grotesque construction pass the "not backward-looking" test in a way that even a well-drawn low-contrast serif does not.
+
+That also reframes the paid options worth trialling. Arizona Mix (Dinamo) and Right Serif (Pangram Pangram) are both nearer to Bricolage than to the serifs, so they are the sensible commercial comparisons now that the direction is known.
+
+## The eyebrow
+
+Still open. Three candidates in round two: Apfel Grotezk, Azeret Mono, Ysabeau Office, now shown against Bricolage Grotesque.
+
+One constraint decided more than taste did: the invitation line ends in a down arrow, and several otherwise good faces carry no arrow glyph at all. Check the character map before shortlisting anything for this role.
 
 ## Where to look
 
