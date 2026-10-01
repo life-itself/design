@@ -29,75 +29,74 @@
   .x-leap__stage {
     position: sticky; top: 0;
     height: 100vh; height: 100svh;
-    display: flex; flex-direction: column; align-items: center;
-    padding-bottom: clamp(14px, 3svh, 28px);
     overflow: hidden;
   }
-  /* the picture runs edge to edge and takes whatever height the words leave */
-  .x-leap__frame {
-    position: relative;
-    width: 100%;
-    flex: 1 1 0;
-    min-height: 0;
-  }
+  /* the picture fills the screen; the words sit on it */
+  .x-leap__frame { position: absolute; inset: 0; }
   .x-leap__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
-  /* words live below the image, in one slot, crossfading */
-  .x-leap__words {
-    position: relative;
-    width: min(92vw, 40rem);
-    height: clamp(5.25rem, 13svh, 7.5rem);
-    margin-top: clamp(10px, 2svh, 22px);
-    flex: none;
+  /* soft dark grounds so the words read over clouds and road; they fade in with the words */
+  .x-leap__scrim { position: absolute; left: 0; right: 0; pointer-events: none; opacity: 0; }
+  .x-leap__scrim--top { top: 0; height: 32%; background: linear-gradient(rgba(22,22,22,.7), rgba(22,22,22,0)); }
+  .x-leap__scrim--low {
+    bottom: 0; height: 58%;
+    background: linear-gradient(rgba(22,22,22,0), rgba(22,22,22,.55) 45%, rgba(22,22,22,.88));
   }
+
+  .x-leap__top, .x-leap__low {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    width: min(90vw, 44rem);
+    text-align: center;
+  }
+  .x-leap__top { top: clamp(28px, 9svh, 96px); }
+  /* the lower third: line 2, then the join, in the same place */
+  .x-leap__low {
+    bottom: clamp(36px, 9svh, 96px);
+    display: grid;
+  }
+  .x-leap__low > * { grid-area: 1 / 1; align-self: end; }
   .x-leap__line, .x-leap__invite {
-    position: absolute; inset: 0 0 auto;
-    margin: 0; text-align: center;
+    margin: 0;
     opacity: 0;
     will-change: opacity, transform;
+    text-shadow: 0 1px 16px rgba(8,7,7,.55);
   }
   .x-leap__line {
-    font-size: clamp(1.05rem, 2.1vw, 1.45rem);
-    line-height: 1.5;
+    font-size: clamp(1.15rem, 2.3vw, 1.7rem);
+    line-height: 1.45;
     text-wrap: balance;
-    padding-top: .35em;
   }
   .x-leap__join {
-    margin: 0;
+    display: inline-block;
     font-family: var(--display); font-weight: 400;
-    font-size: clamp(1.5rem, 7vw, 3.1rem);
-    text-wrap: balance;
+    font-size: clamp(2rem, 7.5vw, 4rem);
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: .2em;
     padding-left: .2em; /* balance the trailing tracking so the capitals sit centred */
+    text-wrap: balance;
   }
-  .x-leap__ways {
-    margin: .7em 0 0;
-    font-size: clamp(1rem, 1.7vw, 1.15rem);
-    line-height: 1.5;
-    display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
-    gap: .2em .8em;
-  }
-  .x-leap__ways span[aria-hidden] { opacity: .55; }
+  .x-leap__calls { margin: .55em 0 0; font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.5; }
+  .x-leap__more { margin: .9em 0 0; font-size: clamp(.85rem, 1.2vw, .95rem); line-height: 1.5; letter-spacing: .01em; }
   .x-leap a {
     color: inherit;
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-decoration-color: color-mix(in oklch, var(--daylight) 55%, transparent);
+    text-decoration-color: color-mix(in oklch, var(--daylight) 45%, transparent);
     text-underline-offset: .28em;
     transition: text-decoration-color .25s ease, text-underline-offset .25s ease;
     border-radius: 2px;
   }
-  .x-leap a:hover { text-decoration-color: var(--daylight); text-underline-offset: .36em; }
-  .x-leap a:focus-visible { outline: 1.5px solid var(--daylight); outline-offset: 5px; }
+  .x-leap a.x-leap__join { text-decoration-thickness: 1px; text-underline-offset: .3em; }
+  .x-leap a:hover { text-decoration-color: var(--daylight); text-underline-offset: .38em; }
+  .x-leap a:focus-visible { outline: 1.5px solid var(--daylight); outline-offset: 6px; }
   .x-leap__invite[data-hidden] { visibility: hidden; }
 
   /* a quiet cue before the first scroll */
   .x-leap__cue {
-    position: absolute; left: 50%; top: 0; width: 1px; height: 2.6rem;
-    background: linear-gradient(var(--daylight), transparent);
-    opacity: .5; transform-origin: top;
+    position: absolute; left: 50%; bottom: clamp(20px, 5svh, 48px); width: 1px; height: 2.6rem;
+    background: linear-gradient(transparent, var(--daylight));
+    opacity: .5; transform-origin: bottom;
     animation: x-leap-cue 2.8s ease-in-out infinite;
   }
   @keyframes x-leap-cue { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
@@ -113,10 +112,11 @@
 
   @media (prefers-reduced-motion: reduce) {
     .x-leap__track { height: auto; }
-    .x-leap__stage { position: relative; height: auto; min-height: 100svh; }
-    .x-leap__frame { flex: none; height: 72svh; }
-    .x-leap__words { height: auto; display: grid; gap: 1.1rem; }
-    .x-leap__line, .x-leap__invite { position: static; opacity: 1 !important; transform: none !important; }
+    .x-leap__stage { position: relative; }
+    .x-leap__stage { height: 100svh; }
+    .x-leap__low { gap: 1.4rem; }
+    .x-leap__low > * { grid-area: auto; }
+    .x-leap__line, .x-leap__invite, .x-leap__scrim { opacity: 1 !important; transform: none !important; }
     .x-leap__invite[data-hidden] { visibility: visible; }
     .x-leap__cue { display: none; }
     .x-leap a { transition: none; }
@@ -139,17 +139,19 @@
         <canvas class="x-leap__canvas" role="img"
           aria-label="A black-and-white collage: people in dark coats walk up a road that ends in grey clouds; the paper tears open onto a yellow field under blue sky, and they walk into it."></canvas>
       </div>
-      <div class="x-leap__words" data-od-id="leap-words">
-        <span class="x-leap__cue" aria-hidden="true"></span>
-        <p class="x-leap__line" data-od-id="leap-line-1">Walking into the unknown can be frightening.</p>
-        <p class="x-leap__line" data-od-id="leap-line-2">But as we walk, we hold the possibility of renewal.</p>
+      <div class="x-leap__scrim x-leap__scrim--top" aria-hidden="true"></div>
+      <div class="x-leap__scrim x-leap__scrim--low" aria-hidden="true"></div>
+      <span class="x-leap__cue" aria-hidden="true"></span>
+      <div class="x-leap__top">
+        <p class="x-leap__line" data-od-id="leap-line-1">The future may be dark and unknown.</p>
+      </div>
+      <div class="x-leap__low" data-od-id="leap-lower-third">
+        <p class="x-leap__line" data-od-id="leap-line-2">But the unknown is also full of possibility.</p>
         <div class="x-leap__invite" data-od-id="leap-invite" data-hidden>
-          <h2 class="x-leap__join" data-od-id="leap-join">Come join us</h2>
-          <p class="x-leap__ways">
-            <a href="#" data-od-id="leap-calls">Meet others on our Thursday calls</a>
-            <span aria-hidden="true">·</span>
-            <a href="#leap-next" data-od-id="leap-keep-learning">or keep learning ↓</a>
-          </p>
+          <!-- → a page explaining the Thursday call (what, when, sign up); # until it exists -->
+          <a class="x-leap__join" href="#" data-od-id="leap-join">Come join us</a>
+          <p class="x-leap__calls" data-od-id="leap-calls">Meet others on our Thursday calls</p>
+          <p class="x-leap__more"><a href="#leap-next" data-od-id="leap-keep-learning">or keep learning ↓</a></p>
         </div>
       </div>
     </div>
@@ -169,6 +171,7 @@
   const [line1, line2] = root.querySelectorAll('.x-leap__line');
   const invite = root.querySelector('.x-leap__invite');
   const cue = root.querySelector('.x-leap__cue');
+  const scrimTop = root.querySelector('.x-leap__scrim--top'), scrimLow = root.querySelector('.x-leap__scrim--low');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- tuning ---------- */
@@ -457,20 +460,19 @@
     if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
     ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = .22;
     ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, Hc); ctx.restore();
-    // the picture's lower edge dissolves into the stage, so the words sit in the same dark
-    const fade = ctx.createLinearGradient(0, Hc * .84, 0, Hc);
-    fade.addColorStop(0, 'rgba(22,22,22,0)'); fade.addColorStop(1, 'rgba(22,22,22,1)');
-    ctx.fillStyle = fade; ctx.fillRect(0, Hc * .84, W, Hc * .16);
   }
 
   /* ---------- words ---------- */
   function words(p) {
     const show = (el, o) => { el.style.opacity = o.toFixed(3); el.style.transform = `translateY(${((1 - o) * 8).toFixed(2)}px)`; };
-    show(line1, seg(p, .015, .075) * (1 - seg(p, .25, .3)));
-    show(line2, seg(p, .31, .37) * (1 - seg(p, .52, .57)));
-    const j = seg(p, .82, .9);
-    show(invite, j);
+    // 1 over the sky · a beat of just the walkers · 2 low, just before the rip · the join once it settles
+    const o1 = seg(p, .015, .07) * (1 - seg(p, .21, .25));
+    const o2 = seg(p, .29, .325) * (1 - seg(p, .74, .78));
+    const j = seg(p, .8, .87);
+    show(line1, o1); show(line2, o2); show(invite, j);
     invite.toggleAttribute('data-hidden', j < .05);
+    scrimTop.style.opacity = o1.toFixed(3);
+    scrimLow.style.opacity = Math.max(o2, j).toFixed(3);
     cue.style.opacity = (.5 * (1 - seg(p, 0, .015))).toFixed(3);
   }
 
