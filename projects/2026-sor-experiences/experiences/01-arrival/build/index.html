@@ -7,20 +7,21 @@
 <style>
   @font-face {
     font-family: "Polyamine";
-    src: url("assets/fonts/Polyamine.ttf") format("truetype");
+    src: local("Polyamine"), url("assets/fonts/Polyamine.ttf") format("truetype");
     font-display: swap;
   }
-  :root {
+  body { margin: 0; }
+  .x-arrival {
     --bg: oklch(1 0 0);
     --fg: oklch(0.14 0 0);
     --accent: oklch(0.68 0.19 48);
     --font-display: "Polyamine", "Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
+    background: var(--bg); color: var(--fg);
   }
-  * { box-sizing: border-box; margin: 0; }
-  html, body { height: 100%; background: var(--bg); color: var(--fg); overflow: hidden; }
-  .stage { position: relative; min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 0 4vw; }
-  canvas#field { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; display: block; pointer-events: none; }
-  h1 {
+  .x-arrival, .x-arrival * { box-sizing: border-box; margin: 0; }
+  .x-arrival { position: relative; min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 0 4vw; }
+  .x-arrival canvas { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; display: block; pointer-events: none; }
+  .x-arrival h1 {
     position: relative; z-index: 1;
     width: 100%;
     font-family: var(--font-display);
@@ -30,24 +31,24 @@
     font-size: 8vw;
     line-height: 1.1;
     letter-spacing: 0.02em;
-    animation: rise 2.4s cubic-bezier(.2,.7,.2,1) both;
+    animation: x-arrival-rise 2.4s cubic-bezier(.2,.7,.2,1) both;
   }
-  h1 .ln { display: block; white-space: nowrap; }
-  h1 em { font-style: normal; color: var(--accent); }
-  @keyframes rise { from { opacity: 0; transform: translateY(16px); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+  .x-arrival h1 .ln { display: block; white-space: nowrap; }
+  .x-arrival h1 em { font-style: normal; color: var(--accent); }
+  @keyframes x-arrival-rise { from { opacity: 0; transform: translateY(16px); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
   /* small screens: let the statement wrap naturally instead of shrinking the desktop lines */
-  h1 .mb { display: none; }
+  .x-arrival h1 .mb { display: none; }
   @media (max-width: 720px) {
-    h1 .ln { display: inline; }
-    h1 .mb { display: inline; }
+    .x-arrival h1 .ln { display: inline; }
+    .x-arrival h1 .mb { display: inline; }
   }
-  @media (prefers-reduced-motion: reduce) { h1 { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .x-arrival h1 { animation: none; } }
 </style>
 </head>
 <body>
-<main class="stage" data-od-id="hero">
-  <canvas id="field" data-od-id="seed-field" aria-hidden="true"></canvas>
-  <h1 data-od-id="hero-statement" aria-label="For all the living beings whose heart burns to see a new world emerge">
+<main class="stage x-arrival">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <h1 aria-label="For all the living beings whose heart burns to see a new world emerge">
     <span class="ln">For all the<br class="mb"> living beings</span>
     <span class="ln">whose<br class="mb"> <em>heart burns</em><br class="mb"> to see</span>
     <span class="ln">a<br class="mb"> new world<br class="mb"> emerge</span>
@@ -57,7 +58,8 @@
 <script>
 (() => {
   // Fit the longest line to ~94% of the viewport width (capped by height).
-  const h1 = document.querySelector('h1');
+  const root = document.querySelector('.x-arrival');
+  const h1 = root.querySelector('h1');
   const MOBILE = 720;
   function fit() {
     if (innerWidth <= MOBILE) {                    // seven short lines: fit the widest to the screen, then check height
@@ -80,7 +82,7 @@
   if (document.fonts) document.fonts.ready.then(fit);
 
   // Six seeds on a fixed choreography: clumped "full stop" -> burst up-left -> swirl -> each settles on a letter.
-  const cv = document.getElementById('field');
+  const cv = root.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const ink = 'oklch(0.14 0 0)', paper = 'oklch(1 0 0)';
