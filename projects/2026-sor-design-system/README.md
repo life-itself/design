@@ -13,18 +13,9 @@ Substance without visuals stays in [../2026-sor-website/brand.md](../2026-sor-we
 
 ## Type — decided
 
-| Role | Face | Licence |
-|---|---|---|
-| **Billboard** | Polyamine | commercial, not yet bought |
-| **Heading** | Restora (Nasir Udin) | commercial, not yet bought |
-| **Body** | Bricolage Grotesque | free, SIL OFL |
-| **Eyebrow / meta** | Apfel Grotezk | free, SIL OFL |
+Polyamine (billboard), Restora (heading), Bricolage Grotesque (body), Apfel Grotezk (eyebrow / meta).
 
-Polyamine is for heroes only and takes five to ten words at a size; it has no weight range, so it will not step down and is wrong for pull quotes and small headings. Restora takes headings in running text, pull quotes and subheads. There is no fifth face for subheads.
-
-**Canonical, do not duplicate:** [../2026-sor-experiences/type.md](../2026-sor-experiences/type.md) for the decisions and how to apply them, [../2026-sor-experiences/type/research-notes.md](../2026-sor-experiences/type/research-notes.md) for the working and everything rejected. The selection rounds: [one](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) · [two](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L), both archived as standalone HTML in that project.
-
-The table above is a pointer. When this system matures, type.md moves here and the experiences project links back instead.
+**Canonical: [type.md](type.md)** for the decisions and how to apply them; [type/research-notes.md](type/research-notes.md) for the working and everything rejected; the two selection rounds archived in [type/](type/). Other files link here rather than restating the rules.
 
 ## Colour — not started
 

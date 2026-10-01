@@ -8,12 +8,12 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
-Chosen, with how to apply them: [type.md](../../type.md). The rounds they came out of: [one](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) · [two](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L), both also archived in [type/](../../type/).
+Polyamine (billboard), Restora (heading), Bricolage Grotesque (body), Apfel Grotezk (eyebrow / meta). Rules for each: [type.md](../../../2026-sor-design-system/type.md) in the shared design system. Don't restate them here.
 
-- **Billboard** — [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font). Heroes and the experience pages only, used sparingly. Five to ten words maximum; not for pull quotes, not for small headings. Unlicensed so far, and loaded via `local()`, so it falls back for anyone without it installed.
-- **Heading** — Restora (Nasir Udin). Headings and subheadings in running text, pull quotes, larger quotations. Subheads are Restora at another size or weight, not a fifth face. Unlicensed so far.
-- **Body** — Bricolage Grotesque. One weight. **No bold, no italic** — emphasis comes from rhythm and space. Free, SIL OFL.
-- **Eyebrow / meta** — Apfel Grotezk. Labels, captions, credits, invitation lines: 11–14px, uppercase, letterspaced. Free, SIL OFL.
+For now, name the faces in CSS and rely on them being installed locally; no web font loading. Bundling is decided later.
+
+Experience-only notes:
+
 - Body has to hold on both grounds: the black frames (Dawn, Book) and the white ones (Arrival, Flight).
 - Exception: the Book's rising letters use an illuminated, gold display face (sketch: Cinzel Decorative).
 
