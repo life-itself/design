@@ -37,14 +37,14 @@ body:not([data-dir="b"]) .b-only{display:none}
 /* Mockup: ink and paper. Layout concept: a printed folio, with figures numbered and captioned like plates in a field guide; dark sections are inked and meet the paper at a torn edge.
    The mockup is a fixed brand world and does not follow the viewer's theme. */
 .mock{--display:"Polyamine","Fraunces",Georgia,serif;--body:"Bricolage Grotesque",system-ui,sans-serif;--eyebrow:"Appful Grotesque","Hanken Grotesk",system-ui,sans-serif;
-  --paper:#eeeae1;--paper2:#e3ddd0;--ink:#1b1916;--muted:#5d584f;--rule:#cbc4b6;
+  --paper:#fbfaf6;--paper2:#f1ede4;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;
   --night:#171613;--chalk:#ece7dc;--nmuted:#a49e93;--nrule:#38342e;
   --acc:var(--ink);--acc-text:var(--muted);--acc-on:var(--paper);--hl:var(--ink);
   position:relative;isolation:isolate;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;color-scheme:light}
 body[data-dir="b"][data-ink="red"] .mock{--acc:#9b2a1e;--acc-text:#9b2a1e;--acc-on:#f5f0e7;--hl:#9b2a1e}
 body[data-dir="b"][data-ink="blue"] .mock{--acc:#1e3d70;--acc-text:#1e3d70;--acc-on:#f5f0e7;--hl:#1e3d70}
 body[data-dir="b"][data-ink="gold"] .mock{--acc:#b98b2f;--acc-text:#7a5a15;--acc-on:#1b1916;--hl:#7a5a15}
-.mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.33;mix-blend-mode:multiply;background-image:url("NOISE")}
+.mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.16;mix-blend-mode:multiply;background-image:url("NOISE")}
 .mock img{display:block;max-width:100%}
 .mock a{color:inherit}
 .mock a:focus-visible,.mock input:focus-visible,.mock li:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
@@ -66,6 +66,7 @@ body[data-dir="b"] .mock .night figcaption .no{color:var(--chalk)}
 .mock .hdr nav a{text-decoration:none}
 
 .mock .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5cqi,72px);align-items:center;padding-block:clamp(36px,6cqi,80px)}
+.mock .hero figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .mock .hero .txt{display:grid;gap:18px;justify-items:start}
 .mock .hero h1{font-size:clamp(40px,6.4cqi,88px);line-height:.98;margin:0;text-wrap:balance}
 .mock .hero p{margin:0;font-size:clamp(17px,1.9cqi,21px);max-width:34ch}
@@ -85,7 +86,7 @@ body[data-dir="b"] .mock .night figcaption .no{color:var(--chalk)}
 .mock .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.6cqi,32px)}
 .mock .way{display:grid;gap:10px;align-content:start;text-decoration:none}
 .mock .way .ph{overflow:hidden;background:var(--paper2)}
-.mock .way img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .8s ease}
+.mock .way img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s ease}
 .mock .way.light img{object-fit:contain;mix-blend-mode:multiply;padding:10%}
 .mock .way:hover img{transform:scale(1.03)}
 .mock .way .no{font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text);font-weight:600}
@@ -134,9 +135,9 @@ body:not([data-dir="b"]) .mock .cal .r a{color:var(--ink)}
 .mock .foot img{width:34px;height:34px;mix-blend-mode:multiply}
 
 /* Manifesto */
-.mock .mhero{background:var(--night);color:var(--chalk);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5cqi,64px);align-items:end;padding-block:clamp(36px,6cqi,72px)}
+.mock .mhero{border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5cqi,64px);align-items:end;padding-block:clamp(36px,6cqi,72px)}
 .mock .mhero h1{font-size:clamp(38px,5.6cqi,76px);line-height:1;margin:10px 0 0;text-wrap:balance}
-.mock .mhero .lab{color:var(--nmuted)}
+.mock .mhero .lab{color:var(--muted)}
 .mock .mhero img{width:100%;aspect-ratio:1/1.05;object-fit:cover}
 .mock .text{max-width:680px;margin-inline:auto;padding-block:clamp(36px,6cqi,80px);display:grid;gap:26px}
 .mock .text p{margin:0;font-size:19px;line-height:1.65;text-wrap:pretty}
@@ -169,8 +170,8 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
 <li><b>A · Ink and paper.</b> Warm black, off-white paper, grain. No interface colour at all: colour comes only from the images. Calls to action are solid black.</li>
 <li><b>B · Plus one ink.</b> The same base, plus one process colour used as a single extra ink: calls to action, figure numbers, one lit phrase, the magazine block, the manifesto's drop cap and numerals. Try deep red (etching ink), Prussian blue (cyanotype) and gold (gilt). Only one at a time, never together.</li>
 </ul>
-<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. The dark "Selected work" section is inked onto the page with a torn edge rather than a gradient. The sunrise painting is gone; the hero is the collage of people walking through cloud toward the yellow field.</p>
-<p><b>Images are placeholders from the mood board, for inspiration only.</b> Most can't be used on the live site without rights; the 1901 Loïe Fuller portrait and the root drawings are likely public domain. The logo red is unchanged for now.</p>
+<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. Version 2: much lighter paper and softer grain, the original photographs back (the shared meal, the lantern, the scrolls, the woman in the field), and only one dark section, "Selected work", inked onto the page with a torn edge.</p>
+<p><b>Images are placeholders from the mood board, for inspiration only.</b> Most can't be used on the live site without rights; the root drawings are likely public domain. The logo red is unchanged for now.</p>
 </div></header>
 <div class="f-tools">
   <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="true">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button></div>
@@ -190,7 +191,7 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
       <p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p>
       <a class="btn solid" href="#">Save a place</a>
     </div>
-    <figure><img src="img/walking.jpg" alt="Collage: people walking through grey clouds toward a torn opening onto a yellow field"><figcaption><span class="no">Fig. 1</span>Walking toward the field. Collage, artist to be credited.</figcaption></figure>
+    <figure><img src="img/meal.jpg" alt="Friends laughing around a long table of food in a garden"><figcaption><span class="no">Fig. 1</span>A shared meal in the garden, after a gathering.</figcaption></figure>
   </section>
 
   <section class="mod pad">
@@ -207,10 +208,10 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
   <section class="mod pad">
     <span class="lab">Take part</span>
     <div class="ways">
-      <a class="way" href="#"><span class="ph"><img src="img/braiding.jpg" alt="Two women braiding hair on a grassy hill"></span><span class="no">Fig. 3a · Gather</span><h3 class="ds">Connection calls</h3><p>Monthly, online, open to all.</p></a>
-      <a class="way" href="#"><span class="ph"><img src="img/dancers.jpg" alt="Three dancers bending forward together"></span><span class="no">Fig. 3b · Practise</span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
-      <a class="way" href="#"><span class="ph"><img src="img/hand.jpg" alt="An earth-caked hand holding a small daisy"></span><span class="no">Fig. 3c · Belong</span><h3 class="ds">Community gardens</h3><p>Conversation between the calls.</p></a>
-      <a class="way light" href="#"><span class="ph"><img src="img/wildflower.jpg" alt="Ink drawing of a wildflower with its roots"></span><span class="no">Fig. 3d · Seed</span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/walking.jpg" alt="Collage: people walking through grey clouds toward a torn opening onto a yellow field"></span><span class="no">Fig. 3a · Gather</span><h3 class="ds">Connection calls</h3><p>Monthly, online, open to all.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/sylvie.jpg" alt="Calligraphy scrolls hanging in a stone attic"></span><span class="no">Fig. 3b · Practise</span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/scrolls.jpg" alt="A red paper lantern among leaves against an old wall"></span><span class="no">Fig. 3c · Belong</span><h3 class="ds">Community gardens</h3><p>Conversation between the calls.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/field.jpg" alt="A woman in white standing in a ploughed field at dusk"></span><span class="no">Fig. 3d · Seed</span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
     </div>
   </section>
 
@@ -220,9 +221,9 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
     <div class="sel">
       <ul class="sel-list">
         <li class="on" tabindex="0" data-img="img/mountain.jpg" data-cap="Over the Mountains. Snow peak under star trails."><span class="lab">Podcast</span><b>Over the Mountains</b><span class="by">Conversations with Iain McGilchrist, Dougald Hine and Roberto Mangabeira Unger</span></li>
-        <li tabindex="0" data-img="img/eye.jpg" data-cap="Seeing the whole. Ink print, artist to be credited."><span class="lab">Essay</span><b>The Second Renaissance: A Very Short Introduction</b><span class="by">Real risk, root cause, radical response, real possibility</span></li>
-        <li tabindex="0" data-img="img/frame.jpg" data-cap="The threshold. Print, signed /B."><span class="lab">Manifesto</span><b>A Manifesto for Civilizational Renewal</b><span class="by">For all the living beings whose heart burns to see a new world emerge</span></li>
-        <li tabindex="0" data-img="img/fuller.jpg" data-cap="Loïe Fuller, 1901. Photograph by Falk."><span class="lab">Art</span><b>Orpheus</b><span class="by">From the magazine, Issue #2</span></li>
+        <li tabindex="0" data-img="img/dore.jpg" data-cap="Doré’s celestial rose, from the Paradiso."><span class="lab">Essay</span><b>The Second Renaissance: A Very Short Introduction</b><span class="by">Real risk, root cause, radical response, real possibility</span></li>
+        <li tabindex="0" data-img="img/interbeing.jpg" data-cap="Interbeing."><span class="lab">Manifesto</span><b>A Manifesto for Civilizational Renewal</b><span class="by">For all the living beings whose heart burns to see a new world emerge</span></li>
+        <li tabindex="0" data-img="img/orpheus.jpg" data-cap="Orpheus, from Issue #2: Mythos."><span class="lab">Art</span><b>Orpheus</b><span class="by">From the magazine, Issue #2</span></li>
       </ul>
       <figure class="pic"><img class="sel-img" src="img/mountain.jpg" alt="Image for the selected work"><figcaption><span class="no">Fig. 4</span><span class="sel-cap">Over the Mountains. Snow peak under star trails.</span></figcaption></figure>
     </div>
@@ -266,9 +267,8 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
   </header>
   <section class="mhero pad">
     <div><span class="lab">Manifesto</span><h1 class="ds">A Manifesto for Civilizational Renewal</h1></div>
-    <figure><img src="img/eclipse.jpg" alt="Stippled drawing of a total solar eclipse"><figcaption><span class="no">Fig. 1</span>Total eclipse: the corona, drawn in stipple.</figcaption></figure>
+    <figure><img src="img/walking.jpg" alt="Collage: people walking through grey clouds toward a torn opening onto a yellow field"><figcaption><span class="no">Fig. 1</span>Walking toward the field. Collage, artist to be credited.</figcaption></figure>
   </section>
-  <div class="tear bot"></div>
   <article class="text pad">
     <p class="ded">For all the living beings whose heart burns to see a new world emerge.</p>
     <p class="drop">Human civilization has always been a story of transformation, of old worlds dying and new ones being born. We are living through such moments. The crises of our time, ecological, political, social and spiritual, are not separate emergencies to be managed one by one. They are the symptoms of a civilization whose foundations are cracking. And as in every great turning, crisis carries within it the seed of rebirth.</p>
