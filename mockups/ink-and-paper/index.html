@@ -50,8 +50,6 @@ body[data-dir="c"] .mock{--red:#e5201c}
 .mock .tl{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 body[data-dir="c"] .mock .tl{color:var(--red);text-decoration-color:var(--red)}
 body[data-dir="c"] .mock .tl:hover{text-decoration-thickness:2px}
-body[data-dir="c"] .mock .btn.solid.primary{background:var(--red);border-color:var(--red);color:#fff}
-body[data-dir="c"] .mock .btn.solid.primary:hover{background:#c41a17;border-color:#c41a17}
 .mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.16;mix-blend-mode:multiply;background-image:url("NOISE")}
 .mock img{display:block;max-width:100%}
 .mock a{color:inherit}
@@ -89,7 +87,7 @@ body[data-dir="b"] .mock .night figcaption .no{color:var(--chalk)}
 .mock .believe p{margin:0 0 20px;font-size:clamp(20px,2.4cqi,28px);line-height:1.38;font-weight:300;text-wrap:pretty}
 .mock .believe .hl{font-family:var(--display);color:var(--hl)}
 .mock .believe .sig{font-family:var(--eyebrow);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
-.mock .believe figure img{mix-blend-mode:multiply}
+.mock .believe figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
 
 .mock .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.6cqi,32px)}
 .mock .way{display:grid;gap:10px;align-content:start;text-decoration:none}
@@ -176,14 +174,14 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
 <h2>What to compare</h2>
 <ul>
 <li><b>A · Ink and paper.</b> Warm black, off-white paper, grain. No interface colour at all: colour comes only from the images. Calls to action are solid black.</li>
-<li><b>C · Logo red</b> (version 3). Ink and paper, plus the logo's own bright red, used very sparingly: two main buttons (Save a place, Subscribe) and the occasional link in running text. Everything else stays black on white or paper.</li>
+<li><b>C · Red links</b> (current preference). Ink and paper, with black buttons. The logo's own bright red is used only for the occasional link in running text, such as "Read the manifesto".</li>
 <li><b>B · Plus one ink.</b> The same base, plus one process colour used as a single extra ink: calls to action, figure numbers, one lit phrase, the magazine block, the manifesto's drop cap and numerals. Try deep red (etching ink), Prussian blue (cyanotype) and gold (gilt). Only one at a time, never together.</li>
 </ul>
-<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. Version 3: some sections now sit on pure white ("What we believe", "Coming up", "Engage" and the manifesto text), alternating with warm paper. Version 2: much lighter paper and softer grain, the original photographs back (the shared meal, the lantern, the scrolls, the woman in the field), and only one dark section, "Selected work", inked onto the page with a torn edge.</p>
+<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. Version 4: buttons back to black, red kept for links only, and the root drawing replaced by a photograph of people. Version 3: some sections now sit on pure white ("What we believe", "Coming up", "Engage" and the manifesto text), alternating with warm paper. Version 2: much lighter paper and softer grain, the original photographs back (the shared meal, the lantern, the scrolls, the woman in the field), and only one dark section, "Selected work", inked onto the page with a torn edge.</p>
 <p><b>Images are placeholders from the mood board, for inspiration only.</b> Most can't be used on the live site without rights; the root drawings are likely public domain. The logo red is unchanged for now.</p>
 </div></header>
 <div class="f-tools">
-  <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="false">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button><button type="button" data-dir="c" aria-pressed="true"><i style="background:#e5201c"></i>C · Logo red</button></div>
+  <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="false">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button><button type="button" data-dir="c" aria-pressed="true"><i style="background:#e5201c"></i>C · Red links</button></div>
   <div class="grp b-only"><span>Ink</span><button type="button" data-ink="red" aria-pressed="true"><i style="background:#9b2a1e"></i>Deep red</button><button type="button" data-ink="blue" aria-pressed="false"><i style="background:#1e3d70"></i>Prussian blue</button><button type="button" data-ink="gold" aria-pressed="false"><i style="background:#b98b2f"></i>Gold</button></div>
 </div>
 
@@ -210,7 +208,7 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
         <p>Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them. Within that breakdown something is trying to be born. <span class="hl">We are a movement of people making sense of this moment and practising what comes next, together.</span> <a class="tl" href="#">Read the manifesto</a></p>
         <span class="sig">Vision and movement for civilisational renewal</span>
       </div>
-      <figure><img src="img/roots.jpg" alt="Ink drawing of a tree and its root system, in section and in plan"><figcaption><span class="no">Fig. 2</span>The visible and the hidden. A tree and its root system, in section and in plan; scale bar 200 cm.</figcaption></figure>
+      <figure><img src="img/stones.jpg" alt="Two women carrying stones beside a lake and a small wooden bridge"><figcaption><span class="no">Fig. 2</span>Carrying stones by the lake.</figcaption></figure>
     </div>
   </section>
 
