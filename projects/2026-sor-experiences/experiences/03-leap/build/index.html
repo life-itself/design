@@ -37,7 +37,7 @@
 
   /* soft dark grounds so the words read over clouds and road; they fade in with the words */
   .x-leap__scrim { position: absolute; left: 0; right: 0; pointer-events: none; opacity: 0; }
-  .x-leap__scrim--top { top: 0; height: 32%; background: linear-gradient(rgba(22,22,22,.7), rgba(22,22,22,0)); }
+  .x-leap__scrim--top { top: 0; height: 36%; background: linear-gradient(rgba(22,22,22,.72), rgba(22,22,22,.4) 45%, rgba(22,22,22,0)); }
   .x-leap__scrim--low {
     bottom: 0; height: 58%;
     background: linear-gradient(rgba(22,22,22,0), rgba(22,22,22,.55) 45%, rgba(22,22,22,.88));
@@ -48,8 +48,9 @@
     width: min(90vw, 44rem);
     text-align: center;
   }
-  .x-leap__top { top: clamp(28px, 9svh, 96px); }
-  /* the lower third: line 2, then the join, in the same place */
+  /* lines 1 and 2 share the top, over the sky; the join takes the lower third */
+  .x-leap__top { top: clamp(24px, 5.5svh, 64px); display: grid; }
+  .x-leap__top > * { grid-area: 1 / 1; align-self: start; }
   .x-leap__low {
     bottom: clamp(36px, 9svh, 96px);
     display: grid;
@@ -62,22 +63,22 @@
     text-shadow: 0 1px 16px rgba(8,7,7,.55);
   }
   .x-leap__line {
-    font-size: clamp(1.15rem, 2.3vw, 1.7rem);
-    line-height: 1.45;
+    font-size: clamp(1.4rem, 3.1vw, 2.5rem);
+    line-height: 1.35;
     text-wrap: balance;
   }
   .x-leap__join {
     display: inline-block;
     font-family: var(--display); font-weight: 400;
-    font-size: clamp(2rem, 7.5vw, 4rem);
+    font-size: clamp(2.4rem, 9vw, 5.2rem);
     line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: .2em;
     padding-left: .2em; /* balance the trailing tracking so the capitals sit centred */
     text-wrap: balance;
   }
-  .x-leap__calls { margin: .55em 0 0; font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.5; }
-  .x-leap__more { margin: .9em 0 0; font-size: clamp(.85rem, 1.2vw, .95rem); line-height: 1.5; letter-spacing: .01em; }
+  .x-leap__calls { margin: .5em 0 0; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.5; }
+  .x-leap__more { margin: .8em 0 0; font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.5; letter-spacing: .01em; }
   .x-leap a {
     color: inherit;
     text-decoration: underline;
@@ -115,7 +116,8 @@
     .x-leap__stage { position: relative; }
     .x-leap__stage { height: 100svh; }
     .x-leap__low { gap: 1.4rem; }
-    .x-leap__low > * { grid-area: auto; }
+    .x-leap__low > *, .x-leap__top > * { grid-area: auto; }
+    .x-leap__top { gap: .4rem; }
     .x-leap__line, .x-leap__invite, .x-leap__scrim { opacity: 1 !important; transform: none !important; }
     .x-leap__invite[data-hidden] { visibility: visible; }
     .x-leap__cue { display: none; }
@@ -142,11 +144,11 @@
       <div class="x-leap__scrim x-leap__scrim--top" aria-hidden="true"></div>
       <div class="x-leap__scrim x-leap__scrim--low" aria-hidden="true"></div>
       <span class="x-leap__cue" aria-hidden="true"></span>
-      <div class="x-leap__top">
+      <div class="x-leap__top" data-od-id="leap-top">
         <p class="x-leap__line" data-od-id="leap-line-1">The future may be dark and unknown.</p>
+        <p class="x-leap__line" data-od-id="leap-line-2">But the unknown is also full of possibility.</p>
       </div>
       <div class="x-leap__low" data-od-id="leap-lower-third">
-        <p class="x-leap__line" data-od-id="leap-line-2">But the unknown is also full of possibility.</p>
         <div class="x-leap__invite" data-od-id="leap-invite" data-hidden>
           <!-- → a page explaining the Thursday call (what, when, sign up); # until it exists -->
           <a class="x-leap__join" href="#" data-od-id="leap-join">Come join us</a>
@@ -184,8 +186,8 @@
      Scene units: the original square is 0…1; the plate covers this larger extent. */
   const PLATE = { x: -.7695, y: -.2137, w: 2.5391, h: 1.4282 };
   const KEEP = { x0: .1, x1: .95, y0: .02, y1: .97 };   // must stay in view: road's end, tear, walkers
-  const FOCUS = [.57, .5];                               // centred when there's room to spare
-  const SKY = 1.12;                                      // scene height shown on a wide screen (1 = the square)
+  const FOCUS = [.57, .42];                               // centred when there's room to spare
+  const SKY = 1.2;                                       // scene height shown on a wide screen (1 = the square)
 
   /* walker sprites: [body | left leg | right leg] panels, 720px tall, cut by src/prep_leap.py */
   const META = [{"w":295,"h":720,"legTop":539,"footX":143.6},{"w":275,"h":720,"legTop":532,"footX":117.0},{"w":266,"h":720,"legTop":445,"footX":108.3},{"w":261,"h":720,"legTop":452,"footX":106.9},{"w":265,"h":720,"legTop":437,"footX":134.3},{"w":291,"h":720,"legTop":482,"footX":122.9},{"w":314,"h":720,"legTop":485,"footX":140.6},{"w":289,"h":720,"legTop":381,"footX":131.0}];
@@ -465,14 +467,15 @@
   /* ---------- words ---------- */
   function words(p) {
     const show = (el, o) => { el.style.opacity = o.toFixed(3); el.style.transform = `translateY(${((1 - o) * 8).toFixed(2)}px)`; };
-    // 1 over the sky · a beat of just the walkers · 2 low, just before the rip · the join once it settles
+    // 1 over the sky · a beat of just the walkers · 2 in the same place, just before the rip, held
+    // until the walkers are in the field · then the join, low
     const o1 = seg(p, .015, .07) * (1 - seg(p, .21, .25));
-    const o2 = seg(p, .29, .325) * (1 - seg(p, .74, .78));
+    const o2 = seg(p, .29, .325) * (1 - seg(p, .76, .8));
     const j = seg(p, .8, .87);
     show(line1, o1); show(line2, o2); show(invite, j);
     invite.toggleAttribute('data-hidden', j < .05);
-    scrimTop.style.opacity = o1.toFixed(3);
-    scrimLow.style.opacity = Math.max(o2, j).toFixed(3);
+    scrimTop.style.opacity = Math.max(o1, o2).toFixed(3);
+    scrimLow.style.opacity = j.toFixed(3);
     cue.style.opacity = (.5 * (1 - seg(p, 0, .015))).toFixed(3);
   }
 
