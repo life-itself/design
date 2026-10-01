@@ -30,9 +30,40 @@ We're happy with the mockup, so we treat it as the source and extract the system
 
 **A little off-centre.** Earthy, a bit muddy, a bit quirky, a bit marginal. Not mainstream, but not a wild artist's site either. Polyamine already has this: elegant but too quirky for a luxury brand.
 
+### Answers so far (2026-10-01)
+
+- **Light: dawn-leaning.** We are about renaissance more than hospicing an ending, though we do both. We are **doulas of birth and death**.
+- **Where the "muddy" shows: texture and imperfection.** Not muddy colour or raw imagery as the main carrier.
+- **Rigour and warmth: rigour first, then warmth**, but both always present. Pages vary: movement and community pages lean warm; white papers lean rigorous. Even warm pages need the careful thinking underneath.
+- **Images:** the sunrise painting is the clearest "age of Aquarius" problem, even though it's a nice painting.
+- **Is hope the centre?** Not sure yet. Working through it (see below).
+
+### Working through: the essence
+
+Triangulating from references: the sunrise painting is hope without ground; Dark Mountain is ground without much hope (its subject is an ending); Emergence is depth, but sleek and nature-mystical. Seeds sits where hope is earned by going through the dark, which is what a doula does.
+
+Candidate essences:
+- A. **Authentic, grounded hope** (current). Risk: "authentic" is claimed by every brand, so it does little work.
+- B. **Grounded hope.** The same idea, shorter. Hope stays the destination; "grounded" separates it from the sunrise painting.
+- C. **Clear-eyed hope.** Puts rigour first (seeing clearly, including the dark), then hope.
+- D. **Doulas of a renaissance.** A role rather than a quality: skilled, caring presence at a birth, and at a death.
+
+Draft recommendation: C or B as the essence, with the doula as the brand's image or archetype.
+
+### Working through: rigour and warmth
+
+The potter's bowl model: **rigour is the form, warmth is the surface.** Rigour is the constant frame on every page: grid, type, accuracy, sourcing, care. Warmth is a layer that varies: people, texture, hand marks, colour, voice.
+
+Three registers on one skeleton (draft):
+| Register | Pages | Feel |
+|---|---|---|
+| Study | White papers, essays, research | Rigour dominant; warmth in small touches |
+| Conversation | Manifesto, podcast, magazine, landing page | Balanced |
+| Gathering | Community, events, joining | Warmth dominant; rigour stays in the structure |
+
 ### What it is not
 
-- Spiritual woo-woo or new age ("the age of Aquarius"). The current sunrise photo already leans this way.
+- Spiritual woo-woo or new age ("the age of Aquarius"). The current sunrise painting already leans this way.
 - Luxury-clean, glossy or fashion-elegant.
 - Corporate or mainstream.
 - Chaotic or self-indulgent like many artist websites.
@@ -41,8 +72,10 @@ We're happy with the mockup, so we treat it as the source and extract the system
 
 | Area | References | What we take from them |
 |---|---|---|
+| Websites | **Dark Mountain Project** (liked); Emergence Magazine (close, but too nature, woo-woo and sleek-magazine) | Seriousness, literary depth, rawness |
 | Story and writing | Ursula K. Le Guin | Depth of being, worlds that feel whole |
-| Thinkers | Heidegger, Ken Wilber, Elizabeth Debold (spelling to check) | Rigour together with depth |
+| Writing tone | **Christopher Alexander**, Iain McGilchrist | Rigorous yet warm and accessible, with many examples |
+| Thinkers (ideas, not tone) | Heidegger, Ken Wilber, Elizabeth Debold | Vision is relevant; writing too obscure or intellectual to model the tone on |
 | Practice | Emergent dialogue | Meaning arising between people |
 | Places and architecture | Christopher Alexander | Wholeness; places that feel whole and held |
 | Art and objects | Wabi-sabi | Imperfection, natural materials, the beauty of age and use |
