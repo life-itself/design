@@ -10,3 +10,6 @@ sandbox
 
 # Drop zone for raw imports (HTML exports etc.); agent files them into projects
 inbox/
+
+# Generated static site for SoR experiences (build.py --site); published with fl
+projects/2026-sor-experiences/site/

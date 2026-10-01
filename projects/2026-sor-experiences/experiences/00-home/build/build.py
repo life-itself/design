@@ -4,8 +4,7 @@ sketch/index.html until a build exists) and writes 00-home/build/index.html.
 Never hand-edit the output; re-run this.
 
   python3 build.py               # write index.html here
-  python3 build.py --share DIR   # also write a self-contained copy for publishing
-                                 # as an artifact: DIR/index.html + DIR/<piece>/assets/"""
+  python3 build.py --site DIR    # also assemble a static site to publish (see README)"""
 import re, shutil, sys
 from pathlib import Path
 
@@ -26,7 +25,7 @@ def grab(html, tag):
 
 def rebase(text, prefix):
     """'assets/...' (CSS url(), HTML attrs, JS string/template literals) -> prefix + 'assets/'."""
-    return re.sub(r"""(['"`(])assets/""", rf"\1{prefix}assets/", text)
+    return re.sub(r"""(['"`(])assets/""", rf"\g<1>{prefix}assets/", text)
 
 def piece(name, folder, prefix):
     html = (source(folder) / "index.html").read_text()
@@ -54,17 +53,21 @@ out = "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n" 
 (HERE / "index.html").write_text(out)
 print("wrote", HERE / "index.html")
 
-if "--share" in sys.argv:
-    # Artifact copy: no html/head/body (the host wraps it), assets under <piece>/assets/,
-    # Bricolage from Google Fonts since viewers won't have it installed.
-    dest = Path(sys.argv[sys.argv.index("--share") + 1])
+if "--site" in sys.argv:
+    # A static site for sharing (published with Flowershow, see 00-home/README.md):
+    #   DIR/index.html                the whole page
+    #   DIR/<piece>/                  each piece standalone, with its assets (no src/);
+    #                                 not under build/, which fl skips
+    # Bricolage comes from Google Fonts there, since viewers won't have it installed.
+    dest = Path(sys.argv[sys.argv.index("--site") + 1])
+    for old in dest.glob("*"):          # keep .flowershow (site name) and other dotfiles
+        if not old.name.startswith("."):
+            shutil.rmtree(old) if old.is_dir() else old.unlink()
     dest.mkdir(parents=True, exist_ok=True)
     for _, f in PIECES:
-        if (source(f) / "assets").exists():
-            shutil.copytree(source(f) / "assets", dest / f / "assets", dirs_exist_ok=True,
-                            ignore=shutil.ignore_patterns("fonts"))
-    share = HEAD + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&display=swap">\n' \
-            + page(lambda f: f"{f}/")
-    share = re.sub(r', url\("[^"]*Polyamine\.ttf"\) format\("truetype"\)', "", share)   # no font file to ship
-    (dest / "index.html").write_text(share)
-    print("wrote", dest / "index.html")
+        shutil.copytree(source(f), dest / f, ignore=shutil.ignore_patterns("src", "*.py"))
+    site = out.replace(page(lambda f: f"../../{f}/{source(f).name}/"), page(lambda f: f"{f}/"))
+    site = site.replace(HEAD, HEAD + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400&display=swap">\n')
+    site = re.sub(r', url\("[^"]*Polyamine\.ttf"\) format\("truetype"\)', "", site)   # no font file to ship
+    (dest / "index.html").write_text(site)
+    print("wrote", dest)
