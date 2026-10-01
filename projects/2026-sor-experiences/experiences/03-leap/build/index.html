@@ -49,7 +49,7 @@
     text-align: center;
   }
   /* lines 1 and 2 share the top, over the sky; the join takes the lower third */
-  .x-leap__top { top: clamp(24px, 5.5svh, 64px); display: grid; }
+  .x-leap__top { top: clamp(24px, 5.5svh, 64px); display: grid; width: min(92vw, 72rem); } /* wide enough for either line on one line on desktop */
   .x-leap__top > * { grid-area: 1 / 1; align-self: start; }
   .x-leap__low {
     bottom: clamp(36px, 9svh, 96px);
