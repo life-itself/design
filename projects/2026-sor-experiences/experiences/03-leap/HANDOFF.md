@@ -18,20 +18,20 @@ Build **The Leap** as a standalone page at `projects/2026-sor-experiences/experi
 
 Walking into the unknown: scary, yet we hold the possibility of renewal. A leap of faith. Tension builds ("they're going to walk off the edge of the sky!"), then a gentle, not violent, opening into colour. It ends warm and concrete: come and meet us.
 
-## What happens (plays on view, not scroll-driven)
+## What happens (scroll-driven)
 
-The frame is one viewport tall. The animation starts by itself when the frame comes into view (IntersectionObserver) and plays once through: no loop, no scrubbing, no replay on scrolling back. The text follows the animation's clock.
+The section is tall (about 6 viewports) with a sticky full-screen stage; scroll position scrubs the animation forwards and backwards. Deep links like `#leap-72` jump to a moment.
 
 1. **The cliff.** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in at the top, over the sky.
 2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 fades out a moment before text 2, leaving a beat of just the walkers.
-3. **The rip.** Just before the rip starts, text 2 appears at the bottom, near the road. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
+3. **The rip.** Just before the rip starts, text 2 appears at the top, where text 1 was, and holds through the rip. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
 4. **Into the field.** The walkers step on towards and into the field. The grey scene lightens a little.
-5. **Join.** Text 2 fades and the invitation appears over the image, in the lower third (where text 2 was), on a soft dark gradient for legibility. It is the story's last beat, not a footer. If it doesn't read on phones, move it below the image at phone width only.
+5. **Join.** Text 2 fades and the invitation appears over the image, in the lower third, on a soft dark gradient for legibility. It is the story's last beat, not a footer. If it doesn't read on phones, move it below the image at phone width only.
 
 ## Text
 
 1. **The future may be dark and unknown.** (top, over the sky)
-2. **But the unknown is also full of possibility.** (bottom, near the road)
+2. **But the unknown is also full of possibility.** (top, replacing line 1)
 3. **COME JOIN US** (display capitals; this is the link), then small beneath: *Meet others on our Thursday calls*, then smaller still and secondary: *or keep learning ↓*
 
 The join links to a page about the Thursday call (what, when, sign up), not straight to Zoom or a calendar. Use `#` until the URL exists.
@@ -39,7 +39,7 @@ The join links to a page about the Thursday call (what, when, sign up), not stra
 ## Look
 
 - The background image runs **full width**, edge to edge (it looks better that way than a centred square). May need the high-res original photo.
-- Text in warm white `#efebe4`, Polyamine (assume installed locally), laid over the image: line 1 at the top, line 2 and then the join at the bottom.
+- Text in warm white `#efebe4`, laid over the image: lines 1 and 2 at the top, the join in the lower third. Faces per `00-home/common.md`, by name only (shown where installed): Restora for lines 1–2, Polyamine for COME JOIN US, Bricolage Grotesque for the small lines.
 - The tear is paper: rough white fibrous edge, slight depth and shadow, as in the source image.
 - Colour stays inside the tear for now (whether it spills out is an open question; make it easy to try).
 - Starts dark grey, ends on the field.
@@ -62,11 +62,10 @@ A rough working version exists in the whole-page sketch: `projects/2026-sor-expe
 
 - One self-contained page; scope all CSS under `.x-leap`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the final state with the text.
-- Plays once on entering view; never loops.
 - No sound.
 
 ## Done when
 
-- `build/index.html` plays on its own when scrolled into view, once, and reads as the story above.
+- `build/index.html` plays on its own, scroll-driven, and reads as the story above.
 - Tell the user what's still rough (plate, walk cycles) and what would fix it.
 - Record progress on beads task `design-323.4` (`bd update design-323.4 --notes "..."`; `bd close design-323.4` when done).

@@ -47,7 +47,7 @@ Five frames (sections of the page). Each frame can hold several beats.
 
 ### Frame 3: The leap
 
-- Own brief: [../03-leap/brief.md](../03-leap/brief.md). Plays once when it comes into view (not scroll-driven): the people in the collage walk up the road, the paper tears to reveal the yellow field, "Come join us".
+- Own brief: [../03-leap/brief.md](../03-leap/brief.md). Scroll-driven: the people in the collage walk up the road, the paper tears to reveal the yellow field, "Come join us".
 - **The join offer lives here** (meetup), alongside a "keep learning" path onward to the book. Many won't join now, but they know the invitation is there.
 
 ### Frame 4: The book
