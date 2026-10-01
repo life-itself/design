@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Stand-ins for Polyamine: Libre Caslon Text (lines), Italiana (display capitals) -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Italiana&display=swap">
-<link rel="preload" as="image" href="assets/plate.jpg">
+<link rel="preload" as="image" href="assets/plate-wide.jpg">
 <style>
   .x-leap {
     --leap-bg: #161616;
@@ -29,17 +29,16 @@
   .x-leap__stage {
     position: sticky; top: 0;
     height: 100vh; height: 100svh;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: clamp(14px, 3svh, 30px);
-    padding: clamp(12px, 3svh, 28px) 0;
+    display: flex; flex-direction: column; align-items: center;
+    padding-bottom: clamp(14px, 3svh, 28px);
     overflow: hidden;
   }
+  /* the picture runs edge to edge and takes whatever height the words leave */
   .x-leap__frame {
     position: relative;
-    width: min(92vw, 78vh, calc(100vh - 10.5rem));
-    width: min(92vw, 78svh, calc(100svh - 10.5rem));
-    aspect-ratio: 1;
-    flex: none;
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
   }
   .x-leap__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
@@ -48,6 +47,7 @@
     position: relative;
     width: min(92vw, 40rem);
     height: clamp(5.25rem, 13svh, 7.5rem);
+    margin-top: clamp(10px, 2svh, 22px);
     flex: none;
   }
   .x-leap__line, .x-leap__invite {
@@ -114,6 +114,7 @@
   @media (prefers-reduced-motion: reduce) {
     .x-leap__track { height: auto; }
     .x-leap__stage { position: relative; height: auto; min-height: 100svh; }
+    .x-leap__frame { flex: none; height: 72svh; }
     .x-leap__words { height: auto; display: grid; gap: 1.1rem; }
     .x-leap__line, .x-leap__invite { position: static; opacity: 1 !important; transform: none !important; }
     .x-leap__invite[data-hidden] { visibility: visible; }
@@ -175,6 +176,13 @@
   const ZOOM = 1.4;                          // how far we push into the field at the end
   const ZOOM_AT = [.59, .3];                // …and where
   const PAPER = '#eeebe3';
+
+  /* the plate: an outpainted wide version of the square scene (see src/prep_plate_wide.py).
+     Scene units: the original square is 0…1; the plate covers this larger extent. */
+  const PLATE = { x: -.7695, y: -.2137, w: 2.5391, h: 1.4282 };
+  const KEEP = { x0: .1, x1: .95, y0: .02, y1: .97 };   // must stay in view: road's end, tear, walkers
+  const FOCUS = [.57, .5];                               // centred when there's room to spare
+  const SKY = 1.12;                                      // scene height shown on a wide screen (1 = the square)
 
   /* walker sprites: [body | left leg | right leg] panels, 720px tall, cut by src/prep_leap.py */
   const META = [{"w":295,"h":720,"legTop":539,"footX":143.6},{"w":275,"h":720,"legTop":532,"footX":117.0},{"w":266,"h":720,"legTop":445,"footX":108.3},{"w":261,"h":720,"legTop":452,"footX":106.9},{"w":265,"h":720,"legTop":437,"footX":134.3},{"w":291,"h":720,"legTop":482,"footX":122.9},{"w":314,"h":720,"legTop":485,"footX":140.6},{"w":289,"h":720,"legTop":381,"footX":131.0}];
@@ -315,12 +323,25 @@
   }
 
   /* ---------- drawing ---------- */
-  let S = 0, K = 1;                         // canvas CSS size, device scale
+  let CW = 0, CH = 0, DPR = 1;               // canvas CSS size, device scale
   function resize() {
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    S = frame.clientWidth; K = S * dpr;
-    canvas.width = canvas.height = Math.round(K);
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    CW = frame.clientWidth; CH = frame.clientHeight;
+    canvas.width = Math.round(CW * DPR); canvas.height = Math.round(CH * DPR);
     need = true;
+  }
+  // Camera: pixels per scene unit (U) and offset. Show the square big, never show past the
+  // plate's edges, and keep the action (KEEP) in view on narrow or very wide screens.
+  function camera(zoom) {
+    const cover = Math.max(CW / PLATE.w, CH / PLATE.h);
+    const fit = Math.min(CW / (KEEP.x1 - KEEP.x0), CH / (KEEP.y1 - KEEP.y0));
+    const U0 = Math.max(cover, Math.min(CH / SKY, fit));
+    const U = U0 * zoom, [cx, cy] = ZOOM_AT;
+    let ox = CW / 2 - FOCUS[0] * U0, oy = CH / 2 - FOCUS[1] * U0;
+    ox += U0 * cx * (1 - zoom); oy += U0 * cy * (1 - zoom);           // push in around ZOOM_AT
+    ox = clamp(ox, CW - (PLATE.x + PLATE.w) * U, -PLATE.x * U);
+    oy = clamp(oy, CH - (PLATE.y + PLATE.h) * U, -PLATE.y * U);
+    return { U, ox, oy };
   }
   const path = pts => { ctx.beginPath(); pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath(); };
   const FIELD = { x: -.005, y: .467 - .363 * 1.2, s: 1.2 };  // field horizon sits on the road's vanishing line
@@ -348,7 +369,7 @@
   }
 
   function render(p) {
-    if (!S) return;
+    if (!CW || !CH) return;
     // as the walkers near the edge the paper tears gently from the top down, open before the leader arrives
     const rip = ease(seg(p, .34, .58));
     const bot = Y0 + (YB + TAPER - Y0) * rip;
@@ -357,14 +378,14 @@
 
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = '#161616'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-    const [cx, cy] = ZOOM_AT;
-    ctx.setTransform(K * zoom, 0, 0, K * zoom, K * (cx - zoom * cx), K * (cy - zoom * cy));
-    const px = 1 / (S * zoom);                // one CSS pixel in scene units
+    const cam = camera(zoom), K = cam.U * DPR;
+    ctx.setTransform(K, 0, 0, K, cam.ox * DPR, cam.oy * DPR);
+    const px = 1 / cam.U;                     // one CSS pixel in scene units
 
-    ctx.drawImage(plate, 0, 0, 1, 1);
+    ctx.drawImage(plate, PLATE.x, PLATE.y, PLATE.w, PLATE.h);
     if (SPILL > 0 && rip > 0) {             // open question: does colour leak out of the tear?
       ctx.save(); ctx.globalCompositeOperation = 'color'; ctx.globalAlpha = SPILL * open;
-      ctx.drawImage(field, -.35, -.25, 1.7, 1.7); ctx.restore();
+      ctx.drawImage(field, PLATE.x, PLATE.y - .6, PLATE.w, PLATE.w); ctx.restore();
     }
 
     const geo = rip > 0 ? tearGeometry(Y0 - TAPER, bot, 1) : null;
@@ -375,12 +396,12 @@
       // 2. the grey sheet's torn edge throws a little shadow onto the white
       ctx.save(); path(geo.rim); ctx.clip();
       ctx.beginPath(); ctx.rect(-1, -1, 3, 3); geo.rim.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath();
-      ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 5 * px * K * zoom; ctx.shadowOffsetY = 1 * px * K * zoom;
+      ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 5 * DPR; ctx.shadowOffsetY = DPR;
       ctx.fillStyle = '#000'; ctx.fill('evenodd'); ctx.restore();
       // 3. the field, seen through the hole, with the paper's shadow on it
       ctx.save(); path(geo.hole); ctx.clip(); drawField();
       ctx.beginPath(); ctx.rect(-1, -1, 3, 3); geo.hole.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath();
-      ctx.shadowColor = 'rgba(20,18,10,.5)'; ctx.shadowBlur = 9 * px * K * zoom; ctx.shadowOffsetY = 2 * px * K * zoom;
+      ctx.shadowColor = 'rgba(20,18,10,.5)'; ctx.shadowBlur = 9 * DPR; ctx.shadowOffsetY = 2 * DPR;
       ctx.fillStyle = PAPER; ctx.fill('evenodd'); ctx.restore();
       // 4. loose fibres over the edge
       ctx.save(); ctx.lineCap = 'round';
@@ -428,13 +449,18 @@
 
     // light: the grey world is heavy at first, and lifts a little once the field is open
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    const W = canvas.width;
-    const vg = ctx.createRadialGradient(W * .58, W * .44, W * .12, W * .5, W * .5, W * .78);
+    const W = canvas.width, Hc = canvas.height, R = Math.max(W, Hc);
+    const vx = (cam.ox + .58 * cam.U) * DPR, vy = (cam.oy + .44 * cam.U) * DPR;
+    const vg = ctx.createRadialGradient(vx, vy, R * .1, vx, vy, R * .72);
     vg.addColorStop(0, 'rgba(8,7,7,0)'); vg.addColorStop(1, `rgba(8,7,7,${lerp(.72, .22, open)})`);
-    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, W);
-    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, W); ctx.restore(); }
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, Hc);
+    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
     ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = .22;
-    ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, W); ctx.restore();
+    ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, Hc); ctx.restore();
+    // the picture's lower edge dissolves into the stage, so the words sit in the same dark
+    const fade = ctx.createLinearGradient(0, Hc * .84, 0, Hc);
+    fade.addColorStop(0, 'rgba(22,22,22,0)'); fade.addColorStop(1, 'rgba(22,22,22,1)');
+    ctx.fillStyle = fade; ctx.fillRect(0, Hc * .84, W, Hc * .16);
   }
 
   /* ---------- words ---------- */
@@ -465,7 +491,7 @@
     shown = clamp(+m[1] / 100); need = true;
   }
 
-  Promise.all([load('assets/plate.jpg'), load('assets/field.jpg'), ...META.map((_, i) => load(`assets/walker-${i}.webp`))])
+  Promise.all([load('assets/plate-wide.jpg'), load('assets/field.jpg'), ...META.map((_, i) => load(`assets/walker-${i}.webp`))])
     .then(([pl, fi, ...sp]) => {
       plate = pl; field = fi; sprites = sp; grainPat = ctx.createPattern(makeGrain(), 'repeat');
       paperPat = ctx.createPattern(makePaper(), 'repeat');
