@@ -4,22 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Leap · Seeds of Renaissance</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Stand-ins for Polyamine: Libre Caslon Text (lines), Italiana (display capitals) -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Italiana&display=swap">
 <link rel="preload" as="image" href="assets/plate-wide.jpg">
 <style>
+  /* SoR type (type.md): uses the faces if installed locally; bundling decided later */
   .x-leap {
     --leap-bg: #161616;
     --daylight: #efebe4;
     --night: #080707;
-    --serif: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
-    --display: "Italiana", "Didot", "Bodoni 72", serif;
+    --heading: "Restora", "Iowan Old Style", Georgia, serif;   /* lines 1-2 */
+    --body: "Bricolage Grotesque", system-ui, sans-serif;       /* the invitation's small lines */
+    --display: "Polyamine", "Didot", "Bodoni 72", serif;        /* COME JOIN US */
     position: relative;
     background: var(--leap-bg);
     color: var(--daylight);
-    font-family: var(--serif);
+    font-family: var(--body);
     -webkit-font-smoothing: antialiased;
   }
   .x-leap *, .x-leap *::before, .x-leap *::after { box-sizing: border-box; }
@@ -63,6 +61,7 @@
     text-shadow: 0 1px 16px rgba(8,7,7,.55);
   }
   .x-leap__line {
+    font-family: var(--heading);
     font-size: clamp(1.4rem, 3.1vw, 2.5rem);
     line-height: 1.35;
     text-wrap: balance;
