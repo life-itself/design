@@ -7,3 +7,6 @@ sandbox
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Drop zone for raw imports (HTML exports etc.); agent files them into projects
+inbox/
