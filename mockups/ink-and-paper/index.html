@@ -1,5 +1,5 @@
 <title>Seeds Ink and Paper</title>
-<script>document.body.dataset.dir="a";document.body.dataset.ink="red"</script>
+<script>document.body.dataset.dir="c";document.body.dataset.ink="red"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300,100;1,9..144,300,100&display=swap">
 <style>
@@ -44,6 +44,14 @@ body:not([data-dir="b"]) .b-only{display:none}
 body[data-dir="b"][data-ink="red"] .mock{--acc:#9b2a1e;--acc-text:#9b2a1e;--acc-on:#f5f0e7;--hl:#9b2a1e}
 body[data-dir="b"][data-ink="blue"] .mock{--acc:#1e3d70;--acc-text:#1e3d70;--acc-on:#f5f0e7;--hl:#1e3d70}
 body[data-dir="b"][data-ink="gold"] .mock{--acc:#b98b2f;--acc-text:#7a5a15;--acc-on:#1b1916;--hl:#7a5a15}
+body[data-dir="c"] .mock{--red:#e5201c}
+.mock .white{background:#fff;position:relative;z-index:10}
+.mock .text.white{box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax)}
+.mock .tl{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+body[data-dir="c"] .mock .tl{color:var(--red);text-decoration-color:var(--red)}
+body[data-dir="c"] .mock .tl:hover{text-decoration-thickness:2px}
+body[data-dir="c"] .mock .btn.solid.primary{background:var(--red);border-color:var(--red);color:#fff}
+body[data-dir="c"] .mock .btn.solid.primary:hover{background:#c41a17;border-color:#c41a17}
 .mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.16;mix-blend-mode:multiply;background-image:url("NOISE")}
 .mock img{display:block;max-width:100%}
 .mock a{color:inherit}
@@ -168,13 +176,14 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
 <h2>What to compare</h2>
 <ul>
 <li><b>A · Ink and paper.</b> Warm black, off-white paper, grain. No interface colour at all: colour comes only from the images. Calls to action are solid black.</li>
+<li><b>C · Logo red</b> (version 3). Ink and paper, plus the logo's own bright red, used very sparingly: two main buttons (Save a place, Subscribe) and the occasional link in running text. Everything else stays black on white or paper.</li>
 <li><b>B · Plus one ink.</b> The same base, plus one process colour used as a single extra ink: calls to action, figure numbers, one lit phrase, the magazine block, the manifesto's drop cap and numerals. Try deep red (etching ink), Prussian blue (cyanotype) and gold (gilt). Only one at a time, never together.</li>
 </ul>
-<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. Version 2: much lighter paper and softer grain, the original photographs back (the shared meal, the lantern, the scrolls, the woman in the field), and only one dark section, "Selected work", inked onto the page with a torn edge.</p>
+<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. Version 3: some sections now sit on pure white ("What we believe", "Coming up", "Engage" and the manifesto text), alternating with warm paper. Version 2: much lighter paper and softer grain, the original photographs back (the shared meal, the lantern, the scrolls, the woman in the field), and only one dark section, "Selected work", inked onto the page with a torn edge.</p>
 <p><b>Images are placeholders from the mood board, for inspiration only.</b> Most can't be used on the live site without rights; the root drawings are likely public domain. The logo red is unchanged for now.</p>
 </div></header>
 <div class="f-tools">
-  <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="true">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button></div>
+  <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="false">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button><button type="button" data-dir="c" aria-pressed="true"><i style="background:#e5201c"></i>C · Logo red</button></div>
   <div class="grp b-only"><span>Ink</span><button type="button" data-ink="red" aria-pressed="true"><i style="background:#9b2a1e"></i>Deep red</button><button type="button" data-ink="blue" aria-pressed="false"><i style="background:#1e3d70"></i>Prussian blue</button><button type="button" data-ink="gold" aria-pressed="false"><i style="background:#b98b2f"></i>Gold</button></div>
 </div>
 
@@ -189,16 +198,16 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
       <span class="lab">Gathering · Thursday 15 October</span>
       <h1 class="ds">The Global Connection Call</h1>
       <p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p>
-      <a class="btn solid" href="#">Save a place</a>
+      <a class="btn solid primary" href="#">Save a place</a>
     </div>
     <figure><img src="img/meal.jpg" alt="Friends laughing around a long table of food in a garden"><figcaption><span class="no">Fig. 1</span>A shared meal in the garden, after a gathering.</figcaption></figure>
   </section>
 
-  <section class="mod pad">
+  <section class="mod pad white">
     <span class="lab">What we believe</span>
     <div class="believe">
       <div>
-        <p>Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them. Within that breakdown something is trying to be born. <span class="hl">We are a movement of people making sense of this moment and practising what comes next, together.</span></p>
+        <p>Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them. Within that breakdown something is trying to be born. <span class="hl">We are a movement of people making sense of this moment and practising what comes next, together.</span> <a class="tl" href="#">Read the manifesto</a></p>
         <span class="sig">Vision and movement for civilisational renewal</span>
       </div>
       <figure><img src="img/roots.jpg" alt="Ink drawing of a tree and its root system, in section and in plan"><figcaption><span class="no">Fig. 2</span>The visible and the hidden. A tree and its root system, in section and in plan; scale bar 200 cm.</figcaption></figure>
@@ -240,7 +249,7 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
     </div>
   </section>
 
-  <section class="mod pad">
+  <section class="mod pad white">
     <span class="lab">Coming up</span>
     <div class="cal">
       <div class="r"><span class="d">15 Oct</span><span><b>Global Connection Call</b><small>Online · 19:30 UK / 20:30 CET · free</small></span><a href="#">Save a place</a></div>
@@ -249,10 +258,10 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
     </div>
   </section>
 
-  <section class="mod pad">
+  <section class="mod pad white">
     <span class="lab">Engage</span>
     <div class="engage">
-      <div><h3 class="ds">The Greenhouse</h3><p>Our newsletter: new releases, gatherings and ways in.</p><input id="em1" type="email" placeholder="Your email" aria-label="Email"><a class="btn solid" href="#">Subscribe</a></div>
+      <div><h3 class="ds">The Greenhouse</h3><p>Our newsletter: new releases, gatherings and ways in.</p><input id="em1" type="email" placeholder="Your email" aria-label="Email"><a class="btn solid primary" href="#">Subscribe</a></div>
       <div><h3 class="ds">Join the movement</h3><p>Come to a call, then find your people in the community gardens.</p><a class="btn" href="#">How to join</a></div>
       <div><h3 class="ds">Support the work</h3><p>Become a patron of the magazine and the artists it pays.</p><a class="btn" href="#">Become a patron</a></div>
     </div>
@@ -269,11 +278,12 @@ body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
     <div><span class="lab">Manifesto</span><h1 class="ds">A Manifesto for Civilizational Renewal</h1></div>
     <figure><img src="img/walking.jpg" alt="Collage: people walking through grey clouds toward a torn opening onto a yellow field"><figcaption><span class="no">Fig. 1</span>Walking toward the field. Collage, artist to be credited.</figcaption></figure>
   </section>
-  <article class="text pad">
+  <article class="text pad white">
     <p class="ded">For all the living beings whose heart burns to see a new world emerge.</p>
     <p class="drop">Human civilization has always been a story of transformation, of old worlds dying and new ones being born. We are living through such moments. The crises of our time, ecological, political, social and spiritual, are not separate emergencies to be managed one by one. They are the symptoms of a civilization whose foundations are cracking. And as in every great turning, crisis carries within it the seed of rebirth.</p>
     <div class="pull"><span>We are a movement called to bring forth a renaissance.</span><span>We are seed-bearers pioneering a world that works for everyone.</span><span>We create a new world through our work.</span><span>We are the bridge between the dying past and the future unborn.</span></div>
     <p>So what will be this Renaissance we are seeding? It is yet to be known but we answer to the call of a dawn, calling us to value interbeingness, awakening to the wisdom of the whole, inner-evolution and dancing with the richness of complexity.</p>
+    <p>We gather once a month on a <a class="tl" href="#">Global Connection Call</a>, open to anyone who feels this call too.</p>
     <p class="soil">Life as an art. In this soil we plant the seeds of a Renaissance.</p>
     <ol class="litany"><li>Our work is a practice of hope, because where there is hope there is action and where there is action there is vitality, life and change.</li><li>Our work is mystical, political, ethical, spiritual, religious and artistic.</li><li>Our work expresses the good through community, the truth through wisdom and beauty through art.</li><li>Our work is to calm our inner landscape so we can listen deeply for the whole which we are always part of.</li><li>Our work is to create a space to be with the unknown and the possibility of creation that comes with it.</li><li>Our work is to witness joy, darkness, hope, sadness, tragedies and miracles and for those to guide us into living wisdom.</li><li>Our work is to inquire and listen for a world that works for everyone and everything.</li><li>Our work is to let go of and develop what is needed for a renaissance to be born.</li><li>Our work dances with the shadow to integrate them, so we are no longer run by them and take responsibility for the suffering it has caused to others.</li><li>Our work is to inquire into the nature of reality through embodied empirical practices and rigorous thinking, as the quality of our thinking leads to the quality of our speech. We seed the future with our words.</li><li>Our work honors our ancestors’ efforts whilst learning from their mistakes.</li><li>Our work stands to liberate ourselves from nihilism and relativism and to go beyond the limitation of the superiority, equality and inferiority complex.</li><li>Our work is a demonstration of the power of vulnerability with others and authenticity with oneself.</li><li>Our work is a practice of being with our cognitive dissonance and freeing ourselves from the painful shackles of our discriminating biases.</li><li>Our work is understanding and compassionate while being expressed and unapologetic.</li><li>Our work is contemplative and activist at the same time.</li><li>Our work is to sit in silence together, pray and activate our oracular bodies with rituals in an embrace to mother earth.</li><li>Our work remembers joy as transformative practice and so we have the inner fuel to pass through times of darkness.</li><li>Our work explores impermanence and eternity in touching the ultimate dimension and linking it to the relative world.</li><li>Our work is in the emerging interbeing.</li><li>Our work is life as an art.</li></ol>
   </article>
