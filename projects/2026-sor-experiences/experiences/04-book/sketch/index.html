@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Book · Seeds of Renaissance (rough sketch)</title>
+<style>
+  /* ROUGH SKETCH, lifted from 00-home/sketch (frame 4) to stand in on the home page until build/ exists.
+     Illuminated letters: Cinzel Decorative (sketch only). Other faces by name, shown where installed. */
+  @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+  body { margin: 0; }
+  .x-book {
+    --night: #080707;
+    --daylight: #efebe4;
+    --gold: #e8c46a;
+    --body: "Bricolage Grotesque", system-ui, sans-serif;
+    --illum: "Cinzel Decorative", "Trajan Pro", serif;
+    position: relative; height: 450vh;            /* tall scroll track */
+    background: var(--night); color: var(--daylight);
+  }
+  .x-book *, .x-book *::before, .x-book *::after { box-sizing: border-box; }
+  .x-book__stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+  .x-book__img { position: absolute; left: 50%; top: 58%; width: min(94vw, 1000px); transform: translate(-50%, -50%); will-change: transform, filter;
+    /* fade the museum-case edges of the photo into black */
+    -webkit-mask-image: radial-gradient(ellipse 58% 62% at 50% 52%, #000 60%, transparent 100%); mask-image: radial-gradient(ellipse 58% 62% at 50% 52%, #000 60%, transparent 100%); }
+  .x-book__glyph { position: absolute; left: 0; top: 0; font-family: var(--illum); font-weight: 700; color: var(--gold); text-shadow: 0 0 10px rgba(232,196,106,.8), 0 0 28px rgba(232,160,60,.45); will-change: transform, opacity; font-size: clamp(1.8rem, 4.6vw, 3.6rem); line-height: 1; opacity: 0; }
+  .x-book__targets { position: absolute; left: 0; right: 0; top: 16%; display: flex; justify-content: center; gap: .9em; font-family: var(--illum); font-weight: 700; font-size: clamp(1.8rem, 4.6vw, 3.6rem); line-height: 1; visibility: hidden; flex-wrap: wrap; padding-inline: 16px; }
+  .x-book__targets span { display: inline-flex; }
+  .x-book__caption { position: absolute; left: 0; right: 0; bottom: max(5vh, 16px); margin: 0; text-align: center; padding-inline: 16px; font-family: var(--body); font-size: clamp(1rem, 1.7vw, 1.3rem); color: var(--daylight); opacity: 0; transition: opacity 1s ease; }
+</style>
+</head>
+<body>
+<section class="x-book" id="book" aria-label="The Book">
+  <div class="x-book__stage">
+    <img class="x-book__img" src="assets/kiefer-book.webp" alt="A heavy open book of lead">
+    <div class="x-book__targets" aria-hidden="true"><span>COURSES</span><span>PAPERS</span></div>
+    <div class="x-book__glyphs" aria-label="Courses, Papers"></div>
+    <p class="x-book__caption">Sharing what we have learned on our journey over the past decades.</p>
+  </div>
+</section>
+
+<script>
+(() => {
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const ease = t => t * t * (3 - 2 * t);
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const root = document.querySelector('.x-book');
+  const stage = root.querySelector('.x-book__stage'), book = root.querySelector('.x-book__img');
+  const glyphBox = root.querySelector('.x-book__glyphs'), cap = root.querySelector('.x-book__caption');
+  const targets = [...root.querySelectorAll('.x-book__targets > span')];
+  const words = ['COURSES', 'PAPERS'];
+  let glyphs = [];
+
+  function progress() { const r = root.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); }
+
+  function buildGlyphs() {
+    glyphBox.innerHTML = ''; glyphs = [];
+    const sr = stage.getBoundingClientRect();
+    targets.forEach((el, wi) => {
+      el.textContent = '';
+      [...words[wi]].forEach(ch => { const s = document.createElement('span'); s.textContent = ch; el.appendChild(s); });
+    });
+    targets.forEach(el => [...el.children].forEach(sp => {
+      const r = sp.getBoundingClientRect();
+      const g = document.createElement('span');
+      g.className = 'x-book__glyph'; g.textContent = sp.textContent; g.setAttribute('aria-hidden', 'true');
+      glyphBox.appendChild(g);
+      glyphs.push({ el: g, tx: r.left - sr.left, ty: r.top - sr.top,
+        // where it first glows: somewhere on the open pages (fractions of the book box)
+        bx: .1 + Math.random() * .8, by: .2 + Math.random() * .55, rot: Math.random() * 30 - 15, d: Math.random() * .12 });
+    }));
+  }
+
+  function scene(p) {
+    // fall: accelerating drop, heavy landing, small settle
+    const f = seg(p, 0, .16);
+    const drop = f < .85 ? -1 + Math.pow(f / .85, 2) : -0.035 * Math.sin(Math.PI * (f - .85) / .15);
+    const glow = seg(p, .2, .4) * (1 - .5 * seg(p, .75, .95));
+    book.style.transform = `translate(-50%, calc(-50% + ${drop * 110}vh))`;
+    book.style.filter = `drop-shadow(0 0 ${glow * 40}px rgba(232,196,106,${glow * .45})) brightness(${1 + glow * .15})`;
+    const br = book.getBoundingClientRect(), sr = stage.getBoundingClientRect();
+    glyphs.forEach(g => {
+      const on = seg(p, .22 + g.d, .36 + g.d);                    // glow on the page
+      const fly = ease(seg(p, .44 + g.d, .7 + g.d));              // rise and assemble
+      const sx = br.left - sr.left + g.bx * br.width, sy = br.top - sr.top + g.by * br.height;
+      const x = lerp(sx, g.tx, fly), y = lerp(sy, g.ty, fly) - Math.sin(fly * Math.PI) * 60;
+      g.el.style.opacity = on;
+      g.el.style.transform = `translate(${x}px, ${y}px) rotate(${lerp(g.rot, 0, fly)}deg) scale(${lerp(.55, 1, fly)})`;
+    });
+    cap.style.opacity = seg(p, .78, .86);
+  }
+
+  let last = -1;
+  function tick() {
+    const p = progress();
+    if (p !== last) { scene(p); last = p; }
+    requestAnimationFrame(tick);
+  }
+  addEventListener('resize', () => { buildGlyphs(); last = -1; });
+  document.fonts.ready.then(() => { buildGlyphs(); requestAnimationFrame(tick); });
+})();
+</script>
+</body>
+</html>

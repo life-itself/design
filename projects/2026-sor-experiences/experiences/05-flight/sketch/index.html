@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight · Seeds of Renaissance (rough sketch)</title>
+<style>
+  /* ROUGH SKETCH, lifted from 00-home/sketch (frame 5) to stand in on the home page until build/ exists.
+     Faces by name, shown where installed. */
+  body { margin: 0; }
+  .x-flight {
+    --paper: #fbfaf7;
+    --ink: #121110;
+    --muted: #8a847c;
+    --display: "Polyamine", "Didot", "Bodoni 72", serif;
+    position: relative; height: 600vh;            /* tall scroll track */
+    background: var(--paper); color: var(--ink);
+  }
+  .x-flight *, .x-flight *::before, .x-flight *::after { box-sizing: border-box; }
+  .x-flight__stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+  .x-flight__ring, .x-flight__swallow { position: absolute; left: 50%; top: 50%; will-change: transform, opacity; }
+  .x-flight__ring { width: min(70vw, 70vh); transform: translate(-50%, -50%); }
+  .x-flight__swallow { width: min(12.3vw, 12.3vh); transform: translate(-50%, -50%); }
+  .x-flight__sky { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .x-flight__line { position: absolute; left: 0; right: 0; bottom: 9vh; margin: 0; text-align: center; font-family: var(--display); text-transform: uppercase; letter-spacing: .1em; font-size: clamp(1.1rem, 2.4vw, 1.8rem); padding-inline: 16px; }
+  .x-flight__line em { font-style: normal; color: var(--muted); }
+</style>
+</head>
+<body>
+<section class="x-flight" id="flight" aria-label="Flight">
+  <div class="x-flight__stage">
+    <img class="x-flight__ring" src="assets/logo-ring.png" alt="">
+    <canvas class="x-flight__sky" aria-label="Swallows fly through a widening portal; trees grow and the birds settle on them"></canvas>
+    <img class="x-flight__swallow" src="assets/swallow.png" alt="Seeds of Renaissance swallow">
+    <p class="x-flight__line">Seeds of Renaissance <em>· line to come</em></p>
+  </div>
+</section>
+
+<script>
+(() => {
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const ease = t => t * t * (3 - 2 * t);
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.querySelector('.x-flight');
+  const ring = root.querySelector('.x-flight__ring'), logoSwallow = root.querySelector('.x-flight__swallow');
+  const logoLine = root.querySelector('.x-flight__line'), sky = root.querySelector('.x-flight__sky'), ctx = sky.getContext('2d');
+  const birdImg = new Image(); birdImg.src = logoSwallow.getAttribute('src');
+  const TREE_WORDS = ['Wisdom', 'Interbeing', 'Inner growth', 'Revoligion', 'Complexity', 'Beyond capitalism'];
+  const birds = Array.from({ length: 70 }, () => ({
+    a: Math.random() * Math.PI * 2,           // entry angle
+    t0: .16 + Math.random() * .38,            // when it flies into the portal
+    orb: .15 + Math.random() * .35,           // flock orbit radius (fraction of min side)
+    w: (.25 + Math.random() * .35) * (Math.random() < .5 ? -1 : 1),
+    ph: Math.random() * Math.PI * 2,
+    sz: .6 + Math.random() * .7,
+  }));
+  let trees = [], perches = [], W = 0, H = 0, dpr = 1;
+
+  function progress() { const r = root.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); }
+
+  function makeTrees() {
+    // deterministic branching per tree; store segments with depth so growth can be scrubbed
+    trees = []; perches = [];
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const n = TREE_WORDS.length, gap = W / n;
+    for (let i = 0; i < n; i++) {
+      const segs = [];
+      const x0 = gap * (i + .5), len = H * (.16 + rnd() * .05);
+      (function br(x, y, a, l, d) {
+        const x2 = x + Math.cos(a) * l, y2 = y + Math.sin(a) * l;
+        segs.push({ x, y, x2, y2, d, wd: Math.max(1, 9 - d * 1.6) });
+        if (d >= 5) { perches.push({ x: x2, y: y2, tree: i }); return; }
+        const k = 2 + (rnd() < .35 ? 1 : 0);
+        for (let j = 0; j < k; j++) br(x2, y2, a + (j - (k - 1) / 2) * (.45 + rnd() * .35) + (rnd() - .5) * .3, l * (.68 + rnd() * .12), d + 1);
+      })(x0, H, -Math.PI / 2 + (rnd() - .5) * .15, len, 0);
+      trees.push({ segs, x0, word: TREE_WORDS[i] });
+    }
+    perches.sort(() => rnd() - .5);           // spread birds across perches
+  }
+
+  function resize() {
+    dpr = Math.min(2, devicePixelRatio || 1);
+    W = sky.clientWidth; H = sky.clientHeight;
+    sky.width = W * dpr; sky.height = H * dpr;
+    makeTrees();
+  }
+
+  function drawBird(x, y, ang, size, alpha) {
+    if (!birdImg.complete || alpha <= 0) return;
+    const bw = size, bh = size * birdImg.height / birdImg.width;
+    ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x, y);
+    ctx.rotate(ang + Math.PI / 4);               // logo swallow faces up-right
+    ctx.drawImage(birdImg, -bw / 2, -bh / 2, bw, bh); ctx.restore();
+  }
+
+  function scene(p, now) {
+    const m = Math.min(W, H), cx = W / 2, cy = H / 2;
+    // logo line, then the logo swallow takes off and returns into the portal
+    logoLine.style.opacity = 1 - seg(p, .08, .14);
+    const s = seg(p, .08, .24);
+    const lx = Math.sin(s * Math.PI) * m * .42, ly = -Math.sin(s * Math.PI * 2) * m * .18;
+    logoSwallow.style.transform = `translate(calc(-50% + ${lx}px), calc(-50% + ${ly}px)) rotate(${s * 50}deg) scale(${1 - s * .85})`;
+    logoSwallow.style.opacity = 1 - seg(p, .22, .25);
+    // the portal widens past the edges of the screen
+    const g = seg(p, .2, .62);
+    ring.style.transform = `translate(-50%, -50%) scale(${1 + Math.pow(g, 2.2) * 9})`;
+    ring.style.opacity = 1 - seg(p, .56, .64);
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+
+    // trees grow from the ground
+    const grow = seg(p, .62, .86);
+    ctx.strokeStyle = '#121110'; ctx.lineCap = 'round';
+    trees.forEach(tr => {
+      tr.segs.forEach(sg => {
+        const k = clamp(grow * 6 - sg.d);              // each depth grows in turn
+        if (k <= 0) return;
+        ctx.lineWidth = sg.wd; ctx.beginPath(); ctx.moveTo(sg.x, sg.y);
+        ctx.lineTo(lerp(sg.x, sg.x2, k), lerp(sg.y, sg.y2, k)); ctx.stroke();
+      });
+      const la = seg(grow, .5, .9);
+      if (la > 0) {
+        ctx.globalAlpha = la; ctx.fillStyle = '#121110'; ctx.textAlign = 'center';
+        ctx.font = `${Math.max(12, m * .026)}px Polyamine, Didot, serif`;
+        const ty = H - H * .05;
+        ctx.lineWidth = 8; ctx.strokeStyle = '#fbfaf7'; ctx.lineJoin = 'round';
+        ctx.strokeText(tr.word.toUpperCase(), tr.x0, ty); ctx.fillText(tr.word.toUpperCase(), tr.x0, ty);
+        ctx.strokeStyle = '#121110';
+        ctx.globalAlpha = 1;
+      }
+    });
+
+    const t = reduced ? 0 : now / 1000;
+    const settle = ease(seg(p, .86, .97));
+    birds.forEach((b, i) => {
+      // 1) fly in from off-screen towards the portal and vanish into it
+      const e = seg(p, b.t0 - .08, b.t0);
+      if (p <= .58) {                                   // once the portal fills the screen, we see the flock within
+        if (e <= 0 || e >= 1) return;
+        const R = Math.hypot(W, H) * .6 * (1 - ease(e));
+        const x = cx + Math.cos(b.a) * R + Math.sin(e * 6 + b.ph) * 20, y = cy + Math.sin(b.a) * R;
+        drawBird(x, y, b.a + Math.PI, m * .05 * b.sz * lerp(1, .2, e), 1);
+        return;
+      }
+      // 2) flock circling within
+      const ang = b.ph + t * b.w;
+      const fx = cx + Math.cos(ang) * m * b.orb * 1.4, fy = cy * .8 + Math.sin(ang * 1.3) * m * b.orb * .7;
+      const heading = Math.atan2(Math.cos(ang * 1.3) * 1.3 * .7, -Math.sin(ang) * 1.4) + (b.w < 0 ? Math.PI : 0);
+      // 3) settle on the trees
+      const pc = perches[i % perches.length];
+      const x = pc ? lerp(fx, pc.x, settle) : fx, y = pc ? lerp(fy, pc.y - 6, settle) : fy;
+      drawBird(x, y, lerp(heading, -Math.PI / 4, settle), m * .04 * b.sz * lerp(1, .7, settle), seg(p, .58, .64));
+    });
+  }
+
+  function tick(now) {
+    const r = root.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < innerHeight) scene(progress(), now);   // only while on screen
+    requestAnimationFrame(tick);
+  }
+  addEventListener('resize', resize);
+  document.fonts.ready.then(() => { resize(); requestAnimationFrame(tick); });
+})();
+</script>
+</body>
+</html>
