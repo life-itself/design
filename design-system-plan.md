@@ -18,7 +18,9 @@ We're happy with the mockup, so we treat it as the source and extract the system
 
 ### Essence
 
-**Authentic, grounded hope.**
+**Grounded hope.** (decided 2026-10-01; option B)
+
+The doula (a skilled, caring presence at birth and at death) is a strong candidate for the brand's guiding image. Still open.
 
 ### Three supporting notes
 
@@ -36,7 +38,7 @@ We're happy with the mockup, so we treat it as the source and extract the system
 - **Where the "muddy" shows: texture and imperfection.** Not muddy colour or raw imagery as the main carrier.
 - **Rigour and warmth: rigour first, then warmth**, but both always present. Pages vary: movement and community pages lean warm; white papers lean rigorous. Even warm pages need the careful thinking underneath.
 - **Images:** the sunrise painting is the clearest "age of Aquarius" problem, even though it's a nice painting.
-- **Is hope the centre?** Not sure yet. Working through it (see below).
+- **Essence:** Grounded hope (option B).
 
 ### Working through: the essence
 
@@ -48,7 +50,7 @@ Candidate essences:
 - C. **Clear-eyed hope.** Puts rigour first (seeing clearly, including the dark), then hope.
 - D. **Doulas of a renaissance.** A role rather than a quality: skilled, caring presence at a birth, and at a death.
 
-Draft recommendation: C or B as the essence, with the doula as the brand's image or archetype.
+**Decision:** B, Grounded hope.
 
 ### Working through: rigour and warmth
 
@@ -60,6 +62,23 @@ Three registers on one skeleton (draft):
 | Study | White papers, essays, research | Rigour dominant; warmth in small touches |
 | Conversation | Manifesto, podcast, magazine, landing page | Balanced |
 | Gathering | Community, events, joining | Warmth dominant; rigour stays in the structure |
+
+### Logo (proposed)
+
+A black swallow at the centre of a radiating circle of red fingerprints, on white.
+
+What it already carries:
+- **Grounded hope, literally:** many human hands (ground, body, community) around a bird in flight (hope, the announcement of spring).
+- **Texture and imperfection:** fingerprints are hand-made, unique and irregular. This is a native texture for the whole system.
+- **Wholeness:** the circle (Christopher Alexander).
+- **Liminality:** the rings radiate like a sunrise or a birth, with the swallow breaking out from the centre.
+- **Colour:** red, black and white. The logo already proposes a palette.
+
+Questions and risks:
+- The red is a bright, clean screen red. A deeper, ink-like red (real stamp or printing ink) might fit "earthy, a bit muddy" better. Worth testing.
+- The swallow silhouette is a common stock shape. A hand-drawn or printmade swallow would be more distinctive and match the craft.
+- At small sizes (favicon, YouTube avatar) the fingerprints turn into pink noise. We need a simplified version, for example the swallow alone or the swallow in a solid ring.
+- Is the logo's red the brand's one living colour? If so, much of the palette follows from it.
 
 ### What it is not
 
@@ -93,6 +112,30 @@ Ambitious, elegant (as a primary quality), mature, restraint, and "holding oppos
 ### Earlier drafts (for reference)
 
 Draft 1 used the mountain and swallow pairs: groundedness, rigour, depth, night, winter, weight and mystery against lightness, joy, community, dawn, spring, movement and announcement. Other pairs: yin and yang, masculine and feminine, complexity and coexisting layers. Draft 1's design translations (for example "hope = gold, dawn imagery") led to the Night to Dawn mockup, which didn't work.
+
+### Reference study: Dark Mountain and Emergence (2026-10-01)
+
+**Dark Mountain (dark-mountain.net)**
+- **Texture everywhere:** a paper-grain background, and torn ink-brush edges between dark and light sections. Imperfection is part of the structure.
+- **Thresholds are material:** dark and light sections meet at a rough brushed edge, not a digital gradient. This is the version of "Night to Dawn" that works.
+- **Handmade imagery:** woodcuts, linocuts, papercuts, black-and-white printmaking. It feels ancient and contemporary, and it's never glowy or new age, because it's graphic.
+- **Type:** one literary serif for nearly everything (Libre Baskerville), with a small sans (Libre Franklin) for details.
+- **Colour:** almost monochrome: near-black (#262623) and off-white paper (#f4f3f0). Colour comes from the images.
+- **Details:** rotated vertical section labels, small hand-drawn icons, numbered navigation.
+- **Not for us:** about endings, heavy, little warmth or community; some parts feel dated and busy.
+
+**Emergence (emergencemagazine.org)** (text and styles studied; the visuals didn't render in my browser)
+- **Very spare:** a white canvas, black text, a sans (GT America) with a typewriter face (Courier) for labels.
+- **Clear structure:** content sorted by Read / Listen / Watch, and by type (Poem, Essay, Conversation). This is rigour you can see.
+- **Strong editorial voice** in the statement ("a radical act to share stories during dark times").
+- **Not for us:** sleek and clean, close to luxury; nature-mystical photography; no texture or hand.
+
+**What this suggests for Seeds (hypotheses to test)**
+1. **The hand is our texture:** paper, ink, printmaking, and the logo's fingerprints. This is where "a bit muddy" lives.
+2. **Images:** favour engraving, printmaking, drawing and honest photography over glowing paintings. The Doré engravings fit; the sunrise painting doesn't.
+3. **Thresholds are material** (torn paper, ink edges), not digital gradients.
+4. **Colour mostly ink and paper**, with colour coming from images and perhaps one living colour from the logo's red.
+5. **Rigour through visible structure**, like Emergence's Read / Listen / Watch, in a calm grid.
 
 ## Step 2: colour
 
@@ -179,6 +222,7 @@ A brand board page showing colour roles in all three modes, type scale, buttons,
 | 2026-10-01 | The pasted colour list (blue, red, gold, white, black) is for feeling only; colours are designed from the feel, not from that list |
 | 2026-10-01 | Night to Dawn judged not working (some ideas worth keeping); stepped back to nail the feel first |
 | 2026-10-01 | Feel draft 2: essence plus deep sourcing, crafted rigour, liminal integration; character "a little off-centre"; references added |
+| 2026-10-01 | Essence decided: Grounded hope. Logo (swallow in fingerprints) recorded; Dark Mountain and Emergence studied |
 | 2026-10-01 | First Night to Dawn build: mountain night, limestone dawn, first light (apricot) for hope and action on night, plum kept for action on dawn |
 
 ## Next step
