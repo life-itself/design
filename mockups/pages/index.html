@@ -1,0 +1,402 @@
+<title>Seeds Website Pages</title>
+<script>document.body.dataset.joy="on"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<style>
+@font-face{font-family:"Polyamine";src:local("Polyamine"),local("Polyamine-Regular"),local("Polyamine Regular");font-display:swap}
+@font-face{font-family:"Appful Grotesque";src:local("Appful Grotesque"),local("AppfulGrotesque-Regular"),local("Appful Grotesque Regular");font-display:swap}
+:root{--f-bg:#f3f3f1;--f-surface:#fff;--f-ink:#1d1e20;--f-muted:#60636a;--f-rule:#dcdcd8;--f-chip:#e8e8e4;--f-accent:#3a4a8c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}}
+:root[data-theme="dark"]{--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--f-bg);color:var(--f-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:0 64px}
+.wrap{max-width:1300px;margin-inline:auto}
+.f-head{padding-block:40px 20px;display:grid;gap:12px;max-width:880px}
+.f-head h1{margin:0;font-size:clamp(26px,3.6vw,38px);line-height:1.1}
+.f-head p{margin:0;color:var(--f-muted)}
+.brief{background:var(--f-surface);border:1px solid var(--f-rule);border-radius:8px;padding:18px 22px;display:grid;gap:10px;font-size:14.5px}
+.brief h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--f-accent)}
+.brief p{margin:0}.brief ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.f-tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--f-bg);border-bottom:1px solid var(--f-rule);display:flex;gap:8px 20px;flex-wrap:wrap;align-items:center;padding-block:10px;margin-bottom:8px}
+.f-tools .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.f-tools .grp>span{font-size:12px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em;margin-right:4px}
+.f-tools button,.f-tools a{font:inherit;font-size:13px;color:var(--f-ink);background:var(--f-chip);border:1px solid transparent;padding:6px 12px;border-radius:999px;cursor:pointer;text-decoration:none}
+.f-tools button[aria-pressed="true"]{background:var(--f-ink);color:var(--f-bg)}
+.f-tools button:focus-visible,.f-tools a:focus-visible{outline:2px solid var(--f-accent);outline-offset:2px}
+.dir{padding-block:28px 8px;display:grid;gap:10px;scroll-margin-top:60px}
+.dir-l{font-size:13px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em}
+.dir-l b{color:var(--f-ink);font-weight:600}
+.browser{border:1px solid var(--f-rule);border-radius:8px;overflow:hidden;background:var(--f-surface);box-shadow:0 12px 32px -18px rgb(0 0 0/.25)}
+.bar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--f-rule);font-size:12px;color:var(--f-muted);background:var(--f-chip)}
+.bar .dots{display:flex;gap:5px;min-width:40px}.bar .dots i{width:9px;height:9px;border-radius:50%;background:var(--f-rule);display:block}
+.bar .fl{flex:1;text-align:center}
+.mockwrap{container-type:inline-size;overflow:hidden}
+
+/* Mockups: ink, paper and white, with sunlight for joy. Layout concept: a printed folio that opens into sunlit rooms;
+   rigour lives in the structure (numbered figures, contents, footnotes), joy in light, drawn swallows and people.
+   Roles: ink = text and buttons; red = occasional links only; sun = light and marks, never text. Fixed brand world, not theme-aware. */
+.mock{--display:"Polyamine","Fraunces",Georgia,serif;--body:"Bricolage Grotesque",system-ui,sans-serif;--eyebrow:"Appful Grotesque","Hanken Grotesk",system-ui,sans-serif;--poem:"Fraunces",Georgia,serif;
+  --paper:#fbfaf6;--white:#fff;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;--night:#171613;--chalk:#ece7dc;--nmuted:#a49e93;
+  --red:#e5201c;--sun:#f2c230;--sunlight:#fbefc4;--sunfield:var(--sunlight);
+  position:relative;isolation:isolate;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;color-scheme:light}
+body[data-joy="off"] .mock{--sunfield:var(--paper)}
+body[data-joy="off"] .mock .joy{display:none!important}
+.mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.14;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E")}
+.mock img{display:block;max-width:100%}
+.mock a{color:inherit}
+.mock a:focus-visible,.mock input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.mock .pad{padding-inline:clamp(16px,4cqi,56px)}
+.mock .ds{font-family:var(--display);font-weight:400;letter-spacing:-.005em}
+.mock .lab{font-family:var(--eyebrow);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.mock .muted{color:var(--muted)}
+.mock .poem{font-family:var(--poem);font-style:italic;font-weight:300;font-variation-settings:"SOFT" 100}
+.mock .tl{color:var(--red);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.mock .lit{background:linear-gradient(transparent 58%,var(--sunlight) 58%,var(--sunlight) 92%,transparent 92%);padding-inline:2px}
+body[data-joy="off"] .mock .lit{background:none}
+.mock .btn{font-family:var(--eyebrow);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;padding:13px 22px;border:1px solid var(--ink);color:var(--ink);background:transparent}
+.mock .btn.solid{background:var(--ink);color:var(--paper)}
+.mock figure{margin:0;display:grid;gap:10px}
+.mock figcaption{font-size:14px;line-height:1.45;color:var(--muted);font-style:italic}
+.mock figcaption .no{font-family:var(--eyebrow);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-right:8px;font-weight:600;color:var(--muted)}
+.mock .white{background:var(--white);position:relative;z-index:10}
+.mock .sunlit{background:var(--sunfield);position:relative;z-index:10}
+.mock .mod{padding-block:clamp(44px,7cqi,96px)}
+.mock .mod>.lab{display:block;margin-bottom:clamp(20px,3.6cqi,36px);color:var(--muted)}
+.mock .tear{height:22px;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;margin-top:-21px;position:relative;z-index:11}
+.mock .tear.bot{transform:scaleY(-1);margin-top:0;margin-bottom:-21px}
+.mock .sw{fill:var(--ink)}
+.mock .sun{color:var(--sun);fill:none;stroke:var(--sun);stroke-width:2.2;stroke-linecap:round}
+.mock .sun .disc{fill:var(--sun);stroke:none}
+.mock .flight{position:absolute;pointer-events:none;z-index:2}
+
+.mock .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule);position:relative;z-index:10;background:var(--paper)}
+.mock .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mock .brand img{width:44px;height:44px;mix-blend-mode:multiply}
+.mock .brand span{font-size:clamp(20px,2.4cqi,27px);white-space:nowrap}
+.mock .brand em{font-style:italic}
+.mock .hdr nav{display:flex;gap:20px;flex-wrap:wrap}
+.mock .hdr nav a{text-decoration:none;padding-bottom:3px}
+.mock .hdr nav a.on{border-bottom:1px solid var(--ink)}
+.mock .foot{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:24px;padding-block:44px 32px;background:var(--night);color:var(--chalk);position:relative;z-index:10}
+.mock .foot .tear{background:var(--night);position:absolute;left:0;right:0;top:0;margin-top:-21px}
+.mock .foot b{font-family:var(--display);font-weight:400;font-size:24px;display:block;margin-bottom:8px}
+.mock .foot p{margin:0;color:var(--nmuted);font-size:15px}
+.mock .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px}
+.mock .foot .lab{color:var(--nmuted);display:block;margin-bottom:10px}
+.mock .foot .badge{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:12px}
+.mock .foot .badge img{width:44px;height:44px}
+
+/* Gatherings */
+.mock .ghero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,5cqi,64px);align-items:center;padding-block:clamp(40px,6cqi,84px);overflow:hidden}
+.mock .ghero .txt{display:grid;gap:18px;justify-items:start;position:relative;z-index:3}
+.mock .ghero h1{font-size:clamp(44px,7cqi,96px);line-height:.95;margin:0;text-wrap:balance}
+.mock .ghero p{margin:0;font-size:clamp(17px,1.9cqi,21px);max-width:34ch}
+.mock .ghero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.mock .prints{position:relative;min-height:clamp(300px,40cqi,520px)}
+.mock .prints figure{position:absolute;background:#fff;padding:10px 10px 12px;box-shadow:0 18px 40px -22px rgb(27 25 22/.55)}
+.mock .prints figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mock .prints .p1{width:72%;left:0;top:4%;transform:rotate(-2.2deg)}
+.mock .prints .p2{width:52%;right:0;bottom:0;transform:rotate(2.6deg)}
+.mock .prints .p2 img{aspect-ratio:4/5}
+.mock .ghero .sunmark{position:absolute;width:clamp(90px,14cqi,170px);right:-2%;top:-6%;z-index:1}
+.mock .events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.6cqi,28px)}
+.mock .ev{display:grid;grid-template-rows:auto 1fr;border-top:2px solid var(--ink);background:var(--white)}
+.mock .ev .ph img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mock .ev .body{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:16px 4px 6px}
+.mock .ev .date{font-family:var(--display);font-size:44px;line-height:.9;text-align:center}
+.mock .ev .date small{display:block;font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.mock .ev h3{margin:0 0 4px;font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1}
+.mock .ev p{margin:0;font-size:15px;color:var(--muted)}
+.mock .interlude{text-align:center;display:grid;justify-items:center;gap:18px;position:relative;overflow:hidden}
+.mock .interlude p{margin:0;font-size:clamp(26px,3.6cqi,44px);line-height:1.25;max-width:24ch}
+.mock .hubs{width:100%;border-collapse:collapse;font-size:16px}
+.mock .hubs th{font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--ink)}
+.mock .hubs td{padding:14px 12px 14px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+.mock .hubs td:first-child{font-family:var(--display);font-size:22px}
+.mock .tablewrap{overflow-x:auto}
+
+/* Join */
+.mock .jhero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.mock .jhero img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 30%;opacity:.92}
+.mock .jhero .ov{position:absolute;inset:0;display:grid;align-content:end;padding:clamp(20px,5cqi,64px);padding-bottom:clamp(40px,7cqi,90px);gap:10px}
+.mock .jhero h1{margin:0;font-size:clamp(44px,8cqi,110px);line-height:.92}
+.mock .jhero .lab{color:var(--chalk)}
+.mock .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px);counter-reset:s}
+.mock .step{display:grid;gap:12px;align-content:start;counter-increment:s}
+.mock .step .n{position:relative;width:64px;height:64px;display:grid;place-items:center;font-family:var(--display);font-size:34px}
+.mock .step .n svg{position:absolute;inset:-8px;width:80px;height:80px}
+.mock .step h3{margin:0;font-family:var(--display);font-weight:400;font-size:30px;line-height:1.08}
+.mock .step p{margin:0;color:var(--muted)}
+.mock .step img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mock .voices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px)}
+.mock .voices blockquote{margin:0;display:grid;gap:12px;padding-top:16px;border-top:1px solid var(--ink)}
+.mock .voices blockquote p{margin:0;font-size:22px;line-height:1.35}
+.mock .voices cite{font-style:normal}
+.mock .band{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--sun);padding-block:clamp(36px,5cqi,64px);position:relative;z-index:10;overflow:hidden}
+body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid var(--ink)}
+.mock .band h2{margin:0;font-size:clamp(30px,4.4cqi,56px);line-height:1}
+.mock .band p{margin:8px 0 0;max-width:46ch}
+
+/* Magazine */
+.mock .mag{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5cqi,72px);align-items:start;padding-block:clamp(40px,6cqi,84px)}
+.mock .mag .cover{position:relative}
+.mock .mag .cover img{width:100%;box-shadow:0 30px 60px -32px rgb(27 25 22/.7)}
+.mock .mag h1{font-size:clamp(56px,9cqi,128px);line-height:.9;margin:8px 0 18px}
+.mock .mag .intro{font-size:20px;line-height:1.5;margin:0 0 22px;max-width:40ch}
+.mock .toc{list-style:none;margin:28px 0 0;padding:0;display:grid}
+.mock .toc li{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid var(--rule)}
+.mock .toc li:last-child{border-bottom:1px solid var(--rule)}
+.mock .toc .lab{font-size:11px;color:var(--muted)}
+.mock .toc b{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15}
+.mock .toc span.by{display:block;font-size:14.5px;color:var(--muted)}
+.mock .toc .pg{font-family:var(--eyebrow);font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.mock .poemblock{max-width:640px;margin-inline:auto;display:grid;gap:22px;position:relative}
+.mock .poemblock .lines{font-size:clamp(22px,2.6cqi,30px);line-height:1.5;margin:0}
+.mock .poemblock .sunmark{position:absolute;width:120px;right:-60px;top:-30px}
+.mock .spread{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(18px,3cqi,40px);align-items:end}
+.mock .spread img{width:100%;object-fit:cover}
+.mock .spread .a img{aspect-ratio:4/5}.mock .spread .b img{aspect-ratio:1/1}
+
+/* White paper */
+.mock .wp-head{padding-block:clamp(40px,6cqi,84px) 36px;display:grid;gap:16px;max-width:980px}
+.mock .wp-head h1{font-size:clamp(40px,6cqi,80px);line-height:.98;margin:0;text-wrap:balance}
+.mock .wp-meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:var(--muted)}
+.mock .wp-meta b{color:var(--ink);font-weight:500}
+.mock .wp{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(24px,5cqi,72px);padding-block:clamp(36px,5cqi,64px) clamp(48px,7cqi,96px);border-top:1px solid var(--ink)}
+.mock .wp nav{position:sticky;top:16px;align-self:start;display:grid;gap:4px}
+.mock .wp nav .lab{color:var(--muted);margin-bottom:8px}
+.mock .wp nav a{text-decoration:none;font-size:15px;padding:6px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:28px minmax(0,1fr)}
+.mock .wp nav a span{font-family:var(--eyebrow);font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
+.mock .wp nav a.on{font-weight:600}
+.mock .wp article{max-width:680px;display:grid;gap:22px}
+.mock .wp .abstract{background:var(--paper);border-left:2px solid var(--ink);padding:18px 22px;font-size:17px}
+.mock .wp .abstract .lab{display:block;color:var(--muted);margin-bottom:6px}
+.mock .wp h2{margin:16px 0 0;font-family:var(--display);font-weight:400;font-size:34px;line-height:1.1;display:flex;gap:14px;align-items:baseline}
+.mock .wp h2 small{font-family:var(--eyebrow);font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.1em}
+.mock .wp p{margin:0;font-size:18px;line-height:1.7}
+.mock .wp sup{font-family:var(--eyebrow);font-size:11px;font-weight:600;margin-left:1px}
+.mock .wp sup a{text-decoration:none;color:var(--red)}
+.mock .wp .notes{font-size:14.5px;color:var(--muted);margin:0;padding-left:20px;display:grid;gap:6px;border-top:1px solid var(--rule);padding-top:16px}
+.mock .wp figure img{mix-blend-mode:multiply;max-height:440px;width:auto;margin-inline:auto}
+
+@container (max-width:800px){
+ .mock .hdr nav{display:none}
+ .mock .ghero,.mock .mag,.mock .spread{grid-template-columns:1fr}
+ .mock .events,.mock .steps,.mock .voices{grid-template-columns:1fr}
+ .mock .foot{grid-template-columns:1fr 1fr}
+ .mock .band{grid-template-columns:1fr}
+ .mock .wp{grid-template-columns:1fr}.mock .wp nav{position:static}
+ .mock .toc li{grid-template-columns:1fr auto}.mock .toc li .lab{grid-column:1/-1}
+ .mock .poemblock .sunmark{right:0}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="swallow" viewBox="0 0 100 64"><path d="M50 27 C47 24 41 20 33 16 C24 11 13 8 2 8 C14 12 26 18 36 25 C40 28 43 31 45 33 C42 38 36 46 26 62 C36 54 44 46 48 40 L50 42 L52 40 C56 46 64 54 74 62 C64 46 58 38 55 33 C57 31 60 28 64 25 C74 18 86 12 98 8 C87 8 76 11 67 16 C59 20 53 24 50 27 Z M50 20 C52.5 20 54 22 53 25 L50 28 L47 25 C46 22 47.5 20 50 20 Z"/></symbol>
+  <symbol id="sun" viewBox="0 0 120 120"><circle cx="60" cy="60" r="22" fill="currentColor" stroke="none"/><path d="M92.4 60.0 L92.6 63.4 L92.2 66.8 L91.8 70.3 L90.0 73.2 L88.9 76.6 L84.7 77.8 L83.8 81.2 L82.5 84.7 L79.2 86.2 L76.8 88.7 L72.7 88.0 L70.1 90.3 L66.7 90.5 L63.7 91.9 L60.3 92.2 L57.1 90.3 L53.9 90.5 L50.7 89.9 L46.8 90.6 L43.9 88.7 L42.2 85.3 L38.3 84.8 L37.4 81.0 L34.1 79.4 L33.6 75.8 L32.4 72.8 L28.6 70.8 L29.7 67.0 L29.1 63.8 L26.5 60.7 L26.9 57.2 L29.2 54.1 L27.9 50.3 L30.4 47.6 L31.4 44.4 L34.5 42.3 L34.6 38.3 L37.6 36.3 L39.6 33.4 L42.6 31.6 L46.5 31.7 L49.4 30.3 L52.7 29.9 L55.9 29.4 L59.1 29.4 L62.3 28.7 L65.7 28.2 L68.5 30.8 L72.3 29.8 L74.8 32.2 L77.6 34.0 L81.2 34.7 L83.0 37.8 L84.7 40.7 L87.1 43.0 L89.3 45.6 L88.7 49.5 L92.5 51.8 L90.2 55.6 L92.8 58.7 L93.0 62.1 L90.0 65.1 L91.7 68.9 L89.4 71.6"/><path d="M100.0 60.4 L112.3 60.5 M97.9 80.0 L107.0 84.8 M80.2 97.7 L87.3 110.8 M60.8 101.1 L61.0 115.1 M38.7 94.2 L30.2 108.0 M22.4 80.0 L13.9 84.5 M19.8 57.8 L6.0 57.1 M23.3 38.1 L13.6 32.4 M41.0 22.9 L35.5 12.0 M59.1 19.5 L58.8 7.5 M79.5 22.7 L86.8 8.6 M93.9 38.5 L108.9 29.0 "/></symbol>
+  <symbol id="ring" viewBox="0 0 80 80"><path d="M73.1 40.0 L72.5 43.5 L71.3 46.7 L71.7 50.4 L71.1 54.1 L68.3 56.6 L66.3 59.4 L63.1 61.2 L62.8 65.9 L58.1 65.6 L56.1 68.8 L53.5 71.5 L49.3 70.3 L46.5 73.2 L43.0 74.5 L39.3 73.5 L35.7 73.8 L32.7 70.7 L29.1 70.9 L26.4 68.7 L22.1 69.2 L20.3 65.6 L17.3 63.8 L13.5 62.5 L11.7 59.3 L9.4 56.4 L9.6 52.3 L8.3 49.1 L6.7 45.8 L7.1 42.2 L7.8 38.7 L7.7 35.3 L9.3 32.1 L9.5 28.6 L8.9 24.5 L10.8 21.3 L13.9 19.1 L16.6 16.8 L19.5 14.9 L22.8 13.6 L25.4 11.3 L27.9 8.2 L31.2 6.8 L35.0 7.9 L38.4 6.0 L42.0 6.1 L45.5 6.8 L49.0 7.6 L52.5 8.4 L55.1 11.2 L58.7 11.9 L60.6 15.3 L63.7 17.1 L66.8 19.1 L68.6 22.2 L69.0 25.9 L72.6 28.3 L72.6 32.0 L73.0 35.6 L71.2 39.1 L73.1 42.6 L71.6 45.9 L72.2 49.6 L70.3 52.7 L69.9 56.4"/></symbol>
+ </defs>
+</svg>
+
+<div class="wrap">
+<header class="f-head"><h1>More pages, with joy</h1>
+<p>Four more Seeds of Renaissance pages, one for each register of the site: a gathering page, a joining page, a magazine issue and a white paper. Text is placeholder.</p>
+<div class="brief">
+<h2>What's new: light and joy</h2>
+<ul>
+<li><b>Sunlight.</b> A warm yellow taken from the field in the mood board collage, not the Life Itself yellow. It is used as light: pale sunlit grounds, a hand-drawn sun, a highlighter on a few words, and one full yellow band on the joining page. Never for text.</li>
+<li><b>Swallows in flight</b> drawn across the pages, and a small sun mark: the poetry layer, taken from the logo and the mood board.</li>
+<li><b>More people.</b> Dancers leaping, women braiding hair, the shared meal. We still need photos with children and more everyday joy; none of the current images show children in a way we'd use.</li>
+<li><b>A poetic voice:</b> a soft italic serif for poems, quotes and interludes, alongside Polyamine.</li>
+<li><b>The system holds:</b> black buttons, red only for occasional links, white and paper grounds, the torn edge (now on the footer), numbered figures, contents and footnotes for rigour.</li>
+</ul>
+<p>Use <b>Joy</b> in the toolbar to switch the sunlight and drawings off and compare with the stricter version.</p>
+</div></header>
+<div class="f-tools">
+  <div class="grp"><span>Joy</span><button type="button" data-joy="on" aria-pressed="true">On</button><button type="button" data-joy="off" aria-pressed="false">Off</button></div>
+  <div class="grp"><span>Jump to</span><a href="#gather">Gatherings</a><a href="#join">Join</a><a href="#magazine">Magazine</a><a href="#paper">White paper</a></div>
+</div>
+
+<!-- 1 GATHERINGS -->
+<section class="dir" id="gather"><span class="dir-l"><b>Gatherings</b> · warmest register</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/gather</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#" class="on">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="ghero sunlit pad">
+    <svg class="flight joy" style="left:38%;top:10%;width:min(22cqi,260px);height:auto" viewBox="0 0 260 120"><use href="#swallow" class="sw" x="0" y="40" width="60" height="38" transform="rotate(-8 30 60)"/><use href="#swallow" class="sw" x="90" y="8" width="44" height="28" transform="rotate(6 112 22)"/><use href="#swallow" class="sw" x="170" y="56" width="32" height="20"/></svg>
+    <div class="txt">
+      <span class="lab muted">Gatherings</span>
+      <h1 class="ds">Come and sit with us</h1>
+      <p>Calls, meals, retreats and gardens. Every month, in many places, people meet to make sense of this moment <span class="lit">and to practise what comes next.</span></p>
+      <div class="acts"><a class="btn solid" href="#">Find a gathering</a><a class="btn" href="#">Host one</a></div>
+    </div>
+    <div class="prints">
+      <svg class="sunmark joy" viewBox="0 0 120 120"><use href="#sun" class="sun"/></svg>
+      <figure class="p1"><img src="img/meal.jpg" alt="Friends laughing around a long table in a garden"></figure>
+      <figure class="p2"><img src="img/braid.jpg" alt="Two women braiding hair on a grassy hill"></figure>
+    </div>
+  </section>
+  <section class="mod pad white">
+    <span class="lab">This month</span>
+    <div class="events">
+      <article class="ev"><div class="ph"><img src="img/walking.jpg" alt=""></div><div class="body"><div class="date">15<small>Oct</small></div><div><h3>Global Connection Call</h3><p>Online · 19:30 UK · free · <a class="tl" href="#">Save a place</a></p></div></div></article>
+      <article class="ev"><div class="ph"><img src="img/scrolls.jpg" alt=""></div><div class="body"><div class="date">24<small>Oct</small></div><div><h3>Lantern supper in the garden</h3><p>Bergerac · bring a dish · 20 places</p></div></div></article>
+      <article class="ev"><div class="ph"><img src="img/stones.jpg" alt=""></div><div class="body"><div class="date">8<small>Nov</small></div><div><h3>Stones by the lake: a day of practice</h3><p>Dordogne · €40, or pay what you can</p></div></div></article>
+    </div>
+  </section>
+  <section class="mod pad interlude sunlit">
+    <svg class="joy" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"><use href="#swallow" class="sw" x="10" y="20" width="50" height="32" transform="rotate(-10 35 36)"/><use href="#swallow" class="sw" x="80" y="4" width="36" height="23" transform="rotate(8 98 16)"/></svg>
+    <p class="poem">The swallows come back before the warmth does. We meet the way they arrive: a few, then many.</p>
+    <span class="lab muted">From a member's notebook</span>
+  </section>
+  <section class="mod pad white">
+    <span class="lab">Where we gather</span>
+    <div class="tablewrap"><table class="hubs"><thead><tr><th>Place</th><th>Rhythm</th><th>Next</th><th>Contact</th></tr></thead><tbody>
+      <tr><td>Bergerac</td><td>Monthly supper, seasonal retreats</td><td>24 October</td><td><a class="tl" href="#">Write to the hosts</a></td></tr>
+      <tr><td>London</td><td>Fortnightly reading circle</td><td>30 October</td><td>Through the garden</td></tr>
+      <tr><td>Berlin</td><td>Monthly walk and conversation</td><td>2 November</td><td>Through the garden</td></tr>
+      <tr><td>Online</td><td>Global Connection Call, every month</td><td>15 October</td><td>Open to all</td></tr>
+    </tbody></table></div>
+  </section>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+
+<!-- 2 JOIN -->
+<section class="dir" id="join"><span class="dir-l"><b>Join the movement</b> · warm register</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/join</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#" class="on">Join</a></nav>
+  </header>
+  <section class="jhero">
+    <img src="img/leap.jpg" alt="Dancers in white leaping against a black background">
+    <div class="ov pad"><span class="lab">Join the movement</span><h1 class="ds">Bring your whole self</h1></div>
+  </section>
+  <div class="tear bot" style="background:var(--night)"></div>
+  <section class="mod pad sunlit">
+    <span class="lab">Three ways in</span>
+    <div class="steps">
+      <div class="step"><div class="n"><svg class="joy" viewBox="0 0 80 80"><use href="#ring" class="sun"/></svg>1</div><img src="img/meal.jpg" alt=""><h3>Come to a call</h3><p>An hour online, once a month. No preparation, no commitment.</p></div>
+      <div class="step"><div class="n"><svg class="joy" viewBox="0 0 80 80"><use href="#ring" class="sun"/></svg>2</div><img src="img/braid.jpg" alt=""><h3>Find your garden</h3><p>A small group that meets between the calls, online or near you.</p></div>
+      <div class="step"><div class="n"><svg class="joy" viewBox="0 0 80 80"><use href="#ring" class="sun"/></svg>3</div><img src="img/feet.jpg" alt=""><h3>Seed something</h3><p>Start a reading circle, a supper or a garden where you live. We'll help.</p></div>
+    </div>
+  </section>
+  <section class="mod pad white">
+    <span class="lab">In members' words</span>
+    <div class="voices">
+      <blockquote><p class="poem">“I came for an hour on a Thursday. I stayed for the people who weren't afraid of the dark questions.”</p><cite class="lab muted">A member in Lyon</cite></blockquote>
+      <blockquote><p class="poem">“It's the first place where thinking carefully and laughing loudly happen at the same table.”</p><cite class="lab muted">A member in London</cite></blockquote>
+      <blockquote><p class="poem">“We planted a garden. Then the garden planted us.”</p><cite class="lab muted">A host in Bergerac</cite></blockquote>
+    </div>
+  </section>
+  <section class="band pad">
+    <div><h2 class="ds">The next call is on 15 October</h2><p>Online, 19:30 UK. Bring a question you're living with.</p></div>
+    <a class="btn solid" href="#">Save a place</a>
+  </section>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+
+<!-- 3 MAGAZINE -->
+<section class="dir" id="magazine"><span class="dir-l"><b>Magazine issue</b> · conversation register</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/magazine/mythos</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#" class="on">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="mag pad white">
+    <div class="cover"><img src="img/mythos.jpg" alt="Cover of issue 2, Mythos"></div>
+    <div>
+      <span class="lab muted">Issue #2 · 2026 · 184 pages</span>
+      <h1 class="ds">Mythos</h1>
+      <p class="intro">How myths shape what we call sacred and remember. Art, poetry and essays from forty contributors.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn solid" href="#">Subscribe · €35 a year</a><a class="btn" href="#">Buy this issue</a></div>
+      <ol class="toc">
+        <li><span class="lab">Essay</span><span><b>The myth we are living inside</b><span class="by">On stories too large to see</span></span><span class="pg">p. 12</span></li>
+        <li><span class="lab">Poem</span><span><b>Swallow, return</b><span class="by">Six short poems for spring</span></span><span class="pg">p. 38</span></li>
+        <li><span class="lab">Art</span><span><b>Orpheus</b><span class="by">A portfolio of drawings</span></span><span class="pg">p. 54</span></li>
+        <li><span class="lab">Conversation</span><span><b>Gods, ghosts and grandmothers</b><span class="by">A dialogue on lineage and ritual</span></span><span class="pg">p. 88</span></li>
+      </ol>
+    </div>
+  </section>
+  <section class="mod pad sunlit">
+    <div class="poemblock">
+      <svg class="sunmark joy" viewBox="0 0 120 120"><use href="#sun" class="sun"/></svg>
+      <span class="lab muted">From “Swallow, return”, p. 38</span>
+      <p class="lines poem">Under the eaves the old nest waits,<br>mud and grass and a year of weather.<br>Nothing promised. Then one morning<br>the whole sky leans toward us, singing.</p>
+      <span class="lab muted">Placeholder poem</span>
+    </div>
+  </section>
+  <section class="mod pad white">
+    <span class="lab">From the art pages</span>
+    <div class="spread">
+      <figure class="a"><img src="img/orpheus.jpg" alt=""><figcaption><span class="no">Pl. 1</span>Orpheus, from the portfolio, p. 54.</figcaption></figure>
+      <figure class="b"><img src="img/dore.jpg" alt=""><figcaption><span class="no">Pl. 2</span>Doré’s celestial rose, from the Paradiso, p. 61.</figcaption></figure>
+    </div>
+  </section>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+
+<!-- 4 WHITE PAPER -->
+<section class="dir" id="paper"><span class="dir-l"><b>White paper</b> · study register</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/read/second-renaissance</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#" class="on">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <div class="white" style="position:relative;z-index:10">
+  <header class="wp-head pad">
+    <span class="lab muted">White paper · No. 3 · March 2026</span>
+    <h1 class="ds">The Second Renaissance: A Very Short Introduction</h1>
+    <div class="wp-meta"><span>By <b>The Seeds of Renaissance research group</b></span><span>24 min read</span><span>Version 1.2</span></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn solid" href="#">Download PDF</a><a class="btn" href="#">Cite this paper</a></div>
+  </header>
+  <div class="wp pad">
+    <nav><span class="lab">Contents</span><a class="on" href="#"><span>1</span>Real risk</a><a href="#"><span>2</span>Root cause</a><a href="#"><span>3</span>Radical response</a><a href="#"><span>4</span>Real possibility</a><a href="#"><span>5</span>What we can do now</a><a href="#"><span>·</span>Notes and references</a></nav>
+    <article>
+      <div class="abstract"><span class="lab">Abstract</span>We argue that the converging crises of our time share a root in how we make meaning, and that a renewal on the scale of the first Renaissance is both necessary and possible. We set out the case in four steps.</div>
+      <h2><small>1</small>Real risk</h2>
+      <p>The risks we face are not separate emergencies but symptoms of a civilisation whose foundations are cracking.<sup><a href="#">1</a></sup> Ecological overshoot, political fracture and a loss of shared meaning reinforce one another, so solving them one by one will not be enough.</p>
+      <p><span class="lit">Every great turning carries within it the seed of rebirth.</span> This paper is about that seed: what it is, where it grows and how it can be tended. For the longer argument, see the <a class="tl" href="#">full report</a>.</p>
+      <figure><img src="img/roots.jpg" alt="Ink drawing of a tree and its root system"><figcaption><span class="no">Fig. 1</span>The visible and the hidden: a tree and its root system, in section and in plan. Scale bar 200 cm.</figcaption></figure>
+      <h2><small>2</small>Root cause</h2>
+      <p>Beneath the crises lies a way of seeing that divides the world into parts and forgets the whole.<sup><a href="#">2</a></sup> Changing that way of seeing is slow work, and it is the work this movement exists to do.</p>
+      <ol class="notes"><li>See Part 1 of the full report for the evidence on converging risks.</li><li>On attention and the divided way of seeing, see McGilchrist (2021).</li></ol>
+    </article>
+  </div>
+  </div>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.mock a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault()})});
+  var bs=document.querySelectorAll('.f-tools [data-joy]');
+  bs.forEach(function(b){b.addEventListener('click',function(){
+    document.body.dataset.joy=b.dataset.joy;
+    bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+  })});
+})();
+</script>
