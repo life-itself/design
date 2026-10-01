@@ -2,7 +2,8 @@
 
 A working plan for turning the Direction E mockup into a full brand design system. Update the status column as we go.
 
-- Mockup: https://claude.ai/artifact/DuYLk3Qu3sSn6g1PKqBFqE (home + manifesto pages, Polyamine headings)
+- Mockup (Direction E, Night to Dawn): https://claude.ai/artifact/DuYLk3Qu3sSn6g1PKqBFqE
+- Mockup (Ink and paper, A and B): https://claude.ai/artifact/R8YDUkZrsTMR3NUEq2cfEj (source in `mockups/ink-and-paper/`; images are mood board placeholders)
 - Last updated: 2026-10-01
 
 ## Approach: start from the mockup
@@ -201,6 +202,7 @@ A brand board page showing colour roles in all three modes, type scale, buttons,
 | 2026-10-01 | Feel draft 2: essence plus deep sourcing, crafted rigour, liminal integration; character "a little off-centre"; references added |
 | 2026-10-01 | Essence decided: Grounded hope. Logo (swallow in fingerprints) recorded; Dark Mountain and Emergence studied |
 | 2026-10-01 | Logo red is from the original handprints and adjustable; logo colours are not assumed to be the site palette |
+| 2026-10-01 | Ink and paper mockups built: A (no interface colour) and B (one process ink: red, Prussian blue or gold) |
 | 2026-10-01 | First Night to Dawn build: mountain night, limestone dawn, first light (apricot) for hope and action on night, plum kept for action on dawn |
 
 ## Next step

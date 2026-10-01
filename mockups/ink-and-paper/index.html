@@ -1,0 +1,299 @@
+<title>Seeds Ink and Paper</title>
+<script>document.body.dataset.dir="a";document.body.dataset.ink="red"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300,100;1,9..144,300,100&display=swap">
+<style>
+@font-face{font-family:"Polyamine";src:local("Polyamine"),local("Polyamine-Regular"),local("Polyamine Regular");font-display:swap}
+@font-face{font-family:"Appful Grotesque";src:local("Appful Grotesque"),local("AppfulGrotesque-Regular"),local("Appful Grotesque Regular");font-display:swap}
+/* Frame (the review page around the mockups) follows the viewer's theme */
+:root{--f-bg:#f3f3f1;--f-surface:#fff;--f-ink:#1d1e20;--f-muted:#60636a;--f-rule:#dcdcd8;--f-chip:#e8e8e4;--f-accent:#3a4a8c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}}
+:root[data-theme="dark"]{--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--f-bg);color:var(--f-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:0 64px}
+.wrap{max-width:1300px;margin-inline:auto}
+.f-head{padding-block:40px 20px;display:grid;gap:12px;max-width:860px}
+.f-head h1{margin:0;font-size:clamp(26px,3.6vw,38px);line-height:1.1}
+.f-head p{margin:0;color:var(--f-muted)}
+.brief{background:var(--f-surface);border:1px solid var(--f-rule);border-radius:8px;padding:18px 22px;display:grid;gap:10px;font-size:14.5px}
+.brief h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--f-accent)}
+.brief p{margin:0}.brief ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.f-tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--f-bg);border-bottom:1px solid var(--f-rule);display:flex;gap:8px 20px;flex-wrap:wrap;align-items:center;padding-block:10px;margin-bottom:8px}
+.f-tools .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.f-tools .grp>span{font-size:12px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em;margin-right:4px}
+.f-tools button{font:inherit;font-size:13px;color:var(--f-ink);background:var(--f-chip);border:1px solid transparent;padding:6px 12px;border-radius:999px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.f-tools button[aria-pressed="true"]{background:var(--f-ink);color:var(--f-bg)}
+.f-tools button:focus-visible{outline:2px solid var(--f-accent);outline-offset:2px}
+.f-tools button i{width:10px;height:10px;border-radius:50%;display:block}
+body:not([data-dir="b"]) .b-only{display:none}
+.dir{padding-block:28px 8px;display:grid;gap:10px}
+.dir-l{font-size:13px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em}
+.browser{border:1px solid var(--f-rule);border-radius:8px;overflow:hidden;background:var(--f-surface);box-shadow:0 12px 32px -18px rgb(0 0 0/.25)}
+.bar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--f-rule);font-size:12px;color:var(--f-muted);background:var(--f-chip)}
+.bar .dots{display:flex;gap:5px;min-width:40px}.bar .dots i{width:9px;height:9px;border-radius:50%;background:var(--f-rule);display:block}
+.bar .fl{flex:1;text-align:center}
+.mockwrap{container-type:inline-size;overflow:hidden}
+
+/* Mockup: ink and paper. Layout concept: a printed folio, with figures numbered and captioned like plates in a field guide; dark sections are inked and meet the paper at a torn edge.
+   The mockup is a fixed brand world and does not follow the viewer's theme. */
+.mock{--display:"Polyamine","Fraunces",Georgia,serif;--body:"Bricolage Grotesque",system-ui,sans-serif;--eyebrow:"Appful Grotesque","Hanken Grotesk",system-ui,sans-serif;
+  --paper:#eeeae1;--paper2:#e3ddd0;--ink:#1b1916;--muted:#5d584f;--rule:#cbc4b6;
+  --night:#171613;--chalk:#ece7dc;--nmuted:#a49e93;--nrule:#38342e;
+  --acc:var(--ink);--acc-text:var(--muted);--acc-on:var(--paper);--hl:var(--ink);
+  position:relative;isolation:isolate;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;color-scheme:light}
+body[data-dir="b"][data-ink="red"] .mock{--acc:#9b2a1e;--acc-text:#9b2a1e;--acc-on:#f5f0e7;--hl:#9b2a1e}
+body[data-dir="b"][data-ink="blue"] .mock{--acc:#1e3d70;--acc-text:#1e3d70;--acc-on:#f5f0e7;--hl:#1e3d70}
+body[data-dir="b"][data-ink="gold"] .mock{--acc:#b98b2f;--acc-text:#7a5a15;--acc-on:#1b1916;--hl:#7a5a15}
+.mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.33;mix-blend-mode:multiply;background-image:url("NOISE")}
+.mock img{display:block;max-width:100%}
+.mock a{color:inherit}
+.mock a:focus-visible,.mock input:focus-visible,.mock li:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.mock .ds{font-family:var(--display);font-weight:400;letter-spacing:-.005em}
+.mock .lab{font-family:var(--eyebrow);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.mock figure{margin:0;display:grid;gap:10px}
+.mock figcaption{font-size:14px;line-height:1.45;color:var(--muted);font-style:italic;max-width:46ch}
+.mock figcaption .no{font-family:var(--eyebrow);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text);margin-right:8px;font-weight:600}
+.mock .night figcaption{color:var(--nmuted)}
+body[data-dir="b"] .mock .night figcaption .no{color:var(--chalk)}
+.mock .pad{padding-inline:clamp(16px,4cqi,56px)}
+
+.mock .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule)}
+.mock .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mock .brand img{width:46px;height:46px;mix-blend-mode:multiply}
+.mock .brand span{font-size:clamp(20px,2.4cqi,28px);white-space:nowrap}
+.mock .brand em{font-style:italic}
+.mock .hdr nav{display:flex;gap:20px;flex-wrap:wrap}
+.mock .hdr nav a{text-decoration:none}
+
+.mock .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5cqi,72px);align-items:center;padding-block:clamp(36px,6cqi,80px)}
+.mock .hero .txt{display:grid;gap:18px;justify-items:start}
+.mock .hero h1{font-size:clamp(40px,6.4cqi,88px);line-height:.98;margin:0;text-wrap:balance}
+.mock .hero p{margin:0;font-size:clamp(17px,1.9cqi,21px);max-width:34ch}
+.mock .hero .lab{color:var(--muted)}
+.mock .btn{font-family:var(--eyebrow);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;padding:13px 22px;border:1px solid var(--ink);color:var(--ink);background:transparent}
+.mock .btn.solid{background:var(--acc);border-color:var(--acc);color:var(--acc-on)}
+.mock .night .btn{border-color:var(--chalk);color:var(--chalk)}
+
+.mock .mod{padding-block:clamp(44px,7cqi,96px);border-top:1px solid var(--rule)}
+.mock .mod>.lab{display:block;margin-bottom:clamp(22px,4cqi,40px);color:var(--muted)}
+.mock .believe{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5cqi,72px);align-items:start}
+.mock .believe p{margin:0 0 20px;font-size:clamp(20px,2.4cqi,28px);line-height:1.38;font-weight:300;text-wrap:pretty}
+.mock .believe .hl{font-family:var(--display);color:var(--hl)}
+.mock .believe .sig{font-family:var(--eyebrow);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.mock .believe figure img{mix-blend-mode:multiply}
+
+.mock .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.6cqi,32px)}
+.mock .way{display:grid;gap:10px;align-content:start;text-decoration:none}
+.mock .way .ph{overflow:hidden;background:var(--paper2)}
+.mock .way img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .8s ease}
+.mock .way.light img{object-fit:contain;mix-blend-mode:multiply;padding:10%}
+.mock .way:hover img{transform:scale(1.03)}
+.mock .way .no{font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text);font-weight:600}
+.mock .way h3{margin:0;font-size:clamp(24px,2.5cqi,32px);line-height:1.05}
+.mock .way p{margin:0;font-size:15.5px;color:var(--muted)}
+
+.mock .tear{height:22px;background:var(--night);-webkit-mask:url("TEAR") 0 0/100% 100% no-repeat;mask:url("TEAR") 0 0/100% 100% no-repeat;margin-top:-1px}
+.mock .tear.bot{transform:scaleY(-1);margin-top:-1px;margin-bottom:-1px}
+.mock .night{background:var(--night);color:var(--chalk);padding-block:clamp(40px,6cqi,84px)}
+.mock .night>.lab{display:block;color:var(--nmuted);margin-bottom:clamp(22px,4cqi,40px)}
+.mock .sel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5cqi,64px);align-items:start}
+.mock .sel ul{list-style:none;margin:0;padding:0;display:grid}
+.mock .sel li{padding:16px 0;border-top:1px solid var(--nrule);display:grid;gap:4px;cursor:pointer}
+.mock .sel li:last-child{border-bottom:1px solid var(--nrule)}
+.mock .sel li .lab{color:var(--nmuted)}
+.mock .sel li b{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.7cqi,34px);line-height:1.12;opacity:.62;transition:opacity .2s}
+.mock .sel li .by{color:var(--nmuted);font-size:15.5px}
+.mock .sel li.on b,.mock .sel li:hover b{opacity:1}
+.mock .sel .pic{position:sticky;top:12px}
+.mock .sel .pic img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--chalk)}
+
+.mock .print{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5cqi,72px);align-items:center;background:var(--paper2);border-top:0}
+body[data-dir="b"] .mock .print{background:var(--acc);color:var(--acc-on)}
+body[data-dir="b"] .mock .print .lab,body[data-dir="b"] .mock .print figcaption,body[data-dir="b"] .mock .print figcaption .no{color:var(--acc-on);opacity:.85}
+body[data-dir="b"] .mock .print .btn{border-color:var(--acc-on);color:var(--acc-on)}
+.mock .print img{width:100%;max-width:400px;box-shadow:0 30px 50px -30px rgb(27 25 22/.7)}
+.mock .print figure{justify-items:center}
+.mock .print h2{font-size:clamp(36px,5cqi,64px);line-height:1;margin:8px 0 14px}
+.mock .print p{margin:0 0 20px;max-width:40ch}
+
+.mock .cal{display:grid}
+.mock .cal .r{display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:18px;padding:18px 0;border-top:1px solid var(--rule);align-items:baseline}
+.mock .cal .r:last-child{border-bottom:1px solid var(--rule)}
+.mock .cal .d{font-family:var(--eyebrow);font-weight:600;font-size:14px;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.mock .cal b{font-family:var(--display);font-weight:400;font-size:26px;display:block;line-height:1.2}
+.mock .cal small{font-size:14.5px;color:var(--muted)}
+.mock .cal .r a{font-family:var(--eyebrow);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--acc-text);white-space:nowrap}
+body:not([data-dir="b"]) .mock .cal .r a{color:var(--ink)}
+
+.mock .engage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px)}
+.mock .engage div{display:grid;gap:12px;align-content:start;justify-items:start;padding-top:18px;border-top:2px solid var(--ink)}
+.mock .engage h3{margin:0;font-size:30px;line-height:1.1}
+.mock .engage p{margin:0;color:var(--muted);max-width:30ch}
+.mock input{font-family:var(--body);font-size:16px;padding:12px 14px;border:1px solid var(--ink);background:transparent;color:var(--ink);width:100%;max-width:300px;border-radius:0}
+.mock .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;border-top:1px solid var(--rule);color:var(--muted)}
+.mock .foot img{width:34px;height:34px;mix-blend-mode:multiply}
+
+/* Manifesto */
+.mock .mhero{background:var(--night);color:var(--chalk);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5cqi,64px);align-items:end;padding-block:clamp(36px,6cqi,72px)}
+.mock .mhero h1{font-size:clamp(38px,5.6cqi,76px);line-height:1;margin:10px 0 0;text-wrap:balance}
+.mock .mhero .lab{color:var(--nmuted)}
+.mock .mhero img{width:100%;aspect-ratio:1/1.05;object-fit:cover}
+.mock .text{max-width:680px;margin-inline:auto;padding-block:clamp(36px,6cqi,80px);display:grid;gap:26px}
+.mock .text p{margin:0;font-size:19px;line-height:1.65;text-wrap:pretty}
+.mock .text .ded{font-family:var(--display);font-size:24px;line-height:1.3;color:var(--hl)}
+.mock .text .drop::first-letter{font-family:var(--display);float:left;font-size:4.6em;line-height:.8;padding:6px 10px 0 0;color:var(--hl)}
+.mock .pull{padding:28px 0;border-block:1px solid var(--ink);font-family:var(--display);font-size:clamp(26px,3.4cqi,38px);line-height:1.2;display:grid;gap:8px}
+.mock .soil{font-family:var(--display);font-size:26px!important;line-height:1.25!important}
+.mock .litany{list-style:none;margin:0;padding:0;counter-reset:l;display:grid}
+.mock .litany li{counter-increment:l;display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--rule);font-size:18px;line-height:1.5}
+.mock .litany li::before{content:counter(l,upper-roman) ".";font-family:var(--eyebrow);font-size:12px;letter-spacing:.1em;font-weight:600;color:var(--acc-text);padding-top:5px}
+body:not([data-dir="b"]) .mock .litany li::before{color:var(--muted)}
+.mock .litany li:last-child{font-family:var(--display);font-size:28px;line-height:1.25;border-bottom:1px solid var(--rule);color:var(--hl)}
+
+@container (max-width:780px){
+ .mock .hdr nav{display:none}
+ .mock .hero,.mock .believe,.mock .sel,.mock .print,.mock .engage,.mock .mhero{grid-template-columns:1fr}
+ .mock .ways{grid-template-columns:1fr 1fr}
+ .mock .sel .pic{display:none}
+ .mock .cal .r{grid-template-columns:1fr;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){.mock .way img{transition:none}}
+</style>
+
+<div class="wrap">
+<header class="f-head"><h1>Ink and paper</h1>
+<p>Two directions for the Seeds of Renaissance design system, on the home page and the manifesto. Built from the mood board: analogue process, grain, figures captioned like plates, torn edges between paper and ink.</p>
+<div class="brief">
+<h2>What to compare</h2>
+<ul>
+<li><b>A · Ink and paper.</b> Warm black, off-white paper, grain. No interface colour at all: colour comes only from the images. Calls to action are solid black.</li>
+<li><b>B · Plus one ink.</b> The same base, plus one process colour used as a single extra ink: calls to action, figure numbers, one lit phrase, the magazine block, the manifesto's drop cap and numerals. Try deep red (etching ink), Prussian blue (cyanotype) and gold (gilt). Only one at a time, never together.</li>
+</ul>
+<p><b>Shared by both.</b> Figures are numbered and captioned like plates in a field guide, as a visible sign of rigour. The dark "Selected work" section is inked onto the page with a torn edge rather than a gradient. The sunrise painting is gone; the hero is the collage of people walking through cloud toward the yellow field.</p>
+<p><b>Images are placeholders from the mood board, for inspiration only.</b> Most can't be used on the live site without rights; the 1901 Loïe Fuller portrait and the root drawings are likely public domain. The logo red is unchanged for now.</p>
+</div></header>
+<div class="f-tools">
+  <div class="grp"><span>Direction</span><button type="button" data-dir="a" aria-pressed="true">A · Ink and paper</button><button type="button" data-dir="b" aria-pressed="false">B · Plus one ink</button></div>
+  <div class="grp b-only"><span>Ink</span><button type="button" data-ink="red" aria-pressed="true"><i style="background:#9b2a1e"></i>Deep red</button><button type="button" data-ink="blue" aria-pressed="false"><i style="background:#1e3d70"></i>Prussian blue</button><button type="button" data-ink="gold" aria-pressed="false"><i style="background:#b98b2f"></i>Gold</button></div>
+</div>
+
+<section class="dir"><span class="dir-l">Home</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+
+  <section class="hero pad">
+    <div class="txt">
+      <span class="lab">Gathering · Thursday 15 October</span>
+      <h1 class="ds">The Global Connection Call</h1>
+      <p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p>
+      <a class="btn solid" href="#">Save a place</a>
+    </div>
+    <figure><img src="img/walking.jpg" alt="Collage: people walking through grey clouds toward a torn opening onto a yellow field"><figcaption><span class="no">Fig. 1</span>Walking toward the field. Collage, artist to be credited.</figcaption></figure>
+  </section>
+
+  <section class="mod pad">
+    <span class="lab">What we believe</span>
+    <div class="believe">
+      <div>
+        <p>Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them. Within that breakdown something is trying to be born. <span class="hl">We are a movement of people making sense of this moment and practising what comes next, together.</span></p>
+        <span class="sig">Vision and movement for civilisational renewal</span>
+      </div>
+      <figure><img src="img/roots.jpg" alt="Ink drawing of a tree and its root system, in section and in plan"><figcaption><span class="no">Fig. 2</span>The visible and the hidden. A tree and its root system, in section and in plan; scale bar 200 cm.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="mod pad">
+    <span class="lab">Take part</span>
+    <div class="ways">
+      <a class="way" href="#"><span class="ph"><img src="img/braiding.jpg" alt="Two women braiding hair on a grassy hill"></span><span class="no">Fig. 3a · Gather</span><h3 class="ds">Connection calls</h3><p>Monthly, online, open to all.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/dancers.jpg" alt="Three dancers bending forward together"></span><span class="no">Fig. 3b · Practise</span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/hand.jpg" alt="An earth-caked hand holding a small daisy"></span><span class="no">Fig. 3c · Belong</span><h3 class="ds">Community gardens</h3><p>Conversation between the calls.</p></a>
+      <a class="way light" href="#"><span class="ph"><img src="img/wildflower.jpg" alt="Ink drawing of a wildflower with its roots"></span><span class="no">Fig. 3d · Seed</span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
+    </div>
+  </section>
+
+  <div class="tear"></div>
+  <section class="night pad">
+    <span class="lab">Selected work</span>
+    <div class="sel">
+      <ul class="sel-list">
+        <li class="on" tabindex="0" data-img="img/mountain.jpg" data-cap="Over the Mountains. Snow peak under star trails."><span class="lab">Podcast</span><b>Over the Mountains</b><span class="by">Conversations with Iain McGilchrist, Dougald Hine and Roberto Mangabeira Unger</span></li>
+        <li tabindex="0" data-img="img/eye.jpg" data-cap="Seeing the whole. Ink print, artist to be credited."><span class="lab">Essay</span><b>The Second Renaissance: A Very Short Introduction</b><span class="by">Real risk, root cause, radical response, real possibility</span></li>
+        <li tabindex="0" data-img="img/frame.jpg" data-cap="The threshold. Print, signed /B."><span class="lab">Manifesto</span><b>A Manifesto for Civilizational Renewal</b><span class="by">For all the living beings whose heart burns to see a new world emerge</span></li>
+        <li tabindex="0" data-img="img/fuller.jpg" data-cap="Loïe Fuller, 1901. Photograph by Falk."><span class="lab">Art</span><b>Orpheus</b><span class="by">From the magazine, Issue #2</span></li>
+      </ul>
+      <figure class="pic"><img class="sel-img" src="img/mountain.jpg" alt="Image for the selected work"><figcaption><span class="no">Fig. 4</span><span class="sel-cap">Over the Mountains. Snow peak under star trails.</span></figcaption></figure>
+    </div>
+  </section>
+  <div class="tear bot"></div>
+
+  <section class="mod print pad">
+    <figure><img src="img/mythos.jpg" alt="Cover of magazine issue 2, Mythos"><figcaption><span class="no">Fig. 5</span>Issue #2, Mythos. Printed yearly.</figcaption></figure>
+    <div>
+      <span class="lab">In print · Issue #2</span>
+      <h2 class="ds">Mythos</h2>
+      <p>How myths shape what we call sacred and remember. Art, poetry and essays from forty contributors, in a yearly printed issue.</p>
+      <a class="btn" href="#">Subscribe · €35 a year</a>
+    </div>
+  </section>
+
+  <section class="mod pad">
+    <span class="lab">Coming up</span>
+    <div class="cal">
+      <div class="r"><span class="d">15 Oct</span><span><b>Global Connection Call</b><small>Online · 19:30 UK / 20:30 CET · free</small></span><a href="#">Save a place</a></div>
+      <div class="r"><span class="d">7 – 14 Oct</span><span><b>Intro to Collective Action</b><small>Six short online sessions · €20, refunded if you attend all six</small></span><a href="#">Register</a></div>
+      <div class="r"><span class="d">Under way</span><span><b>Praxis Ecology, with Valérie Duvauchelle</b><small>Six sessions over ten weeks · €250</small></span><a href="#">Next intake</a></div>
+    </div>
+  </section>
+
+  <section class="mod pad">
+    <span class="lab">Engage</span>
+    <div class="engage">
+      <div><h3 class="ds">The Greenhouse</h3><p>Our newsletter: new releases, gatherings and ways in.</p><input id="em1" type="email" placeholder="Your email" aria-label="Email"><a class="btn solid" href="#">Subscribe</a></div>
+      <div><h3 class="ds">Join the movement</h3><p>Come to a call, then find your people in the community gardens.</p><a class="btn" href="#">How to join</a></div>
+      <div><h3 class="ds">Support the work</h3><p>Become a patron of the magazine and the artists it pays.</p><a class="btn" href="#">Become a patron</a></div>
+    </div>
+  </section>
+  <footer class="foot pad lab"><span>Seeds of Renaissance</span><img src="img/logo.png" alt=""></footer>
+</div></div></div></section>
+
+<section class="dir"><span class="dir-l">Manifesto</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/manifesto</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="mhero pad">
+    <div><span class="lab">Manifesto</span><h1 class="ds">A Manifesto for Civilizational Renewal</h1></div>
+    <figure><img src="img/eclipse.jpg" alt="Stippled drawing of a total solar eclipse"><figcaption><span class="no">Fig. 1</span>Total eclipse: the corona, drawn in stipple.</figcaption></figure>
+  </section>
+  <div class="tear bot"></div>
+  <article class="text pad">
+    <p class="ded">For all the living beings whose heart burns to see a new world emerge.</p>
+    <p class="drop">Human civilization has always been a story of transformation, of old worlds dying and new ones being born. We are living through such moments. The crises of our time, ecological, political, social and spiritual, are not separate emergencies to be managed one by one. They are the symptoms of a civilization whose foundations are cracking. And as in every great turning, crisis carries within it the seed of rebirth.</p>
+    <div class="pull"><span>We are a movement called to bring forth a renaissance.</span><span>We are seed-bearers pioneering a world that works for everyone.</span><span>We create a new world through our work.</span><span>We are the bridge between the dying past and the future unborn.</span></div>
+    <p>So what will be this Renaissance we are seeding? It is yet to be known but we answer to the call of a dawn, calling us to value interbeingness, awakening to the wisdom of the whole, inner-evolution and dancing with the richness of complexity.</p>
+    <p class="soil">Life as an art. In this soil we plant the seeds of a Renaissance.</p>
+    <ol class="litany"><li>Our work is a practice of hope, because where there is hope there is action and where there is action there is vitality, life and change.</li><li>Our work is mystical, political, ethical, spiritual, religious and artistic.</li><li>Our work expresses the good through community, the truth through wisdom and beauty through art.</li><li>Our work is to calm our inner landscape so we can listen deeply for the whole which we are always part of.</li><li>Our work is to create a space to be with the unknown and the possibility of creation that comes with it.</li><li>Our work is to witness joy, darkness, hope, sadness, tragedies and miracles and for those to guide us into living wisdom.</li><li>Our work is to inquire and listen for a world that works for everyone and everything.</li><li>Our work is to let go of and develop what is needed for a renaissance to be born.</li><li>Our work dances with the shadow to integrate them, so we are no longer run by them and take responsibility for the suffering it has caused to others.</li><li>Our work is to inquire into the nature of reality through embodied empirical practices and rigorous thinking, as the quality of our thinking leads to the quality of our speech. We seed the future with our words.</li><li>Our work honors our ancestors’ efforts whilst learning from their mistakes.</li><li>Our work stands to liberate ourselves from nihilism and relativism and to go beyond the limitation of the superiority, equality and inferiority complex.</li><li>Our work is a demonstration of the power of vulnerability with others and authenticity with oneself.</li><li>Our work is a practice of being with our cognitive dissonance and freeing ourselves from the painful shackles of our discriminating biases.</li><li>Our work is understanding and compassionate while being expressed and unapologetic.</li><li>Our work is contemplative and activist at the same time.</li><li>Our work is to sit in silence together, pray and activate our oracular bodies with rituals in an embrace to mother earth.</li><li>Our work remembers joy as transformative practice and so we have the inner fuel to pass through times of darkness.</li><li>Our work explores impermanence and eternity in touching the ultimate dimension and linking it to the relative world.</li><li>Our work is in the emerging interbeing.</li><li>Our work is life as an art.</li></ol>
+  </article>
+  <footer class="foot pad lab"><span>Seeds of Renaissance</span><img src="img/logo.png" alt=""></footer>
+</div></div></div></section>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.mock a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault()})});
+  document.querySelectorAll('.mock .sel').forEach(function(sel){
+    var items=sel.querySelectorAll('li'),img=sel.querySelector('.sel-img'),cap=sel.querySelector('.sel-cap');
+    function pick(li){items.forEach(function(x){x.classList.remove('on')});li.classList.add('on');img.src=li.dataset.img;cap.textContent=li.dataset.cap}
+    items.forEach(function(li){['mouseenter','focus','click'].forEach(function(ev){li.addEventListener(ev,function(){pick(li)})})});
+  });
+  ['dir','ink'].forEach(function(k){
+    var bs=document.querySelectorAll('.f-tools [data-'+k+']');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      document.body.dataset[k]=b.dataset[k];
+      bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    })});
+  });
+})();
+</script>
