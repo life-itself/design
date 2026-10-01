@@ -27,6 +27,32 @@ This first set comes from the art manifesto, which was designed for near black-a
 - The aura and glow images (two speckled figures, glowing hand) are the closest to the new-age register.
 - Most of these images are inspiration only. Anything used on the site needs rights: our own photography, commissioned work, licensed images or public domain.
 
+## Synthesis after the second batch (colour, more black and white, and "not us")
+
+**It's about analogue process, not black and white as such.** In [[Sylvie on b and white]], the attraction to black and white is described as going to the essence: less distraction, older original photography, exposure, grain, texture, non-digital, craft. The colour images confirm this: their colour also comes from a physical process.
+
+**Colours in the colour set are material colours:**
+- Prussian blue from cyanotype (the hands, the butterfly)
+- Deep red from etching ink and brush (Baobab Flower, the calligraphy, the doves)
+- Gold and ochre from gold leaf and gilt stamping (the sun, the book cover, the sunflower)
+- Muted teal, ochre and rust from cut paper on black (Grass of Parnassus, the swallows)
+- Purple from bookcloth
+
+**Usually one colour per piece.** Most colour images are one colour plus dark or paper: tone on tone, like a print run with a single extra ink. Colour is still an event, as in the first batch.
+
+**Note:** red, deep blue and gold returned on their own, as materials rather than as a list. They match the emotional tones written earlier, which were set aside as a colour spec.
+
+### Lessons from [[moodboard-not-us]]
+- **Not wellness:** yoga retreats, sunlit arms raised, feel-good with no shadow (Plum Village, the yoga class, the Perspectiva essay grid).
+- **Not luxury:** cinematic, exclusive, amber low light (Kempinski).
+- **Not selling hard:** urgency banners, "top 1%", logo walls, star ratings (Dragonfruit, Aura Labs, the shop pages). Credibility must come from depth, not borrowed proof.
+- **Not sleek and contemporary:** Perspectiva is closest in subject, which makes it the most important warning.
+- **Tasteful isn't enough:** Sereth has cream and elegance but no personality. The near misses fail on character.
+- **Not merchandised spirituality:** the enso turned into a logo on a t-shirt reads as a lack of care and rigour.
+
+### Palette hypothesis (to test)
+**Ink and paper, plus one ink at a time.** A warm black and an off-white with grain as the base. A small set of process colours (a deep ink red, a Prussian blue, a gold or ochre), used **one per composition**, never together, like a single extra ink in a print.
+
 ## Liked from the Night to Dawn mockup
 
 ![[Pasted image 20261001110957.png]]
@@ -176,3 +202,174 @@ The "Engage" section: the dawn gradient coming out of the dark section, Polyamin
 - A stark black-and-white print. A thick black frame with rough, ink-like edges surrounds a tall white rectangle, and three tiny dark figures sit on its edges, one at the bottom left, one at the right and one hanging from the top. There is a small signature, possibly "/B.", at the bottom right.
 - Context from the user: none given yet, only the image.
 - Noticing: a lot of empty white space, and the small figures give it scale and a sense of looking through a doorway or window. Like the [[print-black-ink-eye-iris-with-tiny-falling-figure|eye print]], it uses tiny figures against a big black-and-white form, and the rough edge looks hand-printed.
+
+## Painting: four white doves glowing on deep red
+
+![[painting-four-white-doves-glowing-on-deep-red.webp]]
+
+- A painting of four white doves in flight against a deep, saturated red background. The birds are soft-edged and lit as if from within, with a pale warm glow on the wings.
+- Context from the user: none given yet, only the image.
+- Noticing: pale birds on a dark ground, as in the [[photo-blurred-white-birds-swirling-in-dark-sepia|sepia birds]], but in colour. The red connects it to the [[print-red-and-blue-koi-circling-on-black|koi]] and the [[painting-red-brush-calligraphy-character-on-cream|calligraphy]].
+
+## Image: glowing blue human figure in radiating field lines
+
+![[image-glowing-blue-human-figure-in-radiating-field-lines.webp]]
+
+- A blue-on-black image of a standing human figure outlined in pale glowing blue, with a dense field of fine lines streaming out from the body and curving round it, like magnetic field lines or iron filings.
+- Context from the user: none given yet, only the image.
+- Noticing: it is the blue counterpart to the [[image-two-speckled-human-figures-one-with-glowing-aura|speckled figures]] and the [[photo-glowing-fingerprints-on-dark-hand-silhouette|glowing hand]], with energy around a body. The blue also pairs with the red in the [[print-red-and-blue-koi-circling-on-black|koi]].
+
+## Photo: two women braiding hair on a grassy hill
+
+![[photo-two-women-braiding-hair-on-a-grassy-hill.png]]
+
+- A vintage sepia-toned photograph of two women seen from behind, sitting on a grassy hillside under a pale cloudy sky. One has a very long braid and is braiding the other's hair.
+- Context from the user: none given yet, only the image.
+- Noticing: a quiet moment of care between two people, outdoors and unposed, in a soft, slightly formal old-photograph style. It pairs with the [[photo-elderly-hands-braiding-long-grey-hair|elderly hands braiding]], the same act at a different scale, wide here and close-up there.
+
+## Cyanotype: overlapping hands in blue with stitched detail
+
+![[cyanotype-overlapping-hands-in-blue-with-stitched-detail.png]]
+
+- A blue cyanotype-style image of several overlapping hands, with the fingers and palm showing pale against deep blue. There is fine white stitching or embroidery on a few fingertips and a small white leaf-like sprig at the upper right. The number "10" is printed in the top corner, so it looks like a scan from a book or catalogue.
+- Context from the user: none given yet, only the image.
+- Noticing: the deep, even blue with soft, ghostly overlaps, and the hand-stitched detail added on top. It is another hand image, with the [[photo-earth-caked-hand-holding-small-daisy|earth-caked hand]], the [[photo-glowing-fingerprints-on-dark-hand-silhouette|glowing hand]] and the [[photo-elderly-hands-braiding-long-grey-hair|braiding hands]]. The blue also matches the [[image-glowing-blue-human-figure-in-radiating-field-lines|blue figure]].
+
+## Pattern: swallows in flight, cream and teal on charcoal
+
+![[pattern-swallows-in-flight-cream-and-teal-on-charcoal.png]]
+
+- A pattern of swallows in flight in cream and soft teal-blue on a dark charcoal ground. The birds are drawn in a classic illustrated style with fine feather detail, and are scattered at different angles. It looks like a wallpaper or fabric design.
+- Context from the user: none given yet, only the image.
+- Noticing: muted, restrained colour, with pale birds on a dark ground like the [[photo-blurred-white-birds-swirling-in-dark-sepia|sepia birds]] and the [[painting-four-white-doves-glowing-on-deep-red|red doves]], but crisp and decorative instead of glowing. It is the most pattern-like image so far, so it may show how a motif can repeat.
+
+## Photo: painted woman holding a toddler in a green thicket
+
+![[photo-painted-woman-holding-toddler-in-green-thicket.jpg]]
+
+- A colour photograph of a woman and a toddler standing unclothed in front of dense green shrubs, with dry grass at the bottom of the frame. The woman's face and body are marked with white and grey pigment, soil or ash, and a thin red line runs down the centre of her face and torso. Both look straight at the camera with serious expressions.
+- Context from the user: none given yet, only the image.
+- Noticing: a direct, ritual-like portrait, with the body treated as part of the landscape. The cool, deep green sets off the warm skin tones and the single red line. It is the first colour photograph of people in the set, and it ties to the care between people in the [[photo-two-women-braiding-hair-on-a-grassy-hill|braiding photo]] and to the earth-marked body in the [[photo-earth-caked-hand-holding-small-daisy|earth-caked hand]].
+
+## Photo: snowy mountain peak in warm brown film tones
+
+![[photo-snowy-mountain-peak-in-warm-brown-film-tones.jpg]]
+
+- A photograph of a steep snow-covered mountain under a flat grey sky. The bare rock shows dark brown against the white snow, and the colours are muted and slightly warm, like film. There is visible grain, and loose rock on the slope in the foreground.
+- Context from the user: none given yet, only the image.
+- Noticing: a near-monochrome landscape, with the dark rock tracing the shape of the slopes like brushstrokes. It is the daytime, warmer counterpart to the [[photo-snowy-mountain-peak-under-star-trails-black-and-white|mountain under star trails]], and the same mountain subject.
+
+## Photo: vintage portrait in a vast flowing white cloak, signed "Loie Fuller" (1901)
+
+![[photo-vintage-portrait-in-vast-flowing-white-cloak-signed-loie-fuller-1901.png]]
+
+- A vintage black-and-white studio portrait. A figure stands small at the centre in an enormous pale silk cloak that spreads out across the floor in long folds, against a black background. The signature "Loie Fuller" is handwritten across the lower part of the cloak, and the corner reads "Copyright 1901 Falk". The source file name (`master-pnp-cph-3b37278u`) looks like a Library of Congress Prints & Photographs catalogue number.
+- Context from the user: none given yet, only the file.
+- Noticing: pale fabric against black, like the [[photo-dancers-in-white-leaping-against-black|leaping dancers]], and the cloak turns a single body into a large, sculptural, almost mountain-like shape. It also fits the dance images and the glowing white-on-dark group.
+- Converted from TIFF to PNG so that it displays in Obsidian. The original is still in Downloads.
+
+## Collage: Grass of Parnassus, paper flowers on black
+
+![[collage-grass-of-parnassus-paper-flowers-on-black.webp]]
+
+- A botanical paper collage. Tall, slender stems carry white flowers above a cluster of rounded leaves in teal, ochre, olive and rust, all set on a solid black ground. A small handwritten label at the lower left reads "Parnassia Palustris, Grass of Parnassus", and an orange "MD" monogram sits at the lower right. That is consistent with the cut-paper botanical collages of Mary Delany, but I haven't confirmed the attribution.
+- Context from the user: none given yet, only the image.
+- Noticing: flowers glowing against black, with muted, earthy colour and a hand-made look. It is a botanical study like the [[illustration-root-system-diagram-with-soil-depth-scale|root diagrams]] and the [[illustration-fire-ball-meteor-over-starfield-juvisy-1899|plates]], but built from cut paper like the [[collage-giant-lily-torn-layered-flower-hills-person-in-red-field|lily collage]], and with the pale-on-black look of the [[pattern-swallows-in-flight-cream-and-teal-on-charcoal|swallows]].
+
+## Book cover: gold child riding a stork on purple cloth
+
+![[book-cover-gold-child-riding-a-stork-on-purple-cloth.webp]]
+
+- A vintage cloth book cover in deep purple, with a small gold-stamped illustration at the centre. A child holding a sprig sits on the back of a large bird in flight, which looks like a stork or heron, over a strip of water or marsh. The cloth weave and some wear are visible, and there is no title text on this side.
+- Context from the user: none given yet, only the image.
+- Noticing: a single small gold motif on a lot of plain colour, with the worn, tactile feel of old bookbinding. The figure carried by a bird is a gentle, hopeful image, and it connects to the [[pattern-swallows-in-flight-cream-and-teal-on-charcoal|swallows]] and the other bird images. It is the first purple in the set, and the first book cover.
+
+## Drawing: fine ink wildflower with roots on white
+
+![[drawing-fine-ink-wildflower-with-roots-on-white.png]]
+
+- A delicate pen-and-ink drawing of a whole small flowering plant (it looks like a buttercup, but I'm not sure). Slender stems arc out with small flowers and buds, above a tuft of lobed leaves and a fine web of roots. It sits alone in a lot of empty white space, with no labels or scale.
+- Context from the user: none given yet, only the image.
+- Noticing: the roots are drawn as carefully as the flowers, so the whole plant is shown, above and below ground. Like the [[illustration-tree-above-ground-and-root-system-plan-view|tree and root plan]] and the [[illustration-root-system-diagram-with-soil-depth-scale|root diagram]], it treats the underground part as equal, but here it is a quiet drawing and not a scientific record.
+
+## Illustration: dense grass root system, Lolium multiflorum
+
+![[illustration-dense-grass-root-system-lolium-multiflorum.png]]
+
+- A fine ink drawing of the root system of a grass, with a small tuft above the ground line and a very dense mass of roots spreading and hanging down far below it. A depth scale in cm and soil horizons (A, B) are on the left. A handwritten label at the top reads "Lolium multiflorum" (Italian ryegrass), followed by figure numbers and what may be a name that I can't read.
+- Context from the user: none given yet, only the image.
+- Noticing: this is the densest of the three root drawings, and the roots dwarf the small plant above. It is from the same kind of archival source as the [[illustration-root-system-diagram-with-soil-depth-scale|root diagram]] and the [[illustration-tree-above-ground-and-root-system-plan-view|tree and root plan]], and the same family of drawings as the [[drawing-fine-ink-wildflower-with-roots-on-white|wildflower]].
+
+## Photo: diptych of pale leaves on black over dark leaves on cream
+
+![[photo-diptych-pale-leaves-on-black-over-dark-leaves-on-cream.webp]]
+
+- A two-part sepia print, split across the middle. The top half shows a sprig of pale, light-catching leaves with a bud against black. The bottom half shows the opposite: dark branches and leaves silhouetted against a pale, mottled cream wall. It looks like a scan from a printed page, with a grainy, aged look.
+- Context from the user: none given yet, only the image.
+- Noticing: a light-on-dark and dark-on-light inversion in one frame, which is the same pairing as the [[print-red-and-blue-koi-circling-on-black|koi]], and it brings the pale-on-black look of the dancers and birds to a plant subject. The sepia tone and paper grain match the [[photo-blurred-white-birds-swirling-in-dark-sepia|sepia birds]].
+
+## Print: Baobab Flower II, dark red etching on red (2011)
+
+![[print-baobab-flower-ii-dark-red-etching-on-red-2011.webp]]
+
+- An edition print of a large flower, printed in dark red-brown ink on red paper, with the red sheet mounted on black. The pencil inscription underneath reads "1/10", "Baobab Flower II", an illegible signature and "2011".
+- Context from the user: none given yet, only the image.
+- Noticing: a tone-on-tone print in one red, with a heavy, hand-printed look, and the flower cropped large and close. It is the most saturated red in the set and sits with the [[print-red-and-blue-koi-circling-on-black|koi]], the [[painting-red-brush-calligraphy-character-on-cream|calligraphy]] and the [[painting-four-white-doves-glowing-on-deep-red|doves]], and it is also a botanical subject like the [[collage-grass-of-parnassus-paper-flowers-on-black|Grass of Parnassus]].
+
+## Photo: wilting sunflower head, gold on black
+
+![[photo-wilting-sunflower-head-gold-on-black.png]]
+
+- A low-key colour photograph of a drooping, dried sunflower head against pure black. The petals are curled and papery in amber and orange, the seed head is dense and textured, and the stem fades into the dark below.
+- Context from the user: none given yet, only the image.
+- Noticing: decay shown as beautiful, with warm gold and amber light on a black ground and fine texture in the seeds and petals. It is a flower that is past its peak but still luminous, and it joins the gold-on-dark and pale-on-black images such as the [[collage-grass-of-parnassus-paper-flowers-on-black|Grass of Parnassus]] and the [[painting-four-white-doves-glowing-on-deep-red|doves]]. It also fits the [[photo-earth-caked-hand-holding-small-daisy|earth-caked hand]], with its quiet, unsentimental treatment of life.
+
+## Illustration: red spider lily (Lycoris radiata) on aged paper
+
+![[illustration-red-spider-lily-lycoris-radiata-on-aged-paper.webp]]
+
+- A botanical-style illustration of clusters of red spider lilies, drawn in fine red line with soft blue-green stems on warm, stained, aged-looking paper with a deckled edge. A small label reads "Lycoris radiata Herb". Japanese text runs down the left edge, and as far as I can read it, it lists the flower's folk names (higanbana, manjushage and others). Three tiny red labels near the lower flowers appear to read 臍帯, 血塊 and 子宮口 (umbilical cord, blood clot, cervix), which suggests the lower flowers are meant to double as anatomical forms. The text is very small, so treat this reading as tentative.
+- Context from the user: none given yet, only the image.
+- Noticing: a single red line colour on warm paper, in the manner of an old botanical or medical plate, with the flower and the body blended. It sits with the [[illustration-vintage-anatomical-engraving-on-cream-page|anatomical engraving]] and the other plates, and with the red group of [[print-baobab-flower-ii-dark-red-etching-on-red-2011|Baobab Flower II]], the [[print-red-and-blue-koi-circling-on-black|koi]] and the [[painting-red-brush-calligraphy-character-on-cream|calligraphy]], and with the [[collage-grass-of-parnassus-paper-flowers-on-black|botanical collage]].
+
+## Painting: total solar eclipse with corona on a deep blue sky
+
+![[painting-total-solar-eclipse-corona-on-deep-blue-sky.webp]]
+
+- A painting of a total solar eclipse. A dark disc sits low in the frame with a pale, radiating corona around it, a bright "diamond ring" flare at the upper right and small red prominences at the edge. The sky is a deep, brushy blue, and one star glows near the top. There is a signature and some text in the lower right corner, partly cut off, that may include "California", but I can't read it reliably.
+- Context from the user: none given yet, only the image.
+- Noticing: a dark circle with light radiating from its edge, like the iris in the [[print-black-ink-eye-iris-with-tiny-falling-figure|eye print]] and the dark disc the [[print-red-and-blue-koi-circling-on-black|koi]] circle around. The deep blue joins the [[image-glowing-blue-human-figure-in-radiating-field-lines|blue figure]] and the [[cyanotype-overlapping-hands-in-blue-with-stitched-detail|cyanotype]], and the astronomy ties to the [[illustration-fire-ball-meteor-over-starfield-juvisy-1899|fire-ball plate]] and the [[photo-snowy-mountain-peak-under-star-trails-black-and-white|star trails]].
+
+## Drawing: stippled solar eclipse corona, white on black
+
+![[drawing-stippled-solar-eclipse-corona-white-on-black.webp]]
+
+- A black-and-white drawing of a total solar eclipse. A solid black disc sits at the centre, with its corona built up from fine white dots that thin out into the dark, and a few scattered stars. It looks like an observational drawing made with stippling.
+- Context from the user: none given yet, only the image.
+- Noticing: the same subject as the [[painting-total-solar-eclipse-corona-on-deep-blue-sky|eclipse painting]], but reduced to a single black circle and stippled light. The dot texture is close to the speckle of the [[image-two-speckled-human-figures-one-with-glowing-aura|speckled figures]], and the dark circle with light at its edge matches the [[print-black-ink-eye-iris-with-tiny-falling-figure|eye print]]. It also joins the astronomy images, such as the [[illustration-fire-ball-meteor-over-starfield-juvisy-1899|fire-ball plate]].
+
+
+
+## Painting: gold leaf sun with wavy rays on ochre
+
+![[painting-gold-leaf-sun-with-wavy-rays-on-ochre.webp]]
+
+- A square painting of a sun as a large disc of gold leaf, with the leaf's seams and uneven patches left visible, ringed by dozens of long wavy rays. It is set on a flat, warm ochre-brown ground. The image has no signature or caption.
+- Context from the user: none given yet, only the image.
+- Noticing: a simple, centred, symmetrical form with a hand-made surface, in two tones of gold on ochre. It is the warmest and most iconic image so far, and the radiating rays echo the two eclipses, the [[painting-total-solar-eclipse-corona-on-deep-blue-sky|painted one]] and the [[drawing-stippled-solar-eclipse-corona-white-on-black|stippled one]], as the light side of the same subject. The gold also matches the [[book-cover-gold-child-riding-a-stork-on-purple-cloth|gold-stamped book cover]] and the [[photo-wilting-sunflower-head-gold-on-black|sunflower]].
+
+## Photo: snowy twin peaks under the Milky Way in blue night
+
+![[photo-snowy-twin-peaks-under-milky-way-in-blue-night.webp]]
+
+- A tall, narrow colour photograph of a snow-covered mountain with two peaks, lit pale against a deep blue night sky packed with stars and the band of the Milky Way. The lower slopes fall away into near-black.
+- Context from the user: none given yet, only the image.
+- Noticing: the third mountain in the set. It is a saturated blue night version, between the [[photo-snowy-mountain-peak-under-star-trails-black-and-white|black-and-white star trails mountain]] and the [[photo-snowy-mountain-peak-in-warm-brown-film-tones|warm brown daytime one]], and it is much more dramatic and polished than either. The blue ties it to the [[painting-total-solar-eclipse-corona-on-deep-blue-sky|eclipse painting]] and the [[image-glowing-blue-human-figure-in-radiating-field-lines|blue figure]], and the stars to the [[illustration-fire-ball-meteor-over-starfield-juvisy-1899|fire-ball plate]].
+
+## Cyanotype: white butterfly in flight on blue
+
+![[cyanotype-white-butterfly-in-flight-on-blue.webp]]
+
+- A cyanotype-style photograph of a pale butterfly caught mid-flight, with a slightly blurred, ghostly glow, against a deep, mottled Prussian blue. There is some dust and scratch marks on the surface. There is no caption.
+- Context from the user: none given yet, only the image.
+- Noticing: pale on deep blue, soft and fleeting. It is the second cyanotype, after the [[cyanotype-overlapping-hands-in-blue-with-stitched-detail|overlapping hands]], and it fits the glowing pale-on-dark group of the [[photo-blurred-white-birds-swirling-in-dark-sepia|sepia birds]]. The blue also ties it to the [[image-glowing-blue-human-figure-in-radiating-field-lines|blue figure]]. It also relates to the earlier butterfly plate once that file arrives.
