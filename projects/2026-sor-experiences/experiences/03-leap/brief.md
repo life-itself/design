@@ -19,12 +19,12 @@ Walking into the unknown. Scary, and yet we hold the possibility of renewal. A l
 | Beat | What you see | Text | Where |
 |---|---|---|---|
 | 1. The cliff | **Empty.** Grey clouds, the road, no people, no tear. The road simply ends in sky, like a cliff edge. | **The future may be dark and unknown.** | Top, over the sky |
-| 2. Walking | The people walk in and up the road, one by one. Real walking figures (walk cycles), not sliding cutouts if possible. Tension builds: they are about to walk off the edge of the sky. | (line 1 holds) | |
+| 2. Walking | The people walk in and up the road, one by one. Real walking figures (walk cycles), not sliding cutouts if possible. Tension builds: they are about to walk off the edge of the sky. Line 1 fades out a moment before line 2, leaving a beat of just the walkers. | (line 1 fades) | |
 | 3. The rip | Just as the rip starts, line 2 appears. As the leaders near the edge, the paper tears **gently, top down**, as if pulled from the top. Not violent. Reveals the yellow field and blue sky; the road now leads into it and the walkers step into the field. | **But the unknown is also full of possibility.** | Bottom, near the road |
-| 4. Join | The scene settles. Earlier text fades out; the invitation appears. | **Come join us.** *Meet others on our Thursday calls.* | Over the image or below it (open) |
-| 5. Onward | A "keep learning" path on to the Book (part 4). | *or keep learning ↓* | With the join |
+| 4. Join | The scene settles. Line 2 fades; the invitation appears as the story's last beat, not a footer. | **Come join us.** *Meet others on our Thursday calls.* | Over the image, lower third (where line 2 was), on a soft dark gradient |
+| 5. Onward | A quiet "keep learning" path on to the Book (part 4). | *or keep learning ↓* | Under the join, smaller |
 
-Not in the field itself: it is too small to carry the text.
+Hierarchy: **Come join us** is the main action (display type, the link); the Thursday line is small beneath it; "keep learning" is smaller still. The join links to a page explaining the call (what, when, sign up), not straight to a Zoom or calendar link. Fallback: if the join doesn't read over the image on phones, move it below the image at phone width only.
 
 ## Craft notes
 
@@ -35,8 +35,6 @@ Not in the field itself: it is too small to carry the text.
 
 ## Open questions
 
-- Join placement: on top of the image, or below it.
-- Does line 1 fade when line 2 arrives, or do both hold until the join?
-- Join link (Thursday call?) and prominence.
+- Join link: the URL of the Thursday call page (`#` until it exists).
 - A different direction, not taken for now: rip away much more of the background, show more of the field, and write the join there.
 - Does colour spill out of the tear into the rest of the frame, or stay contained?

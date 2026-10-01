@@ -23,23 +23,23 @@ Walking into the unknown: scary, yet we hold the possibility of renewal. A leap 
 The frame is one viewport tall. The animation starts by itself when the frame comes into view (IntersectionObserver) and plays once through: no loop, no scrubbing, no replay on scrolling back. The text follows the animation's clock.
 
 1. **The cliff.** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in at the top, over the sky.
-2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 holds.
+2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 fades out a moment before text 2, leaving a beat of just the walkers.
 3. **The rip.** Just before the rip starts, text 2 appears at the bottom, near the road. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
 4. **Into the field.** The walkers step on towards and into the field. The grey scene lightens a little.
-5. **Join.** The earlier text fades out and the invitation appears, either on top of the image or below it (open: make both easy to try). Not inside the field: too small.
+5. **Join.** Text 2 fades and the invitation appears over the image, in the lower third (where text 2 was), on a soft dark gradient for legibility. It is the story's last beat, not a footer. If it doesn't read on phones, move it below the image at phone width only.
 
 ## Text
 
 1. **The future may be dark and unknown.** (top, over the sky)
 2. **But the unknown is also full of possibility.** (bottom, near the road)
-3. **COME JOIN US** (display capitals), then smaller: *Meet others on our Thursday calls* (link: `#` for now) · *or keep learning ↓*
+3. **COME JOIN US** (display capitals; this is the link), then small beneath: *Meet others on our Thursday calls*, then smaller still and secondary: *or keep learning ↓*
 
-Open: whether text 1 fades when text 2 arrives, or both hold until the join.
+The join links to a page about the Thursday call (what, when, sign up), not straight to Zoom or a calendar. Use `#` until the URL exists.
 
 ## Look
 
 - The background image runs **full width**, edge to edge (it looks better that way than a centred square). May need the high-res original photo.
-- Text in warm white `#efebe4`, Polyamine (assume installed locally), laid over the image: line 1 at the top, line 2 at the bottom.
+- Text in warm white `#efebe4`, Polyamine (assume installed locally), laid over the image: line 1 at the top, line 2 and then the join at the bottom.
 - The tear is paper: rough white fibrous edge, slight depth and shadow, as in the source image.
 - Colour stays inside the tear for now (whether it spills out is an open question; make it easy to try).
 - Starts dark grey, ends on the field.
