@@ -203,6 +203,7 @@ A brand board page showing colour roles in all three modes, type scale, buttons,
 | 2026-10-01 | Feel draft 2: essence plus deep sourcing, crafted rigour, liminal integration; character "a little off-centre"; references added |
 | 2026-10-01 | Essence decided: Grounded hope. Logo (swallow in fingerprints) recorded; Dark Mountain and Emergence studied |
 | 2026-10-01 | Logo red is from the original handprints and adjustable; logo colours are not assumed to be the site palette |
+| 2026-10-01 | **Pale yellow (#fbefc4) is a background colour only.** No bright yellow, no yellow highlighting. Woodcut swallow added as a graphic element (seal, flock, divider). Logo shown as a white disc or square tile works well |
 | 2026-10-01 | Feedback: the system has depth and rigour but lacks joy and poetry; black, white and red read as Japanese Zen. Trying a sunlight yellow (from the mood board field, not the Life Itself yellow) as light only, drawn swallows and suns, more people, a soft italic poetic voice |
 | 2026-10-01 | **Buttons are black. The logo red (#E5201C) is used only for occasional links in running text.** Some sections sit on pure white |
 | 2026-10-01 | Feedback on ink and paper v1: torn edge works; too dark overall, too many black-and-white images, needs more white and more joy. v2: near-white paper, softer grain, original photos back, one dark section only |

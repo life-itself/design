@@ -373,3 +373,108 @@ The "Engage" section: the dawn gradient coming out of the dark section, Polyamin
 - A cyanotype-style photograph of a pale butterfly caught mid-flight, with a slightly blurred, ghostly glow, against a deep, mottled Prussian blue. There is some dust and scratch marks on the surface. There is no caption.
 - Context from the user: none given yet, only the image.
 - Noticing: pale on deep blue, soft and fleeting. It is the second cyanotype, after the [[cyanotype-overlapping-hands-in-blue-with-stitched-detail|overlapping hands]], and it fits the glowing pale-on-dark group of the [[photo-blurred-white-birds-swirling-in-dark-sepia|sepia birds]]. The blue also ties it to the [[image-glowing-blue-human-figure-in-radiating-field-lines|blue figure]]. It also relates to the earlier butterfly plate once that file arrives.
+
+---
+
+# Website pictures
+
+Pictures that could be used on the website. They are also part of the mood board, so they sit here in the main board, after the reference images above. Filenames start with `web-`.
+
+A set of nine photographs that look like one shoot: people, stones, soil, water and a shed snake skin, in muted, warm, slightly grainy natural light, mostly outdoors in dry grass and by a lake. Context from the user: usable for the website and also part of the mood board.
+
+### Woman crouching, covering a buried figure with soil
+
+![[web-woman-crouching-covering-buried-figure-with-soil-in-dry-grass.jpg]]
+
+- A woman kneels in dry grass in front of a dark forest, spreading soil with one hand over a large mound. Under the soil you can see a figure lying under it, with dark clothing or tights showing through.
+- Noticing: the earth and burial theme, as in the earth-caked hand ([[photo-earth-caked-hand-holding-small-daisy]]) and the soil-buried face I have still not received. It's a quiet, ritual-like act of care.
+
+### Rain ripples and a circular disturbance on dark water
+
+![[web-rain-ripples-and-circular-disturbance-on-dark-water.jpg]]
+
+- Grey-green water with a pink-tinted sky reflection, covered in small rain rings, with a larger oval patch of agitated water and bubbles at the centre.
+- Noticing: calm, muted and without a person in it, which could work as a background or a breathing space on a page. The large circle echoes the circles elsewhere on the board, such as the [[print-red-and-blue-koi-circling-on-black|koi]] and the [[print-black-ink-eye-iris-with-tiny-falling-figure|eye]].
+
+### Hands cradling a grey rock (flamingo swimsuit, wooden bead bracelet)
+
+![[web-hands-cradling-grey-rock-flamingo-swimsuit-wood-bead-bracelet.jpg]]
+
+- A close crop of two hands holding a rough grey rock against the torso, with a wooden bead bracelet on one wrist and a black swimsuit with a pink flamingo print.
+- Noticing: another hands-and-texture picture, with the [[photo-earth-caked-hand-holding-small-daisy|earth-caked hand]] and the [[photo-elderly-hands-braiding-long-grey-hair|braiding hands]]. The rock is held with care, like something living.
+
+### Woman holding a rock like a baby (flamingo swimsuit)
+
+![[web-woman-holding-rock-like-a-baby-flamingo-swimsuit.jpg]]
+
+- A wider shot of the same woman, in the black flamingo swimsuit, looking down tenderly at a rock cradled in her arms against her stomach, with trees and grass behind.
+- Noticing: the rock is treated like a child, which links it to the birth and care images, including the [[photo-painted-woman-holding-toddler-in-green-thicket|woman and toddler]] and the [[image-baby-inside-translucent-green-egg-membrane|baby in a membrane]]. It is the most direct full-figure shot of the series.
+
+### Two women carrying stones by a lake and a wooden bridge
+
+![[web-two-women-carrying-stones-by-lake-and-wooden-bridge.jpg]]
+
+- A woman in a black top and cream wrap stands barefoot in the foreground holding pale stones, looking away to the side, with a second woman in the flamingo swimsuit carrying a rock on a small arched wooden bridge behind her. There is a lake, reeds and a hazy sky.
+- Noticing: a procession or quiet ritual in a landscape, desaturated and hazy. It reads as a scene more than a portrait.
+
+### Bare feet beside stacked white stones on patterned cloth
+
+![[web-bare-feet-beside-stacked-white-stones-on-patterned-cloth.jpg]]
+
+- Two bare feet in dry grass beside two stacked chalky white stones, with a black and cream patterned cloth behind.
+- Noticing: a low, close, earthy detail picture with strong texture. It is like the earth-caked hand in its grounded tone.
+
+### Hand on an upright lichen stone in dry grass
+
+![[web-hand-on-upright-lichen-stone-in-dry-grass.jpg]]
+
+- A hand with a wooden bead bracelet rests on top of an upright, lichen-spotted stone standing in dry grass, with a tree trunk and reeds behind.
+- Noticing: the stone stands almost like a figure, and the hand like a greeting or a blessing. It is a quiet portrait of an object.
+
+### Shed snake skin hung on a concrete post with wire
+
+![[web-shed-snake-skin-hung-on-concrete-post-with-wire.jpg]]
+
+- A long, papery shed snake skin pinned in curving shapes against a pale concrete post with a loop of wire, in hard sunlight, with green conifer foliage in the foreground.
+- Noticing: shedding and renewal, and a beautiful but unsentimental object, the same sort of thing as the [[photo-wilting-sunflower-head-gold-on-black|wilting sunflower]]. The S-curves are graphic.
+
+### Blindfolded woman feeling through a large book
+
+![[web-blindfolded-woman-feeling-through-a-large-book.jpg]]
+
+- A woman wearing a dark eye mask leans over a big art book open on a worn metal garden table, touching the pages with her fingertips, against a warm stone wall.
+- Noticing: sensing without looking, a different way of "reading", with the book and the old table adding a tactile, human, unpolished feel. It ties to the book plates and illustrations elsewhere on the board.
+
+Open question: I don't know who took these photos or who is in them. I haven't recorded any names. Tell me if they should be credited, and how.
+
+### Red paper lantern over a weathered wall, seen through a blurred gap
+
+![[web-red-paper-lantern-over-weathered-wall-seen-through-blurred-gap.webp]]
+
+- A single red paper lantern with a small tassel hangs among green leaves and ferns in front of a damp, stained, peeling wall. Soft, pale blurred strips frame both sides, as if shot through a gap or past a curtain.
+- Context from the user: none given yet, only the image, added to the website pictures.
+- Noticing: one small saturated red against weathered grey and green, seen through a gap, which is the "small point of colour in a muted field" idea from the [[collage-people-walking-grey-clouds-to-yellow-field|first collage]] and the [[photo-earth-caked-hand-holding-small-daisy|daisy in the hand]]. The red also joins the red group, and the blurred framing makes it feel glimpsed and unposed.
+
+### Stools and a chair among ferns in a courtyard with a stained wall
+
+![[web-stools-and-chair-among-ferns-in-courtyard-with-stained-wall.webp]]
+
+- A group of mismatched wooden and black metal stools and one wooden chair sit among green ferns, in front of a damp, mossy, peeling wall with a boarded-up window. A blurred blue-grey strip on the right frames the scene, as if shot through a gap.
+- Context from the user: none given yet, only the image, added to the website pictures.
+- Noticing: a place that is used but not tidied, with plants taking over, mismatched furniture and weathered surfaces. It looks like the same place and the same through-a-gap framing as the [[web-red-paper-lantern-over-weathered-wall-seen-through-blurred-gap|red lantern]]. It suggests an informal gathering space and reads as lived-in and unpolished, though I'm not sure about the place.
+
+### Bare foot resting on a mossy root among ferns
+
+![[web-bare-foot-resting-on-mossy-root-among-ferns.webp]]
+
+- A close, shallow-focus photograph of a bare foot resting on a gnarled, mossy root, with a fern frond in sharp focus in the foreground and a seated person's legs in a pale blue and white cloth behind. The tones are cool greens, blues and soft skin colour.
+- Context from the user: none given yet, only the image, added to the website pictures.
+- Noticing: the same close-up, grounded, body-in-nature feel as the [[web-bare-feet-beside-stacked-white-stones-on-patterned-cloth|bare feet beside the stones]], but cooler in colour and matching the ferns and damp greens of the [[web-stools-and-chair-among-ferns-in-courtyard-with-stained-wall|courtyard]]. It is probably from the same place and the same shoot as that one.
+
+### Calligraphy brush and ink stick on a white dish, grey linen
+
+![[web-calligraphy-brush-and-ink-stick-on-white-dish-grey-linen.webp]]
+
+- A top-down still life on pale grey linen. A black calligraphy brush with a capped tip lies diagonally across the top, and a black ink stick with gold-embossed characters lies in a small white dish. The characters read 龍門 (which I read as "dragon gate"; a Chinese reader should confirm), and there is a small handwritten mark, "F", on the cloth at the left.
+- Context from the user: none given yet, only the image, added to the website pictures.
+- Noticing: calm, spare and tool-focused, with a lot of empty space and a soft grey and black palette with a small touch of gold and red. It is a quiet still life of the means of making something by hand, which fits the [[painting-red-brush-calligraphy-character-on-cream|calligraphy painting]] on the main board, and it avoids the merchandise treatment of the Zen circle in [[moodboard-not-us|the not-us board]].

@@ -21,3 +21,7 @@ A black swallow at the centre of a radiating circle of red fingerprints, on whit
 2. **The swallow is a common stock silhouette.** A hand-drawn or printmade swallow would be more distinctive and match the brand's craft.
 3. **It fails at small sizes.** On a favicon or YouTube avatar the fingerprints turn into pink noise. We need a simplified version, for example the swallow alone or the swallow in a solid ring.
 4. **We need a set of versions:** full colour, one colour (black on light, light on dark), inverted, and small.
+
+## Liked so far
+
+- The logo set in a **white disc** (footer, avatars) or a **white square tile**. It gives the mark more dynamism and lets it sit on any ground, including night.
