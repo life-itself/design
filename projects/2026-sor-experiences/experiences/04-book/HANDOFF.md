@@ -8,7 +8,9 @@ You are building one standalone piece of an animated, poetic website for **Seeds
 
 ## Your task
 
-Build **The Book** as a standalone, scroll-driven page at `projects/2026-sor-experiences/experiences/04-book/build/index.html` (assets in `build/assets/`). A huge, heavy book made of lead falls out of the darkness, opens, and golden letters rise from its pages to spell what SoR offers: courses and papers.
+Build **The Book** as a standalone, scroll-driven page.
+
+A huge, heavy book made of lead falls out of the darkness, opens, and golden letters rise from its pages to spell what SoR offers: courses and papers.
 
 ## Reference
 

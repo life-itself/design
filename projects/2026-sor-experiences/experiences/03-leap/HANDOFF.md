@@ -8,7 +8,7 @@ You are building one standalone piece of an animated, poetic website for **Seeds
 
 ## Your task
 
-Build **The Leap** as a standalone, scroll-driven page at `projects/2026-sor-experiences/experiences/03-leap/build/index.html` (assets in `build/assets/`). It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
+Build **The Leap** as a standalone page at `projects/2026-sor-experiences/experiences/03-leap/build/index.html` (assets in `build/assets/`). It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
 
 ## The source image
 
@@ -18,26 +18,28 @@ Build **The Leap** as a standalone, scroll-driven page at `projects/2026-sor-exp
 
 Walking into the unknown: scary, yet we hold the possibility of renewal. A leap of faith. Tension builds ("they're going to walk off the edge of the sky!"), then a gentle, not violent, opening into colour. It ends warm and concrete: come and meet us.
 
-## What happens (scroll-driven)
+## What happens (plays on view, not scroll-driven)
 
-The section is tall (about 6 viewports) with a sticky full-screen stage; scroll position scrubs the animation forwards and backwards. Percentages are suggested scroll progress.
+The frame is one viewport tall. The animation starts by itself when the frame comes into view (IntersectionObserver) and plays once through: no loop, no scrubbing, no replay on scrolling back. The text follows the animation's clock.
 
-1. **The cliff (0–10%).** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in.
-2. **Walking (10–55%).** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 gives way to text 2.
-3. **The rip (52–74%).** As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
-4. **Into the field (74–90%).** The walkers step on towards and into the field. The grey scene lightens a little.
-5. **Join (80–100%).** The invitation appears.
+1. **The cliff.** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in at the top, over the sky.
+2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 holds.
+3. **The rip.** Just before the rip starts, text 2 appears at the bottom, near the road. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
+4. **Into the field.** The walkers step on towards and into the field. The grey scene lightens a little.
+5. **Join.** The earlier text fades out and the invitation appears, either on top of the image or below it (open: make both easy to try). Not inside the field: too small.
 
-## Text (placeholders; final wording to come)
+## Text
 
-1. *Walking into the unknown can be frightening.*
-2. *But as we walk, we hold the possibility of renewal.*
+1. **The future may be dark and unknown.** (top, over the sky)
+2. **But the unknown is also full of possibility.** (bottom, near the road)
 3. **COME JOIN US** (display capitals), then smaller: *Meet others on our Thursday calls* (link: `#` for now) · *or keep learning ↓*
+
+Open: whether text 1 fades when text 2 arrives, or both hold until the join.
 
 ## Look
 
-- Stage background around the image: very dark grey `#161616`. The image fills most of the screen (square, about `min(92vw, 78vh)`).
-- Text in warm white `#efebe4`, Polyamine (stand-ins: Libre Caslon Text for lines, Italiana for COME JOIN US), below the image.
+- The background image runs **full width**, edge to edge (it looks better that way than a centred square). May need the high-res original photo.
+- Text in warm white `#efebe4`, Polyamine (assume installed locally), laid over the image: line 1 at the top, line 2 at the bottom.
 - The tear is paper: rough white fibrous edge, slight depth and shadow, as in the source image.
 - Colour stays inside the tear for now (whether it spills out is an open question; make it easy to try).
 - Starts dark grey, ends on the field.
@@ -60,10 +62,11 @@ A rough working version exists in the whole-page sketch: `projects/2026-sor-expe
 
 - One self-contained page; scope all CSS under `.x-leap`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the final state with the text.
+- Plays once on entering view; never loops.
 - No sound.
 
 ## Done when
 
-- `build/index.html` plays on its own, scroll-driven, and reads as the story above.
+- `build/index.html` plays on its own when scrolled into view, once, and reads as the story above.
 - Tell the user what's still rough (plate, walk cycles) and what would fix it.
 - Record progress on beads task `design-323.4` (`bd update design-323.4 --notes "..."`; `bd close design-323.4` when done).
