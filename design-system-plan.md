@@ -172,7 +172,7 @@ The wordmark works. **Open:** a small square symbol or monogram for avatars and 
 
 ## Step 7: test in other contexts
 
-- [ ] YouTube thumbnail: small size, dark, legibility
+- [x] YouTube thumbnail: first draft, four templates (gathering, podcast, manifesto, talk): https://claude.ai/artifact/QEUjrhcpFTu5h9xjHP5Hco
 - [ ] Slide deck: title, content and quote slides
 - [ ] Print: A3 event poster or magazine page (CMYK, paper)
 - [ ] Optional: social square post or story
