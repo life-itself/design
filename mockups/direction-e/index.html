@@ -1,0 +1,502 @@
+<title>Seeds Polyamine Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<style>
+@font-face{font-family:"Polyamine";src:local("Polyamine"),local("Polyamine-Regular"),local("Polyamine Regular");font-display:swap}
+@font-face{font-family:"Appful Grotesque";src:local("Appful Grotesque"),local("AppfulGrotesque-Regular"),local("Appful Grotesque Regular");font-display:swap}
+:root{--f-bg:#f3f3f1;--f-surface:#fff;--f-ink:#1d1e20;--f-muted:#60636a;--f-rule:#dcdcd8;--f-chip:#e8e8e4;--f-accent:#3a4a8c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}}
+:root[data-theme="dark"]{--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--f-bg);color:var(--f-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:0 64px}
+.wrap{max-width:1300px;margin-inline:auto}
+.f-head{padding-block:40px 20px;display:grid;gap:12px;max-width:880px}
+.f-head h1{margin:0;font-size:clamp(26px,3.6vw,38px);line-height:1.1}
+.f-head p{margin:0;color:var(--f-muted)}
+.brief{background:var(--f-surface);border:1px solid var(--f-rule);border-radius:8px;padding:18px 22px;display:grid;gap:10px;font-size:14.5px}
+.brief h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--f-accent)}
+.brief p{margin:0}.brief ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.f-tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--f-bg);border-bottom:1px solid var(--f-rule);display:flex;gap:8px 20px;flex-wrap:wrap;align-items:center;padding-block:10px;margin-bottom:8px}
+.f-tools .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.f-tools .grp>span{font-size:12px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em;margin-right:4px}
+.f-tools button,.f-tools a{font:inherit;font-size:13px;color:var(--f-ink);background:var(--f-chip);border:1px solid transparent;padding:6px 12px;border-radius:999px;cursor:pointer;text-decoration:none}
+.f-tools button[aria-pressed="true"]{background:var(--f-ink);color:var(--f-bg)}
+.f-tools button:focus-visible,.f-tools a:focus-visible{outline:2px solid var(--f-accent);outline-offset:2px}
+.dir{padding-block:28px 8px;display:grid;gap:10px;scroll-margin-top:60px}
+.dir-l{font-size:13px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em}
+.dir-l b{color:var(--f-ink);font-weight:600}
+.browser{border:1px solid var(--f-rule);border-radius:8px;overflow:hidden;background:var(--f-surface);box-shadow:0 12px 32px -18px rgb(0 0 0/.25)}
+.bar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--f-rule);font-size:12px;color:var(--f-muted);background:var(--f-chip)}
+.bar .dots{display:flex;gap:5px;min-width:40px}.bar .dots i{width:9px;height:9px;border-radius:50%;background:var(--f-rule);display:block}
+.bar .fl{flex:1;text-align:center}
+.mockwrap{container-type:inline-size;overflow:hidden}
+
+/* Mockups: ink, paper and white, with sunlight for joy. Layout concept: a printed folio that opens into sunlit rooms;
+   rigour lives in the structure (numbered figures, contents, footnotes), joy in light, drawn swallows and people.
+   Roles: ink = text and buttons; red = occasional links only; sun = light and marks, never text. Fixed brand world, not theme-aware. */
+.mock{--display:"Polyamine","Fraunces",Georgia,serif;--body:"Bricolage Grotesque",system-ui,sans-serif;--eyebrow:"Appful Grotesque","Hanken Grotesk",system-ui,sans-serif;--poem:"Fraunces",Georgia,serif;
+  --paper:#fbfaf6;--white:#fff;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;--night:#171613;--chalk:#ece7dc;--nmuted:#a49e93;
+  --red:#e5201c;--sun:#f2c230;--sunlight:#fbefc4;--sunfield:var(--sunlight);
+  position:relative;isolation:isolate;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;color-scheme:light}
+body[data-joy="off"] .mock{--sunfield:var(--paper)}
+body[data-joy="off"] .mock .joy{display:none!important}
+.mock::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9;opacity:.14;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E")}
+.mock img{display:block;max-width:100%}
+.mock a{color:inherit}
+.mock a:focus-visible,.mock input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.mock .pad{padding-inline:clamp(16px,4cqi,56px)}
+.mock .ds{font-family:var(--display);font-weight:400;letter-spacing:-.005em}
+.mock .lab{font-family:var(--eyebrow);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.mock .muted{color:var(--muted)}
+.mock .poem{font-family:var(--poem);font-style:italic;font-weight:300;font-variation-settings:"SOFT" 100}
+.mock .tl{color:var(--red);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.mock .lit{}
+body[data-joy="off"] .mock .lit{background:none}
+.mock .btn{font-family:var(--eyebrow);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-block;padding:13px 22px;border:1px solid var(--ink);color:var(--ink);background:transparent}
+.mock .btn.solid{background:var(--ink);color:var(--paper)}
+.mock figure{margin:0;display:grid;gap:10px}
+.mock figcaption{font-size:14px;line-height:1.45;color:var(--muted);font-style:italic}
+.mock figcaption .no{font-family:var(--eyebrow);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-right:8px;font-weight:600;color:var(--muted)}
+.mock .white{background:var(--white);position:relative;z-index:10}
+.mock .sunlit{background:var(--sunfield);position:relative;z-index:10}
+.mock .mod{padding-block:clamp(44px,7cqi,96px)}
+.mock .mod>.lab{display:block;margin-bottom:clamp(20px,3.6cqi,36px);color:var(--muted)}
+.mock .tear{height:22px;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;margin-top:-21px;position:relative;z-index:11}
+.mock .tear.bot{transform:scaleY(-1);margin-top:0;margin-bottom:-21px}
+.mock .sw{color:var(--ink)}
+.mock .sun{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round}
+.mock .sun .disc{fill:var(--sun);stroke:none}
+.mock .flight{position:absolute;pointer-events:none;z-index:2}
+
+.mock .hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule);position:relative;z-index:10;background:var(--paper)}
+.mock .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mock .brand img{width:44px;height:44px;mix-blend-mode:multiply}
+.mock .brand span{font-size:clamp(20px,2.4cqi,27px);white-space:nowrap}
+.mock .brand em{font-style:italic}
+.mock .hdr nav{display:flex;gap:20px;flex-wrap:wrap}
+.mock .hdr nav a{text-decoration:none;padding-bottom:3px}
+.mock .hdr nav a.on{border-bottom:1px solid var(--ink)}
+.mock .foot{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:24px;padding-block:44px 32px;background:var(--night);color:var(--chalk);position:relative;z-index:10}
+.mock .foot .tear{background:var(--night);position:absolute;left:0;right:0;top:0;margin-top:-21px}
+.mock .foot b{font-family:var(--display);font-weight:400;font-size:24px;display:block;margin-bottom:8px}
+.mock .foot p{margin:0;color:var(--nmuted);font-size:15px}
+.mock .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px}
+.mock .foot .lab{color:var(--nmuted);display:block;margin-bottom:10px}
+.mock .foot .badge{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:12px}
+.mock .foot .badge img{width:44px;height:44px}
+
+/* Graphic elements sheet */
+.mock .els{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.mock .el{position:relative;aspect-ratio:4/3;display:grid;place-items:center;padding:28px 20px 44px;z-index:10}
+.mock .el>.lab{position:absolute;left:16px;bottom:14px;right:16px;font-size:11px;color:var(--muted)}
+.mock .el.w{background:var(--white)}.mock .el.p{background:var(--paper)}.mock .el.s{background:var(--sunlight)}
+.mock .el.n{background:var(--night);color:var(--chalk)}.mock .el.n>.lab{color:var(--nmuted)}
+.mock .el.n .sw{color:var(--chalk)}
+.mock .el svg{max-width:100%;height:auto}
+.mock .logos{display:flex;gap:22px;align-items:center}
+.mock .logos .disc{width:110px;height:110px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.mock .logos .sq{width:110px;height:110px;background:#fff;display:grid;place-items:center}
+.mock .logos img{width:92px;height:92px}
+.mock .divider{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;width:86%}
+.mock .divider i{height:1px;background:var(--ink)}
+@container (max-width:800px){.mock .els{grid-template-columns:1fr 1fr}}
+@container (max-width:480px){.mock .els{grid-template-columns:1fr}}
+
+/* Gatherings */
+.mock .ghero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,5cqi,64px);align-items:center;padding-block:clamp(40px,6cqi,84px);overflow:hidden}
+.mock .ghero .txt{display:grid;gap:18px;justify-items:start;position:relative;z-index:3}
+.mock .ghero h1{font-size:clamp(44px,7cqi,96px);line-height:.95;margin:0;text-wrap:balance}
+.mock .ghero p{margin:0;font-size:clamp(17px,1.9cqi,21px);max-width:34ch}
+.mock .ghero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.mock .prints{position:relative;min-height:clamp(300px,40cqi,520px)}
+.mock .prints figure{position:absolute;background:#fff;padding:10px 10px 12px;box-shadow:0 18px 40px -22px rgb(27 25 22/.55)}
+.mock .prints figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mock .prints .p1{width:72%;left:0;top:4%;transform:rotate(-2.2deg)}
+.mock .prints .p2{width:52%;right:0;bottom:0;transform:rotate(2.6deg)}
+.mock .prints .p2 img{aspect-ratio:4/5}
+.mock .ghero .sunmark{position:absolute;width:clamp(90px,14cqi,170px);right:-2%;top:-6%;z-index:1}
+.mock .events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.6cqi,28px)}
+.mock .ev{display:grid;grid-template-rows:auto 1fr;border-top:2px solid var(--ink);background:var(--white)}
+.mock .ev .ph img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mock .ev .body{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:16px 4px 6px}
+.mock .ev .date{font-family:var(--display);font-size:44px;line-height:.9;text-align:center}
+.mock .ev .date small{display:block;font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.mock .ev h3{margin:0 0 4px;font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1}
+.mock .ev p{margin:0;font-size:15px;color:var(--muted)}
+.mock .interlude{text-align:center;display:grid;justify-items:center;gap:18px;position:relative;overflow:hidden}
+.mock .interlude p{margin:0;font-size:clamp(26px,3.6cqi,44px);line-height:1.25;max-width:24ch}
+.mock .hubs{width:100%;border-collapse:collapse;font-size:16px}
+.mock .hubs th{font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--ink)}
+.mock .hubs td{padding:14px 12px 14px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+.mock .hubs td:first-child{font-family:var(--display);font-size:22px}
+.mock .tablewrap{overflow-x:auto}
+
+/* Join */
+.mock .jhero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.mock .jhero img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:50% 30%;opacity:.92}
+.mock .jhero .ov{position:absolute;inset:0;display:grid;align-content:end;padding:clamp(20px,5cqi,64px);padding-bottom:clamp(40px,7cqi,90px);gap:10px}
+.mock .jhero h1{margin:0;font-size:clamp(44px,8cqi,110px);line-height:.92}
+.mock .jhero .lab{color:var(--chalk)}
+.mock .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px);counter-reset:s}
+.mock .step{display:grid;gap:12px;align-content:start;counter-increment:s}
+.mock .step .n{position:relative;width:64px;height:64px;display:grid;place-items:center;font-family:var(--display);font-size:34px}
+.mock .step .n svg{position:absolute;inset:-8px;width:80px;height:80px}
+.mock .step h3{margin:0;font-family:var(--display);font-weight:400;font-size:30px;line-height:1.08}
+.mock .step p{margin:0;color:var(--muted)}
+.mock .step img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mock .voices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px)}
+.mock .voices blockquote{margin:0;display:grid;gap:12px;padding-top:16px;border-top:1px solid var(--ink)}
+.mock .voices blockquote p{margin:0;font-size:22px;line-height:1.35}
+.mock .voices cite{font-style:normal}
+.mock .band{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--sunlight);padding-block:clamp(36px,5cqi,64px);position:relative;z-index:10;overflow:hidden}
+body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid var(--ink)}
+.mock .band h2{margin:0;font-size:clamp(30px,4.4cqi,56px);line-height:1}
+.mock .band p{margin:8px 0 0;max-width:46ch}
+
+/* Magazine */
+.mock .mag{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5cqi,72px);align-items:start;padding-block:clamp(40px,6cqi,84px)}
+.mock .mag .cover{position:relative}
+.mock .mag .cover img{width:100%;box-shadow:0 30px 60px -32px rgb(27 25 22/.7)}
+.mock .mag h1{font-size:clamp(56px,9cqi,128px);line-height:.9;margin:8px 0 18px}
+.mock .mag .intro{font-size:20px;line-height:1.5;margin:0 0 22px;max-width:40ch}
+.mock .toc{list-style:none;margin:28px 0 0;padding:0;display:grid}
+.mock .toc li{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid var(--rule)}
+.mock .toc li:last-child{border-bottom:1px solid var(--rule)}
+.mock .toc .lab{font-size:11px;color:var(--muted)}
+.mock .toc b{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15}
+.mock .toc span.by{display:block;font-size:14.5px;color:var(--muted)}
+.mock .toc .pg{font-family:var(--eyebrow);font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.mock .poemblock{max-width:640px;margin-inline:auto;display:grid;gap:22px;position:relative}
+.mock .poemblock .lines{font-size:clamp(22px,2.6cqi,30px);line-height:1.5;margin:0}
+.mock .poemblock .sunmark{position:absolute;width:120px;right:-60px;top:-30px}
+.mock .spread{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(18px,3cqi,40px);align-items:end}
+.mock .spread img{width:100%;object-fit:cover}
+.mock .spread .a img{aspect-ratio:4/5}.mock .spread .b img{aspect-ratio:1/1}
+
+/* White paper */
+.mock .wp-head{padding-block:clamp(40px,6cqi,84px) 36px;display:grid;gap:16px;max-width:980px}
+.mock .wp-head h1{font-size:clamp(40px,6cqi,80px);line-height:.98;margin:0;text-wrap:balance}
+.mock .wp-meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:var(--muted)}
+.mock .wp-meta b{color:var(--ink);font-weight:500}
+.mock .wp{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(24px,5cqi,72px);padding-block:clamp(36px,5cqi,64px) clamp(48px,7cqi,96px);border-top:1px solid var(--ink)}
+.mock .wp nav{position:sticky;top:16px;align-self:start;display:grid;gap:4px}
+.mock .wp nav .lab{color:var(--muted);margin-bottom:8px}
+.mock .wp nav a{text-decoration:none;font-size:15px;padding:6px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:28px minmax(0,1fr)}
+.mock .wp nav a span{font-family:var(--eyebrow);font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
+.mock .wp nav a.on{font-weight:600}
+.mock .wp article{max-width:680px;display:grid;gap:22px}
+.mock .wp .abstract{background:var(--paper);border-left:2px solid var(--ink);padding:18px 22px;font-size:17px}
+.mock .wp .abstract .lab{display:block;color:var(--muted);margin-bottom:6px}
+.mock .wp h2{margin:16px 0 0;font-family:var(--display);font-weight:400;font-size:34px;line-height:1.1;display:flex;gap:14px;align-items:baseline}
+.mock .wp h2 small{font-family:var(--eyebrow);font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.1em}
+.mock .wp p{margin:0;font-size:18px;line-height:1.7}
+.mock .wp sup{font-family:var(--eyebrow);font-size:11px;font-weight:600;margin-left:1px}
+.mock .wp sup a{text-decoration:none;color:var(--red)}
+.mock .wp .notes{font-size:14.5px;color:var(--muted);margin:0;padding-left:20px;display:grid;gap:6px;border-top:1px solid var(--rule);padding-top:16px}
+.mock .wp figure img{mix-blend-mode:multiply;max-height:440px;width:auto;margin-inline:auto}
+
+@container (max-width:800px){
+ .mock .hdr nav{display:none}
+ .mock .ghero,.mock .mag,.mock .spread{grid-template-columns:1fr}
+ .mock .events,.mock .steps,.mock .voices{grid-template-columns:1fr}
+ .mock .foot{grid-template-columns:1fr 1fr}
+ .mock .band{grid-template-columns:1fr}
+ .mock .wp{grid-template-columns:1fr}.mock .wp nav{position:static}
+ .mock .toc li{grid-template-columns:1fr auto}.mock .toc li .lab{grid-column:1/-1}
+ .mock .poemblock .sunmark{right:0}
+}
+
+/* Seeds sheet */
+.mock .seedgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.mock .seedgrid .el{aspect-ratio:1/1}
+.mock .seedgrid svg{width:62%}
+.mock .clusters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-top:0}
+.mock .clusters .el{aspect-ratio:4/3}
+.mock .clusters svg{width:84%}
+.mock .seed-ic{width:34px;height:34px;color:var(--ink);flex:none}
+
+/* Home */
+.mock .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,5cqi,72px);align-items:center;padding-block:clamp(40px,6cqi,88px);overflow:hidden}
+.mock .hero .txt{display:grid;gap:18px;justify-items:start;position:relative;z-index:3}
+.mock .hero h1{font-size:clamp(44px,7cqi,96px);line-height:.95;margin:0;text-wrap:balance}
+.mock .hero p{margin:0;font-size:clamp(17px,1.9cqi,21px);max-width:34ch}
+.mock .print1{background:#fff;padding:12px 12px 14px;box-shadow:0 18px 40px -22px rgb(27 25 22/.55);transform:rotate(1.6deg);position:relative;z-index:2}
+.mock .print1 img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mock .print1 figcaption{margin-top:10px}
+.mock .believe{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5cqi,72px);align-items:start}
+.mock .believe p{margin:0 0 22px;font-size:clamp(20px,2.4cqi,28px);line-height:1.38;font-weight:300;text-wrap:pretty}
+.mock .believe .hl{font-family:var(--display)}
+.mock .believe figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mock .seedrow{width:min(320px,70%);height:auto;color:var(--ink);display:block}
+.mock .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.6cqi,32px)}
+.mock .way{display:grid;gap:10px;align-content:start;text-decoration:none}
+.mock .way .ph{overflow:hidden}
+.mock .way img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s ease}
+.mock .way:hover img{transform:scale(1.03)}
+.mock .way .row{display:flex;align-items:center;gap:10px}
+.mock .way .no{font-family:var(--eyebrow);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mock .way h3{margin:0;font-size:clamp(24px,2.5cqi,32px);line-height:1.05}
+.mock .way p{margin:0;font-size:15.5px;color:var(--muted)}
+.mock .night{background:var(--night);color:var(--chalk);padding-block:clamp(44px,6cqi,88px);position:relative;z-index:10}
+.mock .night>.lab{display:block;color:var(--nmuted);margin-bottom:clamp(22px,4cqi,40px)}
+.mock .night .tear{background:var(--night)}
+.mock .night .sw{color:var(--chalk)}
+.mock .night figcaption{color:var(--nmuted)}
+.mock .night figcaption .no{color:var(--nmuted)}
+.mock .sel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5cqi,64px);align-items:start}
+.mock .sel ul{list-style:none;margin:0;padding:0;display:grid}
+.mock .sel li{padding:16px 0;border-top:1px solid #38342e;display:grid;gap:4px;cursor:pointer}
+.mock .sel li:last-child{border-bottom:1px solid #38342e}
+.mock .sel li .lab{color:var(--nmuted)}
+.mock .sel li b{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.7cqi,34px);line-height:1.12;opacity:.62;transition:opacity .2s}
+.mock .sel li .by{color:var(--nmuted);font-size:15.5px}
+.mock .sel li.on b,.mock .sel li:hover b{opacity:1}
+.mock .sel li:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
+.mock .sel .pic{position:sticky;top:12px}
+.mock .sel .pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.mock .nightseal{position:absolute;right:clamp(16px,4cqi,56px);top:clamp(28px,4cqi,56px);width:84px}
+.mock .printmod{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5cqi,72px);align-items:center}
+.mock .printmod img{width:100%;max-width:400px;justify-self:center;box-shadow:0 30px 50px -30px rgb(27 25 22/.7)}
+.mock .printmod h2{font-size:clamp(36px,5cqi,64px);line-height:1;margin:8px 0 14px}
+.mock .printmod p{margin:0 0 20px;max-width:40ch}
+.mock .cal{display:grid}
+.mock .cal .r{display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:18px;padding:18px 0;border-top:1px solid var(--rule);align-items:baseline}
+.mock .cal .r:last-child{border-bottom:1px solid var(--rule)}
+.mock .cal .d{font-family:var(--eyebrow);font-weight:600;font-size:14px;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.mock .cal b{font-family:var(--display);font-weight:400;font-size:26px;display:block;line-height:1.2}
+.mock .cal small{font-size:14.5px;color:var(--muted)}
+.mock .cal .r a{font-family:var(--eyebrow);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;text-underline-offset:4px}
+.mock .seedline{display:grid;justify-items:center;gap:18px;text-align:center;overflow:hidden}
+.mock .seedline svg{width:min(520px,90%);height:auto;color:var(--ink)}
+.mock .seedline p{margin:0;font-size:clamp(26px,3.4cqi,42px);line-height:1.25;max-width:26ch}
+.mock .engage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3cqi,40px)}
+.mock .engage div{display:grid;gap:12px;align-content:start;justify-items:start;padding-top:18px;border-top:2px solid var(--ink)}
+.mock .engage h3{margin:0;font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.mock .engage p{margin:0;color:var(--muted);max-width:30ch}
+.mock input{font-family:var(--body);font-size:16px;padding:12px 14px;border:1px solid var(--ink);background:#fff;color:var(--ink);width:100%;max-width:300px;border-radius:0}
+
+/* Manifesto */
+.mock .mhero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,5cqi,64px);align-items:center;padding-block:clamp(40px,6cqi,80px);overflow:hidden;position:relative}
+.mock .mhero h1{font-size:clamp(40px,6cqi,84px);line-height:.98;margin:10px 0 18px;text-wrap:balance}
+.mock .mhero .ded{margin:0;font-size:clamp(20px,2.2cqi,26px);line-height:1.35;max-width:30ch}
+.mock .mhero .spiral{position:absolute;right:-6%;top:-14%;width:clamp(200px,34cqi,440px);color:var(--ink);opacity:.9;z-index:1;pointer-events:none}
+.mock .mhero figure{position:relative;z-index:2}
+.mock .text{max-width:680px;margin-inline:auto;padding-block:clamp(40px,6cqi,84px);display:grid;gap:26px}
+.mock .text.white{box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax)}
+.mock .text p{margin:0;font-size:19px;line-height:1.65;text-wrap:pretty}
+.mock .text .drop::first-letter{font-family:var(--display);float:left;font-size:4.6em;line-height:.8;padding:6px 10px 0 0}
+.mock .pull{padding:28px 0;border-block:1px solid var(--ink);font-family:var(--display);font-size:clamp(26px,3.4cqi,38px);line-height:1.2;display:grid;gap:8px}
+.mock .soil{font-size:clamp(24px,3cqi,32px)!important;line-height:1.3!important;text-align:center}
+.mock .litany{list-style:none;margin:0;padding:0;counter-reset:l;display:grid}
+.mock .litany li{counter-increment:l;display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--rule);font-size:18px;line-height:1.5}
+.mock .litany li::before{content:counter(l,upper-roman) ".";font-family:var(--eyebrow);font-size:12px;letter-spacing:.1em;font-weight:600;color:var(--muted);padding-top:5px}
+.mock .litany li:last-child{font-family:var(--display);font-size:28px;line-height:1.25;border-bottom:1px solid var(--rule)}
+.mock .endseal{width:96px;color:var(--ink);justify-self:center;margin-top:12px}
+
+@container (max-width:800px){
+ .mock .hero,.mock .believe,.mock .sel,.mock .printmod,.mock .engage,.mock .mhero{grid-template-columns:1fr}
+ .mock .ways{grid-template-columns:1fr 1fr}
+ .mock .sel .pic{display:none}
+ .mock .cal .r{grid-template-columns:1fr;gap:4px}
+ .mock .seedgrid{grid-template-columns:1fr 1fr}.mock .clusters{grid-template-columns:1fr}
+ .mock .nightseal{display:none}
+}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="wcr" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
+  <mask id="wcm" maskUnits="userSpaceOnUse" x="0" y="0" width="248" height="150"><path d="M18 68 L27 63.5 C31 57 41 53.5 52 54.5 C60 52.5 67 53 74 56 C94 40 116 22 144 12 C172 3 202 1 232 5 C208 13 184 24 164 36 C152 44 142 52 136 58 C154 56 176 52 200 44 L240 31 C218 48 200 58 184 66 L238 87 C208 85 180 81 154 77 C136 79 118 81 104 83 C122 100 142 122 160 148 C132 132 106 112 88 88 C74 88 60 86 48 82 C38 79 30 74 25 71 L18 68 Z" fill="#fff"/><path d="M73.9 54.7 Q102.4 38.2 139.1 34.9" stroke="#000" stroke-width="0.78" stroke-linecap="round" fill="none"/><path d="M77.4 55.3 Q124.5 31.8 179.2 20.0" stroke="#000" stroke-width="0.86" stroke-linecap="round" fill="none"/><path d="M79.2 54.4 Q123.5 35.1 177.9 24.9" stroke="#000" stroke-width="1.45" stroke-linecap="round" fill="none"/><path d="M81.8 54.9 Q123.9 36.9 170.7 27.0" stroke="#000" stroke-width="0.91" stroke-linecap="round" fill="none"/><path d="M85.7 56.0 Q136.8 33.5 192.4 20.0" stroke="#000" stroke-width="1.19" stroke-linecap="round" fill="none"/><path d="M87.8 55.3 Q133.8 32.6 184.8 20.6" stroke="#000" stroke-width="1.60" stroke-linecap="round" fill="none"/><path d="M91.7 54.6 Q118.0 39.0 149.0 33.4" stroke="#000" stroke-width="1.62" stroke-linecap="round" fill="none"/><path d="M95.7 55.5 Q137.1 32.7 183.8 20.9" stroke="#000" stroke-width="1.66" stroke-linecap="round" fill="none"/><path d="M97.4 55.9 Q126.8 34.8 168.2 27.6" stroke="#000" stroke-width="0.82" stroke-linecap="round" fill="none"/><path d="M103.1 56.8 Q126.8 39.9 157.4 34.4" stroke="#000" stroke-width="1.29" stroke-linecap="round" fill="none"/><path d="M106.5 55.1 Q141.8 35.4 184.7 24.9" stroke="#000" stroke-width="1.69" stroke-linecap="round" fill="none"/><path d="M108.9 55.1 Q142.9 35.2 182.6 24.9" stroke="#000" stroke-width="1.02" stroke-linecap="round" fill="none"/><path d="M110.1 56.4 Q129.7 39.6 159.5 35.2" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><path d="M115.7 55.7 Q139.8 38.0 175.7 29.5" stroke="#000" stroke-width="1.07" stroke-linecap="round" fill="none"/><path d="M119.4 56.1 Q158.1 32.9 202.8 16.2" stroke="#000" stroke-width="1.68" stroke-linecap="round" fill="none"/><path d="M119.8 57.3 Q142.6 42.5 169.8 35.3" stroke="#000" stroke-width="1.09" stroke-linecap="round" fill="none"/><path d="M124.7 57.5 Q154.6 36.5 189.7 22.1" stroke="#000" stroke-width="1.26" stroke-linecap="round" fill="none"/><path d="M128.2 55.8 Q160.2 31.8 199.3 20.9" stroke="#000" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M131.4 57.3 Q153.0 40.1 178.9 33.1" stroke="#000" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M134.2 56.0 Q152.6 39.7 176.4 33.1" stroke="#000" stroke-width="1.26" stroke-linecap="round" fill="none"/><path d="M136.4 56.3 Q159.3 38.3 193.8 26.6" stroke="#000" stroke-width="1.69" stroke-linecap="round" fill="none"/><path d="M141.6 57.1 Q172.6 31.7 208.1 17.4" stroke="#000" stroke-width="1.24" stroke-linecap="round" fill="none"/><path d="M92.0 86.0 Q106.0 104.0 127.1 119.9" stroke="#000" stroke-width="1.28" stroke-linecap="round" fill="none"/><path d="M94.2 85.8 Q108.2 103.8 136.2 128.1" stroke="#000" stroke-width="0.78" stroke-linecap="round" fill="none"/><path d="M96.5 85.5 Q110.5 103.5 136.3 127.6" stroke="#000" stroke-width="1.06" stroke-linecap="round" fill="none"/><path d="M98.8 85.2 Q112.8 103.2 133.2 123.4" stroke="#000" stroke-width="1.21" stroke-linecap="round" fill="none"/><path d="M101.0 85.0 Q115.0 103.0 126.4 114.6" stroke="#000" stroke-width="1.18" stroke-linecap="round" fill="none"/><path d="M103.2 84.8 Q117.2 102.8 132.7 120.9" stroke="#000" stroke-width="1.40" stroke-linecap="round" fill="none"/><path d="M105.5 84.5 Q119.5 102.5 131.3 117.9" stroke="#000" stroke-width="1.36" stroke-linecap="round" fill="none"/><path d="M107.8 84.2 Q121.8 102.2 139.7 127.9" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><path d="M110.0 84.0 Q124.0 102.0 142.3 130.8" stroke="#000" stroke-width="0.73" stroke-linecap="round" fill="none"/><path d="M152.0 60.0 L214.7 50.0" stroke="#000" stroke-width="1.07" stroke-linecap="round" fill="none"/><path d="M150.1 62.6 L201.7 57.0" stroke="#000" stroke-width="0.73" stroke-linecap="round" fill="none"/><path d="M152.1 65.2 L204.4 64.0" stroke="#000" stroke-width="0.65" stroke-linecap="round" fill="none"/><path d="M149.5 67.8 L211.3 71.0" stroke="#000" stroke-width="0.97" stroke-linecap="round" fill="none"/><path d="M146.3 70.4 L218.6 78.0" stroke="#000" stroke-width="0.83" stroke-linecap="round" fill="none"/><path d="M153.8 73.0 L200.2 85.0" stroke="#000" stroke-width="1.27" stroke-linecap="round" fill="none"/><path d="M151.9 75.6 L223.4 92.0" stroke="#000" stroke-width="1.29" stroke-linecap="round" fill="none"/><path d="M40.4 79.9 l2.2 -2.5" stroke="#000" stroke-width="1.35" stroke-linecap="round" fill="none"/><path d="M41.8 80.3 l1.7 -2.8" stroke="#000" stroke-width="1.46" stroke-linecap="round" fill="none"/><path d="M45.0 80.8 l3.0 -2.1" stroke="#000" stroke-width="1.17" stroke-linecap="round" fill="none"/><path d="M46.4 81.7 l2.0 -2.5" stroke="#000" stroke-width="1.16" stroke-linecap="round" fill="none"/><path d="M48.4 81.0 l3.4 -3.0" stroke="#000" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M51.4 79.7 l2.0 -1.3" stroke="#000" stroke-width="1.22" stroke-linecap="round" fill="none"/><path d="M52.9 79.7 l2.1 -2.4" stroke="#000" stroke-width="1.36" stroke-linecap="round" fill="none"/><path d="M56.0 82.3 l3.3 -1.1" stroke="#000" stroke-width="1.41" stroke-linecap="round" fill="none"/><path d="M58.1 82.9 l1.7 -2.4" stroke="#000" stroke-width="0.97" stroke-linecap="round" fill="none"/><path d="M59.9 81.2 l2.2 -1.3" stroke="#000" stroke-width="1.08" stroke-linecap="round" fill="none"/><path d="M61.7 80.5 l2.4 -1.8" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><path d="M64.1 80.2 l2.3 -2.3" stroke="#000" stroke-width="0.92" stroke-linecap="round" fill="none"/><path d="M66.5 80.2 l2.9 -1.7" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M68.8 80.7 l2.4 -1.8" stroke="#000" stroke-width="1.33" stroke-linecap="round" fill="none"/><path d="M71.3 82.1 l1.9 -1.9" stroke="#000" stroke-width="1.03" stroke-linecap="round" fill="none"/><path d="M72.4 81.4 l2.4 -1.3" stroke="#000" stroke-width="1.03" stroke-linecap="round" fill="none"/><path d="M75.6 81.3 l1.7 -1.6" stroke="#000" stroke-width="1.00" stroke-linecap="round" fill="none"/><path d="M77.4 79.7 l1.5 -1.2" stroke="#000" stroke-width="0.83" stroke-linecap="round" fill="none"/><path d="M79.2 80.1 l1.7 -1.4" stroke="#000" stroke-width="1.50" stroke-linecap="round" fill="none"/><path d="M82.0 80.9 l3.3 -2.0" stroke="#000" stroke-width="0.89" stroke-linecap="round" fill="none"/><path d="M84.2 80.8 l2.0 -2.4" stroke="#000" stroke-width="1.07" stroke-linecap="round" fill="none"/><path d="M85.8 81.6 l3.2 -1.9" stroke="#000" stroke-width="0.81" stroke-linecap="round" fill="none"/><path d="M88.6 79.6 l2.5 -1.3" stroke="#000" stroke-width="1.27" stroke-linecap="round" fill="none"/><path d="M91.1 82.1 l2.0 -2.7" stroke="#000" stroke-width="1.12" stroke-linecap="round" fill="none"/><path d="M93.0 80.3 l2.2 -1.5" stroke="#000" stroke-width="1.04" stroke-linecap="round" fill="none"/><path d="M95.1 81.4 l3.4 -2.9" stroke="#000" stroke-width="0.93" stroke-linecap="round" fill="none"/><path d="M32 73 Q46 68 64 71" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><circle cx="40" cy="61.5" r="2.4" fill="#000"/></mask>
+  <symbol id="wsw" viewBox="0 0 248 150"><g filter="url(#wcr)"><path d="M18 68 L27 63.5 C31 57 41 53.5 52 54.5 C60 52.5 67 53 74 56 C94 40 116 22 144 12 C172 3 202 1 232 5 C208 13 184 24 164 36 C152 44 142 52 136 58 C154 56 176 52 200 44 L240 31 C218 48 200 58 184 66 L238 87 C208 85 180 81 154 77 C136 79 118 81 104 83 C122 100 142 122 160 148 C132 132 106 112 88 88 C74 88 60 86 48 82 C38 79 30 74 25 71 L18 68 Z" fill="currentColor" mask="url(#wcm)"/></g></symbol>
+  <symbol id="seal" viewBox="0 0 120 120"><g filter="url(#wcr)"><path d="M111.3 60.0 L111.9 64.5 L110.9 69.0 L110.5 73.5 L109.2 77.9 L106.0 81.5 L103.9 85.3 L103.4 90.4 L99.3 93.0 L96.2 96.2 L94.3 100.9 L89.8 102.5 L86.5 105.8 L81.9 107.1 L77.9 109.2 L73.2 109.3 L69.1 111.6 L64.6 112.8 L60.0 112.1 L55.4 112.5 L50.9 111.7 L46.9 109.0 L42.0 109.5 L37.9 107.4 L34.3 104.6 L30.9 101.5 L25.9 100.6 L23.3 96.7 L19.7 93.8 L16.5 90.4 L14.4 86.3 L11.8 82.5 L11.4 77.7 L9.0 73.7 L8.9 69.0 L7.0 64.6 L6.9 60.0 L9.3 55.6 L9.8 51.1 L10.5 46.7 L9.9 41.8 L13.0 38.1 L14.7 33.8 L17.9 30.5 L20.2 26.6 L23.5 23.5 L26.8 20.5 L30.0 17.2 L33.9 14.8 L37.5 11.8 L42.0 10.7 L46.2 8.6 L50.8 7.8 L55.3 6.8 L60.0 7.5 L64.4 9.1 L69.2 7.8 L73.8 8.5 L78.2 10.1 L82.1 12.7 L86.3 14.4 L89.4 18.1 L94.0 19.5 L96.9 23.1 L99.4 27.0 L101.6 30.9 L105.9 33.5 L108.4 37.4 L107.8 42.6 L111.0 46.3 L111.0 51.0 L110.8 55.6 L111.4 60.0 Z" fill="none" stroke="currentColor" stroke-width="3.2"/></g><use href="#wsw" x="10" y="31" width="100" height="60"/></symbol>
+ <filter id="sdr" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2"/></filter>
+<mask id="m-sunflower" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M50 6 C63 17 69 40 67 64 C65 82 57 94 50 96 C43 94 35 82 33 64 C31 40 37 17 50 6 Z" fill="#fff"/><path d="M46.9 16 Q38.8 52 41.0 90" stroke="#000" stroke-width="2.60" stroke-linecap="round" fill="none"/><path d="M48.8 16 Q45.6 52 46.5 90" stroke="#000" stroke-width="1.40" stroke-linecap="round" fill="none"/><path d="M51.0 16 Q53.8 52 53.0 90" stroke="#000" stroke-width="2.40" stroke-linecap="round" fill="none"/><path d="M53.1 16 Q61.2 52 59.0 90" stroke="#000" stroke-width="1.30" stroke-linecap="round" fill="none"/><path d="M38.3 30.0 l3.4 -1.4" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M39.0 37.0 l2.4 -1.2" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M39.6 44.0 l3.0 -1.5" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M38.5 51.0 l2.0 -1.6" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M39.2 58.0 l2.1 -1.2" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M38.5 65.0 l2.5 -2.0" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M40.0 72.0 l3.5 -1.1" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M39.2 79.0 l2.1 -1.7" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-sunflower" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-sunflower)"><path d="M50 6 C63 17 69 40 67 64 C65 82 57 94 50 96 C43 94 35 82 33 64 C31 40 37 17 50 6 Z"/></g></g></symbol>
+<mask id="m-bean" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M16 50 C16 30 33 19 52 21 C72 23 87 37 85 56 C83 75 66 85 48 83 C35 82 29 73 33 65 C37 58 29 56 23 58 C18 59 16 55 16 50 Z" fill="#fff"/><path d="M27 56 Q31 61 31 66" stroke="#000" stroke-width="2.20" stroke-linecap="round" fill="none"/><path d="M22.0 40.0 q-2.0 6 0 10.0" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M25.0 38.5 q-2.0 6 0 11.0" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M28.0 37.0 q-2.0 6 0 12.0" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M31.0 35.5 q-2.0 6 0 13.0" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M34.0 34.0 q-2.0 6 0 14.0" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M42.0 27.0 Q66.0 33.0 76.0 48.0" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><path d="M46.5 27.8 Q67.6 35.5 76.4 51.0" stroke="#000" stroke-width="0.89" stroke-linecap="round" fill="none"/><path d="M51.0 28.6 Q69.2 38.0 76.8 54.0" stroke="#000" stroke-width="1.56" stroke-linecap="round" fill="none"/><path d="M55.5 29.4 Q70.8 40.5 77.2 57.0" stroke="#000" stroke-width="1.09" stroke-linecap="round" fill="none"/><path d="M60.0 30.2 Q72.4 43.0 77.6 60.0" stroke="#000" stroke-width="0.92" stroke-linecap="round" fill="none"/><path d="M64.5 31.0 Q74.0 45.5 78.0 63.0" stroke="#000" stroke-width="1.45" stroke-linecap="round" fill="none"/><path d="M69.0 31.8 Q75.6 48.0 78.4 66.0" stroke="#000" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M73.5 32.6 Q77.2 50.5 78.8 69.0" stroke="#000" stroke-width="1.54" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-bean" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-bean)"><path d="M16 50 C16 30 33 19 52 21 C72 23 87 37 85 56 C83 75 66 85 48 83 C35 82 29 73 33 65 C37 58 29 56 23 58 C18 59 16 55 16 50 Z"/></g></g></symbol>
+<mask id="m-samara" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M18 74 C16 64 24 58 32 60 C42 62 46 72 42 80 C38 88 22 88 18 74 Z" fill="#fff"/><path d="M28 62 C34 40 54 16 80 8 C92 5 97 15 92 25 C82 44 60 62 42 76 Z" fill="#fff"/><path d="M34.0 68.0 Q48.0 38.0 60.0 7.8" stroke="#000" stroke-width="1.14" stroke-linecap="round" fill="none"/><path d="M34.8 67.5 Q49.8 38.8 64.0 10.1" stroke="#000" stroke-width="1.09" stroke-linecap="round" fill="none"/><path d="M35.5 67.0 Q51.5 39.5 68.0 12.2" stroke="#000" stroke-width="0.73" stroke-linecap="round" fill="none"/><path d="M36.2 66.5 Q53.2 40.2 72.0 17.7" stroke="#000" stroke-width="0.89" stroke-linecap="round" fill="none"/><path d="M37.0 66.0 Q55.0 41.0 76.0 20.1" stroke="#000" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M37.8 65.5 Q56.8 41.8 80.0 23.6" stroke="#000" stroke-width="1.42" stroke-linecap="round" fill="none"/><path d="M38.5 65.0 Q58.5 42.5 84.0 25.5" stroke="#000" stroke-width="1.31" stroke-linecap="round" fill="none"/><path d="M39.2 64.5 Q60.2 43.2 88.0 27.6" stroke="#000" stroke-width="1.28" stroke-linecap="round" fill="none"/><path d="M40.0 64.0 Q62.0 44.0 92.0 28.5" stroke="#000" stroke-width="1.08" stroke-linecap="round" fill="none"/><path d="M24 70 q6 -3 12 0" stroke="#000" stroke-width="1.40" stroke-linecap="round" fill="none"/><path d="M22 77 q8 -2 16 2" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-samara" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-samara)"><path d="M18 74 C16 64 24 58 32 60 C42 62 46 72 42 80 C38 88 22 88 18 74 Z"/><path d="M28 62 C34 40 54 16 80 8 C92 5 97 15 92 25 C82 44 60 62 42 76 Z"/></g></g></symbol>
+<mask id="m-acorn" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M20 44 C20 27 34 18 50 18 C66 18 80 27 80 44 C67 49 33 49 20 44 Z" fill="#fff"/><path d="M47 19 L48 6 L54 7 L53 19 Z" fill="#fff"/><path d="M27 46 C25 66 35 88 50 95 C65 88 75 66 73 46 C62 50 38 50 27 46 Z" fill="#fff"/><path d="M-12.0 22 L2.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M2.0 22 L-12.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M-5.0 22 L9.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M9.0 22 L-5.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M2.0 22 L16.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M16.0 22 L2.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M9.0 22 L23.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M23.0 22 L9.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M16.0 22 L30.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M30.0 22 L16.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M23.0 22 L37.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M37.0 22 L23.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M30.0 22 L44.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M44.0 22 L30.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M37.0 22 L51.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M51.0 22 L37.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M44.0 22 L58.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M58.0 22 L44.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M51.0 22 L65.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M65.0 22 L51.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M58.0 22 L72.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M72.0 22 L58.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M65.0 22 L79.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M79.0 22 L65.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M72.0 22 L86.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M86.0 22 L72.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M79.0 22 L93.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M93.0 22 L79.0 46" stroke="#000" stroke-width="1.10" stroke-linecap="round" fill="none"/><path d="M34.0 56.0 Q36.0 72.0 44.0 86.0" stroke="#000" stroke-width="1.83" stroke-linecap="round" fill="none"/><path d="M38.0 58.0 Q40.0 74.0 47.0 87.5" stroke="#000" stroke-width="1.20" stroke-linecap="round" fill="none"/><path d="M42.0 60.0 Q44.0 76.0 50.0 89.0" stroke="#000" stroke-width="1.92" stroke-linecap="round" fill="none"/><path d="M46.0 62.0 Q48.0 78.0 53.0 90.5" stroke="#000" stroke-width="1.89" stroke-linecap="round" fill="none"/><path d="M20 45 C34 51 66 51 80 45" stroke="#000" stroke-width="2.00" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-acorn" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-acorn)"><path d="M20 44 C20 27 34 18 50 18 C66 18 80 27 80 44 C67 49 33 49 20 44 Z"/><path d="M47 19 L48 6 L54 7 L53 19 Z"/><path d="M27 46 C25 66 35 88 50 95 C65 88 75 66 73 46 C62 50 38 50 27 46 Z"/></g></g></symbol>
+<mask id="m-pumpkin" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M50 4 C68 12 78 34 76 58 C74 80 62 95 50 96 C38 95 26 80 24 58 C22 34 32 12 50 4 Z" fill="#fff"/><path d="M50 13 C64 20 71 38 69 58 C67 77 58 88 50 89 C42 88 33 77 31 58 C29 38 36 20 50 13 Z" stroke="#000" stroke-width="1.70" stroke-linecap="round" fill="none"/><path d="M40.0 30.0 q-0.2 18 1.7 34" stroke="#000" stroke-width="0.93" stroke-linecap="round" fill="none"/><path d="M43.0 32.0 q-0.2 18 3.0 34" stroke="#000" stroke-width="0.89" stroke-linecap="round" fill="none"/><path d="M46.0 34.0 q-0.9 18 1.2 34" stroke="#000" stroke-width="1.06" stroke-linecap="round" fill="none"/><path d="M49.0 36.0 q1.0 18 2.0 34" stroke="#000" stroke-width="0.95" stroke-linecap="round" fill="none"/><path d="M52.0 38.0 q0.1 18 2.5 34" stroke="#000" stroke-width="0.81" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-pumpkin" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-pumpkin)"><path d="M50 4 C68 12 78 34 76 58 C74 80 62 95 50 96 C38 95 26 80 24 58 C22 34 32 12 50 4 Z"/></g></g></symbol>
+<mask id="m-stone" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M50 4 C70 18 78 44 74 68 C70 86 60 96 50 96 C40 96 30 86 26 68 C22 44 30 18 50 4 Z" fill="#fff"/><path d="M50 8 Q55 50 50 94" stroke="#000" stroke-width="1.60" stroke-linecap="round" fill="none"/><path d="M39.6 36.0 l2.7 -0.6" stroke="#000" stroke-width="1.57" stroke-linecap="round" fill="none"/><path d="M40.0 78.7 l2.2 0.2" stroke="#000" stroke-width="1.71" stroke-linecap="round" fill="none"/><path d="M53.7 57.3 l3.1 0.6" stroke="#000" stroke-width="1.77" stroke-linecap="round" fill="none"/><path d="M44.0 26.5 l3.3 0.9" stroke="#000" stroke-width="1.81" stroke-linecap="round" fill="none"/><path d="M67.6 49.7 l2.7 0.8" stroke="#000" stroke-width="1.89" stroke-linecap="round" fill="none"/><path d="M43.6 63.9 l3.3 -0.7" stroke="#000" stroke-width="1.47" stroke-linecap="round" fill="none"/><path d="M55.4 23.9 l2.5 0.7" stroke="#000" stroke-width="1.45" stroke-linecap="round" fill="none"/><path d="M49.5 70.3 l2.3 -0.7" stroke="#000" stroke-width="1.47" stroke-linecap="round" fill="none"/><path d="M41.0 79.4 l3.5 0.5" stroke="#000" stroke-width="1.88" stroke-linecap="round" fill="none"/><path d="M49.8 85.3 l2.6 0.5" stroke="#000" stroke-width="1.43" stroke-linecap="round" fill="none"/><path d="M53.9 82.3 l3.1 0.8" stroke="#000" stroke-width="2.00" stroke-linecap="round" fill="none"/><path d="M37.7 63.6 l3.2 -0.4" stroke="#000" stroke-width="1.93" stroke-linecap="round" fill="none"/><path d="M47.4 81.4 l1.5 0.4" stroke="#000" stroke-width="2.35" stroke-linecap="round" fill="none"/><path d="M63.7 55.9 l2.8 0.7" stroke="#000" stroke-width="1.98" stroke-linecap="round" fill="none"/><path d="M49.5 73.6 l3.4 0.8" stroke="#000" stroke-width="1.53" stroke-linecap="round" fill="none"/><path d="M54.6 57.8 l1.6 -0.1" stroke="#000" stroke-width="1.54" stroke-linecap="round" fill="none"/><path d="M59.8 31.6 l1.8 0.1" stroke="#000" stroke-width="1.72" stroke-linecap="round" fill="none"/><path d="M41.6 52.6 l1.8 -0.6" stroke="#000" stroke-width="1.78" stroke-linecap="round" fill="none"/><path d="M46.7 27.6 l1.6 0.4" stroke="#000" stroke-width="2.27" stroke-linecap="round" fill="none"/><path d="M52.4 22.1 l1.5 -0.1" stroke="#000" stroke-width="1.46" stroke-linecap="round" fill="none"/><path d="M50.7 37.8 l2.9 -0.5" stroke="#000" stroke-width="2.10" stroke-linecap="round" fill="none"/><path d="M48.6 58.4 l2.3 -0.4" stroke="#000" stroke-width="2.30" stroke-linecap="round" fill="none"/><path d="M46.4 75.2 l2.6 0.9" stroke="#000" stroke-width="1.50" stroke-linecap="round" fill="none"/><path d="M39.7 37.6 l3.0 0.9" stroke="#000" stroke-width="1.71" stroke-linecap="round" fill="none"/><path d="M45.9 28.6 l2.6 -0.9" stroke="#000" stroke-width="2.21" stroke-linecap="round" fill="none"/><path d="M60.6 49.1 l2.1 1.0" stroke="#000" stroke-width="1.51" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-stone" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-stone)"><path d="M50 4 C70 18 78 44 74 68 C70 86 60 96 50 96 C40 96 30 86 26 68 C22 44 30 18 50 4 Z"/></g></g></symbol>
+<mask id="m-wheat" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M50 12 C64 20 70 40 69 60 C68 80 60 92 50 92 C40 92 32 80 31 60 C30 40 36 20 50 12 Z" fill="#fff"/><path d="M50 20 Q46 54 50 86" stroke="#000" stroke-width="2.60" stroke-linecap="round" fill="none"/><path d="M56.0 28.0 l6.2 2.1" stroke="#000" stroke-width="1.19" stroke-linecap="round" fill="none"/><path d="M56.0 33.5 l8.3 2.9" stroke="#000" stroke-width="1.07" stroke-linecap="round" fill="none"/><path d="M56.0 39.0 l6.1 3.3" stroke="#000" stroke-width="0.97" stroke-linecap="round" fill="none"/><path d="M56.0 44.5 l7.6 2.8" stroke="#000" stroke-width="0.94" stroke-linecap="round" fill="none"/><path d="M56.0 50.0 l6.7 2.1" stroke="#000" stroke-width="0.96" stroke-linecap="round" fill="none"/><path d="M56.0 55.5 l6.7 3.4" stroke="#000" stroke-width="1.19" stroke-linecap="round" fill="none"/><path d="M56.0 61.0 l8.2 2.9" stroke="#000" stroke-width="0.84" stroke-linecap="round" fill="none"/><path d="M56.0 66.5 l7.2 3.0" stroke="#000" stroke-width="1.08" stroke-linecap="round" fill="none"/><path d="M56.0 72.0 l8.9 2.2" stroke="#000" stroke-width="0.99" stroke-linecap="round" fill="none"/><path d="M56.0 77.5 l7.5 3.4" stroke="#000" stroke-width="1.23" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-wheat" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><g fill="currentColor" mask="url(#m-wheat)"><path d="M50 12 C64 20 70 40 69 60 C68 80 60 92 50 92 C40 92 32 80 31 60 C30 40 36 20 50 12 Z"/></g></g></symbol>
+<mask id="m-dandelion" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><path d="M50 82 C53 86 54 92 50 99 C46 92 47 86 50 82 Z" fill="#fff"/><path d="M49 88 l2 4" stroke="#000" stroke-width="0.80" stroke-linecap="round" fill="none"/></mask>
+<symbol id="s-dandelion" viewBox="0 0 100 100" overflow="visible"><g filter="url(#sdr)"><path d="M50 96 L50 52" stroke="currentColor" stroke-width="1.40" stroke-linecap="round" fill="none"/><path d="M50 50 Q32.4 42.3 14.9 37.2" stroke="currentColor" stroke-width="0.85" stroke-linecap="round" fill="none"/><path d="M50 50 Q33.6 39.6 17.2 32.7" stroke="currentColor" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M50 50 Q34.4 36.6 18.8 27.7" stroke="currentColor" stroke-width="0.88" stroke-linecap="round" fill="none"/><path d="M50 50 Q36.8 35.1 23.7 25.2" stroke="currentColor" stroke-width="0.70" stroke-linecap="round" fill="none"/><path d="M50 50 Q37.8 31.8 25.5 19.6" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" fill="none"/><path d="M50 50 Q40.9 31.8 31.7 19.7" stroke="currentColor" stroke-width="0.93" stroke-linecap="round" fill="none"/><path d="M50 50 Q42.2 28.2 34.3 13.7" stroke="currentColor" stroke-width="1.00" stroke-linecap="round" fill="none"/><path d="M50 50 Q46.2 33.8 42.5 23.0" stroke="currentColor" stroke-width="0.73" stroke-linecap="round" fill="none"/><path d="M50 50 Q47.9 31.1 45.7 18.6" stroke="currentColor" stroke-width="0.76" stroke-linecap="round" fill="none"/><path d="M50 50 Q50.0 32.2 50.0 20.3" stroke="currentColor" stroke-width="0.82" stroke-linecap="round" fill="none"/><path d="M50 50 Q52.0 32.8 53.9 21.3" stroke="currentColor" stroke-width="0.72" stroke-linecap="round" fill="none"/><path d="M50 50 Q55.3 27.3 60.5 12.1" stroke="currentColor" stroke-width="0.90" stroke-linecap="round" fill="none"/><path d="M50 50 Q56.6 31.5 63.3 19.2" stroke="currentColor" stroke-width="0.64" stroke-linecap="round" fill="none"/><path d="M50 50 Q60.2 29.7 70.4 16.2" stroke="currentColor" stroke-width="0.88" stroke-linecap="round" fill="none"/><path d="M50 50 Q59.6 35.8 69.1 26.3" stroke="currentColor" stroke-width="0.73" stroke-linecap="round" fill="none"/><path d="M50 50 Q63.0 35.3 76.0 25.5" stroke="currentColor" stroke-width="0.87" stroke-linecap="round" fill="none"/><path d="M50 50 Q62.7 39.1 75.3 31.9" stroke="currentColor" stroke-width="0.98" stroke-linecap="round" fill="none"/><path d="M50 50 Q64.1 41.1 78.2 35.1" stroke="currentColor" stroke-width="0.70" stroke-linecap="round" fill="none"/><path d="M50 50 Q67.9 42.2 85.8 37.0" stroke="currentColor" stroke-width="0.66" stroke-linecap="round" fill="none"/><g fill="currentColor" mask="url(#m-dandelion)"><path d="M50 82 C53 86 54 92 50 99 C46 92 47 86 50 82 Z"/></g></g></symbol>
+<symbol id="c-spiral" viewBox="0 0 200 200"><use href="#s-sunflower" x="86.8" y="101.4" width="11.2" height="11.2" transform="rotate(227.5 92.3 107.0)"/><use href="#s-sunflower" x="95.6" y="79.7" width="11.3" height="11.3" transform="rotate(365.0 101.3 85.3)"/><use href="#s-sunflower" x="105.2" y="108.6" width="11.5" height="11.5" transform="rotate(502.5 111.0 114.3)"/><use href="#s-sunflower" x="73.7" y="90.6" width="11.6" height="11.6" transform="rotate(640.0 79.5 96.4)"/><use href="#s-sunflower" x="113.7" y="81.6" width="11.8" height="11.8" transform="rotate(777.5 119.6 87.5)"/><use href="#s-sunflower" x="87.4" y="118.6" width="12.0" height="12.0" transform="rotate(915.0 93.4 124.6)"/><use href="#s-sunflower" x="81.3" y="69.5" width="12.1" height="12.1" transform="rotate(1052.6 87.3 75.6)"/><use href="#s-sunflower" x="121.5" y="104.0" width="12.3" height="12.3" transform="rotate(1190.1 127.6 110.1)"/><use href="#s-sunflower" x="64.9" y="105.7" width="12.4" height="12.4" transform="rotate(1327.6 71.2 111.9)"/><use href="#s-sunflower" x="107.6" y="63.9" width="12.6" height="12.6" transform="rotate(1465.1 113.9 70.2)"/><use href="#s-sunflower" x="103.9" y="126.5" width="12.8" height="12.8" transform="rotate(1602.6 110.3 132.9)"/><use href="#s-sunflower" x="62.4" y="75.5" width="12.9" height="12.9" transform="rotate(1740.1 68.8 81.9)"/><use href="#s-sunflower" x="130.1" y="85.4" width="13.1" height="13.1" transform="rotate(1877.6 136.6 91.9)"/><use href="#s-sunflower" x="71.0" y="125.2" width="13.2" height="13.2" transform="rotate(2015.1 77.6 131.8)"/><use href="#s-sunflower" x="88.1" y="53.4" width="13.4" height="13.4" transform="rotate(2152.6 94.8 60.1)"/><use href="#s-sunflower" x="125.0" y="120.0" width="13.6" height="13.6" transform="rotate(2290.1 131.8 126.8)"/><use href="#s-sunflower" x="50.3" y="94.9" width="13.7" height="13.7" transform="rotate(2427.6 57.2 101.8)"/><use href="#s-sunflower" x="124.3" y="61.9" width="13.9" height="13.9" transform="rotate(2565.1 131.3 68.9)"/><use href="#s-sunflower" x="90.9" y="138.3" width="14.0" height="14.0" transform="rotate(2702.6 97.9 145.3)"/><use href="#s-sunflower" x="63.1" y="57.2" width="14.2" height="14.2" transform="rotate(2840.2 70.2 64.3)"/><use href="#s-sunflower" x="140.1" y="99.2" width="14.4" height="14.4" transform="rotate(2977.7 147.2 106.4)"/><use href="#s-sunflower" x="52.7" y="120.6" width="14.5" height="14.5" transform="rotate(3115.2 60.0 127.9)"/><use href="#s-sunflower" x="103.6" y="44.0" width="14.7" height="14.7" transform="rotate(3252.7 110.9 51.3)"/><use href="#s-sunflower" x="117.9" y="136.8" width="14.8" height="14.8" transform="rotate(3390.2 125.3 144.2)"/><use href="#s-sunflower" x="43.0" y="76.7" width="15.0" height="15.0" transform="rotate(3527.7 50.5 84.2)"/><use href="#s-sunflower" x="140.6" y="70.2" width="15.2" height="15.2" transform="rotate(3665.2 148.1 77.8)"/><use href="#s-sunflower" x="71.5" y="142.2" width="15.3" height="15.3" transform="rotate(3802.7 79.1 149.9)"/><use href="#s-sunflower" x="73.6" y="40.5" width="15.5" height="15.5" transform="rotate(3940.2 81.4 48.2)"/><use href="#s-sunflower" x="141.8" y="118.2" width="15.6" height="15.6" transform="rotate(4077.7 149.6 126.1)"/><use href="#s-sunflower" x="37.0" y="106.6" width="15.8" height="15.8" transform="rotate(4215.2 44.9 114.5)"/><use href="#s-sunflower" x="123.3" y="43.3" width="16.0" height="16.0" transform="rotate(4352.7 131.3 51.3)"/><use href="#s-sunflower" x="101.9" y="149.9" width="16.1" height="16.1" transform="rotate(4490.2 110.0 158.0)"/><use href="#s-sunflower" x="44.6" y="55.3" width="16.3" height="16.3" transform="rotate(4627.8 52.8 63.4)"/><use href="#s-sunflower" x="152.2" y="86.8" width="16.4" height="16.4" transform="rotate(4765.3 160.4 95.0)"/><use href="#s-sunflower" x="49.9" y="136.9" width="16.6" height="16.6" transform="rotate(4902.8 58.2 145.2)"/><use href="#s-sunflower" x="91.9" y="29.2" width="16.8" height="16.8" transform="rotate(5040.3 100.3 37.6)"/><use href="#s-sunflower" x="134.0" y="138.4" width="16.9" height="16.9" transform="rotate(5177.8 142.5 146.9)"/><use href="#s-sunflower" x="27.6" y="85.5" width="17.1" height="17.1" transform="rotate(5315.3 36.2 94.1)"/><use href="#s-sunflower" x="143.1" y="52.1" width="17.2" height="17.2" transform="rotate(5452.8 151.7 60.7)"/><use href="#s-sunflower" x="79.5" y="156.0" width="17.4" height="17.4" transform="rotate(5590.3 88.2 164.7)"/><use href="#s-sunflower" x="55.8" y="34.9" width="17.6" height="17.6" transform="rotate(5727.8 64.5 43.6)"/><use href="#s-sunflower" x="156.1" y="109.0" width="17.7" height="17.7" transform="rotate(5865.3 165.0 117.8)"/><use href="#s-sunflower" x="30.4" y="122.2" width="17.9" height="17.9" transform="rotate(6002.8 39.3 131.1)"/><use href="#s-sunflower" x="115.0" y="26.3" width="18.0" height="18.0" transform="rotate(6140.3 124.0 35.3)"/><use href="#s-sunflower" x="117.2" y="155.5" width="18.2" height="18.2" transform="rotate(6277.8 126.3 164.6)"/><use href="#s-sunflower" x="27.1" y="60.6" width="18.4" height="18.4" transform="rotate(6415.4 36.3 69.8)"/><use href="#s-sunflower" x="158.9" y="69.7" width="18.5" height="18.5" transform="rotate(6552.9 168.1 79.0)"/><use href="#s-sunflower" x="54.2" y="152.8" width="18.7" height="18.7" transform="rotate(6690.4 63.6 162.2)"/><use href="#s-sunflower" x="75.3" y="19.4" width="18.8" height="18.8" transform="rotate(6827.9 84.7 28.8)"/><use href="#s-sunflower" x="150.5" y="133.1" width="19.0" height="19.0" transform="rotate(6965.4 160.0 142.6)"/><use href="#s-sunflower" x="16.7" y="99.6" width="19.2" height="19.2" transform="rotate(7102.9 26.3 109.2)"/><use href="#s-sunflower" x="138.9" y="33.2" width="19.3" height="19.3" transform="rotate(7240.4 148.6 42.9)"/><use href="#s-sunflower" x="93.0" y="165.9" width="19.5" height="19.5" transform="rotate(7377.9 102.8 175.7)"/><use href="#s-sunflower" x="36.5" y="35.7" width="19.6" height="19.6" transform="rotate(7515.4 46.4 45.6)"/><use href="#s-sunflower" x="167.1" y="94.0" width="19.8" height="19.8" transform="rotate(7652.9 177.0 103.9)"/><use href="#s-sunflower" x="30.0" y="139.6" width="20.0" height="20.0" transform="rotate(7790.4 40.0 149.6)"/><use href="#s-sunflower" x="100.8" y="12.2" width="20.1" height="20.1" transform="rotate(7927.9 110.8 22.2)"/><use href="#s-sunflower" x="134.8" y="155.1" width="20.3" height="20.3" transform="rotate(8065.5 144.9 165.2)"/><use href="#s-sunflower" x="11.9" y="71.9" width="20.4" height="20.4" transform="rotate(8203.0 22.2 82.1)"/><use href="#s-sunflower" x="159.8" y="50.0" width="20.6" height="20.6" transform="rotate(8340.5 170.1 60.3)"/><use href="#s-sunflower" x="64.6" y="166.9" width="20.8" height="20.8" transform="rotate(8478.0 74.9 177.3)"/><use href="#s-sunflower" x="55.6" y="15.0" width="20.9" height="20.9" transform="rotate(8615.5 66.0 25.5)"/><use href="#s-sunflower" x="165.5" y="121.7" width="21.1" height="21.1" transform="rotate(8753.0 176.0 132.2)"/><use href="#s-sunflower" x="11.0" y="117.2" width="21.2" height="21.2" transform="rotate(8890.5 21.6 127.8)"/><use href="#s-sunflower" x="128.7" y="15.3" width="21.4" height="21.4" transform="rotate(9028.0 139.4 26.0)"/><use href="#s-sunflower" x="110.4" y="171.0" width="21.6" height="21.6" transform="rotate(9165.5 121.1 181.8)"/><use href="#s-sunflower" x="17.8" y="42.8" width="21.7" height="21.7" transform="rotate(9303.0 28.6 53.6)"/><use href="#s-sunflower" x="173.7" y="74.9" width="21.9" height="21.9" transform="rotate(9440.5 184.6 85.9)"/><use href="#s-sunflower" x="35.8" y="157.0" width="22.0" height="22.0" transform="rotate(9578.0 46.8 168.0)"/><use href="#s-sunflower" x="82.1" y="2.2" width="22.2" height="22.2" transform="rotate(9715.5 93.2 13.3)"/><use href="#s-sunflower" x="152.9" y="148.6" width="22.4" height="22.4" transform="rotate(9853.1 164.0 159.8)"/><use href="#s-sunflower" x="0.5" y="87.9" width="22.5" height="22.5" transform="rotate(9990.6 11.8 99.1)"/><use href="#s-sunflower" x="154.8" y="29.3" width="22.7" height="22.7" transform="rotate(10128.1 166.1 40.6)"/><use href="#s-sunflower" x="79.9" y="177.6" width="22.8" height="22.8" transform="rotate(10265.6 91.3 189.0)"/><use href="#s-sunflower" x="34.4" y="16.5" width="23.0" height="23.0" transform="rotate(10403.1 45.9 28.0)"/><use href="#s-sunflower" x="177.5" y="105.1" width="23.2" height="23.2" transform="rotate(10540.6 189.1 116.7)"/><use href="#s-sunflower" x="10.9" y="136.6" width="23.3" height="23.3" transform="rotate(10678.1 22.5 148.2)"/></symbol>
+<symbol id="c-scatter" viewBox="0 0 280 170"><use href="#s-bean" x="1.2" y="41.2" width="57.6" height="57.6" transform="rotate(37 30 70)"/><use href="#s-acorn" x="52.0" y="12.0" width="56.0" height="56.0" transform="rotate(16 80 40)"/><use href="#s-samara" x="112.3" y="22.3" width="55.4" height="55.4" transform="rotate(-20 140 50)"/><use href="#s-pumpkin" x="165.0" y="25.0" width="70.0" height="70.0" transform="rotate(-23 200 60)"/><use href="#s-stone" x="217.9" y="7.9" width="64.3" height="64.3" transform="rotate(-3 250 40)"/><use href="#s-wheat" x="29.4" y="99.4" width="61.3" height="61.3" transform="rotate(-0 60 130)"/><use href="#s-sunflower" x="91.5" y="91.5" width="57.1" height="57.1" transform="rotate(26 120 120)"/><use href="#s-bean" x="157.3" y="102.3" width="55.4" height="55.4" transform="rotate(-21 185 130)"/><use href="#s-wheat" x="212.8" y="92.8" width="54.3" height="54.3" transform="rotate(-19 240 120)"/></symbol>
+<symbol id="c-row" viewBox="0 0 290 120"><use href="#s-wheat" x="17.4" y="43.2" width="30" height="40" transform="rotate(-3 32.4 63.2)"/><use href="#s-wheat" x="53.7" y="38.1" width="30" height="40" transform="rotate(14 68.7 58.1)"/><use href="#s-wheat" x="91.4" y="41.0" width="30" height="40" transform="rotate(-3 106.4 61.0)"/><use href="#s-wheat" x="133.0" y="38.7" width="30" height="40" transform="rotate(5 148.0 58.7)"/><use href="#s-wheat" x="170.0" y="41.2" width="30" height="40" transform="rotate(11 185.0 61.2)"/><use href="#s-wheat" x="208.5" y="37.1" width="30" height="40" transform="rotate(-12 223.5 57.1)"/><use href="#s-wheat" x="248.7" y="39.9" width="30" height="40" transform="rotate(-9 263.7 59.9)"/></symbol></defs></svg>
+<div class="wrap">
+<header class="f-head"><h1>Seeds of Renaissance in Polyamine</h1>
+<p>The home page and the manifesto again, now rebuilt in the current design system, with a new set of woodcut seeds.</p>
+<div class="brief">
+<h2>Version 6: the current design system</h2>
+<ul>
+<li><b>Grounds:</b> white, warm paper and a very pale yellow, with one night section. Dark and light meet at a torn edge.</li>
+<li><b>Type:</b> Polyamine for headings and the wordmark, Bricolage Grotesque for text, Appful Grotesque for small labels, a soft italic serif for poetry.</li>
+<li><b>Colour roles:</b> buttons are black. The logo red is used only for an occasional link in running text. Pale yellow is a background only. Colour otherwise comes from photographs.</li>
+<li><b>Graphic elements:</b> the woodcut swallow (single, flock, seal, divider) and new <b>woodcut seeds</b>, single or in clusters. Figures are numbered and captioned like plates.</li>
+<li><b>Logo</b> on a white disc in the footer.</li>
+</ul>
+<p>Earlier versions of this page (Warm Emergence, Night to Dawn) are in the artifact's version history and in the repo under <code>mockups/direction-e/</code>. Photos are placeholders.</p>
+</div></header>
+<div class="f-tools">
+  <div class="grp"><span>Jump to</span><a href="#seeds">Woodcut seeds</a><a href="#home">Home</a><a href="#manifesto">Manifesto</a></div>
+</div>
+
+<section class="dir" id="seeds"><span class="dir-l"><b>Woodcut seeds</b> · graphic elements</span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">Seeds of Renaissance · graphic elements</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <div class="seedgrid">
+    <div class="el w"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Sunflower seed"><use href="#s-sunflower"/></svg><span class="lab">Fig. 1 · Sunflower</span></div>
+    <div class="el p"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Bean"><use href="#s-bean"/></svg><span class="lab">Fig. 2 · Bean</span></div>
+    <div class="el s"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Maple key"><use href="#s-samara"/></svg><span class="lab">Fig. 3 · Maple key</span></div>
+    <div class="el w"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Acorn"><use href="#s-acorn"/></svg><span class="lab">Fig. 4 · Acorn</span></div>
+    <div class="el s"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Pumpkin seed"><use href="#s-pumpkin"/></svg><span class="lab">Fig. 5 · Pumpkin</span></div>
+    <div class="el w"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Stone"><use href="#s-stone"/></svg><span class="lab">Fig. 6 · Stone</span></div>
+    <div class="el n"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Wheat grain"><use href="#s-wheat"/></svg><span class="lab">Fig. 7 · Wheat</span></div>
+    <div class="el p"><svg class="sw" viewBox="0 0 100 100" role="img" aria-label="Dandelion seed"><use href="#s-dandelion"/></svg><span class="lab">Fig. 8 · Dandelion</span></div>
+  </div>
+  <div class="clusters">
+    <div class="el s"><svg class="sw" viewBox="0 0 200 200" role="img" aria-label="Sunflower seeds in a spiral"><use href="#c-spiral"/></svg><span class="lab">Cluster · the sunflower spiral</span></div>
+    <div class="el w"><svg class="sw" viewBox="0 0 280 170" role="img" aria-label="Scattered seeds"><use href="#c-scatter"/></svg><span class="lab">Cluster · a handful, scattered</span></div>
+    <div class="el p"><svg class="sw" viewBox="0 0 290 120" role="img" aria-label="A row of wheat grains"><use href="#c-row"/></svg><span class="lab">Cluster · a sown row, as a divider</span></div>
+  </div>
+</div></div></div></section>
+
+<section class="dir" id="home"><span class="dir-l"><b>Home</b></span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="hero sunlit pad">
+    <svg class="flight sw" style="left:54%;top:2%;width:min(17cqi,210px);height:auto" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+    <div class="txt">
+      <span class="lab muted">Gathering · Thursday 15 October</span>
+      <h1 class="ds">The Global Connection Call</h1>
+      <p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p>
+      <a class="btn solid" href="#">Save a place</a>
+    </div>
+    <figure class="print1"><img src="img/meal.jpg" alt="Friends laughing around a long table in a garden"><figcaption><span class="no">Fig. 1</span>A shared meal in the garden, after a gathering.</figcaption></figure>
+  </section>
+
+  <section class="mod pad white">
+    <span class="lab">What we believe</span>
+    <div class="believe">
+      <div>
+        <p>Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them. Within that breakdown something is trying to be born. <span class="hl">We are a movement of people making sense of this moment and practising what comes next, together.</span> <a class="tl" href="#">Read the manifesto</a></p>
+        <svg class="seedrow" viewBox="0 0 290 120" aria-hidden="true"><use href="#c-row"/></svg>
+      </div>
+      <figure><img src="img/stones.jpg" alt="Two women carrying stones beside a lake and a small wooden bridge"><figcaption><span class="no">Fig. 2</span>Carrying stones by the lake.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="mod pad" style="position:relative;z-index:10;background:var(--paper)">
+    <span class="lab">Take part</span>
+    <div class="ways">
+      <a class="way" href="#"><span class="ph"><img src="img/walking.jpg" alt="Collage of people walking through cloud toward a yellow field"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-sunflower"/></svg><span class="no">Gather</span></span><h3 class="ds">Connection calls</h3><p>Monthly, online, open to all.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/sylvie.jpg" alt="Calligraphy scrolls hanging in a stone attic"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg><span class="no">Practise</span></span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/scrolls.jpg" alt="A red paper lantern among leaves against an old wall"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg><span class="no">Belong</span></span><h3 class="ds">Community gardens</h3><p>Conversation between the calls.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/field.jpg" alt="A woman in white standing in a ploughed field at dusk"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg><span class="no">Seed</span></span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
+    </div>
+  </section>
+
+  <section class="night pad">
+    <span class="tear" style="position:absolute;left:0;right:0;top:0"></span>
+    <svg class="nightseal sw" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+    <span class="lab">Selected work</span>
+    <div class="sel">
+      <ul class="sel-list">
+        <li class="on" tabindex="0" data-img="img/mountain.jpg" data-cap="Over the Mountains. Snow peak under star trails."><span class="lab">Podcast</span><b>Over the Mountains</b><span class="by">Conversations with Iain McGilchrist, Dougald Hine and Roberto Mangabeira Unger</span></li>
+        <li tabindex="0" data-img="img/dore.jpg" data-cap="Doré’s celestial rose, from the Paradiso."><span class="lab">Essay</span><b>The Second Renaissance: A Very Short Introduction</b><span class="by">Real risk, root cause, radical response, real possibility</span></li>
+        <li tabindex="0" data-img="img/interbeing.jpg" data-cap="Interbeing."><span class="lab">Manifesto</span><b>A Manifesto for Civilizational Renewal</b><span class="by">For all the living beings whose heart burns to see a new world emerge</span></li>
+        <li tabindex="0" data-img="img/orpheus.jpg" data-cap="Orpheus, from Issue #2: Mythos."><span class="lab">Art</span><b>Orpheus</b><span class="by">From the magazine, Issue #2</span></li>
+      </ul>
+      <figure class="pic"><img class="sel-img" src="img/mountain.jpg" alt="Image for the selected work"><figcaption><span class="no">Fig. 3</span><span class="sel-cap">Over the Mountains. Snow peak under star trails.</span></figcaption></figure>
+    </div>
+  </section>
+  <div class="tear bot" style="background:var(--night)"></div>
+
+  <section class="mod pad sunlit printmod">
+    <img src="img/mythos.jpg" alt="Cover of magazine issue 2, Mythos">
+    <div>
+      <span class="lab muted">In print · Issue #2</span>
+      <h2 class="ds">Mythos</h2>
+      <p>How myths shape what we call sacred and remember. Art, poetry and essays from forty contributors, in a yearly printed issue.</p>
+      <a class="btn solid" href="#">Subscribe · €35 a year</a>
+    </div>
+  </section>
+
+  <section class="mod pad white">
+    <span class="lab">Coming up</span>
+    <div class="cal">
+      <div class="r"><span class="d">15 Oct</span><span><b>Global Connection Call</b><small>Online · 19:30 UK / 20:30 CET · free</small></span><a href="#">Save a place</a></div>
+      <div class="r"><span class="d">7 – 14 Oct</span><span><b>Intro to Collective Action</b><small>Six short online sessions · €20, refunded if you attend all six</small></span><a href="#">Register</a></div>
+      <div class="r"><span class="d">Under way</span><span><b>Praxis Ecology, with Valérie Duvauchelle</b><small>Six sessions over ten weeks · €250</small></span><a href="#">Next intake</a></div>
+    </div>
+  </section>
+
+  <section class="mod pad sunlit seedline">
+    <svg viewBox="0 0 280 170" aria-hidden="true"><use href="#c-scatter"/></svg>
+    <p class="poem">Life as an art. In this soil we plant the seeds of a Renaissance.</p>
+    <span class="lab muted">From the manifesto</span>
+  </section>
+
+  <section class="mod pad white">
+    <span class="lab">Engage</span>
+    <div class="engage">
+      <div><h3>The Greenhouse</h3><p>Our newsletter: new releases, gatherings and ways in.</p><input id="em1" type="email" placeholder="Your email" aria-label="Email"><a class="btn solid" href="#">Subscribe</a></div>
+      <div><h3>Join the movement</h3><p>Come to a call, then find your people in the community gardens.</p><a class="btn" href="#">How to join</a></div>
+      <div><h3>Support the work</h3><p>Become a patron of the magazine and the artists it pays.</p><a class="btn" href="#">Become a patron</a></div>
+    </div>
+  </section>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+
+<section class="dir" id="manifesto"><span class="dir-l"><b>Manifesto</b></span><div class="browser"><div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="fl">seedsofrenaissance.org/manifesto</span><span class="dots"></span></div><div class="mockwrap"><div class="mock">
+  <header class="hdr pad">
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="mhero pad sunlit">
+    <svg class="spiral" viewBox="0 0 200 200" aria-hidden="true"><use href="#c-spiral"/></svg>
+    <div style="position:relative;z-index:2"><span class="lab muted">Manifesto</span><h1 class="ds">A Manifesto for Civilizational Renewal</h1><p class="ded poem">For all the living beings whose heart burns to see a new world emerge.</p></div>
+    <figure class="print1"><img src="img/walking.jpg" alt="Collage of people walking through cloud toward a torn opening onto a yellow field"><figcaption><span class="no">Fig. 1</span>Walking toward the field. Collage, artist to be credited.</figcaption></figure>
+  </section>
+  <article class="text pad white">
+
+    
+    <p class="drop">Human civilization has always been a story of transformation, of old worlds dying and new ones being born. We are living through such moments. The crises of our time, ecological, political, social and spiritual, are not separate emergencies to be managed one by one. They are the symptoms of a civilization whose foundations are cracking. And as in every great turning, crisis carries within it the seed of rebirth.</p>
+    <div class="pull"><span>We are a movement called to bring forth a renaissance.</span><span>We are seed-bearers pioneering a world that works for everyone.</span><span>We create a new world through our work.</span><span>We are the bridge between the dying past and the future unborn.</span></div>
+    <p>So what will be this Renaissance we are seeding? It is yet to be known but we answer to the call of a dawn, calling us to value interbeingness, awakening to the wisdom of the whole, inner-evolution and dancing with the richness of complexity.</p>
+    <p>We gather once a month on a <a class="tl" href="#">Global Connection Call</a>, open to anyone who feels this call too.</p>
+    <svg class="seedrow" style="justify-self:center" viewBox="0 0 290 120" aria-hidden="true"><use href="#c-row"/></svg>
+    <p class="soil poem">Life as an art. In this soil we plant the seeds of a Renaissance.</p>
+    <ol class="litany"><li>Our work is a practice of hope, because where there is hope there is action and where there is action there is vitality, life and change.</li><li>Our work is mystical, political, ethical, spiritual, religious and artistic.</li><li>Our work expresses the good through community, the truth through wisdom and beauty through art.</li><li>Our work is to calm our inner landscape so we can listen deeply for the whole which we are always part of.</li><li>Our work is to create a space to be with the unknown and the possibility of creation that comes with it.</li><li>Our work is to witness joy, darkness, hope, sadness, tragedies and miracles and for those to guide us into living wisdom.</li><li>Our work is to inquire and listen for a world that works for everyone and everything.</li><li>Our work is to let go of and develop what is needed for a renaissance to be born.</li><li>Our work dances with the shadow to integrate them, so we are no longer run by them and take responsibility for the suffering it has caused to others.</li><li>Our work is to inquire into the nature of reality through embodied empirical practices and rigorous thinking, as the quality of our thinking leads to the quality of our speech. We seed the future with our words.</li><li>Our work honors our ancestors’ efforts whilst learning from their mistakes.</li><li>Our work stands to liberate ourselves from nihilism and relativism and to go beyond the limitation of the superiority, equality and inferiority complex.</li><li>Our work is a demonstration of the power of vulnerability with others and authenticity with oneself.</li><li>Our work is a practice of being with our cognitive dissonance and freeing ourselves from the painful shackles of our discriminating biases.</li><li>Our work is understanding and compassionate while being expressed and unapologetic.</li><li>Our work is contemplative and activist at the same time.</li><li>Our work is to sit in silence together, pray and activate our oracular bodies with rituals in an embrace to mother earth.</li><li>Our work remembers joy as transformative practice and so we have the inner fuel to pass through times of darkness.</li><li>Our work explores impermanence and eternity in touching the ultimate dimension and linking it to the relative world.</li><li>Our work is in the emerging interbeing.</li><li>Our work is life as an art.</li></ol>
+  
+    <svg class="endseal" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+  </article>
+  <footer class="foot pad">
+    <span class="tear"></span>
+    <div><span class="badge"><img src="img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+    <div><span class="lab">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+    <div><span class="lab">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+    <div><span class="lab">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+  </footer>
+</div></div></div></section>
+</div>
+<script>
+(function(){
+  document.querySelectorAll('.mock a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault()})});
+  document.querySelectorAll('.mock .sel').forEach(function(sel){
+    var items=sel.querySelectorAll('li'),img=sel.querySelector('.sel-img'),cap=sel.querySelector('.sel-cap');
+    function pick(li){items.forEach(function(x){x.classList.remove('on')});li.classList.add('on');img.src=li.dataset.img;cap.textContent=li.dataset.cap}
+    items.forEach(function(li){['mouseenter','focus','click'].forEach(function(ev){li.addEventListener(ev,function(){pick(li)})})});
+  });
+})();
+</script>
