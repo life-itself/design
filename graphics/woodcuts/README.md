@@ -2,6 +2,8 @@
 
 Graphic elements for Seeds of Renaissance, drawn to look like woodcut or linocut prints: a black shape, white carved lines, and a slightly rough printed edge. See also [[design-system-plan]] and [[moodboard]].
 
+Gallery of everything: https://claude.ai/artifact/U3qepgEKdybBfPVu2YT3ny (source: `gallery.html`)
+
 ![[preview-1.png]]
 ![[preview-2.png]]
 

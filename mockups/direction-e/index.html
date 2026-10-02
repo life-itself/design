@@ -301,6 +301,23 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
  .mock .seedgrid{grid-template-columns:1fr 1fr}.mock .clusters{grid-template-columns:1fr}
  .mock .nightseal{display:none}
 }
+
+/* Full-screen hero, original layout */
+body[data-hero="full"] #home .hero{display:none}
+body:not([data-hero="full"]) #home .feat,body:not([data-hero="full"]) #home .hdr2,body:not([data-hero="full"]) .hero-full-only{display:none}
+body[data-hero="full"] #home .hdr{display:none}
+.mock .hdr2{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:14px;border-bottom:1px solid var(--rule);position:relative;z-index:10;background:var(--paper)}
+.mock .hdr2 nav{display:flex;gap:20px}
+.mock .hdr2 nav.right{justify-content:flex-end}
+.mock .hdr2 nav a{text-decoration:none}
+.mock .feat{position:relative;color:#fff;z-index:10;background:var(--night);overflow:hidden}
+.mock .feat img{width:100%;aspect-ratio:16/8.4;object-fit:cover}
+.mock .feat .ov{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;gap:16px;padding:24px 24px 48px;background:radial-gradient(ellipse at center,rgb(23 22 19/.58),rgb(23 22 19/.14) 72%);z-index:2}
+.mock .feat h1{font-size:clamp(40px,7cqi,96px);line-height:.98;margin:0;max-width:14ch;text-wrap:balance}
+.mock .feat p{margin:0;max-width:40ch;font-size:clamp(16px,1.8cqi,20px)}
+.mock .feat .lab{color:#fff}
+.mock .feat .btn.solid{border-color:var(--ink)}
+@container (max-width:800px){.mock .hdr2{grid-template-columns:1fr}.mock .hdr2 nav{display:none}.mock .feat img{aspect-ratio:4/5}}
 </style>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <filter id="wcr" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/></filter>
@@ -331,6 +348,8 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
 <header class="f-head"><h1>Seeds of Renaissance in Polyamine</h1>
 <p>The home page and the manifesto again, now rebuilt in the current design system, with a new set of woodcut seeds.</p>
 <div class="brief">
+<h2>Version 7</h2>
+<p>The home page now opens, by default, with a full-screen photograph and the centred header of the original layout, with a torn white edge into the page. Use <b>Home hero</b> to switch back to the split hero of version 6, and <b>Image</b> to try other photographs.</p>
 <h2>Version 6: the current design system</h2>
 <ul>
 <li><b>Grounds:</b> white, warm paper and a very pale yellow, with one night section. Dark and light meet at a torn edge.</li>
@@ -342,6 +361,8 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
 <p>Earlier versions of this page (Warm Emergence, Night to Dawn) are in the artifact's version history and in the repo under <code>mockups/direction-e/</code>. Photos are placeholders.</p>
 </div></header>
 <div class="f-tools">
+  <div class="grp"><span>Home hero</span><button type="button" data-hero="full" aria-pressed="true">Full screen (original layout)</button><button type="button" data-hero="split" aria-pressed="false">Split (v6)</button></div>
+  <div class="grp hero-full-only"><span>Image</span><button type="button" data-img="field" aria-pressed="true">Woman in the field</button><button type="button" data-img="meal" aria-pressed="false">Shared meal</button><button type="button" data-img="stones" aria-pressed="false">Stones by the lake</button><button type="button" data-img="scrolls" aria-pressed="false">Hanging scrolls</button></div>
   <div class="grp"><span>Jump to</span><a href="#seeds">Woodcut seeds</a><a href="#home">Home</a><a href="#manifesto">Manifesto</a></div>
 </div>
 
@@ -368,6 +389,22 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
     <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
     <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
   </header>
+  <header class="hdr2 pad">
+    <nav class="lab"><a href="#">Gather</a><a href="#">Listen</a><a href="#">Read</a></nav>
+    <a class="brand" href="#"><img src="img/logo.png" alt=""><span class="ds">Seeds <em>of</em> Renaissance</span></a>
+    <nav class="lab right"><a href="#">Magazine</a><a href="#">Join</a></nav>
+  </header>
+  <section class="feat">
+    <img class="feat-img" src="img/sylvie.jpg" alt="A woman in white standing in a ploughed field at dusk" style="object-position:50% 40%">
+    <svg class="flight sw" style="right:8%;top:10%;width:min(18cqi,220px);height:auto;color:#fff;z-index:3" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+    <div class="ov">
+      <span class="lab">Gathering · Thursday 15 October</span>
+      <h1 class="ds">The Global Connection Call</h1>
+      <p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p>
+      <a class="btn solid" href="#">Save a place</a>
+    </div>
+    <span class="tear" style="position:absolute;left:0;right:0;bottom:-1px;margin:0;background:#fff"></span>
+  </section>
   <section class="hero sunlit pad">
     <svg class="flight sw" style="left:54%;top:2%;width:min(17cqi,210px);height:auto" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
     <div class="txt">
@@ -394,9 +431,9 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
     <span class="lab">Take part</span>
     <div class="ways">
       <a class="way" href="#"><span class="ph"><img src="img/walking.jpg" alt="Collage of people walking through cloud toward a yellow field"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-sunflower"/></svg><span class="no">Gather</span></span><h3 class="ds">Connection calls</h3><p>Monthly, online, open to all.</p></a>
-      <a class="way" href="#"><span class="ph"><img src="img/sylvie.jpg" alt="Calligraphy scrolls hanging in a stone attic"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg><span class="no">Practise</span></span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/field.jpg" alt="Calligraphy scrolls hanging in a stone attic"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg><span class="no">Practise</span></span><h3 class="ds">Courses</h3><p>Small groups, practices for daily life.</p></a>
       <a class="way" href="#"><span class="ph"><img src="img/scrolls.jpg" alt="A red paper lantern among leaves against an old wall"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg><span class="no">Belong</span></span><h3 class="ds">Community gardens</h3><p>Conversation between the calls.</p></a>
-      <a class="way" href="#"><span class="ph"><img src="img/field.jpg" alt="A woman in white standing in a ploughed field at dusk"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg><span class="no">Seed</span></span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
+      <a class="way" href="#"><span class="ph"><img src="img/sylvie.jpg" alt="A woman in white standing in a ploughed field at dusk"></span><span class="row"><svg class="seed-ic" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg><span class="no">Seed</span></span><h3 class="ds">Gardens of Change</h3><p>Start something where you live.</p></a>
     </div>
   </section>
 
@@ -492,6 +529,10 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
 </div>
 <script>
 (function(){
+  var file={field:'sylvie',meal:'meal',stones:'stones',scrolls:'field'},pos={field:'50% 40%',meal:'50% 45%',stones:'50% 55%',scrolls:'50% 50%'},alt={field:'A woman in white standing in a ploughed field at dusk',meal:'Friends laughing around a long table in a garden',stones:'Two women carrying stones beside a lake',scrolls:'Calligraphy scrolls hanging in a stone attic'};
+  document.body.dataset.hero='full';
+  document.querySelectorAll('.f-tools [data-hero]').forEach(function(b,_,all){b.addEventListener('click',function(){document.body.dataset.hero=b.dataset.hero;all.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});
+  document.querySelectorAll('.f-tools [data-img]').forEach(function(b,_,all){b.addEventListener('click',function(){var k=b.dataset.img,im=document.querySelector('.feat-img');im.src='img/'+file[k]+'.jpg';im.style.objectPosition=pos[k];im.alt=alt[k];all.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});
   document.querySelectorAll('.mock a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault()})});
   document.querySelectorAll('.mock .sel').forEach(function(sel){
     var items=sel.querySelectorAll('li'),img=sel.querySelector('.sel-img'),cap=sel.querySelector('.sel-cap');
