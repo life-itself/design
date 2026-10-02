@@ -29,6 +29,7 @@ Gallery of everything: https://claude.ai/artifact/U3qepgEKdybBfPVu2YT3ny (source
 | `fruit-cherries.svg` | A pair of cherries |
 | `circle-of-chairs.svg` | People sitting on chairs in a circle, around a small fire |
 | `circle-of-chairs-above.svg` | The same circle seen from above, carved into a dark floor |
+| `seeds-red.svg` | The same seeds in the logo and link red (#E5201C) |
 | `seeds.svg` | The woodcut seeds and seed clusters (sunflower, bean, maple key, acorn, pumpkin, stone, wheat, dandelion; spiral, scatter, row) |
 
 ## Using them
