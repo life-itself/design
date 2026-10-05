@@ -72,3 +72,32 @@ Tokens `--thumb-*` in [system/tokens.css](system/tokens.css) and the `.thumb` co
 1. **Known:** at 168px the duration badge covers the end of the gathering title ("Find your peopl…"); the podcast label is ~5px there.
 2. **Thumbnail accuracy pass**: check each template at real feed sizes (360px and 168px) with the duration badge in place; fix label sizes; use real episode titles and guests; decide which labels must be readable.
 3. **Channel art review**: banner and mobile crop, avatar (needs the small logo), podcast video cover, lower third and watermark, using the asset list from round 4.
+
+## Brief: polishing the YouTube work in a new session
+
+For a fresh Claude session (or a person) picking up the YouTube work. Current state and what's done live in beads (`bd show design-34t.5 design-34t.8 design-34t.6`), not here; this is what to do and how.
+
+**Read first, in order:** [BUILD.md](BUILD.md), this file, [voice.md](voice.md) (titles and thumbnail text), [type.md](type.md) top section (Polyamine for display under ~10 words, Restora beyond that and for the poetic italic; four faces only), [colour.md](colour.md), [graphics.md](graphics.md).
+
+**Where to work**
+
+- Thumbnails and the Over the Mountains guest cover (`.thumb--guest`): [examples/youtube/index.html](examples/youtube/index.html)
+- Channel art (banner, avatar, lower third, watermark, About): [examples/youtube/channel.html](examples/youtube/channel.html)
+- Styles: `system/components.src.css`, in the "Thumbnails" and "YouTube channel art" blocks. Rebuild with `python3 system/build-css.py`; never edit `components.css`. Tokens: `--thumb-*` and `--yt-*` in `system/tokens.css`.
+- Composition reference for the podcast cover: `archive/otm-thumbnail-rough.html`. Keep its idea (dark mountain backdrop, guest portrait greyscale on the right, title and guest name on the left), not its styling. Placeholder images: `system/img/otm-*.jpg`.
+
+**Start from these known problems**
+
+1. At 168px (the "up next" size) the duration badge covers the end of the gathering title.
+2. The podcast "Over the Mountains" label is about 5px at 168px; the guest name only just reads. Decide which text must be readable at 168px and size it (roughly 40px+ on the 1280×720 artboard), or drop it.
+3. Use real episode titles and guests where Rufus provides them; follow the title formulas in voice.md.
+4. Review the channel art with Rufus: banner, avatar choice (swallow on white is the current recommendation; the logo fails under 48px), lower third.
+
+**How**
+
+- Preview: run the `static` launch config (python http.server on 8790 from the repo root), open `/projects/sor-design-system/examples/youtube/`. Check every template in the feed preview at 360px and 168px.
+- Keep changes inside the YouTube examples and their CSS blocks. If something belongs in the wider system (a new rule or token), make it and note it in this file.
+- Record progress in beads notes, not in markdown.
+- Finish: update this file's tables, close or update the beads, commit, `git push`, then republish: `python3 system/build-site.py && fl --yes site` (from this folder).
+
+**Prompt to start a session:** *Read projects/sor-design-system/youtube.md, section "Brief: polishing the YouTube work in a new session", and follow it. Then show me the podcast cover and thumbnails at feed size and propose fixes.*
