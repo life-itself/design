@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
 <style>
+@font-face{font-family:"Restora";src:local("Restora"),local("Restora-Regular"),local("Restora Regular");font-display:swap}
 @font-face{font-family:"Polyamine";src:local("Polyamine"),local("Polyamine-Regular"),local("Polyamine Regular");font-display:swap}
 @font-face{font-family:"Appful Grotesque";src:local("Appful Grotesque"),local("AppfulGrotesque-Regular"),local("Appful Grotesque Regular");font-display:swap}
 :root{--f-bg:#f3f3f1;--f-surface:#fff;--f-ink:#1d1e20;--f-muted:#60636a;--f-rule:#dcdcd8;--f-chip:#e8e8e4;--f-accent:#3a4a8c}
@@ -225,7 +226,7 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
 .mock .print1 figcaption{margin-top:10px}
 .mock .believe{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5cqi,72px);align-items:start}
 .mock .believe p{margin:0 0 22px;font-size:clamp(20px,2.4cqi,28px);line-height:1.38;font-weight:300;text-wrap:pretty}
-.mock .believe .hl{font-family:var(--display)}
+.mock .believe .hl{font-family:var(--poem);font-style:italic;font-weight:500;font-variation-settings:"SOFT" 100}
 .mock .believe figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .mock .seedrow{width:min(320px,70%);height:auto;color:var(--ink);display:block}
 .mock .ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.6cqi,32px)}
@@ -285,7 +286,7 @@ body[data-joy="off"] .mock .band{background:var(--white);border-block:1px solid 
 .mock .text.white{box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax)}
 .mock .text p{margin:0;font-size:19px;line-height:1.65;text-wrap:pretty}
 .mock .text .drop::first-letter{font-family:var(--display);float:left;font-size:4.6em;line-height:.8;padding:6px 10px 0 0}
-.mock .pull{padding:28px 0;border-block:1px solid var(--ink);font-family:var(--display);font-size:clamp(26px,3.4cqi,38px);line-height:1.2;display:grid;gap:8px}
+.mock .pull{padding:28px 0;border-block:1px solid var(--ink);font-family:"Restora","Fraunces",Georgia,serif;font-size:clamp(26px,3.4cqi,38px);line-height:1.2;display:grid;gap:8px}
 .mock .soil{font-size:clamp(24px,3cqi,32px)!important;line-height:1.3!important;text-align:center}
 .mock .litany{list-style:none;margin:0;padding:0;counter-reset:l;display:grid}
 .mock .litany li{counter-increment:l;display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--rule);font-size:18px;line-height:1.5}
