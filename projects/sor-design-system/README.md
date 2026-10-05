@@ -36,7 +36,7 @@ Whole pages built only from the system. Copy the closest one.
 | [examples/web/white-paper.html](examples/web/white-paper.html) | Research |
 | [examples/youtube/](examples/youtube/index.html) | YouTube thumbnails, 1280×720. Channel work and history: [youtube.md](youtube.md) |
 
-Slides and print are next.
+Slides are next: [slides.md](slides.md). Then print.
 
 ## Code
 
