@@ -2,6 +2,17 @@
 
 Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what exists, the specs, and what's next. Part of the [SoR design system](README.md).
 
+## What we need: four kinds
+
+| Kind | What it is | Status |
+|---|---|---|
+| **1 · Landscape poster** | Announces a gathering or event: date, title, photograph. Also works as an event banner on other platforms. | Have it: the *gathering* template |
+| **2 · Video cover** | Generic videos (talks, essays, explainers), including a quote-card variant. | Have it: the *talk* and *manifesto* templates |
+| **3 · Podcast episode cover** | Over the Mountains episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **Missing, and important.** Uriel's round 4 has a version in older styles; an earlier, better mockup may exist |
+| **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | Uriel's round 4, in older styles: to redo in the current system |
+
+Later, if needed: a vertical Shorts cover (1080 × 1920).
+
 ## What exists
 
 | Work | By | Status | Where |

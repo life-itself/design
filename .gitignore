@@ -13,3 +13,6 @@ inbox/
 
 # Generated static site for SoR experiences (build.py --site); published with fl
 projects/2026-sor-experiences/site/
+
+# Generated static site for the SoR design system (system/build-site.py); published with fl
+projects/sor-design-system/site/

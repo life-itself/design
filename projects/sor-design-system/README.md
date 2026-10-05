@@ -4,7 +4,9 @@ The brand and design system for Seeds of Renaissance: how it looks and why, with
 
 **Building something? Start with [BUILD.md](BUILD.md).** It is the brief for people and AI agents alike: the rules in one paragraph, the page shell, a menu of sections, the examples to copy and a checklist.
 
-**Want to see it?** [guide.html](guide.html) shows the whole system rendered, set in its own style. Published at https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
+**Want to see it?** [guide.html](guide.html) shows the whole system rendered, set in its own style.
+
+**Published** at https://sor-design-system-rufuspollock.flowershow.me (Flowershow; rebuild with `python3 system/build-site.py`, then `fl --yes site`). Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
 
 ## The system
 
