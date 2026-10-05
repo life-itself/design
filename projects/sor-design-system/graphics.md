@@ -37,6 +37,6 @@ The four pathway seeds stay attached to their pathways everywhere: site, thumbna
 
 ## The wider set
 
-Mountains, more swallows, leaves, wind, fruit and people in a circle are in [sor-brand/graphics/woodcuts/](sor-brand/graphics/woodcuts/README.md), with a gallery and the script that draws them. Only the symbols above are in the system sprite so far; add others to `system/graphics.svg` and run `python3 system/build-graphics.py`.
+All twenty woodcuts (swallows, mountains, leaves, wind, fruit, people in a circle, seeds) are shown on any ground in **[woodcuts.html](woodcuts.html)**. The SVG files, the script that draws them and notes on each are in [system/woodcuts/](system/woodcuts/README.md); any file can be inlined as-is and takes the ink of its ground. Rebuild the page with `python3 system/build-woodcuts.py`. Only the symbols above are in the system sprite so far; add others to `system/graphics.svg` and run `python3 system/build-graphics.py`.
 
 **Open:** hand-draw the woodcuts, or base them on public-domain prints?

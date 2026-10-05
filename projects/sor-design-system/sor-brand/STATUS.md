@@ -46,7 +46,7 @@ More detail: [design-system-plan.md](design-system-plan.md)
 |---|---|
 | [design-system-plan.md](design-system-plan.md) | Plan, reasoning and decision log |
 | [moodboard.md](moodboard.md) · [moodboard-not-us.md](moodboard-not-us.md) | What we like and don't, with notes |
-| [graphics/woodcuts/](graphics/woodcuts/README.md) | Woodcut graphics (SVG) and the script that draws them |
+| [../system/woodcuts/](../system/woodcuts/README.md) | Woodcut graphics (SVG) and the script that draws them |
 | [logo.md](logo.md) | Logo notes and issues |
 | [references/](references/) | Studies of Dark Mountain and Emergence Magazine |
 | [mockups/](mockups/) | HTML source of every artifact |
@@ -55,7 +55,7 @@ More detail: [design-system-plan.md](design-system-plan.md)
 
 ## Appendix: version history
 
-Each artifact keeps all versions in claude.ai (open its version history). Source copies are in `mockups/` and `graphics/woodcuts/`.
+Each artifact keeps all versions in claude.ai (open its version history). Source copies are in `mockups/` and `../system/woodcuts/`.
 
 ### Seeds Polyamine Pages · `mockups/direction-e/`
 | Version | Change |
@@ -72,7 +72,7 @@ Each artifact keeps all versions in claude.ai (open its version history). Source
 | v2 | Woodcut swallow and elements sheet; pale yellow as background only |
 | v1 | Joy layer with bright yellow, drawn suns, highlighting (bright yellow and highlighting rejected) |
 
-### Seeds Woodcuts · `graphics/woodcuts/gallery.html`
+### Seeds Woodcuts · `../system/woodcuts/gallery.html`
 | Version | Change |
 |---|---|
 | v2 | Seeds in red added |

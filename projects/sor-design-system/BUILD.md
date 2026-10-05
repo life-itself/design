@@ -104,7 +104,8 @@ The full list, with HTML to copy, is in [components.md](components.md). See ever
 - [colour.md](colour.md): roles, proportion, do and don't
 - [type.md](type.md): the faces, scale, and how to apply them
 - [layout.md](layout.md): grounds, rhythm, torn edges, grid and spacing
-- [graphics.md](graphics.md): woodcut swallow, seal, seeds and clusters
+- [graphics.md](graphics.md): woodcut swallow, seal, seeds and clusters; the full set in [woodcuts.html](woodcuts.html)
+- [youtube.md](youtube.md): YouTube thumbnails and channel art
 - [photography.md](photography.md): what to choose and avoid
 - [logo.md](logo.md): versions and placement
 - [components.md](components.md): every component with HTML

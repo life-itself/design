@@ -14,7 +14,7 @@ The brand and design system for Seeds of Renaissance: how it looks and why, with
 | [colour.md](colour.md) | Grounds, inks and the one accent, with roles and rules |
 | [type.md](type.md) | The faces, the scale, and the research behind them |
 | [layout.md](layout.md) | Grounds and rhythm, torn edges, grid and spacing |
-| [graphics.md](graphics.md) | The woodcut swallow, seal, seeds and clusters |
+| [graphics.md](graphics.md) | The woodcut swallow, seal, seeds and clusters; all twenty woodcuts in [woodcuts.html](woodcuts.html) |
 | [photography.md](photography.md) | What to choose and avoid; placeholders |
 | [logo.md](logo.md) | Versions and placement (provisional) |
 | [components.md](components.md) | Every component, with HTML to copy |
@@ -31,7 +31,7 @@ Whole pages built only from the system. Copy the closest one.
 | [examples/web/join.html](examples/web/join.html) | Joining |
 | [examples/web/magazine.html](examples/web/magazine.html) | Publication |
 | [examples/web/white-paper.html](examples/web/white-paper.html) | Research |
-| [examples/youtube/](examples/youtube/index.html) | YouTube thumbnails, 1280×720 |
+| [examples/youtube/](examples/youtube/index.html) | YouTube thumbnails, 1280×720. Channel work and history: [youtube.md](youtube.md) |
 
 Slides and print are next.
 
@@ -42,7 +42,8 @@ Slides and print are next.
 | [system/tokens.css](system/tokens.css) | Every colour, face, size and space, with its role. Change the system here. |
 | [system/components.src.css](system/components.src.css) | Components, readable source. Run `python3 system/build-css.py` to make `components.css`. |
 | `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed). Built by `build-fonts.py`. |
-| `system/graphics.svg` / `graphics.js` | Woodcut symbols. Built by `build-graphics.py`. |
+| `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `build-graphics.py`. |
+| `system/woodcuts/` | All woodcut SVGs and the script that draws them (moved from `sor-brand/graphics/woodcuts/`). Gallery built by `build-woodcuts.py`. |
 | `system/sor.js` | Small behaviours (selected-work picker) |
 | `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
 

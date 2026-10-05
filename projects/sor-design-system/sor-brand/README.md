@@ -7,6 +7,6 @@ Working repo for the Seeds of Renaissance brand: the feel, the design system, mo
 Other key files:
 - [design-system-plan.md](design-system-plan.md): the plan, the reasoning and the decision log
 - [moodboard.md](moodboard.md): images and references we like
-- [graphics/woodcuts/](graphics/woodcuts/README.md): woodcut graphic elements
+- [../system/woodcuts/](../system/woodcuts/README.md): woodcut graphic elements
 
 Images in `assets/` come from mood boards and are for inspiration only. They are not cleared for public use.
