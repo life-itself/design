@@ -8,7 +8,7 @@ Awe, beauty, depth: "wow, this is cool". Alive, always moving, something of the 
 
 ## Type
 
-Polyamine (billboard), Restora (heading), Bricolage Grotesque (body), Apfel Grotezk (eyebrow / meta). Rules for each: [type.md](../../../2026-sor-design-system/type.md) in the shared design system. Don't restate them here.
+Polyamine (billboard), Restora (heading), Bricolage Grotesque (body), Apfel Grotezk (eyebrow / meta). Rules for each: [type.md](../../../sor-design-system/type.md) in the shared design system. Don't restate them here.
 
 For now, name the faces in CSS and rely on them being installed locally; no web font loading. Bundling is decided later.
 

@@ -1,4 +1,4 @@
-# Seeds of Renaissance Design System (2026)
+# Seeds of Renaissance Design System
 
 **Stub.** Started 2026-09-30 with one thing decided: the typefaces.
 
