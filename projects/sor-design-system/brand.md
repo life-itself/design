@@ -38,7 +38,7 @@ It is **a constellation, not a programme.** People share an orientation, each fi
 
 **Media House** (discover, engage, make sense)
 
-- **Podcast / YouTube**: one channel with several stations. *Over the Mountains* is Rufus-led, rigorous interviews. A Sylvie-led station is in development (working title *Temple of the Sacred World*). There may also be an explainer station. The channel is where the voices meet in motion.
+- **Podcast / YouTube**: one brand, *Seeds of Renaissance*, on one channel and one podcast feed. Kinds of episode (interviews, Rufus–Sylvie conversations, later perhaps *Temple of the Sacred World* material) are formats shown by playlist and artwork tag, not separate shows. *Over the Mountains* is retired as a show name ([decision, 2026-10-05](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md#appendix-a-podcast-naming-one-brand-2026-10-05)). The channel is where the voices meet in motion.
 - **Magazine**: a yearly art-led print periodical where artists, writers and philosophers gather. #1 *Impermanence* (2024), #2 *Mythos* (2026).
 - **Essays and white papers**: long-form, rigorous thinking on the moment and what comes next.
 - **Manifesto**: the vision and principles of the movement, plus the art collective.
@@ -113,7 +113,7 @@ In short: **honest, rigorous hope**. Neither doom nor naive optimism. It is hope
 
 Themes: inquisitive, curious, confident, embodied, optimistic, real, rigorous.
 
-Public descriptions of the stations go by **host and format**. Framing like "masculine/feminine" stays internal.
+Public descriptions of the podcast's formats go by **host and format**. Framing like "masculine/feminine" stays internal.
 
 ## Key language
 
@@ -137,7 +137,7 @@ Copy lines:
 | The vision / historical moment | **Second Renaissance**. Still used for what we point toward (leaning to keep, not final) |
 | Steward | **Life Itself**: originating collective and current steward. Seeds is designed to grow far wider and is not a funnel into Life Itself |
 | Arms | **Media House** (media) · **Gardens of Change** (community) |
-| Podcast stations | *Over the Mountains*, a Sylvie-led station (tbd), possibly *Making sense of*. Intros use "Seeds of Renaissance presents…" |
+| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational rebirth…" |
 | People | "Seed-bearers" (tbd) |
 
 Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `@SeedRenaissance` · LinkedIn `seedsofrenaissance`.
