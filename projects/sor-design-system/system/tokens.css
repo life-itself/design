@@ -74,3 +74,25 @@
   --tilt: 1.6deg;                                          /* prints sit slightly off-square */
   --grain-opacity: .14;
 }
+
+/* ── Thumbnails (fixed 1280×720 artboard) ─────────────────────────
+   Video thumbnails are fixed-size images, so the fluid cqi scale above does not apply.
+   Sizes are px at 1280×720; the same artboard is scaled down whole for previews (.thumb-frame).
+   YouTube shows it at ~360px wide (×0.28): a 96px title reads as ~27px, a 28px label as ~8px.
+   Keep titles to two to six words; labels are secondary and may not survive feed size. */
+:root {
+  --thumb-w: 1280px;
+  --thumb-h: 720px;
+  --thumb-title-xl: 110px;   /* podcast: short title in the paper column (three lines at most) */
+  --thumb-title-l: 122px;    /* talk: title over a photo */
+  --thumb-title: 104px;      /* gathering: title on the torn white strip */
+  --thumb-title-m: 96px;     /* manifesto: a sentence-length quote */
+  --thumb-byline: 52px;      /* "with Guest Name", Polyamine */
+  --thumb-label: 28px;       /* Apfel labels: series, date */
+  --thumb-label-s: 24px;     /* footer labels beside the logo */
+  --thumb-meta: 20px;        /* figure number on a photo */
+  --thumb-pad: 64px;         /* outer margin for text */
+  --thumb-inset: 46px;       /* corner inset for logo and marks */
+  --thumb-logo: 116px;       /* logo on white or paper */
+  --thumb-tear: 34px;        /* torn edge depth at artboard scale */
+}

@@ -219,6 +219,104 @@
 .contents .by { display: block; font-size: 14.5px; color: var(--muted) }
 .contents .page { font-family: var(--font-label); font-size: var(--t-button); font-variant-numeric: tabular-nums; color: var(--muted) }
 
+/* ── From the four-page mockup (v2): gatherings, join, magazine, white paper ── */
+/* A row of buttons */
+.actions { display: flex; gap: 12px; flex-wrap: wrap }
+
+/* Swallows rising across a split hero (place a .flock inside .hero-split) */
+.hero-split .flock { left: 38%; top: 10%; width: min(22cqi, 260px) }
+/* A small pair of swallows set inline, e.g. above an interlude line */
+.swallows { display: block; width: 140px; height: auto; color: var(--ink) }
+.interlude .swallows { width: 140px }
+
+/* Prints: two photographs laid on the page, overlapping (gatherings hero). Children: two .print figures, optional .seal */
+.prints { position: relative; min-height: clamp(300px, 40cqi, 520px) }
+.prints > .print { position: absolute; padding: 10px 10px 12px }
+.prints > .print:nth-of-type(1) { width: 72%; left: 0; top: 4%; transform: rotate(calc(-1.4 * var(--tilt))) }
+.prints > .print:nth-of-type(2) { width: 52%; right: 0; bottom: 0; transform: rotate(calc(1.6 * var(--tilt))) }
+.prints > .print:nth-of-type(2) img { aspect-ratio: 4 / 5 }
+.prints > .seal { position: absolute; width: clamp(90px, 14cqi, 170px); right: -2%; top: -6%; z-index: 1 }
+
+/* Places table: where groups meet */
+.table-wrap { overflow-x: auto }
+.hubs { width: 100%; border-collapse: collapse; font-size: 16px }
+.hubs th { font-family: var(--font-label); font-size: var(--t-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted); text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--ink) }
+.hubs td { padding: 14px 12px 14px 0; border-bottom: 1px solid var(--rule); vertical-align: baseline }
+.hubs td:first-child { font-family: var(--font-display); font-size: 22px }
+
+/* Banner hero: full-bleed photograph, title set low on the left (join). Follow with .tear--bottom on night */
+.hero-banner { position: relative; z-index: 10; background: var(--night); color: #fff; overflow: hidden }
+.hero-banner > img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; opacity: .92 }
+.hero-banner .overlay { position: absolute; inset: 0; z-index: 2; display: grid; align-content: end; justify-items: start; gap: 10px; padding-block: clamp(20px, 5cqi, 64px) clamp(40px, 7cqi, 90px) }
+.hero-banner h1 { font-family: var(--font-display); font-size: clamp(44px, 8cqi, 110px); line-height: .92 }
+.hero-banner .label { color: var(--chalk) }
+
+/* Steps: numbered ways in, each with a picture */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3cqi, 40px) }
+.step { display: grid; gap: 12px; align-content: start }
+.step .n { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-size: 44px; line-height: 1 }
+.step h3 { font-family: var(--font-display); font-size: 30px; line-height: 1.08 }
+.step p { color: var(--muted) }
+.step img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
+
+/* Voices: short quotes from members */
+.voices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3cqi, 40px) }
+.voices blockquote { margin: 0; display: grid; gap: 12px; align-content: start; padding-top: 16px; border-top: 1px solid var(--ink) }
+.voices blockquote p { font-size: 22px; line-height: 1.35 }
+.voices cite { font-style: normal; color: var(--muted) }
+
+/* Issue hero: a magazine cover beside its title, actions and contents */
+.issue-hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--gap-l); align-items: start; padding-block: clamp(40px, 6cqi, 84px) }
+.issue-hero .cover img { width: 100%; box-shadow: var(--shadow-object) }
+.issue-hero h1 { font-family: var(--font-display); font-size: clamp(56px, 9cqi, 128px); line-height: .9; margin: 8px 0 18px }
+.issue-hero .intro { font-size: 20px; line-height: 1.5; margin-bottom: 22px; max-width: 40ch }
+.issue-hero .contents { margin-top: 28px }
+
+/* Poem block: a few lines set alone, with an optional .seal in the corner */
+.poem-block { max-width: 640px; margin-inline: auto; display: grid; gap: 22px; position: relative }
+.poem-block .lines { font-size: clamp(22px, 2.6cqi, 30px); line-height: 1.5 }
+.poem-block > .seal { position: absolute; width: 120px; right: -60px; top: -30px; pointer-events: none }
+
+/* Spread: two plates side by side, bottoms aligned */
+.spread { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(18px, 3cqi, 40px); align-items: end }
+.spread img { width: 100%; object-fit: cover; aspect-ratio: 1 / 1 }
+.spread figure:first-child img { aspect-ratio: 4 / 5 }
+
+/* White paper: head, meta line, then contents nav beside the article (abstract, numbered headings, footnotes) */
+.whitepaper-head { padding-block: clamp(40px, 6cqi, 84px) 36px; display: grid; gap: 16px; justify-items: start; max-width: 980px }
+.whitepaper-head h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.whitepaper-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: var(--t-small); color: var(--muted) }
+.whitepaper-meta b { color: var(--ink); font-weight: 500 }
+.whitepaper { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--gap-l); padding-block: clamp(36px, 5cqi, 64px) clamp(48px, 7cqi, 96px); border-top: 1px solid var(--ink) }
+.whitepaper > nav { position: sticky; top: 16px; align-self: start; display: grid; gap: 4px }
+.whitepaper > nav .label { color: var(--muted); margin-bottom: 8px }
+.whitepaper > nav a { text-decoration: none; font-size: var(--t-small); padding: 6px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 28px minmax(0, 1fr) }
+.whitepaper > nav a span { font-family: var(--font-label); font-size: var(--t-label); font-weight: 700; color: var(--muted); padding-top: 2px }
+.whitepaper > nav a[aria-current] { font-weight: 600 }
+.whitepaper article { max-width: var(--measure); display: grid; gap: 22px }
+.whitepaper h2 { margin-top: 16px; font-family: var(--font-display); font-size: 34px; line-height: 1.1; display: flex; gap: 14px; align-items: baseline }
+.whitepaper h2 small { font-family: var(--font-label); font-size: var(--t-button); font-weight: 700; color: var(--muted); letter-spacing: .1em }
+.whitepaper article > p { font-size: 18px; line-height: 1.7; text-wrap: pretty }
+.whitepaper figure img { mix-blend-mode: multiply; max-height: 440px; width: auto; margin-inline: auto }
+.abstract { background: var(--paper); border-left: 2px solid var(--ink); padding: 18px 22px; font-size: var(--t-body) }
+.abstract .label { display: block; color: var(--muted); margin-bottom: 6px }
+/* Footnote marks are one of the two places red is allowed */
+.fn { font-family: var(--font-label); font-size: var(--t-meta); font-weight: 700; margin-left: 1px; line-height: 0 }
+.fn a { text-decoration: none; color: var(--red) }
+.notes { font-size: 14.5px; color: var(--muted); margin: 0; padding: 16px 0 0 20px; display: grid; gap: 6px; border-top: 1px solid var(--rule) }
+
+@container (max-width: 800px) {
+  .prints > .seal { width: 80px; right: 0; top: -4% }
+  .hero-split .flock { left: auto; right: var(--gutter); top: 12px; width: 110px }
+  .hero-banner > img { aspect-ratio: 4 / 3 }
+  .steps, .voices, .issue-hero, .spread, .whitepaper { grid-template-columns: 1fr }
+  .whitepaper > nav { position: static }
+  .poem-block > .seal { right: 0; width: 80px }
+  .hubs thead { display: none }
+  .hubs tr { display: grid; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--rule) }
+  .hubs td { padding: 0; border: 0 }
+}
+
 /* ── Narrow ───────────────────────────────────────────────────── */
 @container (max-width: 800px) {
   .site-header nav { display: none }
@@ -239,3 +337,77 @@
 @media (prefers-reduced-motion: reduce) {
   .pathway img, .selected li b { transition: none }
 }
+
+/* ── Thumbnails (fixed 1280×720) ──────────────────────────────────
+   YouTube thumbnails: a fixed artboard sized with the --thumb-* tokens, not the fluid scale.
+   .thumb is the image itself (screenshot or export it at 1280×720); .thumb-frame scales it whole to fit a column.
+   Variants: --gathering (photo, torn white strip), --podcast (paper page, photo torn in),
+   --manifesto (the one night ground, a torn white foot), --talk (title on a photo over a warm-dark scrim).
+   No red in the type: the logo brings its own. Keep titles to two to six words. */
+.thumb, .thumb *, .thumb *::before, .thumb *::after { box-sizing: border-box }
+.thumb {
+  position: relative; isolation: isolate; overflow: hidden; flex: none;
+  width: var(--thumb-w); height: var(--thumb-h);
+  background: var(--paper); color: var(--ink); font-family: var(--font-body); line-height: 1.2; text-align: left;
+}
+.thumb::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 8;
+  opacity: var(--grain-opacity); mix-blend-mode: multiply;
+  background-image: url("GRAIN"); background-size: 230px;
+}
+.thumb img { display: block; max-width: none }
+.thumb__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.thumb__title { font-family: var(--font-display); font-weight: 400; line-height: .98; letter-spacing: -.01em; margin: 0; text-wrap: balance }
+.thumb__label { display: block; font-family: var(--font-label); font-size: var(--thumb-label); font-weight: 700; letter-spacing: var(--track-label); text-transform: uppercase; line-height: 1.2 }
+.thumb__logo { width: var(--thumb-logo); height: var(--thumb-logo); mix-blend-mode: multiply }
+.thumb__disc { position: absolute; right: var(--thumb-inset); top: var(--thumb-inset); z-index: 3; background: var(--white); border-radius: 50%; padding: 8px; display: grid; place-items: center }
+.thumb__disc img { width: calc(var(--thumb-logo) - 14px); height: calc(var(--thumb-logo) - 14px) }
+.thumb__flock { position: absolute; z-index: 1; width: 340px; height: auto; color: var(--white); pointer-events: none }
+.thumb__flock--ink { color: var(--ink) }   /* for a pale sky */
+/* Torn edges. Horizontal: sits on top of a panel and takes its colour. Vertical: the left edge of a photo, in the colour of the page. */
+.thumb__tear {
+  position: absolute; left: 0; right: 0; top: calc(2px - var(--thumb-tear)); height: var(--thumb-tear); background: inherit;
+  -webkit-mask: url("TEAR") 0 0 / 100% 100% no-repeat;
+          mask: url("TEAR") 0 0 / 100% 100% no-repeat;
+}
+.thumb__tear--v { right: auto; top: 0; left: calc(var(--thumb-tear) - 6px); width: var(--thumb-h); transform-origin: 0 0; transform: rotate(90deg); background: var(--paper) }
+
+/* 1 · Gathering: a warm photo, a torn white strip, a short title */
+.thumb--gathering .thumb__panel { position: absolute; left: 0; right: 0; bottom: 0; height: 37%; z-index: 2; background: var(--white); padding: 30px 220px 36px var(--thumb-pad); display: grid; align-content: center; gap: 16px }
+.thumb--gathering .thumb__label { color: var(--muted) }
+.thumb--gathering .thumb__title { font-size: var(--thumb-title) }
+.thumb--gathering .thumb__logo { position: absolute; right: var(--thumb-inset); bottom: 44px; width: calc(var(--thumb-logo) * 1.2); height: calc(var(--thumb-logo) * 1.2) }
+.thumb--gathering .thumb__flock { right: 7%; top: 8% }
+
+/* 2 · Podcast: the paper page leads, the photo is torn in; the episode sits as a figure number */
+.thumb--podcast { display: grid; grid-template-columns: 56% 44%; grid-template-rows: 100% }
+.thumb--podcast .thumb__text { position: relative; z-index: 2; padding: var(--thumb-pad) 48px 52px var(--thumb-pad); display: grid; align-content: space-between }
+.thumb--podcast .thumb__label { color: var(--muted) }
+.thumb--podcast .thumb__title { font-size: var(--thumb-title-xl); margin-top: 20px }
+.thumb--podcast .thumb__byline { font-family: var(--font-display); font-size: var(--thumb-byline); line-height: 1.1; margin-top: 26px; color: var(--muted) }
+.thumb--podcast .thumb__foot { display: flex; align-items: center; gap: 20px }
+.thumb--podcast .thumb__foot .thumb__label { font-size: var(--thumb-label-s) }
+.thumb--podcast .thumb__pic { position: relative; min-width: 0 }
+.thumb--podcast .thumb__pic > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40% }
+.thumb--podcast .thumb__fig { position: absolute; right: 30px; bottom: 26px; z-index: 2; font-family: var(--font-label); font-size: var(--thumb-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--white) }
+
+/* 3 · Manifesto and essays: the one night ground, words alone, a torn white foot */
+.thumb--manifesto { background: var(--night); color: var(--chalk) }
+.thumb--manifesto::after { mix-blend-mode: screen; opacity: .08 }
+.thumb--manifesto .thumb__quote { position: absolute; left: var(--thumb-pad); right: 76px; top: 68px; display: grid; gap: 30px }
+.thumb--manifesto .thumb__label { color: var(--night-muted) }
+.thumb--manifesto .thumb__title { font-size: var(--thumb-title-m); line-height: 1.02 }
+.thumb--manifesto .thumb__foot { position: absolute; left: 0; right: 0; bottom: 0; height: 17%; z-index: 2; background: var(--white); color: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 48px 0 var(--thumb-pad) }
+.thumb--manifesto .thumb__foot .thumb__label { color: var(--ink); font-size: var(--thumb-label-s) }
+.thumb--manifesto .thumb__foot .thumb__logo { width: calc(var(--thumb-logo) * .92); height: calc(var(--thumb-logo) * .92) }
+
+/* 4 · Talk: type directly on a photo, over a warm-dark scrim; the logo on a white disc */
+.thumb--talk .thumb__photo { object-position: 50% 45% }
+.thumb--talk .thumb__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(23 22 19 / .78) 0%, rgb(23 22 19 / .45) 42%, rgb(23 22 19 / 0) 70%) }
+.thumb--talk .thumb__text { position: absolute; left: var(--thumb-pad); top: 0; bottom: 0; width: 52%; z-index: 2; display: grid; align-content: center; gap: 30px; color: var(--white) }
+.thumb--talk .thumb__title { font-size: var(--thumb-title-l) }
+.thumb--talk .thumb__label { color: var(--chalk) }
+
+/* Preview frame: scales the fixed artboard to the frame's width (tan(atan2()) turns a length ratio into a number) */
+.thumb-frame { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden }
+.thumb-frame > .thumb { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(tan(atan2(100cqi, var(--thumb-w)))) }

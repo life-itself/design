@@ -1,54 +1,63 @@
 # Seeds of Renaissance Design System
 
-**The one home for SoR brand and design-system work.** Started 2026-09-30 with the typefaces.
+The brand and design system for Seeds of Renaissance: how it looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** The single home for SoR brand and design-system work.
 
-[sor-brand/](sor-brand/) is the former `life-itself/sor-brand` repo (brand work: mockups, moodboards, logo, woodcuts, design-system plan), merged 2026-10-05 with history. Start from its [STATUS.md](sor-brand/STATUS.md) for the starred picks.
+**Building something? Start with [BUILD.md](BUILD.md).** It is the brief for people and AI agents alike: the rules in one paragraph, the page shell, a menu of sections, the examples to copy and a checklist.
 
-## The system — v0.1 (2026-10-05)
+**Want to see it?** [guide.html](guide.html) shows the whole system rendered, set in its own style. Published at https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
 
-**Guide: [guide.html](guide.html)** · published at https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it. Feel, principles, colour, type, graphics, photography, logo, live components, templates, open questions.
+## The system
 
-Extracted from the v7 home/manifesto mockup and the v2 four-page mockup in [sor-brand/](sor-brand/STATUS.md).
+| Page | What |
+|---|---|
+| [feel.md](feel.md) | Grounded hope, what we are not, rigour and warmth, the three registers |
+| [colour.md](colour.md) | Grounds, inks and the one accent, with roles and rules |
+| [type.md](type.md) | The faces, the scale, and the research behind them |
+| [layout.md](layout.md) | Grounds and rhythm, torn edges, grid and spacing |
+| [graphics.md](graphics.md) | The woodcut swallow, seal, seeds and clusters |
+| [photography.md](photography.md) | What to choose and avoid; placeholders |
+| [logo.md](logo.md) | Versions and placement (provisional) |
+| [components.md](components.md) | Every component, with HTML to copy |
+
+## Examples
+
+Whole pages built only from the system. Copy the closest one.
+
+| Example | Register |
+|---|---|
+| [examples/web/home.html](examples/web/home.html) | Landing page |
+| [examples/web/manifesto.html](examples/web/manifesto.html) | Long reading |
+| [examples/web/gatherings.html](examples/web/gatherings.html) | Events and community |
+| [examples/web/join.html](examples/web/join.html) | Joining |
+| [examples/web/magazine.html](examples/web/magazine.html) | Publication |
+| [examples/web/white-paper.html](examples/web/white-paper.html) | Research |
+| [examples/youtube/](examples/youtube/index.html) | YouTube thumbnails, 1280×720 |
+
+Slides and print are next.
+
+## Code
 
 | Path | What |
 |---|---|
 | [system/tokens.css](system/tokens.css) | Every colour, face, size and space, with its role. Change the system here. |
-| [system/components.src.css](system/components.src.css) | Components, readable source → `build-css.py` → `components.css` |
-| `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed) → `build-fonts.py` |
-| `system/graphics.svg` / `.js` | Woodcut swallow, seal, seeds, clusters → `build-graphics.py` |
-| `system/sor.js` | Selected-work picker |
-| `system/img/` | Placeholder photos from the mood board (not cleared) and the logo |
-| [templates/](templates/) | Home and manifesto rebuilt from the system only |
+| [system/components.src.css](system/components.src.css) | Components, readable source. Run `python3 system/build-css.py` to make `components.css`. |
+| `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed). Built by `build-fonts.py`. |
+| `system/graphics.svg` / `graphics.js` | Woodcut symbols. Built by `build-graphics.py`. |
+| `system/sor.js` | Small behaviours (selected-work picker) |
+| `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
 
-Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/guide.html`.
+Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/`.
 
-Shared by the two SoR projects, and owned by neither:
+## Where things came from
 
-- [../2026-sor-experiences/](../2026-sor-experiences/) — the poetic animated pieces
-- [../2026-sor-website/](../2026-sor-website/) — the website
+- [sor-brand/](sor-brand/STATUS.md): the former `life-itself/sor-brand` repo (mockups, moodboards, logo, woodcuts, design-system plan and decision log), merged here 2026-10-05 with history. The system was extracted from its Direction E v7 home and manifesto and its four-page v2 mockup.
+- [type/](type/): the two type selection rounds and research notes.
+- Brand substance (who we are, offers, voice) stays in [../2026-sor-website/brand.md](../2026-sor-website/brand.md).
 
-It lives here rather than inside either because both need it. Note that the website's own plan has a design system step *derived from the chosen direction*; type arrived earlier and from the other project, so it sits above that step rather than inside it.
-
-Substance without visuals stays in [../2026-sor-website/brand.md](../2026-sor-website/brand.md). This file is for visual decisions only.
-
-## Type — decided
-
-Polyamine (billboard), Restora (heading), Bricolage Grotesque (body), Apfel Grotezk (eyebrow / meta).
-
-**Canonical: [type.md](type.md)** for the decisions and how to apply them; [type/research-notes.md](type/research-notes.md) for the working and everything rejected; the two selection rounds archived in [type/](type/). Other files link here rather than restating the rules.
-
-## Colour — not started
-
-The experiences carry a working palette in [../2026-sor-experiences/experiences/00-home/common.md](../2026-sor-experiences/experiences/00-home/common.md#colour): warm blacks and whites, with colour arriving as events. It has not been tested against the website and is not promoted here yet.
-
-## Not started
-
-Spacing, scale, components, motion, iconography. All of it waits on the website direction being chosen.
+Shared by the SoR [experiences](../2026-sor-experiences/) and the website. The experiences carry their own working palette in [common.md](../2026-sor-experiences/experiences/00-home/common.md#colour), not yet reconciled with this system.
 
 ## Open questions
 
-- **Does the website direction get to override the type?** The website is starting fresh visually and its direction is unchosen. Type has been treated as brand-level, above direction, which is a reasonable call but was made from the experiences side only. If a chosen direction fights these faces, that conflict needs resolving rather than assuming.
-- Is the experiences' colour palette a brand palette, or only right for those pieces?
-- Where does the Book's illuminated display face belong — here, or only in the experiences?
+See the last chapter of [guide.html](guide.html#open). In short: Polyamine or Restora for headings, font licences, the logo, photography, woodcut sourcing, the scale for slides and print, sub-brand colours. Also: where the Book's illuminated display face belongs.
 
 Tracking: beads `design-34t`.

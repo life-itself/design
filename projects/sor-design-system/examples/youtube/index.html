@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · YouTube thumbnails</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<style>
+html, body { margin: 0; background: #fbfaf6 }
+/* Page chrome only. The thumbnails themselves are .thumb components from components.css. */
+.yt-page { max-width: 1320px; margin-inline: auto; display: grid; gap: 28px; padding-bottom: 72px }
+.yt-intro { display: grid; gap: 14px; max-width: 64ch; padding-top: clamp(32px, 5cqi, 64px) }
+.yt-intro h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.yt-intro p { font-size: var(--t-intro) }
+.yt-intro ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--muted); font-size: var(--t-small) }
+.yt-sec { display: block; margin-top: 20px; color: var(--muted) }
+.yt-big { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px }
+.yt-big figure { min-width: 0 }
+.yt-big figcaption { font-style: normal }
+.yt-big figcaption b { color: var(--ink); font-weight: 600 }
+/* A mock YouTube feed: YouTube's own grounds and type, cards at real size */
+.yt-feed { border-radius: 10px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 360px)); justify-content: center; gap: 22px 16px; position: relative; z-index: 10 }
+.yt-feed.light { background: #fff; color: #0f0f0f; border: 1px solid var(--rule) }
+.yt-feed.dark { background: #0f0f0f; color: #f1f1f1 }
+.yt-card { display: grid; gap: 10px; min-width: 0 }
+.yt-card .thumb-frame { border-radius: 12px }
+.yt-card .meta { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; font-family: Roboto, Arial, sans-serif; line-height: 1.4 }
+.yt-card .av { width: 36px; height: 36px; border-radius: 50%; background: #fff url(../../system/img/logo.png) center / 115% no-repeat }
+.yt-card b { font-size: 16px; line-height: 1.375; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.yt-card small { font-size: 14px; opacity: .65; display: block }
+@container (max-width: 900px) { .yt-big { grid-template-columns: 1fr } }
+</style>
+</head>
+<body class="sor">
+<script src="../../system/graphics.js"></script>
+
+<main class="yt-page gutter">
+<header class="yt-intro">
+  <span class="label muted">Templates · YouTube</span>
+  <h1>YouTube thumbnails</h1>
+  <p>Four kinds of video on the Seeds of Renaissance system, shown full size and then at real size in a YouTube feed.</p>
+  <ul>
+    <li>Paper, white and photographs as the ground, with the one night ground kept for words alone.</li>
+    <li>Polyamine titles of two to six words so they read at feed size; Apfel Grotezk for small labels.</li>
+    <li>The torn edge joins photo and paper. No red in the type: the logo brings its own.</li>
+    <li>Each thumbnail is a fixed 1280 × 720 artboard; export it at that size. Titles are samples, photos are placeholders.</li>
+  </ul>
+</header>
+
+<span class="label yt-sec">Full size (1280 × 720, scaled to fit)</span>
+<div class="yt-big">
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--gathering" id="t1">
+    <img class="thumb__photo" src="../../system/img/stones.jpg" alt="" style="object-position:50% 40%">
+    <svg class="thumb__flock thumb__flock--ink woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+    <div class="thumb__panel"><span class="thumb__tear"></span><span class="thumb__label">Global Connection Call · October</span><h3 class="thumb__title">Find your people</h3><img class="thumb__logo" src="../../system/img/logo.png" alt=""></div>
+  </div></div>
+  <figcaption><b>1 · Gathering.</b> A warm photo, a torn white strip, a short title. For call recordings and community videos. <code>.thumb--gathering</code></figcaption>
+</figure>
+
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--podcast" id="t2">
+    <div class="thumb__text">
+      <div><span class="thumb__label">Over the Mountains · Ep. 12</span><h3 class="thumb__title">Attention as a moral act</h3><div class="thumb__byline">with Iain McGilchrist</div></div>
+      <div class="thumb__foot"><img class="thumb__logo" src="../../system/img/logo.png" alt=""><span class="thumb__label">Seeds of Renaissance podcast</span></div>
+    </div>
+    <div class="thumb__pic"><img src="../../system/img/mountain.jpg" alt=""><span class="thumb__tear thumb__tear--v"></span><span class="thumb__fig">Fig. 12</span></div>
+  </div></div>
+  <figcaption><b>2 · Podcast.</b> The paper page leads, the photo is torn in. The episode number sits as a figure number. <code>.thumb--podcast</code></figcaption>
+</figure>
+
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--manifesto" id="t3">
+    <div class="thumb__quote"><span class="thumb__label">From the manifesto</span><h3 class="thumb__title">We are the bridge between the dying past and the future unborn.</h3></div>
+    <div class="thumb__foot"><span class="thumb__tear"></span><span class="thumb__label">Seeds of Renaissance</span><img class="thumb__logo" src="../../system/img/logo.png" alt=""></div>
+  </div></div>
+  <figcaption><b>3 · Manifesto and essays.</b> The one night ground, for words alone. The white foot carries the name and logo. <code>.thumb--manifesto</code></figcaption>
+</figure>
+
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--talk" id="t4">
+    <img class="thumb__photo" src="../../system/img/sylvie.jpg" alt=""><div class="thumb__scrim"></div>
+    <div class="thumb__text"><span class="thumb__label">Gardens of Change</span><h3 class="thumb__title">What is trying to be born?</h3></div>
+    <div class="thumb__disc"><img src="../../system/img/logo.png" alt=""></div>
+  </div></div>
+  <figcaption><b>4 · Talk.</b> Type directly on a photo, over a warm-dark scrim. The logo sits on a small white disc. <code>.thumb--talk</code></figcaption>
+</figure>
+</div>
+
+<span class="label yt-sec">In the feed, light mode</span>
+<div class="yt-feed light" id="feed-light"></div>
+<span class="label yt-sec">In the feed, dark mode</span>
+<div class="yt-feed dark" id="feed-dark"></div>
+</main>
+
+<script>
+(function () {
+  var items = [
+    ["t1", "Find your people: Global Connection Call, October", "2.1K views · 3 days ago"],
+    ["t2", "Attention as a moral act, with Iain McGilchrist | Over the Mountains Ep. 12", "14K views · 2 weeks ago"],
+    ["t3", "A Manifesto for Civilizational Renewal (read aloud)", "6.8K views · 1 month ago"],
+    ["t4", "What is trying to be born? A talk from Gardens of Change", "3.4K views · 1 month ago"]
+  ];
+  ["feed-light", "feed-dark"].forEach(function (id) {
+    var feed = document.getElementById(id);
+    items.forEach(function (it) {
+      var card = document.createElement("div"); card.className = "yt-card";
+      var frame = document.getElementById(it[0]).parentNode.cloneNode(true);
+      frame.querySelector(".thumb").removeAttribute("id");
+      card.appendChild(frame);
+      var meta = document.createElement("div"); meta.className = "meta";
+      meta.innerHTML = '<span class="av" aria-hidden="true"></span><div><b></b><small>Seeds of Renaissance</small><small></small></div>';
+      meta.querySelector("b").textContent = it[1];
+      meta.querySelectorAll("small")[1].textContent = it[2];
+      card.appendChild(meta); feed.appendChild(card);
+    });
+  });
+})();
+</script>
+</body>
+</html>
