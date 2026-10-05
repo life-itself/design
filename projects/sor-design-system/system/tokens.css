@@ -1,0 +1,76 @@
+/* Seeds of Renaissance design tokens
+   Extracted from the home and manifesto mockups (Seeds Polyamine Pages v7, 2026-10-02).
+   Feel: grounded hope. Ink and paper, a little off-centre; colour comes from photographs.
+   One fixed brand world: there is no dark mode. Night is a section, not a theme.
+   Load order: fonts.css, tokens.css, components.css. */
+
+:root {
+  /* ── Grounds (backgrounds only) ─────────────────────────────── */
+  --white: #ffffff;      /* pure white sections: openness, the page at its most awake */
+  --paper: #fbfaf6;      /* the default page: warm near-white */
+  --sunlight: #fbefc4;   /* pale yellow: background only, never text, never highlight */
+  --night: #171613;      /* at most one night section per page, plus the footer */
+
+  /* ── Ink (text, rules, buttons) ─────────────────────────────── */
+  --ink: #1b1916;        /* all text on light grounds, and every button */
+  --muted: #5d584f;      /* secondary text, captions, labels */
+  --rule: #e0dacf;       /* hairlines on light grounds */
+
+  /* ── On night ───────────────────────────────────────────────── */
+  --chalk: #ece7dc;      /* text on night */
+  --night-muted: #a49e93;
+  --night-rule: #38342e;
+
+  /* ── The one accent ─────────────────────────────────────────── */
+  --red: #e5201c;        /* the logo red: only an occasional link in running text, and footnote marks */
+
+  /* ── Type families ──────────────────────────────────────────── */
+  --font-display: "Polyamine", "Fraunces", Georgia, serif;          /* wordmark, headlines, section and card titles */
+  --font-quote: "Restora", "Fraunces", Georgia, serif;              /* pull quotes */
+  --font-body: "Bricolage Grotesque", system-ui, sans-serif;        /* everything you read */
+  --font-label: "Apfel Grotezk", "Hanken Grotesk", system-ui, sans-serif; /* eyebrows, buttons, dates, captions numbers */
+  --font-poem: "Fraunces", Georgia, serif;                          /* the poetic voice: always italic, soft */
+
+  /* ── Type scale (fluid; cqi falls back to viewport width outside a container) ── */
+  --t-hero: clamp(40px, 7cqi, 96px);        /* one statement per page, 5–10 words */
+  --t-title: clamp(40px, 6cqi, 84px);       /* page title on inner pages */
+  --t-section: clamp(36px, 5cqi, 64px);     /* a section headline */
+  --t-band: clamp(30px, 4.4cqi, 56px);
+  --t-card: clamp(24px, 2.5cqi, 32px);      /* card and pathway titles */
+  --t-item: 26px;                            /* list item titles (calendar, contents) */
+  --t-interlude: clamp(26px, 3.4cqi, 42px); /* a poetic line set alone */
+  --t-quote: clamp(26px, 3.4cqi, 38px);     /* pull quote */
+  --t-lead: clamp(20px, 2.4cqi, 28px);      /* statement paragraphs, light weight */
+  --t-intro: clamp(17px, 1.9cqi, 21px);     /* hero standfirst */
+  --t-reading: 19px;                         /* long-form article text */
+  --t-body: 17px;
+  --t-small: 15px;
+  --t-caption: 14px;
+  --t-button: 13px;
+  --t-label: 12px;
+  --t-meta: 11px;
+
+  --lh-display: .95;
+  --lh-heading: 1.1;
+  --lh-body: 1.55;
+  --lh-reading: 1.65;
+
+  --track-label: .16em;  /* uppercase labels */
+  --track-button: .12em;
+  --track-meta: .14em;
+
+  /* ── Space ──────────────────────────────────────────────────── */
+  --gutter: clamp(16px, 4cqi, 56px);           /* page side padding */
+  --section: clamp(44px, 7cqi, 96px);          /* vertical padding of a section */
+  --gap-s: 12px;
+  --gap-m: clamp(16px, 2.6cqi, 32px);          /* between cards */
+  --gap-l: clamp(24px, 5cqi, 72px);            /* between columns */
+  --measure: 680px;                            /* long-form reading width */
+
+  /* ── Material ───────────────────────────────────────────────── */
+  --tear-height: 22px;
+  --shadow-print: 0 18px 40px -22px rgb(27 25 22 / .55);   /* a photograph laid on the page */
+  --shadow-object: 0 30px 50px -30px rgb(27 25 22 / .7);   /* a printed object: magazine, book */
+  --tilt: 1.6deg;                                          /* prints sit slightly off-square */
+  --grain-opacity: .14;
+}

@@ -4,6 +4,24 @@
 
 [sor-brand/](sor-brand/) is the former `life-itself/sor-brand` repo (brand work: mockups, moodboards, logo, woodcuts, design-system plan), merged 2026-10-05 with history. Start from its [STATUS.md](sor-brand/STATUS.md) for the starred picks.
 
+## The system — v0.1 (2026-10-05)
+
+**Guide: [guide.html](guide.html)** · published at https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it. Feel, principles, colour, type, graphics, photography, logo, live components, templates, open questions.
+
+Extracted from the v7 home/manifesto mockup and the v2 four-page mockup in [sor-brand/](sor-brand/STATUS.md).
+
+| Path | What |
+|---|---|
+| [system/tokens.css](system/tokens.css) | Every colour, face, size and space, with its role. Change the system here. |
+| [system/components.src.css](system/components.src.css) | Components, readable source → `build-css.py` → `components.css` |
+| `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed) → `build-fonts.py` |
+| `system/graphics.svg` / `.js` | Woodcut swallow, seal, seeds, clusters → `build-graphics.py` |
+| `system/sor.js` | Selected-work picker |
+| `system/img/` | Placeholder photos from the mood board (not cleared) and the logo |
+| [templates/](templates/) | Home and manifesto rebuilt from the system only |
+
+Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/guide.html`.
+
 Shared by the two SoR projects, and owned by neither:
 
 - [../2026-sor-experiences/](../2026-sor-experiences/) — the poetic animated pieces

@@ -1,0 +1,627 @@
+<title>Seeds of Renaissance Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="system/fonts.css">
+<link rel="stylesheet" href="system/tokens.css">
+<link rel="stylesheet" href="system/components.css">
+<style>
+/* The guide is set in the system it describes: one fixed brand world, no dark theme (night is a section).
+   Guide-only chrome is prefixed g-. Everything else is a real component from components.css. */
+:root { --g-code: "JetBrains Mono", ui-monospace, Menlo, monospace; color-scheme: light }
+html, body { background: var(--paper) }
+body { margin: 0 }
+.g-wrap { max-width: 1180px; margin-inline: auto; padding-inline: var(--gutter) }
+.g-cover { background: var(--night); color: var(--chalk); position: relative; z-index: 10; padding-block: clamp(48px, 9cqi, 120px) clamp(56px, 9cqi, 120px); overflow: hidden }
+.g-cover .g-wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gap-l); align-items: end }
+.g-cover h1 { font-family: var(--font-display); font-size: var(--t-hero); line-height: .95; margin: 14px 0 22px }
+.g-cover .lede { font-size: var(--t-intro); max-width: 40ch; color: var(--chalk) }
+.g-cover .label { color: var(--night-muted) }
+.g-cover dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; font-size: var(--t-small); color: var(--night-muted); border-top: 1px solid var(--night-rule); padding-top: 18px }
+.g-cover dt { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; padding-top: 3px }
+.g-cover dd { margin: 0; color: var(--chalk) }
+.g-cover .flock { color: var(--chalk); right: 6%; top: 12%; width: min(22cqi, 260px) }
+.g-toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); border-bottom: 1px solid var(--rule) }
+.g-toc nav { display: flex; gap: 6px 22px; overflow-x: auto; padding-block: 12px; scrollbar-width: none }
+.g-toc a { text-decoration: none; white-space: nowrap; color: var(--muted) }
+.g-toc a:hover { color: var(--ink) }
+.g-ch { padding-block: var(--section); position: relative; z-index: 10; scroll-margin-top: 48px }
+.g-ch + .g-ch { border-top: 1px solid var(--rule) }
+.g-ch.ground-white + .g-ch, .g-ch + .g-ch.ground-white { border-top: 0 }
+.g-head { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 8px 24px; margin-bottom: clamp(28px, 4cqi, 48px) }
+.g-head .label { color: var(--muted); padding-top: 14px }
+.g-head h2 { font-family: var(--font-display); font-size: var(--t-section); line-height: 1 }
+.g-head p { grid-column: 2; font-size: var(--t-lead); font-weight: 300; line-height: 1.38; max-width: 40ch; margin-top: 10px }
+.g-body { display: grid; gap: clamp(28px, 4cqi, 48px); margin-left: calc(120px + 24px) }
+.g-h3 { font-family: var(--font-label); font-size: var(--t-label); font-weight: 500; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--muted); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule) }
+.g-prose { max-width: 62ch; display: grid; gap: 14px }
+.g-prose p, .g-prose li { font-size: var(--t-body) }
+.g-prose ul { margin: 0; padding-left: 20px; display: grid; gap: 6px }
+.g-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--gap-m) }
+.g-note { border-left: 2px solid var(--ink); padding: 4px 0 4px 16px; max-width: 62ch; font-size: var(--t-small) }
+.g-note b { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; display: block; margin-bottom: 4px }
+code, .g-code { font-family: var(--g-code); font-size: .82em; background: rgb(27 25 22 / .06); padding: 1px 5px; border-radius: 2px }
+pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 0; background: var(--night); color: var(--chalk); border-radius: 0 }
+
+/* Feel */
+.g-essence { font-family: var(--font-display); font-size: clamp(48px, 9cqi, 128px); line-height: .9 }
+.g-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-notes > div { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 8px; align-content: start }
+.g-notes h3 { font-family: var(--font-display); font-size: var(--t-card); line-height: 1.05 }
+.g-notes p { color: var(--muted); font-size: var(--t-small) }
+.g-not { display: flex; flex-wrap: wrap; gap: 8px }
+.g-not span { font-family: var(--font-label); font-size: var(--t-label); letter-spacing: .08em; text-transform: uppercase; padding: 7px 12px; border: 1px solid var(--rule); color: var(--muted); text-decoration: line-through; text-decoration-color: var(--red) }
+.g-table { width: 100%; border-collapse: collapse; font-size: var(--t-small) }
+.g-table th { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; font-weight: 700; color: var(--muted); text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--ink) }
+.g-table td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: baseline }
+.g-table td:first-child { font-family: var(--font-display); font-size: 22px; white-space: nowrap }
+.g-scroll { overflow-x: auto }
+
+/* Principles */
+.g-rules { list-style: none; margin: 0; padding: 0; counter-reset: r; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-l) }
+.g-rules li { counter-increment: r; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 18px 0; border-top: 1px solid var(--rule) }
+.g-rules li::before { content: counter(r, upper-roman) "."; font-family: var(--font-label); font-size: var(--t-label); font-weight: 700; letter-spacing: .1em; color: var(--muted); padding-top: 8px; grid-row: span 2 }
+.g-rules b { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.12 }
+.g-rules span { color: var(--muted); font-size: var(--t-small) }
+
+/* Colour */
+.g-swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.g-sw { display: grid; grid-template-rows: 120px auto; background: var(--white) }
+.g-sw .chip { position: relative }
+.g-sw .meta { padding: 12px 14px 16px; display: grid; gap: 4px; align-content: start }
+.g-sw b { font-family: var(--font-display); font-weight: 400; font-size: 22px }
+.g-sw .hex { font-family: var(--g-code); font-size: 12px; color: var(--muted) }
+.g-sw p { font-size: 14px; color: var(--muted); line-height: 1.4 }
+.g-proportion { display: flex; height: 56px; border: 1px solid var(--rule) }
+.g-proportion > div { display: grid; place-items: end start; padding: 6px 8px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .1em; text-transform: uppercase }
+.g-dodont { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-dodont > div { display: grid; gap: 10px; align-content: start }
+.g-dodont .label { color: var(--muted) }
+.g-dodont ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: var(--t-small) }
+
+/* Type */
+.g-faces { display: grid; gap: 0 }
+.g-face { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 8px var(--gap-l); padding: 24px 0; border-top: 1px solid var(--rule); align-items: baseline }
+.g-face:last-child { border-bottom: 1px solid var(--rule) }
+.g-face .who { display: grid; gap: 4px }
+.g-face .who b { font-family: var(--font-label); font-size: var(--t-label); font-weight: 700; letter-spacing: var(--track-label); text-transform: uppercase }
+.g-face .who span { font-size: 14px; color: var(--muted) }
+.g-face .sample { min-width: 0; overflow-wrap: anywhere }
+.g-scale { display: grid }
+.g-scale .row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--rule) }
+.g-scale .row > span:first-child { font-family: var(--g-code); font-size: 12px; color: var(--muted) }
+.g-scale .row > div { min-width: 0; overflow: hidden; text-overflow: ellipsis }
+
+/* Rhythm diagram */
+.g-rhythm { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: var(--gap-l); align-items: start }
+.g-strip { display: grid; border: 1px solid var(--rule); container-type: inline-size }
+.g-strip > div { position: relative; padding: 10px 12px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .1em; text-transform: uppercase; min-height: 34px; display: flex; align-items: center }
+.g-strip .n { background: var(--night); color: var(--chalk); min-height: 64px }
+.g-strip .w { background: var(--white) }
+.g-strip .p { background: var(--paper) }
+.g-strip .s { background: var(--sunlight) }
+.g-strip .ph { background: linear-gradient(160deg, #6b6f74, #3d3a33); color: #fff; min-height: 80px }
+.g-strip .tear { position: absolute; left: 0; right: 0; height: 10px; margin: 0 }
+
+/* Graphics */
+.g-plates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.g-plate { position: relative; aspect-ratio: 1; display: grid; place-items: center; padding: 22px 18px 40px }
+.g-plate > svg { width: 62%; height: auto }
+.g-plate > .lab { position: absolute; left: 14px; right: 14px; bottom: 12px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+.g-plate.w { background: var(--white) } .g-plate.p { background: var(--paper) } .g-plate.s { background: var(--sunlight) }
+.g-plate.n { background: var(--night) } .g-plate.n > svg { color: var(--chalk) } .g-plate.n > .lab { color: var(--night-muted) }
+.g-plates.wide { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.g-plates.wide .g-plate { aspect-ratio: 4 / 3 }
+.g-plates.wide .g-plate > svg { width: 84% }
+
+/* Photography */
+.g-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover }
+
+/* Logo */
+.g-logos { display: flex; flex-wrap: wrap; gap: 22px; align-items: center }
+.g-logos > div { display: grid; gap: 10px; justify-items: center }
+.g-logos .tile { width: 132px; height: 132px; display: grid; place-items: center }
+.g-logos .tile img { width: 110px; height: 110px }
+.g-logos .disc { border-radius: 50%; background: var(--white) }
+.g-logos .sq { background: var(--white) }
+.g-logos .on-n { background: var(--night); padding: 18px }
+.g-logos .on-s { background: var(--sunlight); padding: 18px }
+.g-logos .cap { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+
+/* Component specimens: each is a real slice of page at full width */
+.g-spec { display: grid; gap: 10px }
+.g-spec > .g-spec-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; justify-content: space-between }
+.g-spec > .g-spec-head b { font-family: var(--font-display); font-weight: 400; font-size: 26px }
+.g-spec > .g-spec-head span { font-size: 14px; color: var(--muted); max-width: 60ch }
+.g-frame { container-type: inline-size; border: 1px solid var(--rule); background: var(--paper); position: relative; overflow: hidden; isolation: isolate }
+.g-frame > .tear--overlay { z-index: 12 }
+.g-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 28px var(--gutter) }
+.g-templates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-templates a { display: grid; gap: 10px; text-decoration: none }
+.g-templates .thumb { aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--rule); position: relative; background: var(--white) }
+.g-templates .thumb img { width: 100%; height: 100%; object-fit: cover }
+.g-templates h3 { font-family: var(--font-display); font-size: var(--t-card) }
+.g-templates p { color: var(--muted); font-size: var(--t-small) }
+.g-open { counter-reset: q; list-style: none; margin: 0; padding: 0; display: grid }
+.g-open li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid var(--rule) }
+.g-open li::before { content: counter(q) "."; font-family: var(--font-label); font-weight: 700; font-size: var(--t-label); color: var(--muted); padding-top: 4px }
+.g-open b { font-weight: 600 }
+
+@container (max-width: 900px) {
+  .g-cover .g-wrap, .g-rhythm { grid-template-columns: 1fr }
+  .g-head { grid-template-columns: 1fr }
+  .g-head p { grid-column: 1 }
+  .g-head .label { padding-top: 0 }
+  .g-body { margin-left: 0 }
+  .g-rules, .g-notes, .g-dodont, .g-templates { grid-template-columns: 1fr }
+  .g-swatches, .g-plates, .g-photos { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .g-plates.wide { grid-template-columns: 1fr }
+  .g-face { grid-template-columns: 1fr }
+  .g-scale .row { grid-template-columns: 1fr; gap: 4px }
+}
+</style>
+
+<div class="sor">
+<script src="system/graphics.js"></script>
+
+<header class="g-cover">
+  <svg class="flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+  <div class="g-wrap">
+    <div>
+      <span class="label">Seeds of Renaissance · Brand and design system</span>
+      <h1>Grounded hope, set in ink and paper</h1>
+      <p class="lede">How the Seeds of Renaissance looks and why: the feel, the rules, the colours, faces, graphics and components, with the code to build pages from them.</p>
+    </div>
+    <dl>
+      <dt>Version</dt><dd>0.1 · 5 October 2026</dd>
+      <dt>Source</dt><dd>The home and manifesto mockups (v7) and the four-page mockup (v2)</dd>
+      <dt>Status</dt><dd>Colour, type, graphics and components set. Logo, photography and slides still open.</dd>
+      <dt>Images</dt><dd>All photographs are mood board placeholders, not cleared for public use.</dd>
+    </dl>
+  </div>
+</header>
+<span class="tear tear--bottom" style="background:var(--night)"></span>
+
+<div class="g-toc"><nav class="g-wrap label" aria-label="Chapters">
+  <a href="#feel">Feel</a><a href="#principles">Principles</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#rhythm">Grounds and rhythm</a><a href="#graphics">Graphics</a><a href="#photography">Photography</a><a href="#logo">Logo</a><a href="#components">Components</a><a href="#templates">Templates</a><a href="#code">Using the code</a><a href="#open">Open questions</a>
+</nav></div>
+
+<!-- ─────────────────────────── Feel -->
+<section class="g-ch ground-white" id="feel"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 1</span><h2>The feel</h2><p>Every colour, face and layout decision is judged against one phrase, not against taste.</p></div>
+  <div class="g-body">
+    <div class="g-essence">Grounded hope.</div>
+    <div class="g-prose"><p>Hope stays the destination, and it is earned by going through the dark rather than around it. The sunrise painting is hope without ground; Dark Mountain is ground without much hope. We sit between: a skilled, caring presence at an ending and at a birth.</p></div>
+    <div class="g-notes">
+      <div><span class="label muted">Supporting note</span><h3>Deep sourcing</h3><p>Going to the source, and the creativity that comes from there. Depth with the aim of really understanding.</p></div>
+      <div><span class="label muted">Supporting note</span><h3>Crafted rigour</h3><p>Real thought, love and care in how things are made. The elegance of a potter's bowl, not of Vogue.</p></div>
+      <div><span class="label muted">Supporting note</span><h3>Liminal integration</h3><p>Not opposites side by side but the moment they become one: dawn, birth, death. Crisis and renaissance as one transition.</p></div>
+    </div>
+    <div>
+      <h3 class="g-h3">Character</h3>
+      <div class="g-prose"><p><span class="poem-strong">A little off-centre.</span> Earthy, a bit muddy, a bit quirky, a bit marginal. Not mainstream, and not a wild artist's site either. The muddiness lives in texture and imperfection, never in muddy colour.</p></div>
+    </div>
+    <div>
+      <h3 class="g-h3">What we are not</h3>
+      <div class="g-not"><span>Wellness or new age</span><span>Luxury, glossy</span><span>Corporate</span><span>Hard selling</span><span>Sleek and contemporary</span><span>Chaotic artist site</span><span>Looking backwards</span></div>
+    </div>
+    <div>
+      <h3 class="g-h3">Three registers, one skeleton</h3>
+      <div class="g-prose" style="margin-bottom:14px"><p>Rigour is the form and warmth is the surface. Rigour is constant on every page (grid, type, accuracy, sourcing); warmth varies (people, texture, hand marks, colour, voice).</p></div>
+      <div class="g-scroll"><table class="g-table">
+        <thead><tr><th>Register</th><th>Pages</th><th>Balance</th></tr></thead>
+        <tbody>
+          <tr><td>Study</td><td>White papers, essays, research</td><td>Rigour leads; warmth in small touches</td></tr>
+          <tr><td>Conversation</td><td>Manifesto, podcast, magazine, landing pages</td><td>Balanced</td></tr>
+          <tr><td>Gathering</td><td>Community, events, joining</td><td>Warmth leads; rigour stays in the structure</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Principles -->
+<section class="g-ch" id="principles"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 2</span><h2>Eight principles</h2><p>The rules that carry the feel. When a new page is in doubt, check it against these.</p></div>
+  <div class="g-body">
+    <ol class="g-rules">
+      <li><b>Ink and paper first</b><span>Pages are mostly white, paper and ink. Colour arrives in photographs, not in the interface.</span></li>
+      <li><b>Buttons are ink</b><span>Every button is black, solid or outlined. On night they turn chalk.</span></li>
+      <li><b>Red is rare</b><span>The logo red appears only as an occasional link in running text, and footnote marks. Never a button, never a background.</span></li>
+      <li><b>Pale yellow is light, not paint</b><span>Sunlight is a ground for a whole section. Never text, never a highlighter, never a bright yellow.</span></li>
+      <li><b>One night per page</b><span>At most one dark section, plus the footer. Dark and light always meet at a torn edge, never a straight line or a gradient.</span></li>
+      <li><b>Polyamine speaks rarely</b><span>The display face is for short statements: five to ten words. Pull quotes go to Restora, reading to Bricolage.</span></li>
+      <li><b>Figures are plates</b><span>Images are numbered and captioned like plates in a book: <span class="fig-no">Fig. 2</span> then an italic caption.</span></li>
+      <li><b>The hand is our texture</b><span>Paper grain, torn edges, woodcut seeds and swallows, the fingerprints in the logo. Imperfection is made, not filtered on.</span></li>
+    </ol>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Colour -->
+<section class="g-ch ground-white" id="colour"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 3</span><h2>Colour</h2><p>Colours have roles, not just values. Four grounds, three inks and one accent, used in that order of frequency.</p></div>
+  <div class="g-body">
+    <div>
+      <h3 class="g-h3">Grounds</h3>
+      <div class="g-swatches">
+        <div class="g-sw"><div class="chip" style="background:var(--white);box-shadow:inset 0 -1px 0 var(--rule)"></div><div class="meta"><b>White</b><span class="hex">--white · #ffffff</span><p>Pure white sections: the page at its most open. Statements, calendars, engage.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--paper);box-shadow:inset 0 -1px 0 var(--rule)"></div><div class="meta"><b>Paper</b><span class="hex">--paper · #fbfaf6</span><p>The default page. Warm near-white, under the grain.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--sunlight)"></div><div class="meta"><b>Sunlight</b><span class="hex">--sunlight · #fbefc4</span><p>Pale yellow, for joy. Background of a whole section only.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--night)"></div><div class="meta"><b>Night</b><span class="hex">--night · #171613</span><p>One section per page, plus the footer. Depth: selected work, reflection.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="g-h3">Inks and the accent</h3>
+      <div class="g-swatches">
+        <div class="g-sw"><div class="chip" style="background:var(--ink)"></div><div class="meta"><b>Ink</b><span class="hex">--ink · #1b1916</span><p>All text on light grounds, rules that matter, and every button.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--muted)"></div><div class="meta"><b>Muted</b><span class="hex">--muted · #5d584f · --rule #e0dacf</span><p>Captions, labels, secondary text; hairlines.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--chalk)"></div><div class="meta"><b>Chalk</b><span class="hex">--chalk · #ece7dc · --night-muted #a49e93</span><p>Text on night, and its quieter partner.</p></div></div>
+        <div class="g-sw"><div class="chip" style="background:var(--red)"></div><div class="meta"><b>Logo red</b><span class="hex">--red · #e5201c</span><p>An occasional link in running text. That is all.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="g-h3">Proportion on a typical page</h3>
+      <div class="g-proportion" role="img" aria-label="About 64 percent white and paper, 14 percent sunlight, 16 percent night, 5 percent ink, 1 percent red">
+        <div style="flex:40;background:var(--white)">White</div>
+        <div style="flex:24;background:var(--paper)">Paper</div>
+        <div style="flex:14;background:var(--sunlight)">Sun</div>
+        <div style="flex:16;background:var(--night);color:var(--chalk)">Night</div>
+        <div style="flex:5;background:var(--ink);color:var(--chalk)"></div>
+        <div style="flex:1;background:var(--red)"></div>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:8px">Measured by area on the home page template. Photographs, which carry most of the colour, are left out.</p>
+    </div>
+    <div class="g-dodont">
+      <div><span class="label">Do</span><ul><li>Let a photograph be the most colourful thing on the screen.</li><li>Alternate white, paper and sunlight sections to give rhythm without colour.</li><li>Use red for one link in a paragraph, at most.</li></ul></div>
+      <div><span class="label">Don't</span><ul><li>Make a red button, a red heading or a red background.</li><li>Highlight words in yellow, or use a bright yellow anywhere.</li><li>Add a second dark section, a gradient, or a blue call to action (tried and rejected: too cool and corporate).</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Type -->
+<section class="g-ch" id="type"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 4</span><h2>Type</h2><p>A carved, slightly quirky display serif, grounded by a recent grotesque with weight in the body.</p></div>
+  <div class="g-body">
+    <div class="g-faces">
+      <div class="g-face"><div class="who"><b>Display · Polyamine</b><span>Wordmark, headlines, section and card titles. Commercial, not yet licensed.</span></div><div class="sample display" style="font-size:clamp(36px,6cqi,72px);line-height:1">Seeds of a Renaissance</div></div>
+      <div class="g-face"><div class="who"><b>Quote · Restora</b><span>Pull quotes and larger quotations. Commercial, not yet licensed or installed: you may be seeing Fraunces.</span></div><div class="sample" style="font-family:var(--font-quote);font-size:clamp(26px,3.4cqi,38px);line-height:1.2">We are the bridge between the dying past and the future unborn.</div></div>
+      <div class="g-face"><div class="who"><b>Body · Bricolage Grotesque</b><span>Everything you read. Light for statements, regular for text. Free (OFL).</span></div><div class="sample" style="font-size:19px;line-height:1.65;max-width:56ch">Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them.</div></div>
+      <div class="g-face"><div class="who"><b>Label · Apfel Grotezk</b><span>Eyebrows, buttons, dates, figure numbers. Small, uppercase, letterspaced. Free (OFL), embedded.</span></div><div class="sample label" style="font-size:14px">Gathering · Thursday 15 October · Fig. 3</div></div>
+      <div class="g-face"><div class="who"><b>Poem · Fraunces italic, soft</b><span>The poetic voice: dedications, a line set alone, one emphasised sentence. Free (OFL).</span></div><div class="sample poem" style="font-size:clamp(24px,3cqi,32px);line-height:1.3">Life as an art. In this soil we plant the seeds of a Renaissance.</div></div>
+    </div>
+    <div>
+      <h3 class="g-h3">Scale</h3>
+      <div class="g-scale">
+        <div class="row"><span>--t-hero · 40–96</span><div class="display" style="font-size:var(--t-hero);line-height:.95">Connection Call</div></div>
+        <div class="row"><span>--t-title · 40–84</span><div class="display" style="font-size:var(--t-title);line-height:1">The Manifesto</div></div>
+        <div class="row"><span>--t-section · 36–64</span><div class="display" style="font-size:var(--t-section);line-height:1">Mythos</div></div>
+        <div class="row"><span>--t-card · 24–32</span><div class="display" style="font-size:var(--t-card)">Community gardens</div></div>
+        <div class="row"><span>--t-quote · 26–38</span><div style="font-family:var(--font-quote);font-size:var(--t-quote)">We are seed-bearers.</div></div>
+        <div class="row"><span>--t-lead · 20–28</span><div style="font-size:var(--t-lead);font-weight:300;line-height:1.38">Within that breakdown something is trying to be born.</div></div>
+        <div class="row"><span>--t-reading · 19</span><div style="font-size:var(--t-reading)">Long-form text in articles and the manifesto, at 680px measure.</div></div>
+        <div class="row"><span>--t-body · 17</span><div>Default text, card descriptions, forms.</div></div>
+        <div class="row"><span>--t-caption · 14</span><div style="font-size:14px;font-style:italic;color:var(--muted)"><span class="fig-no">Fig. 1</span>Carrying stones by the lake.</div></div>
+        <div class="row"><span>--t-label · 12</span><div class="label">What we believe</div></div>
+      </div>
+    </div>
+    <div class="g-note"><b>Open: where Polyamine stops</b>The mockups use Polyamine for every heading, down to 22px card and list titles, and it holds up. The earlier type notes said Polyamine for the hero only and Restora for headings inside running text. This system follows the mockups; Restora has never been seen at working heading size.</div>
+    <div class="g-note"><b>Fixed while extracting</b>The mockups asked for "Appful Grotesque", a name no installed font has, so their labels were showing in the fallback (Hanken Grotesk). The system now embeds the real Apfel Grotezk. Labels and buttons look slightly different from the mockups as a result.</div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Rhythm -->
+<section class="g-ch ground-white" id="rhythm"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 5</span><h2>Grounds and rhythm</h2><p>A page is a stack of grounds. Rhythm comes from changing the ground, not from boxes, borders or colour.</p></div>
+  <div class="g-body">
+    <div class="g-rhythm">
+      <div class="g-strip" aria-label="Section sequence of the home page">
+        <div class="p">Header · paper</div>
+        <div class="ph">Hero photograph<span class="tear" style="bottom:-1px;background:var(--white)"></span></div>
+        <div class="w">Statement · white</div>
+        <div class="p">Pathways · paper</div>
+        <div class="n"><span class="tear" style="top:0;background:var(--night);transform:scaleY(1);top:-9px"></span>Selected work · night</div>
+        <div class="s"><span class="tear" style="top:0;background:var(--night);transform:scaleY(-1)"></span>Printed object · sun</div>
+        <div class="w">Calendar · white</div>
+        <div class="s">Interlude · sun</div>
+        <div class="w">Engage · white</div>
+        <div class="n"><span class="tear" style="top:-9px;background:var(--night)"></span>Footer · night</div>
+      </div>
+      <div class="g-prose">
+        <p><b>Sections</b> run full width with the page gutter (16–56px) and vertical padding of 44–96px (<code>.section</code>). Each opens with a small muted label, then its content. Labels name what the section is ("Take part", "Coming up"); they are not numbered.</p>
+        <p><b>Alternate grounds</b>: white for statements and lists, paper for collections, sunlight for joy and invitations. Never put two sunlight sections next to each other.</p>
+        <p><b>One night section</b> sits roughly two thirds of the way down, where the page goes deep (selected work, a reading). The footer is the only other night.</p>
+        <p><b>Torn edges</b> join night and light, and a photograph to the page below it. Give the tear the colour of the ground it tears out of: <code>.tear--top</code> inside a night section, <code>.tear--bottom</code> straight after one, <code>.tear--overlay</code> at the foot of a photograph.</p>
+        <p><b>Structure shows rigour</b>: hairline rules between list rows, numbered figures, a calm grid of two, three or four columns that falls to one on a phone.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Graphics -->
+<section class="g-ch" id="graphics"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 6</span><h2>Woodcut graphics</h2><p>Printmade marks, slightly rough at the edge. Black on light grounds, chalk on night. Never coloured, except the occasional red seed.</p></div>
+  <div class="g-body">
+    <div>
+      <h3 class="g-h3">The swallow</h3>
+      <div class="g-plates wide">
+        <div class="g-plate w"><svg class="woodcut" viewBox="0 0 248 150" role="img" aria-label="A woodcut swallow"><use href="#wsw"/></svg><span class="lab">Plate 1 · single · #wsw</span></div>
+        <div class="g-plate s"><svg class="woodcut" viewBox="0 0 300 180" role="img" aria-label="Three swallows in flight"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg><span class="lab">Plate 2 · flock, over a hero · .flock</span></div>
+        <div class="g-plate n"><svg class="woodcut" viewBox="0 0 120 120" role="img" aria-label="Swallow seal" style="width:46%"><use href="#seal"/></svg><span class="lab">Plate 3 · seal, to close a page · #seal</span></div>
+      </div>
+    </div>
+    <div>
+      <h3 class="g-h3">Seeds</h3>
+      <div class="g-plates">
+        <div class="g-plate w"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Sunflower seed"><use href="#s-sunflower"/></svg><span class="lab">Sunflower · Gather</span></div>
+        <div class="g-plate p"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Wheat grain"><use href="#s-wheat"/></svg><span class="lab">Wheat · Practise</span></div>
+        <div class="g-plate s"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Bean"><use href="#s-bean"/></svg><span class="lab">Bean · Belong</span></div>
+        <div class="g-plate w"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Maple key"><use href="#s-samara"/></svg><span class="lab">Maple key · Seed</span></div>
+        <div class="g-plate p"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Acorn"><use href="#s-acorn"/></svg><span class="lab">Acorn</span></div>
+        <div class="g-plate s"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Pumpkin seed"><use href="#s-pumpkin"/></svg><span class="lab">Pumpkin</span></div>
+        <div class="g-plate n"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Stone"><use href="#s-stone"/></svg><span class="lab">Stone</span></div>
+        <div class="g-plate w"><svg class="woodcut" viewBox="0 0 100 100" role="img" aria-label="Dandelion seed"><use href="#s-dandelion"/></svg><span class="lab">Dandelion</span></div>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:10px">The four pathway seeds (sunflower, wheat, bean, maple key) mark the four ways to take part, and stay attached to them.</p>
+    </div>
+    <div>
+      <h3 class="g-h3">Clusters</h3>
+      <div class="g-plates wide">
+        <div class="g-plate s"><svg class="woodcut" viewBox="0 0 200 200" role="img" aria-label="Sunflower spiral"><use href="#c-spiral"/></svg><span class="lab">Spiral · behind a page title</span></div>
+        <div class="g-plate w"><svg class="woodcut" viewBox="0 0 280 170" role="img" aria-label="Scattered seeds"><use href="#c-scatter"/></svg><span class="lab">Scatter · above an interlude</span></div>
+        <div class="g-plate p"><svg class="woodcut" viewBox="0 0 290 120" role="img" aria-label="A sown row"><use href="#c-row"/></svg><span class="lab">Sown row · a divider · .seed-row</span></div>
+      </div>
+    </div>
+    <div class="g-prose"><p>The full woodcut set (mountains, leaves, wind, fruit, people in a circle) is in <code>sor-brand/graphics/woodcuts/</code> with its own gallery. Still open: whether to hand-draw the woodcuts or base them on public-domain prints.</p></div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Photography -->
+<section class="g-ch ground-white" id="photography"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 7</span><h2>Photography</h2><p>Real people outdoors, doing things together, beside engraving, printmaking and honest art. Photographs carry the colour.</p></div>
+  <div class="g-body">
+    <div class="g-photos">
+      <figure><img src="system/img/stones.jpg" alt="Two women carrying stones by a lake"><figcaption><span class="fig-no">Fig. 1</span>People, outdoors, carrying something together.</figcaption></figure>
+      <figure><img src="system/img/meal.jpg" alt="Friends laughing at a long table in a garden"><figcaption><span class="fig-no">Fig. 2</span>Joy that isn't staged.</figcaption></figure>
+      <figure><img src="system/img/dore.jpg" alt="Doré's engraving of the celestial rose"><figcaption><span class="fig-no">Fig. 3</span>Engraving: depth and myth.</figcaption></figure>
+      <figure><img src="system/img/mountain.jpg" alt="Snow peak under star trails"><figcaption><span class="fig-no">Fig. 4</span>Night and weight, for the dark section.</figcaption></figure>
+    </div>
+    <div class="g-dodont">
+      <div><span class="label">Choose</span><ul><li>People and children in real places, warm and unposed.</li><li>Engravings, woodcuts, collage, drawing and printmaking.</li><li>Images that pair: something mythic beside something ordinary and human.</li></ul></div>
+      <div><span class="label">Avoid</span><ul><li>Glowing sunrise paintings, auras, cosmic light: the new-age look.</li><li>Glossy lifestyle or luxury photography.</li><li>Too many black-and-white images together; the page goes cold.</li></ul></div>
+    </div>
+    <div class="g-note"><b>Placeholders</b>Every photograph here and in the templates is from the mood board and not cleared. Joyful photographs with people and children are the top open need, along with rules on credits and rights.</div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Logo -->
+<section class="g-ch" id="logo"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 8</span><h2>Logo</h2><p>A black swallow in a radiating circle of red fingerprints: many hands around a bird in flight. Provisional.</p></div>
+  <div class="g-body">
+    <div class="g-logos">
+      <div><span class="tile disc"><img src="system/img/logo.png" alt="Seeds of Renaissance logo on a white disc"></span><span class="cap">White disc</span></div>
+      <div><span class="tile sq"><img src="system/img/logo.png" alt="Seeds of Renaissance logo on a white tile"></span><span class="cap">White tile</span></div>
+      <div><span class="on-n"><span class="tile disc"><img src="system/img/logo.png" alt="Logo on a white disc over night"></span></span><span class="cap">Disc on night</span></div>
+      <div><span class="on-s"><span class="tile disc"><img src="system/img/logo.png" alt="Logo on a white disc over sunlight"></span></span><span class="cap">Disc on sunlight</span></div>
+    </div>
+    <div class="g-prose">
+      <p>Set the mark on a <b>white disc</b> or <b>white tile</b> so it sits on any ground, including night. In the header it sits beside the Polyamine wordmark, <span class="display">Seeds <em>of</em> Renaissance</span>, with "of" in italic.</p>
+      <p>Open, from the logo notes: a deeper, ink-like red; a hand-drawn swallow instead of the stock silhouette; a small version that survives a favicon or YouTube avatar; a full set of colour, one-colour and inverted versions.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Components -->
+<section class="g-ch ground-white" id="components"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 9</span><h2>Components</h2><p>Each specimen is the real component from <code>components.css</code>, at the width of this column. Class names are in the caption.</p></div>
+  <div class="g-body">
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Buttons, links and fields</b><span><code>.btn</code> <code>.btn--solid</code> <code>.text-link</code> <code>.link</code> <code>.field</code></span></div>
+      <div class="g-frame">
+        <div class="g-row ground-white"><a class="btn btn--solid" href="#components">Save a place</a><a class="btn" href="#components">How to join</a><a class="text-link" href="#components">Register</a><span>Read the <a class="link" href="#components">manifesto</a></span><input class="field" id="g-email" type="email" placeholder="Your email" aria-label="Email"></div>
+        <div class="g-row night" style="padding-block:28px"><a class="btn btn--solid" href="#components">Listen now</a><a class="btn" href="#components">All episodes</a></div>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Site header</b><span><code>.site-header</code> with <code>.wordmark</code>; centred variant <code>.site-header--centred</code> over a full-bleed hero</span></div>
+      <div class="g-frame">
+        <header class="site-header gutter"><a class="wordmark" href="#components"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a><nav class="label"><a href="#components">Gather</a><a href="#components">Listen</a><a href="#components" aria-current="page">Read</a><a href="#components">Magazine</a><a href="#components">Join</a></nav></header>
+        <header class="site-header site-header--centred gutter"><nav class="label"><a href="#components">Gather</a><a href="#components">Listen</a><a href="#components">Read</a></nav><a class="wordmark" href="#components"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a><nav class="label"><a href="#components">Magazine</a><a href="#components">Join</a></nav></header>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Hero, photograph</b><span><code>.hero-photo</code>: one statement over a full-bleed image, a flock, a torn white edge into the page</span></div>
+      <div class="g-frame">
+        <section class="hero-photo">
+          <img src="system/img/stones.jpg" alt="Two women carrying stones beside a lake and a small wooden bridge" style="object-position:50% 55%">
+          <svg class="flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+          <div class="overlay"><span class="label">Gathering · Thursday 15 October</span><h1>The Global Connection Call</h1><p>An hour together, online, for those who sense the old world is ending and want to help seed the new.</p><a class="btn btn--solid" href="#components">Save a place</a></div>
+          <span class="tear tear--overlay" style="background:var(--white)"></span>
+        </section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Hero, split</b><span><code>.hero-split</code> with a laid-down <code>.print</code>; the alternative when there is no strong landscape photograph</span></div>
+      <div class="g-frame">
+        <section class="hero-split gutter ground-sun">
+          <div class="text"><span class="label muted">Gathering · Thursday 15 October</span><h1>The Global Connection Call</h1><p>An hour together, online, for those who sense the old world is ending.</p><a class="btn btn--solid" href="#components">Save a place</a></div>
+          <figure class="print"><img src="system/img/meal.jpg" alt="Friends laughing around a long table in a garden"><figcaption><span class="fig-no">Fig. 1</span>A shared meal in the garden, after a gathering.</figcaption></figure>
+        </section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Statement</b><span><code>.statement</code>: a light lead paragraph, one sentence in the poetic voice (<code>.poem-strong</code>), a red link, a sown row, and a plate</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-white"><span class="label">What we believe</span><div class="statement"><div><p>Something is ending, and you feel it before you can name it. Within that breakdown something is trying to be born. <span class="poem-strong">We are a movement of people making sense of this moment and practising what comes next, together.</span> <a class="link" href="#components">Read the manifesto</a></p><svg class="seed-row" viewBox="0 0 290 120" aria-hidden="true"><use href="#c-row"/></svg></div><figure><img src="system/img/meal.jpg" alt="Friends laughing around a long table in a garden"><figcaption><span class="fig-no">Fig. 2</span>A shared meal in the garden, after a gathering.</figcaption></figure></div></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Pathways</b><span><code>.pathways</code> / <code>.pathway</code>: four ways in, each with its seed</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-paper"><span class="label">Take part</span><div class="pathways">
+          <a class="pathway" href="#components"><span class="photo"><img src="system/img/walking.jpg" alt="Collage of people walking toward a yellow field"></span><span class="kind"><svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-sunflower"/></svg>Gather</span><h3>Connection calls</h3><p>Monthly, online, open to all.</p></a>
+          <a class="pathway" href="#components"><span class="photo"><img src="system/img/field.jpg" alt="Calligraphy scrolls hanging in a stone attic"></span><span class="kind"><svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg>Practise</span><h3>Courses</h3><p>Small groups, practices for daily life.</p></a>
+          <a class="pathway" href="#components"><span class="photo"><img src="system/img/scrolls.jpg" alt="A red paper lantern against an old wall"></span><span class="kind"><svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg>Belong</span><h3>Community gardens</h3><p>Conversation between the calls.</p></a>
+          <a class="pathway" href="#components"><span class="photo"><img src="system/img/sylvie.jpg" alt="A woman in white in a ploughed field"></span><span class="kind"><svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg>Seed</span><h3>Gardens of Change</h3><p>Start something where you live.</p></a>
+        </div></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Selected work, on night</b><span><code>.night</code> + <code>.selected</code>: a list that changes the picture (needs <code>sor.js</code>); torn edges in and out</span></div>
+      <div class="g-frame">
+        <section class="night gutter"><span class="tear tear--top"></span><svg class="seal-corner woodcut" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg><span class="label">Selected work</span>
+          <div class="selected"><ul>
+            <li aria-current="true" tabindex="0" data-img="system/img/mountain.jpg" data-alt="Snow peak under star trails" data-cap="Over the Mountains. Snow peak under star trails."><span class="label">Podcast</span><b>Over the Mountains</b><span class="by">Conversations with Iain McGilchrist, Dougald Hine and Roberto Mangabeira Unger</span></li>
+            <li tabindex="0" data-img="system/img/dore.jpg" data-alt="Doré’s celestial rose" data-cap="Doré’s celestial rose, from the Paradiso."><span class="label">Essay</span><b>The Second Renaissance: A Very Short Introduction</b><span class="by">Real risk, root cause, radical response, real possibility</span></li>
+            <li tabindex="0" data-img="system/img/orpheus.jpg" data-alt="Orpheus" data-cap="Orpheus, from Issue #2: Mythos."><span class="label">Art</span><b>Orpheus</b><span class="by">From the magazine, Issue #2</span></li>
+          </ul><figure class="picture"><img src="system/img/mountain.jpg" alt="Snow peak under star trails"><figcaption><span class="fig-no">Fig. 3</span><span class="caption">Over the Mountains. Snow peak under star trails.</span></figcaption></figure></div>
+        </section>
+        <span class="tear tear--bottom" style="background:var(--night)"></span>
+        <div style="height:40px;background:var(--sunlight)"></div>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Printed object</b><span><code>.object-feature</code>: a magazine or book, with the deeper object shadow</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-sun object-feature"><img src="system/img/mythos.jpg" alt="Cover of magazine issue 2, Mythos"><div><span class="label muted">In print · Issue #2</span><h2>Mythos</h2><p>How myths shape what we call sacred and remember. Art, poetry and essays from forty contributors, in a yearly printed issue.</p><a class="btn btn--solid" href="#components">Subscribe · €35 a year</a></div></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Calendar</b><span><code>.calendar</code>: date, title and detail, one action per row</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-white"><span class="label">Coming up</span><div class="calendar">
+          <div class="row"><span class="date">15 Oct</span><span><b>Global Connection Call</b><small>Online · 19:30 UK / 20:30 CET · free</small></span><a class="text-link" href="#components">Save a place</a></div>
+          <div class="row"><span class="date">7 – 14 Oct</span><span><b>Intro to Collective Action</b><small>Six short online sessions · €20, refunded if you attend all six</small></span><a class="text-link" href="#components">Register</a></div>
+        </div></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Interlude</b><span><code>.interlude</code>: a scatter of seeds and one poetic line, set alone on sunlight</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-sun interlude"><svg viewBox="0 0 280 170" aria-hidden="true"><use href="#c-scatter"/></svg><p class="poem">Life as an art. In this soil we plant the seeds of a Renaissance.</p><span class="label muted">From the manifesto</span></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Engage</b><span><code>.engage</code>: three ways to stay in touch, each under a heavy rule</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-white"><span class="label">Engage</span><div class="engage">
+          <div><h3>The Greenhouse</h3><p>Our newsletter: new releases, gatherings and ways in.</p><input class="field" id="g-email-2" type="email" placeholder="Your email" aria-label="Email"><a class="btn btn--solid" href="#components">Subscribe</a></div>
+          <div><h3>Join the movement</h3><p>Come to a call, then find your people in the community gardens.</p><a class="btn" href="#components">How to join</a></div>
+          <div><h3>Support the work</h3><p>Become a patron of the magazine and the artists it pays.</p><a class="btn" href="#components">Become a patron</a></div>
+        </div></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Long-form reading</b><span><code>.reading</code> with <code>.drop</code>, <code>.pull</code>, <code>.verse</code> and <code>.litany</code>; a seal to close</span></div>
+      <div class="g-frame">
+        <article class="reading gutter ground-white">
+          <p class="drop">Human civilization has always been a story of transformation, of old worlds dying and new ones being born. We are living through such moments. The crises of our time are not separate emergencies to be managed one by one.</p>
+          <div class="pull"><span>We are a movement called to bring forth a renaissance.</span><span>We are the bridge between the dying past and the future unborn.</span></div>
+          <p>We gather once a month on a <a class="link" href="#components">Global Connection Call</a>, open to anyone who feels this call too.</p>
+          <ol class="litany"><li>Our work is a practice of hope, because where there is hope there is action.</li><li>Our work is contemplative and activist at the same time.</li><li>Our work is life as an art.</li></ol>
+          <svg class="seal woodcut" style="justify-self:center" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+        </article>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Events and band</b><span><code>.events</code> / <code>.event</code> and <code>.band</code>, from the gatherings and join pages</span></div>
+      <div class="g-frame">
+        <section class="section gutter ground-paper"><span class="label">Gatherings</span><div class="events">
+          <div class="event"><img src="system/img/meal.jpg" alt="A shared meal in a garden"><div class="body"><span class="day">15<small>Oct</small></span><div><h3>Global Connection Call</h3><p>Online, an hour, free.</p></div></div></div>
+          <div class="event"><img src="system/img/stones.jpg" alt="Carrying stones by a lake"><div class="body"><span class="day">22<small>Oct</small></span><div><h3>Garden of Change, Lyon</h3><p>An afternoon in the garden, bring food.</p></div></div></div>
+          <div class="event"><img src="system/img/walking.jpg" alt="Collage of people walking"><div class="body"><span class="day">7<small>Nov</small></span><div><h3>Praxis Ecology</h3><p>Six sessions over ten weeks.</p></div></div></div>
+        </div></section>
+        <section class="band gutter"><div><h2>Come to a call</h2><p>The easiest way in: an hour, online, once a month. No preparation, no commitment.</p></div><a class="btn btn--solid" href="#components">Save a place</a></section>
+      </div>
+    </div>
+
+    <div class="g-spec">
+      <div class="g-spec-head"><b>Footer</b><span><code>.site-footer</code>: night, torn in, the logo on its white disc</span></div>
+      <div class="g-frame" style="padding-top:40px;background:var(--white)">
+        <footer class="site-footer gutter"><span class="tear"></span>
+          <div><span class="logo-disc"><img src="system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+          <div><span class="label">Gather</span><ul><li>Connection calls</li><li>Gardens</li><li>Retreats</li></ul></div>
+          <div><span class="label">Read</span><ul><li>Magazine</li><li>White papers</li><li>Manifesto</li></ul></div>
+          <div><span class="label">The Greenhouse</span><p>Our newsletter, once a month.</p></div>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Templates -->
+<section class="g-ch" id="templates"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 10</span><h2>Templates</h2><p>Whole pages built only from the system. They are the test that the extraction is complete.</p></div>
+  <div class="g-body">
+    <div class="g-templates">
+      <a href="templates/home.html"><span class="thumb"><img src="system/img/stones.jpg" alt=""></span><span class="label muted">Template · Gathering register</span><h3>Home</h3><p>Photograph hero, statement, pathways, selected work on night, the magazine, calendar, interlude, engage.</p></a>
+      <a href="templates/manifesto.html"><span class="thumb"><img src="system/img/walking.jpg" alt=""></span><span class="label muted">Template · Conversation register</span><h3>Manifesto</h3><p>Page title with spiral, long-form reading with drop cap, pull quote, verse and the twenty-one-part litany.</p></a>
+    </div>
+    <div class="g-prose"><p>Next to build from the system: the new Seeds of Renaissance landing page, a YouTube thumbnail and a slide deck. Each will test something the website doesn't.</p></div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Code -->
+<section class="g-ch ground-white" id="code"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 11</span><h2>Using the code</h2><p>Four stylesheets and two small scripts. A page needs nothing else.</p></div>
+  <div class="g-body">
+<pre class="g-code">&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&amp;family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&amp;display=swap"&gt;
+&lt;link rel="stylesheet" href="system/fonts.css"&gt;      &lt;!-- Apfel Grotezk embedded; Polyamine and Restora where installed --&gt;
+&lt;link rel="stylesheet" href="system/tokens.css"&gt;     &lt;!-- colour, type, space --&gt;
+&lt;link rel="stylesheet" href="system/components.css"&gt; &lt;!-- everything on this page --&gt;
+
+&lt;body class="sor"&gt;
+  &lt;script src="system/graphics.js"&gt;&lt;/script&gt;      &lt;!-- woodcut symbols: &lt;svg&gt;&lt;use href="#s-bean"/&gt;&lt;/svg&gt; --&gt;
+  …sections…
+  &lt;script src="system/sor.js"&gt;&lt;/script&gt;           &lt;!-- selected-work picker --&gt;
+&lt;/body&gt;</pre>
+    <div class="g-scroll"><table class="g-table">
+      <thead><tr><th>File</th><th>What it holds</th><th>Edit it?</th></tr></thead>
+      <tbody>
+        <tr><td><code>tokens.css</code></td><td>Every colour, face, size and space, with its role</td><td>Yes: change the system here</td></tr>
+        <tr><td><code>components.src.css</code></td><td>The components, readable</td><td>Yes, then run <code>build-css.py</code></td></tr>
+        <tr><td><code>components.css</code></td><td>The same, with the torn edge and grain inlined</td><td>No, generated</td></tr>
+        <tr><td><code>fonts.css</code></td><td>Apfel Grotezk as data, the paid faces by name</td><td>No, run <code>build-fonts.py</code></td></tr>
+        <tr><td><code>graphics.svg</code> / <code>.js</code></td><td>The swallow, seal, seeds and clusters</td><td>Edit the SVG, run <code>build-graphics.py</code></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div></section>
+
+<!-- ─────────────────────────── Open -->
+<section class="g-ch" id="open"><div class="g-wrap">
+  <div class="g-head"><span class="label">Chapter 12</span><h2>Open questions</h2><p>What the system does not decide yet.</p></div>
+  <div class="g-body">
+    <ol class="g-open">
+      <li><span><b>Polyamine or Restora for headings?</b> The mockups use Polyamine everywhere; the type notes reserve it for the hero. Test Restora at 24–34px among body text.</span></li>
+      <li><span><b>Licences.</b> Polyamine and Restora are not bought, so anyone without them installed sees Fraunces.</span></li>
+      <li><span><b>Logo.</b> Deeper red, redrawn swallow, small version, full set of versions.</span></li>
+      <li><span><b>Photography.</b> Joyful photographs with people and children; credits and rights.</span></li>
+      <li><span><b>Woodcuts.</b> Hand-drawn, or based on public-domain prints?</span></li>
+      <li><span><b>Beyond the website.</b> Slides, print and thumbnails need their own scale; the web scale here is fluid and will not transfer directly.</span></li>
+      <li><span><b>Sub-brands.</b> Do the magazine, podcast, courses and gardens get their own colour, or stay in one palette?</span></li>
+    </ol>
+  </div>
+</div></section>
+
+<footer class="site-footer gutter"><span class="tear"></span>
+  <div><span class="logo-disc"><img src="system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>Design system 0.1. Maintained in <code style="background:none;color:var(--chalk)">life-itself/design</code>, projects/sor-design-system.</p></div>
+  <div><span class="label">The system</span><ul><li><a href="#colour">Colour</a></li><li><a href="#type">Type</a></li><li><a href="#components">Components</a></li></ul></div>
+  <div><span class="label">Templates</span><ul><li><a href="templates/home.html">Home</a></li><li><a href="templates/manifesto.html">Manifesto</a></li></ul></div>
+  <div><span class="label">Feel</span><p>Grounded hope. A little off-centre.</p></div>
+</footer>
+<script src="system/sor.js"></script>
+</div>

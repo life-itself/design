@@ -1,0 +1,241 @@
+/* Seeds of Renaissance components
+   Extracted from the home and manifesto mockups (v7) and the four-page mockup (v2).
+   GENERATED from components.src.css; edit that, then run build-css.py. Source: with the tear and grain textures inlined (build-css.py).
+   Needs tokens.css. Every section is a ground (white, paper, sunlight or night); dark and light meet at a torn edge. */
+
+/* ── Base ─────────────────────────────────────────────────────── */
+.sor, .sor *, .sor *::before, .sor *::after { box-sizing: border-box }
+.sor {
+  container-type: inline-size;
+  position: relative; isolation: isolate;
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--t-body); line-height: var(--lh-body);
+  color-scheme: light;
+}
+/* Paper grain over everything: the hand is our texture */
+.sor::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 9;
+  opacity: var(--grain-opacity); mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");
+}
+:where(.sor) img { display: block; max-width: 100% }
+:where(.sor) a { color: inherit }
+.sor a:focus-visible, .sor button:focus-visible, .sor input:focus-visible, .sor [tabindex]:focus-visible { outline: 2px solid currentColor; outline-offset: 3px }
+:where(.sor) :is(h1, h2, h3, h4) { margin: 0; font-weight: 400; text-wrap: balance }
+:where(.sor) p { margin: 0 }
+
+/* ── Type roles ───────────────────────────────────────────────── */
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: -.005em }
+.label { font-family: var(--font-label); font-size: var(--t-label); font-weight: 500; letter-spacing: var(--track-label); text-transform: uppercase }
+.muted { color: var(--muted) }
+.poem { font-family: var(--font-poem); font-style: italic; font-weight: 300; font-variation-settings: "SOFT" 100 }
+.poem-strong { font-family: var(--font-poem); font-style: italic; font-weight: 500; font-variation-settings: "SOFT" 100 }
+.link { color: var(--red); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px }
+
+/* ── Buttons: always ink ──────────────────────────────────────── */
+.btn {
+  display: inline-block; padding: 13px 22px;
+  font-family: var(--font-label); font-size: var(--t-button); font-weight: 700; letter-spacing: var(--track-button); text-transform: uppercase;
+  text-decoration: none; color: var(--ink); background: transparent; border: 1px solid var(--ink); cursor: pointer;
+}
+.btn--solid { background: var(--ink); color: var(--paper) }
+.btn:hover { background: var(--ink); color: var(--paper) }
+.btn--solid:hover { background: transparent; color: var(--ink) }
+.on-night .btn, .night .btn { color: var(--chalk); border-color: var(--chalk) }
+.on-night .btn--solid, .night .btn--solid { background: var(--chalk); color: var(--night) }
+.text-link { font-family: var(--font-label); font-size: var(--t-button); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; text-underline-offset: 4px }
+.field { font-family: var(--font-body); font-size: 16px; padding: 12px 14px; border: 1px solid var(--ink); border-radius: 0; background: var(--white); color: var(--ink); width: 100%; max-width: 300px }
+
+/* ── Grounds and sections ─────────────────────────────────────── */
+.gutter { padding-inline: var(--gutter) }
+.section { padding-block: var(--section) }
+.section > .label { display: block; margin-bottom: clamp(20px, 3.6cqi, 36px); color: var(--muted) }
+.ground-white, .ground-paper, .ground-sun, .night { position: relative; z-index: 10 }
+.ground-white { background: var(--white) }
+.ground-paper { background: var(--paper) }
+.ground-sun { background: var(--sunlight) }
+.night { background: var(--night); color: var(--chalk); padding-block: clamp(44px, 6cqi, 88px) }
+.night > .label { display: block; color: var(--night-muted); margin-bottom: clamp(22px, 4cqi, 40px) }
+.night .muted, .night figcaption, .night .fig-no { color: var(--night-muted) }
+.night .woodcut { color: var(--chalk) }
+
+/* Torn edge. Give it the colour of the ground it tears out of.
+   .tear--top sits at the top of a dark section; .tear--bottom follows one; .tear--overlay sits on a photo. */
+.tear {
+  display: block; height: var(--tear-height); position: relative; z-index: 11; margin-top: calc(1px - var(--tear-height));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 7.5 L7 8.5 L12 4.0 L28 4.3 L44 3.8 L60 6.0 L65 9.1 L70 6.4 L86 8.9 L102 4.7 L109 11.8 L125 16.3 L141 11.2 L146 16.7 L151 10.8 L158 7.1 L165 10.6 L181 7.3 L188 4.4 L204 11.9 L213 4.4 L218 10.9 L234 5.9 L250 9.0 L259 9.5 L271 8.1 L278 14.1 L285 4.1 L294 10.4 L303 13.2 L312 11.5 L317 4.7 L329 5.3 L338 5.1 L350 8.9 L355 13.7 L371 14.0 L380 7.8 L389 11.3 L405 14.2 L410 14.8 L419 9.6 L424 3.8 L433 12.1 L445 7.0 L457 15.4 L466 3.3 L478 8.0 L494 4.6 L499 6.1 L508 4.8 L515 8.6 L527 4.1 L539 8.6 L548 15.4 L560 15.1 L569 12.9 L578 12.6 L590 16.4 L597 4.2 L604 6.2 L611 3.2 L627 5.6 L636 3.1 L648 10.5 L664 10.9 L671 12.7 L687 16.3 L692 9.4 L708 8.5 L720 8.5 L732 11.9 L737 5.7 L744 9.2 L749 7.8 L754 4.4 L770 5.1 L775 16.3 L791 3.4 L798 11.6 L805 11.9 L814 11.4 L826 4.7 L838 16.9 L850 9.7 L859 4.2 L864 13.5 L873 9.7 L880 10.2 L887 16.3 L903 8.1 L919 15.8 L935 7.2 L940 12.7 L949 10.3 L956 8.0 L963 10.5 L979 7.6 L986 11.6 L993 14.3 L1005 13.4 L1012 5.8 L1024 8.0 L1029 16.9 L1038 9.6 L1045 12.7 L1054 9.3 L1063 16.4 L1072 4.1 L1077 6.2 L1084 7.7 L1096 11.7 L1112 14.8 L1124 15.7 L1133 14.2 L1138 14.7 L1143 15.7 L1150 9.7 L1157 9.1 L1166 4.2 L1178 9.5 L1183 13.1 L1190 16.9 L1195 5.1 L1200 24 Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+}
+.tear--top { position: absolute; left: 0; right: 0; top: 0 }
+.tear--bottom { transform: scaleY(-1); margin-top: 0; margin-bottom: calc(1px - var(--tear-height)) }
+.tear--overlay { position: absolute; left: 0; right: 0; bottom: -1px; margin: 0 }
+.night > .tear--top { background: var(--night) }
+
+/* ── Figures: captioned like plates ───────────────────────────── */
+:where(.sor) figure { margin: 0; display: grid; gap: 10px }
+:where(.sor) figcaption { font-size: var(--t-caption); line-height: 1.45; color: var(--muted); font-style: italic }
+.fig-no { font-family: var(--font-label); font-style: normal; font-size: var(--t-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; margin-right: 8px; color: var(--muted) }
+.print { background: var(--white); padding: 12px 12px 14px; box-shadow: var(--shadow-print); transform: rotate(var(--tilt)); position: relative; z-index: 2 }
+.print img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
+.print--left { transform: rotate(calc(-1 * var(--tilt))) }
+
+/* ── Woodcut graphics (symbols from graphics.js) ──────────────── */
+.woodcut { color: var(--ink) }
+.flock { position: absolute; pointer-events: none; z-index: 2; width: min(17cqi, 210px); height: auto }
+.seed-icon { width: 34px; height: 34px; color: var(--ink); flex: none }
+.seed-row { width: min(320px, 70%); height: auto; color: var(--ink); display: block }
+.seal { width: 96px; color: var(--ink) }
+.logo-disc { width: 52px; height: 52px; border-radius: 50%; background: var(--white); display: grid; place-items: center }
+.logo-disc img { width: 85%; height: 85% }
+
+/* ── Site header ──────────────────────────────────────────────── */
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; border-bottom: 1px solid var(--rule); position: relative; z-index: 10; background: var(--paper) }
+.site-header nav { display: flex; gap: 20px; flex-wrap: wrap }
+.site-header nav a { text-decoration: none; padding-bottom: 3px }
+.site-header nav a[aria-current] { border-bottom: 1px solid var(--ink) }
+.site-header--centred { display: grid; grid-template-columns: 1fr auto 1fr }
+.site-header--centred nav:last-child { justify-content: flex-end }
+.wordmark { display: flex; align-items: center; gap: 12px; text-decoration: none }
+.wordmark img { width: 44px; height: 44px; mix-blend-mode: multiply }
+.wordmark span { font-family: var(--font-display); font-size: clamp(20px, 2.4cqi, 27px); white-space: nowrap }
+.wordmark em { font-style: italic }
+
+/* ── Heroes ───────────────────────────────────────────────────── */
+/* Full-bleed photograph with centred statement (home) */
+.hero-photo { position: relative; z-index: 10; color: #fff; background: var(--night); overflow: hidden }
+.hero-photo > img { width: 100%; aspect-ratio: 16 / 8.4; object-fit: cover }
+.hero-photo .overlay { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; justify-items: center; text-align: center; gap: 16px; padding: 24px 24px 48px; background: radial-gradient(ellipse at center, rgb(23 22 19 / .58), rgb(23 22 19 / .14) 72%) }
+.hero-photo h1 { font-family: var(--font-display); font-size: var(--t-hero); line-height: .98; max-width: 14ch }
+.hero-photo p { max-width: 40ch; font-size: clamp(16px, 1.8cqi, 20px) }
+.hero-photo .label { color: #fff }
+.hero-photo .flock { color: #fff; z-index: 3; right: 8%; top: 10% }
+
+/* Split: statement beside a laid-down print */
+.hero-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--gap-l); align-items: center; padding-block: clamp(40px, 6cqi, 88px); overflow: hidden; position: relative }
+.hero-split .text { display: grid; gap: 18px; justify-items: start; position: relative; z-index: 3 }
+.hero-split h1 { font-family: var(--font-display); font-size: var(--t-hero); line-height: var(--lh-display) }
+.hero-split p { font-size: var(--t-intro); max-width: 34ch }
+
+/* Inner page title (manifesto) */
+.page-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(24px, 5cqi, 64px); align-items: center; padding-block: clamp(40px, 6cqi, 80px); overflow: hidden; position: relative }
+.page-hero h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98; margin: 10px 0 18px }
+.page-hero .dedication { font-size: clamp(20px, 2.2cqi, 26px); line-height: 1.35; max-width: 30ch }
+.page-hero .spiral { position: absolute; right: -6%; top: -14%; width: clamp(200px, 34cqi, 440px); opacity: .9; z-index: 1; pointer-events: none }
+.page-hero > * { position: relative; z-index: 2 }
+.page-hero > .spiral { position: absolute; z-index: 1 }
+
+/* ── Statement: a lead paragraph beside a plate ───────────────── */
+.statement { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--gap-l); align-items: start }
+.statement > div { display: grid; gap: 22px }
+.statement p { font-size: var(--t-lead); line-height: 1.38; font-weight: 300; text-wrap: pretty }
+.statement figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover }
+
+/* ── Pathways: four ways in ───────────────────────────────────── */
+.pathways { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-m) }
+.pathway { display: grid; gap: 10px; align-content: start; text-decoration: none }
+.pathway .photo { overflow: hidden }
+.pathway img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .8s ease }
+.pathway:hover img { transform: scale(1.03) }
+.pathway .kind { display: flex; align-items: center; gap: 10px; font-family: var(--font-label); font-size: var(--t-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+.pathway h3 { font-family: var(--font-display); font-size: var(--t-card); line-height: 1.05 }
+.pathway p { font-size: 15.5px; color: var(--muted) }
+
+/* ── Selected work (night): a list that changes the picture ───── */
+.selected { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 5cqi, 64px); align-items: start }
+.selected ul { list-style: none; margin: 0; padding: 0; display: grid }
+.selected li { padding: 16px 0; border-top: 1px solid var(--night-rule); display: grid; gap: 4px; cursor: pointer }
+.selected li:last-child { border-bottom: 1px solid var(--night-rule) }
+.selected li .label { color: var(--night-muted) }
+.selected li b { font-family: var(--font-display); font-weight: 400; font-size: clamp(22px, 2.7cqi, 34px); line-height: 1.12; opacity: .62; transition: opacity .2s }
+.selected li .by { color: var(--night-muted); font-size: 15.5px }
+.selected li[aria-current] b, .selected li:hover b { opacity: 1 }
+.selected .picture { position: sticky; top: 12px }
+.selected .picture img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover }
+.night .seal-corner { position: absolute; right: var(--gutter); top: clamp(28px, 4cqi, 56px); width: 84px }
+
+/* ── Printed object (magazine, book) ──────────────────────────── */
+.object-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--gap-l); align-items: center }
+.object-feature img { width: 100%; max-width: 400px; justify-self: center; box-shadow: var(--shadow-object) }
+.object-feature h2 { font-family: var(--font-display); font-size: var(--t-section); line-height: 1; margin: 8px 0 14px }
+.object-feature p { margin: 0 0 20px; max-width: 40ch }
+
+/* ── Calendar ─────────────────────────────────────────────────── */
+.calendar { display: grid }
+.calendar .row { display: grid; grid-template-columns: 130px minmax(0, 1fr) auto; gap: 18px; padding: 18px 0; border-top: 1px solid var(--rule); align-items: baseline }
+.calendar .row:last-child { border-bottom: 1px solid var(--rule) }
+.calendar .date { font-family: var(--font-label); font-weight: 700; font-size: 14px; letter-spacing: .06em; font-variant-numeric: tabular-nums }
+.calendar b { font-family: var(--font-display); font-weight: 400; font-size: var(--t-item); display: block; line-height: 1.2 }
+.calendar small { font-size: 14.5px; color: var(--muted) }
+
+/* ── Interlude: one poetic line, set alone ────────────────────── */
+.interlude { display: grid; justify-items: center; gap: 18px; text-align: center; overflow: hidden }
+.interlude svg { width: min(520px, 90%); height: auto; color: var(--ink) }
+.interlude p { font-size: var(--t-interlude); line-height: 1.25; max-width: 26ch }
+
+/* ── Three ways to engage ─────────────────────────────────────── */
+.engage { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3cqi, 40px) }
+.engage > div { display: grid; gap: 12px; align-content: start; justify-items: start; padding-top: 18px; border-top: 2px solid var(--ink) }
+.engage h3 { font-family: var(--font-display); font-size: 30px; line-height: 1.1 }
+.engage p { color: var(--muted); max-width: 30ch }
+
+/* ── Long-form reading ────────────────────────────────────────── */
+.reading { max-width: var(--measure); margin-inline: auto; padding-block: clamp(40px, 6cqi, 84px); display: grid; gap: 26px }
+.reading.ground-white { box-shadow: 0 0 0 100vmax var(--white); clip-path: inset(0 -100vmax) }
+.reading p { font-size: var(--t-reading); line-height: var(--lh-reading); text-wrap: pretty }
+.reading h2 { font-family: var(--font-quote); font-size: 34px; line-height: 1.1; margin-top: 16px }
+.drop::first-letter { font-family: var(--font-display); float: left; font-size: 4.6em; line-height: .8; padding: 6px 10px 0 0 }
+.pull { padding: 28px 0; border-block: 1px solid var(--ink); font-family: var(--font-quote); font-size: var(--t-quote); line-height: 1.2; display: grid; gap: 8px }
+.reading .verse { font-size: clamp(24px, 3cqi, 32px); line-height: 1.3; text-align: center }
+.litany { list-style: none; margin: 0; padding: 0; counter-reset: l; display: grid }
+.litany li { counter-increment: l; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-top: 1px solid var(--rule); font-size: 18px; line-height: 1.5 }
+.litany li::before { content: counter(l, upper-roman) "."; font-family: var(--font-label); font-size: var(--t-label); letter-spacing: .1em; font-weight: 700; color: var(--muted); padding-top: 5px }
+.litany li:last-child { font-family: var(--font-display); font-size: 28px; line-height: 1.25; border-bottom: 1px solid var(--rule) }
+
+/* ── Footer (night) ───────────────────────────────────────────── */
+.site-footer { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 24px; padding-block: 44px 32px; background: var(--night); color: var(--chalk); position: relative; z-index: 10 }
+.site-footer > .tear { background: var(--night); position: absolute; left: 0; right: 0; top: 0 }
+.site-footer b { font-family: var(--font-display); font-weight: 400; font-size: 24px; display: block; margin-bottom: 8px }
+.site-footer p { color: var(--night-muted); font-size: var(--t-small) }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: var(--t-small) }
+.site-footer .label { color: var(--night-muted); display: block; margin-bottom: 10px }
+.site-footer .logo-disc { margin-bottom: 12px }
+
+/* ── From the four-page mockup: events, steps, band, contents ── */
+.events { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-m) }
+.event { display: grid; grid-template-rows: auto 1fr; border-top: 2px solid var(--ink); background: var(--white) }
+.event img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover }
+.event .body { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding: 16px 4px 6px }
+.event .day { font-family: var(--font-display); font-size: 44px; line-height: .9; text-align: center }
+.event .day small { display: block; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; margin-top: 6px }
+.event h3 { font-family: var(--font-display); font-size: 24px; line-height: 1.1; margin-bottom: 4px }
+.event p { font-size: var(--t-small); color: var(--muted) }
+.band { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; background: var(--sunlight); padding-block: clamp(36px, 5cqi, 64px); position: relative; z-index: 10; overflow: hidden }
+.band h2 { font-family: var(--font-display); font-size: var(--t-band); line-height: 1 }
+.band p { margin-top: 8px; max-width: 46ch }
+.contents { list-style: none; margin: 0; padding: 0; display: grid }
+.contents li { display: grid; grid-template-columns: 90px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--rule) }
+.contents li:last-child { border-bottom: 1px solid var(--rule) }
+.contents b { font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.15 }
+.contents .by { display: block; font-size: 14.5px; color: var(--muted) }
+.contents .page { font-family: var(--font-label); font-size: var(--t-button); font-variant-numeric: tabular-nums; color: var(--muted) }
+
+/* ── Narrow ───────────────────────────────────────────────────── */
+@container (max-width: 800px) {
+  .site-header nav { display: none }
+  .site-header--centred { grid-template-columns: 1fr; justify-items: center }
+  .hero-photo > img { aspect-ratio: 4 / 5 }
+  .hero-split, .page-hero, .statement, .selected, .object-feature, .engage, .band { grid-template-columns: 1fr }
+  .pathways { grid-template-columns: 1fr 1fr }
+  .events { grid-template-columns: 1fr }
+  .selected .picture, .night .seal-corner { display: none }
+  .calendar .row { grid-template-columns: 1fr; gap: 4px }
+  .site-footer { grid-template-columns: 1fr 1fr }
+  .contents li { grid-template-columns: 1fr auto }
+  .contents li .label { grid-column: 1 / -1 }
+}
+@container (max-width: 480px) {
+  .pathways, .site-footer { grid-template-columns: 1fr }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pathway img, .selected li b { transition: none }
+}
