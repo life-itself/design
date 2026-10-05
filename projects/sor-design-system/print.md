@@ -1,6 +1,6 @@
 # Print
 
-Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [applications.md](applications.md) · beads `design-34t.17`.
+Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
 
 **Stub, with a brief ready for its own session.**
 
@@ -26,6 +26,6 @@ Build print with HTML and CSS paged media, so the same tokens and faces are reus
 3. Then an A3 poster: `examples/print/poster.html`.
 4. Note any fonts issue: Polyamine and Restora must be installed or licensed for embedding in PDFs (beads `design-34t.2`).
 
-Finish: update this page and [applications.md](applications.md), beads, commit, push, republish.
+Finish: update this page and [examples.md](examples.md#status), beads, commit, push, republish.
 
 **Prompt:** *Read projects/sor-design-system/print.md, section "Brief for a new session", and follow it.*

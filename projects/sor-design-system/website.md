@@ -2,7 +2,7 @@
 
 Pages for the Seeds of Renaissance website, built in HTML and CSS from the system. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first for the rules that apply everywhere.
 
-Examples: [examples/web/](examples.md#website). Status: see [applications.md](applications.md).
+Examples: [examples/web/](examples.md#website). Status: see [examples.md](examples.md#status).
 
 ## How to build a page
 

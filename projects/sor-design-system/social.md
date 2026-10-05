@@ -1,6 +1,6 @@
 # Social media
 
-Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [applications.md](applications.md) · beads `design-34t.15`.
+Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.15`.
 
 **Stub.** Nothing built yet beyond the 16:9 gathering thumbnail in [examples/youtube/](examples/youtube/index.html), which is really an announcement and moves here.
 
@@ -34,8 +34,23 @@ One design, set on a few fixed artboards. The rules are the same on every platfo
 - Respect platform safe areas: the top and bottom ~250px of a 9:16 story are covered by the interface.
 - Sub-brand question: Over the Mountains, Mythos and others may get their own lockup (beads `design-34t.11`).
 
+## Canva
+
+For making on-brand graphics without code: the Canva brand kit and templates, recreating the coded versions above. Beads `design-34t.19`.
+
+**Stub.** Waits on the font licences (beads `design-34t.2`).
+
+### What we need
+
+1. **Brand kit**: the four faces (upload Polyamine and Restora once licensed; Bricolage Grotesque and Apfel Grotezk are free), the colours with their names (white, paper, sunlight, night, ink, muted, chalk, logo red), the logo and its disc version, and the woodcuts as SVGs (from `system/woodcuts/`).
+2. **Templates** matching [social.md](above): announcement in 16:9, 4:5, 1:1 and 9:16; quote card; text post; carousel.
+3. **A one-page "how to stay on brand in Canva"** note: the rules from [BUILD.md](BUILD.md#rules-that-apply-everywhere) in plain words.
+4. Store the font files and source assets in the shared Drive.
+
+Build the coded versions first (above), then recreate them as Canva templates.
+
 ## Brief for a new session
 
-Build fixed-size artboards the way the thumbnails were built (see [youtube.md](youtube.md): artboard, `--thumb-*` tokens, `.thumb-frame` scaling): add `--social-*` tokens and a "Social" block to `system/components.src.css`, and make `examples/social/index.html` showing every item above at full size and as it appears in a feed. Use real copy from [voice.md](voice.md). Finish: update this page and [applications.md](applications.md), beads, commit, push, republish.
+Build fixed-size artboards the way the thumbnails were built (see [youtube.md](youtube.md): artboard, `--thumb-*` tokens, `.thumb-frame` scaling): add `--social-*` tokens and a "Social" block to `system/components.src.css`, and make `examples/social/index.html` showing every item above at full size and as it appears in a feed. Use real copy from [voice.md](voice.md). Finish: update this page and [examples.md](examples.md#status), beads, commit, push, republish.
 
 **Prompt:** *Read projects/sor-design-system/social.md, section "Brief for a new session", and follow it.*

@@ -1,6 +1,6 @@
 # Podcast
 
-Show art and episode artwork for Seeds of Renaissance podcasts, starting with *Over the Mountains*. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [applications.md](applications.md) · beads `design-34t.16`.
+Show art and episode artwork for Seeds of Renaissance podcasts, starting with *Over the Mountains*. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.16`.
 
 **Stub.** The 16:9 guest cover for YouTube exists ([examples/youtube/](examples/youtube/index.html), `.thumb--guest`); square artwork doesn't yet.
 
@@ -23,6 +23,6 @@ From the guest cover work: a dark mountain backdrop (the name), the guest's port
 
 ## Brief for a new session
 
-Make `examples/podcast/index.html` with show art (two or three directions) and an episode art template, at full size and at app-list size (55px and 160px). Reuse tokens and the `.thumb` approach. Finish: update this page and [applications.md](applications.md), beads, commit, push, republish.
+Make `examples/podcast/index.html` with show art (two or three directions) and an episode art template, at full size and at app-list size (55px and 160px). Reuse tokens and the `.thumb` approach. Finish: update this page and [examples.md](examples.md#status), beads, commit, push, republish.
 
 **Prompt:** *Read projects/sor-design-system/podcast.md and follow its brief.*

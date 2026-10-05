@@ -63,47 +63,27 @@
         ]
       },
       {
-        "name": "Applications",
+        "name": "Examples",
         "links": [
           {
-            "name": "Overview and status",
-            "href": "/applications"
+            "name": "All examples and status",
+            "href": "/examples"
           },
           {
             "name": "Website",
             "href": "/website"
           },
           {
-            "name": "Social media",
-            "href": "/social"
-          },
-          {
-            "name": "YouTube",
+            "name": "YouTube 🚧",
             "href": "/youtube"
           },
           {
-            "name": "Podcast",
+            "name": "Podcast 🚧",
             "href": "/podcast"
           },
           {
-            "name": "Slides",
+            "name": "Slides 🚧",
             "href": "/slides"
-          },
-          {
-            "name": "Print",
-            "href": "/print"
-          },
-          {
-            "name": "Email",
-            "href": "/email"
-          },
-          {
-            "name": "Canva",
-            "href": "/canva"
-          },
-          {
-            "name": "All examples",
-            "href": "/examples"
           }
         ]
       }

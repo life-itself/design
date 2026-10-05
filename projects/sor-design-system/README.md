@@ -64,16 +64,12 @@ Headers, heroes, statements, pathways, calendars, bands, footers and more: each 
 
 ## Examples
 
-Whole pages built only from the system. To make something new, copy the closest one. [All examples, by kind →](examples.md)
+Whole pages and assets built only from the system: the website is done, YouTube, podcast and slides are under way, social, print and email come next. To make something new, copy the closest one. [All examples and their status →](examples.md)
 
 <iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1990" loading="lazy" title="Examples"></iframe>
 
-## Applications
-
-The system applied to each thing we make: website, social media, YouTube, podcast, slides, print, email, Canva. Each has its own guide; the table shows what's done and what's next. [All applications and their status →](applications.md)
-
 ## Open questions
 
-**Sub-brands** is the big one: are *Over the Mountains*, *Mythos*, the papers, courses and *Gardens of Change* sub-brands with their own lockups and accents? Also: font licences, the logo's small version, photography (all placeholders), woodcut sourcing. [Details →](applications.md#open-across-all-of-them) · Tracking: beads `design-34t`.
+**Sub-brands** is the big one: are *Over the Mountains*, *Mythos*, the papers, courses and *Gardens of Change* sub-brands with their own lockups and accents? Also: font licences, the logo's small version, photography (all placeholders), woodcut sourcing. [Details →](examples.md#open-across-all-of-them) · Tracking: beads `design-34t`.
 
 Maintaining this site (publishing, build scripts, where things came from): [MAINTAINING.md](MAINTAINING.md).

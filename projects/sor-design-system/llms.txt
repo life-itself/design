@@ -2,12 +2,12 @@
 
 > The brand and design system for Seeds of Renaissance: feel, voice, colour, type, layout, woodcut graphics, photography, logo, components and whole-page examples, with the CSS to build from. Version 0.1. Every .md link below is raw markdown.
 
-To build something: read BUILD.md first, open the guide for what you are making (website, social, YouTube, podcast, slides, print, email, Canva), copy the closest example, use only the tokens and classes in system/, and check against the lists in BUILD.md and the guide. Topic pages hold the detail; you rarely need them for a first draft.
+To build something: read BUILD.md first, open the guide for what you are making (website, social and Canva, YouTube, podcast, slides, print, email), copy the closest example, use only the tokens and classes in system/, and check against the lists in BUILD.md and the guide. Topic pages hold the detail; you rarely need them for a first draft.
 
 ## Start
 
 - [BUILD.md](https://sor-design-system-rufuspollock.flowershow.me/BUILD.md): start here. Rules in one paragraph, which guide to use for what you are making, rules that apply everywhere, checklist.
-- [applications.md](https://sor-design-system-rufuspollock.flowershow.me/applications.md): every application, its guide, examples and status
+- [examples.md](https://sor-design-system-rufuspollock.flowershow.me/examples.md): every kind of thing we make, its guide, examples and status
 
 ## Topics
 
@@ -21,17 +21,15 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [logo.md](https://sor-design-system-rufuspollock.flowershow.me/logo.md): versions and placement (provisional)
 - [components.md](https://sor-design-system-rufuspollock.flowershow.me/components.md): every component, when to use it, HTML to copy
 
-## Applications (guides)
+## Guides by kind
 
 - [website.md](https://sor-design-system-rufuspollock.flowershow.me/website.md): web pages: page shell, section menu, checklist
-- [social.md](https://sor-design-system-rufuspollock.flowershow.me/social.md): social media and announcements in every shape (stub with brief)
+- [social.md](https://sor-design-system-rufuspollock.flowershow.me/social.md): social media and announcements in every shape, and the Canva kit (stub with brief)
 - [youtube.md](https://sor-design-system-rufuspollock.flowershow.me/youtube.md): YouTube thumbnails and channel art
 - [podcast.md](https://sor-design-system-rufuspollock.flowershow.me/podcast.md): podcast show art and episode covers (stub)
 - [slides.md](https://sor-design-system-rufuspollock.flowershow.me/slides.md): slide decks (brief)
 - [print.md](https://sor-design-system-rufuspollock.flowershow.me/print.md): papers as PDF and posters (stub with brief)
 - [email.md](https://sor-design-system-rufuspollock.flowershow.me/email.md): the newsletter (stub)
-- [canva.md](https://sor-design-system-rufuspollock.flowershow.me/canva.md): Canva brand kit and templates (stub)
-- [examples.md](https://sor-design-system-rufuspollock.flowershow.me/examples.md): every example page, by kind
 
 ## Code
 

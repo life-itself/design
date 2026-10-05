@@ -1,6 +1,6 @@
 # Email
 
-*The Greenhouse*, the Seeds of Renaissance newsletter, and other email. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [applications.md](applications.md) · beads `design-34t.18`.
+*The Greenhouse*, the Seeds of Renaissance newsletter, and other email. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.18`.
 
 **Stub.** Build when the newsletter is next redesigned.
 

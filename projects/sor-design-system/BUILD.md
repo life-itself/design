@@ -19,9 +19,9 @@ Who we're speaking to: see [feel.md](feel.md#who-we-design-for). How we sound: [
 | A slide deck | [slides.md](slides.md) | in progress |
 | A printed or PDF paper, a poster | [print.md](print.md) | stub |
 | The newsletter (The Greenhouse) | [email.md](email.md) | stub |
-| Something in Canva | [canva.md](canva.md) | stub |
+| Something in Canva | [social.md](social.md#canva) | stub |
 
-What exists for each, and its status: [applications.md](applications.md).
+What exists for each, and its status: [examples.md](examples.md#status).
 
 ## Rules that apply everywhere
 
