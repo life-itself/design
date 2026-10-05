@@ -11,7 +11,7 @@ if site.exists():
 site.mkdir()
 if saved:
     keep.write_text(saved)
-for f in list(root.glob("*.md")) + list(root.glob("*.html")):
+for f in list(root.glob("*.md")) + list(root.glob("*.html")) + [root / "config.json"]:
     shutil.copy2(f, site / f.name)
 for d in ["examples", "archive"]:
     shutil.copytree(root / d, site / d)

@@ -1,0 +1,45 @@
+{
+  "siteName": "SoR Design System",
+  "description": "The Seeds of Renaissance brand and design system: feel, voice, colour, type, graphics, components and examples.",
+  "logo": "system/img/logo.png",
+  "nav": {
+    "title": "SoR Design System",
+    "links": [
+      { "name": "Start here", "href": "/BUILD" },
+      { "name": "Guide", "href": "/guide.html" },
+      {
+        "name": "System",
+        "links": [
+          { "name": "Feel", "href": "/feel" },
+          { "name": "Voice", "href": "/voice" },
+          { "name": "Colour", "href": "/colour" },
+          { "name": "Type", "href": "/type" },
+          { "name": "Layout", "href": "/layout" },
+          { "name": "Graphics", "href": "/graphics" },
+          { "name": "Woodcuts", "href": "/woodcuts.html" },
+          { "name": "Photography", "href": "/photography" },
+          { "name": "Logo", "href": "/logo" },
+          { "name": "Components", "href": "/components" }
+        ]
+      },
+      {
+        "name": "Examples",
+        "links": [
+          { "name": "Home", "href": "/examples/web/home.html" },
+          { "name": "Manifesto", "href": "/examples/web/manifesto.html" },
+          { "name": "Gatherings", "href": "/examples/web/gatherings.html" },
+          { "name": "Join", "href": "/examples/web/join.html" },
+          { "name": "Magazine", "href": "/examples/web/magazine.html" },
+          { "name": "White paper", "href": "/examples/web/white-paper.html" },
+          { "name": "YouTube thumbnails", "href": "/examples/youtube/index.html" },
+          { "name": "YouTube channel", "href": "/examples/youtube/channel.html" }
+        ]
+      },
+      { "name": "YouTube", "href": "/youtube" }
+    ]
+  },
+  "social": [
+    { "label": "youtube", "href": "https://www.youtube.com/@SeedsOfRenaissance" },
+    { "label": "instagram", "href": "https://instagram.com/seedsofrenaissance" }
+  ]
+}
