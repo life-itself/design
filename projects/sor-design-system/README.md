@@ -2,7 +2,7 @@
 
 **The one home for SoR brand and design-system work.** Started 2026-09-30 with the typefaces.
 
-[sor-brand/](sor-brand/) is the former `life-itself/sor-brand` repo (Sylvie and Shiwei's brand work: mockups, moodboards, logo, woodcuts, design-system plan), merged 2026-10-05 with history. Start from its [STATUS.md](sor-brand/STATUS.md) for the starred picks.
+[sor-brand/](sor-brand/) is the former `life-itself/sor-brand` repo (brand work: mockups, moodboards, logo, woodcuts, design-system plan), merged 2026-10-05 with history. Start from its [STATUS.md](sor-brand/STATUS.md) for the starred picks.
 
 Shared by the two SoR projects, and owned by neither:
 
