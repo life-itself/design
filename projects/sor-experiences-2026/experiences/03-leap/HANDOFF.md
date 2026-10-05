@@ -4,15 +4,15 @@ Copy everything below the line into a new session opened in the `life-itself/des
 
 ---
 
-You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
 ## Your task
 
-Build **The Leap** as a standalone page at `projects/2026-sor-experiences/experiences/03-leap/build/index.html` (assets in `build/assets/`). It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
+Build **The Leap** as a standalone page at `projects/sor-experiences-2026/experiences/03-leap/build/index.html` (assets in `build/assets/`). It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
 
 ## The source image
 
-`projects/2026-sor-experiences/experiences/03-leap/moodboard/leap-collage-walkers-torn-field.png` (512×512). A black-and-white photo collage: a line of people in dark coats walk away from us along a road into heavy grey clouds. Ahead of them, a torn-paper hole opens onto colour: a yellow flower field under a blue sky. **Animate this image itself**, using its own people; don't replace them with illustrations. Using the image is fine (fair use, nonprofit).
+`projects/sor-experiences-2026/experiences/03-leap/moodboard/leap-collage-walkers-torn-field.png` (512×512). A black-and-white photo collage: a line of people in dark coats walk away from us along a road into heavy grey clouds. Ahead of them, a torn-paper hole opens onto colour: a yellow flower field under a blue sky. **Animate this image itself**, using its own people; don't replace them with illustrations. Using the image is fine (fair use, nonprofit).
 
 ## Feeling
 
@@ -48,15 +48,15 @@ The join links to a page about the Thursday call (what, when, sign up), not stra
 
 What you need, and what exists:
 
-1. **Clean plate**: road and clouds with no people and no tear. A rough one exists (`projects/2026-sor-experiences/experiences/00-home/sketch/assets/leap-plate.jpg`) but the area where the people were is a smudgy fill. Better: find the original photo (reverse image search on the collage) or retouch properly (Photoshop generative fill or an image model). If you can't, use the rough plate and say so.
-2. **Walkers**: each person as its own transparent layer. A rough single layer of all walkers exists: `projects/2026-sor-experiences/experiences/00-home/sketch/assets/leap-people.png`. For walking motion: cutout puppetry (split legs/arms, bob), an image-to-video model on the stills, or After Effects/Rive.
-3. **Tear layer**: the field and sky with the torn edge. Rough one: `projects/2026-sor-experiences/experiences/00-home/sketch/assets/leap-tear.png`.
+1. **Clean plate**: road and clouds with no people and no tear. A rough one exists (`projects/sor-experiences-2026/experiences/00-home/sketch/assets/leap-plate.jpg`) but the area where the people were is a smudgy fill. Better: find the original photo (reverse image search on the collage) or retouch properly (Photoshop generative fill or an image model). If you can't, use the rough plate and say so.
+2. **Walkers**: each person as its own transparent layer. A rough single layer of all walkers exists: `projects/sor-experiences-2026/experiences/00-home/sketch/assets/leap-people.png`. For walking motion: cutout puppetry (split legs/arms, bob), an image-to-video model on the stills, or After Effects/Rive.
+3. **Tear layer**: the field and sky with the torn edge. Rough one: `projects/sor-experiences-2026/experiences/00-home/sketch/assets/leap-tear.png`.
 
-The script that cut the rough layers: `projects/2026-sor-experiences/experiences/00-home/sketch/prep_assets.py`.
+The script that cut the rough layers: `projects/sor-experiences-2026/experiences/00-home/sketch/prep_assets.py`.
 
 ## Reference build
 
-A rough working version exists in the whole-page sketch: `projects/2026-sor-experiences/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f3 (e.g. `#f3-72` jumps to the tear). Screenshots may be in `03-leap/screens/`. Improve on it; don't copy its shortcuts (walkers move as one block, zigzag tear edge).
+A rough working version exists in the whole-page sketch: `projects/sor-experiences-2026/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f3 (e.g. `#f3-72` jumps to the tear). Screenshots may be in `03-leap/screens/`. Improve on it; don't copy its shortcuts (walkers move as one block, zigzag tear edge).
 
 ## Rules
 

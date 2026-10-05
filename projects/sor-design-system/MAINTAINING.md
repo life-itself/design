@@ -53,4 +53,4 @@ Preview locally: run the `static` launch config (python http.server on 8790) fro
 - [type/](type/): the two type selection rounds and research notes.
 - Brand substance (who we are, offers, voice) stays in [brand.md](brand.md).
 
-Shared by the SoR [experiences](../2026-sor-experiences/) and the website. The experiences carry their own working palette in [common.md](../2026-sor-experiences/experiences/00-home/common.md#colour), not yet reconciled with this system.
+Shared by the SoR [experiences](../sor-experiences-2026/) and the website. The experiences carry their own working palette in [common.md](../sor-experiences-2026/experiences/00-home/common.md#colour), not yet reconciled with this system.

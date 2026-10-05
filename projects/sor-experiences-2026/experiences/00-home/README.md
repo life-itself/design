@@ -25,13 +25,13 @@ Progress lives in beads (`bd list --parent design-323`), not in these files.
 
 ## Viewing and sharing
 
-Locally, serve the repo root (e.g. `python3 -m http.server`) and open `projects/2026-sor-experiences/experiences/00-home/build/index.html`. Opening the file directly (`file://`) won't load the images.
+Locally, serve the repo root (e.g. `python3 -m http.server`) and open `projects/sor-experiences-2026/experiences/00-home/build/index.html`. Opening the file directly (`file://`) won't load the images.
 
 To share, publish to **https://sor-experiences-rufuspollock.flowershow.me** with the Flowershow CLI, from the repo root:
 
 ```bash
-python3 projects/2026-sor-experiences/experiences/00-home/build/build.py --site projects/2026-sor-experiences/site
-fl --name sor-experiences --yes projects/2026-sor-experiences/site
+python3 projects/sor-experiences-2026/experiences/00-home/build/build.py --site projects/sor-experiences-2026/site
+fl --name sor-experiences --yes projects/sor-experiences-2026/site
 ```
 
 The first command assembles a clean static site in `site/` (gitignored): the whole page at the root, and each experience on its own at `/01-arrival/` … `/05-flight/`. Only the pages and their assets go in, not briefs or source files. The second uploads only what changed. Each piece's folder sits directly under the site root because `fl` skips folders named `build`.

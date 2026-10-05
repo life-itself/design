@@ -4,7 +4,7 @@ The typefaces, and where each one is used. Settled over two rounds in September 
 
 <iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
 
-Part of the shared [SoR design system](README.md), used by the [experiences](../2026-sor-experiences/) and the [website](website.md). Experience-only notes live in [common.md](../2026-sor-experiences/experiences/00-home/common.md#type).
+Part of the shared [SoR design system](README.md), used by the [experiences](../sor-experiences-2026/) and the [website](website.md). Experience-only notes live in [common.md](../sor-experiences-2026/experiences/00-home/common.md#type).
 
 Tracking: beads `design-2pk` (closed).
 
@@ -94,5 +94,5 @@ Two ideas did the work, and both came out of reactions to real samples rather th
 
 ## Open questions
 
-- Is "light, widely spaced capitals" (in [common.md](../2026-sor-experiences/experiences/00-home/common.md#type)) a real requirement, or an artefact of Polyamine being the face we started from?
+- Is "light, widely spaced capitals" (in [common.md](../sor-experiences-2026/experiences/00-home/common.md#type)) a real requirement, or an artefact of Polyamine being the face we started from?
 - The Book's illuminated gold letters are a separate problem, still on Cinzel Decorative as a sketch.

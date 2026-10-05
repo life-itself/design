@@ -4,11 +4,11 @@ Copy everything below the line into a new session opened in the `life-itself/des
 
 ---
 
-You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
 ## Your task
 
-Build **Dawn** as a polished, near-final standalone page at `projects/2026-sor-experiences/experiences/02-dawn/build/index.html`. A working prototype already exists at `projects/2026-sor-experiences/experiences/02-dawn/prototype.html`: start from it (its timing is agreed), remove its tuning panel, and bring the look up to the mockup.
+Build **Dawn** as a polished, near-final standalone page at `projects/sor-experiences-2026/experiences/02-dawn/build/index.html`. A working prototype already exists at `projects/sor-experiences-2026/experiences/02-dawn/prototype.html`: start from it (its timing is agreed), remove its tuning panel, and bring the look up to the mockup.
 
 ## What it is
 
@@ -40,7 +40,7 @@ Invitation (same size and colour as the paragraph, not italic; it brightens toge
 
 ## Look
 
-- Match the static mockup: `projects/2026-sor-experiences/experiences/02-dawn/moodboard/frame-2-mockup-static.png`.
+- Match the static mockup: `projects/sor-experiences-2026/experiences/02-dawn/moodboard/frame-2-mockup-static.png`.
 - Font: Polyamine for both paragraph and statement (stand-ins: Libre Caslon Text for the paragraph, Italiana for the statement).
 - Paragraph about 52 characters wide, generous line height. Big vertical space between paragraph, statement and invitation.
 - Starts black, ends black. At least one full viewport high.

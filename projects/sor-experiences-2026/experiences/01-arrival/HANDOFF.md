@@ -4,11 +4,11 @@ Copy everything below the line into a new session opened in the `life-itself/des
 
 ---
 
-You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
 ## Your task
 
-Bring the **Arrival** piece into the repo as a standalone web page. The design already exists and is close to final: it was made in Claude Design / Open Design. Your job is to get its HTML export into `projects/2026-sor-experiences/experiences/01-arrival/build/index.html` (assets in `build/assets/`), tidy it, and make it play correctly on its own. Don't redesign it.
+Bring the **Arrival** piece into the repo as a standalone web page. The design already exists and is close to final: it was made in Claude Design / Open Design. Your job is to get its HTML export into `projects/sor-experiences-2026/experiences/01-arrival/build/index.html` (assets in `build/assets/`), tidy it, and make it play correctly on its own. Don't redesign it.
 
 If you don't have the export, ask the user for it (HTML export or a link) before doing anything else.
 

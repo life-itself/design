@@ -4,7 +4,7 @@ Copy everything below the line into a new session opened in the `life-itself/des
 
 ---
 
-You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
 ## Your task
 
@@ -14,7 +14,7 @@ A huge, heavy book made of lead falls out of the darkness, opens, and golden let
 
 ## Reference
 
-`projects/2026-sor-experiences/experiences/04-book/moodboard/kiefer-lead-book-open.webp`: one of Anselm Kiefer's lead books. Open, with heavy, rippled lead pages, an oxidised patina with streaks of rust red, verdigris blue and pale yellow, lit on black. This is the look to aim for.
+`projects/sor-experiences-2026/experiences/04-book/moodboard/kiefer-lead-book-open.webp`: one of Anselm Kiefer's lead books. Open, with heavy, rippled lead pages, an oxidised patina with streaks of rust red, verdigris blue and pale yellow, lit on black. This is the look to aim for.
 
 Two routes, your choice (say which and why):
 - **Animate the photo** (quickest; fine to use, fair use): it can only fall already open.
@@ -49,7 +49,7 @@ No page turning. Don't try to print the words onto the pages themselves (it look
 
 ## Reference build
 
-A rough working version exists in the whole-page sketch: `projects/2026-sor-experiences/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f4 (e.g. `#f4-35`, `#f4-95` to jump). Screenshots may be in `04-book/screens/`. It animates the photo (lands open); improve on it.
+A rough working version exists in the whole-page sketch: `projects/sor-experiences-2026/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f4 (e.g. `#f4-35`, `#f4-95` to jump). Screenshots may be in `04-book/screens/`. It animates the photo (lands open); improve on it.
 
 ## Rules
 

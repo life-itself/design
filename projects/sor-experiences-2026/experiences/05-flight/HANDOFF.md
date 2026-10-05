@@ -4,15 +4,15 @@ Copy everything below the line into a new session opened in the `life-itself/des
 
 ---
 
-You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/2026-sor-experiences/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
+You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
 ## Your task
 
-Build **Flight** as a standalone, scroll-driven page at `projects/2026-sor-experiences/experiences/05-flight/build/index.html` (assets in `build/assets/`). The swallow leaves the SoR logo, flocks of swallows pour through the logo's ring of fingerprints as it opens like a portal, six trees grow from the ground, and the birds come to rest on them. It is the closing scene of the site.
+Build **Flight** as a standalone, scroll-driven page at `projects/sor-experiences-2026/experiences/05-flight/build/index.html` (assets in `build/assets/`). The swallow leaves the SoR logo, flocks of swallows pour through the logo's ring of fingerprints as it opens like a portal, six trees grow from the ground, and the birds come to rest on them. It is the closing scene of the site.
 
 ## The logo
 
-`ref/sor-logo-bird-prints.png`: a black swallow in flight at the centre of a radiating burst of red fingerprints (the fingerprints are the "seeds"). Split layers already cut: `projects/2026-sor-experiences/experiences/00-home/sketch/assets/swallow.png` (the swallow, black on transparent, facing up-right) and `.../00-home/sketch/assets/logo-ring.png` (the red fingerprints on transparent).
+`ref/sor-logo-bird-prints.png`: a black swallow in flight at the centre of a radiating burst of red fingerprints (the fingerprints are the "seeds"). Split layers already cut: `projects/sor-experiences-2026/experiences/00-home/sketch/assets/swallow.png` (the swallow, black on transparent, facing up-right) and `.../00-home/sketch/assets/logo-ring.png` (the red fingerprints on transparent).
 
 ## Feeling
 
@@ -43,7 +43,7 @@ The section is tall (about 6 viewports) with a sticky full-screen white stage; s
 
 ## Reference build
 
-A rough working version exists in the whole-page sketch: `projects/2026-sor-experiences/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f5 (e.g. `#f5-40`, `#f5-100` to jump). Screenshots may be in `05-flight/screens/`. It uses canvas for birds and trees; improve on it.
+A rough working version exists in the whole-page sketch: `projects/sor-experiences-2026/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f5 (e.g. `#f5-40`, `#f5-100` to jump). Screenshots may be in `05-flight/screens/`. It uses canvas for birds and trees; improve on it.
 
 ## Rules
 
