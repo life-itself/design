@@ -4,7 +4,7 @@
 
 ## The brief in one paragraph
 
-The feel is **grounded hope**: ink and paper, a little off-centre, with the hand visible (paper grain, torn edges, woodcut seeds and swallows). Pages are mostly white, paper and ink, and colour comes from photographs. Buttons are black. The logo red is only for an occasional link in running text. Pale yellow is a background, never text or highlight. One night section per page, plus the footer, meeting the light at a torn edge. Headings are Polyamine, reading is Bricolage Grotesque, labels are small uppercase Apfel Grotezk, and the poetic voice is a soft italic serif.
+The feel is **grounded hope**: ink and paper, a little off-centre, with the hand visible (paper grain, torn edges, woodcut seeds and swallows). Pages are mostly white, paper and ink, and colour comes from photographs. Buttons are black. The logo red is only for an occasional link in running text. Pale yellow is a background, never text or highlight. One night section per page, plus the footer, meeting the light at a torn edge. Headlines and titles are Polyamine (under ~10 words; longer display text moves to Restora), reading is Bricolage Grotesque, labels are small uppercase Apfel Grotezk, and the poetic voice is Restora italic. Four faces, no more.
 
 ## How to build a page
 
@@ -18,13 +18,14 @@ The feel is **grounded hope**: ink and paper, a little off-centre, with the hand
    | A sign-up or "how to join" page | [examples/web/join.html](examples/web/join.html) |
    | A publication page (magazine, podcast) | [examples/web/magazine.html](examples/web/magazine.html) |
    | A research paper | [examples/web/white-paper.html](examples/web/white-paper.html) |
-   | A YouTube thumbnail | [examples/youtube/index.html](examples/youtube/index.html) |
+   | A YouTube thumbnail or podcast cover | [examples/youtube/index.html](examples/youtube/index.html) |
+| YouTube channel art (banner, avatar, lower third) | [examples/youtube/channel.html](examples/youtube/channel.html) |
 
 2. **Keep the shell**: the `<head>` links, `<body class="sor">`, `graphics.js` first in the body, `sor.js` last, the site header and footer.
 
 3. **Compose sections from the menu below.** Each section is a full-width ground with the page gutter. Use only classes from `system/components.css`. If you need something the system lacks, add it to `system/components.src.css` (token-based, no page-specific colours), run `python3 system/build-css.py`, and say so.
 
-4. **Write real copy.** Use [../2026-sor-website/brand.md](../2026-sor-website/brand.md) for who we are, what we offer and how we sound; real page copy is in [../2026-sor-website/content/](../2026-sor-website/content/).
+4. **Write real copy.** Use [voice.md](voice.md) for how we sound (key lines, button text, titles) and [../2026-sor-website/brand.md](../2026-sor-website/brand.md) for who we are and what we offer; real page copy is in [../2026-sor-website/content/](../2026-sor-website/content/).
 
 5. **Check against the list** at the bottom before you call it done.
 
@@ -91,7 +92,7 @@ The full list, with HTML to copy, is in [components.md](components.md). See ever
 - [ ] Every button is `.btn` or `.btn--solid`. No coloured buttons.
 - [ ] Red appears only as `.link` inside running text, at most once a paragraph.
 - [ ] No yellow text or highlight. No bright yellow. No gradients except the hero scrim.
-- [ ] Polyamine lines are short (about ten words at most). Pull quotes use `.pull` (Restora).
+- [ ] Headlines and titles are Polyamine while under ~10 words; longer display text (pull quotes, standout passages) is Restora. Four faces only.
 - [ ] Every image is a `<figure>` with `<span class="fig-no">Fig. N</span>` and an italic caption, numbered in order down the page (heroes and pathway cards excepted).
 - [ ] Section labels name the section ("Coming up"), not numbers.
 - [ ] No page-specific colours or font sizes in inline styles; tokens only.
@@ -101,6 +102,7 @@ The full list, with HTML to copy, is in [components.md](components.md). See ever
 ## Topic pages
 
 - [feel.md](feel.md): grounded hope, what we are not, the three registers
+- [voice.md](voice.md): key lines, tone, rewrites, calls to action
 - [colour.md](colour.md): roles, proportion, do and don't
 - [type.md](type.md): the faces, scale, and how to apply them
 - [layout.md](layout.md): grounds, rhythm, torn edges, grid and spacing

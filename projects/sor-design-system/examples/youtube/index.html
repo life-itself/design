@@ -32,6 +32,13 @@ html, body { margin: 0; background: #fbfaf6 }
 .yt-card .av { width: 36px; height: 36px; border-radius: 50%; background: #fff url(../../system/img/logo.png) center / 115% no-repeat }
 .yt-card b { font-size: 16px; line-height: 1.375; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
 .yt-card small { font-size: 14px; opacity: .65; display: block }
+.yt-dur { position: absolute; right: 4%; bottom: 4%; z-index: 9; background: rgb(0 0 0 / .8); color: #fff; font: 500 12px/1 Roboto, Arial, sans-serif; padding: 3px 4px; border-radius: 4px }
+/* "Up next" sidebar: thumbnails at 168px, the size to design for */
+.yt-side { border-radius: 10px; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 12px 20px; background: #0f0f0f; color: #f1f1f1; position: relative; z-index: 10 }
+.yt-side-item { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 8px; font-family: Roboto, Arial, sans-serif; line-height: 1.4; min-width: 0 }
+.yt-side-item .thumb-frame { border-radius: 8px }
+.yt-side-item b { font-size: 14px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.yt-side-item small { font-size: 12px; opacity: .65; display: block }
 @container (max-width: 900px) { .yt-big { grid-template-columns: 1fr } }
 </style>
 </head>
@@ -42,7 +49,7 @@ html, body { margin: 0; background: #fbfaf6 }
 <header class="yt-intro">
   <span class="label muted">Templates · YouTube</span>
   <h1>YouTube thumbnails</h1>
-  <p>Four kinds of video on the Seeds of Renaissance system, shown full size and then at real size in a YouTube feed.</p>
+  <p>Five kinds of video on the Seeds of Renaissance system, shown full size and then at real size in a YouTube feed.</p>
   <ul>
     <li>Paper, white and photographs as the ground, with the one night ground kept for words alone.</li>
     <li>Polyamine titles of two to six words so they read at feed size; Apfel Grotezk for small labels.</li>
@@ -89,12 +96,41 @@ html, body { margin: 0; background: #fbfaf6 }
   </div></div>
   <figcaption><b>4 · Talk.</b> Type directly on a photo, over a warm-dark scrim. The logo sits on a small white disc. <code>.thumb--talk</code></figcaption>
 </figure>
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--guest" id="t5">
+    <img class="thumb__photo" src="../../system/img/otm-dawn-cloud.jpg" alt=""><div class="thumb__scrim"></div>
+    <img class="thumb__guest" src="../../system/img/otm-guest-placeholder.jpg" alt="">
+    <div class="thumb__text">
+      <span class="thumb__label">Over the Mountains<span class="thumb__ep">· 12</span></span>
+      <h3 class="thumb__title">We are already practising it</h3>
+      <div class="thumb__byline">Guest Name</div>
+      <div class="thumb__foot"><span class="thumb__disc"><img src="../../system/img/logo.png" alt=""></span><span class="thumb__label">Seeds of Renaissance</span></div>
+    </div>
+  </div></div>
+  <figcaption><b>5 · Podcast guest.</b> Over the Mountains episodes: a mountain at dawn under a dark shade, the guest in greyscale fading in from the right. The podcast name is sized to read in the feed. <code>.thumb--guest</code></figcaption>
+</figure>
+
+<figure>
+  <div class="thumb-frame"><div class="thumb thumb--guest" id="t6">
+    <img class="thumb__photo" src="../../system/img/otm-valley.jpg" alt="" style="object-position:50% 30%"><div class="thumb__scrim"></div>
+    <img class="thumb__guest" src="../../system/img/otm-guest-placeholder.jpg" alt="">
+    <div class="thumb__text">
+      <span class="thumb__label">Over the Mountains<span class="thumb__ep">· 13</span></span>
+      <h3 class="thumb__title">The land remembers us</h3>
+      <div class="thumb__byline">Guest Name</div>
+      <div class="thumb__foot"><span class="thumb__disc"><img src="../../system/img/logo.png" alt=""></span><span class="thumb__label">Seeds of Renaissance</span></div>
+    </div>
+  </div></div>
+  <figcaption><b>5 · Podcast guest, valley.</b> The same template on a daylight valley: the shade carries the type, so any mountain photo works. Swap the photo per season or per guest. <code>.thumb--guest</code></figcaption>
+</figure>
 </div>
 
 <span class="label yt-sec">In the feed, light mode</span>
 <div class="yt-feed light" id="feed-light"></div>
 <span class="label yt-sec">In the feed, dark mode</span>
 <div class="yt-feed dark" id="feed-dark"></div>
+<span class="label yt-sec">Up next, at sidebar size (168px wide)</span>
+<div class="yt-side dark" id="feed-side"></div>
 </main>
 
 <script>
@@ -103,14 +139,29 @@ html, body { margin: 0; background: #fbfaf6 }
     ["t1", "Find your people: Global Connection Call, October", "2.1K views · 3 days ago"],
     ["t2", "Attention as a moral act, with Iain McGilchrist | Over the Mountains Ep. 12", "14K views · 2 weeks ago"],
     ["t3", "A Manifesto for Civilizational Renewal (read aloud)", "6.8K views · 1 month ago"],
-    ["t4", "What is trying to be born? A talk from Gardens of Change", "3.4K views · 1 month ago"]
+    ["t4", "What is trying to be born? A talk from Gardens of Change", "3.4K views · 1 month ago"],
+    ["t5", "We are already practising it, with Guest Name | Over the Mountains Ep. 12", "9.2K views · 5 days ago"],
+    ["t6", "The land remembers us, with Guest Name | Over the Mountains Ep. 13", "1.1K views · 1 day ago"]
   ];
+  var durs = { t1: "1:02:17", t2: "1:18:40", t3: "24:06", t4: "18:52", t5: "1:12:04", t6: "58:31" };
+  var side = document.getElementById("feed-side");
+  items.forEach(function (it) {
+    var row = document.createElement("div"); row.className = "yt-side-item";
+    var frame = document.getElementById(it[0]).parentNode.cloneNode(true);
+    frame.querySelector(".thumb").removeAttribute("id");
+    var dur = document.createElement("span"); dur.className = "yt-dur"; dur.textContent = durs[it[0]]; frame.appendChild(dur);
+    row.appendChild(frame);
+    var meta = document.createElement("div"); meta.innerHTML = "<b></b><small>Seeds of Renaissance</small><small></small>";
+    meta.querySelector("b").textContent = it[1]; meta.querySelectorAll("small")[1].textContent = it[2];
+    row.appendChild(meta); side.appendChild(row);
+  });
   ["feed-light", "feed-dark"].forEach(function (id) {
     var feed = document.getElementById(id);
     items.forEach(function (it) {
       var card = document.createElement("div"); card.className = "yt-card";
       var frame = document.getElementById(it[0]).parentNode.cloneNode(true);
       frame.querySelector(".thumb").removeAttribute("id");
+      var dur = document.createElement("span"); dur.className = "yt-dur"; dur.textContent = durs[it[0]]; frame.appendChild(dur);
       card.appendChild(frame);
       var meta = document.createElement("div"); meta.className = "meta";
       meta.innerHTML = '<span class="av" aria-hidden="true"></span><div><b></b><small>Seeds of Renaissance</small><small></small></div>';

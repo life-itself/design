@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · YouTube channel art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<style>
+html, body { margin: 0; background: #fbfaf6 }
+/* Page chrome only. The art itself is .chan-* and .thumb components from components.css. */
+.yc-page { max-width: 1320px; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 72px }
+.yc-intro { display: grid; gap: 14px; max-width: 64ch; padding-top: clamp(32px, 5cqi, 64px) }
+.yc-intro h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.yc-intro p { font-size: var(--t-intro) }
+.yc-intro ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--muted); font-size: var(--t-small) }
+.yc-intro a { text-decoration: underline; text-underline-offset: 3px }
+.yc-sec { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; padding-top: 36px; border-top: 1px solid var(--rule) }
+.yc-sec > h2 { font-family: var(--font-display); font-size: var(--t-section); line-height: 1 }
+.yc-sec > p { max-width: 70ch; color: var(--muted) }
+.yc-sec figure { margin: 0; min-width: 0; display: grid; gap: 10px }
+.yc-sec figcaption { font-size: var(--t-caption); font-style: italic; color: var(--muted) }
+.yc-sec figcaption b { font-style: normal; color: var(--ink); font-weight: 600 }
+.yc-tools { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center }
+.yc-tools .btn[aria-pressed="true"] { background: var(--ink); color: var(--paper) }
+.yc-tools label { display: inline-flex; gap: 8px; align-items: center; font-family: var(--font-label); font-size: var(--t-label); letter-spacing: var(--track-label); text-transform: uppercase; cursor: pointer }
+.yc-tools input { accent-color: var(--ink); width: 16px; height: 16px }
+.yc-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; align-items: start }
+.yc-tv { max-width: 760px }
+.yc-phone { max-width: 420px }
+.yc-shadow { box-shadow: 0 0 0 1px var(--rule) }
+
+/* A mock of the YouTube channel page: YouTube's own grounds and type, our art inside */
+.ytc { border-radius: 10px; padding: clamp(14px, 3cqi, 28px); font-family: Roboto, Arial, sans-serif; position: relative; z-index: 10 }
+.ytc.light { background: #fff; color: #0f0f0f; border: 1px solid var(--rule) }
+.ytc.dark { background: #0f0f0f; color: #f1f1f1 }
+.ytc .chan-frame--desktop { border-radius: 12px }
+.ytc-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(12px, 2.4cqi, 24px); align-items: center; margin-top: 20px }
+.ytc-av { width: clamp(72px, 14cqi, 160px) }
+.ytc-name { font-size: clamp(22px, 3.4cqi, 36px); font-weight: 700; line-height: 1.15 }
+.ytc-hd { font-size: 14px; opacity: .7; margin-top: 4px; line-height: 1.4 }
+.ytc-hd b { font-weight: 500; opacity: 1 }
+.ytc-sub { display: inline-block; margin-top: 12px; padding: 0 16px; height: 36px; line-height: 36px; border-radius: 18px; font-size: 14px; font-weight: 500 }
+.ytc.light .ytc-sub { background: #0f0f0f; color: #fff }
+.ytc.dark .ytc-sub { background: #f1f1f1; color: #0f0f0f }
+.ytc-tabs { display: flex; gap: 24px; margin-top: 18px; font-size: 16px; font-weight: 500; overflow-x: auto; border-bottom: 1px solid rgb(128 128 128 / .3) }
+.ytc-tabs span { padding: 12px 0; opacity: .7; white-space: nowrap }
+.ytc-tabs span:first-child { opacity: 1; box-shadow: inset 0 -2px currentColor }
+
+/* Avatar sizes, as YouTube shows them */
+.yc-avs { display: grid; gap: 0; border-top: 1px solid var(--rule) }
+.yc-av-row { display: grid; grid-template-columns: minmax(150px, 1fr) repeat(4, auto); gap: clamp(12px, 3cqi, 40px); align-items: center; padding: 18px 0; border-bottom: 1px solid var(--rule) }
+.yc-av-row > div:first-child b { display: block; font-weight: 600 }
+.yc-av-row > div:first-child small { color: var(--muted); font-size: var(--t-caption); display: block; line-height: 1.4 }
+.yc-av-row .chan-frame { box-shadow: 0 0 0 1px var(--rule) }
+.av-176 { width: 176px } .av-98 { width: 98px } .av-48 { width: 48px } .av-24 { width: 24px }
+.yc-av-sizes { display: grid; grid-template-columns: minmax(150px, 1fr) repeat(4, auto); gap: clamp(12px, 3cqi, 40px); padding-bottom: 8px }
+.yc-av-sizes span { color: var(--muted); text-align: center }
+.yc-av-sizes span:nth-child(2) { width: 176px } .yc-av-sizes span:nth-child(3) { width: 98px } .yc-av-sizes span:nth-child(4) { width: 48px } .yc-av-sizes span:nth-child(5) { width: 24px }
+
+.yc-wm { display: flex; gap: 20px; align-items: center }
+.yc-wm .chan-frame { width: 150px; flex: none }
+.yc-wm p { color: var(--muted); font-size: var(--t-small) }
+
+/* About panel */
+.yc-about { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--gap-l); padding: clamp(20px, 4cqi, 48px); background: var(--white) }
+.yc-about h3 { font-family: var(--font-display); font-size: var(--t-card); line-height: 1.1; margin-bottom: 16px }
+.yc-about .desc { display: grid; gap: 14px; font-size: var(--t-body) }
+.yc-about .desc p:first-child { font-size: var(--t-lead); font-weight: 300; line-height: 1.35 }
+.yc-about .meta { margin-top: 18px; display: grid; gap: 4px; color: var(--muted); font-size: var(--t-caption) }
+.yc-links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule) }
+.yc-links li { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--rule); font-size: var(--t-small); overflow-wrap: anywhere }
+.yc-links li > span:last-child em { color: var(--muted) }
+
+@container (max-width: 900px) {
+  .yc-two, .yc-about { grid-template-columns: 1fr }
+  .yc-av-row, .yc-av-sizes { grid-template-columns: repeat(4, auto); justify-content: start }
+  .yc-av-row > div:first-child { grid-column: 1 / -1 }
+  .yc-av-sizes span:first-child { display: none }
+}
+@container (max-width: 520px) {
+  .av-176, .yc-av-sizes span:nth-child(2) { width: 120px }
+  .yc-av-row, .yc-av-sizes { gap: 14px }
+}
+</style>
+</head>
+<body class="sor">
+<script src="../../system/graphics.js"></script>
+
+<!-- The banner artwork, stamped into every banner frame below -->
+<template id="banner-art">
+  <div class="chan-banner">
+    <svg class="chan-banner__flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+    <span class="chan-banner__range" aria-hidden="true"></span>
+    <div class="chan-banner__lockup">
+      <img class="chan-banner__logo" src="../../system/img/logo.png" alt="">
+      <div><h2 class="chan-banner__name">Seeds of<br>Renaissance</h2><p class="chan-banner__tagline">Vision and movement for civilisational renewal</p></div>
+    </div>
+    <span class="chan-guides" aria-hidden="true"><i class="chan-guides__strip">Desktop · 2560 × 423</i><i class="chan-guides__safe">Safe area · 1546 × 423</i></span>
+  </div>
+</template>
+
+<main class="yc-page gutter">
+<header class="yc-intro">
+  <span class="label muted">Templates · YouTube</span>
+  <h1>Channel art</h1>
+  <p>Uriel's round 4 asset set for the channel, redrawn in the current system: banner, channel page, avatar, podcast cover, lower third and watermark, and the About text.</p>
+  <ul>
+    <li>Paper or night grounds, ink or chalk woodcuts, Polyamine for the name; colour only from photographs and the logo.</li>
+    <li>Everything that must be seen sits inside the 1546 × 423 safe area; the swallows and mountains outside it are for desktop and TV.</li>
+    <li>Each piece is a fixed artboard at upload size; export at that size. Photos and the guest are placeholders.</li>
+    <li>Thumbnails, including the podcast cover, are on <a href="index.html">the thumbnails page</a>.</li>
+  </ul>
+</header>
+
+<section class="yc-sec" id="banner">
+  <span class="label muted">1 · Banner</span>
+  <h2>Banner and mobile crop</h2>
+  <p>One 2560 × 1440 upload. Phones show only the middle 1546 × 423, so the logo, name and tagline live there. Desktops show the full-width strip, where three swallows fly in from the left and a range of mountains closes the right.</p>
+  <div class="yc-tools" role="group" aria-label="Banner options">
+    <button type="button" class="btn" data-ground="paper" aria-pressed="true">Paper</button>
+    <button type="button" class="btn" data-ground="night" aria-pressed="false">Night</button>
+    <label><input type="checkbox" id="guides"> Show safe-area guides</label>
+  </div>
+  <figure>
+    <div class="chan-frame chan-frame--desktop yc-shadow" data-banner></div>
+    <figcaption><span class="fig-no">Fig. 1</span><b>Desktop.</b> The visible strip, 2560 × 423, shown full width.</figcaption>
+  </figure>
+  <div class="yc-two">
+    <figure class="yc-phone">
+      <div class="chan-frame chan-frame--mobile yc-shadow" data-banner></div>
+      <figcaption><span class="fig-no">Fig. 2</span><b>Mobile.</b> The 1546 × 423 safe area: the lockup alone.</figcaption>
+    </figure>
+    <figure class="yc-tv">
+      <div class="chan-frame chan-frame--tv yc-shadow" data-banner></div>
+      <figcaption><span class="fig-no">Fig. 3</span><b>Whole upload, as a TV shows it.</b> 2560 × 1440; the ground carries the space above and below the strip.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="yc-sec" id="page">
+  <span class="label muted">2 · Channel page</span>
+  <h2>How the channel page reads</h2>
+  <p>The banner, avatar, name, handle and tagline together, on YouTube's light and dark themes. The paper banner sits naturally on light; the night banner on dark.</p>
+  <div class="ytc light">
+    <div class="chan-frame chan-frame--desktop" data-banner></div>
+    <div class="ytc-row">
+      <div class="chan-frame chan-frame--avatar ytc-av"><div class="chan-avatar"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div></div>
+      <div>
+        <div class="ytc-name">Seeds of Renaissance</div>
+        <div class="ytc-hd"><b>@SeedsOfRenaissance</b> · Over the Mountains podcast, gatherings, magazine</div>
+        <div class="ytc-hd">Vision and movement for civilisational renewal …more</div>
+        <span class="ytc-sub">Subscribe</span>
+      </div>
+    </div>
+    <div class="ytc-tabs"><span>Home</span><span>Videos</span><span>Shorts</span><span>Podcasts</span><span>Playlists</span><span>About</span></div>
+  </div>
+  <div class="ytc dark">
+    <div class="chan-frame chan-frame--desktop" data-banner="night"></div>
+    <div class="ytc-row">
+      <div class="chan-frame chan-frame--avatar ytc-av"><div class="chan-avatar"><img src="../../system/img/logo.png" alt=""></div></div>
+      <div>
+        <div class="ytc-name">Seeds of Renaissance</div>
+        <div class="ytc-hd"><b>@SeedsOfRenaissance</b> · Over the Mountains podcast, gatherings, magazine</div>
+        <div class="ytc-hd">Vision and movement for civilisational renewal …more</div>
+        <span class="ytc-sub">Subscribe</span>
+      </div>
+    </div>
+    <div class="ytc-tabs"><span>Home</span><span>Videos</span><span>Shorts</span><span>Podcasts</span><span>Playlists</span><span>About</span></div>
+  </div>
+  <p>Light, with the proposed swallow avatar; dark, with the current logo.</p>
+</section>
+
+<section class="yc-sec" id="avatar">
+  <span class="label muted">3 · Avatar</span>
+  <h2>Avatar, from 176 to 24 pixels</h2>
+  <p>YouTube shows the 800 × 800 avatar as a circle: 176px on the channel page, 98px in search, 48px beside comments, 24px in the top bar. The current logo's fingerprints turn to noise below about 48px. The proposal is the woodcut swallow alone, in ink on white: it holds its shape at 24px and is already the seal on the site.</p>
+  <div>
+    <div class="yc-av-sizes label"><span></span><span>176</span><span>98</span><span>48</span><span>24</span></div>
+    <div class="yc-avs" id="avatars">
+      <div class="yc-av-row" data-av="logo"><div><b>Current logo</b><small>Fails small: at 48px the prints blur, at 24px only a pink smudge.</small></div></div>
+      <div class="yc-av-row" data-av="swallow"><div><b>Proposal · swallow on white</b><small>Reads at every size and on light and dark themes. Recommended.</small></div></div>
+      <div class="yc-av-row" data-av="paper"><div><b>Swallow on paper</b><small>Warmer, but the paper tone looks grey beside YouTube's white.</small></div></div>
+      <div class="yc-av-row" data-av="seal"><div><b>Seal</b><small>The swallow in its ring, as on the site; the ring thins out below 48px.</small></div></div>
+      <div class="yc-av-row" data-av="night"><div><b>Swallow on night</b><small>Strong on YouTube dark, a hole on light.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="yc-sec" id="cover">
+  <span class="label muted">4 · Podcast cover</span>
+  <h2>Over the Mountains episode cover</h2>
+  <p>The same artboard as the podcast guest thumbnail (<code>.thumb--guest</code>): a mountain under a dark shade, the guest in greyscale, a short title. Used as the episode's thumbnail and as the still before the conversation starts.</p>
+  <div class="yc-two">
+    <figure>
+      <div class="thumb-frame"><div class="thumb thumb--guest">
+        <img class="thumb__photo" src="../../system/img/otm-dawn-cloud.jpg" alt=""><div class="thumb__scrim"></div>
+        <img class="thumb__guest" src="../../system/img/otm-guest-placeholder.jpg" alt="">
+        <div class="thumb__text">
+          <span class="thumb__label">Over the Mountains<span class="thumb__ep">· 12</span></span>
+          <h3 class="thumb__title">We are already practising it</h3>
+          <div class="thumb__byline">Guest Name</div>
+          <div class="thumb__foot"><span class="thumb__disc"><img src="../../system/img/logo.png" alt=""></span><span class="thumb__label">Seeds of Renaissance</span></div>
+        </div>
+      </div></div>
+      <figcaption><span class="fig-no">Fig. 4</span><b>Dawn over cloud.</b> The default backdrop.</figcaption>
+    </figure>
+    <figure>
+      <div class="thumb-frame"><div class="thumb thumb--guest">
+        <img class="thumb__photo" src="../../system/img/otm-valley.jpg" alt="" style="object-position:50% 30%"><div class="thumb__scrim"></div>
+        <img class="thumb__guest" src="../../system/img/otm-guest-placeholder.jpg" alt="">
+        <div class="thumb__text">
+          <span class="thumb__label">Over the Mountains<span class="thumb__ep">· 13</span></span>
+          <h3 class="thumb__title">The land remembers us</h3>
+          <div class="thumb__byline">Guest Name</div>
+          <div class="thumb__foot"><span class="thumb__disc"><img src="../../system/img/logo.png" alt=""></span><span class="thumb__label">Seeds of Renaissance</span></div>
+        </div>
+      </div></div>
+      <figcaption><span class="fig-no">Fig. 5</span><b>Valley.</b> A daylight backdrop under the same shade.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="yc-sec" id="lower">
+  <span class="label muted">5 · Lower third and watermark</span>
+  <h2>Lower third and watermark</h2>
+  <p>The lower third introduces the guest on a torn white slip: the podcast in Apfel, the name in Polyamine, one line about them. The watermark is the avatar's swallow on its white disc, bottom right, where YouTube puts it.</p>
+  <figure>
+    <div class="chan-frame chan-frame--video">
+      <div class="chan-video">
+        <img src="../../system/img/sylvie.jpg" alt="">
+        <div class="chan-lower">
+          <span class="chan-lower__label">Over the Mountains</span>
+          <h3 class="chan-lower__name">Guest Name</h3>
+          <span class="chan-lower__role">Writer and gardener, Gardens of Change</span>
+        </div>
+        <div class="chan-watermark"><div class="chan-frame chan-frame--avatar"><div class="chan-avatar"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div></div></div>
+      </div>
+    </div>
+    <figcaption><span class="fig-no">Fig. 6</span><b>Over a video still,</b> drawn on a 1920 × 1080 frame. Photo is a placeholder.</figcaption>
+  </figure>
+  <div class="yc-wm">
+    <div class="chan-frame chan-frame--avatar yc-shadow"><div class="chan-avatar"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div></div>
+    <p><b>Watermark, 150 × 150, actual size.</b> Export the circle on a transparent ground. The same file as the proposed avatar, so one mark carries across the channel.</p>
+  </div>
+</section>
+
+<section class="yc-sec" id="about">
+  <span class="label muted">6 · About</span>
+  <h2>About panel</h2>
+  <div class="yc-about">
+    <div>
+      <h3>Description</h3>
+      <div class="desc">
+        <p>Seeds of Renaissance (SoR) is a place for seekers who sense the impending death of old paradigms and long for the ideas, the practice, and the company to help birth the new.</p>
+        <p>We are a media house and space of belonging, offering mythos and language for what we already feel. Our content gives people a place to encounter and make sense of this new mythos and provides places of belonging where practice, sense-making, and creating together move society towards an emerging vision of a wiser, weller world.</p>
+        <p>Together we will make the art, ideas and actions for what comes next.</p>
+        <p>Join our newsletter to never miss an episode of the Seeds of Renaissance Podcast and to stay up to date on what’s happening at SoR and in the broader community of seekers ushering in what’s to come.</p>
+      </div>
+      <div class="meta"><span>@SeedsOfRenaissance · Over the Mountains podcast, gatherings, magazine</span><span>776 of YouTube's 1,000 characters</span></div>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <ul class="yc-links">
+        <li><span class="label">YouTube</span><span><em>link to fill</em></span></li>
+        <li><span class="label">Substack</span><span><em>link to fill</em></span></li>
+        <li><span class="label">Instagram</span><span>@seedsofrenaissance</span></li>
+        <li><span class="label">Facebook</span><span>facebook.com/seeds0frenaissance</span></li>
+        <li><span class="label">X</span><span>@SeedRenaissance</span></li>
+        <li><span class="label">LinkedIn</span><span>linkedin.com/company/seedsofrenaissance</span></li>
+        <li><span class="label">Linktree</span><span>linktr.ee/seedsofrenaissance</span></li>
+        <li><span class="label">Website</span><span>secondrenaissance.net</span></li>
+      </ul>
+      <p class="meta">YouTube shows up to 14 links, each with its own title.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var art = document.getElementById("banner-art");
+  document.querySelectorAll("[data-banner]").forEach(function (frame) {
+    var b = art.content.firstElementChild.cloneNode(true);
+    if (frame.dataset.banner === "night") b.classList.add("chan-banner--night");
+    frame.appendChild(b);
+  });
+  // Ground switch: only the banners in the banner section
+  var buttons = document.querySelectorAll("#banner [data-ground]");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === btn)); });
+      document.querySelectorAll("#banner .chan-banner").forEach(function (b) { b.classList.toggle("chan-banner--night", btn.dataset.ground === "night"); });
+    });
+  });
+  document.getElementById("guides").addEventListener("change", function (e) { document.body.classList.toggle("show-guides", e.target.checked); });
+  // Avatars at four sizes
+  var faces = {
+    logo: '<div class="chan-avatar"><img src="../../system/img/logo.png" alt=""></div>',
+    swallow: '<div class="chan-avatar"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div>',
+    paper: '<div class="chan-avatar chan-avatar--paper"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div>',
+    seal: '<div class="chan-avatar chan-avatar--paper chan-avatar--seal"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg></div>',
+    night: '<div class="chan-avatar chan-avatar--night"><svg viewBox="0 0 248 150" aria-hidden="true"><use href="#wsw"/></svg></div>'
+  };
+  document.querySelectorAll("#avatars [data-av]").forEach(function (row) {
+    [176, 98, 48, 24].forEach(function (s) {
+      var f = document.createElement("div"); f.className = "chan-frame chan-frame--avatar av-" + s;
+      f.innerHTML = faces[row.dataset.av]; row.appendChild(f);
+    });
+  });
+  // Keep each frame's scale exact (Chrome can leave a stale 100cqi in transforms after a relayout)
+  if ("ResizeObserver" in window) {
+    var ro = new ResizeObserver(function (entries) {
+      entries.forEach(function (e) {
+        var cw = parseFloat(getComputedStyle(e.target).getPropertyValue("--crop-w"));
+        if (cw) e.target.style.setProperty("--chan-scale", String(e.contentRect.width / cw));
+      });
+    });
+    document.querySelectorAll(".chan-frame").forEach(function (f) { ro.observe(f); });
+  }
+})();
+</script>
+</body>
+</html>

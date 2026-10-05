@@ -29,6 +29,10 @@ Colour follows `currentColor`: the `.woodcut` class sets ink, and inside `.night
 
 The four pathway seeds stay attached to their pathways everywhere: site, thumbnails, slides.
 
+## Black and red
+
+There is a set in black (ink) and a set in red (`system/woodcuts/seeds-red.svg`, the logo red). Spread them across a page to make it more dynamic and personal: to make a quote stand out, as a background, or to punctuate a section. Red woodcuts are the one place red is used as a graphic rather than a link; keep them occasional.
+
 ## Rules
 
 - One graphic moment per section at most. They are punctuation, not wallpaper.

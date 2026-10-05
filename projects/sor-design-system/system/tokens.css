@@ -25,11 +25,11 @@
   --red: #e5201c;        /* the logo red: only an occasional link in running text, and footnote marks */
 
   /* ── Type families ──────────────────────────────────────────── */
-  --font-display: "Polyamine", "Fraunces", Georgia, serif;          /* wordmark, headlines, section and card titles */
-  --font-quote: "Restora", "Fraunces", Georgia, serif;              /* pull quotes */
+  --font-display: "Polyamine", "Fraunces", Georgia, serif;          /* headlines, titles, wordmark: anything up to ~10 words */
+  --font-quote: "Restora", "Fraunces", Georgia, serif;              /* display text that runs longer than ~10 words: pull quotes, standout passages */
   --font-body: "Bricolage Grotesque", system-ui, sans-serif;        /* everything you read */
   --font-label: "Apfel Grotezk", "Hanken Grotesk", system-ui, sans-serif; /* eyebrows, buttons, dates, captions numbers */
-  --font-poem: "Fraunces", Georgia, serif;                          /* the poetic voice: always italic, soft */
+  --font-poem: "Restora", "Fraunces", Georgia, serif;               /* the poetic voice: Restora italic. Four faces only; Fraunces is just the fallback */
 
   /* ── Type scale (fluid; cqi falls back to viewport width outside a container) ── */
   --t-hero: clamp(40px, 7cqi, 96px);        /* one statement per page, 5–10 words */
@@ -95,4 +95,35 @@
   --thumb-inset: 46px;       /* corner inset for logo and marks */
   --thumb-logo: 116px;       /* logo on white or paper */
   --thumb-tear: 34px;        /* torn edge depth at artboard scale */
+}
+
+/* ── Podcast guest thumbnail (Over the Mountains episode cover) ───
+   Sizes px at 1280×720, as the --thumb-* block above. Labels that must be read at feed
+   size (×0.28 at 360px, ×0.13 at 168px) are 40px or more; smaller labels are decoration. */
+:root {
+  --thumb-label-l: 40px;     /* a label that must read at feed size: the podcast name */
+  --thumb-name: 64px;      /* guest name, Bricolage semibold */
+  --thumb-guest-w: 680px;    /* width of the greyscale portrait on the right */
+  --thumb-disc: 92px;        /* logo on its white disc, bottom left */
+}
+
+/* ── YouTube channel art (fixed artboards) ───────────────────────
+   Banner: upload 2560×1440. TVs show it all; desktop shows the centred 2560×423 strip;
+   phones crop to the centred 1546×423 safe area, so everything that must be seen lives there.
+   Avatar 800×800, shown as a circle down to 24px. Watermark 150×150. Lower third drawn on a 1920×1080 frame. */
+:root {
+  --yt-banner-w: 2560px;
+  --yt-banner-h: 1440px;
+  --yt-strip-h: 423px;       /* the desktop strip, full width */
+  --yt-safe-w: 1546px;       /* the safe area: what phones show */
+  --yt-avatar: 800px;
+  --yt-watermark: 150px;
+  --yt-video-w: 1920px;
+  --yt-video-h: 1080px;
+  --yt-wordmark: 112px;      /* "Seeds of / Renaissance" on the banner, Polyamine, two lines */
+  --yt-tagline: 50px;        /* banner tagline, the poem voice */
+  --yt-banner-logo: 236px;   /* logo on the banner */
+  --yt-l3-label: 30px;       /* lower third: series label */
+  --yt-l3-name: 76px;        /* lower third: guest name, Polyamine */
+  --yt-l3-role: 36px;        /* lower third: role or one line about the guest */
 }

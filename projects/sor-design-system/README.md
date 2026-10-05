@@ -13,6 +13,7 @@ The brand and design system for Seeds of Renaissance: how it looks and why, with
 | Page | What |
 |---|---|
 | [feel.md](feel.md) | Grounded hope, what we are not, rigour and warmth, the three registers |
+| [voice.md](voice.md) | How we sound: key lines, principles, rewrites, calls to action, YouTube titles (draft) |
 | [colour.md](colour.md) | Grounds, inks and the one accent, with roles and rules |
 | [type.md](type.md) | The faces, the scale, and the research behind them |
 | [layout.md](layout.md) | Grounds and rhythm, torn edges, grid and spacing |

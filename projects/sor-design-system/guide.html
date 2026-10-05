@@ -230,7 +230,7 @@ pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13
       <li><b>Red is rare</b><span>The logo red appears only as an occasional link in running text, and footnote marks. Never a button, never a background.</span></li>
       <li><b>Pale yellow is light, not paint</b><span>Sunlight is a ground for a whole section. Never text, never a highlighter, never a bright yellow.</span></li>
       <li><b>One night per page</b><span>At most one dark section, plus the footer. Dark and light always meet at a torn edge, never a straight line or a gradient.</span></li>
-      <li><b>Polyamine speaks rarely</b><span>The display face is for short statements: five to ten words. Pull quotes go to Restora, reading to Bricolage.</span></li>
+      <li><b>Polyamine for anything short</b><span>Every headline, title and hero is Polyamine, as long as it stays under about ten words. When display text runs longer, it moves to Restora. Reading is Bricolage.</span></li>
       <li><b>Figures are plates</b><span>Images are numbered and captioned like plates in a book: <span class="fig-no">Fig. 2</span> then an italic caption.</span></li>
       <li><b>The hand is our texture</b><span>Paper grain, torn edges, woodcut seeds and swallows, the fingerprints in the logo. Imperfection is made, not filtered on.</span></li>
     </ol>
@@ -284,10 +284,10 @@ pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13
   <div class="g-body">
     <div class="g-faces">
       <div class="g-face"><div class="who"><b>Display · Polyamine</b><span>Wordmark, headlines, section and card titles. Commercial, not yet licensed.</span></div><div class="sample display" style="font-size:clamp(36px,6cqi,72px);line-height:1">Seeds of a Renaissance</div></div>
-      <div class="g-face"><div class="who"><b>Quote · Restora</b><span>Pull quotes and larger quotations. Commercial, not yet licensed or installed: you may be seeing Fraunces.</span></div><div class="sample" style="font-family:var(--font-quote);font-size:clamp(26px,3.4cqi,38px);line-height:1.2">We are the bridge between the dying past and the future unborn.</div></div>
+      <div class="g-face"><div class="who"><b>Quote · Restora</b><span>Display text longer than about ten words: pull quotes, standout passages. Commercial, licence to buy; you may be seeing Fraunces.</span></div><div class="sample" style="font-family:var(--font-quote);font-size:clamp(26px,3.4cqi,38px);line-height:1.2">We are the bridge between the dying past and the future unborn.</div></div>
       <div class="g-face"><div class="who"><b>Body · Bricolage Grotesque</b><span>Everything you read. Light for statements, regular for text. Free (OFL).</span></div><div class="sample" style="font-size:19px;line-height:1.65;max-width:56ch">Something is ending, and you feel it before you can name it. What is breaking down is not only the economy or the climate but the story beneath them.</div></div>
       <div class="g-face"><div class="who"><b>Label · Apfel Grotezk</b><span>Eyebrows, buttons, dates, figure numbers. Small, uppercase, letterspaced. Free (OFL), embedded.</span></div><div class="sample label" style="font-size:14px">Gathering · Thursday 15 October · Fig. 3</div></div>
-      <div class="g-face"><div class="who"><b>Poem · Fraunces italic, soft</b><span>The poetic voice: dedications, a line set alone, one emphasised sentence. Free (OFL).</span></div><div class="sample poem" style="font-size:clamp(24px,3cqi,32px);line-height:1.3">Life as an art. In this soil we plant the seeds of a Renaissance.</div></div>
+      <div class="g-face"><div class="who"><b>Poem · Restora italic</b><span>The poetic voice: dedications, a line set alone, one emphasised sentence. Same face as the quotes, so the system stays at four faces. Fraunces stands in until Restora is installed.</span></div><div class="sample poem" style="font-size:clamp(24px,3cqi,32px);line-height:1.3">Life as an art. In this soil we plant the seeds of a Renaissance.</div></div>
     </div>
     <div>
       <h3 class="g-h3">Scale</h3>
@@ -304,7 +304,7 @@ pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13
         <div class="row"><span>--t-label · 12</span><div class="label">What we believe</div></div>
       </div>
     </div>
-    <div class="g-note"><b>Open: where Polyamine stops</b>The mockups use Polyamine for every heading, down to 22px card and list titles, and it holds up. The earlier type notes said Polyamine for the hero only and Restora for headings inside running text. This system follows the mockups; Restora has never been seen at working heading size.</div>
+    <div class="g-note"><b>The rule: length decides</b>Polyamine is the display face everywhere: heroes, page titles, section headlines, card and list titles, the wordmark. It is not readable at length, so once display text runs past about ten words (pull quotes, a standout passage, a long title) it moves to Restora. Restora also carries the poetic italic voice. Four faces in all: Polyamine, Restora, Bricolage Grotesque, Apfel Grotezk.</div>
     <div class="g-note"><b>Fixed while extracting</b>The mockups asked for "Appful Grotesque", a name no installed font has, so their labels were showing in the fallback (Hanken Grotesk). The system now embeds the real Apfel Grotezk. Labels and buttons look slightly different from the mockups as a result.</div>
   </div>
 </div></section>
@@ -611,8 +611,7 @@ pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13
   <div class="g-head"><span class="label">Chapter 12</span><h2>Open questions</h2><p>What the system does not decide yet.</p></div>
   <div class="g-body">
     <ol class="g-open">
-      <li><span><b>Polyamine or Restora for headings?</b> The mockups use Polyamine everywhere; the type notes reserve it for the hero. Test Restora at 24–34px among body text.</span></li>
-      <li><span><b>Licences.</b> Polyamine and Restora are not bought, so anyone without them installed sees Fraunces.</span></li>
+            <li><span><b>Licences.</b> Polyamine and Restora are not bought, so anyone without them installed sees Fraunces.</span></li>
       <li><span><b>Logo.</b> Deeper red, redrawn swallow, small version, full set of versions.</span></li>
       <li><span><b>Photography.</b> Joyful photographs with people and children; credits and rights.</span></li>
       <li><span><b>Woodcuts.</b> Hand-drawn, or based on public-domain prints?</span></li>

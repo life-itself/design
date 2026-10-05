@@ -12,15 +12,15 @@ What the [design system](BUILD.md) actually uses, taken from the approved mockup
 
 | Role | Token | Face | Used for |
 |---|---|---|---|
-| Display | `--font-display` | Polyamine | Wordmark, hero, page titles, section headlines, card and list titles (down to ~22px) |
-| Quote | `--font-quote` | Restora | Pull quotes (`.pull`), subheads inside long reading |
+| Display | `--font-display` | Polyamine | Every headline and title up to ~10 words: hero, page titles, section headlines, card and list titles, wordmark |
+| Quote | `--font-quote` | Restora | Display text past ~10 words, where Polyamine stops being readable: pull quotes (`.pull`), standout passages, long titles |
 | Body | `--font-body` | Bricolage Grotesque | All reading; light (300) for statement paragraphs |
 | Label | `--font-label` | Apfel Grotezk | Eyebrows, buttons, dates, figure numbers: 11–14px, uppercase, tracked .1–.16em |
-| Poem | `--font-poem` | Fraunces italic, SOFT 100 | Dedications, a line set alone, one emphasised sentence |
+| Poem | `--font-poem` | Restora italic (Fraunces until installed) | Dedications, a line set alone, one emphasised sentence |
 
 Scale tokens: `--t-hero` 40–96, `--t-title` 40–84, `--t-section` 36–64, `--t-card` 24–32, `--t-quote` 26–38, `--t-lead` 20–28, `--t-reading` 19, `--t-body` 17, `--t-caption` 14, `--t-label` 12.
 
-**Differs from the plan below:** the mockups use Polyamine for every heading, not only the hero, and it holds up at card size. Restora is used only for pull quotes so far and has still not been seen at working heading size. Open question; the system follows the mockups until decided.
+**The rule: length decides (agreed 2026-10-05, Rufus and Sylvie).** Polyamine is used almost everywhere for display: all heroes and big titles, section headlines, card titles. It is not readable at length, so once display text runs past about ten words it moves to Restora: pull quotes, a bigger passage that should come through, a long title. This replaces the plan below, which reserved Polyamine for the hero only. **Four faces only:** the poetic italic is Restora too, not a fifth face (Fraunces is only the fallback while Restora is unlicensed).
 
 **Fixed 2026-10-05:** the mockups named "Appful Grotesque", which matched no font, so labels showed in the fallback (Hanken Grotesk). The system embeds Apfel Grotezk (Regular, Mittel, Fett) in `system/fonts.css`.
 

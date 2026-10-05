@@ -8,8 +8,8 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 |---|---|---|
 | **1 · Landscape poster** | Announces a gathering or event: date, title, photograph. Also works as an event banner on other platforms. | Have it: the *gathering* template |
 | **2 · Video cover** | Generic videos (talks, essays, explainers), including a quote-card variant. | Have it: the *talk* and *manifesto* templates |
-| **3 · Podcast episode cover** | Over the Mountains episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **Missing, and important.** Uriel's round 4 has a version in older styles; an earlier, better mockup may exist |
-| **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | Uriel's round 4, in older styles: to redo in the current system |
+| **3 · Podcast episode cover** | Over the Mountains episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
+| **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | **First pass done** in [examples/youtube/channel.html](examples/youtube/channel.html): banner (paper and night, desktop/mobile/TV views, safe-area guides), channel page mocks, avatar options (swallow-on-white recommended; the logo fails under 48px), lower third, watermark, About panel |
 
 Later, if needed: a vertical Shorts cover (1080 × 1920).
 
@@ -69,5 +69,6 @@ Tokens `--thumb-*` in [system/tokens.css](system/tokens.css) and the `.thumb` co
 
 ## Next
 
-1. **Thumbnail accuracy pass**: check each template at real feed sizes (360px and 168px) with the duration badge in place; fix label sizes; use real episode titles and guests; decide which labels must be readable.
-2. **Channel art in the current system**: banner and mobile crop, avatar (needs the small logo), podcast video cover, lower third and watermark, using the asset list from round 4.
+1. **Known:** at 168px the duration badge covers the end of the gathering title ("Find your peopl…"); the podcast label is ~5px there.
+2. **Thumbnail accuracy pass**: check each template at real feed sizes (360px and 168px) with the duration badge in place; fix label sizes; use real episode titles and guests; decide which labels must be readable.
+3. **Channel art review**: banner and mobile crop, avatar (needs the small logo), podcast video cover, lower third and watermark, using the asset list from round 4.

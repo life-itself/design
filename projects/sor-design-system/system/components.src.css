@@ -187,10 +187,10 @@
 .pull { padding: 28px 0; border-block: 1px solid var(--ink); font-family: var(--font-quote); font-size: var(--t-quote); line-height: 1.2; display: grid; gap: 8px }
 .reading .verse { font-size: clamp(24px, 3cqi, 32px); line-height: 1.3; text-align: center }
 .litany { list-style: none; margin: 0; padding: 0; counter-reset: l; display: grid }
-.litany li { counter-increment: l; display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: baseline; gap: 10px; padding: 12px 0; border-top: 1px solid var(--rule); font-size: 18px; line-height: 1.5 }
-/* Numbered in the quote face (Restora), plain arabic numerals: set like verse numbers, not like labels */
-.litany li::before { content: counter(l); font-family: var(--font-quote); font-size: 26px; line-height: 1; color: var(--muted); font-variant-numeric: oldstyle-nums }
-.litany li:last-child { font-family: var(--font-display); font-size: 28px; line-height: 1.25; border-bottom: 1px solid var(--rule) }
+.litany li { counter-increment: l; display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: baseline; gap: 12px; padding: 14px 0; font-size: 18px; line-height: 1.55 }
+/* Numbered like verses: the quote face (Restora) in light italic, large and muted, hanging in its own column. No rules between items. */
+.litany li::before { content: counter(l); font-family: var(--font-quote); font-style: italic; font-weight: 300; font-size: 30px; line-height: 1; color: var(--muted); font-variation-settings: "SOFT" 100; padding-left: 8px }
+.litany li:last-child { font-family: var(--font-display); font-size: 28px; line-height: 1.25 }
 
 /* ── Footer (night) ───────────────────────────────────────────── */
 .site-footer { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 24px; padding-block: 44px 32px; background: var(--night); color: var(--chalk); position: relative; z-index: 10 }
@@ -412,3 +412,92 @@
 /* Preview frame: scales the fixed artboard to the frame's width (tan(atan2()) turns a length ratio into a number) */
 .thumb-frame { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden }
 .thumb-frame > .thumb { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(tan(atan2(100cqi, var(--thumb-w)))) }
+
+/* 5 · Podcast guest (Over the Mountains episode cover): night ground with a mountain photo under a dark shade,
+   the guest in greyscale on the right fading into it, title and name on the left, the logo on its white disc.
+   Markup: .thumb.thumb--guest > img.thumb__photo, .thumb__scrim, img.thumb__guest, .thumb__text (label, title, byline, foot).
+   The podcast name is the one label sized to read at feed size (--thumb-label-l); keep the bottom-right corner (duration badge) clear of type. */
+.thumb--guest { background: var(--night); color: var(--chalk) }
+.thumb--guest::after { mix-blend-mode: screen; opacity: .08 }
+.thumb--guest .thumb__photo { object-position: 50% 40%; filter: saturate(.8) }
+.thumb--guest .thumb__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(23 22 19 / .9) 0%, rgb(23 22 19 / .66) 42%, rgb(23 22 19 / .3) 70%, rgb(23 22 19 / .3) 100%), linear-gradient(0deg, rgb(23 22 19 / .72) 0%, rgb(23 22 19 / 0) 40%) }
+.thumb__guest {
+  position: absolute; right: 0; top: 0; z-index: 2; width: var(--thumb-guest-w); height: 100%;
+  object-fit: cover; object-position: 50% 15%; filter: grayscale(1) contrast(1.08);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 46%), linear-gradient(0deg, transparent 0%, #000 34%); -webkit-mask-composite: source-in;
+          mask-image: linear-gradient(90deg, transparent 0%, #000 46%), linear-gradient(0deg, transparent 0%, #000 34%); mask-composite: intersect;
+}
+.thumb--guest .thumb__text { position: absolute; left: var(--thumb-pad); top: 56px; bottom: 46px; width: 720px; z-index: 3; display: flex; flex-direction: column }
+.thumb--guest .thumb__label { font-size: var(--thumb-label-l); letter-spacing: .12em; color: var(--chalk) }
+.thumb--guest .thumb__ep { color: var(--night-muted); margin-left: .4em }
+.thumb--guest .thumb__title { font-size: var(--thumb-title-xl); color: var(--white); margin-top: 30px }
+.thumb--guest .thumb__byline { font-size: var(--thumb-name); font-weight: 600; line-height: 1.05; letter-spacing: -.01em; margin-top: 30px; color: var(--chalk) }
+.thumb--guest .thumb__foot { margin-top: auto; display: flex; align-items: center; gap: 22px }
+.thumb--guest .thumb__foot .thumb__label { font-size: var(--thumb-label-s); letter-spacing: var(--track-label) }
+.thumb--guest .thumb__disc { position: static; width: var(--thumb-disc); height: var(--thumb-disc); padding: 0; overflow: hidden }
+.thumb--guest .thumb__disc img { width: 112%; height: 112%; flex: none }
+
+/* ── YouTube channel art (fixed artboards) ───────────────────────
+   Banner, avatar, lower third and watermark, sized with the --yt-* tokens. Each is a fixed artboard;
+   .chan-frame scales one to fit its column and can crop it to what a device shows:
+   the default or --tv (whole 2560×1440 banner), --desktop (the 2560×423 strip), --mobile (the 1546×423 safe area),
+   --video (a 1920×1080 frame), --avatar (800×800 in a circle). Add .show-guides on an ancestor to draw the
+   strip and safe area as dashed lines. Woodcuts in ink on paper, chalk on night; no red but the logo's own. */
+.chan-frame {
+  --art-w: var(--yt-banner-w); --art-h: var(--yt-banner-h); --crop-w: var(--art-w); --crop-h: var(--art-h);
+  container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+}
+.chan-frame > * {
+  position: absolute; left: 0; top: 0; transform-origin: 0 0;
+  /* --chan-scale, if a page script sets it (frame width ÷ --crop-w), wins: Chrome can keep a stale 100cqi inside transforms after a grid relayout */
+  transform: scale(var(--chan-scale, tan(atan2(100cqi, var(--crop-w))))) translate(calc((var(--crop-w) - var(--art-w)) / 2), calc((var(--crop-h) - var(--art-h)) / 2));
+}
+.chan-frame--desktop { --crop-h: var(--yt-strip-h); aspect-ratio: 2560 / 423 }
+.chan-frame--mobile { --crop-w: var(--yt-safe-w); --crop-h: var(--yt-strip-h); aspect-ratio: 1546 / 423 }
+.chan-frame--video { --art-w: var(--yt-video-w); --art-h: var(--yt-video-h) }
+.chan-frame--avatar { --art-w: var(--yt-avatar); --art-h: var(--yt-avatar); aspect-ratio: 1; border-radius: 50% }
+:where(.chan-frame) img { max-width: none }
+
+/* Banner: the lockup centred in the safe area; swallows and mountains sit outside it, seen on desktop and TV only */
+.chan-banner { width: var(--yt-banner-w); height: var(--yt-banner-h); overflow: hidden; isolation: isolate; background: var(--paper); color: var(--ink) }
+.chan-banner::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: var(--grain-opacity); mix-blend-mode: multiply; background-image: url("GRAIN"); background-size: 300px }
+.chan-banner--night { background: var(--night); color: var(--chalk) }
+.chan-banner--night::after { mix-blend-mode: screen; opacity: .08 }
+.chan-banner__lockup { position: absolute; inset: 0; margin: auto; height: max-content; width: max-content; max-width: calc(var(--yt-safe-w) - 80px); display: flex; align-items: center; gap: 56px }
+.chan-banner__logo { flex: none; width: var(--yt-banner-logo); height: var(--yt-banner-logo); mix-blend-mode: multiply }
+.chan-banner--night .chan-banner__logo { mix-blend-mode: normal; background: var(--white); border-radius: 50%; padding: 10px }
+.chan-banner__name { font-family: var(--font-display); font-size: var(--yt-wordmark); font-weight: 400; line-height: .95; letter-spacing: -.01em; margin: 0; white-space: nowrap }
+.chan-banner__tagline { font-family: var(--font-poem); font-style: italic; font-variation-settings: "SOFT" 100; font-weight: 300; font-size: var(--yt-tagline); line-height: 1.2; margin: 22px 0 0; opacity: .82 }
+.chan-banner__flock { position: absolute; left: 90px; top: calc(50% - 170px); width: 360px; height: auto; color: currentColor }
+.chan-banner__range {
+  position: absolute; right: 36px; top: calc(50% + var(--yt-strip-h) / 2 - 270px); width: 432px; height: 270px; background: currentColor;
+  -webkit-mask: url("woodcuts/mountain-range.svg") center bottom / contain no-repeat;
+          mask: url("woodcuts/mountain-range.svg") center bottom / contain no-repeat;
+}
+.chan-guides { display: none; position: absolute; inset: 0; z-index: 5; pointer-events: none; font-family: var(--font-label); font-size: 30px; font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase }
+.show-guides .chan-guides { display: block }
+.chan-guides i { position: absolute; top: calc(50% - var(--yt-strip-h) / 2); height: var(--yt-strip-h); border: 5px dashed currentColor; opacity: .55; font-style: normal; padding: 10px 16px }
+.chan-guides__strip { left: 0; right: 0 }
+.chan-guides__safe { left: calc(50% - var(--yt-safe-w) / 2); width: var(--yt-safe-w) }
+
+/* Avatar: 800×800, shown as a circle. --logo is the current mark (fails below ~48px); --swallow and --seal are proposals */
+.chan-avatar { width: var(--yt-avatar); height: var(--yt-avatar); display: grid; place-items: center; overflow: hidden; background: var(--white); color: var(--ink) }
+.chan-avatar > img { width: 112%; height: 112% }
+.chan-avatar > svg { width: 84%; height: auto; transform: translate(-1%, 4%) rotate(-20deg) }
+.chan-avatar--paper { background: var(--paper) }
+.chan-avatar--night { background: var(--night); color: var(--chalk) }
+.chan-avatar--seal > svg { width: 94%; transform: none }
+
+/* Lower third and watermark, drawn on a 1920×1080 video frame */
+.chan-video { width: var(--yt-video-w); height: var(--yt-video-h); overflow: hidden; background: var(--night) }
+.chan-video > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.chan-lower { position: absolute; left: 96px; bottom: 112px; z-index: 2; max-width: 1000px; background: var(--white); color: var(--ink); padding: 30px 72px 36px 52px; display: grid; gap: 8px }
+.chan-lower::before {
+  content: ""; position: absolute; left: 0; right: 0; top: calc(2px - var(--thumb-tear)); height: var(--thumb-tear); background: inherit;
+  -webkit-mask: url("TEAR") 0 0 / 100% 100% no-repeat;
+          mask: url("TEAR") 0 0 / 100% 100% no-repeat;
+}
+.chan-lower__label { font-family: var(--font-label); font-size: var(--yt-l3-label); font-weight: 700; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--muted) }
+.chan-lower__name { font-family: var(--font-display); font-size: var(--yt-l3-name); font-weight: 400; line-height: 1; margin: 6px 0 0 }
+.chan-lower__role { font-size: var(--yt-l3-role); font-weight: 300; line-height: 1.25; color: var(--muted) }
+.chan-watermark { position: absolute; right: 56px; bottom: 56px; z-index: 2; width: var(--yt-watermark); opacity: .92 }

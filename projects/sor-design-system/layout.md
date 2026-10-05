@@ -10,7 +10,8 @@ A page is a stack of grounds. Rhythm comes from changing the ground, not from bo
 
 ## Rhythm of grounds
 
-- **White** for statements, lists and reading; **paper** for collections; **sunlight** for joy and invitations.
+- **White is the default ground.** **Paper** (off-white) is used sometimes, to feel like paper, as in the Take part section; **sunlight** (baby yellow) at times, to bring in a little colour.
+- **Torn edges between sections often**, not only around the night section: a balance, not every boundary.
 - Never put two sunlight sections next to each other.
 - **One night section** per page, roughly two thirds of the way down, where the page goes deep (selected work, a reading). The footer is the only other night.
 
