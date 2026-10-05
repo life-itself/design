@@ -2,6 +2,8 @@
 
 Real people outdoors, doing things together, beside engraving, printmaking and honest art. Photographs carry the colour of the brand. Part of the [SoR design system](README.md).
 
+<iframe class="specimen" src="specimens/photography.html" style="aspect-ratio:1000/380" loading="lazy" title="Photography, rendered"></iframe>
+
 **Status:** every photograph in the system and examples is a **mood board placeholder, not cleared for public use**. Use them freely in mockups and examples; replace or clear them before anything goes public.
 
 ## Choose

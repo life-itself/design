@@ -2,6 +2,8 @@
 
 Every colour, face and layout decision is judged against one phrase, not against taste. Part of the [SoR design system](README.md); start building from [BUILD.md](BUILD.md). Who we are and how we sound: [brand.md](../2026-sor-website/brand.md).
 
+<iframe class="specimen" src="specimens/feel.html" style="aspect-ratio:1000/374" loading="lazy" title="Feel, rendered"></iframe>
+
 ## Grounded hope
 
 Hope stays the destination, and it is earned by going through the dark rather than around it. A glowing sunrise painting is hope without ground; Dark Mountain is ground without much hope. We sit between: a skilled, caring presence at an ending and at a birth (the doula is a candidate guiding image, still open).

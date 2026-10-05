@@ -2,6 +2,8 @@
 
 A page is a stack of grounds. Rhythm comes from changing the ground, not from boxes, borders or colour. Part of the [SoR design system](README.md); see the diagram in [guide.html](guide.html#rhythm).
 
+<iframe class="specimen" src="specimens/rhythm.html" style="aspect-ratio:1000/536" loading="lazy" title="Rhythm, rendered"></iframe>
+
 ## Sections
 
 - Every section runs full width, with the page gutter as side padding (`.gutter`, 16–56px) and vertical padding of 44–96px (`.section`).

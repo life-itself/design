@@ -2,6 +2,8 @@
 
 Every component in [system/components.css](system/components.css), with when to use it and the HTML to copy. See them all rendered in [guide.html](guide.html#components), and in whole pages in [examples/](examples/). Part of the [SoR design system](README.md); start from [BUILD.md](BUILD.md).
 
+<iframe class="specimen" src="specimens/components.html" style="aspect-ratio:1000/2435" loading="lazy" title="Components, rendered"></iframe>
+
 Edit the readable source `system/components.src.css`, then run `python3 system/build-css.py`.
 
 ## Base and type roles

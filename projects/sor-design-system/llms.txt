@@ -1,0 +1,38 @@
+# Seeds of Renaissance Design System
+
+> The brand and design system for Seeds of Renaissance: feel, voice, colour, type, layout, woodcut graphics, photography, logo, components and whole-page examples, with the CSS to build from. Version 0.1. Every .md link below is raw markdown.
+
+To build something: read BUILD.md first, copy the closest example, use only classes from system/components.css, and check against the list at the end of BUILD.md. Topic pages hold the detail; you rarely need them for a first draft.
+
+## Start
+
+- [BUILD.md](https://sor-design-system-rufuspollock.flowershow.me/BUILD.md): the brief for people and agents. Rules in one paragraph, the page shell, section menu, examples to copy, checklist.
+
+## Topics
+
+- [feel.md](https://sor-design-system-rufuspollock.flowershow.me/feel.md): grounded hope, what we are not, registers, principles
+- [voice.md](https://sor-design-system-rufuspollock.flowershow.me/voice.md): how we sound, key lines, rewrites, calls to action (draft)
+- [colour.md](https://sor-design-system-rufuspollock.flowershow.me/colour.md): grounds, inks and the one accent, with roles and rules
+- [type.md](https://sor-design-system-rufuspollock.flowershow.me/type.md): the four faces, the scale, and why
+- [layout.md](https://sor-design-system-rufuspollock.flowershow.me/layout.md): grounds and rhythm, torn edges, grid and spacing
+- [graphics.md](https://sor-design-system-rufuspollock.flowershow.me/graphics.md): woodcut swallow, seal, seeds and clusters, and how to use them
+- [photography.md](https://sor-design-system-rufuspollock.flowershow.me/photography.md): what to choose and avoid (all current photos are placeholders)
+- [logo.md](https://sor-design-system-rufuspollock.flowershow.me/logo.md): versions and placement (provisional)
+- [components.md](https://sor-design-system-rufuspollock.flowershow.me/components.md): every component, when to use it, HTML to copy
+
+## Examples and channels
+
+- [examples.md](https://sor-design-system-rufuspollock.flowershow.me/examples.md): every example page, by kind (web, YouTube; slides and print next)
+- [youtube.md](https://sor-design-system-rufuspollock.flowershow.me/youtube.md): thumbnails and channel art
+- [slides.md](https://sor-design-system-rufuspollock.flowershow.me/slides.md): slide decks (in progress)
+
+## Code
+
+- [system/tokens.css](https://sor-design-system-rufuspollock.flowershow.me/system/tokens.css): every colour, face, size and space
+- [system/components.src.css](https://sor-design-system-rufuspollock.flowershow.me/system/components.src.css): components, readable source
+- [system/components.css](https://sor-design-system-rufuspollock.flowershow.me/system/components.css): components, built (link this one)
+
+## Optional
+
+- [guide.html](https://sor-design-system-rufuspollock.flowershow.me/guide.html): the whole system rendered on one page (visual; HTML)
+- [MAINTAINING.md](https://sor-design-system-rufuspollock.flowershow.me/MAINTAINING.md): how this site is built and published

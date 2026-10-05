@@ -2,6 +2,8 @@
 
 Printmade marks, slightly rough at the edge. Black on light grounds, chalk on night. Never coloured, except the occasional red seed. Part of the [SoR design system](README.md); see them rendered in [guide.html](guide.html#graphics).
 
+<iframe class="specimen" src="specimens/graphics.html" style="aspect-ratio:1000/1200" loading="lazy" title="Graphics, rendered"></iframe>
+
 ## Using them
 
 Include `system/graphics.js` at the top of the body; it inlines the symbols. Then:

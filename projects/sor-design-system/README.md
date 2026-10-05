@@ -1,67 +1,79 @@
 # Seeds of Renaissance Design System
 
-The brand and design system for Seeds of Renaissance: how it looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** The single home for SoR brand and design-system work.
+How Seeds of Renaissance looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** Every photograph shown is a mood board placeholder, not cleared for public use.
 
-**Building something? Start with [BUILD.md](BUILD.md).** It is the brief for people and AI agents alike: the rules in one paragraph, the page shell, a menu of sections, the examples to copy and a checklist.
+<iframe class="specimen" src="specimens/cover.html" style="aspect-ratio:1000/482" title="Grounded hope, set in ink and paper"></iframe>
 
-**Want to see it?** [guide.html](guide.html) shows the whole system rendered, set in its own style.
+**Building something?** Start with [BUILD.md](BUILD.md): the rules in one paragraph, the page shell, a menu of sections, the examples to copy and a checklist. It is written for people and AI agents alike.
 
-**Published** at https://sor-design-system-rufuspollock.flowershow.me (Flowershow; rebuild with `python3 system/build-site.py`, then `fl --yes site`). Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
+**Want it all on one page?** [The guide](guide.html) shows the whole system rendered, set in its own style.
 
-## The system
+**Setting up an AI agent?** Point it at [llms.txt](llms.txt), or hand it [BUILD.md](BUILD.md). Every page here is also served as raw markdown: add `.md` to its URL.
 
-| Page | What |
-|---|---|
-| [feel.md](feel.md) | Grounded hope, what we are not, rigour and warmth, the three registers |
-| [voice.md](voice.md) | How we sound: key lines, principles, rewrites, calls to action, YouTube titles (draft) |
-| [colour.md](colour.md) | Grounds, inks and the one accent, with roles and rules |
-| [type.md](type.md) | The faces, the scale, and the research behind them |
-| [layout.md](layout.md) | Grounds and rhythm, torn edges, grid and spacing |
-| [graphics.md](graphics.md) | The woodcut swallow, seal, seeds and clusters; all twenty woodcuts in [woodcuts.html](woodcuts.html) |
-| [photography.md](photography.md) | What to choose and avoid; placeholders |
-| [logo.md](logo.md) | Versions and placement (provisional) |
-| [components.md](components.md) | Every component, with HTML to copy |
+## Feel
+
+Every colour, face and layout decision is judged against one phrase: grounded hope. [The feel, registers and principles →](feel.md)
+
+<iframe class="specimen" src="specimens/feel.html" style="aspect-ratio:1000/374" loading="lazy" title="Feel, rendered"></iframe>
+
+## Voice
+
+A poet-philosopher who thinks clearly: the lyrical leads, rigour grounds it. Key lines to reuse, principles, rewrites, calls to action and YouTube titles. Draft for review. [Voice and tone →](voice.md)
+
+## Colour
+
+Four grounds, three inks and one accent. Colour comes from photographs; buttons are black; the logo red is only for an occasional link. [Roles, proportion, do and don't →](colour.md)
+
+<iframe class="specimen" src="specimens/colour.html" style="aspect-ratio:1000/622" loading="lazy" title="Colour, rendered"></iframe>
+
+## Type
+
+Four faces. Length decides: Polyamine while it's short, Restora when it runs long. Bricolage Grotesque for reading, Apfel Grotezk for labels. [Faces, scale and research →](type.md)
+
+<iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
+
+## Layout and rhythm
+
+A page is a stack of full-width grounds, often joined by torn edges. One night section per page, plus the footer. [Sections, grounds, grid and spacing →](layout.md)
+
+<iframe class="specimen" src="specimens/rhythm.html" style="aspect-ratio:1000/536" loading="lazy" title="Grounds and rhythm, rendered"></iframe>
+
+## Woodcut graphics
+
+Printmade marks in ink or chalk, and a red set: the swallow, the seal, seeds and clusters. [Using them →](graphics.md) · [All twenty woodcuts →](woodcuts.html)
+
+<iframe class="specimen" src="specimens/graphics.html" style="aspect-ratio:1000/1200" loading="lazy" title="Woodcut graphics, rendered"></iframe>
+
+## Photography
+
+Real people outdoors, doing things together, beside engraving and printmaking. Photographs carry the colour. [What to choose and avoid →](photography.md)
+
+<iframe class="specimen" src="specimens/photography.html" style="aspect-ratio:1000/380" loading="lazy" title="Photography, rendered"></iframe>
+
+## Logo
+
+Provisional. Set on a white disc or tile, so it sits on any ground. [Versions and placement →](logo.md)
+
+<iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
+
+## Components
+
+Headers, heroes, statements, pathways, calendars, bands, footers and more: each a real component with the HTML to copy. [All components →](components.md) · [Rendered in the guide →](guide.html#components)
 
 ## Examples
 
-Whole pages built only from the system. Copy the closest one.
+Whole pages built only from the system. To make something new, copy the closest one. [All examples, by kind →](examples.md)
 
-| Example | Register |
-|---|---|
-| [examples/web/home.html](examples/web/home.html) | Landing page |
-| [examples/web/manifesto.html](examples/web/manifesto.html) | Long reading |
-| [examples/web/gatherings.html](examples/web/gatherings.html) | Events and community |
-| [examples/web/join.html](examples/web/join.html) | Joining |
-| [examples/web/magazine.html](examples/web/magazine.html) | Publication |
-| [examples/web/white-paper.html](examples/web/white-paper.html) | Research |
-| [examples/youtube/](examples/youtube/index.html) | YouTube thumbnails, 1280×720. Channel work and history: [youtube.md](youtube.md) |
+<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1890" loading="lazy" title="Examples"></iframe>
 
-Slides are next: [slides.md](slides.md). Then print.
+## Channels
 
-## Code
-
-| Path | What |
-|---|---|
-| [system/tokens.css](system/tokens.css) | Every colour, face, size and space, with its role. Change the system here. |
-| [system/components.src.css](system/components.src.css) | Components, readable source. Run `python3 system/build-css.py` to make `components.css`. |
-| `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed). Built by `build-fonts.py`. |
-| `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `build-graphics.py`. |
-| `system/woodcuts/` | All woodcut SVGs and the script that draws them (moved from `sor-brand/graphics/woodcuts/`). Gallery built by `build-woodcuts.py`. |
-| `system/sor.js` | Small behaviours (selected-work picker) |
-| `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
-
-Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/`.
-
-## Where things came from
-
-- [sor-brand/](sor-brand/STATUS.md): the former `life-itself/sor-brand` repo (mockups, moodboards, logo, woodcuts, design-system plan and decision log), merged here 2026-10-05 with history. The system was extracted from its Direction E v7 home and manifesto and its four-page v2 mockup.
-- [type/](type/): the two type selection rounds and research notes.
-- Brand substance (who we are, offers, voice) stays in [../2026-sor-website/brand.md](../2026-sor-website/brand.md).
-
-Shared by the SoR [experiences](../2026-sor-experiences/) and the website. The experiences carry their own working palette in [common.md](../2026-sor-experiences/experiences/00-home/common.md#colour), not yet reconciled with this system.
+- [YouTube](youtube.md): thumbnails, podcast covers and channel art.
+- [Slides](slides.md): next.
+- Print: later.
 
 ## Open questions
 
-See the last chapter of [guide.html](guide.html#open). In short: Polyamine or Restora for headings, font licences, the logo, photography, woodcut sourcing, the scale for slides and print, sub-brand colours. Also: where the Book's illuminated display face belongs.
+Polyamine or Restora for headings; font licences; the logo; photography (all placeholders); woodcut sourcing; the scale for slides and print; sub-brand colours; where the Book's illuminated display face belongs. Tracking: beads `design-34t`.
 
-Tracking: beads `design-34t`.
+Maintaining this site (publishing, build scripts, where things came from): [MAINTAINING.md](MAINTAINING.md).

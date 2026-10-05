@@ -2,6 +2,8 @@
 
 Colours have roles, not just values. Four grounds, three inks and one accent, used in that order of frequency. Values live in [system/tokens.css](system/tokens.css); see them rendered in [guide.html](guide.html#colour). Part of the [SoR design system](README.md).
 
+<iframe class="specimen" src="specimens/colour.html" style="aspect-ratio:1000/622" loading="lazy" title="Colour, rendered"></iframe>
+
 ## Grounds (backgrounds only)
 
 | Token | Value | Role |

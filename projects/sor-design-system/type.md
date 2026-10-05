@@ -2,6 +2,8 @@
 
 The typefaces, and where each one is used. Settled over two rounds in September 2026; the reasoning, and everything rejected, is in [type/research-notes.md](type/research-notes.md).
 
+<iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
+
 Part of the shared [SoR design system](README.md), used by the [experiences](../2026-sor-experiences/) and the [website](../2026-sor-website/). Experience-only notes live in [common.md](../2026-sor-experiences/experiences/00-home/common.md#type).
 
 Tracking: beads `design-2pk` (closed).

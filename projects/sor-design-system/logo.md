@@ -2,6 +2,8 @@
 
 A black swallow in a radiating circle of red fingerprints: many hands around a bird in flight. **Provisional.** Part of the [SoR design system](README.md). Full notes and issues: [sor-brand/logo.md](sor-brand/logo.md).
 
+<iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
+
 ## Using it
 
 - File: `system/img/logo.png` (the current mark).

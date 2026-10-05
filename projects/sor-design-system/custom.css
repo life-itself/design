@@ -1,0 +1,19 @@
+/* Specimen frames: guide chapters embedded in the markdown pages (see MAINTAINING.md).
+   Height comes from each iframe's inline aspect-ratio; the specimen scales to the width. */
+.specimen {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  margin: 1.5rem 0 2.25rem;
+  background: #fbfaf6;
+  outline: 1px solid #e0dacf;
+}
+@media (max-width: 640px) {
+  .specimen { aspect-ratio: auto !important; height: 70vh }
+}
+/* Wide screens: Flowershow puts the page contents on the right and leaves the (off) sidebar's
+   slot empty on the left; let specimens run into it so they render closer to full size. */
+@media (min-width: 1280px) {
+  .layout-inner.has-toc .specimen { width: calc(100% + 240px); margin-left: -240px }
+}

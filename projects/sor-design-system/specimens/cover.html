@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Generated from guide.html by system/build-specimens.py. Do not edit. -->
+<title>Seeds of Renaissance Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../system/fonts.css">
+<link rel="stylesheet" href="../system/tokens.css">
+<link rel="stylesheet" href="../system/components.css">
+<style>
+/* The guide is set in the system it describes: one fixed brand world, no dark theme (night is a section).
+   Guide-only chrome is prefixed g-. Everything else is a real component from components.css. */
+:root { --g-code: "JetBrains Mono", ui-monospace, Menlo, monospace; color-scheme: light }
+html, body { background: var(--paper) }
+body { margin: 0 }
+.g-wrap { max-width: 1180px; margin-inline: auto; padding-inline: var(--gutter) }
+.g-cover { background: var(--night); color: var(--chalk); position: relative; z-index: 10; padding-block: clamp(48px, 9cqi, 120px) clamp(56px, 9cqi, 120px); overflow: hidden }
+.g-cover .g-wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--gap-l); align-items: end }
+.g-cover h1 { font-family: var(--font-display); font-size: var(--t-hero); line-height: .95; margin: 14px 0 22px }
+.g-cover .lede { font-size: var(--t-intro); max-width: 40ch; color: var(--chalk) }
+.g-cover .label { color: var(--night-muted) }
+.g-cover dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; font-size: var(--t-small); color: var(--night-muted); border-top: 1px solid var(--night-rule); padding-top: 18px }
+.g-cover dt { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; padding-top: 3px }
+.g-cover dd { margin: 0; color: var(--chalk) }
+.g-cover .flock { color: var(--chalk); right: 6%; top: 12%; width: min(22cqi, 260px) }
+.g-toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); border-bottom: 1px solid var(--rule) }
+.g-toc nav { display: flex; gap: 6px 22px; overflow-x: auto; padding-block: 12px; scrollbar-width: none }
+.g-toc a { text-decoration: none; white-space: nowrap; color: var(--muted) }
+.g-toc a:hover { color: var(--ink) }
+.g-ch { padding-block: var(--section); position: relative; z-index: 10; scroll-margin-top: 48px }
+.g-ch + .g-ch { border-top: 1px solid var(--rule) }
+.g-ch.ground-white + .g-ch, .g-ch + .g-ch.ground-white { border-top: 0 }
+.g-head { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 8px 24px; margin-bottom: clamp(28px, 4cqi, 48px) }
+.g-head .label { color: var(--muted); padding-top: 14px }
+.g-head h2 { font-family: var(--font-display); font-size: var(--t-section); line-height: 1 }
+.g-head p { grid-column: 2; font-size: var(--t-lead); font-weight: 300; line-height: 1.38; max-width: 40ch; margin-top: 10px }
+.g-body { display: grid; gap: clamp(28px, 4cqi, 48px); margin-left: calc(120px + 24px) }
+.g-h3 { font-family: var(--font-label); font-size: var(--t-label); font-weight: 500; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--muted); margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--rule) }
+.g-prose { max-width: 62ch; display: grid; gap: 14px }
+.g-prose p, .g-prose li { font-size: var(--t-body) }
+.g-prose ul { margin: 0; padding-left: 20px; display: grid; gap: 6px }
+.g-more { font-size: var(--t-small); color: var(--muted); max-width: 70ch }
+.g-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--gap-m) }
+.g-note { border-left: 2px solid var(--ink); padding: 4px 0 4px 16px; max-width: 62ch; font-size: var(--t-small) }
+.g-note b { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; display: block; margin-bottom: 4px }
+code, .g-code { font-family: var(--g-code); font-size: .82em; background: rgb(27 25 22 / .06); padding: 1px 5px; border-radius: 2px }
+pre.g-code { display: block; padding: 16px 18px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 0; background: var(--night); color: var(--chalk); border-radius: 0 }
+
+/* Feel */
+.g-essence { font-family: var(--font-display); font-size: clamp(48px, 9cqi, 128px); line-height: .9 }
+.g-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-notes > div { border-top: 2px solid var(--ink); padding-top: 14px; display: grid; gap: 8px; align-content: start }
+.g-notes h3 { font-family: var(--font-display); font-size: var(--t-card); line-height: 1.05 }
+.g-notes p { color: var(--muted); font-size: var(--t-small) }
+.g-not { display: flex; flex-wrap: wrap; gap: 8px }
+.g-not span { font-family: var(--font-label); font-size: var(--t-label); letter-spacing: .08em; text-transform: uppercase; padding: 7px 12px; border: 1px solid var(--rule); color: var(--muted); text-decoration: line-through; text-decoration-color: var(--red) }
+.g-table { width: 100%; border-collapse: collapse; font-size: var(--t-small) }
+.g-table th { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; font-weight: 700; color: var(--muted); text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--ink) }
+.g-table td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: baseline }
+.g-table td:first-child { font-family: var(--font-display); font-size: 22px; white-space: nowrap }
+.g-scroll { overflow-x: auto }
+
+/* Principles */
+.g-rules { list-style: none; margin: 0; padding: 0; counter-reset: r; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--gap-l) }
+.g-rules li { counter-increment: r; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 18px 0; border-top: 1px solid var(--rule) }
+.g-rules li::before { content: counter(r, upper-roman) "."; font-family: var(--font-label); font-size: var(--t-label); font-weight: 700; letter-spacing: .1em; color: var(--muted); padding-top: 8px; grid-row: span 2 }
+.g-rules b { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.12 }
+.g-rules span { color: var(--muted); font-size: var(--t-small) }
+
+/* Colour */
+.g-swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.g-sw { display: grid; grid-template-rows: 120px auto; background: var(--white) }
+.g-sw .chip { position: relative }
+.g-sw .meta { padding: 12px 14px 16px; display: grid; gap: 4px; align-content: start }
+.g-sw b { font-family: var(--font-display); font-weight: 400; font-size: 22px }
+.g-sw .hex { font-family: var(--g-code); font-size: 12px; color: var(--muted) }
+.g-sw p { font-size: 14px; color: var(--muted); line-height: 1.4 }
+.g-proportion { display: flex; height: 56px; border: 1px solid var(--rule) }
+.g-proportion > div { display: grid; place-items: end start; padding: 6px 8px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .1em; text-transform: uppercase }
+.g-dodont { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-dodont > div { display: grid; gap: 10px; align-content: start }
+.g-dodont .label { color: var(--muted) }
+.g-dodont ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: var(--t-small) }
+
+/* Type */
+.g-faces { display: grid; gap: 0 }
+.g-face { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 8px var(--gap-l); padding: 24px 0; border-top: 1px solid var(--rule); align-items: baseline }
+.g-face:last-child { border-bottom: 1px solid var(--rule) }
+.g-face .who { display: grid; gap: 4px }
+.g-face .who b { font-family: var(--font-label); font-size: var(--t-label); font-weight: 700; letter-spacing: var(--track-label); text-transform: uppercase }
+.g-face .who span { font-size: 14px; color: var(--muted) }
+.g-face .sample { min-width: 0; overflow-wrap: anywhere }
+.g-scale { display: grid }
+.g-scale .row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--rule) }
+.g-scale .row > span:first-child { font-family: var(--g-code); font-size: 12px; color: var(--muted) }
+.g-scale .row > div { min-width: 0; overflow: hidden; text-overflow: ellipsis }
+
+/* Rhythm diagram */
+.g-rhythm { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: var(--gap-l); align-items: start }
+.g-strip { display: grid; border: 1px solid var(--rule); container-type: inline-size }
+.g-strip > div { position: relative; padding: 10px 12px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .1em; text-transform: uppercase; min-height: 34px; display: flex; align-items: center }
+.g-strip .n { background: var(--night); color: var(--chalk); min-height: 64px }
+.g-strip .w { background: var(--white) }
+.g-strip .p { background: var(--paper) }
+.g-strip .s { background: var(--sunlight) }
+.g-strip .ph { background: linear-gradient(160deg, #6b6f74, #3d3a33); color: #fff; min-height: 80px }
+.g-strip .tear { position: absolute; left: 0; right: 0; height: 10px; margin: 0 }
+
+/* Graphics */
+.g-plates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.g-plate { position: relative; aspect-ratio: 1; display: grid; place-items: center; padding: 22px 18px 40px }
+.g-plate > svg { width: 62%; height: auto }
+.g-plate > .lab { position: absolute; left: 14px; right: 14px; bottom: 12px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+.g-plate.w { background: var(--white) } .g-plate.p { background: var(--paper) } .g-plate.s { background: var(--sunlight) }
+.g-plate.n { background: var(--night) } .g-plate.n > svg { color: var(--chalk) } .g-plate.n > .lab { color: var(--night-muted) }
+.g-plates.wide { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.g-plates.wide .g-plate { aspect-ratio: 4 / 3 }
+.g-plates.wide .g-plate > svg { width: 84% }
+
+/* Photography */
+.g-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover }
+
+/* Logo */
+.g-logos { display: flex; flex-wrap: wrap; gap: 22px; align-items: center }
+.g-logos > div { display: grid; gap: 10px; justify-items: center }
+.g-logos .tile { width: 132px; height: 132px; display: grid; place-items: center }
+.g-logos .tile img { width: 110px; height: 110px }
+.g-logos .disc { border-radius: 50%; background: var(--white) }
+.g-logos .sq { background: var(--white) }
+.g-logos .on-n { background: var(--night); padding: 18px }
+.g-logos .on-s { background: var(--sunlight); padding: 18px }
+.g-logos .cap { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+
+/* Component specimens: each is a real slice of page at full width */
+.g-spec { display: grid; gap: 10px }
+.g-spec > .g-spec-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; justify-content: space-between }
+.g-spec > .g-spec-head b { font-family: var(--font-display); font-weight: 400; font-size: 26px }
+.g-spec > .g-spec-head span { font-size: 14px; color: var(--muted); max-width: 60ch }
+.g-frame { container-type: inline-size; border: 1px solid var(--rule); background: var(--paper); position: relative; overflow: hidden; isolation: isolate }
+.g-frame > .tear--overlay { z-index: 12 }
+.g-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 28px var(--gutter) }
+.g-templates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-m) }
+.g-templates a { display: grid; gap: 10px; text-decoration: none }
+.g-templates .g-thumb { aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--rule); position: relative; background: var(--white) }
+.g-templates .g-thumb img { width: 100%; height: 100%; object-fit: cover }
+.g-templates h3 { font-family: var(--font-display); font-size: var(--t-card) }
+.g-templates p { color: var(--muted); font-size: var(--t-small) }
+.g-open { counter-reset: q; list-style: none; margin: 0; padding: 0; display: grid }
+.g-open li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid var(--rule) }
+.g-open li::before { content: counter(q) "."; font-family: var(--font-label); font-weight: 700; font-size: var(--t-label); color: var(--muted); padding-top: 4px }
+.g-open b { font-weight: 600 }
+
+@container (max-width: 900px) {
+  .g-cover .g-wrap, .g-rhythm { grid-template-columns: 1fr }
+  .g-head { grid-template-columns: 1fr }
+  .g-head p { grid-column: 1 }
+  .g-head .label { padding-top: 0 }
+  .g-body { margin-left: 0 }
+  .g-rules, .g-notes, .g-dodont, .g-templates { grid-template-columns: 1fr }
+  .g-swatches, .g-plates, .g-photos { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .g-plates.wide { grid-template-columns: 1fr }
+  .g-face { grid-template-columns: 1fr }
+  .g-scale .row { grid-template-columns: 1fr; gap: 4px }
+}
+</style>
+<style>
+html, body { overflow-x: hidden }
+.g-ch { padding-block: 28px; border: 0 !important }
+.g-cover { padding-block: clamp(32px, 6cqi, 72px) }
+.g-head, .g-more { display: none }
+.g-body { margin-left: 0 }
+</style>
+</head>
+<body>
+<div class="sor">
+<script src="../system/graphics.js"></script>
+<header class="g-cover">
+  <svg class="flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+  <div class="g-wrap">
+    <div>
+      <span class="label">Seeds of Renaissance · Brand and design system</span>
+      <h1>Grounded hope, set in ink and paper</h1>
+      <p class="lede">How the Seeds of Renaissance looks and why: the feel, the rules, the colours, faces, graphics and components, with the code to build pages from them.</p>
+    </div>
+    <dl>
+      <dt>Version</dt><dd>0.1 · 5 October 2026</dd>
+      <dt>Source</dt><dd>The home and manifesto mockups (v7) and the four-page mockup (v2)</dd>
+      <dt>Status</dt><dd>Colour, type, graphics and components set. Logo, photography and slides still open.</dd>
+      <dt>Home</dt><dd>Published at <a class="link" target="_top" href="https://sor-design-system-rufuspollock.flowershow.me" style="color:var(--chalk)">sor-design-system-rufuspollock.flowershow.me</a>. This page is a snapshot.</dd>
+      <dt>Images</dt><dd>All photographs are mood board placeholders, not cleared for public use.</dd>
+    </dl>
+  </div>
+</header>
+<span class="tear tear--bottom" style="background:var(--night)"></span>
+</div>
+<script>
+function fit() { document.documentElement.style.zoom = innerWidth >= 600 ? innerWidth / 1000 : 1 }
+fit(); addEventListener('resize', fit);
+document.querySelectorAll('.hex[data-token]').forEach(function (el) {
+  var v = getComputedStyle(document.documentElement).getPropertyValue(el.dataset.token).trim();
+  if (v) el.textContent = el.dataset.token + ' · ' + v;
+});
+</script>
+<script src="../system/sor.js"></script>
+</body>
+</html>
