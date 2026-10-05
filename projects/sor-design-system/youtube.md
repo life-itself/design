@@ -23,7 +23,7 @@ Later, if needed: a vertical Shorts cover (1080 × 1920).
 
 | Work | By | Status | Where |
 |---|---|---|---|
-| **Thumbnail templates** (gathering, podcast, manifesto, talk) in the current system | Sylvie, ported to the system 2026-10-05 | Current; needs an accuracy pass | [examples/youtube/](examples/youtube/index.html) · original [artifact](https://claude.ai/artifact/QEUjrhcpFTu5h9xjHP5Hco), source `sor-brand/mockups/youtube/` |
+| **Thumbnail templates** (gathering, podcast, manifesto, talk) in the current system | Sylvie, ported to the system 2026-10-05 | Current; needs an accuracy pass | [examples/youtube/](examples/youtube/index.html) · original [artifact](https://claude.ai/artifact/QEUjrhcpFTu5h9xjHP5Hco), source `archive/sor-brand-mockups/youtube/` |
 | **Channel directions, round 4**: banner, mobile crop, channel page, podcast video cover, lower third and watermark, About text and links | Uriel | Earlier exploration, before the current system | [artifact](https://claude.ai/artifact/UyEW5burVcqNSzQj8GT2f1) · archived copy [archive/youtube-channel-directions-round-4.html](archive/youtube-channel-directions-round-4.html) |
 
 ### Uriel's round 4: three directions

@@ -4,7 +4,7 @@ The typefaces, and where each one is used. Settled over two rounds in September 
 
 <iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
 
-Part of the shared [SoR design system](README.md), used by the [experiences](../2026-sor-experiences/) and the [website](../2026-sor-website/). Experience-only notes live in [common.md](../2026-sor-experiences/experiences/00-home/common.md#type).
+Part of the shared [SoR design system](README.md), used by the [experiences](../2026-sor-experiences/) and the [website](website.md). Experience-only notes live in [common.md](../2026-sor-experiences/experiences/00-home/common.md#type).
 
 Tracking: beads `design-2pk` (closed).
 

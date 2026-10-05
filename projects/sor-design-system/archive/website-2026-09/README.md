@@ -1,5 +1,7 @@
 # Seeds of Renaissance Website — Design (2026)
 
+> **Archived 2026-10-05.** Superseded by the [SoR design system](../../README.md). Links below point at the old folder layout. Brand substance is now [../../brand.md](../../brand.md) and page copy is `../../content/`.
+
 Design exploration for the new Seeds of Renaissance website (the successor to secondrenaissance.net).
 
 **Goal right now:** agree look and feel through mockups of a few real pages. Sitemap, IA and platform come later.

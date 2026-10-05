@@ -1,6 +1,6 @@
 # Feel
 
-Every colour, face and layout decision is judged against one phrase, not against taste. Part of the [SoR design system](README.md); start building from [BUILD.md](BUILD.md). Who we are and how we sound: [brand.md](../2026-sor-website/brand.md).
+Every colour, face and layout decision is judged against one phrase, not against taste. Part of the [SoR design system](README.md); start building from [BUILD.md](BUILD.md). Who we are and how we sound: [brand.md](brand.md).
 
 <iframe class="specimen" src="specimens/feel.html" style="aspect-ratio:1000/374" loading="lazy" title="Feel, rendered"></iframe>
 
@@ -32,7 +32,7 @@ Hope stays the destination, and it is earned by going through the dark rather th
 
 ## Who we design for
 
-People who sense the old world is ending before they can name it, and want to help seed the new: intellectually curious and practically hungry, allergic to hype, looking for grounded hope. Four personas (full detail in [brand.md](../2026-sor-website/brand.md#who-we-are-here-for), from the brand narrative):
+People who sense the old world is ending before they can name it, and want to help seed the new: intellectually curious and practically hungry, allergic to hype, looking for grounded hope. Four personas (full detail in [brand.md](brand.md#who-we-are-here-for), from the brand narrative):
 
 - **The meaning seeker** (mid-30s to 50s): therapist, teacher, tech, health. Reads McGilchrist. Aesthetically sensitive; wants the people they follow to have done the reading.
 - **The post-disillusionment renewer** (40s to 60s): ex-church, ex-corporate, ex-academic, ex-activist. Allergic to hype; trusts people who admit they don't have it figured out.
@@ -66,4 +66,4 @@ The rules that carry the feel. When a new page is in doubt, check it against the
 
 ## References
 
-Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [sor-brand/design-system-plan.md](sor-brand/design-system-plan.md).
+Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [decisions.md](decisions.md).

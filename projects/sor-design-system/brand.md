@@ -1,6 +1,6 @@
 # Seeds of Renaissance — Brand
 
-*Single source for the brand's substance: why, what, for whom, how we sound. Consolidated 2026-09-28. **No visual design here:** no palette, type or layout. The visual search starts clean (see [brief.md](brief.md)).*
+*Single source for the brand's substance: why, what, for whom, how we sound. Consolidated 2026-09-28. **No visual design here:** no palette, type or layout. Visual design lives in the [design system](README.md).*
 
 ## One line
 

@@ -28,7 +28,7 @@ From `projects/sor-design-system`:
 python3 system/build-specimens.py && python3 system/build-site.py && fl --yes site
 ```
 
-`build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, woodcuts page, system code and images, examples and archive. It leaves out the raw sor-brand mood board and mockups (third-party screenshots, uncleared images) and rewrites `.md` links in HTML pages to Flowershow page URLs.
+`build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, woodcuts page, system code and images, examples and the loose files in archive. It leaves out `moodboard/`, `raw/` and the sub-folders of `archive/` (third-party screenshots, uncleared images, large PDFs) and rewrites `.md` links in HTML pages to Flowershow page URLs.
 
 ## Code
 
@@ -48,8 +48,9 @@ Preview locally: run the `static` launch config (python http.server on 8790) fro
 
 ## Where things came from
 
-- [sor-brand/](sor-brand/STATUS.md): the former `life-itself/sor-brand` repo (mockups, moodboards, logo, woodcuts, design-system plan and decision log), merged here 2026-10-05 with history. The system was extracted from its Direction E v7 home and manifesto and its four-page v2 mockup.
+- The former `life-itself/sor-brand` repo, merged here 2026-10-05 with history and since folded in: [decisions.md](decisions.md) (design-system plan and decision log), [logo-notes.md](logo-notes.md), `moodboard/` (references and images, not published), `archive/sor-brand-mockups/` (the mockups the system was extracted from: Direction E v7 and the four-page v2) and `archive/sor-brand-STATUS.md`.
+- The old website design project (`2026-sor-website`, directions and moodboard, 2026-09): `archive/website-2026-09/`. Its brand substance and page copy now live here as [brand.md](brand.md) and `content/`.
 - [type/](type/): the two type selection rounds and research notes.
-- Brand substance (who we are, offers, voice) stays in [../2026-sor-website/brand.md](../2026-sor-website/brand.md).
+- Brand substance (who we are, offers, voice) stays in [brand.md](brand.md).
 
 Shared by the SoR [experiences](../2026-sor-experiences/) and the website. The experiences carry their own working palette in [common.md](../2026-sor-experiences/experiences/00-home/common.md#colour), not yet reconciled with this system.

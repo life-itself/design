@@ -1,3 +1,5 @@
+> **Archived 2026-10-05.** From the former sor-brand repo; relative links may be stale. Current status: [../README.md](../README.md).
+
 # Seeds of Renaissance brand: status
 
 *Updated 2 October 2026*

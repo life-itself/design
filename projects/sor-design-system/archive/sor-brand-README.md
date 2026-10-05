@@ -1,3 +1,5 @@
+> **Archived 2026-10-05.** From the former sor-brand repo; relative links may be stale. Current status: [../README.md](../README.md).
+
 # Seeds of Renaissance: brand and design system
 
 Working repo for the Seeds of Renaissance brand: the feel, the design system, mood boards, mockups and graphic elements.

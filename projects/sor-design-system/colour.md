@@ -51,4 +51,4 @@ By area on the home page, leaving out photographs: about 64% white and paper, 14
 
 ## History
 
-Black buttons and red-only-for-links were decided in the Ink and Paper exploration (v4). Pale yellow as background only, no bright yellow and no highlighting, on 2026-10-01. The pigment palette of Night to Dawn (lapis, vermilion, gold, plum) did not work. Decision log: [sor-brand/design-system-plan.md](sor-brand/design-system-plan.md#decision-log).
+Black buttons and red-only-for-links were decided in the Ink and Paper exploration (v4). Pale yellow as background only, no bright yellow and no highlighting, on 2026-10-01. The pigment palette of Night to Dawn (lapis, vermilion, gold, plum) did not work. Decision log: [decisions.md](decisions.md#decision-log).

@@ -1,6 +1,6 @@
 # Voice and tone
 
-How Seeds of Renaissance sounds, with the key lines to reuse and examples to copy. Part of the [SoR design system](README.md). The substance (who we are, why, for whom) lives in [brand.md](../2026-sor-website/brand.md); this page is the applied version: what to actually write.
+How Seeds of Renaissance sounds, with the key lines to reuse and examples to copy. Part of the [SoR design system](README.md). The substance (who we are, why, for whom) lives in [brand.md](brand.md); this page is the applied version: what to actually write.
 
 **Status: draft for review (2026-10-05).** Lines marked *decided* come from brand.md. Everything else is a proposal.
 

@@ -21,7 +21,7 @@ Examples: [examples/web/](examples.md#website). Status: see [examples.md](exampl
 
 3. **Compose sections from the menu below.** Each section is a full-width ground with the page gutter. Use only classes from `system/components.css`. If you need something the system lacks, add it to `system/components.src.css` (token-based, no page-specific colours), run `python3 system/build-css.py`, and say so.
 
-4. **Write real copy.** Use [voice.md](voice.md) for how we sound (key lines, button text, titles) and [../2026-sor-website/brand.md](../2026-sor-website/brand.md) for who we are and what we offer; real page copy is in [../2026-sor-website/content/](../2026-sor-website/content/).
+4. **Write real copy.** Use [voice.md](voice.md) for how we sound (key lines, button text, titles) and [brand.md](brand.md) for who we are and what we offer; real page copy is in [content/](content/).
 
 5. **Check against the list** at the bottom before you call it done.
 

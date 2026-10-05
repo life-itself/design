@@ -8,7 +8,7 @@ Standalone, poetic, animated experiences that convey Seeds of Renaissance. Each 
 
 **Shared visual decisions** live in [../sor-design-system/](../sor-design-system/) — the typefaces are settled there, used by both this project and the website.
 
-**Separate from** [../2026-sor-website/](../2026-sor-website/), which follows a conventional design process (brief, directions, sitemap). Shared substance lives there: [brand.md](../2026-sor-website/brand.md), [manifesto](../2026-sor-website/content/manifesto.md).
+**Separate from** the website work, now folded into the [design system](../sor-design-system/website.md) (the early directions are archived there). Shared substance lives in the design system: [brand.md](../sor-design-system/brand.md), [manifesto](../sor-design-system/content/manifesto.md).
 
 ## Start here
 
