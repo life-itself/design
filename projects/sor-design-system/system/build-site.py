@@ -1,5 +1,5 @@
 """Assemble ../site/ (gitignored): the publishable design system, for `fl --yes site`.
-Docs, guide, specimens, woodcuts page, system code and images, examples, archive. Leaves out moodboard/, raw/ and the
+Docs, guide, specimens, woodcuts page, system code and images, examples, archive. Leaves out moodboard/ and the
 sub-folders of archive/ (third-party screenshots, uncleared images, large PDFs)."""
 import pathlib, re, shutil
 root = pathlib.Path(__file__).resolve().parent.parent
