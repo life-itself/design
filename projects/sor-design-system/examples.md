@@ -28,10 +28,6 @@ Thumbnails, podcast covers and channel art. What we need, what exists and what's
 - [Thumbnails and podcast covers](examples/youtube/index.html), 1280×720, full size and in a feed.
 - [Channel art](examples/youtube/channel.html): banner, avatar, lower third, watermark.
 
-## Slides
+## Still to come
 
-Next: [slides.md](slides.md).
-
-## Print
-
-Later.
+Social media, podcast show art, slides, print, email and Canva: see [applications.md](applications.md) for each guide and its status.

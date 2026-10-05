@@ -63,15 +63,43 @@
         ]
       },
       {
-        "name": "Examples",
+        "name": "Applications",
         "links": [
           {
+            "name": "Overview and status",
+            "href": "/applications"
+          },
+          {
             "name": "Website",
-            "href": "/examples#website"
+            "href": "/website"
+          },
+          {
+            "name": "Social media",
+            "href": "/social"
           },
           {
             "name": "YouTube",
             "href": "/youtube"
+          },
+          {
+            "name": "Podcast",
+            "href": "/podcast"
+          },
+          {
+            "name": "Slides",
+            "href": "/slides"
+          },
+          {
+            "name": "Print",
+            "href": "/print"
+          },
+          {
+            "name": "Email",
+            "href": "/email"
+          },
+          {
+            "name": "Canva",
+            "href": "/canva"
           },
           {
             "name": "All examples",

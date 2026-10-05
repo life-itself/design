@@ -6,6 +6,8 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 
 <iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/522" loading="lazy" title="YouTube examples"></iframe>
 
+**Scope:** this page covers what is specific to YouTube: video thumbnails (feed sizes, the duration badge), channel art, lower thirds. General 16:9 announcements and posters for any channel live in [social.md](social.md); podcast show art in [podcast.md](podcast.md).
+
 ## What we need: four kinds
 
 | Kind | What it is | Status |

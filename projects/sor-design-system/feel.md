@@ -30,6 +30,17 @@ Hope stays the destination, and it is earned by going through the dark rather th
 - Sleek and contemporary
 - Chaotic or self-indulgent like many artist sites
 
+## Who we design for
+
+People who sense the old world is ending before they can name it, and want to help seed the new: intellectually curious and practically hungry, allergic to hype, looking for grounded hope. Four personas (full detail in [brand.md](../2026-sor-website/brand.md#who-we-are-here-for), from the brand narrative):
+
+- **The meaning seeker** (mid-30s to 50s): therapist, teacher, tech, health. Reads McGilchrist. Aesthetically sensitive; wants the people they follow to have done the reading.
+- **The post-disillusionment renewer** (40s to 60s): ex-church, ex-corporate, ex-academic, ex-activist. Allergic to hype; trusts people who admit they don't have it figured out.
+- **The awakening professional**: successful and feels the system is off; little time, so needs clear, digestible pieces.
+- **The disillusioned young seeker** (18 to 30): searching for meaning, belonging and a larger vision; values authenticity.
+
+What they should feel: *"These people are honest. They're living it. I'm not alone in seeing what I see."* What this means for design: plain, honest entry points; real people in real places, not stock or glossy; depth one step away for those who want it.
+
 ## Rigour and warmth
 
 **Rigour is the form, warmth is the surface** (the potter's bowl). Rigour is constant on every page: grid, type, accuracy, sourcing, care. Warmth is a layer that varies: people, texture, hand marks, colour, voice. Rigour first, but both always present.
