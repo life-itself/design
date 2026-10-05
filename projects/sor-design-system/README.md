@@ -2,13 +2,15 @@
 
 How Seeds of Renaissance looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** Every photograph shown is a mood board placeholder, not cleared for public use.
 
-<iframe class="specimen" src="specimens/cover.html" style="aspect-ratio:1000/482" title="Grounded hope, set in ink and paper"></iframe>
-
-**Building something?** Start with [BUILD.md](BUILD.md): the rules in one paragraph, the page shell, a menu of sections, the examples to copy and a checklist. It is written for people and AI agents alike.
-
-**Want it all on one page?** [The guide](guide.html) shows the whole system rendered, set in its own style.
+<div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
+  <a href="guide.html" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">See it</div><div class="mt-2 text-xl font-semibold text-stone-900">Read the whole system</div><p class="mt-2 text-sm text-stone-600">Every chapter rendered on one page: feel, colour, type, graphics, components, examples.</p></a>
+  <a href="/BUILD" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Build</div><div class="mt-2 text-xl font-semibold text-stone-900">Build with it</div><p class="mt-2 text-sm text-stone-600">The brief for people and AI agents: the rules, the page shell, sections to compose, a checklist.</p></a>
+  <a href="/examples" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Copy</div><div class="mt-2 text-xl font-semibold text-stone-900">See the examples</div><p class="mt-2 text-sm text-stone-600">Website pages, YouTube thumbnails and channel art. Slides next.</p></a>
+</div>
 
 **Setting up an AI agent?** Point it at [llms.txt](llms.txt), or hand it [BUILD.md](BUILD.md). Every page here is also served as raw markdown: add `.md` to its URL.
+
+<iframe class="specimen" src="specimens/cover.html" style="aspect-ratio:1000/482" title="Grounded hope, set in ink and paper"></iframe>
 
 ## Feel
 
@@ -64,7 +66,7 @@ Headers, heroes, statements, pathways, calendars, bands, footers and more: each 
 
 Whole pages built only from the system. To make something new, copy the closest one. [All examples, by kind →](examples.md)
 
-<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1890" loading="lazy" title="Examples"></iframe>
+<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1990" loading="lazy" title="Examples"></iframe>
 
 ## Channels
 

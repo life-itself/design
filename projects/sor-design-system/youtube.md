@@ -1,6 +1,10 @@
 # YouTube
 
-Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what exists, the specs, and what's next. Part of the [SoR design system](README.md).
+Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what exists, the specs, and what's next. Part of the [SoR design system](README.md); all examples by kind in [examples.md](examples.md).
+
+**See them:** [thumbnails and podcast covers](examples/youtube/index.html) · [channel art](examples/youtube/channel.html).
+
+<iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/522" loading="lazy" title="YouTube examples"></iframe>
 
 ## What we need: four kinds
 

@@ -16,6 +16,9 @@ head = src[:src.index('<div class="sor">')].replace('<meta charset="utf-8">', ""
 sections = {"cover": re.search(r'<header class="g-cover">.*?</header>\s*<span class="tear tear--bottom"[^>]*></span>', src, re.S).group(0)}
 for m in re.finditer(r'<section class="g-ch[^"]*" id="([a-z]+)">.*?</div></section>', src, re.S):
     sections[m.group(1)] = m.group(0)
+# groups within a chapter (<div id="examples-web">…</div></div>) get their own specimen too
+for m in re.finditer(r'<div id="(examples-[a-z]+)">.*?</div></div>', src, re.S):
+    sections[m.group(1)] = f'<section class="g-ch"><div class="g-wrap"><div class="g-body">{m.group(0)}</div></div></section>'
 
 def fix(html):
     # one folder down: rebase relative paths; open links in the parent page, not the frame

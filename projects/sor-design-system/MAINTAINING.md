@@ -12,7 +12,7 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 
 - **Markdown pages** hold the rules and the reasoning. Flowershow renders them with its own layout and the navbar from `config.json`. The sidebar is off. Each `.md` is also served raw at its `.md` URL, which is what agents read; [llms.txt](llms.txt) lists them in reading order.
 - **[guide.html](guide.html)** holds the visuals: the whole system rendered with the real CSS, one chapter per topic. It is the only place the visuals are edited.
-- **`specimens/<chapter>.html`** are cut from guide.html by `system/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
+- **`specimens/<chapter>.html`** are cut from guide.html by `system/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. A group inside a chapter with an id like `<div id="examples-web">` also gets its own specimen (used on examples.md and youtube.md). Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
 - **`custom.css`** styles the specimen frames on Flowershow. Flowershow pages never load `components.css` (its generic class names would clash with the site theme); the system's CSS only runs inside the specimen frames, the guide and the examples.
 - **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, youtube; next slides, print), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
 
