@@ -1,0 +1,151 @@
+<title>Seeds YouTube Thumbnails</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300,100&display=swap">
+<style>
+@font-face{font-family:"Polyamine";src:local("Polyamine"),local("Polyamine-Regular"),local("Polyamine Regular");font-display:swap}
+@font-face{font-family:"Appful Grotesque";src:local("Appful Grotesque"),local("AppfulGrotesque-Regular"),local("Appful Grotesque Regular");font-display:swap}
+/* Frame follows the viewer's theme; the thumbnails are a fixed brand world */
+:root{--f-bg:#f3f3f1;--f-surface:#fff;--f-ink:#1d1e20;--f-muted:#60636a;--f-rule:#dcdcd8;--f-chip:#e8e8e4;--f-accent:#3a4a8c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}}
+:root[data-theme="dark"]{--f-bg:#16171a;--f-surface:#1f2024;--f-ink:#ececea;--f-muted:#a3a5ab;--f-rule:#34363c;--f-chip:#2a2c31;--f-accent:#9fb0f0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--f-bg);color:var(--f-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:0 64px}
+.wrap{max-width:1240px;margin-inline:auto;display:grid;gap:28px}
+.f-head{padding-top:40px;display:grid;gap:12px;max-width:860px}
+.f-head h1{margin:0;font-size:clamp(26px,3.6vw,38px);line-height:1.1}
+.f-head p{margin:0;color:var(--f-muted)}
+.brief{background:var(--f-surface);border:1px solid var(--f-rule);border-radius:8px;padding:18px 22px;display:grid;gap:10px;font-size:14.5px}
+.brief h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--f-accent)}
+.brief p{margin:0}.brief ul{margin:0;padding-left:20px;display:grid;gap:6px}
+h2.sec{margin:12px 0 0;font-size:13px;color:var(--f-muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.big{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.big figure{margin:0;display:grid;gap:8px;min-width:0}
+.big figcaption{font-size:13.5px;color:var(--f-muted)}
+.big figcaption b{color:var(--f-ink)}
+.feed{border-radius:10px;padding:20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 16px}
+.feed.light{background:#fff;color:#0f0f0f;border:1px solid var(--f-rule)}
+.feed.dark{background:#0f0f0f;color:#f1f1f1}
+.card{display:grid;gap:8px;min-width:0}
+.card .yt{border-radius:10px}
+.card .meta{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;font-family:Roboto,Arial,sans-serif}
+.card .av{width:30px;height:30px;border-radius:50%;background:#fff url(img/logo.png) center/120% no-repeat}
+.card b{font-size:14px;line-height:1.35;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card small{font-size:12px;opacity:.65;display:block}
+@media (max-width:900px){.big{grid-template-columns:1fr}.feed{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.feed{grid-template-columns:1fr}}
+
+/* Thumbnail system: 16:9, every size in cqi so one design renders identically at 1280px and at feed size.
+   Ink #1b1916, paper #fbfaf6, white #fff, night #171613, chalk #ece7dc. Headings Polyamine, labels Appful Grotesque. */
+.yt{--display:"Polyamine","Fraunces",Georgia,serif;--eyebrow:"Appful Grotesque","Hanken Grotesk",system-ui,sans-serif;
+ --paper:#fbfaf6;--ink:#1b1916;--muted:#5d584f;--night:#171613;--chalk:#ece7dc;
+ position:relative;aspect-ratio:16/9;width:100%;container-type:inline-size;overflow:hidden;background:var(--paper);color:var(--ink);isolation:isolate}
+.yt::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:8;opacity:.2;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");background-size:18cqi}
+.yt img{display:block}
+.yt .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.yt .ds{font-family:var(--display);font-weight:400;line-height:.98;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.yt .lab{font-family:var(--eyebrow);font-size:2.1cqi;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.yt .logo{width:9cqi;height:9cqi;mix-blend-mode:multiply}
+.yt .badge{background:#fff;border-radius:50%;padding:.6cqi;display:grid;place-items:center}
+.yt .badge img{width:8cqi;height:8cqi}
+.htear{position:absolute;left:0;right:0;height:2.6cqi;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 9.3 L16 15.0 L28 9.3 L44 5.7 L60 9.7 L76 14.1 L81 9.3 L88 4.3 L93 11.3 L105 16.5 L121 12.1 L137 3.2 L153 3.9 L158 5.7 L165 11.4 L177 7.6 L193 14.8 L209 6.3 L218 10.0 L223 9.4 L232 8.7 L248 16.9 L253 12.9 L262 13.6 L278 7.0 L283 10.9 L288 8.6 L297 8.4 L302 14.9 L307 6.0 L312 9.6 L324 8.9 L340 11.8 L349 7.7 L358 7.7 L370 13.6 L375 4.9 L380 3.2 L392 14.2 L399 12.5 L406 9.3 L413 16.8 L420 8.9 L432 4.6 L444 16.9 L449 6.8 L465 7.3 L470 5.9 L482 16.9 L498 12.0 L503 3.6 L510 6.0 L519 3.1 L535 7.6 L544 8.4 L549 4.3 L565 11.9 L570 11.4 L579 11.7 L586 16.4 L598 14.7 L605 15.1 L612 11.8 L621 15.7 L637 6.5 L644 5.2 L660 5.8 L672 15.4 L688 4.1 L693 4.5 L698 10.2 L707 6.3 L719 6.6 L735 9.9 L751 5.5 L756 4.8 L768 10.8 L784 11.6 L793 6.0 L800 13.5 L805 6.8 L817 6.5 L822 5.5 L831 10.4 L838 4.3 L845 15.5 L854 12.2 L870 11.2 L877 11.3 L882 9.6 L891 12.8 L896 3.3 L901 9.8 L910 7.5 L915 4.1 L931 8.1 L936 15.6 L943 14.1 L952 7.9 L964 15.6 L976 16.2 L981 15.1 L997 3.2 L1009 8.3 L1014 11.5 L1019 4.3 L1024 16.9 L1036 13.2 L1048 16.1 L1064 9.4 L1076 14.7 L1081 10.3 L1097 3.4 L1113 4.2 L1118 6.2 L1123 10.0 L1139 12.2 L1151 6.6 L1156 8.2 L1163 12.5 L1170 10.3 L1179 12.2 L1191 10.0 L1198 7.6 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 L0 9.3 L16 15.0 L28 9.3 L44 5.7 L60 9.7 L76 14.1 L81 9.3 L88 4.3 L93 11.3 L105 16.5 L121 12.1 L137 3.2 L153 3.9 L158 5.7 L165 11.4 L177 7.6 L193 14.8 L209 6.3 L218 10.0 L223 9.4 L232 8.7 L248 16.9 L253 12.9 L262 13.6 L278 7.0 L283 10.9 L288 8.6 L297 8.4 L302 14.9 L307 6.0 L312 9.6 L324 8.9 L340 11.8 L349 7.7 L358 7.7 L370 13.6 L375 4.9 L380 3.2 L392 14.2 L399 12.5 L406 9.3 L413 16.8 L420 8.9 L432 4.6 L444 16.9 L449 6.8 L465 7.3 L470 5.9 L482 16.9 L498 12.0 L503 3.6 L510 6.0 L519 3.1 L535 7.6 L544 8.4 L549 4.3 L565 11.9 L570 11.4 L579 11.7 L586 16.4 L598 14.7 L605 15.1 L612 11.8 L621 15.7 L637 6.5 L644 5.2 L660 5.8 L672 15.4 L688 4.1 L693 4.5 L698 10.2 L707 6.3 L719 6.6 L735 9.9 L751 5.5 L756 4.8 L768 10.8 L784 11.6 L793 6.0 L800 13.5 L805 6.8 L817 6.5 L822 5.5 L831 10.4 L838 4.3 L845 15.5 L854 12.2 L870 11.2 L877 11.3 L882 9.6 L891 12.8 L896 3.3 L901 9.8 L910 7.5 L915 4.1 L931 8.1 L936 15.6 L943 14.1 L952 7.9 L964 15.6 L976 16.2 L981 15.1 L997 3.2 L1009 8.3 L1014 11.5 L1019 4.3 L1024 16.9 L1036 13.2 L1048 16.1 L1064 9.4 L1076 14.7 L1081 10.3 L1097 3.4 L1113 4.2 L1118 6.2 L1123 10.0 L1139 12.2 L1151 6.6 L1156 8.2 L1163 12.5 L1170 10.3 L1179 12.2 L1191 10.0 L1198 7.6 L1200 24 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.vtear{position:absolute;top:0;bottom:0;width:2.6cqi;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 1200' preserveAspectRatio='none'%3E%3Cpath d='M0 0 L5.8 0 L14.3 12 L15.3 19 L6.1 31 L5.9 40 L10.0 47 L13.0 52 L14.5 61 L9.3 66 L16.0 75 L8.4 87 L9.9 103 L13.0 112 L9.3 128 L14.6 133 L15.2 142 L12.5 147 L11.0 156 L12.1 165 L3.3 181 L8.7 188 L3.3 195 L6.3 204 L14.2 211 L9.3 216 L12.2 232 L16.4 241 L5.8 248 L6.6 260 L13.6 265 L13.0 281 L6.2 288 L10.6 297 L10.0 313 L8.5 320 L4.2 327 L4.8 339 L5.8 351 L8.3 356 L12.1 372 L14.2 388 L9.5 397 L4.4 404 L6.0 409 L16.7 421 L10.5 430 L6.7 439 L7.9 444 L3.5 449 L10.7 458 L9.8 467 L6.1 472 L9.0 477 L5.4 482 L12.6 491 L9.6 498 L15.6 514 L14.8 530 L16.2 542 L11.1 554 L13.6 559 L10.4 571 L14.6 580 L11.9 596 L10.2 612 L6.6 628 L16.4 640 L5.9 656 L16.6 663 L6.8 679 L5.8 691 L4.6 707 L11.5 712 L10.5 717 L10.2 722 L10.6 734 L4.7 750 L12.7 755 L16.0 760 L8.8 772 L6.8 784 L9.9 796 L9.1 805 L10.3 817 L5.7 822 L3.4 838 L4.8 847 L3.5 852 L6.2 859 L7.5 868 L6.4 877 L4.5 889 L4.7 905 L11.7 921 L12.8 928 L3.3 940 L14.6 952 L5.2 968 L15.1 975 L11.9 991 L6.0 1007 L11.6 1023 L6.3 1030 L15.6 1039 L11.4 1048 L6.1 1055 L15.4 1062 L15.4 1069 L13.2 1076 L8.4 1085 L14.7 1097 L10.6 1109 L5.8 1116 L4.3 1121 L12.6 1137 L4.6 1146 L11.9 1162 L10.0 1171 L14.2 1178 L4.5 1190 L13.7 1195 L0 1200 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 1200' preserveAspectRatio='none'%3E%3Cpath d='M0 0 L5.8 0 L14.3 12 L15.3 19 L6.1 31 L5.9 40 L10.0 47 L13.0 52 L14.5 61 L9.3 66 L16.0 75 L8.4 87 L9.9 103 L13.0 112 L9.3 128 L14.6 133 L15.2 142 L12.5 147 L11.0 156 L12.1 165 L3.3 181 L8.7 188 L3.3 195 L6.3 204 L14.2 211 L9.3 216 L12.2 232 L16.4 241 L5.8 248 L6.6 260 L13.6 265 L13.0 281 L6.2 288 L10.6 297 L10.0 313 L8.5 320 L4.2 327 L4.8 339 L5.8 351 L8.3 356 L12.1 372 L14.2 388 L9.5 397 L4.4 404 L6.0 409 L16.7 421 L10.5 430 L6.7 439 L7.9 444 L3.5 449 L10.7 458 L9.8 467 L6.1 472 L9.0 477 L5.4 482 L12.6 491 L9.6 498 L15.6 514 L14.8 530 L16.2 542 L11.1 554 L13.6 559 L10.4 571 L14.6 580 L11.9 596 L10.2 612 L6.6 628 L16.4 640 L5.9 656 L16.6 663 L6.8 679 L5.8 691 L4.6 707 L11.5 712 L10.5 717 L10.2 722 L10.6 734 L4.7 750 L12.7 755 L16.0 760 L8.8 772 L6.8 784 L9.9 796 L9.1 805 L10.3 817 L5.7 822 L3.4 838 L4.8 847 L3.5 852 L6.2 859 L7.5 868 L6.4 877 L4.5 889 L4.7 905 L11.7 921 L12.8 928 L3.3 940 L14.6 952 L5.2 968 L15.1 975 L11.9 991 L6.0 1007 L11.6 1023 L6.3 1030 L15.6 1039 L11.4 1048 L6.1 1055 L15.4 1062 L15.4 1069 L13.2 1076 L8.4 1085 L14.7 1097 L10.6 1109 L5.8 1116 L4.3 1121 L12.6 1137 L4.6 1146 L11.9 1162 L10.0 1171 L14.2 1178 L4.5 1190 L13.7 1195 L0 1200 Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+
+/* 1 · Gathering: photo with a torn white strip */
+.t1 .panel{position:absolute;left:0;right:0;bottom:0;height:37%;background:#fff;padding:2.6cqi 4cqi 3cqi;display:grid;align-content:center;gap:1.2cqi;z-index:2}
+.t1 .panel .htear{top:-2.5cqi;background:#fff}
+.t1 h3{font-size:8cqi}
+.t1 .lab{color:var(--muted)}
+.t1 .logo{position:absolute;right:3.6cqi;bottom:3.4cqi;width:11cqi;height:11cqi}
+
+/* 2 · Podcast: paper page, photo torn in from the right */
+.t2{display:grid;grid-template-columns:56% 44%}
+.t2 .txt{padding:5cqi 4cqi 4cqi 5cqi;display:grid;align-content:space-between;position:relative;z-index:2}
+.t2 h3{font-size:10.4cqi;margin-top:1.6cqi}
+.t2 .with{font-family:var(--display);font-size:4cqi;margin-top:2cqi;color:var(--muted)}
+.t2 .foot{display:flex;align-items:center;gap:1.6cqi}
+.t2 .foot .lab{font-size:1.8cqi;color:var(--muted)}
+.t2 .pic{position:relative}
+.t2 .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.t2 .vtear{left:-.4cqi;background:var(--paper)}
+.t2 .fig{position:absolute;right:2.4cqi;bottom:2cqi;font-family:var(--eyebrow);font-size:1.6cqi;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600;z-index:2}
+
+/* 3 · Manifesto: the one dark ground, a quote, a torn white foot */
+.t3{background:var(--night);color:var(--chalk)}
+.t3::after{mix-blend-mode:screen;opacity:.08}
+.t3 .q{position:absolute;left:5cqi;right:6cqi;top:5.4cqi;display:grid;gap:2.4cqi}
+.t3 .lab{color:#a49e93}
+.t3 h3{font-size:7.6cqi;line-height:1.02}
+.t3 .foot{position:absolute;left:0;right:0;bottom:0;height:17%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 4cqi 0 5cqi;z-index:2}
+.t3 .foot .htear{top:-2.5cqi;background:#fff}
+.t3 .foot .lab{color:var(--ink);font-size:2cqi}
+.t3 .foot .logo{width:8.6cqi;height:8.6cqi}
+
+/* 4 · Talk: on-image mode, chalk text over a warm-dark scrim */
+.t4 .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgb(23 22 19/.78) 0%,rgb(23 22 19/.45) 42%,rgb(23 22 19/0) 70%);z-index:1}
+.t4 .ph{object-position:50% 45%}
+.t4 .txt{position:absolute;left:5cqi;top:0;bottom:0;width:52%;display:grid;align-content:center;gap:2.4cqi;color:#fff;z-index:2}
+.t4 h3{font-size:9.6cqi}
+.t4 .lab{color:#ece7dc}
+.t4 .tag{position:absolute;right:3.6cqi;top:3.6cqi;z-index:3}
+</style>
+
+<div class="wrap">
+<header class="f-head"><h1>YouTube thumbnails</h1>
+<p>The Seeds of Renaissance design system applied to four kinds of video, shown full size and then at real size in a YouTube feed, in light and dark mode.</p>
+<div class="brief">
+<h2>How the system carries over</h2>
+<ul>
+<li><b>Ink, paper and white</b> as the ground, with one dark (night) ground used sparingly, as on the website.</li>
+<li><b>Polyamine</b> for titles, kept to two to six words so they read at feed size; <b>Appful Grotesque</b> for small labels.</li>
+<li><b>The torn edge</b> joins photo and paper, the signature device from the website.</li>
+<li><b>Colour comes from photographs.</b> No red in the type: links are the only red on the website, and a thumbnail has no links. The logo brings its own red.</li>
+<li>Paper grain is kept very light, so it doesn't turn to noise when YouTube compresses the image.</li>
+</ul>
+<p>Titles are samples. Photos are mood board placeholders.</p>
+</div></header>
+
+<h2 class="sec">Full size (1280 × 720)</h2>
+<div class="big">
+<figure><div class="yt t1" id="t1">
+  <img class="ph" src="img/meal.jpg" alt="">
+  <div class="panel"><span class="htear"></span><span class="lab">Global Connection Call · October</span><h3 class="ds">Find your people</h3><img class="logo" src="img/logo.png" alt=""></div>
+</div><figcaption><b>1 · Gathering.</b> A warm photo, a torn white strip, a short title. For call recordings and community videos.</figcaption></figure>
+
+<figure><div class="yt t2" id="t2">
+  <div class="txt"><div><span class="lab">Over the Mountains · Ep. 12</span><h3 class="ds">Attention as a moral act</h3><div class="with">with Iain McGilchrist</div></div><div class="foot"><img class="logo" src="img/logo.png" alt=""><span class="lab">Seeds of Renaissance podcast</span></div></div>
+  <div class="pic"><img src="img/mountain.jpg" alt=""><span class="vtear"></span><span class="fig">Fig. 12</span></div>
+</div><figcaption><b>2 · Podcast.</b> The paper page leads, the photo is torn in. The episode number sits as a figure number.</figcaption></figure>
+
+<figure><div class="yt t3" id="t3">
+  <div class="q"><span class="lab">From the manifesto</span><h3 class="ds">We are the bridge between the dying past and the future unborn.</h3></div>
+  <div class="foot"><span class="htear"></span><span class="lab">Seeds of Renaissance</span><img class="logo" src="img/logo.png" alt=""></div>
+</div><figcaption><b>3 · Manifesto and essays.</b> The one dark ground, for words alone. The white foot carries the name and logo.</figcaption></figure>
+
+<figure><div class="yt t4" id="t4">
+  <img class="ph" src="img/sylvie.jpg" alt=""><div class="scrim"></div>
+  <div class="txt"><span class="lab">Gardens of Change</span><h3 class="ds">What is trying to be born?</h3></div>
+  <div class="tag badge"><img src="img/logo.png" alt=""></div>
+</div><figcaption><b>4 · Talk.</b> Type directly on a photo, over a warm-dark scrim. The logo sits on a small white disc.</figcaption></figure>
+</div>
+
+<h2 class="sec">In the feed, light mode</h2>
+<div class="feed light" id="feed-light"></div>
+<h2 class="sec">In the feed, dark mode</h2>
+<div class="feed dark" id="feed-dark"></div>
+</div>
+<script>
+(function(){
+  var items=[["t1","Find your people: Global Connection Call, October","2.1K views · 3 days ago"],["t2","Attention as a moral act, with Iain McGilchrist | Over the Mountains Ep. 12","14K views · 2 weeks ago"],["t3","A Manifesto for Civilizational Renewal (read aloud)","6.8K views · 1 month ago"],["t4","What is trying to be born? A talk from Gardens of Change","3.4K views · 1 month ago"]];
+  ["feed-light","feed-dark"].forEach(function(id){
+    var feed=document.getElementById(id);
+    items.forEach(function(it){
+      var c=document.createElement("div");c.className="card";
+      var t=document.getElementById(it[0]).cloneNode(true);t.removeAttribute("id");c.appendChild(t);
+      var m=document.createElement("div");m.className="meta";
+      m.innerHTML='<span class="av" aria-hidden="true"></span><div><b></b><small>Seeds of Renaissance</small><small></small></div>';
+      m.querySelector("b").textContent=it[1];m.querySelectorAll("small")[1].textContent=it[2];
+      c.appendChild(m);feed.appendChild(c);
+    });
+  });
+})();
+</script>
