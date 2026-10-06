@@ -9,8 +9,8 @@
      Faces by name, shown where installed. */
   body { margin: 0; }
   .x-flight {
-    --paper: #fbfaf7;
-    --ink: #121110;
+    --paper: #fbfaf6;
+    --ink: #1b1916;
     --muted: #8a847c;
     --display: "Polyamine", "Didot", "Bodoni 72", serif;
     position: relative; height: 600vh;            /* tall scroll track */
@@ -113,7 +113,7 @@
 
     // trees grow from the ground
     const grow = seg(p, .62, .86);
-    ctx.strokeStyle = '#121110'; ctx.lineCap = 'round';
+    ctx.strokeStyle = '#1b1916'; ctx.lineCap = 'round';
     trees.forEach(tr => {
       tr.segs.forEach(sg => {
         const k = clamp(grow * 6 - sg.d);              // each depth grows in turn
@@ -123,12 +123,12 @@
       });
       const la = seg(grow, .5, .9);
       if (la > 0) {
-        ctx.globalAlpha = la; ctx.fillStyle = '#121110'; ctx.textAlign = 'center';
+        ctx.globalAlpha = la; ctx.fillStyle = '#1b1916'; ctx.textAlign = 'center';
         ctx.font = `${Math.max(12, m * .026)}px Polyamine, Didot, serif`;
         const ty = H - H * .05;
-        ctx.lineWidth = 8; ctx.strokeStyle = '#fbfaf7'; ctx.lineJoin = 'round';
+        ctx.lineWidth = 8; ctx.strokeStyle = '#fbfaf6'; ctx.lineJoin = 'round';
         ctx.strokeText(tr.word.toUpperCase(), tr.x0, ty); ctx.fillText(tr.word.toUpperCase(), tr.x0, ty);
-        ctx.strokeStyle = '#121110';
+        ctx.strokeStyle = '#1b1916';
         ctx.globalAlpha = 1;
       }
     });

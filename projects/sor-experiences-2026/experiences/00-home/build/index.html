@@ -18,8 +18,8 @@
   
   .x-arrival {
     --bg: oklch(1 0 0);
-    --fg: oklch(0.14 0 0);
-    --accent: oklch(0.68 0.19 48);
+    --fg: #1b1916;   /* SoR --ink */
+    --accent: #e5201c;   /* SoR --red */
     --font-display: "Polyamine", "Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
     background: var(--bg); color: var(--fg);
   }
@@ -88,7 +88,7 @@
   const cv = root.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ink = 'oklch(0.14 0 0)', paper = 'oklch(1 0 0)';
+  const ink = '#1b1916', paper = 'oklch(1 0 0)';
   const RELEASE = 3.2;                                   // seconds held as a full stop
   // per seed: burst angle/speed, settle start (s after release), swirl direction, radius, perch
   const PLAN = [
@@ -206,7 +206,7 @@
   .x-dawn {
     --night: #080707;
     --ember: #2a2725;
-    --daylight: #efebe4;
+    --daylight: #ece7dc;
     --body: "Bricolage Grotesque", system-ui, sans-serif;
     --display: "Polyamine", "Didot", "Bodoni 72", serif;
     --dawn: 12s;
@@ -293,7 +293,7 @@
   /* SoR type (type.md): uses the faces if installed locally; bundling decided later */
   .x-leap {
     --leap-bg: #161616;
-    --daylight: #efebe4;
+    --daylight: #ece7dc;
     --night: #080707;
     --heading: "Restora", "Iowan Old Style", Georgia, serif;   /* lines 1-2 */
     --body: "Bricolage Grotesque", system-ui, sans-serif;       /* the invitation's small lines */
@@ -729,7 +729,7 @@
     const vg = ctx.createRadialGradient(vx, vy, R * .1, vx, vy, R * .72);
     vg.addColorStop(0, 'rgba(8,7,7,0)'); vg.addColorStop(1, `rgba(8,7,7,${lerp(.72, .22, open)})`);
     ctx.fillStyle = vg; ctx.fillRect(0, 0, W, Hc);
-    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
+    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(236,231,220,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
     ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = .22;
     ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, Hc); ctx.restore();
   }
@@ -788,7 +788,7 @@
   
   .x-book {
     --night: #080707;
-    --daylight: #efebe4;
+    --daylight: #ece7dc;
     --gold: #e8c46a;
     --body: "Bricolage Grotesque", system-ui, sans-serif;
     --illum: "Cinzel Decorative", "Trajan Pro", serif;
@@ -883,8 +883,8 @@
      Faces by name, shown where installed. */
   
   .x-flight {
-    --paper: #fbfaf7;
-    --ink: #121110;
+    --paper: #fbfaf6;
+    --ink: #1b1916;
     --muted: #8a847c;
     --display: "Polyamine", "Didot", "Bodoni 72", serif;
     position: relative; height: 600vh;            /* tall scroll track */
@@ -985,7 +985,7 @@
 
     // trees grow from the ground
     const grow = seg(p, .62, .86);
-    ctx.strokeStyle = '#121110'; ctx.lineCap = 'round';
+    ctx.strokeStyle = '#1b1916'; ctx.lineCap = 'round';
     trees.forEach(tr => {
       tr.segs.forEach(sg => {
         const k = clamp(grow * 6 - sg.d);              // each depth grows in turn
@@ -995,12 +995,12 @@
       });
       const la = seg(grow, .5, .9);
       if (la > 0) {
-        ctx.globalAlpha = la; ctx.fillStyle = '#121110'; ctx.textAlign = 'center';
+        ctx.globalAlpha = la; ctx.fillStyle = '#1b1916'; ctx.textAlign = 'center';
         ctx.font = `${Math.max(12, m * .026)}px Polyamine, Didot, serif`;
         const ty = H - H * .05;
-        ctx.lineWidth = 8; ctx.strokeStyle = '#fbfaf7'; ctx.lineJoin = 'round';
+        ctx.lineWidth = 8; ctx.strokeStyle = '#fbfaf6'; ctx.lineJoin = 'round';
         ctx.strokeText(tr.word.toUpperCase(), tr.x0, ty); ctx.fillText(tr.word.toUpperCase(), tr.x0, ty);
-        ctx.strokeStyle = '#121110';
+        ctx.strokeStyle = '#1b1916';
         ctx.globalAlpha = 1;
       }
     });

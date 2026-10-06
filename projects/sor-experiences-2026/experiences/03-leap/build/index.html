@@ -9,7 +9,7 @@
   /* SoR type (type.md): uses the faces if installed locally; bundling decided later */
   .x-leap {
     --leap-bg: #161616;
-    --daylight: #efebe4;
+    --daylight: #ece7dc;
     --night: #080707;
     --heading: "Restora", "Iowan Old Style", Georgia, serif;   /* lines 1-2 */
     --body: "Bricolage Grotesque", system-ui, sans-serif;       /* the invitation's small lines */
@@ -458,7 +458,7 @@
     const vg = ctx.createRadialGradient(vx, vy, R * .1, vx, vy, R * .72);
     vg.addColorStop(0, 'rgba(8,7,7,0)'); vg.addColorStop(1, `rgba(8,7,7,${lerp(.72, .22, open)})`);
     ctx.fillStyle = vg; ctx.fillRect(0, 0, W, Hc);
-    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(239,235,228,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
+    if (open > 0) { ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.fillStyle = `rgba(236,231,220,${.07 * open})`; ctx.fillRect(0, 0, W, Hc); ctx.restore(); }
     ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.globalAlpha = .22;
     ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, Hc); ctx.restore();
   }

@@ -13,8 +13,8 @@
   body { margin: 0; }
   .x-arrival {
     --bg: oklch(1 0 0);
-    --fg: oklch(0.14 0 0);
-    --accent: oklch(0.68 0.19 48);
+    --fg: #1b1916;   /* SoR --ink */
+    --accent: #e5201c;   /* SoR --red */
     --font-display: "Polyamine", "Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
     background: var(--bg); color: var(--fg);
   }
@@ -85,7 +85,7 @@
   const cv = root.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ink = 'oklch(0.14 0 0)', paper = 'oklch(1 0 0)';
+  const ink = '#1b1916', paper = 'oklch(1 0 0)';
   const RELEASE = 3.2;                                   // seconds held as a full stop
   // per seed: burst angle/speed, settle start (s after release), swirl direction, radius, perch
   const PLAN = [
