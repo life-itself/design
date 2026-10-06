@@ -1,14 +1,18 @@
 # Build brief: The Leap
 
-Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Opus 5.5. Asset work may also need image/video tools (see below).
+Copy everything below the line into a new session: in the `life-itself/design` repo, or outside it (Claude Design, Open Design). Outside the repo, also paste `00-home/common.md` and attach the starting file `projects/sor-experiences-2026/experiences/03-leap/build/index.html` with its `assets/` folder, plus any files named below. Suggested model: Opus 5.5. Asset work may also need image/video tools (see below).
+
+**Bringing work back:** export the HTML with its assets (a zip is fine), drop it in `inbox/` at the repo root, and ask for it to be moved into the repo.
 
 ---
 
 You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
+**Where this fits.** This piece is one of five that will later be joined, in order, into one long scrolling home page. That joining is done separately; you don't need to handle it. Just keep the piece self-contained: styles scoped under its class, asset paths relative (`assets/...`), and no rules on `html` or `body` beyond a margin reset.
+
 ## Your task
 
-Build **The Leap** as a standalone page at `projects/sor-experiences-2026/experiences/03-leap/build/index.html` (assets in `build/assets/`). It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
+Polish **The Leap**, starting from the current build: `projects/sor-experiences-2026/experiences/03-leap/build/index.html` (assets in `build/assets/`, scoped under `.x-leap`). The script, text and layout below are settled and the build follows them; polish within them. It animates a photo collage: people walk up a road that ends in empty sky, then the paper tears open onto a yellow field, and the visitor is invited to join the movement.
 
 ## The source image
 
@@ -60,7 +64,6 @@ A rough working version exists in the whole-page sketch: `projects/sor-experienc
 
 ## Rules
 
-- One self-contained page; scope all CSS under `.x-leap`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the final state with the text.
 - No sound.
 

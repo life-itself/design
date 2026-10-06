@@ -1,14 +1,18 @@
 # Build brief: Dawn
 
-Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Sonnet 5.5 (fine-tune visuals in Claude Design / Open Design if you like).
+Copy everything below the line into a new session: in the `life-itself/design` repo, or outside it (Claude Design, Open Design). Outside the repo, also paste `00-home/common.md` and attach the starting file `projects/sor-experiences-2026/experiences/02-dawn/build/index.html` with its `assets/` folder, plus any files named below. Suggested model: Sonnet 5.5.
+
+**Bringing work back:** export the HTML with its assets (a zip is fine), drop it in `inbox/` at the repo root, and ask for it to be moved into the repo.
 
 ---
 
 You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
+**Where this fits.** This piece is one of five that will later be joined, in order, into one long scrolling home page. That joining is done separately; you don't need to handle it. Just keep the piece self-contained: styles scoped under its class, asset paths relative (`assets/...`), and no rules on `html` or `body` beyond a margin reset.
+
 ## Your task
 
-Build **Dawn** as a polished, near-final standalone page at `projects/sor-experiences-2026/experiences/02-dawn/build/index.html`. A working prototype already exists at `projects/sor-experiences-2026/experiences/02-dawn/prototype.html`: start from it (its timing is agreed), remove its tuning panel, and bring the look up to the mockup.
+Polish **Dawn**, starting from the current build: `projects/sor-experiences-2026/experiences/02-dawn/build/index.html` (scoped under `.x-dawn`; timing agreed). Bring the look up to the mockup. The earlier `prototype.html` has a tuning panel for dawn length and statement timing if you need to revisit them.
 
 ## What it is
 
@@ -26,9 +30,9 @@ Feeling: calm, deep, a little mysterious. The reader shouldn't notice the text b
 
 ## Text (exact)
 
-Paragraph (centred serif; the phrases in bold are bold; *Revoligion* in italics):
+Paragraph (centred; one weight, no bold, no italic, as the body face rule says; the mockup's bold is dropped):
 
-> Human history has always been a story of transformation – of **old worlds dying and new ones being born**. Every great crisis carries within it the **seed of rebirth**. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, *Revoligion*, Complexity and beyond capitalism.
+> Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.
 
 Statement (larger, light, widely spaced capitals):
 
@@ -41,13 +45,12 @@ Invitation (same size and colour as the paragraph, not italic; it brightens toge
 ## Look
 
 - Match the static mockup: `projects/sor-experiences-2026/experiences/02-dawn/moodboard/frame-2-mockup-static.png`.
-- Font: Polyamine for both paragraph and statement (stand-ins: Libre Caslon Text for the paragraph, Italiana for the statement).
+- Paragraph and invitation in Bricolage Grotesque (body), statement in Polyamine. Faces per `00-home/common.md`, named in CSS and shown where installed (no web font loading for now).
 - Paragraph about 52 characters wide, generous line height. Big vertical space between paragraph, statement and invitation.
 - Starts black, ends black. At least one full viewport high.
 
 ## Rules
 
-- One self-contained page; scope all CSS under `.x-dawn`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the text at full brightness immediately.
 - No sound.
 

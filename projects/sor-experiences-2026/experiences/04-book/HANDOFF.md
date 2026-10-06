@@ -1,14 +1,18 @@
 # Build brief: The Book
 
-Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Opus 5.5 (the book may be best made in 3D with Three.js, or as motion graphics).
+Copy everything below the line into a new session: in the `life-itself/design` repo, or outside it (Claude Design, Open Design). Outside the repo, also paste `00-home/common.md` and attach the starting file `projects/sor-experiences-2026/experiences/04-book/sketch/index.html` with its `assets/` folder, plus any files named below. Suggested model: Opus 5.5 (the book may be best made in 3D with Three.js, or as motion graphics).
+
+**Bringing work back:** export the HTML with its assets (a zip is fine), drop it in `inbox/` at the repo root, and ask for it to be moved into the repo.
 
 ---
 
 You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
+**Where this fits.** This piece is one of five that will later be joined, in order, into one long scrolling home page. That joining is done separately; you don't need to handle it. Just keep the piece self-contained: styles scoped under its class, asset paths relative (`assets/...`), and no rules on `html` or `body` beyond a margin reset.
+
 ## Your task
 
-Build **The Book** as a standalone, scroll-driven page.
+Build **The Book** as a standalone, scroll-driven page at `projects/sor-experiences-2026/experiences/04-book/build/index.html` (assets in `build/assets/`). Start from the rough sketch at `projects/sor-experiences-2026/experiences/04-book/sketch/index.html`: it already works standalone (scoped under `.x-book`) and animates the photo, landing open. Improve on it.
 
 A huge, heavy book made of lead falls out of the darkness, opens, and golden letters rise from its pages to spell what SoR offers: courses and papers.
 
@@ -38,22 +42,21 @@ No page turning. Don't try to print the words onto the pages themselves (it look
 ## Text
 
 - **COURSES · PAPERS**: each word is a link (use `#` for now; destinations to come).
-- Caption, below the book, italic serif: *Sharing what we have learned on our journey over the past decades.*
+- Caption, below the book: *Sharing what we have learned on our journey over the past decades.* (Body face, so not italic.)
 
 ## Look
 
 - Black ground `#080707`. Gold `#e8c46a` with a soft glow for the letters.
-- Gold letters in an illuminated display face (stand-in: Cinzel Decorative, bold). Caption in Polyamine (stand-in: Libre Caslon Text, italic), warm white `#efebe4`.
+- Gold letters in an illuminated display face (sketch: Cinzel Decorative, bold, from Google Fonts; this face is still an open question). Caption in Bricolage Grotesque, warm white `#efebe4`. Faces per `00-home/common.md`, named in CSS and shown where installed (no web font loading for now).
 - If you use the photo, fade its edges into black (the photo's museum-case background isn't pure black).
 - Starts black, ends black.
 
 ## Reference build
 
-A rough working version exists in the whole-page sketch: `projects/sor-experiences-2026/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f4 (e.g. `#f4-35`, `#f4-95` to jump). Screenshots may be in `04-book/screens/`. It animates the photo (lands open); improve on it.
+The starting sketch above (`04-book/sketch/`) is lifted from the whole-page sketch, also at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f4 (e.g. `#f4-35`, `#f4-95` to jump).
 
 ## Rules
 
-- One self-contained page; scope all CSS under `.x-book`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the final state.
 - No sound.
 

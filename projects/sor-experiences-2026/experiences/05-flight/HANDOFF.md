@@ -1,18 +1,22 @@
 # Build brief: Flight
 
-Copy everything below the line into a new session opened in the `life-itself/design` repo. Outside the repo (Claude Design, Open Design): paste this plus the contents of `00-home/common.md`, and attach the files it names. Suggested model: Opus 5.5.
+Copy everything below the line into a new session: in the `life-itself/design` repo, or outside it (Claude Design, Open Design). Outside the repo, also paste `00-home/common.md` and attach the starting file `projects/sor-experiences-2026/experiences/05-flight/sketch/index.html` with its `assets/` folder, plus any files named below. Suggested model: Opus 5.5.
+
+**Bringing work back:** export the HTML with its assets (a zip is fine), drop it in `inbox/` at the repo root, and ask for it to be moved into the repo.
 
 ---
 
 You are building one standalone piece of an animated, poetic website for **Seeds of Renaissance (SoR)**, a movement and vision for civilizational renewal. First read `projects/sor-experiences-2026/experiences/00-home/common.md` for the shared fonts, colours, tone and words, and follow it.
 
+**Where this fits.** This piece is one of five that will later be joined, in order, into one long scrolling home page. That joining is done separately; you don't need to handle it. Just keep the piece self-contained: styles scoped under its class, asset paths relative (`assets/...`), and no rules on `html` or `body` beyond a margin reset.
+
 ## Your task
 
-Build **Flight** as a standalone, scroll-driven page at `projects/sor-experiences-2026/experiences/05-flight/build/index.html` (assets in `build/assets/`). The swallow leaves the SoR logo, flocks of swallows pour through the logo's ring of fingerprints as it opens like a portal, six trees grow from the ground, and the birds come to rest on them. It is the closing scene of the site.
+Build **Flight** as a standalone, scroll-driven page at `projects/sor-experiences-2026/experiences/05-flight/build/index.html` (assets in `build/assets/`). The swallow leaves the SoR logo, flocks of swallows pour through the logo's ring of fingerprints as it opens like a portal, six trees grow from the ground, and the birds come to rest on them. It is the closing scene of the site. Start from the rough sketch at `projects/sor-experiences-2026/experiences/05-flight/sketch/index.html`: it already works standalone (scoped under `.x-flight`), with the logo layers in its `assets/`. Improve on it.
 
 ## The logo
 
-`ref/sor-logo-bird-prints.png`: a black swallow in flight at the centre of a radiating burst of red fingerprints (the fingerprints are the "seeds"). Split layers already cut: `projects/sor-experiences-2026/experiences/00-home/sketch/assets/swallow.png` (the swallow, black on transparent, facing up-right) and `.../00-home/sketch/assets/logo-ring.png` (the red fingerprints on transparent).
+`ref/sor-logo-bird-prints.png`: a black swallow in flight at the centre of a radiating burst of red fingerprints (the fingerprints are the "seeds"). Split layers already cut, in `05-flight/sketch/assets/`: `swallow.png` (the swallow, black on transparent, facing up-right) and `logo-ring.png` (the red fingerprints on transparent).
 
 ## Feeling
 
@@ -38,16 +42,15 @@ The section is tall (about 6 viewports) with a sticky full-screen white stage; s
 - White ground `#fbfaf7`, ink `#121110` for swallows and trees, the ring in its own red.
 - Swallows: ideally with a wingbeat (a few drawn frames or a simple procedural flap) and natural flocking, not static stamps.
 - Trees: brush or ink style rather than plain lines; the word carried in the tree (canopy or trunk) rather than as a label under it, if you can make it readable.
-- Words in Polyamine display capitals (stand-in: Italiana).
+- Words in Polyamine display capitals. Faces per `00-home/common.md`, named in CSS and shown where installed (no web font loading for now).
 - Starts white, ends white.
 
 ## Reference build
 
-A rough working version exists in the whole-page sketch: `projects/sor-experiences-2026/experiences/00-home/sketch/index.html`, published at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f5 (e.g. `#f5-40`, `#f5-100` to jump). Screenshots may be in `05-flight/screens/`. It uses canvas for birds and trees; improve on it.
+The starting sketch above (`05-flight/sketch/`) is lifted from the whole-page sketch, also at https://claude.ai/artifact/KgQeyCfkyghWp3HPnJCRf3#f5 (e.g. `#f5-40`, `#f5-100` to jump). It uses canvas for birds and trees.
 
 ## Rules
 
-- One self-contained page; scope all CSS under `.x-flight`.
 - Works at phone width and desktop. With `prefers-reduced-motion`, show the final state (trees with birds).
 - No sound.
 
