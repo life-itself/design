@@ -1,5 +1,15 @@
 # Build brief: Arrival (the seeds)
 
+## Iterating on this frame
+
+To keep working on what exists, open a new session in this repo and start with:
+
+> Let's iterate on frame 1, Arrival: `projects/sor-experiences-2026/experiences/01-arrival/build/index.html`. For context read `projects/sor-experiences-2026/experiences/00-home/common.md` and `projects/sor-experiences-2026/experiences/01-arrival/HANDOFF.md`. Open it in the browser pane (the `static` preview) so we can look at it together. First change: …
+
+No need to paste the brief below for that. The brief is for starting the frame afresh, or for working on it outside the repo.
+
+## Starting afresh, or outside the repo
+
 Copy everything below the line into a new session: in the `life-itself/design` repo, or outside it (Claude Design, Open Design). Outside the repo, also paste `00-home/common.md` and attach the starting file `projects/sor-experiences-2026/experiences/01-arrival/build/index.html` with its `assets/` folder, plus any files named below. Suggested model: Sonnet 5.5, or Opus 5.5 for the fingerprint seeds.
 
 **Bringing work back:** export the HTML with its assets (a zip is fine), drop it in `inbox/` at the repo root, and ask for it to be moved into the repo.
