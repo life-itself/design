@@ -23,7 +23,7 @@ The design system is written for the website. The experiences are a different re
 - **More than one dark ground.** Dawn and Book are both black; the website allows one night section per page.
 - **Extra colours, experiences only:** `--gold` `#e8c46a` (the Book's illuminated letters) and `--ember` `#2a2725` (barely-legible text at the start of the dawn).
 - **The Book's rising letters** use an illuminated gold display face (sketch: Cinzel Decorative), outside the four faces.
-- **Leap's lines 1–2 are in Restora**, not Polyamine, although they are under ten words: chosen as less billboard-like at that moment.
+- **Leap's lines 1–2 are in Bricolage Grotesque**, big and centred, not Polyamine, although they are under ten words (decided 2026-10-06).
 - Body has to hold on both grounds: the black frames (Dawn, Book) and the white ones (Arrival, Flight).
 
 ### Colour values (decided 2026-10-06)

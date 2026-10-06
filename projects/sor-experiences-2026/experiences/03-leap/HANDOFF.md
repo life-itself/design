@@ -36,24 +36,24 @@ Walking into the unknown: scary, yet we hold the possibility of renewal. A leap 
 
 The section is tall (about 6 viewports) with a sticky full-screen stage; scroll position scrubs the animation forwards and backwards. Deep links like `#leap-72` jump to a moment.
 
-1. **The cliff.** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in at the top, over the sky.
-2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 fades out a moment before text 2, leaving a beat of just the walkers.
-3. **The rip.** Just before the rip starts, text 2 appears at the top, where text 1 was, and holds through the rip. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
+1. **The cliff.** Grey clouds and the road, which simply ends in sky like a cliff edge. **No people and no tear yet.** Text 1 fades in, big, in the centre.
+2. **Walking.** The people walk in from behind the viewer and up the road, one by one, towards the edge. Real walking movement if at all possible, not sliding cutouts. Text 1 holds, then fades out; it is gone before text 2 appears, leaving a beat of just the walkers.
+3. **The rip.** As the rip starts (not before), text 2 appears in the centre, where text 1 was, also big, and holds through the rip. As the leading walkers near the edge, the paper tears **gently, from the top down**, as if someone is pulling it from the top. It reveals the yellow field and blue sky; the road now leads into it.
 4. **Into the field.** The walkers step on towards and into the field. The grey scene lightens a little.
-5. **Join.** Text 2 fades and the invitation appears over the image, in the lower third, on a soft dark gradient for legibility. It is the story's last beat, not a footer. If it doesn't read on phones, move it below the image at phone width only.
+5. **Join.** Text 2 fades and the invitation appears over the image, starting just below the tear (it moves with the image as the camera pushes in), on a soft dark gradient for legibility. COME JOIN US stays on one line. It is the story's last beat, not a footer. If it doesn't read on phones, move it below the image at phone width only.
 
 ## Text
 
-1. **The future may be dark and unknown.** (top, over the sky)
-2. **But the unknown is also full of possibility.** (top, replacing line 1)
-3. **COME JOIN US** (display capitals; this is the link), then small beneath: *Meet others on our Thursday calls*, then smaller still and secondary: *or keep learning ↓*
+1. **The future may be dark and unknown** (big, centred)
+2. **But the unknown is also full of possibility** (big, centred, replacing line 1; no full stops on lines 1–2)
+3. **COME JOIN US** (display capitals; this is the link), then small beneath: *Meet others on our Thursday calls*, then smaller still and secondary: *or keep exploring ↓* (plain text, not a link)
 
 The join links to a page about the Thursday call (what, when, sign up), not straight to Zoom or a calendar. Use `#` until the URL exists.
 
 ## Look
 
 - The background image runs **full width**, edge to edge (it looks better that way than a centred square). May need the high-res original photo.
-- Text in warm white `#efebe4`, laid over the image: lines 1 and 2 at the top, the join in the lower third. Faces per `00-home/common.md`, by name only (shown where installed): Restora for lines 1–2, Polyamine for COME JOIN US, Bricolage Grotesque for the small lines.
+- Text in warm white `#efebe4`, laid over the image: lines 1 and 2 big in the centre, the join just below the tear. Faces per `00-home/common.md`, by name only (shown where installed): Bricolage Grotesque for lines 1–2 and the small lines, Polyamine for COME JOIN US.
 - The tear is paper: rough white fibrous edge, slight depth and shadow, as in the source image.
 - Colour stays inside the tear for now (whether it spills out is an open question; make it easy to try).
 - Starts dark grey, ends on the field.
