@@ -85,17 +85,21 @@
   const cv = root.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ink = '#1b1916', paper = 'oklch(1 0 0)';
+  const ink = '#1b1916';
   const RELEASE = 3.2;                                   // seconds held as a full stop
   // per seed: burst angle/speed, settle start (s after release), swirl direction, radius, perch
+  // img: woodcut seed from the design system (assets/seeds/, cut from sor-design-system/system/graphics.svg); rest: angle once settled
   const PLAN = [
-    { ang: 4.35, kick: 120, t0: 1.6, sw:  1, r: 7,   perch: { line: 0, i: 13, at: 'top' } },     // dot over the I of LIVING
-    { ang: 3.40, kick:  95, t0: 2.6, sw: -1, r: 6.5, perch: { line: 1, i: 13, at: 'bottom' } },  // inside the bottom of the U of BURNS
-    { ang: 4.00, kick: 110, t0: 3.6, sw:  1, r: 6,   perch: { line: 1, i: 6, at: 'crossbar' } },  // on the crossbar of the H of HEART
-    { ang: 3.70, kick:  85, t0: 2.1, sw: -1, r: 7,   perch: { line: 2, i: 3,  at: 'midarm' } },  // on the middle arm of the E of NEW
-    { ang: 4.60, kick: 130, t0: 4.3, sw:  1, r: 6.5, perch: { line: 2, i: 7,  at: 'bottom', mdx: 3 } },  // bottom of the O of WORLD
-    { ang: 3.55, kick: 100, t0: 3.1, sw: -1, r: 6,   perch: { line: 0, i: 19, at: 'bowl', dx: -4.5, mdx: -3 } }      // resting in the bottom of the B of BEINGS
+    { ang: 4.35, kick: 120, t0: 1.6, sw:  1, r: 7,   img: 'sunflower', rest: 0.15,  perch: { line: 0, i: 13, at: 'top' } },     // dot over the I of LIVING
+    { ang: 3.40, kick:  95, t0: 2.6, sw: -1, r: 6.5, img: 'bean',      rest: -0.2,  perch: { line: 1, i: 13, at: 'bottom' } },  // inside the bottom of the U of BURNS
+    { ang: 4.00, kick: 110, t0: 3.6, sw:  1, r: 6,   img: 'wheat',     rest: 1.45,  perch: { line: 1, i: 6, at: 'crossbar' } },  // on the crossbar of the H of HEART
+    { ang: 3.70, kick:  85, t0: 2.1, sw: -1, r: 7,   img: 'acorn',     rest: 0.25,  perch: { line: 2, i: 3,  at: 'midarm' } },  // on the middle arm of the E of NEW
+    { ang: 4.60, kick: 130, t0: 4.3, sw:  1, r: 6.5, img: 'pumpkin',   rest: 1.5,   perch: { line: 2, i: 7,  at: 'bottom', mdx: 3 } },  // bottom of the O of WORLD
+    { ang: 3.55, kick: 100, t0: 3.1, sw: -1, r: 6,   img: 'samara',    rest: -1.1,  perch: { line: 0, i: 19, at: 'bowl', dx: -4.5, mdx: -3 } }      // resting in the bottom of the B of BEINGS
   ];
+  const IMG = {};
+  for (const p of PLAN) { const im = new Image(); im.onload = () => { if (reduce) requestAnimationFrame(step); }; im.src = 'assets/seeds/' + p.img + '.svg'; IMG[p.img] = im; }
+  const SIZE = 3.4;                                      // drawn seed size, as a multiple of its radius
   let W, H, dpr, seeds = [], ground = 0, start = null;
 
   function resize() {
@@ -145,14 +149,26 @@
       const o = 0.9 + i * 1.05, d = 1.5 + (i * 2.3) % 6.5;    // fixed jumble inside the clump
       const k = innerWidth <= MOBILE ? 0.82 : 1;                 // smaller seeds on phones
       return { plan, r: plan.r * k, hx: Math.cos(o) * d * k, hy: -Math.abs(Math.sin(o)) * d * k,
-               x: 0, y: 0, vx: 0, vy: 0, went: false, done: false, ph: i * 1.7 };
+               x: 0, y: 0, vx: 0, vy: 0, went: false, done: false, ph: i * 1.7,
+               rot: plan.rest + o, av: (i % 2 ? -1 : 1) * (2.5 + i * 0.4) };
     });
     layout();
     start = null;
   }
   function draw(p) {
-    ctx.fillStyle = ink; ctx.strokeStyle = paper; ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill(); ctx.stroke();
+    const im = IMG[p.plan.img], s = p.r * SIZE;
+    if (!im.complete || !im.naturalWidth) {                // until the woodcut loads, a plain ink dot
+      ctx.fillStyle = ink; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill(); return;
+    }
+    ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
+    ctx.drawImage(im, -s / 2, -s / 2, s, s);
+    ctx.restore();
+  }
+  function turn(p, dt, s) {                              // tumble in flight, ease to the resting angle when settling
+    if (s < 0) { p.rot += p.av * dt; return; }
+    let d = (p.plan.rest - p.rot) % 6.2832; if (d > 3.1416) d -= 6.2832; if (d < -3.1416) d += 6.2832;
+    p.av *= Math.exp(-1.5 * dt);
+    p.rot += p.av * dt * Math.exp(-s) + d * Math.min(1, 2.2 * dt * Math.min(1, s / 1.5));
   }
   let last = 0, laidOut = false;
   function step(ms) {
@@ -165,10 +181,11 @@
     for (const p of seeds) {
       const pl = p.plan;
       if (R < 0 && !reduce) { p.x = p.a.x + p.hx; p.y = p.a.y - p.r + p.hy; draw(p); continue; }
-      if (reduce) { p.x = p.tx; p.y = p.ty; draw(p); continue; }
+      if (reduce) { p.x = p.tx; p.y = p.ty; p.rot = pl.rest; draw(p); continue; }
       if (p.done) { draw(p); continue; }
       if (!p.went) { p.went = true; p.vx = Math.cos(pl.ang) * pl.kick; p.vy = Math.sin(pl.ang) * pl.kick; }
       const s = R - pl.t0;
+      turn(p, dt, s);
       if (s < 0) {                                      // burst, then drift on a gentle curl
         p.vx += Math.sin(T * 0.9 + p.ph) * 70 * dt; p.vy += Math.cos(T * 0.7 + p.ph) * 55 * dt;
         const k = Math.exp(-0.9 * dt); p.vx *= k; p.vy *= k;
@@ -178,7 +195,7 @@
         const sw = pl.sw * 240 * Math.exp(-s / 2.2) * Math.min(1, d / 140);
         p.vx += (w * w * dx - 2 * z * w * p.vx - dy / d * sw) * dt;
         p.vy += (w * w * dy - 2 * z * w * p.vy + dx / d * sw) * dt;
-        if (s > 2 && d < 1.2 && Math.hypot(p.vx, p.vy) < 4) { p.x = p.tx; p.y = p.ty; p.done = true; draw(p); continue; }
+        if (s > 2 && d < 1.2 && Math.hypot(p.vx, p.vy) < 4) { p.x = p.tx; p.y = p.ty; p.rot = pl.rest; p.done = true; draw(p); continue; }
       }
       p.x += p.vx * dt; p.y += p.vy * dt;
       if (p.y > ground - p.r) { p.y = ground - p.r; p.vy = Math.min(p.vy, 0); }   // the last line is the ground
