@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>For All the Living Beings</title>
+<link rel="stylesheet" href="../../../../sor-design-system/system/tokens.css">  <!-- SoR tokens: --paper, --ink, --red -->
 <style>
   @font-face {
     font-family: "Polyamine";
@@ -12,9 +13,9 @@
   }
   body { margin: 0; }
   .x-arrival {
-    --bg: oklch(1 0 0);
-    --fg: #1b1916;   /* SoR --ink */
-    --accent: #e5201c;   /* SoR --red */
+    --bg: var(--paper, #fbfaf6);
+    --fg: var(--ink, #1b1916);
+    --accent: var(--red, #e5201c);
     --font-display: "Polyamine", "Cormorant Garamond", "Didot", "Bodoni 72", Georgia, serif;
     background: var(--bg); color: var(--fg);
   }
@@ -85,7 +86,7 @@
   const cv = root.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ink = '#1b1916';
+  const ink = getComputedStyle(root).getPropertyValue('--fg').trim() || '#1b1916';
   const RELEASE = 3.2;                                   // seconds held as a full stop
   // per seed: burst angle/speed, settle start (s after release), swirl direction, radius, perch
   // img: woodcut seed from the design system (assets/seeds/, cut from sor-design-system/system/graphics.svg); rest: angle once settled
