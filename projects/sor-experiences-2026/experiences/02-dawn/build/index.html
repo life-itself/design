@@ -15,8 +15,10 @@
     --daylight: #ece7dc;
     --body: "Bricolage Grotesque", system-ui, sans-serif;
     --display: "Polyamine", "Didot", "Bodoni 72", serif;
-    --dawn: 12s;
-    --ease: cubic-bezier(.25, .6, .35, 1);
+    --label: "Apfel Grotezk", "Hanken Grotesk", system-ui, sans-serif;
+    /* Gentle opening, then a long linger towards full light */
+    --dawn: 20s;
+    --ease: cubic-bezier(.14, .4, .3, 1);
 
     box-sizing: border-box;
     min-height: 100vh; min-height: 100svh;
@@ -34,12 +36,14 @@
 
   .x-dawn .dawn-text {
     font-family: var(--body);
-    font-size: clamp(1.2rem, 2.1vw, 1.75rem);
-    line-height: 1.6; text-align: center;
-    max-width: 52ch; margin: 0; text-wrap: pretty;
+    font-size: clamp(1.35rem, 2.8vw, 2.3rem);
+    line-height: 1.5; text-align: center;
+    max-width: 46ch; margin: 0; text-wrap: pretty;
     color: var(--ember);
     transition: color var(--dawn) var(--ease);
   }
+
+  .x-dawn .dawn-claim { display: grid; justify-items: center; gap: 1.4rem; }
 
   .x-dawn .dawn-statement {
     font-family: var(--display); font-weight: 400; text-transform: uppercase;
@@ -49,19 +53,30 @@
     color: var(--daylight);
   }
 
+  .x-dawn .dawn-bridge {
+    font-family: var(--body); font-weight: 400;
+    font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.5;
+    text-align: center; margin: 0; max-width: 30em; text-wrap: balance;
+    color: var(--daylight);
+  }
+
+  /* Invitation in the label face, as the design system's .btn (outline, on night) */
   .x-dawn .dawn-invite {
-    font-family: var(--body);
-    font-size: clamp(1.2rem, 2.1vw, 1.75rem); line-height: 1.6;
-    font-style: normal; margin: 0; text-align: center;
-    display: flex; flex-wrap: wrap; justify-content: center; gap: .3em .6em;
+    font-family: var(--label); font-size: 13px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase; line-height: 1;
+    margin: 0; text-align: center;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.2em 1.6em;
     color: var(--ember);
     transition: color var(--dawn) var(--ease);
   }
-  .x-dawn .dawn-invite a {
-    color: inherit; text-decoration: underline;
-    text-decoration-thickness: 1px; text-underline-offset: .25em;
+  .x-dawn .dawn-btn {
+    display: inline-block; padding: 13px 22px;
+    color: inherit; text-decoration: none;
+    border: 1px solid currentColor; background: transparent;
+    transition: background-color .25s, color .25s;
   }
-  .x-dawn .dawn-invite a:focus-visible { outline: 2px solid var(--daylight); outline-offset: 4px; border-radius: 2px; }
+  .x-dawn .dawn-btn:hover { background: var(--daylight); color: var(--night); }
+  .x-dawn .dawn-btn:focus-visible { outline: 2px solid var(--daylight); outline-offset: 3px; }
 
   .x-dawn.is-lit .dawn-text,
   .x-dawn.is-lit .dawn-invite { color: var(--daylight); }
@@ -74,9 +89,12 @@
 <body>
 <section class="x-dawn" id="dawn" aria-label="Dawn">
   <div class="dawn-inner">
-    <p class="dawn-text">Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.</p>
-    <h2 class="dawn-statement">We are a vision and movement for civilizational renewal.</h2>
-    <p class="dawn-invite"><a href="https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit" target="_blank" rel="noopener">Read the full manifesto</a> <span aria-hidden="true">·</span> <span>or continue ↓</span></p>
+    <p class="dawn-text">Human civilization has always been a story of transformation – of old worlds dying and new ones being born. As in every great turning, crisis carries within it the seed of rebirth. We are living through such moments.</p>
+    <div class="dawn-claim">
+      <h2 class="dawn-statement">We are a movement called to bring forth a civilizational renaissance.</h2>
+      <p class="dawn-bridge">We are a bridge between the dying past and the future unborn.</p>
+    </div>
+    <p class="dawn-invite"><a class="dawn-btn" href="https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit" target="_blank" rel="noopener">Discover our manifesto</a> <span>or continue ↓</span></p>
   </div>
 </section>
 <script>

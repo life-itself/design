@@ -35,27 +35,31 @@ Feeling: calm, deep, a little mysterious. The reader shouldn't notice the text b
 1. The section is black (`#080707`).
 2. When most of the section is on screen, the **dawn** starts (it plays once; it is not tied to scroll position):
    - The paragraph and the invitation start in an off-dark grey (`#2a2725`), barely legible.
-   - They brighten evenly to warm white (`#efebe4`) over **12 seconds**, quicker at first and lingering at the end. The prototype uses `transition: color 12s cubic-bezier(.25, .6, .35, 1)`.
-3. The statement is visible in warm white throughout.
+   - They brighten evenly to warm white (`#efebe4`) over **20 seconds**, quicker at first and lingering long at the end. The build uses `transition: color 20s cubic-bezier(.14, .4, .3, 1)` (the prototype had 12s `cubic-bezier(.25, .6, .35, 1)`).
+3. The statement and the line beneath it are visible in warm white throughout.
 
 ## Text (exact)
 
-Paragraph (centred; one weight, no bold, no italic, as the body face rule says; the mockup's bold is dropped):
+Paragraph (centred; one weight, no bold, no italic; the main text to read):
 
-> Human history has always been a story of transformation – of old worlds dying and new ones being born. Every great crisis carries within it the seed of rebirth. We are a movement called to bring forth a civilizational renaissance grounded in Wisdom, Interbeing, Inner growth, Revoligion, Complexity and beyond capitalism.
+> Human civilization has always been a story of transformation – of old worlds dying and new ones being born. As in every great turning, crisis carries within it the seed of rebirth. We are living through such moments.
 
 Statement (larger, light, widely spaced capitals):
 
-> WE ARE A VISION AND MOVEMENT FOR CIVILIZATIONAL RENEWAL.
+> WE ARE A MOVEMENT CALLED TO BRING FORTH A CIVILIZATIONAL RENAISSANCE.
 
-Invitation (same size and colour as the paragraph, not italic; it brightens together with the paragraph):
+Beneath it, small, in Bricolage Grotesque:
 
-> [Read the full manifesto](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit) · or continue ↓
+> We are a bridge between the dying past and the future unborn.
+
+Invitation (in the label face, Apfel Grotezk, as the design system's outline `.btn` on night; it brightens together with the paragraph):
+
+> [Discover our manifesto](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit) (button) · or continue ↓
 
 ## Look
 
 - Match the static mockup: `projects/sor-experiences-2026/experiences/02-dawn/moodboard/frame-2-mockup-static.png`.
-- Paragraph and invitation in Bricolage Grotesque (body), statement in Polyamine. Faces per `00-home/common.md`, named in CSS and shown where installed (no web font loading for now).
+- Paragraph in Bricolage Grotesque (body), statement in Polyamine, bridge line in Bricolage Grotesque, invitation in Apfel Grotezk (label). Faces per `00-home/common.md`, named in CSS and shown where installed (no web font loading for now).
 - Paragraph about 52 characters wide, generous line height. Big vertical space between paragraph, statement and invitation.
 - Starts black, ends black. At least one full viewport high.
 
@@ -66,6 +70,6 @@ Invitation (same size and colour as the paragraph, not italic; it brightens toge
 
 ## Done when
 
-- `build/index.html` plays on its own, looks like the mockup, and the 12s dawn feels right.
+- `build/index.html` plays on its own, looks like the mockup, and the 20s dawn feels right.
 - Tell the user which fonts you used and anything you changed from the prototype.
 - Record progress on beads task `design-323.3` (`bd update design-323.3 --notes "..."`; `bd close design-323.3` when done).
