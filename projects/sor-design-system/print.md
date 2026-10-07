@@ -1,6 +1,6 @@
 # Print
 
-Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
+Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.22` (papers, done), `design-34t.28` (poster).
 
 **Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`.
 
@@ -68,4 +68,4 @@ Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf
 
 The whole process, from text to PDF and web page, is in [How we build a paper](publishing.md). This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
 
-Still to do here (`design-34t.17`): check the red and pale yellow on paper, and an A3 poster. The `--print-*` tokens are approved (2026-10-08).
+The `--print-*` tokens are approved (2026-10-08). Still to do, when an event needs it (`design-34t.28`): an A3 poster, with the red and pale yellow checked in a real print.
