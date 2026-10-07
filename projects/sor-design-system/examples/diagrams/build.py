@@ -95,7 +95,8 @@ def arrow(pts, color, sw, L, both=False):
 def gap_svg(theme="light", style="panel"):
     S = STYLES[style]
     ink, H = THEMES[theme]["ink"], 1080
-    x0, x1, axis = 120, 1330, 900
+    x0, axis = 120, 900
+    x1 = W - M - 90  # the axis (x1 + 90) ends at the right margin, aligned with the signature
     tech = lambda t: 830 - 660 * (math.exp(4.2 * t) - 1) / (math.exp(4.2) - 1)
     wis = lambda t: 872 - 250 * (math.exp(1.6 * t) - 1) / (math.exp(1.6) - 1)
     tp = [(x0 + (x1 - x0) * i / 60, tech(i / 60)) for i in range(61)]
@@ -104,18 +105,24 @@ def gap_svg(theme="light", style="panel"):
     if S["gap"] == "shade":  # the accent as an area: the space between the curves, in the red tint
         area = tp[30:] + wp[30:][::-1]
         out.append(f'<path d="M{" L".join(f"{x:.1f} {y:.1f}" for x, y in area)} Z" fill="{TINT[theme]}"/>')
-        out.append(f'<text x="1150" y="575" class="d-tag" fill="{RED}">Wisdom gap</text>')
-    out += [f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The wisdom gap</text>',
+        # label midway between the curves, and centred between the upper curve and the shading's edge
+        gt = 0.895; mid = (tech(gt) + wis(gt)) / 2
+        lo, hi = 0.0, 1.0
+        for _ in range(50):
+            t = (lo + hi) / 2; lo, hi = (t, hi) if tech(t) > mid else (lo, t)
+        gx = (x0 + (x1 - x0) * t + x1) / 2
+        out.append(f'<text x="{gx:.1f}" y="{mid + 7:.1f}" text-anchor="middle" class="d-tag" fill="{RED}">Wisdom gap</text>')
+    out += [f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The Wisdom Gap</text>',
             f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Our power grows faster than our capacity to use it well</text>',
             arrow([(x0 - 40, axis), (x1 + 90, axis)], ink, S["lw2"], S["head"] - 4),
             f'<text x="{x1 + 90}" y="{axis + 44}" text-anchor="end" class="d-tag" fill="{ink}">Time</text>',
             arrow(tp, ink, S["lw"], S["head"] + 4), arrow(wp, ink, S["lw"], S["head"] + 4)]
     if S["gap"] == "arrow":
-        gx = 1180; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 14, wis(t) - 14
+        gx = x1 - 150; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 14, wis(t) - 14
         out += [arrow([(gx, ty), (gx, wy)], RED, S["lw"], S["head"], both=True),
                 f'<text x="{gx + 26}" y="{(ty + wy) / 2 + 7}" class="d-tag" fill="{RED}">Wisdom gap</text>']
-    out += [f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1220" y="240">Technological capability</tspan><tspan x="1220" dy="1.3em">and/or social complexity</tspan></text>',
-            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1330" y="770">“Wisdom”: our capacity</tspan><tspan x="1330" dy="1.3em">to manage that complexity</tspan></text>']
+    out += [f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="{x1 - 110}" y="240">Technological capability</tspan><tspan x="{x1 - 110}" dy="1.3em">and/or social complexity</tspan></text>',
+            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="{x1}" y="770">“Wisdom”: our capacity</tspan><tspan x="{x1}" dy="1.3em">to manage that complexity</tspan></text>']
     return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="The wisdom gap, redrawn">{"".join(out)}{sig_at(H, theme)}</svg>'
 
 def poly_svg(theme="light", style="panel"):
@@ -187,7 +194,7 @@ def poly_svg(theme="light", style="panel"):
 # size and 60% ink rather than weight. Sizes at a 1600px export.
 APFEL = '"Apfel Grotezk", "Hanken Grotesk", sans-serif'
 TYPE = dict(  # role: (weight, size, extra)
-    title=(400, 46, ""),                       # sentence case, ideally the figure's claim; size, not weight, sets it apart
+    title=(400, 46, ""),                       # title case, ideally the figure's claim; size, not weight, sets it apart
     subtitle=(400, 28, "fill-opacity:.6;"),    # what the figure shows, one line
     head=(500, 32, ""),                        # box headings
     big=(500, 34, ""),                         # bracket and group labels

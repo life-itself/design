@@ -18,7 +18,7 @@ Apfel Grotezk only, and no Fett (bold). Not Polyamine: a diagram is working type
 
 | Role | Face | Size | Use |
 |---|---|---|---|
-| Title | Apfel Regular | 46 px | Top left. Sentence case; ideally the claim, not the topic. Set apart by size, never weight |
+| Title | Apfel Regular | 46 px | Top left. Title case ("The Wisdom Gap"); ideally the claim, not the topic. Set apart by size, never weight |
 | Subtitle | Apfel Regular, 60% ink | 28 px | One line under the title: what the figure shows |
 | Heading | Apfel Mittel | 32 px | Panel and group headings |
 | Group label | Apfel Mittel | 34 px | Bracket and group labels |
@@ -38,9 +38,10 @@ Called **panels**, after the FT and the Economist; chosen over fine Tufte-style 
 - **Arrowheads:** solid triangles, never open chevrons. The line stops at the base of the head.
 - **Groups:** panels with no outline, square corners, in the **red tint**. As wide as their longest line plus padding, never stretched to fill the canvas. Padding the same on all four sides: 40 px from the edge to the top of the heading's capitals, to the text at the left, and from the last baseline to the bottom.
 - **The red tint:** the logo red at 16% on white (`#fbdbdb`), 40% on night (`#6b1a17`; weaker vanishes on dark). For panels and for the one area that is the point (the wisdom gap). Red **text** only for the label of that one area. This is the one place the system allows a red ground ([BUILD.md](BUILD.md#rules-that-apply-everywhere)).
+- **Labelling an area:** centre the label in the area, with equal space between it and the edges on either side (in the wisdom gap: midway between the curves, and between the upper curve and the shading's edge). One line.
 - **Black and white:** the tint prints as a light grey, so panels and areas survive a mono printer. Never let colour alone carry a meaning.
 - **Ground:** white, or the paper's own ground when placed on a page. On dark grounds ink becomes chalk and the tint its night value.
-- **Canvas:** 1600 px wide for a figure that fills it; a narrower figure gets a narrower export, as wide as its content plus the 72 px margin, so the signature sits under the figure.
+- **Canvas:** 1600 px wide for a figure that fills it; a narrower figure gets a narrower export, as wide as its content plus the 72 px margin, so the signature sits under the figure. **The content spans margin to margin:** its right edge (an axis end, a text column, a panel) sits at the right margin, so the signature's right edge lines up with it. Don't lay a figure out on a fixed grid that stops short of the margin: the signature then floats off to the right of the drawing.
 
 ## Charts with data
 
@@ -93,7 +94,7 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 - [ ] Solid lines, solid arrowheads, no outlines on panels, panels sized to their text with even padding.
 - [ ] Red tint on panels and the one key area only; red text only for that area's label.
 - [ ] Reads at 400 px and in black and white.
-- [ ] Signature bottom right, inside the margin; export as wide as the figure.
+- [ ] Signature bottom right, inside the margin; export as wide as the figure; the content's right edge lines up with the signature's.
 
 ## Open
 
