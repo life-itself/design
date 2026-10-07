@@ -52,8 +52,8 @@ Decided 2026-10-07 ([reasoning](decisions.md#working-through-publication-brandin
 
 ## How papers are built
 
-Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing) (issue [#6](https://github.com/life-itself/pdf-report-publishing/issues/6)), not with HTML and CSS paged media. Typst handles footnotes, running heads, page breaks and long documents more reliably, and the pipeline already builds the 2R essay.
+Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing) (bead `prp-4ls`), not with HTML and CSS paged media. Typst handles footnotes, running heads, page breaks and long documents more reliably, and the pipeline already builds the 2R essay.
 
-This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
+The whole process, from text to PDF and web page, is in [How we build a paper](publishing.md). This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
 
 Still to do here (`design-34t.17`): confirm the drafted `--print-*` tokens once the mockups are approved, check the red and pale yellow on paper, and an A3 poster.

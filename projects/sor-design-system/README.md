@@ -66,6 +66,8 @@ Headers, heroes, statements, pathways, calendars, bands, footers and more: each 
 
 Whole pages and assets built only from the system: the website is done, YouTube, podcast and slides are under way, social, print and email come next. To make something new, copy the closest one. [All examples and their status →](examples.md)
 
+Building a paper? [How we build a paper →](publishing.md): design, paper anatomy, editorial craft and the Typst pipeline.
+
 <iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1990" loading="lazy" title="Examples"></iframe>
 
 ## Open questions

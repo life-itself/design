@@ -28,7 +28,8 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [youtube.md](https://sor-design-system-rufuspollock.flowershow.me/youtube.md): YouTube thumbnails and channel art
 - [podcast.md](https://sor-design-system-rufuspollock.flowershow.me/podcast.md): podcast show art and episode covers (stub)
 - [slides.md](https://sor-design-system-rufuspollock.flowershow.me/slides.md): slide decks (brief)
-- [print.md](https://sor-design-system-rufuspollock.flowershow.me/print.md): papers as PDF and posters (stub with brief)
+- [print.md](https://sor-design-system-rufuspollock.flowershow.me/print.md): papers as PDF and posters: covers, anatomy of a paper
+- [publishing.md](https://sor-design-system-rufuspollock.flowershow.me/publishing.md): how we build a paper, PDF and web: design, anatomy, editorial craft, pipeline
 - [diagrams.md](https://sor-design-system-rufuspollock.flowershow.me/diagrams.md): diagrams, figures and charts; the signature that keeps them attributed (stub)
 - [email.md](https://sor-design-system-rufuspollock.flowershow.me/email.md): the newsletter (stub)
 
