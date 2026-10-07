@@ -13,7 +13,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **YouTube** | Video thumbnails, channel banner, avatar, lower third, watermark | [youtube.md](youtube.md) | [below](#youtube) | 🚧 **First pass done**, polish in progress | `.5` `.6` |
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
-| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | 🚧 **Mockups for approval**; Typst build in pdf-report-publishing | `.22` `.17` |
+| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **Look approved**; Typst build in pdf-report-publishing | `.22` `.17` |
 | **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | 🚧 **Signature done**; type tryout in progress, then drawing style | `.20` `.25` `.26` |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 

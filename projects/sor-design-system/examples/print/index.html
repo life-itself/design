@@ -29,7 +29,7 @@ html, body { margin: 0; background: var(--desk); color: var(--ink); font-family:
 .page {
   width: var(--print-w); height: var(--print-h); flex: none;
   position: relative; overflow: hidden;
-  background: var(--paper); box-shadow: var(--shadow-object);
+  background: var(--print-page); box-shadow: var(--shadow-object);
   zoom: var(--fit, 1);
   font-size: var(--print-body); line-height: var(--print-lh); font-weight: 350;
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -85,7 +85,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 
 /* section summary: a boxed standfirst, ink rule, label on the rule */
 .summary { position: relative; border: .6pt solid var(--ink); padding: 9pt 10pt 9pt; margin: calc(var(--print-lh) * .5) 0 var(--print-lh); font-size: var(--print-summary); line-height: 13pt; font-weight: 500 }
-.summary .lbl { position: absolute; top: -4pt; left: 8pt; background: var(--paper); padding: 0 4pt; line-height: 1 }
+.summary .lbl { position: absolute; top: -4pt; left: 8pt; background: var(--print-page); padding: 0 4pt; line-height: 1 }
 .white .summary .lbl { background: var(--white) }
 
 /* ── Front cover: typographic, ink on paper ───────────────── */
@@ -105,7 +105,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 
 /* ── Back cover: the one night, meeting the paper at a torn edge ── */
 .back { background: var(--night); color: var(--chalk) }
-.back .tear { position: absolute; left: 0; right: 0; top: 0; height: 9mm; background: var(--paper);
+.back .tear { position: absolute; left: 0; right: 0; top: 0; height: 9mm; background: var(--print-page);
   clip-path: polygon(0 0,100% 0,100% 52%,97% 70%,93% 48%,89% 66%,84% 55%,80% 74%,75% 51%,71% 62%,66% 46%,61% 70%,57% 58%,52% 76%,47% 50%,43% 64%,38% 49%,33% 72%,29% 57%,24% 68%,19% 47%,15% 63%,10% 52%,6% 71%,3% 55%,0 64%) }
 .back .blurb { position: absolute; top: 40mm; left: 22mm; width: 120mm; margin: 0; font-family: var(--font-quote); font-size: 17pt; line-height: 22pt }
 .back .about { position: absolute; top: 96mm; left: 22mm; width: 100mm; font-size: 9.5pt; line-height: 14pt }
@@ -186,6 +186,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <ul>
     <li>Body 10.5/14.5pt Bricolage on a 118mm measure, inside 22/26mm top and bottom, 24mm inner and 20mm outer margins.</li>
     <li>Polyamine for the cover, title page and chapter titles only; section heads, pull quotes, epigraphs and subtitles in Restora; labels, running heads and folios in Apfel.</li>
+    <li>White pages: one PDF, made for reading on screen, that also prints cleanly.</li>
     <li>Heads: chapter titles in Polyamine, sections in Restora 19pt, sub-sections in Restora 14pt. One paper stock throughout; the back cover is the one night. Red only for footnote marks and links. Figures sit on the paper as plates, signed inside their margin.</li>
     <li>Print this page (A4, no margins) for a paper proof.</li>
   </ul>

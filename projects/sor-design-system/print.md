@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
 
-**Mockups for approval:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
+**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`.
 
 ## What we need
 
@@ -38,9 +38,18 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 | Appendices | Lettered or numbered, each titled | new page | yes |
 | Back cover | The one night: blurb, a short about, the SoR mark on its disc with the wordmark, a colophon line (series, part, year, URL). The Life Itself logo allowed | — | |
 
-One paper stock throughout the inside: no white or yellow pages. Polyamine stays for the cover, title page, contents and chapter titles. Inside the text, heads are Restora: sections at 19pt, sub-sections at 14pt medium. Markdown levels map as `##` chapter, `###` section, `####` sub-section.
+One ground throughout the inside: white, unfilled ([below](#one-pdf-for-reading-on-screen)). Polyamine stays for the cover, title page, contents and chapter titles. Inside the text, heads are Restora: sections at 19pt, sub-sections at 14pt medium. Markdown levels map as `##` chapter, `###` section, `####` sub-section.
 
 Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on the title page and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
+
+## One PDF, for reading on screen
+
+Decided 2026-10-08. Each paper ships as **one PDF**, made for reading on screen, which also prints cleanly at home. No separate print edition.
+
+- **White pages, no fill.** A tinted page looks dingy on the grey of a PDF viewer, and at home it prints as a full-page wash inside a white border. The off-white `--paper` is the screen's stand-in for paper; on paper, the stock does that job.
+- **Links live and red**, footnotes linked to their notes, the contents linked to the sections, and PDF bookmarks for chapters.
+- **Covers inside the same file**: the front cover is page one, the night back cover the last page.
+- **If we ever print a run**, use the same file on a natural or cream uncoated stock (e.g. Munken Premium Cream) for the warmth, with bleed added for the covers.
 
 ## Covers and credits
 
@@ -59,4 +68,4 @@ Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf
 
 The whole process, from text to PDF and web page, is in [How we build a paper](publishing.md). This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
 
-Still to do here (`design-34t.17`): confirm the drafted `--print-*` tokens once the mockups are approved, check the red and pale yellow on paper, and an A3 poster.
+Still to do here (`design-34t.17`): check the red and pale yellow on paper, and an A3 poster. The `--print-*` tokens are approved (2026-10-08).

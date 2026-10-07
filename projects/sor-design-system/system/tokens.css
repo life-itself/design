@@ -129,11 +129,12 @@
 }
 
 /* ── Print (papers: A4, fixed point sizes) ───────────────────────
-   Drafted with the print mockups (examples/print/, design-34t.22); pending approval.
+   Set with the print mockups (examples/print/, design-34t.22); approved 2026-10-08.
    The Typst sor style in pdf-report-publishing reads these values. pt and mm are real
    sizes on paper; the mockups show A4 at 1:1 and scale it down on narrow screens.
-   No grain overlay on paper: the paper has its own. */
+   No grain overlay and no page tint: the paper has its own. */
 :root {
+  --print-page: #ffffff;    /* pages are white, unfilled: the PDF is read on screen, and if printed the stock gives any warmth */
   --print-w: 210mm;          /* A4. US Letter is 215.9 × 279.4mm with the same margins */
   --print-h: 297mm;
   --print-m-top: 22mm;       /* to the top of the text block; running head sits in it */
