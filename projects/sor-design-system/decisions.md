@@ -250,7 +250,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 | 2026-10-01 | Ink and paper mockups built: A (no interface colour) and B (one process ink: red, Prussian blue or gold) |
 | 2026-10-01 | First Night to Dawn build: mountain night, limestone dawn, first light (apricot) for hope and action on night, plum kept for action on dawn |
 | 2026-10-07 | **Publications: Seeds leads, Life Itself credited in text.** Papers are the Seeds of Renaissance series (Wisdom is No. 6). At most one logo per surface; cover series line in the wordmark until a one-colour mark exists. Diagrams carry a signature (mark, wordmark, URL). New page: diagrams.md. Reasoning above |
-| 2026-10-07 | **Diagram signature: mark + name and URL in Apfel Grotezk**, after mockups against the full lockup and text only. On dark grounds the inverted mark, not the white disc. Diagram type is not Polyamine; a tryout of diagram faces follows |
+| 2026-10-07 | **Diagram signature: mark + name and URL in Apfel Grotezk**, after mockups against the full lockup and text only. The mark on dark grounds (white disc or inverted) is a general logo question, not settled here. Diagram type is not Polyamine; a tryout of diagram faces follows |
 
 ## Next step
 

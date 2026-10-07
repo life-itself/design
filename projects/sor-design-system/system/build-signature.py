@@ -2,7 +2,8 @@
 
   signature.svg, signature.png, signature@2x.png                 light grounds
   signature-dark.svg, signature-dark.png, signature-dark@2x.png  dark grounds
-  signature.excalidraw                                           both, as images at fixed size
+  signature-name.svg, … signature-name-dark.svg, …              name only, no URL
+  signature.excalidraw                                           all four, as images at fixed size
 
 Transparent backgrounds. 1x is for a 1600px-wide export (mark 64px); @2x for 3200px.
 PNGs are rendered with headless Chrome. Rerun after changing system/outline.py or the URL.
@@ -25,10 +26,11 @@ def png(svg_path, out, w, h, scale):
 
 
 files, elements = {}, []
-for i, theme in enumerate(("light", "dark")):
-    frag, w = signature(theme)
+VERSIONS = [(t, u) for u in (True, False) for t in ("light", "dark")]
+for i, (theme, with_url) in enumerate(VERSIONS):
+    frag, w = signature(theme) if with_url else signature(theme, url=None)
     W, H = round(w) + 2 * PAD, DISC + 2 * PAD
-    name = "signature" if theme == "light" else "signature-dark"
+    name = "signature" + ("" if with_url else "-name") + ("" if theme == "light" else "-dark")
     svg = img / f"{name}.svg"
     svg.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="{-PAD} {-PAD} {W} {H}">'
                    f'<title>Seeds of Renaissance</title>{frag}</svg>\n')
@@ -41,7 +43,7 @@ for i, theme in enumerate(("light", "dark")):
                   "dataURL": "data:image/png;base64," + base64.b64encode((img / f"{name}@2x.png").read_bytes()).decode()}
     y = i * (H + 60)
     if theme == "dark":
-        elements.append(dict(type="rectangle", id="sor-night", x=-24, y=y - 24, width=W + 48, height=H + 48, angle=0,
+        elements.append(dict(type="rectangle", id=f"sor-night-{i}", x=-24, y=y - 24, width=W + 48, height=H + 48, angle=0,
                              strokeColor="transparent", backgroundColor="#171613", fillStyle="solid", strokeWidth=1,
                              strokeStyle="solid", roughness=0, opacity=100, groupIds=[], frameId=None, roundness=None,
                              seed=1, version=1, versionNonce=1, isDeleted=False, boundElements=None, updated=1,

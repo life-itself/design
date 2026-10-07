@@ -2,7 +2,7 @@
 
   index.html  the signature (decided 2026-10-07: mark + name and URL in Apfel) on three
               real figures from 2rbook, light and dark, at a 1600px export and at 400px
-  fonts.html  diagram typography tryout: two figures redrawn, set in six candidate faces
+  fonts.html  type for diagrams: Apfel only, no bold; two figures redrawn
 
 Signature text is outlined (system/outline.py). Figures in figures/ are copied from 2rbook,
 flattened onto white with the gamma chunk dropped so they render true black.
@@ -75,14 +75,15 @@ def gap_svg(theme="light"):
     tp, td = curve(tech); wp, wd = curve(wis)
     gx = 1180; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 20, wis(t) - 20
     body = (f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>'
-            f'<text x="{M}" y="{M + 50}" class="d-title" fill="{ink}">The wisdom gap</text>'
+            f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The wisdom gap</text>'
+            f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Our power grows faster than our capacity to use it well</text>'
             + line(f"M{x0 - 40} {axis} L{x1 + 90} {axis}", ink, LW2) + arrowhead((x0, axis), (x1 + 90, axis), ink, LW2)
             + f'<text x="{x1 + 90}" y="{axis + 44}" text-anchor="end" class="d-tag" fill="{ink}">Time</text>'
             + line(td, ink) + arrowhead(tp[-3], tp[-1], ink) + line(wd, ink) + arrowhead(wp[-3], wp[-1], ink)
             + line(f"M{gx} {ty} L{gx} {wy}", RED, LW, ' stroke-dasharray="14 12"')
             + arrowhead((gx, wy), (gx, ty), RED) + arrowhead((gx, ty), (gx, wy), RED)
             + f'<text x="{gx + 26}" y="{(ty + wy) / 2 + 7}" class="d-tag" fill="{RED}">Wisdom gap</text>'
-            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1220" y="200">Technological capability</tspan><tspan x="1220" dy="1.3em">and/or social complexity</tspan></text>'
+            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1220" y="240">Technological capability</tspan><tspan x="1220" dy="1.3em">and/or social complexity</tspan></text>'
             f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1330" y="770">“Wisdom”: our capacity</tspan><tspan x="1330" dy="1.3em">to manage that complexity</tspan></text>')
     return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="The wisdom gap, redrawn">{body}{sig_at(H, theme)}</svg>'
 
@@ -97,7 +98,7 @@ def poly_svg(theme="light"):
         ("Root layer", ["Foundational ideologies (cultural paradigms)", "and deep human tendencies"],
          ["Deep ideological features", "Core aspects of humanity"], True),
     ]
-    out, y, placed = [], 190, []
+    out, y, placed = [], 210, []
     for i, (head, sub, lines, bullets) in enumerate(boxes):
         h = 66 + 36 * len(sub) + 22 + 44 * len(lines) + 12
         out.append(f'<rect x="{bx}" y="{y}" width="{bw}" height="{h}" rx="18" fill="none" stroke="{ink}" stroke-width="{LW}"/>')
@@ -126,51 +127,32 @@ def poly_svg(theme="light"):
     out.append(bracket(1240, placed[0][0], bottom, "Metacrisis"))
     H = bottom + SIG_GAP + DISC + SIG_FOOT
     pre = [f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>',
-           f'<text x="{M}" y="{M + 50}" class="d-title" fill="{ink}">From polycrisis to metacrisis</text>']
+           f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">From polycrisis to metacrisis</text>',
+           f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Three layers of crisis, from what we see to its roots</text>']
     ry, rh = placed[-1]
     poly_svg.crop = (bx - 12, ry - 12, bw + 24, rh + 24)
     return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="From polycrisis to metacrisis, redrawn">{"".join(pre + out)}{sig_at(H, theme)}</svg>'
 
-# Candidate type for diagrams. Roles: title, head (box heading), big (bracket labels),
-# label (annotations, bullets), sub (secondary, 60% ink), tag (axis names, one-to-three-word tags).
-APFEL, BRIC = '"Apfel Grotezk", "Hanken Grotesk", sans-serif', '"Bricolage Grotesque", sans-serif'
-OPTS = [
-    dict(id="apfel", name="Apfel Grotezk only", system=True,
-         why="The system's label face, used for every role. Three weights (Regular, Mittel, Fett).",
-         f=dict(title=(APFEL, 700), head=(APFEL, 700), big=(APFEL, 500), label=(APFEL, 400), sub=(APFEL, 400), tag=(APFEL, 500))),
-    dict(id="apfel-bric", name="Apfel titles, Bricolage labels", system=True,
-         why="Apfel for the title, headings and tags; Bricolage, the reading face, for everything read as text.",
-         f=dict(title=(APFEL, 700), head=(APFEL, 700), big=(APFEL, 500), label=(BRIC, 400), sub=(BRIC, 400), tag=(APFEL, 500))),
-    dict(id="bric", name="Bricolage only", system=True,
-         why="The reading face for every role, at small optical sizes, weights from the variable font.",
-         f=dict(title=(BRIC, 650), head=(BRIC, 600), big=(BRIC, 600), label=(BRIC, 400), sub=(BRIC, 400), tag=(BRIC, 600))),
-    dict(id="hanken", name="Hanken Grotesk", system=False,
-         why="A plain modern grotesk, already the fallback for Apfel in the tokens. Would be a fifth face.",
-         f={r: ('"Hanken Grotesk", sans-serif', w) for r, w in dict(title=700, head=700, big=600, label=400, sub=400, tag=600).items()}),
-    dict(id="plex", name="IBM Plex Sans", system=False,
-         why="Engineered for interfaces and technical drawing; very even, clear at small sizes. Would be a fifth face.",
-         f={r: ('"IBM Plex Sans", sans-serif', w) for r, w in dict(title=600, head=600, big=500, label=400, sub=400, tag=500).items()}),
-    dict(id="atkinson", name="Atkinson Hyperlegible Next", system=False,
-         why="Designed for legibility at low vision: distinct letter shapes, big x-height. Would be a fifth face.",
-         f={r: ('"Atkinson Hyperlegible Next", sans-serif', w) for r, w in dict(title=700, head=700, big=600, label=400, sub=400, tag=600).items()}),
-]
-SIZES = dict(title=60, head=40, big=44, label=32, sub=27, tag=24)  # at 1600: smallest ~27px, about 7px at 400
+# Diagram type (2026-10-08): Apfel Grotezk only, no Fett. Restraint as in FT and Economist
+# charts: the title only a little larger than the labels, a grey subtitle, hierarchy from
+# size and 60% ink rather than weight. Sizes at a 1600px export.
+APFEL = '"Apfel Grotezk", "Hanken Grotesk", sans-serif'
+TYPE = dict(  # role: (weight, size, extra)
+    title=(400, 46, ""),                       # sentence case, ideally the figure's claim; size, not weight, sets it apart
+    subtitle=(400, 28, "fill-opacity:.6;"),    # what the figure shows, one line
+    head=(500, 32, ""),                        # box headings
+    big=(500, 34, ""),                         # bracket and group labels
+    label=(400, 29, ""),                       # annotations, bullets
+    sub=(400, 26, "fill-opacity:.6;"),         # secondary lines in boxes
+    tag=(500, 21, "text-transform:uppercase;letter-spacing:.1em;"),  # axis names, one to three words
+)
 
-def opt_css():
-    css = []
-    for o in OPTS:
-        for role, (fam, wt) in o["f"].items():
-            extra = ""
-            if role == "tag": extra = "text-transform:uppercase;letter-spacing:.1em;"
-            if role == "sub": extra = "fill-opacity:.62;"
-            if fam == BRIC: extra += "font-variation-settings:'opsz' 14;" if role in ("label", "sub") else "font-variation-settings:'opsz' 36;"
-            css.append(f'.o-{o["id"]} .d-{role}{{font-family:{fam};font-weight:{wt};font-size:{SIZES[role]}px;{extra}}}')
-    return "\n".join(css)
+def type_css():
+    return "\n".join(f".d-{r}{{font-family:{APFEL};font-weight:{w};font-size:{z}px;{x}}}" for r, (w, z, x) in TYPE.items())
 
 # ── Page shell ───────────────────────────────────────────────────
 GOOGLE = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700"
-          "&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700"
-          "&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap")
+          "&family=Hanken+Grotesk:wght@400;500&display=swap")
 
 def defs(figs=True):
     marks = "".join(f'<symbol id="mark-{th}" viewBox="0 0 256 256"><image width="256" height="256" href="{b64(SYSTEM / img)}"/></symbol>'
@@ -214,6 +196,7 @@ figcaption b { color: var(--ink); font-weight: 600 }
 .zoom { all: unset; display: block; cursor: zoom-in; width: 100% }
 .zoom:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px }
 .fig { display: block; width: 100%; height: auto; border: 1px solid var(--rule) }
+.slot { margin-top: 14px; display: grid; gap: 8px }
 .strips { display: flex; flex-wrap: wrap; gap: 12px }
 .strip { border: 1px solid var(--rule); max-width: 100%; overflow-x: auto }
 .strip svg { display: block }
@@ -228,6 +211,10 @@ h3.label { margin-top: 28px }
 .bar button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px }
 .why { margin: 0 0 14px; color: var(--muted) }
 .tag-sys { font-family: var(--font-label); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; padding: 1px 8px; margin-left: 6px; color: var(--muted); white-space: nowrap }
+.spec { border-collapse: collapse; font-size: 15px }
+.spec th { text-align: left; vertical-align: top; font-family: var(--font-label); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--muted); padding: 10px 20px 10px 0; white-space: nowrap }
+.spec td { padding: 8px 20px 8px 0; border-top: 1px solid var(--rule); vertical-align: top }
+.spec tr:first-child td { border-top: 0 }
 dialog { padding: 0; border: 0; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; background: var(--scrim); overflow: auto }
 dialog .inner { width: 1600px; margin: 0 auto; padding: 48px 0 }
 dialog .fig { width: 1600px }
@@ -271,9 +258,14 @@ def zoomable(svg, caption):
 
 # ── index.html: the signature ────────────────────────────────────
 def index_page(bundle):
+    def strip(svg, w, th):
+        return (f'<div class="strip" style="background:{THEMES[th]["ground"]}"><svg width="{w + 64:.0f}" height="{DISC + 64}" '
+                f'viewBox="-32 -32 {w + 64:.0f} {DISC + 64}">{svg}</svg></div>')
+    slots = [("The URL", URL), ("A publication line", "Wisdom · White paper No. 6"), ("Name only", None)]
     strips = "".join(
-        f'<div class="strip" style="background:{THEMES[th]["ground"]}"><svg width="{w + 64:.0f}" height="{DISC + 64}" viewBox="-32 -32 {w + 64:.0f} {DISC + 64}">{svg}</svg></div>'
-        for th, (svg, w) in SIG.items())
+        f'<div class="slot"><p class="label">{label}</p><div class="strips">'
+        + "".join(strip(*signature(th, url, mark_ref="mark"), th) for th in THEMES) + '</div></div>'
+        for label, url in slots)
     secs = []
     for f in FIGS:
         thumbs = "".join(f'<figure class="thumb"><div class="thumb-box">{figure_svg(f, th)}</div><figcaption>{th.title()}</figcaption></figure>' for th in THEMES)
@@ -292,14 +284,14 @@ def index_page(bundle):
     <p>Every published figure carries this signature, bottom right inside its margin, so it stays attributed when it is cropped and reshared. Rules: <code>diagrams.md</code>. Files: <code>system/img/signature.svg</code> and <code>signature-dark.svg</code>, with PNGs and an Excalidraw scene.</p>
     <ul>
       <li>Sized for a <b>1600px-wide export</b>: mark 64px, text 20px, 72px margin.</li>
-      <li>Light grounds: the mark on its white disc. Dark grounds: the inverted mark, no disc (provisional until the inverted mark is designed).</li>
-      <li>The URL is a placeholder (<code>{URL}</code>) until the domain is decided.</li>
+      <li>Light grounds: the mark on its white disc. Dark grounds: a placeholder mark until the system settles the mark on dark.</li>
+      <li>After the name, one optional slot: the URL, a publication line, or nothing. The URL is a placeholder (<code>{URL}</code>) until the domain is decided.</li>
     </ul>
   </div>
   <section id="actual" style="margin-top:0">
     <h2>At actual size</h2>
-    <p class="fnote">As it sits in a 1600px export.</p>
-    <div class="strips">{strips}</div>
+    <p class="fnote">As it sits in a 1600px export, with the three uses of the slot after the name.</p>
+    {strips}
   </section>
   {"".join(secs)}'''
     return shell("Diagram signature", body, bundle)
@@ -310,52 +302,34 @@ def crop(svg):
     return f'<svg width="{w}" height="{h}" viewBox="{x} {y} {w} {h}">{svg[svg.index(">") + 1:-6]}</svg>'
 
 def fonts_page(bundle):
-    buttons = "".join(f'<button data-o="{o["id"]}" aria-pressed="{str(i == 0).lower()}">{o["name"]}</button>' for i, o in enumerate(OPTS))
-    big = "".join(f'''
-<div class="opt o-{o["id"]}" data-o="{o["id"]}"{"" if i == 0 else " hidden"}>
-  <h2>{o["name"]}{"<span class=tag-sys>in the system</span>" if o["system"] else "<span class=tag-sys>fifth face</span>"}</h2>
-  <p class="why">{o["why"]}</p>
-  <div class="pair">{zoomable(poly_svg(), "Text-heavy: title, box headings, secondary lines, bullets, bracket labels.")}{zoomable(gap_svg(), "Sparse: title, two annotations, two tags.")}</div>
-  <h3 class="label">The smallest text at 1:1 (1600px export)</h3>
-  <div class="crop">{crop(poly_svg())}</div>
-</div>''' for i, o in enumerate(OPTS))
-    thumbs = "".join(f'<figure class="thumb o-{o["id"]}"><div class="thumb-box">{poly_svg()}</div><figcaption><b>{o["name"]}</b></figcaption></figure>' for o in OPTS)
+    thumbs = "".join(f'<figure class="thumb"><div class="thumb-box">{fn(th)}</div><figcaption>{name} · {th}</figcaption></figure>'
+                     for name, fn in (("Polycrisis", poly_svg), ("Wisdom gap", gap_svg)) for th in THEMES)
+    rows = "".join(f"<tr><th>{r}</th><td>Apfel {'Mittel' if w == 500 else 'Regular'} {z}px{', 60% ink' if 'opacity' in x else ''}{', uppercase, tracked' if 'upper' in x else ''}</td><td>{d}</td></tr>"
+                   for (r, (w, z, x)), d in zip(TYPE.items(), [
+                       "Sentence case. Ideally the claim, not the topic.", "What the figure shows, one line.",
+                       "Box and panel headings.", "Bracket and group labels.", "Annotations and bullets.",
+                       "Secondary lines inside boxes.", "Axis names and one-to-three-word tags only."]))
     body = f'''
-  <p class="label">Seeds of Renaissance design system · Diagrams · Tryout</p>
+  <p class="label">Seeds of Renaissance design system · Diagrams</p>
   <h1>Type for diagrams</h1>
   <div class="intro">
-    <p>Diagrams are working type, not billboard: they should read at 400px in a feed and printed small on a page. Two figures redrawn and set six ways. The line work is plain and identical in all six; the drawing style comes after the type is picked.</p>
+    <p>Apfel Grotezk only, and no bold. Elegance from restraint, as in FT and Economist charts: the title only a little larger than the labels, a grey subtitle doing the explaining, hierarchy from size and 60% ink rather than weight. Line work is still plain; the drawing style comes next.</p>
+    <p class="fnote">Subtitles are draft copy.</p>
   </div>
-  <section class="prose" style="margin-top:0">
-    <h2>What diagram typography usually does</h2>
-    <ul>
-      <li><b>One family</b>, with hierarchy from size and weight, not from mixing faces. The Economist, the FT and Datawrapper all chart in a single sans.</li>
-      <li><b>A sturdy sans</b> with a large x-height and open shapes, so labels hold up when the image is shrunk, and figures that line up.</li>
-      <li><b>Three sizes at most</b>: title, label, note.</li>
-      <li><b>Sentence case</b> for labels, set on the thing they name. Capitals only for short tags such as axis names.</li>
-      <li><b>No display or handwriting faces.</b> The title is the same family in bold, top left. Our World in Data, with its serif titles, is the exception.</li>
-    </ul>
-    <p>That points to the label face, not Polyamine. The question is whether Apfel can carry the reading-sized labels too, or needs Bricolage or a plainer face beside it.</p>
+  <section style="margin-top:0">
+    <div class="pair">{zoomable(poly_svg(), "Text-heavy. Click for 1:1.")}{zoomable(gap_svg(), "Sparse. Click for 1:1.")}</div>
+    <h3 class="label">The smallest text at 1:1 (1600px export)</h3>
+    <div class="crop">{crop(poly_svg())}</div>
   </section>
   <section>
-    <div class="bar" role="group" aria-label="Typeface option">{buttons}</div>
-    {big}
+    <h2>The scale</h2>
+    <div class="crop" style="border:0"><table class="spec">{rows}</table></div>
   </section>
   <section>
-    <h2>All six at 400px</h2>
-    <p class="fnote">The same figure as it appears in a feed. Which one can you still read?</p>
+    <h2>At 400px, as in a feed</h2>
     <div class="thumbs">{thumbs}</div>
   </section>'''
-    js = """
-const opts = document.querySelectorAll('.opt'), btns = document.querySelectorAll('.bar button');
-btns.forEach(b => b.addEventListener('click', () => {
-  opts.forEach(o => o.hidden = o.dataset.o !== b.dataset.o);
-  btns.forEach(x => x.setAttribute('aria-pressed', x === b));
-  try { localStorage.setItem('diagram-font', b.dataset.o) } catch (e) {}
-}));
-try { const s = localStorage.getItem('diagram-font'); if (s) document.querySelector(`.bar button[data-o="${s}"]`)?.click() } catch (e) {}
-"""
-    return shell("Type for diagrams", body, bundle, extra_css=opt_css(), js=js, figs=False)
+    return shell("Type for diagrams", body, bundle, extra_css=type_css(), figs=False)
 
 def for_artifact(html):
     """The publisher adds the document skeleton: keep the head's contents and the body's."""

@@ -13,7 +13,7 @@ A black swallow in a radiating circle of red fingerprints: many hands around a b
 
 ## Using it
 
-- File: `system/img/logo.png` (the current mark). `logo-inverted.png` is a provisional inverted mark for dark grounds (light swallow, red fingerprints, transparent), made by script until one is designed (beads `.24`).
+- File: `system/img/logo.png` (the current mark). `logo-inverted.png` is a scripted placeholder for dark grounds, used only by the dark diagram signature until the question below is settled (beads `.24`).
 - Set it on a **white disc** (`.logo-disc`) or a **white square tile**, so it sits on any ground, including night and sunlight.
 - In the header it sits beside the wordmark, set in Polyamine with "of" in italic:
 
@@ -33,7 +33,7 @@ Seeds is the brand. Life Itself, its steward and the authors' home, is credited 
 | Paper or essay cover | Series line in the wordmark face and the cover's ink, small, at the top: "Seeds *of* Renaissance · No. 6". No mark until a one-colour version exists | Text, with the authors at the foot: "Rufus Pollock & Rosie Bell · Life Itself Sensemaking Studio" |
 | Title page | The same series line | The same text credit |
 | Back cover, colophon | Mark on its disc with the wordmark | Its logo may appear here |
-| Diagram, figure, chart | The signature: the mark (on its disc on light, inverted on dark), name and URL set in Apfel Grotezk, bottom right inside the margin ([diagrams.md](diagrams.md#the-signature)) | Not shown |
+| Diagram, figure, chart | The signature: the mark (on its disc on light; on dark, see Open item 4), name and URL set in Apfel Grotezk, bottom right inside the margin ([diagrams.md](diagrams.md#the-signature)) | Not shown |
 | Social crops of a cover | Mark on its disc, inside the safe area | Not shown; in the caption if needed |
 
 ## Open
@@ -41,4 +41,4 @@ Seeds is the brand. Life Itself, its steward and the authors' home, is credited 
 1. A deeper, ink-like red instead of the clean screen red.
 2. A hand-drawn or printmade swallow instead of the stock silhouette.
 3. A small version that survives a favicon or YouTube avatar (the fingerprints turn to noise).
-4. A full set: colour, one colour (black on light, light on dark), inverted, small. The white-disc cutout doesn't work well on black: dark grounds want the mark itself inverted (beads `.24`).
+4. A full set: colour, one colour (black on light, light on dark), inverted, small. Open: on dark grounds, the white-disc cutout or an inverted mark (with red fingerprints the swallow alone reads; the fingerprints may need to go white) (beads `.24`).

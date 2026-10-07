@@ -4,8 +4,9 @@ Outlining (fontTools + HarfBuzz, with kerning) makes signature text render the s
 everywhere, without the fonts installed. Used by build-signature.py and
 examples/diagrams/build.py. Needs: fonttools, uharfbuzz.
 
-The signature (decided 2026-10-07, diagrams.md): mark, then the name and URL set in
-Apfel Grotezk at 60% ink, one line. Light: the mark on its white disc. Dark: the
+The signature (decided 2026-10-07, diagrams.md): mark, then the name and an optional
+second part (the URL, or a publication line such as "Wisdom · White paper No. 6") set in
+Apfel Grotezk at 60% ink, one line. url=None gives the name alone. Light: the mark on its white disc. Dark: the
 inverted mark (provisional, design-34t.24), no disc. Sizes are for a 1600px export."""
 import base64, math, pathlib
 import uharfbuzz as hb
@@ -77,6 +78,8 @@ def signature(theme, url=URL, mark_ref=None):
     x, y = DISC + 18, _baseline(apfel_m, TXT)
     d1, w1 = apfel_m.path(NAME.upper(), TXT, x, y, track=TXT * 0.1)
     dot = x + w1 + 14
+    if not url:
+        return disc + mark + f'<path d="{d1}" fill="{ink}" fill-opacity=".6"/>', x + w1
     d2, w2 = apfel.path(url, TXT, dot + 18, y, track=TXT * 0.02)
     text = (f'<g fill="{ink}" fill-opacity=".6"><path d="{d1}"/>'
             f'<circle cx="{dot + 2:.1f}" cy="{r:.1f}" r="2.2"/><path d="{d2}"/></g>')
