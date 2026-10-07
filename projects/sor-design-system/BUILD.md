@@ -18,7 +18,7 @@ Who we're speaking to: see [feel.md](feel.md#who-we-design-for). How we sound: [
 | Podcast show art or an episode cover | [podcast.md](podcast.md) | stub (episode cover in [examples/youtube/](examples/youtube/index.html)) |
 | A slide deck | [slides.md](slides.md) | in progress |
 | A printed or PDF paper, a poster | [print.md](print.md) | stub |
-| A diagram, figure or chart | [diagrams.md](diagrams.md) | stub |
+| A diagram, figure or chart | [diagrams.md](diagrams.md) | [examples/diagrams/](examples.md#diagrams); signature in `system/img/` |
 | The newsletter (The Greenhouse) | [email.md](email.md) | stub |
 | Something in Canva | [social.md](social.md#canva) | stub |
 

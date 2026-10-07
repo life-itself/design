@@ -14,7 +14,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
 | **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | — | ⏳ **To build**, brief ready | `.17` |
-| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | — | ⏳ **Signing rules decided**; signature asset and diagram style to make | — |
+| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | 🚧 **Signature done**; type tryout in progress, then drawing style | `.20` `.25` `.26` |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 
 Each kind has its own folder under `examples/`.
@@ -42,6 +42,14 @@ Thumbnails, podcast covers and channel art. What we need, what exists and what's
 
 - [Thumbnails and podcast covers](examples/youtube/index.html), 1280×720, full size and in a feed.
 - [Channel art](examples/youtube/channel.html): banner, avatar, lower third, watermark.
+
+## Diagrams
+
+Figures and frameworks, signed so they stay attributed when shared alone. Rules: [diagrams.md](diagrams.md).
+
+- [The signature](examples/diagrams/index.html) on three real figures from the Wisdom paper and the framework, light and dark, at a 1600px export and at 400px in a feed.
+- [Type for diagrams](examples/diagrams/fonts.html): two figures redrawn and set in six candidate faces. A tryout, not yet a decision.
+- Built by `examples/diagrams/build.py`.
 
 ## Open across all of them
 

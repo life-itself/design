@@ -210,7 +210,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 - B. The mark alone in a corner.
 - C. A signature strip: mark on its disc, the name and URL, always in the same corner (the pattern of Economist, FT and Our World in Data charts).
 
-**Decision: C**, with the name and URL set in the label face (Apfel Grotezk), not the Polyamine wordmark, which doesn't hold up at that size (added 2026-10-07; mockups to confirm). The mark wants to be there: diagrams are where the brand travels furthest. The text carries the name and the way back, and the URL does the most work. Kept inside the margin so a loose crop keeps it, and made as one ready-made asset so nobody typesets it in a diagram tool. Below the size where the mark reads, drop to text only.
+**Decision: C**, with the name and URL set in the label face (Apfel Grotezk), not the Polyamine wordmark, which doesn't hold up at that size (added 2026-10-07; confirmed by mockups the same day, [examples/diagrams/](examples/diagrams/index.html)). The mark wants to be there: diagrams are where the brand travels furthest. The text carries the name and the way back, and the URL does the most work. Kept inside the margin so a loose crop keeps it, and made as one ready-made asset so nobody typesets it in a diagram tool. Below the size where the mark reads, drop to text only.
 
 **Q5. Is the cover the promotional image?**
 
@@ -250,6 +250,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 | 2026-10-01 | Ink and paper mockups built: A (no interface colour) and B (one process ink: red, Prussian blue or gold) |
 | 2026-10-01 | First Night to Dawn build: mountain night, limestone dawn, first light (apricot) for hope and action on night, plum kept for action on dawn |
 | 2026-10-07 | **Publications: Seeds leads, Life Itself credited in text.** Papers are the Seeds of Renaissance series (Wisdom is No. 6). At most one logo per surface; cover series line in the wordmark until a one-colour mark exists. Diagrams carry a signature (mark, wordmark, URL). New page: diagrams.md. Reasoning above |
+| 2026-10-07 | **Diagram signature: mark + name and URL in Apfel Grotezk**, after mockups against the full lockup and text only. On dark grounds the inverted mark, not the white disc. Diagram type is not Polyamine; a tryout of diagram faces follows |
 
 ## Next step
 
