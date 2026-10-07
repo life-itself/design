@@ -110,7 +110,7 @@ def gap_svg(theme="light", style="panel"):
         lo, hi = 0.0, 1.0
         for _ in range(50):
             t = (lo + hi) / 2; lo, hi = (t, hi) if tech(t) > mid else (lo, t)
-        gx = (x0 + (x1 - x0) * t + x1) / 2
+        gx = (x0 + (x1 - x0) * t + x1) / 2 + 14  # plus an optical nudge right: exact centre reads as too far left
         out.append(f'<text x="{gx:.1f}" y="{mid + 7:.1f}" text-anchor="middle" class="d-tag" fill="{RED}">Wisdom gap</text>')
     out += [f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The Wisdom Gap</text>',
             f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Our power grows faster than our capacity to use it well</text>',
@@ -121,8 +121,8 @@ def gap_svg(theme="light", style="panel"):
         gx = x1 - 150; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 14, wis(t) - 14
         out += [arrow([(gx, ty), (gx, wy)], RED, S["lw"], S["head"], both=True),
                 f'<text x="{gx + 26}" y="{(ty + wy) / 2 + 7}" class="d-tag" fill="{RED}">Wisdom gap</text>']
-    out += [f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="{x1 - 110}" y="240">Technological capability</tspan><tspan x="{x1 - 110}" dy="1.3em">and/or social complexity</tspan></text>',
-            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="{x1}" y="770">“Wisdom”: our capacity</tspan><tspan x="{x1}" dy="1.3em">to manage that complexity</tspan></text>']
+    out += [f'<text class="d-label" fill="{ink}" text-anchor="end" x="{x1 - 110}" y="258">Technological power</text>',
+            f'<text class="d-label" fill="{ink}" text-anchor="end" x="{x1}" y="780">“Wisdom”: our capacity to use it well</text>']
     return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="The wisdom gap, redrawn">{"".join(out)}{sig_at(H, theme)}</svg>'
 
 def poly_svg(theme="light", style="panel"):
