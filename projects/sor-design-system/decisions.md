@@ -182,6 +182,44 @@ The wordmark works. **Open:** a small square symbol or monogram for avatars and 
 
 A brand board page showing colour roles in all three modes, type scale, buttons, links, imagery and the applications above.
 
+## Working through: publication branding (2026-10-07)
+
+Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Applies to every paper, essay and figure. The rules that came out of it: [logo.md](logo.md#which-mark-where), [print.md](print.md#covers-and-credits), [diagrams.md](diagrams.md).
+
+**Q1. Which brand leads on a publication?**
+- A. Life Itself (or Sensemaking Studio), as on papers 1–5.
+- B. Seeds and Life Itself logos side by side.
+- C. Seeds as the series brand; Life Itself credited as the authors' home.
+
+**Decision: C.** Seeds is the public brand, and the series is what readers recognise and collect. Life Itself labels on public work are transition debt (`comms/2r/faq-relation-of-seeds-and-life-itself.md`). Two equal logos read as a joint venture and weaken both.
+
+**Q2. How is Life Itself credited?**
+- A. Its logo at the foot of the cover.
+- B. In text with the authors; its logo in the colophon.
+
+**Decision: B.** At most one logo per surface. The credit still says where the authors work.
+
+**Q3. On a cover, the mark or the wordmark?**
+- A. The mark (swallow in fingerprints) with the wordmark.
+- B. The wordmark only, in the cover's own ink.
+
+**Decision: B for now.** The mark has no one-colour version yet: its red fingerprints fight a cover's own palette, and we don't recolour it. Revisit once there is one ([logo.md](logo.md#open), item 4).
+
+**Q4. How do diagrams stay attributed once cropped and reshared?**
+- A. Wordmark and URL as text only.
+- B. The mark alone in a corner.
+- C. A signature strip: mark on its disc, the name and URL, always in the same corner (the pattern of Economist, FT and Our World in Data charts).
+
+**Decision: C**, with the name and URL set in the label face (Apfel Grotezk), not the Polyamine wordmark, which doesn't hold up at that size (added 2026-10-07; mockups to confirm). The mark wants to be there: diagrams are where the brand travels furthest. The text carries the name and the way back, and the URL does the most work. Kept inside the margin so a loose crop keeps it, and made as one ready-made asset so nobody typesets it in a diagram tool. Below the size where the mark reads, drop to text only.
+
+**Q5. Is the cover the promotional image?**
+
+**Decision: no.** An A4 portrait cover crops badly to 1:1 and 16:9 and loses its foot, where the credits sit. Make derived crops from the cover art with the mark on its disc inside the safe area.
+
+**Q6. What is the series called?**
+
+**Decision:** the **Seeds of Renaissance series**. Numbering continues from the Second Renaissance series, so *Wisdom and Wanting What's Good* is No. 6. Launch copy may say "formerly the Second Renaissance series" once; covers don't.
+
 ## Open questions
 
 1. Is the brand's balance more night or more dawn, and how much darkness does it hold?
@@ -211,6 +249,7 @@ A brand board page showing colour roles in all three modes, type scale, buttons,
 | 2026-10-01 | Feedback on ink and paper v1: torn edge works; too dark overall, too many black-and-white images, needs more white and more joy. v2: near-white paper, softer grain, original photos back, one dark section only |
 | 2026-10-01 | Ink and paper mockups built: A (no interface colour) and B (one process ink: red, Prussian blue or gold) |
 | 2026-10-01 | First Night to Dawn build: mountain night, limestone dawn, first light (apricot) for hope and action on night, plum kept for action on dawn |
+| 2026-10-07 | **Publications: Seeds leads, Life Itself credited in text.** Papers are the Seeds of Renaissance series (Wisdom is No. 6). At most one logo per surface; cover series line in the wordmark until a one-colour mark exists. Diagrams carry a signature (mark, wordmark, URL). New page: diagrams.md. Reasoning above |
 
 ## Next step
 

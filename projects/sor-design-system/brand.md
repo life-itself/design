@@ -134,7 +134,8 @@ Copy lines:
 | Thing | Name |
 |---|---|
 | Movement / public brand | **Seeds of Renaissance** (replaces "Second Renaissance" as the brand) |
-| The vision / historical moment | **Second Renaissance**. Still used for what we point toward (leaning to keep, not final) |
+| The vision / historical moment | **Second Renaissance** for now, but it feels weak as a term (Rufus, 2026-10-07); open. Seeds of Renaissance is the brand either way |
+| White paper series | **Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6). Decided 2026-10-07; see [print.md](print.md#covers-and-credits) |
 | Steward | **Life Itself**: originating collective and current steward. Seeds is designed to grow far wider and is not a funnel into Life Itself |
 | Arms | **Media House** (media) · **Gardens of Change** (community) |
 | Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational rebirth…" |
@@ -144,7 +145,7 @@ Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `
 
 ## Open
 
-- Is "Second Renaissance" confirmed as the vision name?
+- The vision name: "Second Renaissance" feels weak. What do we call what we point toward?
 - Member noun.
 - Domain.
 - All visual identity, including the mark.

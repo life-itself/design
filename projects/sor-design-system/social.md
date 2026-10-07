@@ -32,6 +32,7 @@ One design, set on a few fixed artboards. The rules are the same on every platfo
 - Everything in BUILD.md. Text must read on a phone at feed size: nothing under ~36px on a 1080-wide artboard.
 - Keep to one idea per post. Five to ten words of Polyamine at most on the image; the rest goes in the caption.
 - Respect platform safe areas: the top and bottom ~250px of a 9:16 story are covered by the interface.
+- A paper's cover is not a social image: make 1:1, 4:5 and 16:9 crops from its art, with the title and the mark on its disc inside the safe area ([logo.md](logo.md#which-mark-where)).
 - Sub-brand question: Over the Mountains, Mythos and others may get their own lockup (beads `design-34t.11`).
 
 ## Canva

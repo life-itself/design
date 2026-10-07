@@ -14,6 +14,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
 | **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | — | ⏳ **To build**, brief ready | `.17` |
+| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | — | ⏳ **Signing rules decided**; signature asset and diagram style to make | — |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 
 Each kind has its own folder under `examples/`.
