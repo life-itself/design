@@ -63,9 +63,9 @@ STYLES = {
     "fine":  dict(lw=3, lw2=1.5, head=16, box="rule", gap="arrow"),
     "panel": dict(lw=4, lw2=2, head=18, box="panel", gap="shade"),
 }
-# The red tint: the logo red at 16% on white, 22% on night. Panels and accent areas, never text.
+# The red tint: the logo red at 16% on white, 40% on night (22% vanished on dark). Panels and accent areas, never text.
 # (Tried warm grey panels with red only for the accent: too faint at 400px and on a web page.)
-TINT = {"light": "#fbdbdb", "dark": "#441815"}
+TINT = {"light": "#fbdbdb", "dark": "#6b1a17"}
 PANEL = TINT
 PAD = 40  # inside a panel: the same on all four sides (cap height at the top, baseline at the bottom)
 

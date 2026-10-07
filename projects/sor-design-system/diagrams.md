@@ -37,7 +37,7 @@ Called **panels**, after the FT and the Economist; chosen over fine Tufte-style 
 - **Lines:** ink, solid, round caps. 4 px for what the figure is about (curves, main arrows), 2 px for scaffolding (axes, brackets, connectors). No dashes.
 - **Arrowheads:** solid triangles, never open chevrons. The line stops at the base of the head.
 - **Groups:** panels with no outline, square corners, in the **red tint**. As wide as their longest line plus padding, never stretched to fill the canvas. Padding the same on all four sides: 40 px from the edge to the top of the heading's capitals, to the text at the left, and from the last baseline to the bottom.
-- **The red tint:** the logo red at 16% on white (`#fbdbdb`), 22% on night (`#441815`). For panels and for the one area that is the point (the wisdom gap). Red **text** only for the label of that one area. This is the one place the system allows a red ground ([BUILD.md](BUILD.md#rules-that-apply-everywhere)).
+- **The red tint:** the logo red at 16% on white (`#fbdbdb`), 40% on night (`#6b1a17`; weaker vanishes on dark). For panels and for the one area that is the point (the wisdom gap). Red **text** only for the label of that one area. This is the one place the system allows a red ground ([BUILD.md](BUILD.md#rules-that-apply-everywhere)).
 - **Black and white:** the tint prints as a light grey, so panels and areas survive a mono printer. Never let colour alone carry a meaning.
 - **Ground:** white, or the paper's own ground when placed on a page. On dark grounds ink becomes chalk and the tint its night value.
 - **Canvas:** 1600 px wide for a figure that fills it; a narrower figure gets a narrower export, as wide as its content plus the 72 px margin, so the signature sits under the figure.
@@ -99,5 +99,4 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 
 - **The red tint at full size** may be a touch strong on large panels (fine at 400 px and in pages). If so, try 12% for panels and keep 16% for the key area. Low priority (beads).
 - **Charts with data:** more forms as real charts need them (stacked bars, small multiples, maps).
-- **The red tint on dark grounds** is too faint (`#441815`): pale bars and panels nearly vanish on night, though full red lines and bars are fine. A stronger dark tint is needed if figures are ever drawn on dark. Minor: print and the site are light (beads).
 - Whether a small one-colour swallow (the woodcut seal in [graphics.md](graphics.md)) replaces the full mark at small sizes. Tied to the logo's open small version ([logo.md](logo.md#open), item 3).
