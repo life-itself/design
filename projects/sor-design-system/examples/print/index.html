@@ -55,7 +55,8 @@ html, body { margin: 0; background: var(--desk); color: var(--ink); font-family:
 .page b, .page strong { font-weight: 600 }
 .page h2 { font-family: var(--font-quote); font-weight: 400; font-size: var(--print-h2); line-height: calc(var(--print-lh) * 1.5); margin: var(--print-lh) 0 calc(var(--print-lh) * .5) }
 .contents h2 { font-family: var(--font-display) }
-.page h3 { font-family: var(--font-body); font-weight: 600; font-size: var(--print-h3); line-height: var(--print-lh); margin: var(--print-lh) 0 0 }
+.page h3 { font-family: var(--font-quote); font-weight: 500; font-size: var(--print-h3); line-height: calc(var(--print-lh) * 1.25); margin: var(--print-lh) 0 calc(var(--print-lh) * .4) }
+.page h2 + h3 { margin-top: calc(var(--print-lh) * .25) }
 a.link { color: var(--red); text-decoration: none }
 sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color: var(--red); line-height: 0; margin-left: .5pt; font-variant-numeric: lining-nums }
 
@@ -121,7 +122,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 .titlepage h1 { position: absolute; top: 74mm; left: var(--print-m-inner); width: 140mm; margin: 0; font-family: var(--font-display); font-weight: 400; font-size: var(--print-title); line-height: 1.02 }
 .titlepage .sub { position: absolute; top: 108mm; left: var(--print-m-inner); width: 120mm; margin: 0; font-family: var(--font-quote); font-size: var(--print-standfirst); line-height: 17pt; color: var(--ink) }
 .titlepage .part { position: absolute; top: 124mm; left: var(--print-m-inner); color: var(--muted) }
-.titlepage .authors { position: absolute; top: 146mm; left: var(--print-m-inner); font-size: 11pt; line-height: 15pt }
+.titlepage .authors { position: absolute; bottom: 34mm; left: var(--print-m-inner); font-size: 11pt; line-height: 15pt }
 .titlepage .authors b { font-weight: 500; display: block }
 .titlepage .authors .lbl { display: block; margin-top: 3pt; color: var(--muted) }
 
@@ -152,7 +153,8 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 .chapter .open h2 { margin-top: 0 }
 
 /* ── Imprint (verso of the title page): small print at the foot ── */
-.imprint { position: absolute; left: var(--print-m-inner); bottom: var(--print-m-bottom); border-top: .5pt solid var(--rule); padding-top: 4mm }
+.imprint .block { display: flex; flex-direction: column; justify-content: flex-end }
+.imprint .about { width: 110mm; margin: 0 0 9mm; font-size: var(--print-note); line-height: 11pt; color: var(--muted) }
 .imprint dl { display: grid; grid-template-columns: 24mm 1fr; gap: 5pt 0; margin: 0; width: 110mm; font-size: var(--print-note); line-height: 11pt }
 .imprint dt { color: var(--muted); padding-top: 1pt }
 .imprint dd { margin: 0 }
@@ -184,7 +186,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <ul>
     <li>Body 10.5/14.5pt Bricolage on a 118mm measure, inside 22/26mm top and bottom, 24mm inner and 20mm outer margins.</li>
     <li>Polyamine for the cover, title page and chapter titles only; section heads, pull quotes, epigraphs and subtitles in Restora; labels, running heads and folios in Apfel.</li>
-    <li>One paper stock throughout; the back cover is the one night. Red only for footnote marks and links. Figures sit on the paper as plates, signed inside their margin.</li>
+    <li>Heads: chapter titles in Polyamine, sections in Restora 19pt, sub-sections in Restora 14pt. One paper stock throughout; the back cover is the one night. Red only for footnote marks and links. Figures sit on the paper as plates, signed inside their margin.</li>
     <li>Print this page (A4, no margins) for a paper proof.</li>
   </ul>
 </header>
@@ -207,24 +209,32 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 </div></section>
 
 <!-- 2 · Title page with imprint -->
-<section class="sheet"><span class="eyebrow">2 · Title page with the imprint at its foot (recto, page i; the inside cover before it is blank)</span>
+<section class="sheet"><span class="eyebrow">2 · Title page (recto, page i; the inside cover before it is blank)</span>
 <div class="page titlepage">
   <div class="series"><span class="wm">Seeds <em>of</em> Renaissance</span><span class="lbl">No. 6</span></div>
   <h1>Wisdom and Wanting What's Good</h1>
   <p class="sub">Collective wisdom for a time of crisis and renewal</p>
   <span class="part lbl">Wisdom · Part 1</span>
   <div class="authors"><b>Rufus Pollock &amp; Rosie Bell</b><span class="lbl">Life Itself Sensemaking Studio</span></div>
-  <div class="imprint">
+</div></section>
+
+
+<!-- 2b · Imprint -->
+<section class="sheet"><span class="eyebrow">2b · Imprint (verso of the title page, page ii): small print at the foot, the rest left empty</span>
+<div class="page verso imprint">
+  <div class="block">
+    <p class="about"><b style="color:var(--ink)">Seeds of Renaissance</b> is a series of papers on civilisational crisis and renewal, and the shifts in views and values that might support a wiser, more regenerative society. Numbering continues from the Second Renaissance series.</p>
     <dl>
-      <dt class="lbl">Edition</dt><dd>First edition, October 2026</dd>
-      <dt class="lbl">Credits</dt><dd>Figures by the authors. Set in Polyamine, Restora, Bricolage Grotesque and Apfel Grotezk.</dd>
-      <dt class="lbl">Licence</dt><dd>Creative Commons Attribution 4.0 (CC BY 4.0)</dd>
+      <dt class="lbl">Edition</dt><dd>First published October 2026 by the Life Itself Sensemaking Studio</dd>
+      <dt class="lbl">Authors</dt><dd>Rufus Pollock and Rosie Bell</dd>
+      <dt class="lbl">Thanks</dt><dd class="tbc">[Acknowledgements]</dd>
+      <dt class="lbl">Credits</dt><dd>Figures by the authors. Woodcuts by Seeds of Renaissance. Set in Polyamine, Restora, Bricolage Grotesque and Apfel Grotezk.</dd>
+      <dt class="lbl">Licence</dt><dd>© 2026 the authors. Published under a Creative Commons Attribution 4.0 International licence (CC BY 4.0): you may share and adapt this work for any purpose, provided you credit the authors and link to the licence. creativecommons.org/licenses/by/4.0</dd>
       <dt class="lbl">Cite as</dt><dd>Pollock, R. and Bell, R. (2026). <i>Wisdom and Wanting What's Good: Collective wisdom for a time of crisis and renewal.</i> Seeds of Renaissance No. 6. Life Itself Sensemaking Studio.</dd>
       <dt class="lbl">Online</dt><dd>secondrenaissance.net/papers</dd>
     </dl>
   </div>
 </div></section>
-
 
 <!-- 3 · Contents -->
 <section class="sheet"><span class="eyebrow">3 · Annotated contents (recto, page v)</span>
@@ -263,7 +273,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <div class="runhead lbl"><span>4</span><span>Wisdom and Wanting What's Good</span></div>
   <div class="block">
     <h2 style="margin-top:0">The wisdom that orients collective action</h2>
-    <h3 style="margin-top:0">Addressing the wisdom gap</h3>
+    <h3>Addressing the wisdom gap</h3>
     <div class="col">
       <p>Amid the decline of modern industrialised society, we are obliged to trace the shape of wisdom in negative space. Manifold crises, the threat of systemic collapse, and a general inability to change direction suggest a profound <i>lack</i> of collective capacity to choose action for the greater good. At the same time, with societal complexity escalating faster than our capacity to manage it, our technologically enabled power to inflict catastrophic harm upon ourselves, each other and our world likewise continues to grow: a disconnect known as <b>‘the wisdom gap.’</b><sup class="fn">7</sup></p>
     </div>

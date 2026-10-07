@@ -25,7 +25,8 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 |---|---|---|---|
 | Front cover | Series line, title, subtitle, part line, blurb, authors with the text credit ([below](#covers-and-credits)). By default plain and typographic, ink on paper with a woodcut; a paper with its own art gets a bespoke cover | — | |
 | Inside front cover | Blank | verso | |
-| Title page with imprint | Series line, title, subtitle, part line, authors, the Life Itself credit in text; no logo. The imprint at its foot in small print: edition and date, credits, licence (CC BY 4.0), how to cite, URL | recto (i) | |
+| Title page | Series line, title, subtitle, part line, authors, the Life Itself credit in text. No logo. Quieter than the cover: no art, no blurb | recto (i) | |
+| Imprint | On the back of the title page, set small at the foot with the rest left empty: a line about the series, edition and publisher, authors, acknowledgements, credits (figures, woodcuts, typefaces), copyright and licence (CC BY 4.0) in full, how to cite, URL | verso (ii) | |
 | Summary | The paper in a few paragraphs | recto | yes |
 | Annotated contents | Parts and sections with page numbers, a one-line summary under each section | recto | plain contents if no summaries |
 | Preface | Where the paper sits in the series and why it was written | recto | yes |
@@ -37,7 +38,7 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 | Appendices | Lettered or numbered, each titled | new page | yes |
 | Back cover | The one night: blurb, a short about, the SoR mark on its disc with the wordmark, a colophon line (series, part, year, URL). The Life Itself logo allowed | — | |
 
-One paper stock throughout the inside: no white or yellow pages. Section heads are Restora; Polyamine stays for the cover, title page, contents and chapter titles.
+One paper stock throughout the inside: no white or yellow pages. Polyamine stays for the cover, title page, contents and chapter titles. Inside the text, heads are Restora: sections at 19pt, sub-sections at 14pt medium. Markdown levels map as `##` chapter, `###` section, `####` sub-section.
 
 Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on the title page and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
 
