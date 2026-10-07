@@ -28,15 +28,10 @@ Decided 2026-10-07 ([reasoning](decisions.md#working-through-publication-brandin
 - **Export covers at print resolution**: A4 at 300 dpi is 2480 × 3508 px. Social images are crops made from the art, not the cover itself ([social.md](social.md#rules-for-social)).
 - **Figures** carry the signature ([diagrams.md](diagrams.md)), so they stay attributed when shared alone.
 
-## Brief for a new session
+## How papers are built
 
-Build print with HTML and CSS paged media, so the same tokens and faces are reused:
+Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing) (issue [#6](https://github.com/life-itself/pdf-report-publishing/issues/6)), not with HTML and CSS paged media. Typst handles footnotes, running heads, page breaks and long documents more reliably, and the pipeline already builds the 2R essay.
 
-1. Add `--print-*` tokens to `system/tokens.css` and a `system/print.css` (`@page` size and margins, running heads and page numbers via margin boxes, footnotes, break rules).
-2. Make `examples/print/white-paper.html`: the white paper from [examples/web/white-paper.html](examples/web/white-paper.html) set for print, with a cover. Produce the PDF with a paged-media tool (Paged.js in the browser, or WeasyPrint) and commit both the HTML and a sample PDF.
-3. Then an A3 poster: `examples/print/poster.html`.
-4. Note any fonts issue: Polyamine and Restora must be installed or licensed for embedding in PDFs (beads `design-34t.2`).
+This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
 
-Finish: update this page and [examples.md](examples.md#status), beads, commit, push, republish.
-
-**Prompt:** *Read projects/sor-design-system/print.md, section "Brief for a new session", and follow it.*
+Still to do here (`design-34t.17`): print values as tokens (point sizes, A4 and Letter margins), the red and pale yellow checked on paper, and an A3 poster.
