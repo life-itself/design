@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.22` (papers, done), `design-34t.28` (poster).
 
-**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`.
+**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`. **The exemplar** is the Wisdom paper as built in Typst: [examples/print/wisdom.pdf](examples/print/wisdom.pdf) (2026-10-08; draft cover, Restora set in Fraunces until installed).
 
 ## What we need
 
