@@ -144,8 +144,8 @@
   --print-margin-col: 38mm;  /* side column beside the measure: notes on figures, pull quotes hang into it */
 
   --print-cover-title: 46pt; /* Polyamine, the cover only */
-  --print-title: 30pt;       /* Polyamine: title page title, chapter titles */
-  --print-h2: 16pt;          /* Polyamine: section heads (under ~10 words; longer heads drop to Restora) */
+  --print-title: 30pt;       /* Polyamine: cover, title page, contents and chapter titles. Nowhere else inside */
+  --print-h2: 19pt;          /* Restora, sentence case: section heads in the run of text (all-caps Polyamine tires at length) */
   --print-h3: 11pt;          /* Bricolage semibold: sub-heads in the run of text */
   --print-standfirst: 13pt;  /* Restora: subtitle, chapter summary */
   --print-quote: 15pt;       /* Restora italic: pull quotes */

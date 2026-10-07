@@ -48,12 +48,12 @@ Thumbnails, podcast covers and channel art. What we need, what exists and what's
 Figures and frameworks, signed so they stay attributed when shared alone. Rules: [diagrams.md](diagrams.md).
 
 - [The signature](examples/diagrams/index.html) on three real figures from the Wisdom paper and the framework, light and dark, at a 1600px export and at 400px in a feed.
-- [Type for diagrams](examples/diagrams/fonts.html): two figures redrawn and set in six candidate faces. A tryout, not yet a decision.
+- [Type for diagrams](examples/diagrams/fonts.html): two figures redrawn in Apfel only, no bold. Working direction, not yet final.
 - Built by `examples/diagrams/build.py`.
 
 ## Print
 
-The inside of a paper at actual size, from the Wisdom paper, to decide how papers look before the Typst build: [inside a paper](examples/print/index.html). Title page and imprint, annotated contents, a body spread (figure as plate, pull quote, footnotes) and a chapter opening (epigraph, summary box). The page sequence is in [print.md](print.md#anatomy-of-a-paper); covers are designed separately. Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
+The inside of a paper at actual size, from the Wisdom paper, to decide how papers look before the Typst build: [a paper, page by page](examples/print/index.html). A plain typographic front cover, the title page with the imprint at its foot, annotated contents, a body spread (figure as plate, pull quote, footnotes), a chapter opening (epigraph, summary box) and the back cover. The page sequence is in [print.md](print.md#anatomy-of-a-paper). Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
 
 ## Open across all of them
 

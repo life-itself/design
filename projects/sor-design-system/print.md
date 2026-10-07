@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
 
-**Mockups for approval:** [inside a paper](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
+**Mockups for approval:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
 
 ## What we need
 
@@ -23,9 +23,9 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 
 | Part | Holds | Starts on | Optional |
 |---|---|---|---|
-| Front cover | Series line, title, subtitle, part line, cover art, blurb, authors with the text credit ([below](#covers-and-credits)). Designed separately | — | |
-| Title page | Series line, title, subtitle, part line, authors, the Life Itself credit in text. No logo | recto (i) | |
-| Imprint | On the back of the title page, small print at the foot: series, edition and date, authors, credits (cover art, figures, typefaces), licence, how to cite, URL | verso (ii) | |
+| Front cover | Series line, title, subtitle, part line, blurb, authors with the text credit ([below](#covers-and-credits)). By default plain and typographic, ink on paper with a woodcut; a paper with its own art gets a bespoke cover | — | |
+| Inside front cover | Blank | verso | |
+| Title page with imprint | Series line, title, subtitle, part line, authors, the Life Itself credit in text; no logo. The imprint at its foot in small print: edition and date, credits, licence (CC BY 4.0), how to cite, URL | recto (i) | |
 | Summary | The paper in a few paragraphs | recto | yes |
 | Annotated contents | Parts and sections with page numbers, a one-line summary under each section | recto | plain contents if no summaries |
 | Preface | Where the paper sits in the series and why it was written | recto | yes |
@@ -35,9 +35,11 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 | Further reading | Short annotated list | new page | yes |
 | Bibliography | References cited | new page | |
 | Appendices | Lettered or numbered, each titled | new page | yes |
-| Colophon and back cover | Blurb, the SoR mark on its disc with the wordmark; the Life Itself logo allowed. Colophon may sit on the last inside page instead | — | |
+| Back cover | The one night: blurb, a short about, the SoR mark on its disc with the wordmark, a colophon line (series, part, year, URL). The Life Itself logo allowed | — | |
 
-Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on title, imprint and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
+One paper stock throughout the inside: no white or yellow pages. Section heads are Restora; Polyamine stays for the cover, title page, contents and chapter titles.
+
+Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on the title page and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
 
 ## Covers and credits
 
