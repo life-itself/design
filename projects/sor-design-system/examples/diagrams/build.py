@@ -3,6 +3,7 @@
   index.html  the signature (decided 2026-10-07: mark + name and URL in Apfel) on three
               real figures from 2rbook, light and dark, at a 1600px export and at 400px
   fonts.html  type for diagrams: Apfel only, no bold; two figures redrawn
+  style.html  drawing style: fine, panel and hand, and the figures in a paper page and a web article
 
 Signature text is outlined (system/outline.py). Figures in figures/ are copied from 2rbook,
 flattened onto white with the gamma chunk dropped so they render true black.
@@ -13,16 +14,17 @@ Needs: fonttools, uharfbuzz."""
 import base64, math, pathlib, sys
 here = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(here.parent.parent / "system"))
-from outline import SYSTEM, DISC, THEMES, RED, signature, b64
+from outline import SYSTEM, DISC, THEMES, RED, signature, b64, apfel, apfel_m
+apfel_cap = apfel.cap
 
 URL = "seeds-domain.tbd/wisdom"  # a paper's page; placeholder until the domain is decided
 W, M = 1600, 72                  # export width, margin
 SIG_GAP, SIG_FOOT = 36, 56       # figure to signature, signature to bottom edge
 SIG = {th: signature(th, URL, mark_ref="mark") for th in THEMES}
 
-def sig_at(H, theme):
+def sig_at(H, theme, width=W):
     svg, w = SIG[theme]
-    return f'<g class="sig" transform="translate({W - M - w:.1f} {H - SIG_FOOT - DISC})">{svg}</g>'
+    return f'<g class="sig" transform="translate({width - M - w:.1f} {H - SIG_FOOT - DISC})">{svg}</g>'
 
 # ── Real figures ─────────────────────────────────────────────────
 FIGS = [
@@ -51,45 +53,76 @@ def fig_symbol(f):
     return (f'<symbol id="fig-{f["id"]}" viewBox="0 0 {f["w"]} {f["h"]}">'
             f'<image width="{f["w"]}" height="{f["h"]}" href="{b64(here / "figures" / f["file"])}"/>{masks}</symbol>')
 
-# ── Redrawn figures, for the type tryout ─────────────────────────
-# Line work is deliberately plain and the same in every option: only the type changes.
-LW, LW2, HEAD = 3.5, 2.5, 18  # main and scaffolding strokes, arrowhead length, at 1600
+# ── Redrawn figures ──────────────────────────────────────────────
+# Drawing styles (design-34t.26), widths at 1600px. Chosen 2026-10-08: panel.
+#   fine   Tufte: thin lines, hairline scaffolding, no boxes (layers sit on rules)
+#   panel  FT/Economist: no outlines; layers and the accent area in the red tint; bolder lines
+# All arrowheads are solid. Lines are solid: no dashes.
+STYLES = {
+    "fine":  dict(lw=3, lw2=1.5, head=16, box="rule", gap="arrow"),
+    "panel": dict(lw=4, lw2=2, head=18, box="panel", gap="shade"),
+}
+# The red tint: the logo red at 16% on white, 22% on night. Panels and accent areas, never text.
+# (Tried warm grey panels with red only for the accent: too faint at 400px and on a web page.)
+TINT = {"light": "#fbdbdb", "dark": "#441815"}
+PANEL = TINT
+PAD = 40  # inside a panel: the same on all four sides (cap height at the top, baseline at the bottom)
 
-def arrowhead(p, q, color, sw=LW, L=HEAD):
-    a = math.atan2(q[1] - p[1], q[0] - p[0])
-    pts = [(q[0] - L * math.cos(a + s * 0.45), q[1] - L * math.sin(a + s * 0.45)) for s in (1, -1)]
-    return (f'<path d="M{pts[0][0]:.1f} {pts[0][1]:.1f} L{q[0]:.1f} {q[1]:.1f} L{pts[1][0]:.1f} {pts[1][1]:.1f}" '
-            f'fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>')
+def _head(q, a, color, L):
+    w = L * 0.4
+    bx, by = q[0] - L * math.cos(a), q[1] - L * math.sin(a)
+    nx, ny = -math.sin(a) * w, math.cos(a) * w
+    return f'<path d="M{q[0]:.1f} {q[1]:.1f} L{bx + nx:.1f} {by + ny:.1f} L{bx - nx:.1f} {by - ny:.1f} Z" fill="{color}"/>'
 
-def line(d, color, sw=LW, extra=""):
-    return f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"{extra}/>'
+def line(pts, color, sw):
+    d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
+    return f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/>'
 
-def gap_svg(theme="light"):
+def arrow(pts, color, sw, L, both=False):
+    """A line with a solid arrowhead at the end (and the start, if both). The line stops at the head's base."""
+    pts = list(pts)
+    def angle(p, q): return math.atan2(q[1] - p[1], q[0] - p[0])
+    a1 = angle(pts[-2], pts[-1]); tip1 = pts[-1]
+    pts[-1] = (tip1[0] - 0.8 * L * math.cos(a1), tip1[1] - 0.8 * L * math.sin(a1))
+    heads = _head(tip1, a1, color, L)
+    if both:
+        a0 = angle(pts[1], pts[0]); tip0 = pts[0]
+        pts[0] = (tip0[0] - 0.8 * L * math.cos(a0), tip0[1] - 0.8 * L * math.sin(a0))
+        heads += _head(tip0, a0, color, L)
+    return line(pts, color, sw) + heads
+
+def gap_svg(theme="light", style="panel"):
+    S = STYLES[style]
     ink, H = THEMES[theme]["ink"], 1080
     x0, x1, axis = 120, 1330, 900
     tech = lambda t: 830 - 660 * (math.exp(4.2 * t) - 1) / (math.exp(4.2) - 1)
     wis = lambda t: 872 - 250 * (math.exp(1.6 * t) - 1) / (math.exp(1.6) - 1)
-    def curve(fn):
-        pts = [(x0 + (x1 - x0) * i / 60, fn(i / 60)) for i in range(61)]
-        return pts, "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
-    tp, td = curve(tech); wp, wd = curve(wis)
-    gx = 1180; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 20, wis(t) - 20
-    body = (f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>'
-            f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The wisdom gap</text>'
-            f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Our power grows faster than our capacity to use it well</text>'
-            + line(f"M{x0 - 40} {axis} L{x1 + 90} {axis}", ink, LW2) + arrowhead((x0, axis), (x1 + 90, axis), ink, LW2)
-            + f'<text x="{x1 + 90}" y="{axis + 44}" text-anchor="end" class="d-tag" fill="{ink}">Time</text>'
-            + line(td, ink) + arrowhead(tp[-3], tp[-1], ink) + line(wd, ink) + arrowhead(wp[-3], wp[-1], ink)
-            + line(f"M{gx} {ty} L{gx} {wy}", RED, LW, ' stroke-dasharray="14 12"')
-            + arrowhead((gx, wy), (gx, ty), RED) + arrowhead((gx, ty), (gx, wy), RED)
-            + f'<text x="{gx + 26}" y="{(ty + wy) / 2 + 7}" class="d-tag" fill="{RED}">Wisdom gap</text>'
-            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1220" y="240">Technological capability</tspan><tspan x="1220" dy="1.3em">and/or social complexity</tspan></text>'
-            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1330" y="770">“Wisdom”: our capacity</tspan><tspan x="1330" dy="1.3em">to manage that complexity</tspan></text>')
-    return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="The wisdom gap, redrawn">{body}{sig_at(H, theme)}</svg>'
+    tp = [(x0 + (x1 - x0) * i / 60, tech(i / 60)) for i in range(61)]
+    wp = [(x0 + (x1 - x0) * i / 60, wis(i / 60)) for i in range(61)]
+    out = [f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>']
+    if S["gap"] == "shade":  # the accent as an area: the space between the curves, in the red tint
+        area = tp[30:] + wp[30:][::-1]
+        out.append(f'<path d="M{" L".join(f"{x:.1f} {y:.1f}" for x, y in area)} Z" fill="{TINT[theme]}"/>')
+        out.append(f'<text x="1150" y="575" class="d-tag" fill="{RED}">Wisdom gap</text>')
+    out += [f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">The wisdom gap</text>',
+            f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Our power grows faster than our capacity to use it well</text>',
+            arrow([(x0 - 40, axis), (x1 + 90, axis)], ink, S["lw2"], S["head"] - 4),
+            f'<text x="{x1 + 90}" y="{axis + 44}" text-anchor="end" class="d-tag" fill="{ink}">Time</text>',
+            arrow(tp, ink, S["lw"], S["head"] + 4), arrow(wp, ink, S["lw"], S["head"] + 4)]
+    if S["gap"] == "arrow":
+        gx = 1180; t = (gx - x0) / (x1 - x0); ty, wy = tech(t) + 14, wis(t) - 14
+        out += [arrow([(gx, ty), (gx, wy)], RED, S["lw"], S["head"], both=True),
+                f'<text x="{gx + 26}" y="{(ty + wy) / 2 + 7}" class="d-tag" fill="{RED}">Wisdom gap</text>']
+    out += [f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1220" y="240">Technological capability</tspan><tspan x="1220" dy="1.3em">and/or social complexity</tspan></text>',
+            f'<text class="d-label" fill="{ink}" text-anchor="end"><tspan x="1330" y="770">“Wisdom”: our capacity</tspan><tspan x="1330" dy="1.3em">to manage that complexity</tspan></text>']
+    return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="The wisdom gap, redrawn">{"".join(out)}{sig_at(H, theme)}</svg>'
 
-def poly_svg(theme="light"):
+def poly_svg(theme="light", style="panel"):
+    S = STYLES[style]
     ink = THEMES[theme]["ink"]
-    bx, bw, pad = M, 830, 40
+    framed = S["box"] != "rule"
+    pad = PAD if framed else 0
+    cap = apfel_cap * TYPE["head"][1]
     boxes = [  # heading, secondary lines, body lines, bullets?
         ("Surface layer", ["Manifest crises"],
          ["Escalating, interacting global crises", "such as the climate crisis and tech x-risk"], False),
@@ -98,40 +131,55 @@ def poly_svg(theme="light"):
         ("Root layer", ["Foundational ideologies (cultural paradigms)", "and deep human tendencies"],
          ["Deep ideological features", "Core aspects of humanity"], True),
     ]
-    out, y, placed = [], 210, []
+    # boxes as wide as their longest line plus padding, not wider (measured with the font itself)
+    widest = max([apfel_m.path(b[0], TYPE["head"][1], 0, 0)[1] for b in boxes]
+                 + [apfel.path(t, TYPE["sub"][1], 0, 0)[1] for b in boxes for t in b[1]]
+                 + [apfel.path(t, TYPE["label"][1], 0, 0)[1] + (28 if b[3] else 0) for b in boxes for t in b[2]])
+    bx, bw = M, round(widest + 2 * pad + 8)
+    out, y, placed, GAP = [], 210, [], 84
     for i, (head, sub, lines, bullets) in enumerate(boxes):
-        h = 66 + 36 * len(sub) + 22 + 44 * len(lines) + 12
-        out.append(f'<rect x="{bx}" y="{y}" width="{bw}" height="{h}" rx="18" fill="none" stroke="{ink}" stroke-width="{LW}"/>')
-        out.append(f'<text x="{bx + pad}" y="{y + 62}" class="d-head" fill="{ink}">{head}</text>')
-        ty = y + 62 + 38
+        top_pad = pad if framed else 34
+        text, ty = [], y + top_pad + cap  # heading baseline: its cap height sits pad below the top
+        text.append(f'<text x="{bx + pad}" y="{ty:.1f}" class="d-head" fill="{ink}">{head}</text>')
         for t in sub:
-            out.append(f'<text x="{bx + pad}" y="{ty}" class="d-sub" fill="{ink}">{t}</text>'); ty += 36
-        ty += 22
+            ty += 36; text.append(f'<text x="{bx + pad}" y="{ty:.1f}" class="d-sub" fill="{ink}">{t}</text>')
+        ty += 20
         for ln in lines:
+            ty += 44  # label baselines; the first sits a clear step below the secondary lines
             if bullets:
-                out.append(f'<circle cx="{bx + pad + 6}" cy="{ty - 10}" r="5" fill="{ink}"/>')
-                out.append(f'<text x="{bx + pad + 28}" y="{ty}" class="d-label" fill="{ink}">{ln}</text>')
+                text.append(f'<circle cx="{bx + pad + 6}" cy="{ty - 10:.1f}" r="5" fill="{ink}"/>')
+                text.append(f'<text x="{bx + pad + 28}" y="{ty:.1f}" class="d-label" fill="{ink}">{ln}</text>')
             else:
-                out.append(f'<text x="{bx + pad}" y="{ty}" class="d-label" fill="{ink}">{ln}</text>')
-            ty += 44
-        if placed:  # arrow up into the box above
+                text.append(f'<text x="{bx + pad}" y="{ty:.1f}" class="d-label" fill="{ink}">{ln}</text>')
+        h = ty - y + (pad if framed else 10)  # last baseline to the bottom edge: the same as the top
+        if S["box"] == "panel":
+            out.append(f'<rect x="{bx}" y="{y}" width="{bw}" height="{h:.1f}" fill="{PANEL[theme]}"/>')
+        else:  # rule: a hairline above each layer, nothing else
+            out.append(line([(bx, y), (bx + bw, y)], ink, S["lw2"]))
+        out += text
+        if placed:  # arrow up into the layer above, stopping short of both edges
             top = placed[-1][0] + placed[-1][1]
-            out.append(line(f"M{bx + bw / 2} {y} L{bx + bw / 2} {top + 4}", ink, LW2) + arrowhead((bx + bw / 2, y), (bx + bw / 2, top + 4), ink, LW2))
-        placed.append((y, h)); y += h + 80
-    bottom = y - 80
+            ax = bx + bw / 2
+            out.append(arrow([(ax, y - 10), (ax, top + 10)], ink, S["lw2"], S["head"]))
+        placed.append((y, h)); y += h + GAP
+    bottom = y - GAP
     def bracket(x, y0, y1, label):
         mid = (y0 + y1) / 2
-        return (line(f"M{x - 24} {y0} L{x} {y0} L{x} {y1} L{x - 24} {y1} M{x} {mid} L{x + 36} {mid}", ink, LW2)
+        return (line([(x - 24, y0), (x, y0), (x, y1), (x - 24, y1)], ink, S["lw2"]) + line([(x, mid), (x + 36, mid)], ink, S["lw2"])
                 + f'<text x="{x + 54}" y="{mid + 13}" class="d-big" fill="{ink}">{label}</text>')
-    out.append(bracket(960, placed[0][0], placed[0][0] + placed[0][1], "Polycrisis"))
-    out.append(bracket(1240, placed[0][0], bottom, "Metacrisis"))
+    b1, b2 = bx + bw + 80, bx + bw + 400  # brackets follow the boxes
+    out.append(bracket(b1, placed[0][0], placed[0][0] + placed[0][1], "Polycrisis"))
+    out.append(bracket(b2, placed[0][0], bottom, "Metacrisis"))
+    # the export is as wide as the figure, so the signature sits under it, not out in empty space
+    right = b2 + 54 + apfel_m.path("Metacrisis", TYPE["big"][1], 0, 0)[1]
+    Wf = round(max(right + M, M + SIG["light"][1] + M))
     H = bottom + SIG_GAP + DISC + SIG_FOOT
-    pre = [f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>',
+    pre = [f'<rect width="{Wf}" height="{H}" fill="{THEMES[theme]["ground"]}"/>',
            f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">From polycrisis to metacrisis</text>',
            f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">Three layers of crisis, from what we see to its roots</text>']
     ry, rh = placed[-1]
     poly_svg.crop = (bx - 12, ry - 12, bw + 24, rh + 24)
-    return f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="From polycrisis to metacrisis, redrawn">{"".join(pre + out)}{sig_at(H, theme)}</svg>'
+    return f'<svg class="fig" viewBox="0 0 {Wf} {H}" role="img" aria-label="From polycrisis to metacrisis, redrawn">{"".join(pre + out)}{sig_at(H, theme, Wf)}</svg>'
 
 # Diagram type (2026-10-08): Apfel Grotezk only, no Fett. Restraint as in FT and Economist
 # charts: the title only a little larger than the labels, a grey subtitle, hierarchy from
@@ -152,7 +200,7 @@ def type_css():
 
 # ── Page shell ───────────────────────────────────────────────────
 GOOGLE = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700"
-          "&family=Hanken+Grotesk:wght@400;500&display=swap")
+          "&family=Hanken+Grotesk:wght@400;500&family=Fraunces:opsz,wght@9..144,400&display=swap")
 
 def defs(figs=True):
     marks = "".join(f'<symbol id="mark-{th}" viewBox="0 0 256 256"><image width="256" height="256" href="{b64(SYSTEM / img)}"/></symbol>'
@@ -216,8 +264,8 @@ h3.label { margin-top: 28px }
 .spec td { padding: 8px 20px 8px 0; border-top: 1px solid var(--rule); vertical-align: top }
 .spec tr:first-child td { border-top: 0 }
 dialog { padding: 0; border: 0; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; background: var(--scrim); overflow: auto }
-dialog .inner { width: 1600px; margin: 0 auto; padding: 48px 0 }
-dialog .fig { width: 1600px }
+dialog .inner { width: fit-content; margin: 0 auto; padding: 48px 0 }
+dialog .fig { width: auto }
 dialog .close { position: fixed; top: 12px; right: 16px; font: 500 14px var(--font-body); background: #ffffff; color: #1b1916; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer }
 """
 
@@ -225,7 +273,8 @@ ZOOM_JS = """
 const dlg = document.getElementById('zoom'), inner = dlg.querySelector('.inner');
 document.querySelectorAll('.zoom').forEach(z => z.addEventListener('click', () => {
   const box = document.createElement('div'); box.className = z.closest('[class*="o-"]')?.className.match(/o-[\\w-]+/)?.[0] || '';
-  box.append(z.querySelector('svg').cloneNode(true)); inner.replaceChildren(box); dlg.showModal();
+  const svg = z.querySelector('svg').cloneNode(true); svg.style.width = svg.viewBox.baseVal.width + 'px';  /* 1:1 */
+  box.append(svg); inner.replaceChildren(box); dlg.showModal();
 }));
 dlg.querySelector('.close').addEventListener('click', () => dlg.close());
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close() });
@@ -313,7 +362,7 @@ def fonts_page(bundle):
   <p class="label">Seeds of Renaissance design system · Diagrams</p>
   <h1>Type for diagrams</h1>
   <div class="intro">
-    <p>Apfel Grotezk only, and no bold. Elegance from restraint, as in FT and Economist charts: the title only a little larger than the labels, a grey subtitle doing the explaining, hierarchy from size and 60% ink rather than weight. Line work is still plain; the drawing style comes next.</p>
+    <p>Apfel Grotezk only, and no bold. Elegance from restraint, as in FT and Economist charts: the title only a little larger than the labels, a grey subtitle doing the explaining, hierarchy from size and 60% ink rather than weight. Drawn in the chosen style, panels (<a href="style.html">drawing style</a>).</p>
     <p class="fnote">Subtitles are draft copy.</p>
   </div>
   <section style="margin-top:0">
@@ -331,13 +380,120 @@ def fonts_page(bundle):
   </section>'''
     return shell("Type for diagrams", body, bundle, extra_css=type_css(), figs=False)
 
+# ── style.html: drawing style, and figures in context ───────────
+SNAMES = {"fine": ("Fine", "After Tufte. Thin lines, hairlines for scaffolding, no boxes: layers sit on a rule. The accent as a red arrow."),
+          "panel": ("Panels", "After the FT and the Economist. No outlines: layers are panels in the red tint, the same as the wisdom gap, as wide as their text, with equal padding."),
+}
+PAPER_P = [
+    "Amid the decline of modern industrialised society, we are obliged to trace the shape of wisdom in negative space. Manifold crises, the threat of systemic collapse, and a general inability to change direction suggest a profound lack of collective capacity to choose action for the greater good. At the same time, with societal complexity escalating faster than our capacity to manage it, our technologically enabled power to inflict catastrophic harm upon ourselves, each other and our world likewise continues to grow: a disconnect known as ‘the wisdom gap.’",
+    "It’s uncontroversial to associate wisdom with rational understanding: with the capacity to grasp what’s going on in a given context, and apply knowledge and analysis to interpret events and guide action. The complexity of our times plainly overwhelms understanding, and it’s tempting to suggest that this shortfall alone explains our ‘wisdom gap’. Still, most would intuitively agree that there’s more to wisdom than analytical skill.",
+]
+CAPTION = "A rapidly growing gap between society’s technological and social complexity and our “wisdom”, our capacity to manage that complexity well. The curves show a direction, not measured trajectories."
+
+def variants(fn):
+    return "".join(f'<div class="sv" data-s="{k}">{fn("light", k)}</div>' for k in SNAMES)
+
+def style_page(bundle):
+    secs = "".join(f'''
+  <section id="{k}">
+    <h2>{name}</h2>
+    <p class="fnote">{why}</p>
+    <div class="pair">{zoomable(poly_svg("light", k), "Click for 1:1.")}{zoomable(gap_svg("light", k), "Click for 1:1.")}</div>
+  </section>''' for k, (name, why) in SNAMES.items())
+    bw = "".join(f'<figure class="thumb"><div class="thumb-box bw">{gap_svg("light", k)}</div><figcaption><b>{SNAMES[k][0]}</b></figcaption></figure>' for k in SNAMES)
+    small = "".join(f'<figure class="thumb"><div class="thumb-box">{poly_svg("light", k)}</div><figcaption><b>{SNAMES[k][0]}</b></figcaption></figure>' for k in SNAMES)
+    buttons = "".join(f'<button data-s="{k}" aria-pressed="{str(k == "panel").lower()}">{n}</button>' for k, (n, _) in SNAMES.items())
+    body = f'''
+  <p class="label">Seeds of Renaissance design system · Diagrams</p>
+  <h1>Drawing style for diagrams</h1>
+  <div class="intro">
+    <p>Two ways to draw the same two figures, with the type fixed (Apfel only, no bold) and one red accent. References: Tufte, the FT, the Economist. Then the figures in context: on a page of the paper and in a web article.</p>
+  </div>
+  {secs}
+  <section>
+    <h2>Printed in black and white</h2>
+    <p class="fnote">The red has to survive a black-and-white printer: as a grey area or panel, or as an arrow with its label.</p>
+    <div class="thumbs">{bw}</div>
+  </section>
+  <section>
+    <h2>At 400px, as in a feed</h2>
+    <div class="thumbs">{small}</div>
+  </section>
+  <section id="context">
+    <h2>In context</h2>
+    <p class="fnote">The figure beside running text: Bricolage for the text, Apfel in the figure. Switch the style to see each one on the page.</p>
+    <div class="bar" role="group" aria-label="Drawing style in context">{buttons}</div>
+    <div class="ctx" data-style="panel">
+      <h3 class="label">A page of the paper (A4, figure as a plate)</h3>
+      <div class="sheet-wrap"><div class="sheet">
+        <div class="rh"><span>4</span><span>Wisdom and Wanting What’s Good</span></div>
+        <h4 class="ph2">Addressing the wisdom gap</h4>
+        <p class="pp">{PAPER_P[0]}<sup>7</sup></p>
+        <figure class="plate"><div class="art">{variants(gap_svg)}</div>
+          <figcaption><span class="flbl">Fig. 1</span><span>{CAPTION}<sup>8</sup></span></figcaption></figure>
+        <p class="pp">{PAPER_P[1]}</p>
+      </div></div>
+      <h3 class="label">A web article</h3>
+      <div class="web-wrap"><article class="web">
+        <p class="wlabel">White paper No. 6 · Wisdom and Wanting What’s Good</p>
+        <h4 class="wh2">Addressing the wisdom gap</h4>
+        <p>{PAPER_P[0]}</p>
+        <figure class="wfig">{variants(poly_svg)}<figcaption><span class="flbl">Fig. 2</span> The crises we see sit on deeper dysfunctions, which sit on ideas and tendencies we rarely examine. Working on the surface alone does not reach the root.</figcaption></figure>
+        <p>{PAPER_P[1]}</p>
+      </article></div>
+    </div>
+  </section>'''
+    css = """
+.bw svg { filter: grayscale(1) }
+.ctx[data-style="fine"] .sv:not([data-s="fine"]), .ctx[data-style="panel"] .sv:not([data-s="panel"]) { display: none }
+.sv svg.fig { border: 0 }
+.sv svg.fig > rect:first-child { fill: transparent }  /* in context the figure sits on the page, not on a white box */
+/* the paper page and the web article are depictions of light, printed or on-brand pages: fixed colours */
+.sheet-wrap, .web-wrap { overflow-x: auto; max-width: 100%; margin-top: 10px }
+.sheet-wrap { background: #e4dfd5; padding: 24px }
+.sheet { width: 210mm; min-height: 297mm; box-sizing: border-box; padding: 22mm 20mm 26mm 24mm; background: #fbfaf6; color: #1b1916; box-shadow: 0 1px 3px rgb(0 0 0 / .18); font-family: "Bricolage Grotesque", sans-serif }
+.rh { display: flex; gap: 6mm; font: 500 7pt "Apfel Grotezk", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #5d584f; margin-top: -10mm; margin-bottom: 10mm }
+.ph2 { font: 400 19pt/1.15 "Restora", "Fraunces", Georgia, serif; margin: 0 0 14.5pt; width: 118mm }
+.pp { font-size: 10.5pt; line-height: 14.5pt; width: 118mm; margin: 0; text-indent: 0 }
+.pp + .pp { text-indent: 1.4em }
+.pp sup, .plate sup { color: #e5201c; font-size: .7em }
+.plate { margin: 14.5pt 0; break-inside: avoid }
+.plate .art { border-top: .5pt solid #e0dacf; border-bottom: .5pt solid #e0dacf; padding: 2mm 0 }
+.plate .art svg { display: block; width: 100%; height: auto }
+.plate figcaption { display: grid; grid-template-columns: 14mm 118mm; margin-top: 3mm; font-size: 8.5pt; line-height: 11.5pt; color: #5d584f; font-style: italic }
+.flbl { font: 500 7pt "Apfel Grotezk", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #1b1916; font-style: normal; padding-top: 1.5pt }
+.web { background: #fbfaf6; color: #1b1916; padding: 48px clamp(16px, 5vw, 64px); min-width: 0 }
+.web > p, .web > h4, .web > .wlabel { max-width: 680px; margin-inline: auto }
+.web p { font-size: 18px; line-height: 1.6; margin-block: 0 1em }
+.wlabel { font: 500 12px "Apfel Grotezk", sans-serif !important; letter-spacing: .1em; text-transform: uppercase; color: #5d584f }
+.wh2 { font: 400 32px/1.15 "Restora", "Fraunces", Georgia, serif; margin-block: 0 16px }
+.wfig { max-width: 960px; margin: 32px auto }
+.wfig svg { display: block; width: 100%; height: auto }
+.wfig figcaption { max-width: 680px; margin: 10px auto 0; font-size: 14px; color: #5d584f; line-height: 1.5 }
+.wfig .flbl { font-size: 11px; margin-right: 8px }
+"""
+    js = """
+const ctx = document.querySelector('.ctx'), sb = document.querySelectorAll('#context .bar button');
+sb.forEach(b => b.addEventListener('click', () => {
+  ctx.dataset.style = b.dataset.s; sb.forEach(x => x.setAttribute('aria-pressed', x === b));
+}));
+"""
+    return shell("Diagram drawing style", body, bundle, extra_css=type_css() + css, js=js, figs=False)
+
+ARTIFACTS = {"index.html": "https://claude.ai/artifact/TYhQ6hnqSPp7dUUuF5Se2f",
+             "fonts.html": "https://claude.ai/artifact/JQs6MvaQM2a9rvWm1c3p61",
+             "style.html": "https://claude.ai/artifact/H4unZtofiTcy894NucUS59"}
+
 def for_artifact(html):
     """The publisher adds the document skeleton: keep the head's contents and the body's."""
     head = html[html.index("<title>"):html.index("</head>")]
-    return head + html[html.index("<body>") + 6:html.index("</body>")]
+    body = html[html.index("<body>") + 6:html.index("</body>")]
+    for page, url in ARTIFACTS.items():  # sibling pages are separate artifacts once published
+        body = body.replace(f'href="{page}"', f'href="{url}"')
+    return head + body
 
 if __name__ == "__main__":
-    pages = {"index.html": index_page, "fonts.html": fonts_page}
+    pages = {"index.html": index_page, "fonts.html": fonts_page, "style.html": style_page}
     if len(sys.argv) == 3 and sys.argv[1] == "--bundle":
         out = pathlib.Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
         for name, fn in pages.items():

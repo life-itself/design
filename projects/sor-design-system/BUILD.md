@@ -28,7 +28,7 @@ What exists for each, and its status: [examples.md](examples.md#status).
 
 1. **Four faces only.** Polyamine for headlines and titles under ~10 words; Restora for longer display text and the poetic italic; Bricolage Grotesque for reading; Apfel Grotezk for small uppercase labels.
 2. **Ink and paper first.** White is the default ground, paper sometimes, pale yellow at times, one night per piece. Colour comes from photographs.
-3. **Buttons and marks are ink.** Red is the logo's own red, an occasional link in running text, or the red woodcuts. Never a red button, heading or background.
+3. **Buttons and marks are ink.** Red is the logo's own red, an occasional link in running text, or the red woodcuts. Never a red button, heading or background, except the pale red tint in diagrams ([diagrams.md](diagrams.md#drawing-style)).
 4. **No bright yellow, no highlighting, no gradients** except a scrim to make text readable on a photo.
 5. **The hand is our texture:** torn edges, paper grain, woodcuts. Not filters, not stock textures.
 6. **Real copy in our voice** ([voice.md](voice.md)); images captioned like plates where there's room.

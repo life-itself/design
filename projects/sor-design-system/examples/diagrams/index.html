@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diagram signature</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500&family=Fraunces:opsz,wght@9..144,400&display=swap">
 <link rel="stylesheet" href="../../system/fonts.css">
 <style>
 /* Layout: one reading column for text, figures in a two-up grid that stacks on phones. */
@@ -57,8 +57,8 @@ h3.label { margin-top: 28px }
 .spec td { padding: 8px 20px 8px 0; border-top: 1px solid var(--rule); vertical-align: top }
 .spec tr:first-child td { border-top: 0 }
 dialog { padding: 0; border: 0; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; background: var(--scrim); overflow: auto }
-dialog .inner { width: 1600px; margin: 0 auto; padding: 48px 0 }
-dialog .fig { width: 1600px }
+dialog .inner { width: fit-content; margin: 0 auto; padding: 48px 0 }
+dialog .fig { width: auto }
 dialog .close { position: fixed; top: 12px; right: 16px; font: 500 14px var(--font-body); background: #ffffff; color: #1b1916; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer }
 </style>
 </head>
@@ -107,7 +107,8 @@ dialog .close { position: fixed; top: 12px; right: 16px; font: 500 14px var(--fo
 const dlg = document.getElementById('zoom'), inner = dlg.querySelector('.inner');
 document.querySelectorAll('.zoom').forEach(z => z.addEventListener('click', () => {
   const box = document.createElement('div'); box.className = z.closest('[class*="o-"]')?.className.match(/o-[\w-]+/)?.[0] || '';
-  box.append(z.querySelector('svg').cloneNode(true)); inner.replaceChildren(box); dlg.showModal();
+  const svg = z.querySelector('svg').cloneNode(true); svg.style.width = svg.viewBox.baseVal.width + 'px';  /* 1:1 */
+  box.append(svg); inner.replaceChildren(box); dlg.showModal();
 }));
 dlg.querySelector('.close').addEventListener('click', () => dlg.close());
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close() });
