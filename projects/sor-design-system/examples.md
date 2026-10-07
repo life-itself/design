@@ -53,7 +53,7 @@ Figures and frameworks, signed so they stay attributed when shared alone. Rules:
 
 ## Print
 
-Seven A4 pages from the Wisdom paper at actual size, to decide how papers look before the Typst build: [the paper, page by page](examples/print/index.html). Cover, title page, annotated contents, a body page with a figure as plate, a chapter opening with epigraph and summary box, a body page with a pull quote, and the back cover. Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
+The inside of a paper at actual size, from the Wisdom paper, to decide how papers look before the Typst build: [inside a paper](examples/print/index.html). Title page and imprint, annotated contents, a body spread (figure as plate, pull quote, footnotes) and a chapter opening (epigraph, summary box). The page sequence is in [print.md](print.md#anatomy-of-a-paper); covers are designed separately. Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
 
 ## Open across all of them
 

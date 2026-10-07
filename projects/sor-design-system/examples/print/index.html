@@ -11,12 +11,7 @@
 <style>
 /* Print mockups for SoR papers (design-34t.22). HTML decides the look only; papers are built with Typst
    in pdf-report-publishing from the --print-* tokens. Each .page is A4 at 1:1 and is zoomed down to fit narrow screens. */
-:root {
-  --cover-ink: #24358c;   /* Wisdom's cover brings its own palette: navy from the heart art */
-  --cover-gold: #d6a630;  /* and gold, display size only */
-  --cover-ground: #faf9f4; /* the art's own paper, so the painting sits in the page without a box */
-  --desk: #e9e5dc;
-}
+:root { --desk: #e9e5dc }
 * { box-sizing: border-box }
 html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--font-body) }
 
@@ -27,7 +22,7 @@ html, body { margin: 0; background: var(--desk); color: var(--ink); font-family:
 .intro ul { margin: 0 0 10px; padding-left: 1.2em; color: var(--muted) }
 .eyebrow { font-family: var(--font-label); text-transform: uppercase; letter-spacing: var(--track-label); font-size: 12px; color: var(--muted) }
 .sheet { display: grid; justify-items: center; gap: 10px; padding: 36px 16px 8px }
-.sheet > .eyebrow { width: min(100%, 210mm) }
+.sheet > .eyebrow { width: min(100%, 420mm) }
 .pages { display: grid; justify-items: center; gap: 48px; padding-bottom: 96px }
 
 /* ── The page ──────────────────────────────────────────────── */
@@ -45,7 +40,7 @@ html, body { margin: 0; background: var(--desk); color: var(--ink); font-family:
 .page:not(.chapter) .block { display: flex; flex-direction: column }
 .verso .block { left: var(--print-m-outer); right: var(--print-m-inner) }
 
-.page h1, .page h2, .page h3, .page q, .page .blurb, .page .sub, .page .after, .epigraph, .toc { hyphens: manual; -webkit-hyphens: manual }
+.page h1, .page h2, .page h3, .page q, .page .sub, .page .after, .epigraph, .toc { hyphens: manual; -webkit-hyphens: manual }
 .lbl { font-family: var(--font-label); font-size: var(--print-label); letter-spacing: var(--print-track); text-transform: uppercase; font-weight: 400; font-variant-numeric: lining-nums }
 .runhead { position: absolute; top: 12mm; left: var(--print-m-inner); right: var(--print-m-outer); display: flex; justify-content: space-between; color: var(--muted) }
 .folio { position: absolute; bottom: 14mm; right: var(--print-m-outer); color: var(--ink) }
@@ -90,24 +85,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 .summary .lbl { position: absolute; top: -4pt; left: 8pt; background: var(--paper); padding: 0 4pt; line-height: 1 }
 .white .summary .lbl { background: var(--white) }
 
-/* ── Cover ─────────────────────────────────────────────────── */
-.cover { color: var(--cover-ink); background: var(--cover-ground) }
-.cover .top { position: absolute; top: 34mm; left: 22mm; right: 22mm }
-.cover .series { position: absolute; top: 18mm; left: 22mm; right: 22mm; display: flex; align-items: baseline; gap: 3mm; border-bottom: .6pt solid currentColor; padding-bottom: 3mm }
-.cover .series .wm { font-family: var(--font-display); font-size: 13pt; line-height: 1 }
-.cover .series .wm em { font-family: var(--font-quote); font-style: italic; font-size: .82em }
-.cover .series .lbl { margin-left: auto }
-.cover h1 { margin: 0; max-width: 150mm; font-family: var(--font-display); font-weight: 400; font-size: var(--print-cover-title); line-height: .98; letter-spacing: -.005em }
-.cover h1 .good { color: var(--cover-gold) }
-.cover .sub { margin: 6mm 0 0; width: 110mm; font-family: var(--font-quote); font-size: 15pt; line-height: 19pt }
-.cover .part { display: block; margin-top: 4mm }
-.cover .art { position: absolute; top: 112mm; right: 16mm; width: 118mm }
-.cover .blurb { position: absolute; left: 22mm; bottom: 46mm; width: 62mm; margin: 0; font-family: var(--font-quote); font-style: italic; font-size: 12pt; line-height: 16pt }
-.cover .byline { position: absolute; left: 22mm; right: 22mm; bottom: 18mm; display: flex; align-items: baseline; gap: 4mm; border-top: .6pt solid currentColor; padding-top: 3mm }
-.cover .byline b { font-weight: 500; font-size: 11pt }
-.cover .byline .lbl { margin-left: auto }
-
-/* ── Title page ────────────────────────────────────────────── */
+/* ── Title page and imprint ──────────────────────────────── */
 .titlepage .series { position: absolute; top: 30mm; left: var(--print-m-inner); display: flex; gap: 3mm; align-items: baseline }
 .titlepage .series .wm { font-family: var(--font-display); font-size: 12pt }
 .titlepage .series .wm em { font-family: var(--font-quote); font-style: italic; font-size: .82em }
@@ -145,20 +123,17 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 .chapter .epigraph .lbl { display: block; margin-top: 5pt; color: var(--muted) }
 .chapter .open h2 { margin-top: 0 }
 
-/* ── Back cover ────────────────────────────────────────────── */
-.back { background: var(--night); color: var(--chalk) }
-.back .tear { position: absolute; left: 0; right: 0; top: 0; height: 9mm; background: var(--paper);
-  clip-path: polygon(0 0,100% 0,100% 52%,97% 70%,93% 48%,89% 66%,84% 55%,80% 74%,75% 51%,71% 62%,66% 46%,61% 70%,57% 58%,52% 76%,47% 50%,43% 64%,38% 49%,33% 72%,29% 57%,24% 68%,19% 47%,15% 63%,10% 52%,6% 71%,3% 55%,0 64%) }
-.back .blurb { position: absolute; top: 40mm; left: 22mm; width: 120mm; margin: 0; font-family: var(--font-quote); font-size: 17pt; line-height: 22pt }
-.back .about { position: absolute; top: 96mm; left: 22mm; width: 100mm; font-size: 9.5pt; line-height: 14pt; color: var(--chalk) }
-.back .about p + p { text-indent: 0; margin-top: 7pt }
-.back .mark { position: absolute; left: 22mm; bottom: 26mm; display: flex; align-items: center; gap: 5mm }
-.back .disc { width: 19mm; height: 19mm; border-radius: 50%; background: var(--white); display: grid; place-items: center }
-.back .disc img { width: 85%; height: 85% }
-.back .mark .wm { font-family: var(--font-display); font-size: 20pt; line-height: 1 }
-.back .mark .wm em { font-family: var(--font-quote); font-style: italic; font-size: .82em }
-.back .colophon { position: absolute; right: 22mm; bottom: 26mm; width: 64mm; text-align: right; color: var(--night-muted); line-height: 11pt }
-.back .colophon .lbl { display: block; margin-top: 2.5pt }
+/* ── Imprint (verso of the title page): small print at the foot ── */
+.imprint .block { display: flex; flex-direction: column; justify-content: flex-end }
+.imprint dl { display: grid; grid-template-columns: 24mm 1fr; gap: 5pt 0; margin: 0; width: 110mm; font-size: var(--print-note); line-height: 11pt }
+.imprint dt { color: var(--muted); padding-top: 1pt }
+.imprint dd { margin: 0 }
+.imprint .tbc { color: var(--muted); font-style: italic }
+
+/* ── Spread: verso and recto side by side, stacked on narrow screens ── */
+.spread { display: flex; flex-wrap: wrap; justify-content: center }
+.spread .page + .page { box-shadow: var(--shadow-object), inset 6mm 0 8mm -6mm rgb(27 25 22 / .12) }
+.spread .verso { box-shadow: var(--shadow-object), inset -6mm 0 8mm -6mm rgb(27 25 22 / .12) }
 
 /* print the mockups as a proof: one A4 per page */
 @page { size: A4; margin: 0 }
@@ -166,7 +141,7 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   html, body { background: none }
   .intro, .sheet > .eyebrow { display: none }
   .sheet { padding: 0; display: block }
-  .pages { display: block; gap: 0; padding: 0 }
+  .pages, .spread { display: block; gap: 0; padding: 0 }
   .page { box-shadow: none; zoom: 1; break-after: page; -webkit-print-color-adjust: exact; print-color-adjust: exact }
 }
 </style>
@@ -176,34 +151,21 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
 
 <header class="intro">
   <span class="eyebrow">SoR design system · Print · Mockups for approval</span>
-  <h1>A paper, page by page</h1>
-  <p>Seven A4 pages from <i>Wisdom and Wanting What's Good</i> (Seeds of Renaissance No. 6), drawn at actual size to decide how our papers look. Papers are built with Typst in <code>pdf-report-publishing</code>, which takes its sizes from the <code>--print-*</code> tokens in <code>system/tokens.css</code>. Once approved, that build replaces these pages as the exemplar.</p>
+  <h1>Inside a paper</h1>
+  <p>The interior of a Seeds of Renaissance paper, drawn at actual size from <i>Wisdom and Wanting What's Good</i> (No. 6) to decide how papers look and are put together. The page sequence is in <a href="../../print.md#anatomy-of-a-paper">print.md, Anatomy of a paper</a>; the cover is designed separately. Papers are built with Typst in <code>pdf-report-publishing</code>, which takes its sizes from the <code>--print-*</code> tokens in <code>system/tokens.css</code>. Once approved, that build replaces these pages as the exemplar.</p>
   <ul>
-    <li>Body 10.5/14.5pt Bricolage on a 118mm measure, inside 22/20/26/24mm margins.</li>
-    <li>Headings in Polyamine, pull quotes and epigraphs in Restora italic, labels in Apfel.</li>
-    <li>The cover takes the art's own navy and gold. Red only for footnote marks.</li>
+    <li>Body 10.5/14.5pt Bricolage on a 118mm measure, inside 22/26mm top and bottom, 24mm inner and 20mm outer margins.</li>
+    <li>Titles and heads in Polyamine; pull quotes, epigraphs and subtitles in Restora; labels, running heads and folios in Apfel.</li>
+    <li>Red only for footnote marks. Figures are plates, signed inside their margin.</li>
     <li>Print this page (A4, no margins) for a paper proof.</li>
   </ul>
 </header>
 
 <div class="pages">
 
-<!-- 1 · Front cover -->
-<section class="sheet"><span class="eyebrow">1 · Front cover</span>
-<div class="page cover">
-  <div class="series"><span class="wm">Seeds <em>of</em> Renaissance</span><span class="lbl">No. 6</span></div>
-  <div class="top">
-    <h1>Wisdom and Wanting What's <span class="good">Good</span></h1>
-    <p class="sub">Collective wisdom for a time of crisis and renewal</p>
-    <span class="part lbl">Wisdom · Part 1</span>
-  </div>
-  <img class="art" src="img/wisdom-heart.jpg" alt="A painted heart in cobalt blue with leaves and flowers growing from it">
-  <p class="blurb">Against a backdrop of global crisis, wisdom emerges as a vital capacity for a regenerative future.</p>
-  <div class="byline"><b>Rufus Pollock &amp; Rosie Bell</b><span class="lbl">Life Itself Sensemaking Studio</span></div>
-</div></section>
 
-<!-- 2 · Title page -->
-<section class="sheet"><span class="eyebrow">2 · Title page (recto)</span>
+<!-- 1 · Title page -->
+<section class="sheet"><span class="eyebrow">1 · Title page (recto, page i)</span>
 <div class="page titlepage white">
   <div class="series"><span class="wm">Seeds <em>of</em> Renaissance</span><span class="lbl">No. 6</span></div>
   <h1>Wisdom and Wanting What's Good</h1>
@@ -213,16 +175,32 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <div class="authors"><b>Rufus Pollock &amp; Rosie Bell</b><span class="lbl">Life Itself Sensemaking Studio</span></div>
 </div></section>
 
+<!-- 2 · Imprint -->
+<section class="sheet"><span class="eyebrow">2 · Imprint (verso of the title page, page ii)</span>
+<div class="page verso white imprint">
+  <div class="block">
+    <dl>
+      <dt class="lbl">Series</dt><dd>Seeds of Renaissance No. 6 · Wisdom, Part 1</dd>
+      <dt class="lbl">Edition</dt><dd>First edition, October 2026</dd>
+      <dt class="lbl">Authors</dt><dd>Rufus Pollock and Rosie Bell, Life Itself Sensemaking Studio</dd>
+      <dt class="lbl">Credits</dt><dd>Cover art <span class="tbc">[artist to confirm]</span>. Figures by the authors. Set in Polyamine, Restora, Bricolage Grotesque and Apfel Grotezk.</dd>
+      <dt class="lbl">Licence</dt><dd><span class="tbc">[to confirm, e.g. CC BY 4.0]</span></dd>
+      <dt class="lbl">Cite as</dt><dd>Pollock, R. and Bell, R. (2026). <i>Wisdom and Wanting What's Good: Collective wisdom for a time of crisis and renewal.</i> Seeds of Renaissance No. 6. Life Itself Sensemaking Studio.</dd>
+      <dt class="lbl">Online</dt><dd>secondrenaissance.net/papers</dd>
+    </dl>
+  </div>
+</div></section>
+
 <!-- 3 · Contents -->
-<section class="sheet"><span class="eyebrow">3 · Annotated contents</span>
+<section class="sheet"><span class="eyebrow">3 · Annotated contents (recto, page v)</span>
 <div class="page contents">
   <div class="runhead lbl"><span>Wisdom and Wanting What's Good</span><span>Contents</span></div>
   <div class="block">
     <h2>Contents</h2>
     <ol class="toc">
-      <li><span class="lbl">·</span><div><div class="t">Summary</div></div><span class="lbl pg">1</span></li>
-      <li><span class="lbl">·</span><div><div class="t">Preface</div></div><span class="lbl pg">2</span></li>
-      <li><span class="lbl">·</span><div><div class="t">Introduction</div></div><span class="lbl pg">3</span></li>
+      <li><span class="lbl">·</span><div><div class="t">Summary</div></div><span class="lbl pg">iii</span></li>
+      <li><span class="lbl">·</span><div><div class="t">Preface</div></div><span class="lbl pg">vii</span></li>
+      <li><span class="lbl">·</span><div><div class="t">Introduction</div></div><span class="lbl pg">1</span></li>
       <li><span class="lbl">1</span><div><div class="t">Decision-making the modern way: questions of quantity</div>
         <ul>
           <li><div><div class="t">(Post-)modernity ♡s measurement</div><div class="s">Modern industrialised societies have come to privilege quantitative knowledge, marginalising values like beauty and goodness which are seen as “subjective”. The resulting crises demand a reintegration of qualitative judgement and broader ways of knowing.</div></div><span class="lbl pg">7</span></li>
@@ -243,10 +221,11 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <span class="folio lbl">v</span>
 </div></section>
 
-<!-- 4 · Body page with a figure as plate -->
-<section class="sheet"><span class="eyebrow">4 · Body page: figure as plate, footnotes</span>
+<!-- 4 · Body spread -->
+<section class="sheet"><span class="eyebrow">4 · Body spread, pages 4–5: figure as plate, pull quote, footnotes. The introduction ends here; page 6 is blank so chapter 1 opens on a recto</span>
+<div class="spread">
 <div class="page verso">
-  <div class="runhead lbl"><span>4</span><span>Introduction</span></div>
+  <div class="runhead lbl"><span>4</span><span>Wisdom and Wanting What's Good</span></div>
   <div class="block">
     <h2 style="margin-top:0">The wisdom that orients collective action</h2>
     <h3 style="margin-top:0">Addressing the wisdom gap</h3>
@@ -268,10 +247,28 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
       <li><span>9</span><div>Valueception has roots in the philosophy of Max Scheler, who argued that values are not subjective projections but real, non-material features of a meaning-saturated world, apprehended through feeling and intuition rather than constructed by reason.</div></li>
     </ol>
   </div>
+</div>
+<div class="page">
+  <div class="runhead lbl"><span>Introduction</span><span>5</span></div>
+  <div class="block">
+    <div class="col">
+      <p class="no-indent">The second, call it <b>sense-making</b>, is a capacity to understand how things are and how they work, and so to discern skilful ways of moving towards the good. The third is <b>will</b>, in the everyday sense of political will or good will: the capacity, individual and collective, to act on what we've discerned. Each can draw on rational analysis, but each also relies on intuitive, embodied discernment operating beneath or beyond it.</p>
+      <h2>Integrating ways of knowing</h2>
+      <p>Diminishing and even denying intuitive skills like valueception, modern societies have come to prioritise two other processes for directing choice: <b>rationality</b>, understood as logical derivation of outcomes, and <b>empiricism</b> which seeks ‘objective facts’ about the world of things, through material evidence and typically via <b>measurement</b>.</p>
+      <p>Without setting out to vilify these useful ways of knowing, this essay explores what is lost through modern over-reliance upon them. Taking for granted the already-legitimate forms of rational sensemaking that play a part in wise collective choices, we advocate a rehabilitated respect for ‘wisdom’ as a missing pillar of collective choice-making.<sup class="fn">14</sup></p>
+      <p>Countless ancient traditions hold insight into the nature of wisdom and its cultivation, from indigenous cultures to religious traditions and beyond. A wiser future society might recognise the respect due to such traditions, but guard against looking to them for ready-made answers. Wisdom arises in context.</p>
+    </div>
+    <blockquote class="pull"><q>“I don't believe Indigenous knowledges can give us the instructions of how to swim in our world… But they can remind us that it's possible to swim.”</q><span class="lbl">Vanessa Andreotti<sup class="fn">16</sup></span></blockquote>
+    <ol class="notes">
+      <li><span>14</span><div>Importantly, this enquiry isn’t centred on the empirical field of wisdom research. Intuitive knowledge of the measureless is not fundamentally at odds with the scientific method, only with the current assumptions that shape it.</div></li>
+      <li><span>16</span><div>Andreotti (2024), transcript, <i>TGS</i> episode 125.</div></li>
+    </ol>
+  </div>
+</div>
 </div></section>
 
 <!-- 5 · Chapter opening -->
-<section class="sheet"><span class="eyebrow">5 · Chapter opening: epigraph, summary box</span>
+<section class="sheet"><span class="eyebrow">5 · Chapter opening (recto, page 7): epigraph, summary box</span>
 <div class="page chapter white">
   <div class="open">
   <span class="num">1</span>
@@ -296,52 +293,19 @@ sup.fn { font-family: var(--font-label); font-size: 6pt; font-weight: 700; color
   <span class="folio lbl">7</span>
 </div></section>
 
-<!-- 6 · Body page with a pull quote -->
-<section class="sheet"><span class="eyebrow">6 · Body page: pull quote, footnotes</span>
-<div class="page verso">
-  <div class="runhead lbl"><span>8</span><span>1 · Decision-making the modern way</span></div>
-  <div class="block">
-    <div class="col">
-      <p class="no-indent">Together, these approaches influence what we accept as fact, and how we organise facts into legitimate decisions.</p>
-      <p>Modern scientific method and capitalist economics have been profoundly effective; unlocking extraordinary technological advances, transforming everyday comfort for many, and concentrating power within particular sectors of modern society. Over time, however, measurement and calculation have together come to seem like goods in themselves: what can’t be easily quantified is often marginalised or dismissed as illegitimate; even suspect. Thus the question of <b>what</b> we value is dominated and distorted by <b>how</b> value is determined: the public good we seek falls within the confines of what is measured.<sup class="fn">20</sup></p>
-      <p>As Dougald Hine points out, modern tendencies to outsource judgment to processes of measurement and calculation have some pro-social origins. For example, the European quest to root authority in universal material certainty was in part a response to the horror of the Thirty Years’ War, an early modern experience of devastating conflict, stemming from theological disputes.<sup class="fn">21</sup></p>
-    </div>
-    <blockquote class="pull"><q>“…the tendency within modern societies to ask science to do the work of politics: the desire to replace the frail and fallible exercise of judgement with processes of measurement and calculation.”</q><span class="lbl">Dougald Hine, The Gifts in the Ruins</span></blockquote>
-    <div class="col">
-      <p>Nonetheless, scientific and industrial successes helped persuade modern society that measurable qualities were more real, and more worthy of attention than ‘subjective’ values such as beauty and meaning. In turn, the priorities of industrial society drew legitimacy from a collective idea of ultimate, objective truth; further cementing this hierarchy.</p>
-      <h2>Value relativism</h2>
-      <p>While modern thought and culture was often content to leave inherited, non-quantitative values intact and unexamined, post-modern scepticism finished the job; stripping them of any claim to reality beyond the beholder.<sup class="fn">23</sup> </p>
-    </div>
-    <ol class="notes">
-      <li><span>20</span><div>Sociologist Georg Simmel (1858–1918) described the central trait of modernism as “the displacement of ends by means”: society gravitates toward challenges that neatly fit its tools. See Simmel (2004 [1900]).</div></li>
-      <li><span>21</span><div>E.g. in <i>The Age of Neutralizations and Depoliticizations</i> (1993), Carl Schmitt suggests that modern Europe sought “neutral domains” to escape conflict: from theology to metaphysics and science, then morality, economics and technology.</div></li>
-      <li><span>23</span><div>Temple (2023) details a modern tendency to privilege quantitative value alongside “common-sense sacred axioms”: unchallenged assumptions that certain unmeasurable values, like beauty and goodness, are real and worthy.</div></li>
-    </ol>
-  </div>
-</div></section>
 
-<!-- 7 · Back cover -->
-<section class="sheet"><span class="eyebrow">7 · Back cover: the mark, the colophon</span>
-<div class="page back">
-  <span class="tear"></span>
-  <p class="blurb">Modernity has staged a heist: the field of legitimate knowledge has been stripped of all that’s good and beautiful, leaving only what can be measured.</p>
-  <div class="about">
-    <p>Wisdom can be framed as a capacity for choosing what’s good and acting skilfully towards it. This paper asks how modern systems dulled the inner compass that knows value, and how reintegrating intuitive capacities with other ways of knowing might close a potentially deadly ‘wisdom gap’.</p>
-    <p>Rufus Pollock and Rosie Bell work at the Life Itself Sensemaking Studio.</p>
-  </div>
-  <div class="mark"><span class="disc"><img src="../../system/img/logo.png" alt="Seeds of Renaissance mark"></span><span class="wm">Seeds <em>of</em><br>Renaissance</span></div>
-  <div class="colophon"><span class="lbl">Seeds of Renaissance · No. 6</span><span class="lbl">Wisdom · Part 1 · 2026</span><span class="lbl">Life Itself Sensemaking Studio</span><span class="lbl">secondrenaissance.net/papers</span></div>
-</div></section>
 
 </div>
 
 <script>
-/* zoom each A4 page down to fit the screen; print resets it */
+/* zoom the A4 pages down to fit the screen; print resets it */
 (function () {
   const pagePx = 210 / 25.4 * 96;
   function fit() {
     const w = document.documentElement.clientWidth;
-    document.documentElement.style.setProperty('--fit', w > 0 ? Math.max(.3, Math.min(1, (w - 32) / pagePx)).toFixed(3) : 1);
+    /* wide screens keep the spread side by side; narrow ones stack it and fit one page */
+    const across = w >= 1000 ? 2 : 1;
+    document.documentElement.style.setProperty('--fit', w > 0 ? Math.max(.3, Math.min(1, (w - 32) / (pagePx * across))).toFixed(3) : 1);
   }
   fit(); window.addEventListener('resize', fit);
 })();

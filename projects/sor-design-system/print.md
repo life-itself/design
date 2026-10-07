@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
 
-**Mockups for approval:** [the Wisdom paper, page by page](examples/print/index.html) (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
+**Mockups for approval:** [inside a paper](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
 
 ## What we need
 
@@ -16,6 +16,28 @@ Papers and essays as printed or PDF documents, and later posters and magazine pa
 - **Pages**: margins, a baseline rhythm, widows and orphans, page breaks before chapters, figures that don't split.
 - **Ink on paper**: check the logo red and the pale yellow on paper (sunlight may vanish on cheap stock; red may need a CMYK value). Paper grain is real on paper, so drop the grain overlay.
 - **Woodcuts print beautifully**: use them for the cover and chapter openings.
+
+## Anatomy of a paper
+
+Proposed from the Wisdom paper; mockups of the interior in [examples/print/](examples/print/index.html). In page order. **Recto** means it starts on a right-hand page, leaving a blank verso before it if needed.
+
+| Part | Holds | Starts on | Optional |
+|---|---|---|---|
+| Front cover | Series line, title, subtitle, part line, cover art, blurb, authors with the text credit ([below](#covers-and-credits)). Designed separately | — | |
+| Title page | Series line, title, subtitle, part line, authors, the Life Itself credit in text. No logo | recto (i) | |
+| Imprint | On the back of the title page, small print at the foot: series, edition and date, authors, credits (cover art, figures, typefaces), licence, how to cite, URL | verso (ii) | |
+| Summary | The paper in a few paragraphs | recto | yes |
+| Annotated contents | Parts and sections with page numbers, a one-line summary under each section | recto | plain contents if no summaries |
+| Preface | Where the paper sits in the series and why it was written | recto | yes |
+| Introduction | Unnumbered; first page of arabic numbering | recto (1) | |
+| Chapters | Numbered. Opening: number, title, optional epigraph, then the first section with its summary box. Body: running heads, footnotes, figures as plates, pull quotes | recto | epigraph and summary box optional |
+| Conclusion | Unnumbered | recto | |
+| Further reading | Short annotated list | new page | yes |
+| Bibliography | References cited | new page | |
+| Appendices | Lettered or numbered, each titled | new page | yes |
+| Colophon and back cover | Blurb, the SoR mark on its disc with the wordmark; the Life Itself logo allowed. Colophon may sit on the last inside page instead | — | |
+
+Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on title, imprint and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
 
 ## Covers and credits
 
