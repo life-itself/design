@@ -14,7 +14,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
 | **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **Papers approved**; Typst build in pdf-report-publishing; A3 poster later | `.22` `.28` |
-| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | ✅ **v0.1 done**: signature, type, drawing style. Data charts not yet covered | `.20` `.25` `.26` |
+| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | ✅ **v0.1 done**: signature, type, drawing style, charts with data | `.20` `.25` `.26` |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 
 Each kind has its own folder under `examples/`.
@@ -50,6 +50,7 @@ Figures and frameworks, signed so they stay attributed when shared alone. Rules:
 - [The signature](examples/diagrams/index.html) on three real figures from the Wisdom paper and the framework, light and dark, at a 1600px export and at 400px in a feed.
 - [Type for diagrams](examples/diagrams/fonts.html): the type scale on two redrawn figures.
 - [Drawing style](examples/diagrams/style.html): panels against fine rules, in black and white, at 400px, and in context on a page of the paper and in a web article.
+- [Charts with data](examples/diagrams/charts.html): lines, ranked bars, before and after, in the style (illustrative data).
 - Built by `examples/diagrams/build.py`.
 
 ## Print

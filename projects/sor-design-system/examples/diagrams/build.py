@@ -3,7 +3,8 @@
   index.html  the signature (decided 2026-10-07: mark + name and URL in Apfel) on three
               real figures from 2rbook, light and dark, at a 1600px export and at 400px
   fonts.html  type for diagrams: Apfel only, no bold; two figures redrawn
-  style.html  drawing style: fine, panel and hand, and the figures in a paper page and a web article
+  style.html  drawing style: panels against fine rules, and the figures in a paper page and a web article
+  charts.html charts with data in the style: lines, ranked bars, before and after (illustrative data)
 
 Signature text is outlined (system/outline.py). Figures in figures/ are copied from 2rbook,
 flattened onto white with the gamma chunk dropped so they render true black.
@@ -330,7 +331,7 @@ def index_page(bundle):
   <p class="label">Seeds of Renaissance design system · Diagrams</p>
   <h1>The diagram signature</h1>
   <div class="intro">
-    <p>Every published figure carries this signature, bottom right inside its margin, so it stays attributed when it is cropped and reshared. Rules: <code>diagrams.md</code>. Files: <code>system/img/signature.svg</code> and <code>signature-dark.svg</code>, with PNGs and an Excalidraw scene.</p>
+    <p>Every published figure carries this signature, bottom right inside its margin, so it stays attributed when it is cropped and reshared. Rules: <code>diagrams.md</code>. Files: <code>system/img/signature.svg</code> and <code>signature-dark.svg</code>, with PNGs.</p>
     <ul>
       <li>Sized for a <b>1600px-wide export</b>: mark 64px, text 20px, 72px margin.</li>
       <li>Light grounds: the mark on its white disc. Dark grounds: a placeholder mark until the system settles the mark on dark.</li>
@@ -480,9 +481,128 @@ sb.forEach(b => b.addEventListener('click', () => {
 """
     return shell("Diagram drawing style", body, bundle, extra_css=type_css() + css, js=js, figs=False)
 
+# ── Charts with data (2026-10-08) ────────────────────────────────
+# Static figures for papers and posts, not dashboards: emphasis after the FT and the Economist.
+# Red for the series the chart is about; a warm grey for the rest (validated: >= 3:1 on the
+# ground, CVD dE 10.8 against the red); ink when two things are compared. Data is illustrative.
+CH = {"light": dict(grey="#8a847a", rule="#e0dacf"), "dark": dict(grey="#8f897f", rule="#38342e")}
+# ticks: Apfel Regular 24px at 60% ink; values at bar ends and dots 26px in ink (see charts_page CSS)
+
+def chart_frame(theme, title, subtitle, body, H, source="Source: illustrative data, for the design system"):
+    ink = THEMES[theme]["ink"]
+    return (f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="{title}">'
+            f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>'
+            f'<text x="{M}" y="{M + 42}" class="d-title" fill="{ink}">{title}</text>'
+            f'<text x="{M}" y="{M + 84}" class="d-subtitle" fill="{ink}">{subtitle}</text>'
+            f'{body}<text x="{M}" y="{H - SIG_FOOT - DISC / 2 + 8}" class="d-source" fill="{ink}">{source}</text>'
+            f'{sig_at(H, theme)}</svg>')
+
+def chart_line(theme="light"):
+    ink, c = THEMES[theme]["ink"], CH[theme]
+    years = list(range(2015, 2026))
+    series = [  # name, values, emphasised?
+        ("Gatherings", [100, 106, 113, 121, 128, 74, 92, 131, 152, 171, 189], True),
+        ("Talks", [100, 103, 108, 112, 116, 58, 84, 110, 118, 124, 128], False),
+        ("Courses", [100, 99, 103, 104, 106, 88, 97, 101, 103, 102, 104], False),
+        ("Retreats", [100, 98, 96, 95, 93, 40, 58, 70, 74, 77, 79], False),
+    ]
+    x0, x1, y0, y1, H = M + 70, 1330, 900, 220, 1080
+    X = lambda i: x0 + (x1 - x0) * i / (len(years) - 1)
+    Y = lambda v: y0 - (y0 - y1) * v / 200
+    # an event as a pale band behind the data, labelled at its top (not a note among the lines)
+    out = [f'<rect x="{X(4.5):.1f}" y="{Y(200):.1f}" width="{X(5.5) - X(4.5):.1f}" height="{Y(0) - Y(200):.1f}" fill="{c["rule"]}" fill-opacity=".55"/>',
+           f'<text x="{X(5):.1f}" y="{Y(200) - 14:.1f}" text-anchor="middle" class="d-tick" fill="{ink}">Pandemic</text>']
+    for v in (0, 50, 100, 150, 200):
+        out.append(f'<line x1="{x0}" x2="{x1}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" stroke="{ink if v == 0 else c["rule"]}" stroke-width="{2 if v == 0 else 1.5}"/>')
+        out.append(f'<text x="{x0 - 16}" y="{Y(v) + 8:.1f}" text-anchor="end" class="d-tick" fill="{ink}">{v}</text>')
+    for i, yv in enumerate(years):
+        if yv % 2 == 1 or yv == 2025:
+            out.append(f'<text x="{X(i):.1f}" y="{y0 + 40}" text-anchor="middle" class="d-tick" fill="{ink}">{yv}</text>')
+    for name, vals, em in sorted(series, key=lambda s: s[2]):  # the emphasised line drawn last, on top
+        col, sw = (RED, 4) if em else (c["grey"], 3)
+        out.append(line([(X(i), Y(v)) for i, v in enumerate(vals)], col, sw))
+        out.append(f'<circle cx="{X(len(vals) - 1):.1f}" cy="{Y(vals[-1]):.1f}" r="7" fill="{col}" stroke="{THEMES[theme]["ground"]}" stroke-width="3"/>')
+        out.append(f'<text x="{x1 + 22}" y="{Y(vals[-1]) + 9:.1f}" class="{"d-label-em" if em else "d-label"}" fill="{ink}">{name} <tspan fill-opacity=".6">{vals[-1]}</tspan></text>')
+    return chart_frame(theme, "Gatherings have grown fastest since the pandemic",
+                       "Attendance by kind of event, indexed (2015 = 100) · illustrative data", "".join(out), H)
+
+def chart_bars(theme="light"):
+    ink, c = THEMES[theme]["ink"], CH[theme]
+    rows = [("Time with the people I love", 64), ("Time in nature", 52), ("Meaningful work", 47),
+            ("Quiet and reflection", 39), ("Learning", 33), ("Community", 28), ("Money", 21)]
+    lx, x0, x1, top, band, bar = M, 560, 1380, 210, 82, 44
+    X = lambda v: x0 + (x1 - x0) * v / 70
+    H = top + band * len(rows) + 60 + SIG_GAP + DISC + SIG_FOOT
+    out = []
+    for v in (0, 10, 20, 30, 40, 50, 60, 70):
+        out.append(f'<line x1="{X(v):.1f}" x2="{X(v):.1f}" y1="{top - 6}" y2="{top + band * len(rows)}" stroke="{ink if v == 0 else c["rule"]}" stroke-width="{2 if v == 0 else 1.5}"/>')
+        out.append(f'<text x="{X(v):.1f}" y="{top + band * len(rows) + 40}" text-anchor="middle" class="d-tick" fill="{ink}">{v}</text>')
+    for i, (name, v) in enumerate(rows):
+        em = name == "Money"
+        yc = top + band * i + band / 2
+        out.append(f'<text x="{lx}" y="{yc + 10:.1f}" class="{"d-label-em" if em else "d-label"}" fill="{ink}">{name}</text>')
+        out.append(f'<rect x="{X(0) + 1}" y="{yc - bar / 2:.1f}" width="{X(v) - X(0) - 1:.1f}" height="{bar}" fill="{RED if em else TINT[theme]}"/>')  # the tint for the rest, as in panels
+        out.append(f'<text x="{X(v) + 14:.1f}" y="{yc + 9:.1f}" class="d-tick-strong" fill="{ink}">{v}</text>')
+    return chart_frame(theme, "People want more time, not more money",
+                       "What people would most like more of, % choosing each · illustrative data", "".join(out), H)
+
+def chart_dumbbell(theme="light"):
+    ink, c = THEMES[theme]["ink"], CH[theme]
+    rows = [("Science", 70, 62), ("Local community", 61, 58), ("Big tech", 48, 27),
+            ("Courts", 52, 41), ("News media", 38, 24), ("Government", 36, 22)]
+    rows.sort(key=lambda r: r[2] - r[1])  # biggest fall first
+    lx, x0, x1, top, band = M, 500, 1380, 260, 92
+    X = lambda v: x0 + (x1 - x0) * v / 80
+    H = top + band * len(rows) + 60 + SIG_GAP + DISC + SIG_FOOT
+    out = [f'<circle cx="{M + 10}" cy="{top - 62}" r="10" fill="{c["grey"]}"/><text x="{M + 30}" y="{top - 54}" class="d-label" fill="{ink}">2015</text>',
+           f'<circle cx="{M + 140}" cy="{top - 62}" r="10" fill="{RED}"/><text x="{M + 160}" y="{top - 54}" class="d-label" fill="{ink}">2025</text>']
+    for v in (0, 20, 40, 60, 80):
+        out.append(f'<line x1="{X(v):.1f}" x2="{X(v):.1f}" y1="{top - 10}" y2="{top + band * len(rows)}" stroke="{c["rule"]}" stroke-width="1.5"/>')
+        out.append(f'<text x="{X(v):.1f}" y="{top + band * len(rows) + 40}" text-anchor="middle" class="d-tick" fill="{ink}">{v}</text>')
+    for i, (name, a, b) in enumerate(rows):
+        yc = top + band * i + band / 2
+        out.append(f'<text x="{lx}" y="{yc + 10:.1f}" class="d-label" fill="{ink}">{name}</text>')
+        out.append(f'<line x1="{X(b):.1f}" x2="{X(a):.1f}" y1="{yc}" y2="{yc}" stroke="{TINT[theme]}" stroke-width="12" stroke-linecap="round"/>')
+        out.append(f'<circle cx="{X(a):.1f}" cy="{yc}" r="10" fill="{c["grey"]}" stroke="{THEMES[theme]["ground"]}" stroke-width="3"/>')
+        out.append(f'<circle cx="{X(b):.1f}" cy="{yc}" r="10" fill="{RED}" stroke="{THEMES[theme]["ground"]}" stroke-width="3"/>')
+        out.append(f'<text x="{X(b) - 22:.1f}" y="{yc + 8:.1f}" text-anchor="end" class="d-tick-strong" fill="{ink}">{b}</text>')
+    return chart_frame(theme, "Trust fell in every institution",
+                       "Share who trust each a great deal or quite a lot, %, 2015 and 2025 · illustrative data", "".join(out), H)
+
+def charts_page(bundle):
+    makers = [("line", "Lines: one series in red", chart_line), ("bars", "Ranked bars: one bar in red", chart_bars),
+              ("dumbbell", "Before and after: two dots per row", chart_dumbbell)]
+    secs = "".join(f'''
+  <section id="{k}">
+    <h2>{name}</h2>
+    <div class="pair">{zoomable(fn("light"), "Light. Click for 1:1.")}{zoomable(fn("dark"), "Dark.")}</div>
+    <div class="thumbs">
+      <figure class="thumb"><div class="thumb-box">{fn("light")}</div><figcaption>At 400px</figcaption></figure>
+      <figure class="thumb"><div class="thumb-box bw">{fn("light")}</div><figcaption>Black and white</figcaption></figure>
+    </div>
+  </section>''' for k, name, fn in makers)
+    body = f'''
+  <p class="label">Seeds of Renaissance design system · Diagrams</p>
+  <h1>Charts with data</h1>
+  <div class="intro">
+    <p>The diagram style applied to charts: Apfel only, ink, one red. After the FT and the Economist, colour is emphasis, not decoration: the series the chart is about is red, the rest a warm grey (lines) or the pale red tint (bars and areas), and the title states what to see. Lines and areas are labelled directly; no legend boxes unless a key is unavoidable.</p>
+    <p class="fnote">All data here is illustrative, made up for the style. Do not quote it.</p>
+  </div>
+  {secs}'''
+    css = """
+.bw svg { filter: grayscale(1) }
+.d-tick { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 24px; fill-opacity: .6; font-variant-numeric: tabular-nums }
+.d-tick-strong { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 26px; font-variant-numeric: tabular-nums }
+.d-label-em { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-weight: 500; font-size: 29px }
+.d-source { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 20px; fill-opacity: .6 }
+"""
+    return shell("Charts with data", body, bundle, extra_css=type_css() + css, figs=False)
+
+
 ARTIFACTS = {"index.html": "https://claude.ai/artifact/TYhQ6hnqSPp7dUUuF5Se2f",
              "fonts.html": "https://claude.ai/artifact/JQs6MvaQM2a9rvWm1c3p61",
-             "style.html": "https://claude.ai/artifact/H4unZtofiTcy894NucUS59"}
+             "style.html": "https://claude.ai/artifact/H4unZtofiTcy894NucUS59",
+             "charts.html": "https://claude.ai/artifact/Lb9VPyVZyETRanVSZq2KVp"}
 
 def for_artifact(html):
     """The publisher adds the document skeleton: keep the head's contents and the body's."""
@@ -493,7 +613,7 @@ def for_artifact(html):
     return head + body
 
 if __name__ == "__main__":
-    pages = {"index.html": index_page, "fonts.html": fonts_page, "style.html": style_page}
+    pages = {"index.html": index_page, "fonts.html": fonts_page, "style.html": style_page, "charts.html": charts_page}
     if len(sys.argv) == 3 and sys.argv[1] == "--bundle":
         out = pathlib.Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
         for name, fn in pages.items():

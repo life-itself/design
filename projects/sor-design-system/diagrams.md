@@ -42,6 +42,17 @@ Called **panels**, after the FT and the Economist; chosen over fine Tufte-style 
 - **Ground:** white, or the paper's own ground when placed on a page. On dark grounds ink becomes chalk and the tint its night value.
 - **Canvas:** 1600 px wide for a figure that fills it; a narrower figure gets a narrower export, as wide as its content plus the 72 px margin, so the signature sits under the figure.
 
+## Charts with data
+
+**v0.1, 2026-10-08** ([Charts with data](examples/diagrams/charts.html), illustrative data). The same type, ink and red, after the FT and the Economist: colour is emphasis, not decoration.
+
+- **One series in red,** the one the title is about. The rest: lines in a warm grey (`#8a847a`, on night `#8f897f`), bars and areas in the red tint. Ink when two things are compared as equals. Checked: the grey clears 3:1 on the ground and stays distinct from the red for colour-blind readers; in black and white the red prints darker than the rest.
+- **The title says what to see** ("Gatherings have grown fastest since the pandemic"); the subtitle says what is measured, in what units.
+- **Label directly:** line names at their ends, values at bar tips, the newer value beside each dot. A key only when unavoidable (two dots per row). Never a number on every point.
+- **Scaffolding is quiet:** hairline gridlines in one direction only, the zero line in ink, ticks in Apfel at 60% ink with figures that line up. An event is a pale band behind the data, labelled at its top.
+- **Forms:** lines for change over time, ranked bars for comparison, two dots per row for before and after. One axis only, never two.
+- **Source line** bottom left, level with the signature: "Source: …". Source left and brand right is the FT and Economist convention; the signature already follows it. Publish the data beside the figure.
+
 ## The signature
 
 The standard pattern for published charts and figures (the Economist, the FT, Our World in Data): a small, consistent strip in the same place every time.
@@ -65,16 +76,14 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 | `system/img/signature.svg`, `.png`, `@2x.png` | Light grounds |
 | `system/img/signature-dark.svg`, `.png`, `@2x.png` | Dark grounds |
 | `system/img/signature-name.svg`, `signature-name-dark.svg` (and PNGs) | Name only, no URL |
-| `system/img/signature.excalidraw` | All four, as images at fixed size: open it, copy the one you need, paste into your diagram |
 
 - Backgrounds are transparent. The 1x PNG and the SVG are sized for a 1600 px export (542 × 72 including a 4 px edge); use `@2x` for a 3200 px export.
 - Place it bottom right with its right edge and bottom 72 px and 56 px in from the edges of the export.
-- Excalidraw libraries don't reliably keep embedded images, so the signature ships as a scene to copy from rather than a library item.
 - The URL depends on the domain, which is still open ([brand.md](brand.md#open)); the files carry a placeholder. When it is decided, change `URL` in `system/outline.py` and run `system/build-signature.py`. For a paper's figures, the paper's own page or a publication line can fill the slot: call `signature(theme, url=…)` in `outline.py`.
 
 ## Drawing them
 
-- **Excalidraw** is fine for drafts. Set sloppiness to *Architect*, edges *Sharp*, arrowheads *Triangle*; panels as rectangles with no stroke and fill `#fbdbdb`. Excalidraw can't use Apfel Grotezk, so a published figure is set in Apfel: in the Obsidian Excalidraw plugin with Apfel as its custom font, or redrawn (Figma, SVG).
+- **How:** sketch the figure (on paper, a whiteboard, anything), then build it as SVG with Claude, from the code in `examples/diagrams/build.py`: its helpers set the type, panels, arrows and signature to this spec. No diagram tool to configure.
 - **Exports:** PNG at 1600 px wide (and 3200 px for print), or SVG with the text outlined, since Apfel is not on readers' machines.
 - **Alt text** says what the figure claims, not what it looks like.
 
@@ -89,5 +98,6 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 ## Open
 
 - **The red tint at full size** may be a touch strong on large panels (fine at 400 px and in pages). If so, try 12% for panels and keep 16% for the key area. Low priority (beads).
-- **Charts with data** (bars, lines with values, axes with numbers, gridlines) are not yet covered: this style is drawn from frameworks and a conceptual curve.
+- **Charts with data:** more forms as real charts need them (stacked bars, small multiples, maps).
+- **The red tint on dark grounds** is too faint (`#441815`): pale bars and panels nearly vanish on night, though full red lines and bars are fine. A stronger dark tint is needed if figures are ever drawn on dark. Minor: print and the site are light (beads).
 - Whether a small one-colour swallow (the woodcut seal in [graphics.md](graphics.md)) replaces the full mark at small sizes. Tied to the logo's open small version ([logo.md](logo.md#open), item 3).
