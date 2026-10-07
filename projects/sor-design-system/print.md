@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.17`.
 
-**Stub, with a brief ready for its own session.**
+**Mockups for approval:** [the Wisdom paper, page by page](examples/print/index.html) (`design-34t.22`). Sizes are drafted as `--print-*` tokens in `system/tokens.css`.
 
 ## What we need
 
@@ -34,4 +34,4 @@ Decided 2026-10-07: papers are rendered with **Typst** in the sibling repo [`pdf
 
 This page stays the spec: sizes, faces, covers, figures and the rules above. The Typst `sor` style takes its values from `system/tokens.css`, so change a value here and in the tokens, then rebuild there.
 
-Still to do here (`design-34t.17`): print values as tokens (point sizes, A4 and Letter margins), the red and pale yellow checked on paper, and an A3 poster.
+Still to do here (`design-34t.17`): confirm the drafted `--print-*` tokens once the mockups are approved, check the red and pale yellow on paper, and an A3 poster.

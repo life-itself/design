@@ -13,7 +13,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **YouTube** | Video thumbnails, channel banner, avatar, lower third, watermark | [youtube.md](youtube.md) | [below](#youtube) | 🚧 **First pass done**, polish in progress | `.5` `.6` |
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
-| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | — | ⏳ **To build**, brief ready | `.17` |
+| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | 🚧 **Mockups for approval**; Typst build in pdf-report-publishing | `.22` `.17` |
 | **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | 🚧 **Signature done**; type tryout in progress, then drawing style | `.20` `.25` `.26` |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 
@@ -50,6 +50,10 @@ Figures and frameworks, signed so they stay attributed when shared alone. Rules:
 - [The signature](examples/diagrams/index.html) on three real figures from the Wisdom paper and the framework, light and dark, at a 1600px export and at 400px in a feed.
 - [Type for diagrams](examples/diagrams/fonts.html): two figures redrawn and set in six candidate faces. A tryout, not yet a decision.
 - Built by `examples/diagrams/build.py`.
+
+## Print
+
+Seven A4 pages from the Wisdom paper at actual size, to decide how papers look before the Typst build: [the paper, page by page](examples/print/index.html). Cover, title page, annotated contents, a body page with a figure as plate, a chapter opening with epigraph and summary box, a body page with a pull quote, and the back cover. Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
 
 ## Open across all of them
 

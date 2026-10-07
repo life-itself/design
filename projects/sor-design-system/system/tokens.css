@@ -127,3 +127,34 @@
   --yt-l3-name: 76px;        /* lower third: guest name, Polyamine */
   --yt-l3-role: 36px;        /* lower third: role or one line about the guest */
 }
+
+/* ── Print (papers: A4, fixed point sizes) ───────────────────────
+   Drafted with the print mockups (examples/print/, design-34t.22); pending approval.
+   The Typst sor style in pdf-report-publishing reads these values. pt and mm are real
+   sizes on paper; the mockups show A4 at 1:1 and scale it down on narrow screens.
+   No grain overlay on paper: the paper has its own. */
+:root {
+  --print-w: 210mm;          /* A4. US Letter is 215.9 × 279.4mm with the same margins */
+  --print-h: 297mm;
+  --print-m-top: 22mm;       /* to the top of the text block; running head sits in it */
+  --print-m-bottom: 26mm;    /* folio sits in it */
+  --print-m-inner: 24mm;
+  --print-m-outer: 20mm;     /* text block 166mm wide at A4: two-thirds of it is the measure */
+  --print-measure: 118mm;    /* about 70 characters at body size */
+  --print-margin-col: 38mm;  /* side column beside the measure: notes on figures, pull quotes hang into it */
+
+  --print-cover-title: 46pt; /* Polyamine, the cover only */
+  --print-title: 30pt;       /* Polyamine: title page title, chapter titles */
+  --print-h2: 16pt;          /* Polyamine: section heads (under ~10 words; longer heads drop to Restora) */
+  --print-h3: 11pt;          /* Bricolage semibold: sub-heads in the run of text */
+  --print-standfirst: 13pt;  /* Restora: subtitle, chapter summary */
+  --print-quote: 15pt;       /* Restora italic: pull quotes */
+  --print-epigraph: 11.5pt;  /* Restora italic */
+  --print-body: 10.5pt;      /* Bricolage, light-regular */
+  --print-lh: 14.5pt;        /* the baseline: everything sits on multiples of it */
+  --print-summary: 9.5pt;    /* section summary box */
+  --print-caption: 8.5pt;
+  --print-note: 8pt;         /* footnotes, line height 11pt */
+  --print-label: 7pt;        /* Apfel uppercase: running heads, folios, figure numbers, series line */
+  --print-track: .16em;
+}
