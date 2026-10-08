@@ -30,7 +30,7 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [slides.md](https://sor-design-system-rufuspollock.flowershow.me/slides.md): slide decks (brief)
 - [print.md](https://sor-design-system-rufuspollock.flowershow.me/print.md): papers as PDF and posters: covers, anatomy of a paper
 - [publishing.md](https://sor-design-system-rufuspollock.flowershow.me/publishing.md): how we build a paper, PDF and web: design, anatomy, editorial craft, pipeline
-- [diagrams.md](https://sor-design-system-rufuspollock.flowershow.me/diagrams.md): diagrams, figures and charts; the signature that keeps them attributed (stub)
+- [diagrams.md](https://sor-design-system-rufuspollock.flowershow.me/diagrams.md): diagrams, figures and charts: type, drawing style, charts, the signature, how to build one as SVG (v0.1); examples at https://sor-design-system-rufuspollock.flowershow.me/examples/diagrams/index.html
 - [email.md](https://sor-design-system-rufuspollock.flowershow.me/email.md): the newsletter (stub)
 
 ## Code

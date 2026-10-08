@@ -212,7 +212,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 - B. The mark alone in a corner.
 - C. A signature strip: mark on its disc, the name and URL, always in the same corner (the pattern of Economist, FT and Our World in Data charts).
 
-**Decision: C**, with the name and URL set in the label face (Apfel Grotezk), not the Polyamine wordmark, which doesn't hold up at that size (added 2026-10-07; confirmed by mockups the same day, [examples/diagrams/](examples/diagrams/index.html)). The mark wants to be there: diagrams are where the brand travels furthest. The text carries the name and the way back, and the URL does the most work. Kept inside the margin so a loose crop keeps it, and made as one ready-made asset so nobody typesets it in a diagram tool. Below the size where the mark reads, drop to text only.
+**Decision: C**, with the name and URL set in the label face (Apfel Grotezk), not the Polyamine wordmark, which doesn't hold up at that size (added 2026-10-07; confirmed by mockups the same day, [archive/diagrams-signature-2026-10.html](archive/diagrams-signature-2026-10.html)). The mark wants to be there: diagrams are where the brand travels furthest. The text carries the name and the way back, and the URL does the most work. Kept inside the margin so a loose crop keeps it, and made as one ready-made asset so nobody typesets it in a diagram tool. Below the size where the mark reads, drop to text only.
 
 **Q5. Is the cover the promotional image?**
 

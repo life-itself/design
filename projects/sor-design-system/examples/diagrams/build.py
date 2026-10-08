@@ -1,18 +1,18 @@
-"""Build the diagram examples (design-34t.20, .25):
+"""Build the diagram examples: examples/diagrams/index.html, the gallery to point people at,
+and img/*.png, the samples the guide (diagrams.md) shows inline. Rules live in diagrams.md;
+earlier tryouts and comparisons are in archive/diagrams-*-2026-10.html.
 
-  index.html  the signature (decided 2026-10-07: mark + name and URL in Apfel) on three
-              real figures from 2rbook, light and dark, at a 1600px export and at 400px
-  fonts.html  type for diagrams: Apfel only, no bold; two figures redrawn
-  style.html  drawing style: panels against fine rules, and the figures in a paper page and a web article
-  charts.html charts with data in the style: lines, ranked bars, before and after (illustrative data)
+Figures here: the wisdom gap and polycrisis (redrawn in the house style) and three charts
+(illustrative data), each in light and dark, at 400px and in black and white, and in use on a
+page of a paper and in a web article. The Wisdom paper's real figures are built in 2rbook
+(wisdom/assets/build-*.py) and copied into img/ when that repo sits beside this one.
 
-Signature text is outlined (system/outline.py). Figures in figures/ are copied from 2rbook,
-flattened onto white with the gamma chunk dropped so they render true black.
+These helpers are also the starting point for a new figure: copy a function, change the content.
 
-Run:  python build.py                 -> index.html, fonts.html (link ../../system/fonts.css)
-      python build.py --bundle DIR    -> DIR/index.html, DIR/fonts.html, self-contained, for publishing
+Run:  python build.py                 -> index.html, img/*.png (PNGs need Google Chrome)
+      python build.py --bundle DIR    -> DIR/index.html, self-contained, for a Claude artifact
 Needs: fonttools, uharfbuzz."""
-import base64, math, pathlib, sys
+import base64, math, pathlib, re, shutil, subprocess, sys, tempfile
 here = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(here.parent.parent / "system"))
 from outline import SYSTEM, DISC, THEMES, RED, signature, b64, apfel, apfel_m
@@ -27,44 +27,11 @@ def sig_at(H, theme, width=W):
     svg, w = SIG[theme]
     return f'<g class="sig" transform="translate({width - M - w:.1f} {H - SIG_FOOT - DISC})">{svg}</g>'
 
-# ── Real figures ─────────────────────────────────────────────────
-FIGS = [
-    dict(id="gap", file="wisdom-gap-figure.png", w=624, h=387, src="2rbook/wisdom/assets",
-         title="The wisdom gap", note="Wisdom paper. The source is 624px wide, so it blurs at 1600: re-export at 3x.",
-         mask=[(0, 0, 110, 40)]),  # Life Itself badge, top left
-    dict(id="val", file="introduction-valueception-diagram.png", w=624, h=323, src="2rbook/wisdom/assets",
-         title="Wisdom as a practical capacity", note="Wisdom paper. Also 624px. Red line work beside the red of the mark.",
-         mask=[]),
-    dict(id="poly", file="from-polycrisis-to-metacrisis-diagram.png", w=1741, h=1330, src="2rbook/framework/assets",
-         title="From polycrisis to metacrisis", note="Framework. A tall, dense figure at full resolution.",
-         mask=[(1410, 10, 331, 150)]),  # Life Itself Sensemaking Studio badge, top right
-]
-
-def figure_svg(f, theme):
-    fw = W - 2 * M
-    fh = round(fw * f["h"] / f["w"])
-    H = M + fh + SIG_GAP + DISC + SIG_FOOT
-    filt = ' filter="url(#to-night)"' if theme == "dark" else ""
-    return (f'<svg class="fig" viewBox="0 0 {W} {H}" role="img" aria-label="{f["title"]}, {theme}">'
-            f'<rect width="{W}" height="{H}" fill="{THEMES[theme]["ground"]}"/>'
-            f'<g{filt}><use href="#fig-{f["id"]}" x="{M}" y="{M}" width="{fw}" height="{fh}"/></g>{sig_at(H, theme)}</svg>')
-
-def fig_symbol(f):
-    masks = "".join(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#ffffff"/>' for x, y, w, h in f["mask"])
-    return (f'<symbol id="fig-{f["id"]}" viewBox="0 0 {f["w"]} {f["h"]}">'
-            f'<image width="{f["w"]}" height="{f["h"]}" href="{b64(here / "figures" / f["file"])}"/>{masks}</symbol>')
-
 # ── Redrawn figures ──────────────────────────────────────────────
-# Drawing styles (design-34t.26), widths at 1600px. Chosen 2026-10-08: panel.
-#   fine   Tufte: thin lines, hairline scaffolding, no boxes (layers sit on rules)
-#   panel  FT/Economist: no outlines; layers and the accent area in the red tint; bolder lines
-# All arrowheads are solid. Lines are solid: no dashes.
-STYLES = {
-    "fine":  dict(lw=3, lw2=1.5, head=16, box="rule", gap="arrow"),
-    "panel": dict(lw=4, lw2=2, head=18, box="panel", gap="shade"),
-}
+# The drawing style ("panel", diagrams.md#drawing-style), widths at 1600px: no outlines; groups
+# and the key area in the red tint; solid lines and solid arrowheads, no dashes.
+STYLES = {"panel": dict(lw=4, lw2=2, head=18, box="panel", gap="shade")}
 # The red tint: the logo red at 16% on white, 40% on night (22% vanished on dark). Panels and accent areas, never text.
-# (Tried warm grey panels with red only for the accent: too faint at 400px and on a web page.)
 TINT = {"light": "#fbdbdb", "dark": "#6b1a17"}
 PANEL = TINT
 PAD = 40  # inside a panel: the same on all four sides (cap height at the top, baseline at the bottom)
@@ -210,17 +177,10 @@ def type_css():
 GOOGLE = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700"
           "&family=Hanken+Grotesk:wght@400;500&family=Fraunces:opsz,wght@9..144,400&display=swap")
 
-def defs(figs=True):
+def defs():
     marks = "".join(f'<symbol id="mark-{th}" viewBox="0 0 256 256"><image width="256" height="256" href="{b64(SYSTEM / img)}"/></symbol>'
                     for th, img in (("light", "img/logo-256.png"), ("dark", "img/logo-inverted-256.png")))
-    return ('<svg class="defs" aria-hidden="true"><defs>' + marks + ("".join(fig_symbol(f) for f in FIGS) if figs else "") +
-            # dark mockups of light figures: invert, turn hues back, map black to night and white to chalk
-            '<filter id="to-night" color-interpolation-filters="sRGB">'
-            '<feColorMatrix type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0"/>'
-            '<feColorMatrix type="hueRotate" values="180"/>'
-            '<feComponentTransfer><feFuncR type="linear" slope="0.836" intercept="0.090"/>'
-            '<feFuncG type="linear" slope="0.820" intercept="0.086"/><feFuncB type="linear" slope="0.788" intercept="0.075"/></feComponentTransfer>'
-            '</filter></defs></svg>')
+    return f'<svg class="defs" aria-hidden="true"><defs>{marks}</defs></svg>'
 
 CSS = """
 /* Layout: one reading column for text, figures in a two-up grid that stacks on phones. */
@@ -288,7 +248,7 @@ dlg.querySelector('.close').addEventListener('click', () => dlg.close());
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close() });
 """
 
-def shell(title, body, bundle, extra_css="", js="", figs=True):
+def shell(title, body, bundle, extra_css="", js=""):
     fonts = (f"<style>{(SYSTEM / 'fonts.css').read_text()}</style>" if bundle
              else '<link rel="stylesheet" href="../../system/fonts.css">')
     return f'''<!doctype html>
@@ -303,7 +263,7 @@ def shell(title, body, bundle, extra_css="", js="", figs=True):
 <style>{CSS}{extra_css}</style>
 </head>
 <body>
-{defs(figs)}
+{defs()}
 <main>{body}</main>
 <dialog id="zoom"><button class="close">Close</button><div class="inner"></div></dialog>
 <script>{ZOOM_JS}{js}</script>
@@ -313,149 +273,16 @@ def shell(title, body, bundle, extra_css="", js="", figs=True):
 def zoomable(svg, caption):
     return f'<figure><button class="zoom" aria-label="Open at 1600px">{svg}</button><figcaption>{caption}</figcaption></figure>'
 
-# ── index.html: the signature ────────────────────────────────────
-def index_page(bundle):
-    def strip(svg, w, th):
-        return (f'<div class="strip" style="background:{THEMES[th]["ground"]}"><svg width="{w + 64:.0f}" height="{DISC + 64}" '
-                f'viewBox="-32 -32 {w + 64:.0f} {DISC + 64}">{svg}</svg></div>')
-    slots = [("The URL", URL), ("A publication line", "Wisdom · White paper No. 6"), ("Name only", None)]
-    strips = "".join(
-        f'<div class="slot"><p class="label">{label}</p><div class="strips">'
-        + "".join(strip(*signature(th, url, mark_ref="mark"), th) for th in THEMES) + '</div></div>'
-        for label, url in slots)
-    secs = []
-    for f in FIGS:
-        thumbs = "".join(f'<figure class="thumb"><div class="thumb-box">{figure_svg(f, th)}</div><figcaption>{th.title()}</figcaption></figure>' for th in THEMES)
-        secs.append(f'''
-<section id="{f["id"]}">
-  <h2>{f["title"]}</h2>
-  <p class="fnote">{f["note"]} <span class="src">From <code>{f["src"]}/{f["file"]}</code>; Life Itself badge masked where present.</span></p>
-  <div class="pair">{zoomable(figure_svg(f, "light"), "Light · 1600px export, scaled to fit. Click for 1:1.")}{zoomable(figure_svg(f, "dark"), "Dark · figure colour-inverted for the mockup; real dark figures are drawn in chalk.")}</div>
-  <h3 class="label">At 400px, as in a feed</h3>
-  <div class="thumbs">{thumbs}</div>
-</section>''')
-    body = f'''
-  <p class="label">Seeds of Renaissance design system · Diagrams</p>
-  <h1>The diagram signature</h1>
-  <div class="intro">
-    <p>Every published figure carries this signature, bottom right inside its margin, so it stays attributed when it is cropped and reshared. Rules: <code>diagrams.md</code>. Files: <code>system/img/signature.svg</code> and <code>signature-dark.svg</code>, with PNGs.</p>
-    <ul>
-      <li>Sized for a <b>1600px-wide export</b>: mark 64px, text 20px, 72px margin.</li>
-      <li>Light grounds: the mark on its white disc. Dark grounds: a placeholder mark until the system settles the mark on dark.</li>
-      <li>After the name, one optional slot: the URL, a publication line, or nothing. The URL is a placeholder (<code>{URL}</code>) until the domain is decided.</li>
-    </ul>
-  </div>
-  <section id="actual" style="margin-top:0">
-    <h2>At actual size</h2>
-    <p class="fnote">As it sits in a 1600px export, with the three uses of the slot after the name.</p>
-    {strips}
-  </section>
-  {"".join(secs)}'''
-    return shell("Diagram signature", body, bundle)
-
-# ── fonts.html: typography tryout ────────────────────────────────
-def crop(svg):
-    x, y, w, h = poly_svg.crop
-    return f'<svg width="{w}" height="{h}" viewBox="{x} {y} {w} {h}">{svg[svg.index(">") + 1:-6]}</svg>'
-
-def fonts_page(bundle):
-    thumbs = "".join(f'<figure class="thumb"><div class="thumb-box">{fn(th)}</div><figcaption>{name} · {th}</figcaption></figure>'
-                     for name, fn in (("Polycrisis", poly_svg), ("Wisdom gap", gap_svg)) for th in THEMES)
-    rows = "".join(f"<tr><th>{r}</th><td>Apfel {'Mittel' if w == 500 else 'Regular'} {z}px{', 60% ink' if 'opacity' in x else ''}{', uppercase, tracked' if 'upper' in x else ''}</td><td>{d}</td></tr>"
-                   for (r, (w, z, x)), d in zip(TYPE.items(), [
-                       "Sentence case. Ideally the claim, not the topic.", "What the figure shows, one line.",
-                       "Box and panel headings.", "Bracket and group labels.", "Annotations and bullets.",
-                       "Secondary lines inside boxes.", "Axis names and one-to-three-word tags only."]))
-    body = f'''
-  <p class="label">Seeds of Renaissance design system · Diagrams</p>
-  <h1>Type for diagrams</h1>
-  <div class="intro">
-    <p>Apfel Grotezk only, and no bold. Elegance from restraint, as in FT and Economist charts: the title only a little larger than the labels, a grey subtitle doing the explaining, hierarchy from size and 60% ink rather than weight. Drawn in the chosen style, panels (<a href="style.html">drawing style</a>).</p>
-    <p class="fnote">Subtitles are draft copy.</p>
-  </div>
-  <section style="margin-top:0">
-    <div class="pair">{zoomable(poly_svg(), "Text-heavy. Click for 1:1.")}{zoomable(gap_svg(), "Sparse. Click for 1:1.")}</div>
-    <h3 class="label">The smallest text at 1:1 (1600px export)</h3>
-    <div class="crop">{crop(poly_svg())}</div>
-  </section>
-  <section>
-    <h2>The scale</h2>
-    <div class="crop" style="border:0"><table class="spec">{rows}</table></div>
-  </section>
-  <section>
-    <h2>At 400px, as in a feed</h2>
-    <div class="thumbs">{thumbs}</div>
-  </section>'''
-    return shell("Type for diagrams", body, bundle, extra_css=type_css(), figs=False)
-
-# ── style.html: drawing style, and figures in context ───────────
-SNAMES = {"fine": ("Fine", "After Tufte. Thin lines, hairlines for scaffolding, no boxes: layers sit on a rule. The accent as a red arrow."),
-          "panel": ("Panels", "After the FT and the Economist. No outlines: layers are panels in the red tint, the same as the wisdom gap, as wide as their text, with equal padding."),
-}
+# ── Figures in use: a page of the paper and a web article ───────
 PAPER_P = [
     "Amid the decline of modern industrialised society, we are obliged to trace the shape of wisdom in negative space. Manifold crises, the threat of systemic collapse, and a general inability to change direction suggest a profound lack of collective capacity to choose action for the greater good. At the same time, with societal complexity escalating faster than our capacity to manage it, our technologically enabled power to inflict catastrophic harm upon ourselves, each other and our world likewise continues to grow: a disconnect known as ‘the wisdom gap.’",
     "It’s uncontroversial to associate wisdom with rational understanding: with the capacity to grasp what’s going on in a given context, and apply knowledge and analysis to interpret events and guide action. The complexity of our times plainly overwhelms understanding, and it’s tempting to suggest that this shortfall alone explains our ‘wisdom gap’. Still, most would intuitively agree that there’s more to wisdom than analytical skill.",
 ]
 CAPTION = "A rapidly growing gap between society’s technological and social complexity and our “wisdom”, our capacity to manage that complexity well. The curves show a direction, not measured trajectories."
 
-def variants(fn):
-    return "".join(f'<div class="sv" data-s="{k}">{fn("light", k)}</div>' for k in SNAMES)
-
-def style_page(bundle):
-    secs = "".join(f'''
-  <section id="{k}">
-    <h2>{name}</h2>
-    <p class="fnote">{why}</p>
-    <div class="pair">{zoomable(poly_svg("light", k), "Click for 1:1.")}{zoomable(gap_svg("light", k), "Click for 1:1.")}</div>
-  </section>''' for k, (name, why) in SNAMES.items())
-    bw = "".join(f'<figure class="thumb"><div class="thumb-box bw">{gap_svg("light", k)}</div><figcaption><b>{SNAMES[k][0]}</b></figcaption></figure>' for k in SNAMES)
-    small = "".join(f'<figure class="thumb"><div class="thumb-box">{poly_svg("light", k)}</div><figcaption><b>{SNAMES[k][0]}</b></figcaption></figure>' for k in SNAMES)
-    buttons = "".join(f'<button data-s="{k}" aria-pressed="{str(k == "panel").lower()}">{n}</button>' for k, (n, _) in SNAMES.items())
-    body = f'''
-  <p class="label">Seeds of Renaissance design system · Diagrams</p>
-  <h1>Drawing style for diagrams</h1>
-  <div class="intro">
-    <p>Two ways to draw the same two figures, with the type fixed (Apfel only, no bold) and one red accent. References: Tufte, the FT, the Economist. Then the figures in context: on a page of the paper and in a web article.</p>
-  </div>
-  {secs}
-  <section>
-    <h2>Printed in black and white</h2>
-    <p class="fnote">The red has to survive a black-and-white printer: as a grey area or panel, or as an arrow with its label.</p>
-    <div class="thumbs">{bw}</div>
-  </section>
-  <section>
-    <h2>At 400px, as in a feed</h2>
-    <div class="thumbs">{small}</div>
-  </section>
-  <section id="context">
-    <h2>In context</h2>
-    <p class="fnote">The figure beside running text: Bricolage for the text, Apfel in the figure. Switch the style to see each one on the page.</p>
-    <div class="bar" role="group" aria-label="Drawing style in context">{buttons}</div>
-    <div class="ctx" data-style="panel">
-      <h3 class="label">A page of the paper (A4, figure as a plate)</h3>
-      <div class="sheet-wrap"><div class="sheet">
-        <div class="rh"><span>4</span><span>Wisdom and Wanting What’s Good</span></div>
-        <h4 class="ph2">Addressing the wisdom gap</h4>
-        <p class="pp">{PAPER_P[0]}<sup>7</sup></p>
-        <figure class="plate"><div class="art">{variants(gap_svg)}</div>
-          <figcaption><span class="flbl">Fig. 1</span><span>{CAPTION}<sup>8</sup></span></figcaption></figure>
-        <p class="pp">{PAPER_P[1]}</p>
-      </div></div>
-      <h3 class="label">A web article</h3>
-      <div class="web-wrap"><article class="web">
-        <p class="wlabel">White paper No. 6 · Wisdom and Wanting What’s Good</p>
-        <h4 class="wh2">Addressing the wisdom gap</h4>
-        <p>{PAPER_P[0]}</p>
-        <figure class="wfig">{variants(poly_svg)}<figcaption><span class="flbl">Fig. 2</span> The crises we see sit on deeper dysfunctions, which sit on ideas and tendencies we rarely examine. Working on the surface alone does not reach the root.</figcaption></figure>
-        <p>{PAPER_P[1]}</p>
-      </article></div>
-    </div>
-  </section>'''
-    css = """
-.bw svg { filter: grayscale(1) }
-.ctx[data-style="fine"] .sv:not([data-s="fine"]), .ctx[data-style="panel"] .sv:not([data-s="panel"]) { display: none }
+CONTEXT_CSS = """
 .sv svg.fig { border: 0 }
-.sv svg.fig > rect:first-child { fill: transparent }  /* in context the figure sits on the page, not on a white box */
+.sv svg.fig > rect:first-child { fill: transparent }  /* in a page the figure takes the page's ground */
 /* the paper page and the web article are depictions of light, printed or on-brand pages: fixed colours */
 .sheet-wrap, .web-wrap { overflow-x: auto; max-width: 100%; margin-top: 10px }
 .sheet-wrap { background: #e4dfd5; padding: 24px }
@@ -480,13 +307,6 @@ def style_page(bundle):
 .wfig figcaption { max-width: 680px; margin: 10px auto 0; font-size: 14px; color: #5d584f; line-height: 1.5 }
 .wfig .flbl { font-size: 11px; margin-right: 8px }
 """
-    js = """
-const ctx = document.querySelector('.ctx'), sb = document.querySelectorAll('#context .bar button');
-sb.forEach(b => b.addEventListener('click', () => {
-  ctx.dataset.style = b.dataset.s; sb.forEach(x => x.setAttribute('aria-pressed', x === b));
-}));
-"""
-    return shell("Diagram drawing style", body, bundle, extra_css=type_css() + css, js=js, figs=False)
 
 # ── Charts with data (2026-10-08) ────────────────────────────────
 # Static figures for papers and posts, not dashboards: emphasis after the FT and the Economist.
@@ -576,55 +396,117 @@ def chart_dumbbell(theme="light"):
     return chart_frame(theme, "Trust fell in every institution",
                        "Share who trust each a great deal or quite a lot, %, 2015 and 2025 · illustrative data", "".join(out), H)
 
-def charts_page(bundle):
-    makers = [("line", "Lines: one series in red", chart_line), ("bars", "Ranked bars: one bar in red", chart_bars),
-              ("dumbbell", "Before and after: two dots per row", chart_dumbbell)]
-    secs = "".join(f'''
-  <section id="{k}">
-    <h2>{name}</h2>
-    <div class="pair">{zoomable(fn("light"), "Light. Click for 1:1.")}{zoomable(fn("dark"), "Dark.")}</div>
-    <div class="thumbs">
-      <figure class="thumb"><div class="thumb-box">{fn("light")}</div><figcaption>At 400px</figcaption></figure>
-      <figure class="thumb"><div class="thumb-box bw">{fn("light")}</div><figcaption>Black and white</figcaption></figure>
-    </div>
-  </section>''' for k, name, fn in makers)
-    body = f'''
-  <p class="label">Seeds of Renaissance design system · Diagrams</p>
-  <h1>Charts with data</h1>
-  <div class="intro">
-    <p>The diagram style applied to charts: Apfel only, ink, one red. After the FT and the Economist, colour is emphasis, not decoration: the series the chart is about is red, the rest a warm grey (lines) or the pale red tint (bars and areas), and the title states what to see. Lines and areas are labelled directly; no legend boxes unless a key is unavoidable.</p>
-    <p class="fnote">All data here is illustrative, made up for the style. Do not quote it.</p>
-  </div>
-  {secs}'''
-    css = """
-.bw svg { filter: grayscale(1) }
+CHART_CSS = """
 .d-tick { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 24px; fill-opacity: .6; font-variant-numeric: tabular-nums }
 .d-tick-strong { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 26px; font-variant-numeric: tabular-nums }
 .d-label-em { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-weight: 500; font-size: 29px }
 .d-source { font-family: "Apfel Grotezk", "Hanken Grotesk", sans-serif; font-size: 20px; fill-opacity: .6 }
 """
-    return shell("Charts with data", body, bundle, extra_css=type_css() + css, figs=False)
 
+# ── The gallery ──────────────────────────────────────────────────
+GUIDE = "../../diagrams.md"
+EXAMPLES = [  # id, title, what it shows, the rules it illustrates (guide anchors), maker
+    ("wisdom-gap", "The wisdom gap", "A conceptual curve. The key area in the red tint, labelled in red; two weights of line; solid arrowheads.",
+     [("Drawing style", "drawing-style"), ("Type", "type")], gap_svg),
+    ("polycrisis", "From polycrisis to metacrisis", "A framework. Layers as panels in the red tint, sized to their text, with even padding; brackets for groups.",
+     [("Drawing style", "drawing-style")], poly_svg),
+    ("chart-line", "Lines: one series in red", "Change over time. The series the title is about in red, the rest grey, names at the line ends, an event as a pale band.",
+     [("Charts with data", "charts-with-data")], chart_line),
+    ("chart-bars", "Ranked bars: one bar in red", "Comparison. Bars in the tint, the one that matters in red, values at the tips.",
+     [("Charts with data", "charts-with-data")], chart_bars),
+    ("chart-dots", "Before and after: two dots per row", "Change between two dates. Older in grey, newer in red, joined by the tint; a small key.",
+     [("Charts with data", "charts-with-data")], chart_dumbbell),
+]
+PAPER = here.parents[4] / "2rbook" / "wisdom" / "assets"  # the real paper figures, if that repo is beside this one
+REAL = [("wisdom-gap-figure", "The Wisdom Gap", "Fig. 1"), ("dimensions-of-wisdom", "Three Dimensions of Wisdom", "")]
 
-ARTIFACTS = {"index.html": "https://claude.ai/artifact/TYhQ6hnqSPp7dUUuF5Se2f",
-             "fonts.html": "https://claude.ai/artifact/JQs6MvaQM2a9rvWm1c3p61",
-             "style.html": "https://claude.ai/artifact/H4unZtofiTcy894NucUS59",
-             "charts.html": "https://claude.ai/artifact/Lb9VPyVZyETRanVSZq2KVp"}
+def gallery_page(bundle):
+    def img(name, alt):
+        src = b64(here / "img" / f"{name}.png") if bundle else f"img/{name}.png"
+        return f'<img class="fig" src="{src}" alt="{alt}" loading="lazy">'
+    toc = " · ".join(f'<a href="#{k}">{t}</a>' for k, t, *_ in EXAMPLES) + ' · <a href="#in-use">In a page</a> · <a href="#paper">The Wisdom paper</a>'
+    secs = "".join(f'''
+  <section id="{k}">
+    <h2>{t}</h2>
+    <p class="fnote">{what} Rules: {", ".join(f'<a href="{GUIDE}#{a}">{n}</a>' for n, a in rules)}.</p>
+    <div class="pair">{zoomable(fn("light"), "Light. Click for full size.")}{zoomable(fn("dark"), "Dark.")}</div>
+    <div class="thumbs">
+      <figure class="thumb"><div class="thumb-box">{fn("light")}</div><figcaption>At 400px, as in a feed</figcaption></figure>
+      <figure class="thumb"><div class="thumb-box">{fn("dark")}</div><figcaption>At 400px, dark</figcaption></figure>
+      <figure class="thumb"><div class="thumb-box bw">{fn("light")}</div><figcaption>Printed in black and white</figcaption></figure>
+    </div>
+  </section>''' for k, t, what, rules, fn in EXAMPLES)
+    real = "".join(f'<figure>{img(n, t)}<figcaption>{f"<b>{fig}</b> · " if fig else ""}{t}</figcaption></figure>' for n, t, fig in REAL if (here / "img" / f"{n}.png").exists())
+    body = f'''
+  <p class="label">Seeds of Renaissance design system · Diagrams</p>
+  <h1>Diagram examples</h1>
+  <div class="intro">
+    <p>Finished figures in the house style, to copy. Each is shown in light and dark, at 400px as in a feed, and printed in black and white; then in use, on a page of a paper and in a web article. How to make one, and the rules: <a href="{GUIDE}">the diagrams guide</a>.</p>
+    <p class="fnote">Chart data is illustrative, made up for the style. Do not quote it.</p>
+    <p class="fnote">{toc}</p>
+  </div>
+  {secs}
+  <section id="in-use">
+    <h2>In a page</h2>
+    <p class="fnote">Beside running text: Bricolage for the text, Apfel in the figure. In a page the figure has no white box; it takes the page's ground. The caption gives the number and a sentence, not the title again.</p>
+    <h3 class="label">A page of the paper (A4, figure as a plate)</h3>
+    <div class="sheet-wrap"><div class="sheet">
+      <div class="rh"><span>4</span><span>Wisdom and Wanting What’s Good</span></div>
+      <h4 class="ph2">Addressing the wisdom gap</h4>
+      <p class="pp">{PAPER_P[0]}<sup>7</sup></p>
+      <figure class="plate"><div class="art sv">{gap_svg("light")}</div>
+        <figcaption><span class="flbl">Fig. 1</span><span>{CAPTION}<sup>8</sup></span></figcaption></figure>
+      <p class="pp">{PAPER_P[1]}</p>
+    </div></div>
+    <h3 class="label">A web article</h3>
+    <div class="web-wrap"><article class="web">
+      <p class="wlabel">White paper No. 6 · Wisdom and Wanting What’s Good</p>
+      <h4 class="wh2">Addressing the wisdom gap</h4>
+      <p>{PAPER_P[0]}</p>
+      <figure class="wfig sv">{poly_svg("light")}<figcaption><span class="flbl">Fig. 2</span> The crises we see sit on deeper dysfunctions, which sit on ideas and tendencies we rarely examine. Working on the surface alone does not reach the root.</figcaption></figure>
+      <p>{PAPER_P[1]}</p>
+    </article></div>
+  </section>
+  {f'''<section id="paper">
+    <h2>The Wisdom paper</h2>
+    <p class="fnote">The figures as published in <i>Wisdom and Wanting What’s Good</i> (white paper No. 6), signed with the paper's line in the slot. Built in 2rbook (<code>wisdom/assets/build-*.py</code>).</p>
+    <div class="pair">{real}</div>
+  </section>''' if real else ""}'''
+    return shell("Diagram examples", body, bundle, extra_css=type_css() + CHART_CSS + CONTEXT_CSS + ".bw svg { filter: grayscale(1) }\n.sv { display: block }")
+
+def export_pngs():
+    """img/*.png: each example at full size on its ground, for the guide to show inline; plus the
+    paper's real figures, copied from 2rbook if it is there."""
+    chrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    (here / "img").mkdir(exist_ok=True)
+    for name, *_ in REAL:
+        if (PAPER / f"{name}.share.png").exists():
+            shutil.copy2(PAPER / f"{name}.share.png", here / "img" / f"{name}.png")
+    if not pathlib.Path(chrome).exists():
+        print("no Chrome: skipped the example PNGs"); return
+    css = type_css() + CHART_CSS
+    for k, _, _, _, fn in EXAMPLES:
+        if k == "wisdom-gap":
+            continue  # the paper's own figure (wisdom-gap-figure.png) stands for it
+        svg = fn("light")
+        w, h = (float(v) for v in re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg).groups())
+        with tempfile.TemporaryDirectory() as tmp:
+            page = pathlib.Path(tmp) / "f.html"
+            page.write_text(f'<html><head><link rel="stylesheet" href="{(SYSTEM / "fonts.css").as_uri()}"><style>{css} body{{margin:0}} .defs{{position:absolute;width:0;height:0}} svg.fig{{display:block;width:{w}px;height:{h}px}}</style></head><body>{defs()}{svg}</body></html>')
+            subprocess.run([chrome, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--window-size={int(w)},{int(h)}",
+                            "--virtual-time-budget=3000", f"--screenshot={here / 'img' / (k + '.png')}", page.as_uri()], check=True, capture_output=True)
+        print("img/" + k + ".png")
 
 def for_artifact(html):
     """The publisher adds the document skeleton: keep the head's contents and the body's."""
     head = html[html.index("<title>"):html.index("</head>")]
     body = html[html.index("<body>") + 6:html.index("</body>")]
-    for page, url in ARTIFACTS.items():  # sibling pages are separate artifacts once published
-        body = body.replace(f'href="{page}"', f'href="{url}"')
-    return head + body
+    return head + body.replace(f'href="{GUIDE}', 'href="https://sor-design-system-rufuspollock.flowershow.me/diagrams')
 
 if __name__ == "__main__":
-    pages = {"index.html": index_page, "fonts.html": fonts_page, "style.html": style_page, "charts.html": charts_page}
     if len(sys.argv) == 3 and sys.argv[1] == "--bundle":
         out = pathlib.Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
-        for name, fn in pages.items():
-            (out / name).write_text(for_artifact(fn(bundle=True)))
+        (out / "index.html").write_text(for_artifact(gallery_page(bundle=True)))
     else:
-        for name, fn in pages.items():
-            (here / name).write_text(fn(bundle=False))
+        export_pngs()
+        (here / "index.html").write_text(gallery_page(bundle=False))

@@ -45,13 +45,16 @@ Thumbnails, podcast covers and channel art. What we need, what exists and what's
 
 ## Diagrams
 
-Figures and frameworks, signed so they stay attributed when shared alone. Rules: [diagrams.md](diagrams.md).
+Figures, frameworks and charts in the house style. How to make one: [diagrams.md](diagrams.md).
 
-- [The signature](examples/diagrams/index.html) on three real figures from the Wisdom paper and the framework, light and dark, at a 1600px export and at 400px in a feed.
-- [Type for diagrams](examples/diagrams/fonts.html): the type scale on two redrawn figures.
-- [Drawing style](examples/diagrams/style.html): panels against fine rules, in black and white, at 400px, and in context on a page of the paper and in a web article.
-- [Charts with data](examples/diagrams/charts.html): lines, ranked bars, before and after, in the style (illustrative data).
-- Built by `examples/diagrams/build.py`.
+<div class="not-prose my-6 grid gap-4 sm:grid-cols-3">
+  <a href="examples/diagrams/index.html#wisdom-gap"><img src="examples/diagrams/img/wisdom-gap-figure.png" alt="The Wisdom Gap" class="border border-stone-300"></a>
+  <a href="examples/diagrams/index.html#polycrisis"><img src="examples/diagrams/img/polycrisis.png" alt="From polycrisis to metacrisis" class="border border-stone-300"></a>
+  <a href="examples/diagrams/index.html#chart-bars"><img src="examples/diagrams/img/chart-bars.png" alt="A ranked bar chart with one bar in red" class="border border-stone-300"></a>
+</div>
+
+- [Diagram examples](examples/diagrams/index.html): the wisdom gap, polycrisis to metacrisis, and three charts (lines, ranked bars, before and after), each in light and dark, at 400px and in black and white; on a page of a paper and in a web article; and the Wisdom paper's published figures.
+- Built by `examples/diagrams/build.py`, whose functions are the starting point for a new figure.
 
 ## Print
 
