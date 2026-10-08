@@ -2,7 +2,7 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.22` (papers, done), `design-34t.28` (poster).
 
-**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`. **The exemplar** is the Wisdom paper as built in Typst: [examples/print/wisdom.pdf](examples/print/wisdom.pdf) (2026-10-08).
+**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`. The Wisdom paper is the first paper built this way; its PDF is published with the paper, not kept here, and rebuilt with `typst/build-paper.sh wisdom` in `pdf-report-publishing`.
 
 ## What we need
 
@@ -19,12 +19,12 @@ Papers and essays as printed or PDF documents, and later posters and magazine pa
 
 ## Anatomy of a paper
 
-Proposed from the Wisdom paper; mockups of the interior in [examples/print/](examples/print/index.html). In page order. **Recto** means it starts on a right-hand page, leaving a blank verso before it if needed.
+Proposed from the Wisdom paper; mockups of the interior in [examples/print/](examples/print/index.html). In page order. Every part starts on a new page. There is no recto rule and so no blank pages: the paper is one PDF read on screen (decided 2026-10-08, [below](#settled-while-building-the-first-paper)). The *Starts on* column is kept for a printed run.
 
 | Part | Holds | Starts on | Optional |
 |---|---|---|---|
 | Front cover | Series line, title, subtitle, part line, blurb, authors with the text credit ([below](#covers-and-credits)). By default plain and typographic, ink on paper with a woodcut; a paper with its own art gets a bespoke cover | — | |
-| Inside front cover | Blank | verso | |
+| Inside front cover | Blank. Printed runs only; not in the PDF | verso | |
 | Title page | Series line, title, subtitle, part line, authors, the Life Itself credit in text. No logo. Quieter than the cover: no art, no blurb | recto (i) | |
 | Imprint | On the back of the title page, set small at the foot with the rest left empty: a line about the series, edition and publisher, authors, acknowledgements, credits (figures, woodcuts, typefaces), copyright and licence (CC BY 4.0) in full, how to cite, URL | verso (ii) | |
 | Summary | The paper in a few paragraphs | recto | yes |
@@ -36,11 +36,11 @@ Proposed from the Wisdom paper; mockups of the interior in [examples/print/](exa
 | Further reading | Short annotated list | new page | yes |
 | Bibliography | References cited | new page | |
 | Appendices | Lettered or numbered, each titled | new page | yes |
-| Back cover | The one night: blurb, a short about, the SoR mark on its disc with the wordmark, a colophon line (series, part, year, URL). The Life Itself logo allowed | — | |
+| Back cover | The one night: a hook line, about 120 words on what the paper argues (its summary will do), the inverted SoR mark (the seed ring, no disc) with the wordmark, a colophon (series, part, version, year, URL) and the Life Itself Sensemaking Studio logo in its night colours | — | |
 
 One ground throughout the inside: white, unfilled ([below](#one-pdf-for-reading-on-screen)). Polyamine stays for the cover, title page, contents and chapter titles. Inside the text, heads are Restora: sections at 19pt, sub-sections at 14pt medium. Markdown levels map as `##` chapter, `###` section, `####` sub-section.
 
-Running heads: the paper's title on versos, the chapter on rectos, folio at the outer corner. No running head on the title page and chapter openings; openings carry the folio at the foot. Prelims numbered in roman, the text in arabic from the introduction.
+Running heads: the same on every page, the width of the text column: the paper's title at its left edge, the chapter and folio at its right. No running head on the title page, imprint and openings; openings carry the folio at the foot, at the text's right edge. Prelims numbered in roman, the text in arabic from the introduction.
 
 ## One PDF, for reading on screen
 
@@ -54,7 +54,14 @@ Decided 2026-10-08. Each paper ships as **one PDF**, made for reading on screen,
 
 ## Settled while building the first paper
 
-Decided 2026-10-08, building the Wisdom paper in Typst. The approved mockups didn't settle these.
+Decided 2026-10-08, building the Wisdom paper in Typst. The approved mockups didn't settle these, or settled them for print and we changed our minds for the screen.
+
+- **Paragraphs are spaced, not indented**: half a line between them, no first-line indent. Indents are the book convention; spacing suits a sans body read on screen.
+- **No recto rule, no blank pages.** Every part starts on a new page.
+- **One running-head layout on every page** (above), not mirrored for spreads: on screen there is no outer corner.
+- **Figures are cropped to their drawn content** at build time, so the margin a figure carries for sharing alone doesn't push it in from the text edge.
+- **Footnotes stay 8/11pt Bricolage** (`--print-note`), numbers in Apfel. 7.5pt was tried and was too small; Apfel is a label face and doesn't read at length.
+- **The version** (e.g. 1.0) is in the imprint and the back-cover colophon.
 
 - **Figures sit bare on the page, aligned with the text.** No rules above or below. A figure is the width of the text column and starts at its left edge, so the title drawn into the figure lines up with the prose; then its number and caption.
 - **The summary box is drawn fine**: a 0.4pt rule in `--muted`, not 0.6pt ink, so it reads as an aside and not a warning.
