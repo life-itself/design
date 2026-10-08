@@ -70,8 +70,9 @@ Decided 2026-10-08, building the Wisdom paper in Typst. The approved mockups did
 Decided 2026-10-07 ([reasoning](decisions.md#working-through-publication-branding-2026-10-07)). Which mark goes where: [logo.md](logo.md#which-mark-where).
 
 - **Papers are the Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6).
-- **Front cover, top to bottom:** series line ("Seeds *of* Renaissance · No. 6", small, wordmark face); title; subtitle; part line if any ("Wisdom · Part 1", small); cover art; optional one-line blurb; authors with the Life Itself credit in text.
-- **No logo on the front cover** until a one-colour mark exists. The mark and the Life Itself logo go on the back cover or colophon.
+- **Keep the cover simple.** Let the art carry it. The Wisdom cover (2026-10-08) carries too much: series line, title, subtitle, part line, art, blurb, credit and mark all compete. Its 16:9 social image (art, title, mark) is the better model. Start from art, title, series line and credit; add a subtitle only if the title needs it. Part line and blurb are optional and can move inside.
+- **Front cover, top to bottom:** series line ("Seeds *of* Renaissance · White Paper No. 6", small, wordmark face, with "of" in Restora italic); title; subtitle; part line if any ("Wisdom · Part 1", small); cover art at full size; optional one-line blurb, set smaller than the credit; authors with the Life Itself credit in text, on one line at one size; optionally the one-colour mark, small, centred in the bottom margin.
+- **On the front, only the one-colour mark** in the cover's ink ([logo.md](logo.md#using-it)), never the red one. The Life Itself logo and the colour mark with its wordmark go on the back cover or colophon.
 - **Cover art may bring its own palette** (Wisdom's is blue and gold). The series line takes the cover's ink, not the logo red.
 - **Export covers at print resolution**: A4 at 300 dpi is 2480 × 3508 px. Social images are crops made from the art, not the cover itself ([social.md](social.md#rules-for-social)).
 - **Figures** carry the signature ([diagrams.md](diagrams.md)), so they stay attributed when shared alone.
