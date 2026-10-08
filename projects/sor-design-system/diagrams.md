@@ -40,8 +40,8 @@ Called **panels**, after the FT and the Economist; chosen over fine Tufte-style 
 - **The red tint:** the logo red at 16% on white (`#fbdbdb`), 40% on night (`#6b1a17`; weaker vanishes on dark). For panels and for the one area that is the point (the wisdom gap). Red **text** only for the label of that one area. This is the one place the system allows a red ground ([BUILD.md](BUILD.md#rules-that-apply-everywhere)).
 - **Labelling an area:** centre the label in the area, with equal space between it and the edges on either side (in the wisdom gap: midway between the curves, and between the upper curve and the shading's edge), then nudged a touch right if exact centre reads as off: trust the eye over the arithmetic. One line.
 - **Black and white:** the tint prints as a light grey, so panels and areas survive a mono printer. Never let colour alone carry a meaning.
-- **Ground:** white, or the paper's own ground when placed on a page. On dark grounds ink becomes chalk and the tint its night value.
-- **Canvas:** 1600 px wide for a figure that fills it; a narrower figure gets a narrower export, as wide as its content plus the 72 px margin, so the signature sits under the figure. **The content spans margin to margin:** its right edge (an axis end, a text column, a panel) sits at the right margin, so the signature's right edge lines up with it. Don't lay a figure out on a fixed grid that stops short of the margin: the signature then floats off to the right of the drawing.
+- **Ground:** transparent in the drawing, so it takes the ground of the page it sits on; white for a figure shared on its own (see Exports). On dark grounds ink becomes chalk and the tint its night value.
+- **Canvas:** draw on 1600 px wide for a figure that fills it, with a 72 px margin; a narrower figure gets a narrower canvas, as wide as its content plus the margin, so the signature sits under the figure. The margin is for the shared export only: the embedded file is cropped to the drawing (see Exports). **The content spans margin to margin:** its right edge (an axis end, a text column, a panel) sits at the right margin, so the signature's right edge lines up with it. Don't lay a figure out on a fixed grid that stops short of the margin: the signature then floats off to the right of the drawing.
 
 ## Charts with data
 
@@ -61,12 +61,12 @@ The standard pattern for published charts and figures (the Economist, the FT, Ou
 - **What:** the mark, then "SEEDS OF RENAISSANCE" and one optional slot on one line, **set in Apfel Grotezk**, not the Polyamine wordmark. Chosen over the full lockup and over text only after [mockups](examples/diagrams/index.html) (2026-10-07): the wordmark smudges at signature size and adds a second display face, and text alone leaves nothing recognisable once the image is shrunk. At thumbnail size no text survives; the mark does.
 - **The slot after the name** holds the URL by default, or a publication line ("Wisdom · White paper No. 6"), or nothing. Drop it when the figure sits where the source is obvious.
 - **Light grounds:** the mark on its white disc. **Dark grounds:** whatever the system settles as the mark on dark (white disc or an inverted mark, a general question in [logo.md](logo.md#open)). `signature-dark` uses a placeholder until then.
-- **Where:** bottom right, **inside the diagram's margin**, not flush to the edge, so a loose crop keeps it. Same corner on every diagram.
+- **Where:** bottom right, its right edge on the drawing's right edge. In the shared export it sits inside the margin, so a loose crop keeps it. Same corner on every diagram.
 - **Size:** on a 1600 px-wide export, the mark 64 px, the text 20 px, the whole signature about 540 px wide. Scale the diagram, not the signature: it stays the same size on every diagram.
 - **Colour:** the mark as it is. Name and URL in the diagram's ink at 60% (ink on light, chalk on dark), so the signature signs without competing.
 - **Too small for the mark** (a thumbnail, an inline icon-sized figure): drop the mark and keep the name and URL as text. Never shrink the mark until the fingerprints turn to noise.
 - **Life Itself** is not shown on diagrams. Seeds is the brand ([logo.md](logo.md#which-mark-where)).
-- **One version only.** The same signed file goes in the paper, on the site and in posts, so there is nothing to forget at export.
+- **One drawing, signed once.** Both exports (embedded and shared) come from the same signed drawing, so there is nothing to forget at export.
 
 ## Making it easy
 
@@ -85,7 +85,9 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 ## Drawing them
 
 - **How:** sketch the figure (on paper, a whiteboard, anything), then build it as SVG with Claude, from the code in `examples/diagrams/build.py`: its helpers set the type, panels, arrows and signature to this spec. No diagram tool to configure.
-- **Exports:** PNG at 1600 px wide (and 3200 px for print), or SVG with the text outlined, since Apfel is not on readers' machines.
+- **Exports: draw tight, add the margin on export** (decided 2026-10-08). The margin and white ground are what a figure needs when it travels alone, not when it sits in a page, so they belong to the export, not the drawing. `write_figure()` in `system/outline.py` writes both from one drawing:
+  - **Embedded** (papers, web pages): `name.svg`, cropped to the drawing (plus 8 px so nothing clips), transparent, text outlined (Apfel is not on readers' machines). The page supplies the space around it, as for any other block, and its edges line up with the text. Commit this one; the paper's Markdown links it.
+  - **Shared alone** (Substack, social, slides, Docs): `name.share.png` and `name.share@2x.png`, the full canvas with its 72 px margin on white (dark-mode apps would hide ink on transparent). Built on demand with headless Chrome; not committed.
 - **Alt text** says what the figure claims, not what it looks like.
 
 ## Check before you publish
@@ -94,7 +96,8 @@ Typing and styling text inside a diagram tool is fiddly, so the signature is a r
 - [ ] Solid lines, solid arrowheads, no outlines on panels, panels sized to their text with even padding.
 - [ ] Red tint on panels and the one key area only; red text only for that area's label.
 - [ ] Reads at 400 px and in black and white.
-- [ ] Signature bottom right, inside the margin; export as wide as the figure; the content's right edge lines up with the signature's.
+- [ ] Signature bottom right; the content's right edge lines up with the signature's.
+- [ ] Exported with `write_figure()`: tight transparent SVG for the page, padded white PNG for sharing.
 
 ## Open
 

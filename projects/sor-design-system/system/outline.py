@@ -84,3 +84,36 @@ def signature(theme, url=URL, mark_ref=None):
     text = (f'<g fill="{ink}" fill-opacity=".6"><path d="{d1}"/>'
             f'<circle cx="{dot + 2:.1f}" cy="{r:.1f}" r="2.2"/><path d="{d2}"/></g>')
     return disc + mark + text, dot + 18 + w2
+
+
+def write_figure(dest, title, body, W, H, M=72, foot=56, pad=8, png=True):
+    """Write a figure drawn on a W x H canvas with margin M (signature `foot` above the bottom).
+
+    dest (.svg): tight and transparent, edges = the drawing (plus `pad` px so nothing clips).
+      For papers and the web: the page supplies the space around it.
+    dest with .share.png (and @2x): the full canvas with its margin, on white. For sharing
+      the figure alone (Substack, social, slides). Built with headless Chrome ($CHROME, or the
+      macOS default); skipped with a note if Chrome isn't there. Not committed.
+    Decided 2026-10-08 (diagrams.md, Exports)."""
+    import os, subprocess, tempfile
+    dest = pathlib.Path(dest)
+    x, y, w, h = M - pad, M - pad, W - 2 * (M - pad), H - foot - M + 2 * pad
+    dest.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}">'
+                    f'<title>{title}</title><g fill="{INK}">{body}</g></svg>\n')
+    print(dest)
+    if not png:
+        return
+    chrome = os.environ.get("CHROME", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+    if not pathlib.Path(chrome).exists():
+        print("no Chrome: skipped the share PNGs (set $CHROME)")
+        return
+    with tempfile.TemporaryDirectory() as tmp:
+        full = pathlib.Path(tmp) / "full.svg"
+        full.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
+                        f'<rect width="{W}" height="{H}" fill="{WHITE}"/><g fill="{INK}">{body}</g></svg>\n')
+        for scale, suffix in ((1, ".share.png"), (2, ".share@2x.png")):
+            out = dest.with_name(dest.stem + suffix)
+            subprocess.run([chrome, "--headless=new", "--hide-scrollbars", f"--window-size={W},{H}",
+                            f"--force-device-scale-factor={scale}", f"--screenshot={out}", str(full)],
+                           check=True, capture_output=True)
+            print(out)
