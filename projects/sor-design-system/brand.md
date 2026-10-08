@@ -125,8 +125,10 @@ Public descriptions of the podcast's formats go by **host and format**. Framing 
 Copy lines:
 
 - Instagram: *"Ideas & practices for a world being reborn. Podcast · Courses · Community"*
-- YouTube: *"Ideas & practices for civilisational rebirth."*
-- Podcast intro: *"Seeds of Renaissance is a conversation for a civilisational rebirth."*
+- YouTube: *"Exploring crisis and renewal in this time between worlds."* (proposed; see [voice.md](voice.md#the-media-house-line))
+- Podcast intro: *"This is Seeds of Renaissance, a conversation exploring crisis and renewal in this time between worlds."* (proposed; see [voice.md](voice.md#the-media-house-line))
+
+*Renewal* is the default public word; *rebirth* is kept for poetic copy (magazine, poetic sections). See [voice.md](voice.md#key-lines).
 - To a friend: *"…a project for people who feel like the world's kind of falling apart and are tired of the old ways of thought and governance and want something new, but instead of just doom-scrolling about it, we're trying to figure out and actually practice what comes next."*
 
 ## Names
@@ -138,7 +140,7 @@ Copy lines:
 | White paper series | **Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6). Decided 2026-10-07; see [print.md](print.md#covers-and-credits) |
 | Steward | **Life Itself**: originating collective and current steward. Seeds is designed to grow far wider and is not a funnel into Life Itself |
 | Arms | **Media House** (media) · **Gardens of Change** (community) |
-| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational rebirth…" |
+| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational renewal…" |
 | People | "Seed-bearers" (tbd) |
 
 Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `@SeedRenaissance` · LinkedIn `seedsofrenaissance`.

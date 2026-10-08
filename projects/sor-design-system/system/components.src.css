@@ -413,7 +413,7 @@
 .thumb-frame { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden }
 .thumb-frame > .thumb { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(tan(atan2(100cqi, var(--thumb-w)))) }
 
-/* 5 · Podcast guest (Over the Mountains episode cover): night ground with a mountain photo under a dark shade,
+/* 5 · Podcast guest (podcast episode cover): night ground with a mountain photo under a dark shade,
    the guest in greyscale on the right fading into it, title and name on the left, the logo on its white disc.
    Markup: .thumb.thumb--guest > img.thumb__photo, .thumb__scrim, img.thumb__guest, .thumb__text (label, title, byline, foot).
    The podcast name is the one label sized to read at feed size (--thumb-label-l); keep the bottom-right corner (duration badge) clear of type. */

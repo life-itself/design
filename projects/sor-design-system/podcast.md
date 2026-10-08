@@ -1,6 +1,6 @@
 # Podcast
 
-Show art and episode artwork for Seeds of Renaissance podcasts, starting with *Over the Mountains*. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.16`.
+Show art and episode artwork for the Seeds of Renaissance podcast. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.16`.
 
 **Stub.** The 16:9 guest cover for YouTube exists ([examples/youtube/](examples/youtube/index.html), `.thumb--guest`); square artwork doesn't yet.
 
@@ -13,13 +13,13 @@ Show art and episode artwork for Seeds of Renaissance podcasts, starting with *O
 | Video cover | 1280 × 720 | The YouTube guest cover: see [youtube.md](youtube.md) |
 | Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | Short clips for social: see [social.md](social.md) |
 
-## Open: is Over the Mountains a sub-brand?
+## One brand, no named shows
 
-The biggest question for this page. Does *Over the Mountains* get its own name lockup and perhaps its own accent, or is it Seeds of Renaissance with a label? Same question for Sylvie's station. Decide in beads `design-34t.11` (sub-brands) before finalising show art; until then use the SoR lockup with "Over the Mountains" as the title.
+The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. *Over the Mountains* is retired as a show name (2026-10-05, see [brand.md](brand.md#names)). Kinds of episode (guest interviews, Rufus–Sylvie conversations) are formats, shown by playlist and an artwork tag such as "Podcast" or "Conversation", not by separate lockups. Use the SoR lockup.
 
 ## Direction so far
 
-From the guest cover work: a dark mountain backdrop (the name), the guest's portrait in greyscale, a short Polyamine title, the logo on its disc. Show art could keep the mountain and swallow and drop the guest.
+From the guest cover work: a dark mountain backdrop, the guest's portrait in greyscale, a short Polyamine title, the logo on its disc. Show art could keep the mountain and swallow and drop the guest.
 
 ## Brief for a new session
 

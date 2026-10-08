@@ -14,7 +14,7 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 |---|---|---|
 | **1 · Landscape poster** | Announces a gathering or event: date, title, photograph. Also works as an event banner on other platforms. | Have it: the *gathering* template |
 | **2 · Video cover** | Generic videos (talks, essays, explainers), including a quote-card variant. | Have it: the *talk* and *manifesto* templates |
-| **3 · Podcast episode cover** | Over the Mountains episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
+| **3 · Podcast episode cover** | Podcast episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
 | **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | **First pass done** in [examples/youtube/channel.html](examples/youtube/channel.html): banner (paper and night, desktop/mobile/TV views, safe-area guides), channel page mocks, avatar options (swallow-on-white recommended; the logo fails under 48px), lower third, watermark, About panel |
 
 Later, if needed: a vertical Shorts cover (1080 × 1920).
@@ -38,7 +38,7 @@ Each direction shows a desktop banner, the mobile crop, the channel page header,
 
 Uriel's own warnings: option 1 sits close to Emergence Magazine without photos; option 2 can drift into mystical cliché and its eclipse artwork is low resolution; option 3 needs the logo as a clean file.
 
-**What carries over into the current system:** the set of channel assets to make (banner with mobile safe area, podcast cover, lower third, watermark), the podcast cover idea of guest portrait plus a large plain quote, the "Over the Mountains · presented by Seeds of Renaissance" lockup, Grove's idea of the fingerprints becoming seeds (it rhymes with our woodcut seeds), and the About text and links below. **What doesn't:** the three palettes and typefaces, which predate the decisions on ink, paper, sunlight and Polyamine (see [colour.md](colour.md), [type.md](type.md)).
+**What carries over into the current system:** the set of channel assets to make (banner with mobile safe area, podcast cover, lower third, watermark), the podcast cover idea of guest portrait plus a large plain quote, Grove's idea of the fingerprints becoming seeds (it rhymes with our woodcut seeds), and the About text and links below. **What doesn't:** the three palettes and typefaces, which predate the decisions on ink, paper, sunlight and Polyamine (see [colour.md](colour.md), [type.md](type.md)).
 
 ### Channel About text (from round 4)
 
@@ -50,7 +50,7 @@ Uriel's own warnings: option 1 sits close to Emergence Magazine without photos; 
 >
 > Join our newsletter to never miss an episode of the Seeds of Renaissance Podcast and to stay up to date on what's happening at SoR and in the broader community of seekers ushering in what's to come.
 
-776 characters of YouTube's 1,000. Handle `@SeedsOfRenaissance`; channel line "Over the Mountains podcast, gatherings, magazine"; tagline "Vision and movement for civilisational renewal".
+776 characters of YouTube's 1,000. Handle `@SeedsOfRenaissance`; channel line "Podcast, gatherings, magazine"; tagline "Vision and movement for civilisational renewal".
 
 **Links:** Instagram @seedsofrenaissance · Facebook facebook.com/seeds0frenaissance · X @SeedRenaissance · LinkedIn linkedin.com/company/seedsofrenaissance · Linktree linktr.ee/seedsofrenaissance · Website secondrenaissance.net · YouTube and Substack links still to fill. YouTube shows up to 14 links with custom titles.
 
@@ -87,7 +87,7 @@ For a fresh Claude session (or a person) picking up the YouTube work. Current st
 
 **Where to work**
 
-- Thumbnails and the Over the Mountains guest cover (`.thumb--guest`): [examples/youtube/index.html](examples/youtube/index.html)
+- Thumbnails and the podcast guest cover (`.thumb--guest`): [examples/youtube/index.html](examples/youtube/index.html)
 - Channel art (banner, avatar, lower third, watermark, About): [examples/youtube/channel.html](examples/youtube/channel.html)
 - Styles: `system/components.src.css`, in the "Thumbnails" and "YouTube channel art" blocks. Rebuild with `python3 system/build-css.py`; never edit `components.css`. Tokens: `--thumb-*` and `--yt-*` in `system/tokens.css`.
 - Composition reference for the podcast cover: `archive/otm-thumbnail-rough.html`. Keep its idea (dark mountain backdrop, guest portrait greyscale on the right, title and guest name on the left), not its styling. Placeholder images: `system/img/otm-*.jpg`.
@@ -95,7 +95,7 @@ For a fresh Claude session (or a person) picking up the YouTube work. Current st
 **Start from these known problems**
 
 1. At 168px (the "up next" size) the duration badge covers the end of the gathering title.
-2. The podcast "Over the Mountains" label is about 5px at 168px; the guest name only just reads. Decide which text must be readable at 168px and size it (roughly 40px+ on the 1280×720 artboard), or drop it.
+2. The "Podcast" label is about 5px at 168px; the guest name only just reads. Decide which text must be readable at 168px and size it (roughly 40px+ on the 1280×720 artboard), or drop it.
 3. Use real episode titles and guests where Rufus provides them; follow the title formulas in voice.md.
 4. Review the channel art with Rufus: banner, avatar choice (swallow on white is the current recommendation; the logo fails under 48px), lower third.
 

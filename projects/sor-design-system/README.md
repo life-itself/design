@@ -72,6 +72,6 @@ Building a paper? [How we build a paper →](publishing.md): design, paper anato
 
 ## Open questions
 
-**Sub-brands** is the big one: are *Over the Mountains*, *Mythos*, the papers, courses and *Gardens of Change* sub-brands with their own lockups and accents? Also: font licences, the logo's small version, photography (all placeholders), woodcut sourcing. [Details →](examples.md#open-across-all-of-them) · Tracking: beads `design-34t`.
+**Sub-brands** is the big one: are *Mythos*, the papers, courses and *Gardens of Change* sub-brands with their own lockups and accents? Also: font licences, the logo's small version, photography (all placeholders), woodcut sourcing. [Details →](examples.md#open-across-all-of-them) · Tracking: beads `design-34t`.
 
 Maintaining this site (publishing, build scripts, where things came from): [MAINTAINING.md](MAINTAINING.md).

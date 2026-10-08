@@ -59,7 +59,7 @@ The inside of a paper at actual size, from the Wisdom paper, to decide how paper
 
 ## Open across all of them
 
-- **Sub-brands (major).** Are *Over the Mountains*, *Mythos*, the papers, courses, *Gardens of Change* and *The Greenhouse* sub-brands with their own lockups and accents, or Seeds of Renaissance with a label? This shapes podcast, social, print and email. Beads `.11`.
+- **Sub-brands (major).** Are *Mythos*, the papers, courses, *Gardens of Change* and *The Greenhouse* sub-brands with their own lockups and accents, or Seeds of Renaissance with a label? This shapes podcast, social, print and email. Beads `.11`.
 - **Font licences.** Polyamine and Restora must be bought before anything public, PDFs and Canva included. Beads `.2`.
 - **Logo.** A small version for avatars and favicons; possibly a redrawn swallow. See [logo.md](logo.md).
 - **Photography.** Every photo so far is a placeholder. See [photography.md](photography.md).

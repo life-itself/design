@@ -2,7 +2,7 @@
 
 How Seeds of Renaissance sounds, with the key lines to reuse and examples to copy. Part of the [SoR design system](README.md). The substance (who we are, why, for whom) lives in [brand.md](brand.md); this page is the applied version: what to actually write.
 
-**Status: draft for review (2026-10-05).** Lines marked *decided* come from brand.md. Everything else is a proposal.
+**Status: draft for review (2026-10-05).** Lines marked *decided* come from brand.md or a later decision. Everything else is a proposal.
 
 ## The voice in one line
 
@@ -19,11 +19,29 @@ The feel is the same as the visual system's: **grounded hope**. Not doom, not na
 | Dedication | For all the living beings whose heart burns to see a new world emerge. | decided (manifesto) |
 | Short line | Life as an art. | decided (manifesto) |
 | What we are, one sentence | A movement of people making sense of this moment and practising what comes next, together. | proposed (from the home page) |
-| YouTube channel line | Ideas and practices for civilisational rebirth. | decided (brand.md), check against tagline |
-| Podcast intro | Seeds of Renaissance presents *Over the Mountains*: conversations for a civilisational renewal. | proposed (brand.md has "a conversation for a civilisational rebirth") |
+| Media house line (banner, channel line) | Exploring crisis and renewal in this time between worlds. | proposed: [the media house line](#the-media-house-line) |
+| Podcast intro | This is Seeds of Renaissance, a conversation exploring crisis and renewal in this time between worlds. | proposed: [the media house line](#the-media-house-line) |
+| Media House, one line | Language for what you already sense. | proposed (Rufus, 2026-10-08; home page) |
+| Gardens of Change, one line | Find the others who feel the same: monthly calls, courses and local gardens, where we explore and practise what comes next together. | proposed (Rufus, 2026-10-08; home page). Not "company for the journey": the point is finding the others who already feel this, not joining our journey. |
 | To a friend | People who feel the world is falling apart and are tired of the old ways, and instead of doom-scrolling, are figuring out and practising what comes next. | adapted from brand.md |
 
-**Pick one word: renewal or rebirth.** The tagline says *renewal*; the YouTube and podcast lines say *rebirth*. Suggest *renewal* everywhere public, keeping *rebirth* and *renaissance* for poetic copy.
+**Renewal or rebirth: by register** (decided 2026-10-08). *Renewal* is the intellectual word and the default: the tagline, the site's plain copy, papers and essays, YouTube and the podcast, which reach a wider and more intellectual audience. *Rebirth* is the poetic word: the magazine, the manifesto's lyrical passages, the experiences and other poetic sections. *Renaissance* belongs to the name and to poetic copy.
+
+## The media house line
+
+The line for the podcast, the YouTube banner and channel line, and the About text. It is not the tagline: the tagline speaks for the movement, this line for setting out, exploring, with **crisis** named alongside **renewal**. It must be on-brand but also powerful, accessible and resonant. Reasoning and the options considered: [voice-notes.md](voice-notes.md).
+
+**Leading line** (2026-10-08, to confirm with the team): **Exploring crisis and renewal in this time between worlds.** The options considered and why: [voice-notes.md](voice-notes.md).
+
+**The ladder.** Write the description first and cut down. The description spells out what *between worlds* means, so the short rungs can stay poetic.
+
+| Rung | Text (with D) |
+|---|---|
+| Description, 2–3 sentences | Seeds of Renaissance is a conversation exploring crisis and renewal in this time between worlds: why our civilisation is coming apart, and what might emerge in its place. We talk with thinkers, artists and practitioners about making sense of this moment and practising what comes next. |
+| Spoken intro | This is Seeds of Renaissance, a conversation exploring crisis and renewal in this time between worlds. |
+| Banner and channel line | Exploring crisis and renewal in this time between worlds. |
+
+Keep *civilisational* (the adjective) for the tagline and papers; on short lines *worlds*, or the noun (*our civilisation*), carries the scale more lightly.
 
 ### At every length
 
@@ -106,9 +124,9 @@ The titles below are illustrative, not real episodes.
 
 **Description opener** (first two lines show in search):
 
-> *[Guest] joins Rufus Pollock on Over the Mountains to talk about [idea in plain words]. [One line on why it matters now.]*
+> *[Guest] joins Rufus Pollock on the Seeds of Renaissance podcast to talk about [idea in plain words]. [One line on why it matters now.]*
 >
-> *Over the Mountains is a podcast from Seeds of Renaissance: vision and movement for civilisational renewal.*
+> *Seeds of Renaissance: vision and movement for civilisational renewal.*
 
 ## Words
 
@@ -118,7 +136,6 @@ The titles below are illustrative, not real episodes.
 
 ## Open
 
-- Renewal or rebirth as the public word (see above).
-- Is the YouTube channel line the tagline, or its own line?
+- Confirm the media house line: D is leading (see [the media house line](#the-media-house-line)).
 - "Seed-bearers" as the member noun?
-- Sylvie's station: name and how its voice differs from *Over the Mountains*.
+- Rufus–Sylvie conversations as a podcast format: how their voice differs from the interviews.

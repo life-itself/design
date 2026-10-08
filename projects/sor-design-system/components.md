@@ -126,7 +126,7 @@ When: the page's one deep section: podcast, essays, art. Hover or focus a row to
   <span class="label">Selected work</span>
   <div class="selected">
     <ul>
-      <li aria-current="true" tabindex="0" data-img="…" data-alt="…" data-cap="…"><span class="label">Podcast</span><b>Over the Mountains</b><span class="by">…</span></li>
+      <li aria-current="true" tabindex="0" data-img="…" data-alt="…" data-cap="…"><span class="label">Podcast</span><b>Seeds of Renaissance</b><span class="by">…</span></li>
       …
     </ul>
     <figure class="picture"><img src="…" alt="…"><figcaption><span class="fig-no">Fig. 2</span><span class="caption">…</span></figcaption></figure>

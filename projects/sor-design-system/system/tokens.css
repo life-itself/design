@@ -97,7 +97,7 @@
   --thumb-tear: 34px;        /* torn edge depth at artboard scale */
 }
 
-/* ── Podcast guest thumbnail (Over the Mountains episode cover) ───
+/* ── Podcast guest thumbnail (podcast episode cover) ───
    Sizes px at 1280×720, as the --thumb-* block above. Labels that must be read at feed
    size (×0.28 at 360px, ×0.13 at 168px) are 40px or more; smaller labels are decoration. */
 :root {
