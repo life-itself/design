@@ -45,6 +45,8 @@ Two directions to compare, both built from the design system with real copy wher
 - **[A, conventional](a-conventional.html):** the design-system home page, reordered to this brief. A photo hero (a stand-in for a dawn video) with the newsletter, the manifesto statement plus what we do (Media House and Gardens of Change), the Leap collage as a split with the calls, then courses, the podcast and the close.
 - **[B, from the Experiences](b-experiential.html):** Experiences frame 1 (the arrival line with the seeds settling on its letters) with the newsletter under it; frame 2 (Dawn) on night, brightening once; then the Leap, the Book (as Courses) and the Flight close, each still.
 
+**Live (shareable):** [mockup B](https://sor-website-drafts-rufuspollock.flowershow.me/home/b-experiential.html) · [mockup A](https://sor-website-drafts-rufuspollock.flowershow.me/home/a-conventional.html) · [hero video options](https://sor-website-drafts-rufuspollock.flowershow.me/home/video-candidates.html) (each clip plays behind the opening line, with our assessment; [video brief](video-brief.md)). Republish with `../publish.sh`.
+
 Placeholders: podcast episode titles, the close line in B ("The seeds are already in the soil"), and dates and prices copied from the system mockup.
 
 ## Step 0: review what we have
