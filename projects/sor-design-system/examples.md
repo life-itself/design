@@ -13,7 +13,7 @@ Whole pages and assets built only from the system: the test that the system is c
 | **YouTube** | Video thumbnails, channel banner, avatar, lower third, watermark | [youtube.md](youtube.md) | [below](#youtube) | 🚧 **First pass done**, polish in progress | `.5` `.6` |
 | **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
-| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **Papers approved**; Typst build in pdf-report-publishing; A3 poster later | `.22` `.28` |
+| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **v0.1 done**: the Wisdom paper; A3 poster later | `.22` `.28` |
 | **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | ✅ **v0.1 done**: signature, type, drawing style, charts with data | `.20` `.25` `.26` |
 | **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
 
@@ -58,7 +58,17 @@ Figures, frameworks and charts in the house style. How to make one: [diagrams.md
 
 ## Print
 
-The inside of a paper at actual size, from the Wisdom paper, to decide how papers look before the Typst build: [a paper, page by page](examples/print/index.html). A plain typographic front cover, the title page with the imprint at its foot, annotated contents, a body spread (figure as plate, pull quote, footnotes), a chapter opening (epigraph, summary box) and the back cover. The page sequence is in [print.md](print.md#anatomy-of-a-paper). Print it (A4, no margins) for a paper proof. Sizes are the `--print-*` tokens.
+Papers as one A4 PDF, read on screen. How to make one: [print.md](print.md).
+
+<div class="not-prose my-6 grid gap-4 grid-cols-2 sm:grid-cols-4">
+  <a href="examples/print/index.html#front"><img src="examples/print/img/wisdom-01-cover.jpg" alt="Front cover of Wisdom and Wanting What's Good" class="border border-stone-300"></a>
+  <a href="examples/print/index.html#front"><img src="examples/print/img/wisdom-05-contents.png" alt="Annotated contents" class="border border-stone-300"></a>
+  <a href="examples/print/index.html#text"><img src="examples/print/img/wisdom-12-chapter-opening.png" alt="A chapter opening" class="border border-stone-300"></a>
+  <a href="examples/print/index.html#text"><img src="examples/print/img/wisdom-08-body-figure.png" alt="A body page with a figure" class="border border-stone-300"></a>
+</div>
+
+- [Print examples](examples/print/index.html): the Wisdom paper page by page (covers, title page, imprint, contents, a chapter opening, body pages with a figure, quotes and a summary box), and a link to the whole PDF.
+- Built with Typst in `pdf-report-publishing` (`typst/build-paper.sh`), from the `--print-*` tokens.
 
 ## Open across all of them
 

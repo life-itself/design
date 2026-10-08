@@ -47,6 +47,14 @@ python3 system/build-specimens.py && python3 system/build-site.py && fl --yes si
 
 Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/`. Markdown pages are not rendered locally; open the HTML pages and specimens directly.
 
+## Changing the look
+
+Work out a change in HTML mockups first, then carry it into the format's own build. HTML is quick to iterate and review, and uses `system/tokens.css` directly; the builds (Typst for papers, `build.py` for diagrams) then follow the settled values.
+
+- Make the mockup as a loose page, show it, decide. Then update the tokens and the guide, rebuild the real thing, and refresh its examples.
+- When it's settled, move the mockup to `archive/<format>-<what>-<yyyy-mm>.html` as the record, fix its `../` paths and list it in `archive/README.md`. Examples show only finished work.
+- Starting points: papers, [archive/print-mockups-2026-10.html](archive/print-mockups-2026-10.html) (A4 pages at 1:1, prints as a proof); diagrams, `archive/diagrams-*-2026-10.html`.
+
 ## Where things came from
 
 - The former `life-itself/sor-brand` repo, merged here 2026-10-05 with history and since folded in: [decisions.md](decisions.md) (design-system plan and decision log), [logo-notes.md](logo-notes.md), `moodboard/` (references and images, not published), `archive/sor-brand-mockups/` (the mockups the system was extracted from: Direction E v7 and the four-page v2) and `archive/sor-brand-STATUS.md`.

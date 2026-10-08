@@ -222,6 +222,36 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 
 **Decision:** the **Seeds of Renaissance series**. Numbering continues from the Second Renaissance series, so *Wisdom and Wanting What's Good* is No. 6. Launch copy may say "formerly the Second Renaissance series" once; covers don't.
 
+## Working through: papers (2026-10-07 to 08)
+
+How the rules in [print.md](print.md) were reached. The approved mockups are kept in [archive/print-mockups-2026-10.html](archive/print-mockups-2026-10.html); the finished pages are in [examples/print/](examples/print/index.html).
+
+**How papers are built (2026-10-07).** An HTML and CSS paged-media build was planned, then dropped for **Typst** in `pdf-report-publishing`: it handles footnotes, running heads, page breaks and long documents more reliably, and that pipeline already built the 2R essay. print.md stays the spec; the Typst `sor` style reads `system/tokens.css`.
+
+**Mockups and review (design-34t.22, 2026-10-07 to 08).** HTML pages at A4 from the Wisdom paper set the `--print-*` tokens. In review:
+
+- **Basic typographic covers kept** as the default for any paper; bespoke art covers are designed separately.
+- **Imprint merged into the title page, then split back out.** Merged, the title page looked crowded; the classic order (title page, imprint on its back, small print at the foot, the rest empty) is right, and the emptiness is the convention.
+- **Polyamine moved out of the text.** All caps tires at length, so a long section head in Polyamine is hard to read. It stays for the cover, title page, contents and chapter titles, where titles are big and short; section heads went to Restora 19pt in sentence case, matching type.md (heads inside the text are Restora). Sub-sections were Bricolage 11pt semibold and read as bold text, so they became Restora 14pt.
+- **Figures sit on the page**, not on a white mount, which looked odd on the off-white mockup page.
+- **Red** kept for footnote marks and links only; the marks were found a little distracting but interesting, and kept.
+
+**One PDF, for reading on screen (2026-10-08).** Few people print papers now. A tinted page looks dingy on the grey of a PDF viewer and prints at home as a wash inside a white border, so pages are white and unfilled; the off-white `--paper` is the screen's stand-in for paper, and on paper the stock does that job. **A4 only**: on screen page size doesn't matter, and a US reader who prints chooses "fit to page" and loses about 6%; a Letter edition would double every check. Revisit if a US partner distributes a paper. The planned check of the red and pale yellow on paper was dropped: papers use red only for marks and links and no yellow.
+
+**Settled while building the Wisdom paper (2026-10-08).** The mockups didn't settle these, or settled them for print and we changed our minds for the screen:
+
+- Paragraphs spaced, not indented: indents are the book convention; spacing suits a sans body on screen.
+- No recto rule and no blank pages, and one running-head layout on every page, not mirrored: on screen there are no spreads and no outer corner.
+- Figures cropped to their drawing at build time, so the margin a figure carries for sharing alone doesn't push it in from the text; no rules above or below; the figure's own signature, so the plate adds none.
+- Footnotes stay 8/11pt Bricolage: 7.5pt was tried and too small; Apfel, a label face, doesn't read at length. Numbered from 1 in each paper, whatever the source's numbering.
+- The summary box drawn fine (0.4pt muted, not 0.6pt ink), so it reads as an aside, not a warning.
+- Long quotations drop to the epigraph size past about 60 words.
+- Bricolage has no italic, and the mockups showed the browser's faked slant; papers use the same thing made properly, the upright slanted 11°.
+- The contents page carries no running head (the mockup showed one).
+- The version goes in the imprint and the back-cover colophon.
+
+**Covers.** The Wisdom cover (2026-10-08) carries too much: series line, title, subtitle, part line, art, blurb, credit and mark all compete. Its 16:9 social image (art, title, mark) is the better model, hence "keep it simple" in print.md.
+
 ## Open questions
 
 1. Is the brand's balance more night or more dawn, and how much darkness does it hold?
@@ -255,6 +285,8 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 | 2026-10-07 | **Diagram signature: mark + name and URL in Apfel Grotezk**, after mockups against the full lockup and text only. The mark on dark grounds (white disc or inverted) is a general logo question, not settled here. Diagram type is not Polyamine; a tryout of diagram faces follows |
 | 2026-10-08 | **Diagram type and style.** Apfel only, no bold (title Regular, set apart by size), after the FT and the Economist. Drawing style "panels": ink lines, solid arrowheads, no outlines, groups as panels in a pale red tint that also marks the key area; the one allowed red ground. Hand-drawn wobble rejected; grey panels tried and rejected as too faint at 400px |
 | 2026-10-08 | **Wisdom cover:** series line "White Paper No. N"; wordmark "of" in Fraunces italic (exception to four faces); one-colour (ink) mark allowed small at the foot of covers; credit one line, one size; covers should carry less. Reasoning under Q3 above |
+| 2026-10-07 | **Papers are built with Typst** in pdf-report-publishing, not HTML paged media; print.md is the spec, `system/tokens.css` the values |
+| 2026-10-08 | **Papers approved** (design-34t.22): typographic covers by default, imprint on the back of the title page, Polyamine only for cover, title page, contents and chapter titles, heads in Restora, figures bare on the page. One A4 PDF for screen, white pages. Reasoning above |
 
 ## Next step
 
