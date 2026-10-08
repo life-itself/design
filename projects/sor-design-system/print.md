@@ -56,7 +56,7 @@ Decided 2026-10-08. Each paper ships as **one PDF**, made for reading on screen,
 
 Decided 2026-10-08, building the Wisdom paper in Typst. The approved mockups didn't settle these.
 
-- **Figures sit bare on the page.** No rules above or below the plate: the figure, then its number and caption.
+- **Figures sit bare on the page, aligned with the text.** No rules above or below. A figure is the width of the text column and starts at its left edge, so the title drawn into the figure lines up with the prose; then its number and caption.
 - **The summary box is drawn fine**: a 0.4pt rule in `--muted`, not 0.6pt ink, so it reads as an aside and not a warning.
 - **Long quotations drop a size.** A displayed quotation is Restora italic at 15pt (`--print-quote`); past about 60 words it drops to the epigraph size, 11.5pt.
 - **Bricolage gets an oblique for emphasis.** The body face has no italic, but papers use emphasis (titles of works, a stressed word), and the mockups showed the browser's slanted Bricolage. Papers use the same thing, made properly: the upright slanted 11°.
