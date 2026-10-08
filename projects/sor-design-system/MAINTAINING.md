@@ -14,6 +14,7 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 - **[guide.html](guide.html)** holds the visuals: the whole system rendered with the real CSS, one chapter per topic. It is the only place the visuals are edited.
 - **`specimens/<chapter>.html`** are cut from guide.html by `system/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. A group inside a chapter with an id like `<div id="examples-web">` also gets its own specimen (used on examples.md and youtube.md). Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
 - **`custom.css`** styles the specimen frames on Flowershow. Flowershow pages never load `components.css` (its generic class names would clash with the site theme); the system's CSS only runs inside the specimen frames, the guide and the examples.
+- **Navbar** (`config.json`): **System** holds the building blocks (feel, colour, type, logo…), **Guides** how to make each kind of thing (website, print, diagrams…), **Examples** links straight to the example pages to copy.
 - **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, youtube; next slides, print), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
 
 ## Specimen heights

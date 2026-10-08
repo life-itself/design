@@ -63,15 +63,15 @@
         ]
       },
       {
-        "name": "Examples",
+        "name": "Guides",
         "links": [
-          {
-            "name": "All examples and status",
-            "href": "/examples"
-          },
           {
             "name": "Website",
             "href": "/website"
+          },
+          {
+            "name": "Social 🚧",
+            "href": "/social"
           },
           {
             "name": "YouTube 🚧",
@@ -86,8 +86,41 @@
             "href": "/slides"
           },
           {
-            "name": "Diagrams 🚧",
+            "name": "Print",
+            "href": "/print"
+          },
+          {
+            "name": "Diagrams",
             "href": "/diagrams"
+          },
+          {
+            "name": "Email 🚧",
+            "href": "/email"
+          }
+        ]
+      },
+      {
+        "name": "Examples",
+        "links": [
+          {
+            "name": "All examples and status",
+            "href": "/examples"
+          },
+          {
+            "name": "Website pages",
+            "href": "/examples#website"
+          },
+          {
+            "name": "YouTube",
+            "href": "/examples/youtube/index.html"
+          },
+          {
+            "name": "Print: a paper",
+            "href": "/examples/print/index.html"
+          },
+          {
+            "name": "Diagrams",
+            "href": "/examples/diagrams/index.html"
           }
         ]
       }
