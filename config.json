@@ -1,9 +1,60 @@
 {
   "title": "Life Itself Design",
-  "theme": "lessflowery",
   "showSidebar": true,
   "showEditLink": true,
   "nav": {
-    "title": "Life Itself Design"
+    "title": "Life Itself Design",
+    "links": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Changelog",
+        "href": "/changelog"
+      },
+      {
+        "name": "Seeds of Renaissance",
+        "links": [
+          {
+            "name": "Design system",
+            "href": "https://sor-design-system-rufuspollock.flowershow.me"
+          },
+          {
+            "name": "Landing page (Experiences)",
+            "href": "https://sor-experiences-rufuspollock.flowershow.me"
+          },
+          {
+            "name": "Website drafts",
+            "href": "https://sor-website-drafts-rufuspollock.flowershow.me"
+          }
+        ]
+      },
+      {
+        "name": "Projects",
+        "links": [
+          {
+            "name": "SoR design system",
+            "href": "/projects/sor-design-system"
+          },
+          {
+            "name": "SoR website",
+            "href": "/projects/sor-website"
+          },
+          {
+            "name": "SoR experiences",
+            "href": "/projects/sor-experiences-2026"
+          },
+          {
+            "name": "Life Itself website (2025)",
+            "href": "/projects/2025-lifeitself-website"
+          }
+        ]
+      },
+      {
+        "name": "Design system how-to",
+        "href": "/docs/design-system-howto"
+      }
+    ]
   }
 }
