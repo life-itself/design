@@ -2,11 +2,11 @@
 
 Papers and essays as printed or PDF documents, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.22` (papers, done), `design-34t.28` (poster).
 
-**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`. **The exemplar** is the Wisdom paper as built in Typst: [examples/print/wisdom.pdf](examples/print/wisdom.pdf) (2026-10-08; draft cover, Restora set in Fraunces until installed).
+**Approved 2026-10-08:** [a paper, page by page](examples/print/index.html) and the [anatomy](#anatomy-of-a-paper) below (`design-34t.22`). Sizes are the `--print-*` tokens in `system/tokens.css`. **The exemplar** is the Wisdom paper as built in Typst: [examples/print/wisdom.pdf](examples/print/wisdom.pdf) (2026-10-08).
 
 ## What we need
 
-1. **A paper as PDF** (first): A4 and US Letter. Cover page, contents, running heads, page numbers, headings, footnotes, figures captioned as plates, pull quotes, references, a colophon.
+1. **A paper as PDF** (first): A4 only (decided 2026-10-08, [below](#one-pdf-for-reading-on-screen)). Cover page, contents, running heads, page numbers, headings, footnotes, figures captioned as plates, pull quotes, references, a colophon.
 2. **An A3 event poster**.
 3. Later: a magazine page or spread, a printed flyer.
 
@@ -48,8 +48,22 @@ Decided 2026-10-08. Each paper ships as **one PDF**, made for reading on screen,
 
 - **White pages, no fill.** A tinted page looks dingy on the grey of a PDF viewer, and at home it prints as a full-page wash inside a white border. The off-white `--paper` is the screen's stand-in for paper; on paper, the stock does that job.
 - **Links live and red**, footnotes linked to their notes, the contents linked to the sections, and PDF bookmarks for chapters.
+- **A4 only.** Most readers read on screen, where page size doesn't matter, and a reader in the US who prints it chooses "fit to page" and loses about 6% of the size. A Letter edition would double every check for very little. Revisit if a US partner distributes the paper.
 - **Covers inside the same file**: the front cover is page one, the night back cover the last page.
 - **If we ever print a run**, use the same file on a natural or cream uncoated stock (e.g. Munken Premium Cream) for the warmth, with bleed added for the covers.
+
+## Settled while building the first paper
+
+Decided 2026-10-08, building the Wisdom paper in Typst. The approved mockups didn't settle these.
+
+- **Figures sit bare on the page.** No rules above or below the plate: the figure, then its number and caption.
+- **The summary box is drawn fine**: a 0.4pt rule in `--muted`, not 0.6pt ink, so it reads as an aside and not a warning.
+- **Long quotations drop a size.** A displayed quotation is Restora italic at 15pt (`--print-quote`); past about 60 words it drops to the epigraph size, 11.5pt.
+- **Bricolage gets an oblique for emphasis.** The body face has no italic, but papers use emphasis (titles of works, a stressed word), and the mockups showed the browser's slanted Bricolage. Papers use the same thing, made properly: the upright slanted 11°.
+- **Openings carry no running head**, including the contents page (the mockup showed one): only the folio, at the foot.
+- **Tables**: 8.5pt between hairlines, header row semibold, no fills.
+- **Footnotes are numbered from 1** in each paper, whatever the source document's numbering.
+- **Figures carry their own signature** in the image, so the plate doesn't add one.
 
 ## Covers and credits
 
