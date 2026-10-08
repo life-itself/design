@@ -1,6 +1,6 @@
 # Seeds of Renaissance Design System
 
-How Seeds of Renaissance looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** Every photograph shown is a mood board placeholder, not cleared for public use.
+How Seeds of Renaissance looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** Live at https://sor-design-system-rufuspollock.flowershow.me. Every photograph shown is a mood board placeholder, not cleared for public use.
 
 <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
   <a href="guide.html" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">See it</div><div class="mt-2 text-xl font-semibold text-stone-900">Read the whole system</div><p class="mt-2 text-sm text-stone-600">Every chapter rendered on one page: feel, colour, type, graphics, components, examples.</p></a>

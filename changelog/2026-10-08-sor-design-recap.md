@@ -4,13 +4,14 @@ title: Two weeks of Seeds of Renaissance design (28 Sep – 8 Oct)
 promote: false
 ---
 
-In two weeks Seeds of Renaissance went from a mood board to a working brand: a published design system, an animated landing page, draft home pages for the real site, and house styles for papers, diagrams and YouTube. Everything below is live and can be clicked through.
+In two weeks Seeds of Renaissance went from a mood board to a working brand: a published design system, an animated Experiences scroll, a first live landing page for the real site, and house styles for papers, diagrams and YouTube. Everything below is live and can be clicked through.
 
 **Where to look**
 
 - [Design system](https://sor-design-system-rufuspollock.flowershow.me): the rules, tokens, woodcuts and worked examples. Start with [the visual guide](https://sor-design-system-rufuspollock.flowershow.me/guide.html).
-- [Landing page (Experiences)](https://sor-experiences-rufuspollock.flowershow.me): the animated scroll from the seeds through dawn and the leap.
-- [Website drafts](https://sor-website-drafts-rufuspollock.flowershow.me): home page mockups and hero video options for the real site.
+- [SoR website](https://sor-website-rufuspollock.flowershow.me): the real site, with the new landing page.
+- [Experiences](https://sor-experiences-rufuspollock.flowershow.me): the animated scroll from the seeds through dawn and the leap.
+- [Website drafts](https://sor-website-drafts-rufuspollock.flowershow.me): home page mockups and hero video options.
 
 ## A brand with a feel
 
@@ -18,13 +19,13 @@ We started from a brief, Sylvie's mood boards and a review of reference sites, t
 
 ![The cover of the design system guide](images/2026-10-05-sor-design-system.jpg)
 
+## The Experiences scroll
+
+The [Experiences scroll](https://sor-experiences-rufuspollock.flowershow.me) is published: a scroll that opens on the seeds arriving, dawns, and tears open into the Leap, with the manifesto and "join" as its last beats. Its colours and woodcuts now come straight from the design system.
+
 ## The landing page
 
-The [animated landing page](https://sor-experiences-rufuspollock.flowershow.me) is published: a scroll that opens on the seeds arriving, dawns, and tears open into the Leap, with the manifesto and "join" as its last beats. Its colours and woodcuts now come straight from the design system.
-
-## Home page for the real site
-
-A new website project takes the system into real pages with real copy. Two home page mockups: [B, built from the Experiences](https://sor-website-drafts-rufuspollock.flowershow.me/home/b-experiential.html) (the favoured direction) and [A, more conventional](https://sor-website-drafts-rufuspollock.flowershow.me/home/a-conventional.html) with an alpine dawn video behind the opening line. We also reviewed [24 free hero videos](https://sor-website-drafts-rufuspollock.flowershow.me/home/video-candidates.html) in five directions.
+The [SoR website](https://sor-website-rufuspollock.flowershow.me) is up with its first landing page, built from home page mockup B, plus the launch pages migrated from the old site. Before that we drafted two home page mockups: [B, built from the Experiences](https://sor-website-drafts-rufuspollock.flowershow.me/home/b-experiential.html) (the favoured direction) and [A, more conventional](https://sor-website-drafts-rufuspollock.flowershow.me/home/a-conventional.html) with an alpine dawn video behind the opening line. We also reviewed [24 free hero videos](https://sor-website-drafts-rufuspollock.flowershow.me/home/video-candidates.html) in five directions.
 
 ![Home page mockup B, from the Experiences](images/2026-10-08-recap-website-home-b.jpg)
 
@@ -44,4 +45,4 @@ A new website project takes the system into real pages with real copy. Two home 
 
 ## Next
 
-Real photographs in place of mood-board placeholders, the logo, slides, social and email guides, and taking home page B to a live page.
+Real photographs in place of mood-board placeholders, the logo, slides, social and email guides, and finishing the launch to-dos on the new site (domain, links, naming).
