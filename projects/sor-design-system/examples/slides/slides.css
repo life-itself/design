@@ -1,0 +1,143 @@
+/* ── Slides (fixed 1920×1080) ── DRAFT ─────────────────────────────
+   Iterating here first (design-34t.12). When agreed, the :root block moves to system/tokens.css
+   and the rest to system/components.src.css as a "Slides (fixed 1920×1080)" block.
+   Sizes are px on the 1920×1080 artboard; .slide-frame scales it whole to fit a column.
+   Reads from the back of a room: nothing under 28px on the artboard.
+   Grounds as on the site: white by default, paper and sunlight sometimes, at most one night slide per section.
+   Polyamine under ~10 words, Restora beyond. No red in type: the logo brings its own; a red seed may mark a quote. */
+:root {
+  --slide-w: 1920px;
+  --slide-h: 1080px;
+  --slide-pad: 128px;          /* outer margin for text */
+  --slide-inset: 72px;         /* corner inset for the logo and marks */
+  --slide-title: 168px;        /* title slide: the talk's title, two to six words */
+  --slide-section: 260px;      /* section slide: one or two words */
+  --slide-heading: 104px;      /* content slide heading */
+  --slide-item: 64px;          /* list and calendar item titles, Polyamine */
+  --slide-quote: 80px;         /* pull quote, Restora */
+  --slide-lead: 48px;          /* short paragraph, Bricolage light */
+  --slide-point: 44px;         /* bullet points */
+  --slide-byline: 48px;        /* speaker names */
+  --slide-label: 30px;         /* Apfel labels: eyebrow, section, date */
+  --slide-meta: 28px;          /* footer, slide number, figure number: the floor */
+  --slide-caption: 32px;       /* plate captions, italic */
+  --slide-logo: 132px;         /* logo on its white disc */
+  --slide-tear: 48px;          /* torn edge depth at artboard scale */
+}
+
+.slide, .slide *, .slide *::before, .slide *::after { box-sizing: border-box }
+.slide {
+  --tear-height: var(--slide-tear);
+  position: relative; isolation: isolate; overflow: hidden; flex: none;
+  width: var(--slide-w); height: var(--slide-h);
+  background: var(--white); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--slide-lead); line-height: 1.35; text-align: left;
+}
+.slide img { display: block; max-width: none }
+.slide p { margin: 0 }
+.slide--paper { background: var(--paper) }
+.slide--sun { background: var(--sunlight) }
+.slide--night { background: var(--night); color: var(--chalk) }
+.slide--night .woodcut { color: var(--chalk) }
+
+.slide__label { display: block; font-family: var(--font-label); font-size: var(--slide-label); font-weight: 700; letter-spacing: var(--track-label); text-transform: uppercase; line-height: 1.2; color: var(--muted) }
+.slide--night .slide__label, .slide--night .slide__foot { color: var(--night-muted) }
+.slide__title { font-family: var(--font-display); font-weight: 400; line-height: .98; letter-spacing: -.01em; margin: 0; text-wrap: balance }
+.slide__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+
+/* Foot: series on the left, slide number on the right. Every slide but title, image and closing. */
+.slide__foot { position: absolute; left: var(--slide-pad); right: var(--slide-pad); bottom: 60px; z-index: 3; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--font-label); font-size: var(--slide-meta); font-weight: 500; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums }
+
+/* Logo on its white disc */
+.slide__disc { display: grid; place-items: center; width: var(--slide-logo); height: var(--slide-logo); border-radius: 50%; background: var(--white); flex: none }
+.slide__disc img { width: 88%; height: 88%; mix-blend-mode: multiply }
+
+/* Torn edges at artboard scale. Horizontal: on top of a panel, in its colour. Vertical: the left edge of a photo, in the colour of the page. */
+.slide .tear { position: absolute; left: 0; right: 0; margin: 0; z-index: 2 }
+.slide .tear--v { right: auto; top: 0; left: calc(var(--slide-tear) - 8px); width: var(--slide-h); height: var(--slide-tear); transform-origin: 0 0; transform: rotate(90deg) }
+
+/* 1 · Title: paper column with the title, a photograph torn in on the right */
+.slide--title { display: grid; grid-template-columns: 60% 40%; background: var(--paper) }
+.slide--title .slide__text { position: relative; z-index: 2; padding: 112px 72px 80px var(--slide-pad); display: grid; grid-template-rows: auto 1fr auto; gap: 40px }
+.slide--title .slide__mid { align-self: center; display: grid; gap: 44px }
+.slide--title .slide__title { font-size: var(--slide-title) }
+.slide--title .slide__byline { font-size: var(--slide-byline); font-weight: 400 }
+.slide--title .slide__byline span { display: block; font-family: var(--font-poem); font-style: italic; font-weight: 300; color: var(--muted); margin-top: 8px; font-size: 40px }
+.slide--title .slide__brand { display: flex; align-items: center; gap: 28px }
+.slide--title .slide__brand .slide__disc { --slide-logo: 112px }
+.slide--title .slide__pic { position: relative; min-width: 0 }
+.slide--title .slide__pic .tear--v { background: var(--paper) }
+.slide--title .flock { position: absolute; z-index: 3; right: 64px; top: 72px; width: 300px; height: auto; color: var(--ink) }
+
+/* 2 · Section: one or two words, large, with a woodcut set beside them */
+.slide--section { display: grid; align-content: center; padding: 0 var(--slide-pad) }
+.slide--section .slide__label { margin-bottom: 40px }
+.slide--section .slide__title { font-size: var(--slide-section); line-height: .92; max-width: 11ch }
+.slide--section .slide__mark { position: absolute; right: 150px; top: 50%; width: 520px; height: 520px; transform: translateY(-50%); color: var(--ink) }
+.slide--section.slide--night .slide__mark { color: var(--chalk) }
+
+/* 3 · Content: label, heading, up to five points on hairlines */
+.slide--content { padding: 112px var(--slide-pad) 0; display: grid; grid-template-columns: 1fr 1.08fr; column-gap: 112px; align-content: start }
+.slide--content .slide__label { grid-column: 1 / -1; margin-bottom: 56px }
+.slide--content .slide__title { font-size: var(--slide-heading); align-self: start }
+.slide--content ul { list-style: none; margin: 0; padding: 0; font-size: var(--slide-point); font-weight: 300; line-height: 1.28 }
+.slide--content li { padding: 26px 0 28px; border-top: 2px solid var(--rule) }
+.slide--content li:last-child { border-bottom: 2px solid var(--rule) }
+.slide--content .slide__lead { font-size: var(--slide-lead); font-weight: 300; line-height: 1.4; max-width: 26ch }
+
+/* 4 · Quote: past ten words it's Restora; a red seed may mark it */
+.slide--quote { display: grid; grid-template-columns: 300px 1fr; column-gap: 72px; align-content: center; padding: 0 200px 60px var(--slide-pad) }
+.slide--quote .slide__mark { width: 300px; height: 300px; color: var(--red); align-self: start; transform: rotate(-14deg) }
+.slide--quote blockquote { margin: 0; display: grid; gap: 52px }
+.slide--quote blockquote p { font-family: var(--font-quote); font-size: var(--slide-quote); line-height: 1.16; font-weight: 400; text-wrap: pretty }
+
+/* 5 · Image: a full-bleed photograph, its caption on a torn white strip like a plate */
+.slide--image .slide__plate { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; background: var(--white); padding: 34px var(--slide-pad) 46px; display: flex; align-items: baseline; gap: 28px }
+.slide--image .slide__plate .tear { top: calc(2px - var(--slide-tear)); background: var(--white) }
+.slide--image .slide__plate p { font-size: var(--slide-caption); font-style: italic; color: var(--muted); line-height: 1.35 }
+.slide__fig { font-family: var(--font-label); font-style: normal; font-size: var(--slide-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted); white-space: nowrap }
+
+/* 6 · Image + text: a print laid on the page, slightly turned, beside a heading and short text */
+.slide--split { display: grid; grid-template-columns: 50% 1fr; column-gap: 112px; align-items: center; padding: 0 var(--slide-pad) 40px 120px }
+.slide--split figure { margin: 0; display: grid; gap: 26px }
+.slide--split .print { padding: 22px 22px 26px; transform: rotate(calc(-1 * var(--tilt))); box-shadow: 0 40px 70px -40px rgb(27 25 22 / .6) }
+.slide--split .print img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
+.slide--split figcaption { font-size: var(--slide-caption); font-style: italic; color: var(--muted); line-height: 1.35; padding-left: 8px }
+.slide--split figcaption .slide__fig { margin-right: 16px }
+.slide--split .slide__text { display: grid; gap: 40px; align-content: center }
+.slide--split .slide__title { font-size: var(--slide-heading) }
+.slide--split .slide__text p { font-size: 44px; font-weight: 300; line-height: 1.4 }
+
+/* 7a · Steps: a short numbered list, each with its pathway seed */
+.slide--steps { padding: 112px var(--slide-pad) 0 }
+.slide--steps .slide__label { margin-bottom: 40px }
+.slide--steps .slide__title { font-size: var(--slide-heading); margin-bottom: 88px }
+.slide--steps ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 80px }
+.slide--steps li { display: grid; gap: 22px; align-content: start; border-top: 2px solid var(--ink); padding-top: 36px }
+.slide--steps .n { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-display); font-size: 120px; line-height: .9 }
+.slide--steps .n svg { width: 120px; height: 120px; color: var(--ink) }
+.slide--steps b { font-family: var(--font-display); font-weight: 400; font-size: var(--slide-item); line-height: 1.05 }
+.slide--steps p { font-size: 38px; font-weight: 300; line-height: 1.35; color: var(--ink) }
+
+/* 7b · Calendar: dates down the left, hairline rows */
+.slide--calendar { padding: 112px var(--slide-pad) 0 }
+.slide--calendar .slide__label { margin-bottom: 40px }
+.slide--calendar .slide__title { font-size: var(--slide-heading); margin-bottom: 64px }
+.slide--calendar .rows { display: grid }
+.slide--calendar .row { display: grid; grid-template-columns: 360px 1fr; gap: 48px; padding: 30px 0 34px; border-top: 2px solid var(--rule); align-items: baseline }
+.slide--calendar .row:last-child { border-bottom: 2px solid var(--rule) }
+.slide--calendar .date { font-family: var(--font-label); font-weight: 700; font-size: 36px; letter-spacing: .06em; text-transform: uppercase; font-variant-numeric: tabular-nums }
+.slide--calendar b { display: block; font-family: var(--font-display); font-weight: 400; font-size: var(--slide-item); line-height: 1.1 }
+.slide--calendar small { display: block; margin-top: 10px; font-size: 36px; font-weight: 300; color: var(--muted) }
+
+/* 8 · Closing: the call to action, where to find us, the logo */
+.slide--closing { display: grid; grid-template-columns: 1fr auto; align-content: center; column-gap: 96px; padding: 0 var(--slide-pad) 40px }
+.slide--closing .slide__text { display: grid; gap: 48px; justify-items: start }
+.slide--closing .slide__title { font-size: 200px; line-height: .94 }
+.slide--closing .slide__text p { font-size: var(--slide-lead); font-weight: 300 }
+.slide--closing .links { display: flex; gap: 64px; font-family: var(--font-label); font-size: var(--slide-label); font-weight: 700; letter-spacing: .08em; padding-top: 32px; border-top: 2px solid var(--ink) }
+.slide--closing .slide__disc { --slide-logo: 300px; align-self: center }
+
+/* Preview frame: scales the fixed artboard to the frame's width */
+.slide-frame { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden }
+.slide-frame > .slide { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(tan(atan2(100cqi, var(--slide-w)))) }

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SoR Slide Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+html, body { margin: 0; background: #fbfaf6 }
+/* Page chrome only. The slides themselves are .slide components from slides.css. */
+.deck-page { max-width: 1320px; margin-inline: auto; display: grid; gap: 28px; padding-bottom: 72px }
+.deck-intro { display: grid; gap: 14px; max-width: 66ch; padding-top: clamp(32px, 5cqi, 64px) }
+.deck-intro h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.deck-intro p { font-size: var(--t-intro) }
+.deck-intro ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--muted); font-size: var(--t-small) }
+.deck-intro .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px }
+.deck-sec { display: block; margin-top: 24px; color: var(--muted) }
+.deck-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 14px }
+.deck-strip button { all: unset; cursor: pointer; display: grid; gap: 6px; min-width: 0 }
+.deck-strip button:focus-visible .slide-frame { outline: 2px solid var(--ink); outline-offset: 3px }
+.deck-strip .slide-frame { box-shadow: 0 0 0 1px var(--rule) }
+.deck-strip small { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+.deck-list { display: grid; gap: 44px }
+.deck-list figure { min-width: 0; gap: 12px }
+.deck-list .slide-frame { box-shadow: 0 0 0 1px var(--rule), var(--shadow-print) }
+.deck-list figcaption { font-style: normal; max-width: 90ch }
+.deck-list figcaption b { color: var(--ink); font-weight: 600 }
+.deck-list code { font-size: .92em }
+/* Presenter: one slide fitted to the window; arrows, space, Esc */
+.present { position: fixed; inset: 0; z-index: 100; background: #0d0c0a; display: grid; place-items: center }
+.present[hidden] { display: none }
+.present .slide-frame { width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9 }
+.present .hint { position: absolute; left: 0; right: 0; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); text-align: center; font-family: var(--font-label); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #8a847a; pointer-events: none }
+.present .close { position: absolute; right: 14px; top: calc(14px + env(safe-area-inset-top, 0px)); color: #ece7dc; border-color: #ece7dc; z-index: 2 }
+</style>
+</head>
+<body class="sor">
+<script src="../../system/graphics.js"></script>
+
+<main class="deck-page gutter">
+<header class="deck-intro">
+  <span class="label muted">Templates · Slides · Draft</span>
+  <h1>Slide deck</h1>
+  <p>A ten-slide talk built only from the Seeds of Renaissance system: every slide type, with real copy, on a fixed 1920 × 1080 artboard.</p>
+  <ul>
+    <li>White is the default ground; paper and sunlight sometimes; one night slide at most per section, here the section break for part two.</li>
+    <li>Polyamine for titles under about ten words, Restora for the long quote, Bricolage to read, Apfel Grotezk for labels. Nothing under 28px on the artboard, so it reads from the back of a room.</li>
+    <li>Red only as the logo's own red and one red seed beside the quote. Photos are placeholders.</li>
+  </ul>
+  <div class="actions"><button class="btn btn--solid" id="present-btn" type="button">Present</button><a class="btn" href="#deck">See every slide</a></div>
+</header>
+
+<span class="label deck-sec">The deck at a glance</span>
+<div class="deck-strip" id="strip"></div>
+
+<span class="label deck-sec" id="deck">Every slide</span>
+<div class="deck-list" id="slides">
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--title">
+    <div class="slide__text">
+      <span class="slide__label">Global Connection Call · 15 October 2026</span>
+      <div class="slide__mid">
+        <h2 class="slide__title">What is trying to be born?</h2>
+        <p class="slide__byline">Rufus Pollock and Sylvie Shiwei Barbier<span>Seeds of Renaissance</span></p>
+      </div>
+      <div class="slide__brand"><span class="slide__disc"><img src="../../system/img/logo.png" alt=""></span><span class="slide__label">Vision and movement for civilisational renewal</span></div>
+    </div>
+    <div class="slide__pic">
+      <img class="slide__photo" src="../../system/img/sylvie.jpg" alt="" style="object-position: 50% 50%">
+      <span class="tear tear--v"></span>
+      <svg class="flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+    </div>
+  </div></div>
+  <figcaption><b>1 · Title.</b> Paper column with the talk title in Polyamine, speakers below, the logo on its disc. A photograph torn in on the right, swallows over it. <code>.slide--title</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--sun">
+    <span class="slide__label">Part one</span>
+    <h2 class="slide__title">The moment</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 200 200" aria-hidden="true"><use href="#c-spiral"/></svg>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>2</span></div>
+  </div></div>
+  <figcaption><b>2 · Section.</b> A chapter break: one or two words of Polyamine on sunlight, with one woodcut. <code>.slide--section.slide--sun</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--content">
+    <span class="slide__label">The moment</span>
+    <h2 class="slide__title">One crisis, not many</h2>
+    <ul>
+      <li>Ecological, political, social and spiritual crises share one root.</li>
+      <li>An old civilisation is slowly dying. The new one is not yet born.</li>
+      <li>Meaning is thin, and no story is yet coherent enough to guide us.</li>
+      <li>As in every great turning, the crisis carries a seed.</li>
+    </ul>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>3</span></div>
+  </div></div>
+  <figcaption><b>3 · Content.</b> A heading and up to five short points on hairlines, Bricolage light at 44px. Swap the list for <code>.slide__lead</code> to hold a short paragraph instead. <code>.slide--content</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--quote slide--paper">
+    <svg class="slide__mark woodcut" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg>
+    <blockquote>
+      <p>Like doulas, we witness the last breath of a dying past and the first breath of a future being born.</p>
+      <span class="slide__label">From the manifesto</span>
+    </blockquote>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>4</span></div>
+  </div></div>
+  <figcaption><b>4 · Quote.</b> Past ten words, display text moves to Restora. A single red seed marks it: the one place red appears as a graphic. <code>.slide--quote.slide--paper</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--image">
+    <img class="slide__photo" src="../../system/img/fire.jpg" alt="A woman in white among rubble at dusk, a fire burning beside an open door">
+    <div class="slide__plate"><span class="tear"></span><span class="slide__fig">Fig. 1</span><p>A fire among the rubble of an old house, at dusk.</p></div>
+  </div></div>
+  <figcaption><b>5 · Image.</b> A full-bleed photograph; the caption sits on a torn white strip, numbered as a plate. No slide foot, so the picture has the room. <code>.slide--image</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--night">
+    <span class="slide__label">Part two</span>
+    <h2 class="slide__title">The practice</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>6</span></div>
+  </div></div>
+  <figcaption><b>6 · Section on night.</b> The same section slide on the night ground, with the swallow seal. One night slide per section at most; use it where the talk goes deep. <code>.slide--section.slide--night</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--split">
+    <figure>
+      <div class="print"><img src="../../system/img/meal.jpg" alt="Friends laughing around a long table in a garden"></div>
+      <figcaption><span class="slide__fig">Fig. 2</span>A shared meal in the garden, after a gathering.</figcaption>
+    </figure>
+    <div class="slide__text">
+      <span class="slide__label">The practice</span>
+      <h2 class="slide__title">Practising together</h2>
+      <p>We don’t have the answers. We’re working them out together: on calls, in small gardens, at supper tables.</p>
+    </div>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>7</span></div>
+  </div></div>
+  <figcaption><b>7 · Image and text.</b> A photograph laid on the page as a print, slightly turned, with its plate caption; heading and two lines beside it. <code>.slide--split</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--steps slide--paper">
+    <span class="slide__label">How to join</span>
+    <h2 class="slide__title">Three ways in</h2>
+    <ol>
+      <li><span class="n">1<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg></span><b>Come to a call</b><p>An hour online, once a month. No preparation.</p></li>
+      <li><span class="n">2<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg></span><b>Find your garden</b><p>A small group that meets between the calls.</p></li>
+      <li><span class="n">3<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg></span><b>Seed something</b><p>A reading circle, a supper or a garden where you live.</p></li>
+    </ol>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>8</span></div>
+  </div></div>
+  <figcaption><b>8 · Numbered list.</b> A short sequence, three or four steps, each with its pathway seed (Belong, Practise, Seed). <code>.slide--steps</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--calendar">
+    <span class="slide__label">Coming up</span>
+    <h2 class="slide__title">This autumn</h2>
+    <div class="rows">
+      <div class="row"><span class="date">15 Oct</span><span><b>Global Connection Call</b><small>Online · 19:30 UK / 20:30 CET · free</small></span></div>
+      <div class="row"><span class="date">7 – 14 Oct</span><span><b>Intro to Collective Action</b><small>Six short online sessions · €20, refunded if you attend all six</small></span></div>
+      <div class="row"><span class="date">Under way</span><span><b>Praxis Ecology</b><small>With Valérie Duvauchelle · six sessions over ten weeks · €250</small></span></div>
+    </div>
+    <div class="slide__foot"><span>What is trying to be born?</span><span>9</span></div>
+  </div></div>
+  <figcaption><b>9 · Calendar.</b> Dates down the left in Apfel, titles in Polyamine, details in Bricolage, on hairlines. Three or four rows. <code>.slide--calendar</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--closing slide--sun">
+    <div class="slide__text">
+      <span class="slide__label">Thank you</span>
+      <h2 class="slide__title">Come to a call</h2>
+      <p>An hour together, online, once a month. Open to all.</p>
+      <div class="links"><span>secondrenaissance.net</span><span>@SeedsOfRenaissance</span></div>
+    </div>
+    <span class="slide__disc"><img src="../../system/img/logo.png" alt="Seeds of Renaissance"></span>
+  </div></div>
+  <figcaption><b>10 · Closing.</b> One call to action in our words, where to find us, and the logo large on its disc. <code>.slide--closing.slide--sun</code></figcaption>
+</figure>
+
+</div>
+</main>
+
+<div class="present" id="present" hidden>
+  <button class="btn close" id="present-close" type="button">Close</button>
+  <div class="slide-frame" id="present-frame"></div>
+  <span class="hint">← → to move · Esc to close</span>
+</div>
+
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('#slides > figure > .slide-frame > .slide')];
+  const names = [...document.querySelectorAll('#slides > figure > figcaption b')].map(b => b.textContent.replace(/\.$/, ''));
+  const strip = document.getElementById('strip');
+  slides.forEach((s, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Present from slide ' + (i + 1));
+    const f = document.createElement('div');
+    f.className = 'slide-frame';
+    f.appendChild(s.cloneNode(true));
+    const label = document.createElement('small');
+    label.textContent = names[i];
+    b.append(f, label);
+    b.addEventListener('click', () => open(i));
+    strip.appendChild(b);
+  });
+
+  const pres = document.getElementById('present'), frame = document.getElementById('present-frame');
+  let at = 0;
+  const show = i => { at = (i + slides.length) % slides.length; frame.replaceChildren(slides[at].cloneNode(true)) };
+  function open(i) {
+    show(i); pres.hidden = false;
+    pres.requestFullscreen?.().catch(() => {});
+  }
+  function close() {
+    pres.hidden = true;
+    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+  }
+  document.getElementById('present-btn').addEventListener('click', () => open(0));
+  document.getElementById('present-close').addEventListener('click', close);
+  frame.addEventListener('click', () => show(at + 1));
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && !pres.hidden) pres.hidden = true });
+  document.addEventListener('keydown', e => {
+    if (pres.hidden) return;
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(at + 1) }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(at - 1) }
+    else if (e.key === 'Escape') close();
+  });
+})();
+</script>
+<script src="../../system/sor.js"></script>
+</body>
+</html>
