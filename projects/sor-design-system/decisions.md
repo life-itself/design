@@ -205,7 +205,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 
 **Decision: B for now.** The mark has no one-colour version yet: its red fingerprints fight a cover's own palette, and we don't recolour it. Revisit once there is one ([logo.md](logo.md#open), item 4).
 
-**Revisited 2026-10-08, building the Wisdom cover.** A one-colour mark in the cover navy works where the red one clashed. It reads as a printer's stamp. Now allowed small at the foot of a cover, alongside the series line. Also settled on that cover: the series line says "White Paper No. 6", because "No. 6" alone doesn't say what it counts; the wordmark's "of" is a lowercase Restora italic; the credit sits on one line at one size. Lesson: the cover ended up too busy, so covers should carry less (see [print.md](print.md#covers-and-credits)).
+**Revisited 2026-10-08, building the Wisdom cover.** A one-colour mark in the cover navy works where the red one clashed. It reads as a printer's stamp. Now allowed small at the foot of a cover, alongside the series line. Also settled on that cover: the series line says "White Paper No. 6", because "No. 6" alone doesn't say what it counts; the wordmark's "of" is a lowercase italic, in Fraunces (Restora was tried on the cover; Fraunces looks better in the wordmark); the credit sits on one line at one size. Lesson: the cover ended up too busy, so covers should carry less (see [print.md](print.md#covers-and-credits)).
 
 **Q4. How do diagrams stay attributed once cropped and reshared?**
 - A. Wordmark and URL as text only.
@@ -254,7 +254,7 @@ Prompted by the cover of *Wisdom and Wanting What's Good*, white paper No. 6. Ap
 | 2026-10-07 | **Publications: Seeds leads, Life Itself credited in text.** Papers are the Seeds of Renaissance series (Wisdom is No. 6). At most one logo per surface; cover series line in the wordmark until a one-colour mark exists. Diagrams carry a signature (mark, wordmark, URL). New page: diagrams.md. Reasoning above |
 | 2026-10-07 | **Diagram signature: mark + name and URL in Apfel Grotezk**, after mockups against the full lockup and text only. The mark on dark grounds (white disc or inverted) is a general logo question, not settled here. Diagram type is not Polyamine; a tryout of diagram faces follows |
 | 2026-10-08 | **Diagram type and style.** Apfel only, no bold (title Regular, set apart by size), after the FT and the Economist. Drawing style "panels": ink lines, solid arrowheads, no outlines, groups as panels in a pale red tint that also marks the key area; the one allowed red ground. Hand-drawn wobble rejected; grey panels tried and rejected as too faint at 400px |
-| 2026-10-08 | **Wisdom cover:** series line "White Paper No. N"; wordmark "of" in Restora italic; one-colour (ink) mark allowed small at the foot of covers; credit one line, one size; covers should carry less. Reasoning under Q3 above |
+| 2026-10-08 | **Wisdom cover:** series line "White Paper No. N"; wordmark "of" in Fraunces italic (exception to four faces); one-colour (ink) mark allowed small at the foot of covers; credit one line, one size; covers should carry less. Reasoning under Q3 above |
 
 ## Next step
 

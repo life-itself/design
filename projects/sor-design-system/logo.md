@@ -7,7 +7,7 @@ A black swallow in a radiating circle of red fingerprints: many hands around a b
 ## Terms
 
 - **Mark** (logomark, the stamp): the swallow in fingerprints.
-- **Wordmark** (logotype): "Seeds *of* Renaissance" lettered in Polyamine, with "of" as a lowercase italic in Restora. Polyamine has only capitals and no italic, so a Polyamine "of" (slanted or small) looks wrong (decided 2026-10-08 on the Wisdom cover). For display sizes only.
+- **Wordmark** (logotype): "Seeds *of* Renaissance" lettered in Polyamine, with "of" as a lowercase italic in Fraunces (light, 300). Polyamine has only capitals and no italic, so a Polyamine "of" (slanted or small) looks wrong (decided 2026-10-08 on the Wisdom cover). Fraunces rather than Restora: its italic "of" looks better in the wordmark (Rufus, 2026-10-08). Fraunces is otherwise only a fallback; this one word is the exception to "four faces only". For display sizes only.
 - **Lockup**: mark and wordmark fixed together, as in the site header.
 - Below display size, the name is not the wordmark: it is set as text in the system's small face, Apfel Grotezk ([diagrams.md](diagrams.md#the-signature)).
 
@@ -15,7 +15,7 @@ A black swallow in a radiating circle of red fingerprints: many hands around a b
 
 - File: `system/img/logo.png` (the current mark). `logo-inverted.png` is a scripted placeholder for dark grounds, used only by the dark diagram signature until the question below is settled (beads `.24`).
 - Set it on a **white disc** (`.logo-disc`) or a **white square tile**, so it sits on any ground, including night and sunlight.
-- In the header it sits beside the wordmark, set in Polyamine with "of" in Restora italic (the site CSS still slants a Polyamine "of"; to update, bead `rbook-8k3.34`):
+- In the header it sits beside the wordmark, set in Polyamine with "of" in Fraunces italic (the site CSS still slants a Polyamine "of"; to update, bead `rbook-8k3.34`):
 
 ```html
 <a class="wordmark" href="/"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
