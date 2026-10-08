@@ -38,6 +38,15 @@ A calm page that scrolls normally and follows the Experiences sequence, with a f
 
 Sources: Rufus and Sylvie's notes (October 2026); the Experiences home sequence ([../../sor-experiences-2026/experiences/00-home/brief.md](../../sor-experiences-2026/experiences/00-home/brief.md)); the existing design-system mockup ([../../sor-design-system/examples/web/home.html](../../sor-design-system/examples/web/home.html)).
 
+## Mockups
+
+Two directions to compare, both built from the design system with real copy where we have it:
+
+- **[A, conventional](a-conventional.html):** the design-system home page, reordered to this brief. A photo hero (a stand-in for a dawn video) with the newsletter, the manifesto statement plus what we do (Media House and Gardens of Change), the Leap collage as a split with the calls, then courses, the podcast and the close.
+- **[B, from the Experiences](b-experiential.html):** Experiences frame 1 (the arrival line with the seeds settling on its letters) with the newsletter under it; frame 2 (Dawn) on night, brightening once; then the Leap, the Book (as Courses) and the Flight close, each still.
+
+Placeholders: podcast episode titles, the close line in B ("The seeds are already in the soil"), and dates and prices copied from the system mockup.
+
 ## Step 0: review what we have
 
 Before building anything new, Rufus and Sylvie review the existing design-system home page together. It is close already: photo hero (currently featuring the Global Connection Call), "What we believe", "Take part", a night section of selected work, Mythos, "Coming up", an interlude and "Engage". Note what to keep, cut and reorder against the sequence below. Its hero currently leads with the call; under this brief it leads with the newsletter.

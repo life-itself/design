@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · Home (mockup A, conventional)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../sor-design-system/system/fonts.css">
+<link rel="stylesheet" href="../../sor-design-system/system/tokens.css">
+<link rel="stylesheet" href="../../sor-design-system/system/components.css">
+<style>
+  html, body { margin: 0; background: #fbfaf6 }
+  /* Mockup-only adjustments; move to the system if kept */
+  @media (min-width: 721px) { .hero-photo > img { aspect-ratio: 16 / 8.6 } }
+  .hero-photo > img { object-position: 50% 40% }
+  .hero-photo h1 { max-width: 22ch; font-size: clamp(32px, 4.4cqi, 68px) }
+  .signup { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px }
+  .signup .field { min-width: min(300px, 70vw); background: rgb(255 255 255 / .94) }
+  .hero-photo .note { font-size: 14px; opacity: .85 }
+  .arms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3cqi, 40px); margin-top: clamp(28px, 4cqi, 56px) }
+  .arms > div { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink) }
+  .arms h3 { font-family: var(--font-display); font-size: 30px; line-height: 1.1; margin: 0 }
+  .arms p { margin: 0 }
+  .hero-split h2 { font-family: var(--font-display); font-size: var(--t-hero); line-height: var(--lh-display); margin: 0 }
+  .next { font-size: 15px }
+  .hero-split figure.plain { margin: 0 }
+  .hero-split figure.plain img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
+  .section-head { display: grid; gap: 10px; max-width: 42ch; margin-bottom: clamp(20px, 3cqi, 36px) }
+  .section-head h2 { font-family: var(--font-display); font-size: clamp(34px, 4.4cqi, 60px); line-height: 1; margin: 0 }
+  .section-head p { margin: 0; font-size: var(--t-intro) }
+  .more { margin-top: 20px }
+  @media (max-width: 720px) { .arms { grid-template-columns: 1fr } }
+</style>
+</head>
+<body class="sor">
+<script src="../../sor-design-system/system/graphics.js"></script>
+
+<header class="site-header site-header--centred gutter">
+  <nav class="label"><a href="#">Gather</a><a href="#">Learn</a><a href="#">Listen</a></nav>
+  <a class="wordmark" href="#"><img src="../../sor-design-system/system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
+  <nav class="label"><a href="#">Manifesto</a><a href="#">Join</a></nav>
+</header>
+
+<!-- 1. Opening: the line, and the newsletter as the main action. Photo stands in for a dawn video. -->
+<section class="hero-photo">
+  <img src="../../sor-design-system/system/img/otm-dawn-cloud.jpg" alt="Dawn breaking over snow peaks above a sea of cloud">
+  <svg class="flock woodcut" viewBox="0 0 300 180" aria-hidden="true"><use href="#wsw" x="0" y="96" width="110" height="66" transform="rotate(-10 55 129)"/><use href="#wsw" x="128" y="40" width="80" height="48" transform="rotate(-4 168 64)"/><use href="#wsw" x="226" y="6" width="56" height="34" transform="rotate(6 254 23)"/></svg>
+  <div class="overlay">
+    <h1>For all those whose hearts burn for a new world to emerge</h1>
+    <p>The Greenhouse: one letter a month with new releases, gatherings and ways in.</p>
+    <form class="signup" onsubmit="return false"><input class="field" id="email-hero" type="email" placeholder="Your email" aria-label="Email"><button class="btn btn--solid" type="submit">Subscribe</button></form>
+  </div>
+  <span class="tear tear--overlay" style="background:var(--white)"></span>
+</section>
+
+<!-- 2. What this is: the manifesto statement, then what we do -->
+<section class="section gutter ground-white">
+  <span class="label">Who we are</span>
+  <div class="statement">
+    <div>
+      <p>Human civilization has always been a story of transformation, of old worlds dying and new ones being born. As in every great turning, crisis carries within it the seed of rebirth. We are living through such a moment. <span class="poem-strong">We are a movement called to bring forth a civilizational renaissance: a bridge between the dying past and the future unborn.</span> <a class="link" href="#">Read the manifesto</a></p>
+      <svg class="seed-row" viewBox="0 0 290 120" aria-hidden="true"><use href="#c-row"/></svg>
+    </div>
+    <figure><img src="../../sor-design-system/system/img/meal.jpg" alt="Friends laughing around a long table in a garden"><figcaption><span class="fig-no">Fig. 1</span>A shared meal in the garden, after a gathering.</figcaption></figure>
+  </div>
+  <div class="arms">
+    <div><span class="label muted">Media house</span><h3>Language for what you already sense</h3><p>A podcast, essays and papers, and a printed magazine of art and ideas.</p></div>
+    <div><span class="label muted">Gardens of Change</span><h3>Find the others who feel the same</h3><p>Monthly calls, courses and local gardens, where we explore and practise what comes next together.</p></div>
+  </div>
+</section>
+
+<!-- 3a. Join us: the Leap collage and the calls -->
+<section class="hero-split gutter ground-sun">
+  <div class="text">
+    <span class="label muted">Global Connection Call · monthly, online</span>
+    <h2>Come and join us</h2>
+    <p>An hour together for those who sense the old world is ending and want to help seed the new. Open to all, free.</p>
+    <p class="next"><b>Next call:</b> Thursday 15 October, 19:30 UK / 20:30 CET</p>
+    <div class="actions"><a class="btn btn--solid" href="#">Save a place</a><a class="btn" href="#">Other ways to join</a></div>
+  </div>
+  <figure class="plain"><img src="../../sor-design-system/system/img/walking.jpg" alt="Collage of people walking through cloud toward a torn opening onto a yellow field"></figure>
+</section>
+
+<!-- 3b. Courses -->
+<section class="section gutter ground-white">
+  <span class="label">Learn</span>
+  <div class="section-head">
+    <h2>Courses</h2>
+    <p>Sharing what we have learned on our journey over the past decades: practices you can take into your life, in small groups.</p>
+  </div>
+  <div class="calendar">
+    <div class="row"><span class="date">From 7 Oct</span><span><b>Intro to Collective Action</b><small>Six short online sessions · €20, refunded if you attend all six</small></span><a class="text-link" href="#">Register</a></div>
+    <div class="row"><span class="date">Under way</span><span><b>Praxis Ecology, with Valérie Duvauchelle</b><small>Six sessions over ten weeks · €250</small></span><a class="text-link" href="#">Next intake</a></div>
+  </div>
+  <p class="more"><a class="link" href="#">All courses and papers</a></p>
+</section>
+
+<!-- 3c. Podcast -->
+<section class="night gutter">
+  <span class="tear tear--top"></span>
+  <svg class="seal-corner woodcut" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+  <span class="label">Listen · the Seeds of Renaissance podcast</span>
+  <div class="selected">
+    <ul>
+      <li aria-current="true" tabindex="0" data-img="../../sor-design-system/system/img/mountain.jpg" data-alt="Snow peak under star trails" data-cap="Snow peak under star trails."><span class="label">Episode</span><b>Iain McGilchrist</b><span class="by">Episode title to come</span></li>
+      <li tabindex="0" data-img="../../sor-design-system/system/img/otm-valley.jpg" data-alt="A mountain valley with pines" data-cap="A mountain valley."><span class="label">Episode</span><b>Dougald Hine</b><span class="by">Episode title to come</span></li>
+      <li tabindex="0" data-img="../../sor-design-system/system/img/roots.jpg" data-alt="Roots" data-cap="Roots."><span class="label">Episode</span><b>Roberto Mangabeira Unger</b><span class="by">Episode title to come</span></li>
+      <li tabindex="0" data-img="../../sor-design-system/system/img/sylvie.jpg" data-alt="A woman in white standing in a ploughed field at dusk" data-cap="Sylvie in the field."><span class="label">Conversation</span><b>Rufus and Sylvie</b><span class="by">Episode title to come</span></li>
+    </ul>
+    <figure class="picture"><img src="../../sor-design-system/system/img/mountain.jpg" alt="Snow peak under star trails"><figcaption><span class="fig-no">Fig. 2</span><span class="caption">Snow peak under star trails.</span></figcaption></figure>
+  </div>
+  <p class="more"><a class="btn" href="#">All episodes</a></p>
+</section>
+<span class="tear tear--bottom" style="background:var(--night)"></span>
+
+<!-- 4. Close -->
+<section class="section gutter ground-white">
+  <span class="label">Stay close</span>
+  <div class="engage">
+    <div><h3>The Greenhouse</h3><p>Our newsletter, once a month: new releases, gatherings and ways in.</p><input class="field" id="email-foot" type="email" placeholder="Your email" aria-label="Email"><a class="btn btn--solid" href="#">Subscribe</a></div>
+    <div><h3>Come to a call</h3><p>Once a month, online, open to all. Then find your people in the gardens.</p><a class="btn" href="#">Save a place</a></div>
+    <div><h3>Support the work</h3><p>Become a patron of the movement and the artists it pays.</p><a class="btn" href="#">Become a patron</a></div>
+  </div>
+</section>
+
+<footer class="site-footer gutter">
+  <span class="tear"></span>
+  <div><span class="logo-disc"><img src="../../sor-design-system/system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilizational renewal, seeding what comes next.</p></div>
+  <div><span class="label">Gather</span><ul><li>Connection calls</li><li>Gardens of Change</li><li>Retreats</li></ul></div>
+  <div><span class="label">Learn</span><ul><li>Courses</li><li>White papers</li><li>Manifesto</li></ul></div>
+  <div><span class="label">Listen &amp; read</span><ul><li>Podcast</li><li>Magazine</li><li>The Greenhouse</li></ul></div>
+</footer>
+
+<script src="../../sor-design-system/system/sor.js"></script>
+</body>
+</html>

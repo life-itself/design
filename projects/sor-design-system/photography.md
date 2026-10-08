@@ -25,7 +25,7 @@ Real people outdoors, doing things together, beside engraving, printmaking and h
 
 - **Hero:** one full-bleed photograph, a soft dark scrim behind the text, a torn edge into the page. The default is `stones.jpg` (two women carrying stones by a lake).
 - **Plates:** inside a page, images are figures: `<figure><img …><figcaption><span class="fig-no">Fig. 2</span>Carrying stones by the lake.</figcaption></figure>`, numbered in order down the page. Heroes and pathway cards are not numbered.
-- **Prints:** a photo laid on the page sits on a white mount, slightly rotated (`.print`).
+- **No prints:** photos sit clean and flat, never on a white mount, rotated or shadowed like a postcard (decided 2026-10-08). `.print` is being retired from the examples.
 - Crops: 4:5 for pathway cards and selected work, 3:2 for statements and events, 4:3 for prints.
 
 ## Open

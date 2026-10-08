@@ -32,7 +32,8 @@ What exists for each, and its status: [examples.md](examples.md#status).
 4. **No bright yellow, no highlighting, no gradients** except a scrim to make text readable on a photo.
 5. **The hand is our texture:** torn edges, paper grain, woodcuts. Not filters, not stock textures.
 6. **Real copy in our voice** ([voice.md](voice.md)); images captioned like plates where there's room.
-7. **Use the tokens** in `system/tokens.css`. If a format needs a fixed scale (thumbnails, slides, print), add it as tokens there, like `--thumb-*`.
+7. **Images are clean.** A photograph sits flat and square on the page, full-bleed or in its column. No postcard look: no white mount, tilt or drop shadow (decided 2026-10-08, Rufus: wrong vibe).
+8. **Use the tokens** in `system/tokens.css`. If a format needs a fixed scale (thumbnails, slides, print), add it as tokens there, like `--thumb-*`.
 
 ## Check before you finish
 

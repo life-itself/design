@@ -50,6 +50,6 @@ Rule: give the tear the colour of the ground it tears **out of**.
 ## Material
 
 - **Paper grain** sits over the whole page (`.sor::after`, multiply, 14%).
-- **Prints**: photographs laid on the page sit on a white mount, slightly rotated (`.print`, 1.6°), with a soft shadow.
+- **Photographs sit clean**: flat, square, no mount, tilt or shadow. The postcard style (`.print`) is retired (decided 2026-10-08).
 - **Printed objects** (magazine, book) get a deeper shadow (`--shadow-object`).
 - No rounded corners, no card shadows, no borders around sections.
