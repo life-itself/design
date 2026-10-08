@@ -9,6 +9,7 @@ A page is a stack of grounds. Rhythm comes from changing the ground, not from bo
 - Every section runs full width, with the page gutter as side padding (`.gutter`, 16–56px) and vertical padding of 44–96px (`.section`).
 - Each section opens with a small muted label (`<span class="label">Coming up</span>`), then its content. Labels **name** the section; they are not numbered.
 - Give each section a ground: `.ground-white`, `.ground-paper`, `.ground-sun` or `.night`.
+- **Colour bleeds, text does not.** A ground runs edge to edge, but text and content stay within a maximum width on wide screens: `--measure` (680px) for long-form reading, a wider container for grids and headlines, centred. Never let a paragraph run the full width of a large screen (decided 2026-10-08, Rufus).
 
 ## Rhythm of grounds
 
