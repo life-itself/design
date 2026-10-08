@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seeds of Renaissance · Hero video candidates</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../sor-design-system/system/fonts.css">
+<link rel="stylesheet" href="../../sor-design-system/system/tokens.css">
+<link rel="stylesheet" href="../../sor-design-system/system/components.css">
+<style>
+  html, body { margin: 0; background: #fbfaf6 }
+  .stage { position: relative; background: var(--night); color: #fff; overflow: hidden }
+  .stage video { display: block; width: 100%; aspect-ratio: 16 / 8.6; object-fit: cover }
+  .stage .overlay { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; text-align: center; background: radial-gradient(ellipse at center, rgb(23 22 19 / .55), rgb(23 22 19 / .12) 72%) }
+  .stage h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(28px, 4.4vw, 68px); line-height: .98; max-width: 22ch }
+  .stage p { margin: 0; max-width: 40ch }
+  .now { padding: 14px var(--gutter, 20px); display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; border-bottom: 1px solid var(--rule) }
+  .now b { font-weight: 500 }
+  .dir { padding: 28px var(--gutter, 20px) 8px }
+  .dir h2 { margin: 6px 0 14px; font-family: var(--font-display); font-weight: 400; font-size: 34px }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px }
+  .card { all: unset; cursor: pointer; display: grid; gap: 6px }
+  .card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; outline: 3px solid transparent; outline-offset: 2px }
+  .card[aria-pressed="true"] img { outline-color: var(--ink) }
+  .card span { font-size: 14px }
+  .card small { color: var(--muted, #6b665d); font-size: 12px }
+  .foot { padding: 28px var(--gutter, 20px) 60px; max-width: 70ch; font-size: 14px }
+</style>
+</head>
+<body class="sor">
+<div class="stage">
+  <video id="v" muted autoplay loop playsinline></video>
+  <div class="overlay">
+    <h1>For all those whose hearts burn for a new world to emerge</h1>
+    <p>The Greenhouse: one letter a month with new releases, gatherings and ways in.</p>
+    <span class="btn btn--solid">Subscribe</span>
+  </div>
+</div>
+<div class="now"><span class="label">Now playing</span><b id="nd"></b><span id="nm"></span><a class="link" id="nl" target="_blank" rel="noopener">Open on Pexels</a></div>
+<div id="dirs"></div>
+<div class="foot">
+  <p><span class="label">Claude's picks</span><br>
+  <b>First light:</b> "Blue hour, a thin orange horizon" is a real night-to-dawn arc. Its last third has a sun flare, so trim it and play it once, holding on the last frame like the Dawn frame, rather than looping. For a calm loop: "Blue hour over mountains and cloud valleys" or "Fog and dark ridges, warm horizon".<br>
+  <b>Seeds:</b> "A seed head against the sun over hills": the seeds actually blow away. It is the strongest metaphor, but the subject sits where the text goes, so it needs text set left or low.<br>
+  <b>Birds:</b> "A flock crossing a golden sky" (movement), or "Birds across a pale gold sky" (very quiet, easy to read over).</p>
+  <p><span class="label">How to use</span><br>Click a clip to play it behind the opening line. Previews stream from Pexels at low resolution; nothing is downloaded. All are on the Pexels licence: free, no attribution needed. Brief: <a class="link" href="video-brief.md">video-brief.md</a>.</p>
+</div>
+<script>
+const C = [{"dir": "1", "slug": "stunning-aerial-view-of-snowy-mountains-at-dawn-38451639", "desc": "Aerial, snowy peaks at dawn over cloud", "dur": "0:16", "res": "4K", "src": "https://videos.pexels.com/video-files/38451639/16328241_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/38451639/above-clouds-fluffy-cloud-iceland-icelandic-landscape-38451639.jpeg"}, {"dir": "1", "slug": "binh-minh-20644389", "desc": "Blue hour, a thin orange horizon over cloud", "dur": "0:32", "res": "1080p", "src": "https://videos.pexels.com/video-files/20644389/20644389-hd_1280_720_30fps.mp4", "poster": "https://images.pexels.com/videos/20644389/binh-minh-20644389.jpeg"}, {"dir": "1", "slug": "breathtaking-aerial-sunrise-over-misty-mountains-29393034", "desc": "Soft aerial sunrise over misty mountains", "dur": "0:10", "res": "1080p", "src": "https://videos.pexels.com/video-files/29393034/12660700_960_540_60fps.mp4", "poster": "https://images.pexels.com/videos/29393034/aerial-landscape-aerial-photography-aerial-view-autumn-29393034.jpeg"}, {"dir": "1", "slug": "evening-over-mountains-11964789", "desc": "Blue hour over mountains and cloud valleys", "dur": "0:17", "res": "4K", "src": "https://videos.pexels.com/video-files/11964789/11964789-sd_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/11964789/pexels-photo-11964789.jpeg"}, {"dir": "1", "slug": "a-sunrise-over-a-forest-with-fog-27866529", "desc": "Pink dawn over a fog-filled forest valley", "dur": "1:04", "res": "4K", "src": "https://videos.pexels.com/video-files/27866529/12248707_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/27866529/pexels-photo-27866529.jpeg"}, {"dir": "1", "slug": "a-view-of-the-sunrise-over-the-fog-18731126", "desc": "Pastel sunrise over fog", "dur": "0:55", "res": "4K", "src": "https://videos.pexels.com/video-files/18731126/18731126-hd_1280_720_30fps.mp4", "poster": "https://images.pexels.com/videos/18731126/pexels-photo-18731126.jpeg"}, {"dir": "1", "slug": "a-sunset-over-the-ocean-with-fog-and-mountains-27731213", "desc": "Fog and dark ridges, warm horizon", "dur": "0:54", "res": "4K", "src": "https://videos.pexels.com/video-files/27731213/12213899_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/27731213/pexels-photo-27731213.jpeg"}, {"dir": "1", "slug": "aerial-view-of-a-foggy-landscape-with-a-hill-in-the-distance-27792609", "desc": "Foggy landscape, a hill in the distance", "dur": "1:04", "res": "4K", "src": "https://videos.pexels.com/video-files/27792609/12226124_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/27792609/pexels-photo-27792609.jpeg"}, {"dir": "2", "slug": "macro-view-of-dandelion-with-seeds-dispersing-31981787", "desc": "Dandelion seeds dispersing, dark ground", "dur": "0:35", "res": "1080p", "src": "https://videos.pexels.com/video-files/31981787/13628365_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/31981787/close-up-view-dandelion-dandelion-seeds-flowering-31981787.jpeg"}, {"dir": "2", "slug": "dandelion-seeds-flying-in-a-field-at-sunset-10637669", "desc": "Seeds flying off a seed head, low sun", "dur": "0:18", "res": "1080p", "src": "https://videos.pexels.com/video-files/10637669/10637669-hd_1280_720_60fps.mp4", "poster": "https://images.pexels.com/videos/10637669/pexels-photo-10637669.jpeg"}, {"dir": "2", "slug": "dandelion-18596130", "desc": "A seed head against the sun over hills", "dur": "0:23", "res": "1080p", "src": "https://videos.pexels.com/video-files/18596130/18596130-sd_960_540_30fps.mp4", "poster": "https://images.pexels.com/videos/18596130/beautiful-flower-beautiful-nature-common-dandelion-dandelion-18596130.jpeg"}, {"dir": "3", "slug": "scenic-video-of-cloudy-sky-during-dawn-4708093", "desc": "Pale dawn sky, a few birds", "dur": "0:09", "res": "2K", "src": "https://videos.pexels.com/video-files/4708093/4708093-hd_2048_996_30fps.mp4", "poster": "https://images.pexels.com/videos/4708093/bird-flying-bird-sound-birds-blue-sky-4708093.jpeg"}, {"dir": "3", "slug": "gunbatiminda-kuslar-19223140", "desc": "A flock crossing a golden sky", "dur": "0:09", "res": "4K", "src": "https://videos.pexels.com/video-files/19223140/19223140-hd_1280_720_30fps.mp4", "poster": "https://images.pexels.com/videos/19223140/animate-bird-bird-flight-bird-flying-19223140.jpeg"}, {"dir": "3", "slug": "birds-flying-on-the-sky-9206132", "desc": "Birds across a pale gold sky", "dur": "0:26", "res": "4K", "src": "https://videos.pexels.com/video-files/9206132/9206132-hd_1280_720_25fps.mp4", "poster": "https://images.pexels.com/videos/9206132/abstract-air-airplane-art-9206132.jpeg"}, {"dir": "3", "slug": "dramatic-aerial-view-of-birds-at-sunrise-34023404", "desc": "Birds over misty water at sunrise", "dur": "0:07", "res": "4K", "src": "https://videos.pexels.com/video-files/34023404/14432347_960_540_48fps.mp4", "poster": "https://images.pexels.com/videos/34023404/4k-aerial-footage-4k-drone-4k-drone-shot-4k-nature-video-34023404.jpeg"}], N = {"1": "First light", "2": "Seeds on the wind", "3": "Swallows and birds"};
+const v = document.getElementById('v');
+function play(i) {
+  const c = C[i];
+  v.poster = c.poster + '?auto=compress&w=1600'; v.src = c.src; v.play().catch(() => {});
+  document.getElementById('nd').textContent = c.desc;
+  document.getElementById('nm').textContent = N[c.dir] + ' · ' + c.dur + ' · ' + c.res;
+  const l = document.getElementById('nl'); l.href = 'https://www.pexels.com/video/' + c.slug + '/';
+  document.querySelectorAll('.card').forEach((b, j) => b.setAttribute('aria-pressed', j === i));
+}
+const root = document.getElementById('dirs');
+Object.keys(N).forEach(d => {
+  const s = document.createElement('section'); s.className = 'dir';
+  s.innerHTML = '<span class="label muted">Direction ' + d + '</span><h2>' + N[d] + '</h2><div class="grid"></div>';
+  C.forEach((c, i) => { if (c.dir !== d) return;
+    const b = document.createElement('button'); b.className = 'card'; b.type = 'button';
+    b.innerHTML = '<img loading="lazy" src="' + c.poster + '?auto=compress&w=500" alt=""><span>' + c.desc + '</span><small>' + c.dur + ' · ' + c.res + '</small>';
+    b.onclick = () => { play(i); scrollTo({ top: 0, behavior: 'smooth' }); };
+    s.querySelector('.grid').appendChild(b); });
+  root.appendChild(s);
+});
+play(0);
+</script>
+</body>
+</html>
