@@ -96,6 +96,14 @@
           {
             "name": "Email 🚧",
             "href": "/email"
+          },
+          {
+            "name": "Courses 🚧",
+            "href": "/courses"
+          },
+          {
+            "name": "Magazine 🚧",
+            "href": "/magazine"
           }
         ]
       },
