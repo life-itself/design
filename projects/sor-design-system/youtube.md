@@ -14,7 +14,7 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 |---|---|---|
 | **1 · Landscape poster** | Announces a gathering or event: date, title, photograph. Also works as an event banner on other platforms. | Have it: the *gathering* template |
 | **2 · Video cover** | Generic videos (talks, essays, explainers), including a quote-card variant. | Have it: the *talk* and *manifesto* templates |
-| **3 · Podcast episode cover** | Podcast episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
+| **3 · Podcast episode cover** | Podcast episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | Now a mini project: [podcast-thumbnails.md](podcast-thumbnails.md). **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
 | **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | **First pass done** in [examples/youtube/channel.html](examples/youtube/channel.html): banner (paper and night, desktop/mobile/TV views, safe-area guides), channel page mocks, avatar options (swallow-on-white recommended; the logo fails under 48px), lower third, watermark, About panel |
 
 Later, if needed: a vertical Shorts cover (1080 × 1920).

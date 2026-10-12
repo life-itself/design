@@ -2,7 +2,7 @@
 
 Show art and episode artwork for the Seeds of Renaissance podcast. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.16`.
 
-**Stub.** The 16:9 guest cover for YouTube exists ([examples/youtube/](examples/youtube/index.html), `.thumb--guest`); square artwork doesn't yet.
+**Stub.** The YouTube episode thumbnail is its own mini project: [podcast-thumbnails.md](podcast-thumbnails.md). The 16:9 guest cover for YouTube exists ([examples/youtube/](examples/youtube/index.html), `.thumb--guest`); square artwork doesn't yet.
 
 ## What we need
 
