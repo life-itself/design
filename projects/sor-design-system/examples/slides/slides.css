@@ -23,6 +23,11 @@
   --slide-caption: 32px;       /* plate captions, italic */
   --slide-logo: 132px;         /* logo on its white disc */
   --slide-tear: 48px;          /* torn edge depth at artboard scale */
+  /* Study register (white papers, research talks): Restora claims, Bricolage text, figures as evidence */
+  --slide-claim: 84px;         /* a claim headline: a full sentence, two lines at most, Restora */
+  --slide-statement: 120px;    /* a claim set alone, Restora */
+  --slide-cover: 150px;        /* study cover title, Polyamine: the one Polyamine in a study deck */
+  --slide-cell: 36px;          /* table cells */
 }
 
 .slide, .slide *, .slide *::before, .slide *::after { box-sizing: border-box }
@@ -80,9 +85,11 @@
 .slide--content { padding: 112px var(--slide-pad) 0; display: grid; grid-template-columns: 1fr 1.08fr; column-gap: 112px; align-content: start }
 .slide--content .slide__label { grid-column: 1 / -1; margin-bottom: 56px }
 .slide--content .slide__title { font-size: var(--slide-heading); align-self: start }
-.slide--content ul { list-style: none; margin: 0; padding: 0; font-size: var(--slide-point); font-weight: 300; line-height: 1.28 }
-.slide--content li { padding: 26px 0 28px; border-top: 2px solid var(--rule) }
-.slide--content li:last-child { border-bottom: 2px solid var(--rule) }
+/* A list with visible markers: an ink square hung in the margin. Up to five items, one level, short sentences. */
+.slide__list { list-style: none; margin: 0; padding: 0; display: grid; align-content: start; gap: 34px; font-size: var(--slide-point); font-weight: 300; line-height: 1.3 }
+.slide__list li { position: relative; padding-left: 60px }
+.slide__list li::before { content: ""; position: absolute; left: 0; top: .48em; width: 18px; height: 18px; background: currentColor }
+.slide__list b { font-weight: 500 }
 .slide--content .slide__lead { font-size: var(--slide-lead); font-weight: 300; line-height: 1.4; max-width: 26ch }
 
 /* 4 · Quote: past ten words it's Restora; a red seed may mark it */
@@ -97,16 +104,18 @@
 .slide--image .slide__plate p { font-size: var(--slide-caption); font-style: italic; color: var(--muted); line-height: 1.35 }
 .slide__fig { font-family: var(--font-label); font-style: normal; font-size: var(--slide-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted); white-space: nowrap }
 
-/* 6 · Image + text: a print laid on the page, slightly turned, beside a heading and short text */
-.slide--split { display: grid; grid-template-columns: 50% 1fr; column-gap: 112px; align-items: center; padding: 0 var(--slide-pad) 40px 120px }
-.slide--split figure { margin: 0; display: grid; gap: 26px }
-.slide--split .print { padding: 22px 22px 26px; transform: rotate(calc(-1 * var(--tilt))); box-shadow: 0 40px 70px -40px rgb(27 25 22 / .6) }
-.slide--split .print img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
-.slide--split figcaption { font-size: var(--slide-caption); font-style: italic; color: var(--muted); line-height: 1.35; padding-left: 8px }
-.slide--split figcaption .slide__fig { margin-right: 16px }
-.slide--split .slide__text { display: grid; gap: 40px; align-content: center }
+/* 6 · Image + text: text on the left, a photograph bleeding off the right edge, flat and square (no postcard).
+   Gathering joins them with a torn edge; Study (.slide--plain) with a straight one. */
+.slide--split { display: grid; grid-template-columns: 1fr 46%; background: var(--white) }
+.slide--split .slide__text { padding: 112px 96px 150px var(--slide-pad); display: grid; gap: 40px; align-content: center }
 .slide--split .slide__title { font-size: var(--slide-heading) }
-.slide--split .slide__text p { font-size: 44px; font-weight: 300; line-height: 1.4 }
+.slide--split .slide__text p { font-size: 40px; font-weight: 300; line-height: 1.4 }
+.slide--split .slide__claim { font-size: 76px }
+.slide--split .slide__pic { position: relative; min-width: 0 }
+.slide--split .slide__foot { right: calc(46% + 96px) }
+.slide--split .slide__pic .tear--v { background: var(--white) }
+.slide--split .slide__cap { font-size: var(--slide-caption); font-style: italic; color: var(--muted); line-height: 1.35 }
+.slide--split .slide__cap .slide__fig { margin-right: 16px }
 
 /* 7a · Steps: a short numbered list, each with its pathway seed */
 .slide--steps { padding: 112px var(--slide-pad) 0 }
@@ -137,6 +146,61 @@
 .slide--closing .slide__text p { font-size: var(--slide-lead); font-weight: 300 }
 .slide--closing .links { display: flex; gap: 64px; font-family: var(--font-label); font-size: var(--slide-label); font-weight: 700; letter-spacing: .08em; padding-top: 32px; border-top: 2px solid var(--ink) }
 .slide--closing .slide__disc { --slide-logo: 300px; align-self: center }
+
+/* ── Study register ──────────────────────────────────────────────
+   For white papers and research talks. Claim headlines in Restora (a sentence that says what to see),
+   evidence below: a figure, a short list, a table, a quote. Polyamine on the cover only.
+   White ground; woodcuts only on section slides; the one night is the closing slide (as the paper's back cover). */
+.slide__claim { font-family: var(--font-quote); font-weight: 400; font-size: var(--slide-claim); line-height: 1.1; letter-spacing: -.005em; margin: 0; text-wrap: balance; max-width: 22ch }
+.slide--study { padding: 104px var(--slide-pad) 0; display: grid; align-content: start }
+.slide--study > .slide__label { margin-bottom: 36px }
+.slide--study > .slide__claim { margin-bottom: 56px; max-width: 28ch }
+
+/* Study cover: Polyamine title, the paper's cover flat on the right */
+.slide--cover { display: grid; grid-template-columns: 1fr auto; column-gap: 112px; align-items: center; padding: 0 var(--slide-pad) }
+.slide--cover .slide__text { display: grid; gap: 44px }
+.slide--cover .slide__title { font-size: var(--slide-cover); line-height: .96 }
+.slide--cover .slide__sub { font-size: var(--slide-lead); font-weight: 300; max-width: 24ch }
+.slide--cover .slide__by { display: grid; gap: 12px; padding-top: 36px; border-top: 2px solid var(--ink); font-size: 40px }
+.slide--cover .slide__by .slide__label { font-size: var(--slide-meta) }
+.slide--cover .slide__object { height: 840px; width: auto; box-shadow: 0 0 0 2px var(--rule) }
+
+/* Statement: one claim set alone, with one plain line under it */
+.slide--statement { display: grid; align-content: center; gap: 56px; padding: 0 220px 60px var(--slide-pad) }
+.slide--statement .slide__claim { font-size: var(--slide-statement); line-height: 1.05; max-width: 18ch }
+.slide--statement p { font-size: var(--slide-lead); font-weight: 300; line-height: 1.4; max-width: 40ch; color: var(--muted) }
+
+/* Contents: the parts in order, numbered because they are a sequence */
+.slide--contents ol { list-style: none; margin: 0; padding: 0; display: grid }
+.slide--contents li { display: grid; grid-template-columns: 120px 1fr; column-gap: 24px; padding: 28px 0 30px; border-top: 2px solid var(--rule); align-items: baseline }
+.slide--contents li:last-child { border-bottom: 2px solid var(--rule) }
+.slide--contents .n { font-family: var(--font-label); font-weight: 700; font-size: var(--slide-label); letter-spacing: .08em; font-variant-numeric: tabular-nums }
+.slide--contents b { font-family: var(--font-quote); font-weight: 400; font-size: 56px; line-height: 1.1; display: block }
+.slide--contents small { display: block; margin-top: 8px; font-size: 34px; font-weight: 300; color: var(--muted) }
+
+/* Figure: a house diagram fills the slide. It carries its own title and signature, so the slide adds only its number */
+.slide--figure { display: grid; place-items: center; padding: 48px var(--slide-pad) 120px }
+.slide--figure img { max-width: 100%; max-height: 100%; width: auto; height: 100% }
+
+/* Table: claim, then rows on hairlines; column heads as tags */
+.slide__table { width: 100%; border-collapse: collapse; font-size: var(--slide-cell); line-height: 1.3 }
+.slide__table th { text-align: left; font-family: var(--font-label); font-size: var(--slide-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted); padding: 0 32px 18px 0; border-bottom: 2px solid var(--ink) }
+.slide__table td { padding: 18px 32px 20px 0; border-bottom: 2px solid var(--rule); vertical-align: baseline; font-weight: 300 }
+.slide__table td:first-child { font-weight: 500; white-space: nowrap }
+.slide__note { margin-top: 28px; font-size: 34px; font-weight: 300; color: var(--muted); max-width: 60ch }
+
+/* Section in study: Restora, a small woodcut, white ground */
+.slide--section.slide--plain .slide__title { font-family: var(--font-quote); font-size: 140px; line-height: 1.02; max-width: 14ch; letter-spacing: -.01em }
+.slide--section.slide--plain .slide__mark { width: 300px; height: 300px; right: 200px }
+
+/* Quote without a mark */
+.slide--quote.slide--plain { grid-template-columns: 1fr; padding-right: 240px }
+.slide--quote.slide--plain blockquote p { font-size: 76px }
+
+/* Closing in study: on night, like the paper's back cover */
+.slide--closing .slide__claim { font-size: 140px; max-width: none }
+.slide--closing.slide--night .links { border-top-color: var(--chalk) }
+.slide--closing.slide--night .slide__text p { color: var(--chalk) }
 
 /* Preview frame: scales the fixed artboard to the frame's width */
 .slide-frame { container-type: inline-size; position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden }

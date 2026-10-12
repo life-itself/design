@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · Slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<link rel="stylesheet" href="slides.css">
+<link rel="stylesheet" href="deck.css">
+<style>
+.decks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px }
+.decks a { display: grid; gap: 14px; text-decoration: none; min-width: 0 }
+.decks .slide-frame { box-shadow: 0 0 0 1px var(--rule) }
+.decks h2 { font-family: var(--font-display); font-size: var(--t-card) }
+.decks p { color: var(--muted); max-width: 52ch }
+@container (max-width: 800px) { .decks { grid-template-columns: 1fr } }
+</style>
+</head>
+<body class="sor">
+<script src="../../system/graphics.js"></script>
+
+<main class="deck-page gutter">
+<header class="deck-intro">
+  <nav class="deck-nav"><a href="index.html" aria-current="page">Slides</a><a href="study.html">Study</a><a href="gathering.html">Gathering</a></nav>
+  <span class="label muted">Templates · Slides · Draft</span>
+  <h1>Slides</h1>
+  <p>Slide decks on a fixed 1920 × 1080 artboard, in two registers that share one set of slide types.</p>
+  <ul>
+    <li><b>Study</b> for white papers and research talks: claims as sentences in Restora, evidence below (figures, short lists, tables, quotes), Polyamine on the cover only.</li>
+    <li><b>Gathering</b> for calls, community and art: Polyamine titles, sunlight and night grounds, photographs torn into the page, woodcuts.</li>
+    <li>Both: nothing under 28px on the artboard; photographs flat and square; red only in the logo, a red seed and the house diagrams.</li>
+  </ul>
+</header>
+
+<div class="decks">
+  <a href="study.html">
+    <div class="slide-frame"><div class="slide slide--cover">
+      <div class="slide__text">
+        <span class="slide__label">Seeds of Renaissance · White paper No. 6</span>
+        <h2 class="slide__title">Wisdom and Wanting What’s Good</h2>
+        <p class="slide__sub">Collective wisdom for a time of crisis and renewal</p>
+        <div class="slide__by">Rufus Pollock and Rosie Bell<span class="slide__label">Life Itself Sensemaking Studio · October 2026</span></div>
+      </div>
+      <img class="slide__object" src="img/wisdom-cover.jpg" alt="">
+    </div></div>
+    <h2>Study</h2>
+    <p>Fifteen slides on the Wisdom paper: cover, statement, contents, sections, figures, claim with list, quote, claim with photograph, claim with table, closing.</p>
+  </a>
+  <a href="gathering.html">
+    <div class="slide-frame"><div class="slide slide--title">
+      <div class="slide__text">
+        <span class="slide__label">Global Connection Call · 15 October 2026</span>
+        <div class="slide__mid">
+          <h2 class="slide__title">What is trying to be born?</h2>
+          <p class="slide__byline">Rufus Pollock and Sylvie Shiwei Barbier<span>Seeds of Renaissance</span></p>
+        </div>
+        <div class="slide__brand"><span class="slide__disc"><img src="../../system/img/logo.png" alt=""></span><span class="slide__label">Vision and movement for civilisational renewal</span></div>
+      </div>
+      <div class="slide__pic">
+        <img class="slide__photo" src="../../system/img/sylvie.jpg" alt="">
+        <span class="tear tear--v"></span>
+      </div>
+    </div></div>
+    <h2>Gathering</h2>
+    <p>Ten slides for a community call: title, sections on sunlight and night, points, quote with a red seed, full-bleed photograph, image and text, steps, calendar, closing.</p>
+  </a>
+</div>
+</main>
+<script src="../../system/sor.js"></script>
+</body>
+</html>
