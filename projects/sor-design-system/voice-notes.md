@@ -1,5 +1,7 @@
 # Voice notes: the media house line
 
+*2026-10-12: line reopened (Sylvie finds it weak); rebirth now replaces renewal on headline lines, so the reasoning below, written with renewal, is the record of the 2026-10-08 round. See [voice.md](voice.md#the-media-house-line).*
+
 A briefing for team discussion, 2026-10-08. The outcome lives in [voice.md](voice.md#the-media-house-line); this page keeps the reasoning behind it. Part of the [SoR design system](README.md).
 
 ## The question

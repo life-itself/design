@@ -21,6 +21,12 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 
 A specimen lays out at a virtual 1000px width and scales to its frame, so its height is a fixed ratio of its width. Each `<iframe>` carries `style="aspect-ratio:1000/H"`, where H is the specimen's height at 1000px plus about 10px. After changing a chapter in guide.html, re-measure: open any specimen locally, then in the browser console load each one into a 1000px-wide iframe and read `document.body.scrollHeight`. Update H wherever that specimen is embedded (`grep -n 'specimens/<name>' *.md`). Below 600px wide, frames fall back to a fixed height and scroll inside.
 
+## Recording decisions
+
+(2026-10-12.) A decision is recorded in the planning repo's project issue tree (e.g. [2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) for the brand) as the question with a ✅ answer, who decided and the date. The design docs here (voice.md, colour.md, logo.md, etc.) hold the rule as applied, with a link back to the planning answer, and don't re-argue it. Write one decision to both in one go. There is no separate decision tree in this repo; [decisions.md](decisions.md) keeps only design-internal reasoning and history, and notes such as voice-notes.md keep the options considered.
+
+The issue tree carries only the one-line answer. Longer discussion goes in a file next to the issue tree (e.g. `projects/2608-seeds-of-renaissance-rebrand/YYYY-MM-DD-slug.md`), linked from the answer. Existing design-side reasoning files such as voice-notes.md stay and are linked.
+
 ## Publish
 
 From `projects/sor-design-system`:

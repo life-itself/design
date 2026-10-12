@@ -30,7 +30,7 @@ Colours have roles, not just values. Four grounds, three inks and one accent, us
 |---|---|---|
 | `--red` | `#e5201c` | The logo red. **Only** an occasional link in running text (`.link`) and footnote marks. |
 
-The logo keeps its own red, which may yet change (see [logo.md](logo.md)); the site's red follows it.
+The red is decided: `#e5201c`, the logo red, kept as the site's red (decided 2026-10-12; see the [planning record](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md)).
 
 ## Proportion
 

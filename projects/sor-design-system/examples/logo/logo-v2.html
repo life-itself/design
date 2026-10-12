@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seeds of Renaissance · Logo v2 comparison</title>
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<style>
+html, body { margin: 0; background: var(--paper) }
+.lv { max-width: 1200px; margin-inline: auto; padding: 48px 20px 80px; display: grid; gap: 28px }
+.lv h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98; margin: 0 }
+.lv h2 { font-family: var(--font-display); font-size: var(--t-section); line-height: 1; margin: 0 }
+.lv p { margin: 0; max-width: 66ch; color: var(--muted) }
+.lv section { display: grid; gap: 18px; padding-top: 32px; border-top: 1px solid var(--rule) }
+.lv .label { color: var(--muted) }
+/* the mark pieces */
+.m { position: relative; display: block; aspect-ratio: 1; flex: none }
+.m > * { position: absolute }
+.m .base { inset: 0; width: 100%; height: 100% }
+.m .hole { left: 48%; top: 50%; width: 36%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: #fff }
+.m .sw { left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scaleX(-1); height: auto }
+.m svg { inset: 0; width: 100%; height: 100% }
+.disc { border-radius: 50%; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--rule) }
+.disc.on-night { box-shadow: 0 0 0 1px var(--night-rule) }
+.full { display: flex; flex-wrap: wrap; gap: 36px 56px }
+.full figure, .cell { margin: 0; display: grid; gap: 8px; justify-items: start }
+.full figcaption, .cap { font-size: var(--t-caption); color: var(--muted); max-width: 34ch; line-height: 1.4 }
+.full figcaption b, .row b { color: var(--ink); font-weight: 600 }
+.pair { display: flex; gap: 24px; align-items: end }
+.row { display: grid; grid-template-columns: minmax(170px, 1fr) repeat(4, auto); gap: 24px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--rule) }
+.row small { display: block; color: var(--muted); font-size: var(--t-caption); line-height: 1.4 }
+.row .nm { max-width: 26ch }
+.grid-h { display: grid; grid-template-columns: minmax(170px, 1fr) repeat(4, auto); gap: 24px; color: var(--muted) }
+.grid-h span:nth-child(2){width:176px} .grid-h span:nth-child(3){width:98px} .grid-h span:nth-child(4){width:48px} .grid-h span:nth-child(5){width:24px}
+.ground { padding: 20px; border-radius: 4px }
+.ground.dk { background: var(--night); color: var(--night-ink, #f3f0e8) }
+.ground.dk .row { border-color: var(--night-rule) } .ground.dk .row small { color: var(--night-muted) } .ground.dk .row b { color: #f3f0e8 }
+.ground.dk .grid-h { color: var(--night-muted) }
+.chalk { filter: invert(.93) }
+.solo { display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: end }
+.tile { padding: 24px; display: grid; gap: 10px; justify-items: start; border-radius: 4px }
+.tile.paper { background: var(--paper); box-shadow: inset 0 0 0 1px var(--rule) }
+.tile.dk { background: var(--night); color: var(--night-muted) }
+.tile .cap { color: inherit }
+@media (max-width: 760px) { .row, .grid-h { grid-template-columns: repeat(4, auto); justify-content: start } .row > div:first-child { grid-column: 1 / -1 } .grid-h span:first-child { display: none } }
+</style>
+</head>
+<body class="sor">
+<main class="lv">
+<header style="display:grid;gap:14px">
+  <span class="label">Exploration · logo v2</span>
+  <h1>Woodcut swallow in the ring</h1>
+  <p>The stock swallow replaced by our own woodcut, mirrored so it rises left to right. One swallow for the mark, the small mark, the seal and the watermark. Beads: see the logo v2 task. Notes: <a href="../../logo.md">logo.md</a>.</p>
+</header>
+
+<section id="full">
+  <span class="label">1 · Full mark candidates</span>
+  <h2>Four swallows, one ring</h2>
+  <p>Ring from <code>logo.png</code> with the stock swallow covered by a white disc, woodcut laid on top. Compare silhouette, weight against the prints, and whether it climbs.</p>
+  <div class="full" id="fulls"></div>
+</section>
+
+<section id="small">
+  <span class="label">2 · Small mark</span>
+  <h2>From 176 to 24 pixels</h2>
+  <p>Two leading swallows, four treatments each. Look at 48 and 24: where does the ring stop being noise and the bird still read?</p>
+  <div id="smalls" style="display:grid;gap:36px"></div>
+</section>
+
+<section id="seal">
+  <span class="label">3 · Seal and solo</span>
+  <h2>Alone and in the seal</h2>
+  <p>The leading swallow bare, on paper and on night, and inside the seal ring from <code>graphics.svg</code>, at medium and small size.</p>
+  <div class="solo" id="solos"></div>
+</section>
+</main>
+
+<script>
+(function () {
+  var RING = "M111.3 60.0 L111.9 64.5 L110.9 69.0 L110.5 73.5 L109.2 77.9 L106.0 81.5 L103.9 85.3 L103.4 90.4 L99.3 93.0 L96.2 96.2 L94.3 100.9 L89.8 102.5 L86.5 105.8 L81.9 107.1 L77.9 109.2 L73.2 109.3 L69.1 111.6 L64.6 112.8 L60.0 112.1 L55.4 112.5 L50.9 111.7 L46.9 109.0 L42.0 109.5 L37.9 107.4 L34.3 104.6 L30.9 101.5 L25.9 100.6 L23.3 96.7 L19.7 93.8 L16.5 90.4 L14.4 86.3 L11.8 82.5 L11.4 77.7 L9.0 73.7 L8.9 69.0 L7.0 64.6 L6.9 60.0 L9.3 55.6 L9.8 51.1 L10.5 46.7 L9.9 41.8 L13.0 38.1 L14.7 33.8 L17.9 30.5 L20.2 26.6 L23.5 23.5 L26.8 20.5 L30.0 17.2 L33.9 14.8 L37.5 11.8 L42.0 10.7 L46.2 8.6 L50.8 7.8 L55.3 6.8 L60.0 7.5 L64.4 9.1 L69.2 7.8 L73.8 8.5 L78.2 10.1 L82.1 12.7 L86.3 14.4 L89.4 18.1 L94.0 19.5 L96.9 23.1 L99.4 27.0 L101.6 30.9 L105.9 33.5 L108.4 37.4 L107.8 42.6 L111.0 46.3 L111.0 51.0 L110.8 55.6 L111.4 60.0 Z";
+  // Per swallow: file, aspect (w/h), width as share of mark, rotation after mirroring
+  var S = {
+    flight:  { f: "swallow-flight-clear.svg", local: 1,  a: 248/150, w: 0.54, rot: -14, note: "Main side view. Mirrored, then tipped up 14 degrees." },
+    bold:    { f: "swallow-bold.svg",    a: 248/150, w: 0.54, rot: -14, note: "Bold linocut. Mirrored, then tipped up 14 degrees." },
+    above:   { f: "swallow-above.svg",   a: 200/140, w: 0.46, rot: 0,   note: "From above, wings spread. Mirrored only." },
+    perched: { f: "swallow-perched.svg", a: 200/160, w: 0.42, rot: 0,   note: "Perched on a branch. Mirrored only; likely out for flight." }
+  };
+  var IMG = "../../system/woodcuts/";
+  var RED = "#e5201c";
+  function sw(k, share, extra) {
+    var s = S[k], w = (share || s.w) * 100;
+    return '<img class="sw' + (extra ? " " + extra : "") + '" src="' + (s.local ? '' : IMG) + s.f + '" alt="" style="width:' + w + '%;--rot:' + s.rot + 'deg">';
+  }
+  function dots() {
+    var out = "", n = 12, i, a, cx, cy;
+    for (i = 0; i < n; i++) {
+      a = i / n * 2 * Math.PI; cx = 50 + 38 * Math.cos(a); cy = 50 + 38 * Math.sin(a);
+      out += '<ellipse cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" rx="6.2" ry="9" fill="' + RED + '" transform="rotate(' + (i / n * 360 + 90 + (i % 2 ? 6 : -6)).toFixed(0) + ' ' + cx.toFixed(1) + ' ' + cy.toFixed(1) + ')"/>';
+    }
+    return '<svg viewBox="0 0 100 100" aria-hidden="true">' + out + '</svg>';
+  }
+  function solidRing() { return '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="' + RED + '" stroke-width="7"/></svg>'; }
+  function sealRing() { return '<svg viewBox="0 0 120 120" aria-hidden="true"><path d="' + RING + '" fill="none" stroke="currentColor" stroke-width="3.2"/></svg>'; }
+  // Mark builders (size px)
+  var B = {
+    full:   function (k, px) { return '<span class="m" style="width:' + px + 'px"><img class="base" src="../../system/img/logo.png" alt=""><i class="hole"></i>' + sw(k) + '</span>'; },
+    ring:   function (k, px) { return '<span class="m" style="width:' + px + 'px"><img class="base" src="../../system/img/logo.png" alt=""><i class="hole" style="width:44%"></i>' + sw(k, 0.6) + '</span>'; },
+    dots:   function (k, px) { return '<span class="m" style="width:' + px + 'px">' + dots() + sw(k, 0.56) + '</span>'; },
+    solid:  function (k, px) { return '<span class="m" style="width:' + px + 'px">' + solidRing() + sw(k, 0.56) + '</span>'; },
+    alone:  function (k, px) { return '<span class="m" style="width:' + px + 'px">' + sw(k, 0.72) + '</span>'; },
+    seal:   function (k, px) { return '<span class="m" style="width:' + px + 'px;color:var(--ink)">' + sealRing() + sw(k, 0.72) + '</span>'; }
+  };
+  var $ = function (id) { return document.getElementById(id); };
+
+  // 1. Full marks
+  var h = '<figure><div class="pair"><span class="m disc" style="width:320px"><img class="base" src="../../system/img/logo.png" alt=""></span></div><figcaption><b>Current logo</b> Stock swallow, for reference.</figcaption></figure>';
+  ["flight", "bold", "above", "perched"].forEach(function (k) {
+    h += '<figure><span class="m disc" style="width:320px"><img class="base" src="../../system/img/logo.png" alt=""><i class="hole"></i>' + sw(k) + '</span><figcaption><b>' + k[0].toUpperCase() + k.slice(1) + '</b> ' + S[k].note + '</figcaption></figure>';
+  });
+  $("fulls").innerHTML = h;
+
+  // 2. Small marks
+  var sizes = [176, 98, 48, 24];
+  var treat = [
+    ["full", "Full ring, scaled", "The same drawing shrunk. Prints blur by 48."],
+    ["dots", "Fewer, larger red dots", "Twelve ovals keep the idea of many hands."],
+    ["solid", "Solid red ring", "Simplest; loses the fingerprints."],
+    ["alone", "Swallow alone", "Black on white. Holds at 24."]
+  ];
+  function block(k, dark) {
+    var o = '<div class="ground' + (dark ? " dk" : "") + '"><div class="grid-h label"><span></span><span>176</span><span>98</span><span>48</span><span>24</span></div>';
+    treat.forEach(function (t) {
+      o += '<div class="row"><div class="nm"><b>' + t[1] + '</b><small>' + t[2] + '</small></div>';
+      sizes.forEach(function (px) {
+        var inner = B[t[0]](k, px);
+        o += '<span class="m disc' + (dark ? " on-night" : "") + '" style="width:' + px + 'px">' + inner.replace('class="m" style="width:' + px + 'px"', 'class="m" style="width:100%"') + '</span>';
+      });
+      o += '</div>';
+    });
+    return o + '</div>';
+  }
+  var sm = "";
+  ["flight", "bold"].forEach(function (k) {
+    sm += '<div><span class="label">' + k + ' swallow</span><div style="display:grid;gap:14px;margin-top:10px">' + block(k, false) + block(k, true) + '</div></div>';
+  });
+  $("smalls").innerHTML = sm;
+
+  // 3. Seal and solo
+  var K = "flight", so = "";
+  function tile(cls, inner, cap) { return '<div class="tile ' + cls + '">' + inner + '<span class="cap">' + cap + '</span></div>'; }
+  var n = function (c) { return c === "night" ? "chalk" : ""; };
+  so += tile("paper", '<span class="m" style="width:240px">' + sw(K, 0.95) + '</span>', "Solo, paper, medium");
+  so += tile("dk", '<span class="m chalk" style="width:240px">' + sw(K, 0.95) + '</span>', "Solo, night, chalked");
+  so += tile("paper", B.seal(K, 200), "Seal, paper, medium");
+  so += tile("dk", '<span class="m" style="width:200px;color:#f3f0e8">' + sealRing() + '<img class="sw chalk" src="' + (S[K].local ? '' : IMG) + S[K].f + '" alt="" style="width:72%;--rot:' + S[K].rot + 'deg"></span>', "Seal, night, medium");
+  so += tile("paper", '<div style="display:flex;gap:16px;align-items:end"><span class="m" style="width:96px">' + sw(K, 0.95) + '</span>' + B.seal(K, 96) + '<span class="m" style="width:48px">' + sw(K, 0.95) + '</span>' + B.seal(K, 48) + '</div>', "Small: solo and seal at 96 and 48");
+  $("solos").innerHTML = so;
+})();
+</script>
+</body>
+</html>

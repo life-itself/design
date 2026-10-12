@@ -28,7 +28,7 @@ The design system is written for the website. The experiences are a different re
 
 ### Colour values (decided 2026-10-06)
 
-Pieces use the system token values, so everything matches the website: `--white` `#ffffff` or `--paper` `#fbfaf6` grounds, `--ink` `#1b1916`, `--chalk` `#ece7dc` for text on black, `--red` `#e5201c` for the fingerprints and "heart burns". Some pieces still name these `--daylight` or `--seed-red` locally; the values are what matter. When the final red is picked (beads `design-34t.1`) it changes in the system and the pieces follow.
+Pieces use the system token values, so everything matches the website: `--white` `#ffffff` or `--paper` `#fbfaf6` grounds, `--ink` `#1b1916`, `--chalk` `#ece7dc` for text on black, `--red` `#e5201c` for the fingerprints and "heart burns". Some pieces still name these `--daylight` or `--seed-red` locally; the values are what matter. When the final red is picked (beads `design-34t.1`) it changes in the system and the pieces follow. Red decided 2026-10-12: `#e5201c` (design system `--red`); switch `--seed-red` when experiences resume.
 
 Kept on purpose, experiences only:
 

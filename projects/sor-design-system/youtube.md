@@ -50,7 +50,7 @@ Uriel's own warnings: option 1 sits close to Emergence Magazine without photos; 
 >
 > Join our newsletter to never miss an episode of the Seeds of Renaissance Podcast and to stay up to date on what's happening at SoR and in the broader community of seekers ushering in what's to come.
 
-776 characters of YouTube's 1,000. Handle `@SeedsOfRenaissance`; channel line "Podcast, gatherings, magazine"; tagline "Vision and movement for civilisational renewal".
+776 characters of YouTube's 1,000. Handle `@SeedsOfRenaissance`; channel line "Podcast, gatherings, magazine"; tagline "Vision and movement for civilisational rebirth".
 
 **Links:** Instagram @seedsofrenaissance · Facebook facebook.com/seeds0frenaissance · X @SeedRenaissance · LinkedIn linkedin.com/company/seedsofrenaissance · Linktree linktr.ee/seedsofrenaissance · Website secondrenaissance.net · YouTube and Substack links still to fill. YouTube shows up to 14 links with custom titles.
 

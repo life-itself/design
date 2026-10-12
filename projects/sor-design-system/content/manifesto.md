@@ -33,7 +33,7 @@ This manifesto attempts to articulate the essence of that emerging vision: the s
 
 We are a movement called to bring forth a renaissance.
 
-We are seed-bearers pioneering a world that works for everyone.
+We are pioneers seeding a world that works for everyone.
 
 We create a new world through our work.
 

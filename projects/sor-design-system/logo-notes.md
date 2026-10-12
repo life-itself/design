@@ -17,7 +17,7 @@ A black swallow at the centre of a radiating circle of red fingerprints, on whit
 
 ## Issues to address
 
-1. **The red is a clean, bright screen red.** A deeper, ink-like red (real stamp or printing ink) may fit the earthy, slightly muddy feel better. Test a few.
+1. **The red is a clean, bright screen red.** A deeper, ink-like red (real stamp or printing ink) may fit the earthy, slightly muddy feel better. Test a few. *Decided 2026-10-12: keep the logo red `#e5201c` (vermilion, stamp and oxblood not pursued; the experiences' `#e11414` moves to it).*
 2. **The swallow is a common stock silhouette.** A hand-drawn or printmade swallow would be more distinctive and match the brand's craft.
 3. **It fails at small sizes.** On a favicon or YouTube avatar the fingerprints turn into pink noise. We need a simplified version, for example the swallow alone or the swallow in a solid ring.
 4. **We need a set of versions:** full colour, one colour (black on light, light on dark), inverted, and small.

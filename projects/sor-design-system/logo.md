@@ -38,7 +38,9 @@ Seeds is the brand. Life Itself, its steward and the authors' home, is credited 
 
 ## Open
 
-1. A deeper, ink-like red instead of the clean screen red.
-2. A hand-drawn or printmade swallow instead of the stock silhouette.
+Logo v2 (hand-drawn rising swallow, small mark, full set) is a mini-project: [logo-v2.md](logo-v2.md).
+
+1. ~~A deeper, ink-like red instead of the clean screen red.~~ Decided 2026-10-12: keep the logo red `#e5201c` ([colour.md](colour.md)).
+2. A hand-drawn or printmade swallow instead of the stock silhouette. Exploring: the woodcut swallow, mirrored to rise left to right, in the ring ([comparison](examples/logo/logo-v2.html), 2026-10-12).
 3. A small version that survives a favicon or YouTube avatar (the fingerprints turn to noise).
 4. A full set: colour, one colour (black on light, light on dark; a first one-colour version exists as a filter recipe, see [Using it](#using-it)), inverted, small. Open: on dark grounds, the white-disc cutout or an inverted mark (with red fingerprints the swallow alone reads; the fingerprints may need to go white) (beads `.24`).

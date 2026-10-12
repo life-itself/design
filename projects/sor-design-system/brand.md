@@ -4,11 +4,11 @@
 
 ## One line
 
-**Tagline: Vision and movement for civilisational renewal.** (Rufus, 2026-09-28)
+**Tagline: Vision and movement for civilisational rebirth.** (Rufus, 2026-10-12; was "...civilisational renewal", 2026-09-28)
 
 Hero line: *For those who sense the old world is ending and want to help seed the new.*
 
-Earlier tagline: *Planting the seeds of civilisational renewal.*
+Earlier taglines: *Vision and movement for civilisational renewal* (to 2026-10-12); *Planting the seeds of civilisational renewal.*
 
 **Essence: a movement and a community.** Media (podcast, magazine, essays) is how people find us and make sense. Belonging and practice together are what we are. The site should feel like joining a living movement of people, not subscribing to a publication.
 
@@ -125,10 +125,10 @@ Public descriptions of the podcast's formats go by **host and format**. Framing 
 Copy lines:
 
 - Instagram: *"Ideas & practices for a world being reborn. Podcast · Courses · Community"*
-- YouTube: *"Exploring crisis and renewal in this time between worlds."* (proposed; see [voice.md](voice.md#the-media-house-line))
-- Podcast intro: *"This is Seeds of Renaissance, a conversation exploring crisis and renewal in this time between worlds."* (proposed; see [voice.md](voice.md#the-media-house-line))
+- YouTube: *"Exploring crisis and rebirth in this time between worlds."* (working, reopened 2026-10-12; see [voice.md](voice.md#the-media-house-line))
+- Podcast intro: *"This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds."* (working, reopened 2026-10-12; see [voice.md](voice.md#the-media-house-line))
 
-*Renewal* is the default public word; *rebirth* is kept for poetic copy (magazine, poetic sections). See [voice.md](voice.md#key-lines).
+*Rebirth* on headline lines, *renewal* in papers and essays (decided 2026-10-12). See [voice.md](voice.md#key-lines).
 - To a friend: *"…a project for people who feel like the world's kind of falling apart and are tired of the old ways of thought and governance and want something new, but instead of just doom-scrolling about it, we're trying to figure out and actually practice what comes next."*
 
 ## Names
@@ -140,15 +140,14 @@ Copy lines:
 | White paper series | **Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6). Decided 2026-10-07; see [print.md](print.md#covers-and-credits) |
 | Steward | **Life Itself**: originating collective and current steward. Seeds is designed to grow far wider and is not a funnel into Life Itself |
 | Arms | **Media House** (media) · **Gardens of Change** (community) |
-| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational renewal…" |
-| People | "Seed-bearers" (tbd) |
+| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational rebirth…" |
+| People | Catalysts and pioneers (public); no label in discovery. See [voice.md](voice.md#what-we-call-people) |
 
 Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `@SeedRenaissance` · LinkedIn `seedsofrenaissance`.
 
 ## Open
 
 - The vision name: "Second Renaissance" feels weak. What do we call what we point toward?
-- Member noun.
 - Domain.
 - All visual identity, including the mark.
 
@@ -156,7 +155,7 @@ Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `
 
 - **2R brand narrative** (Google Doc, Sylvie): [link](https://docs.google.com/document/d/1sWb8n6hryXfbT0uB5hGvAct9dqbYPNLJ594JIzAo4uc/edit). This doc's backbone: ambition, why, what/how, difference, who, values, personality. Its colour notes are deliberately not carried over.
 - **SoR Manifesto** (Google Doc): [link](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit). Preface, manifesto, essay.
-- **Canva *Brand Narrative Visual*** (`design/assets/…pdf`): mission, offerings, personas, journey, copy lines.
+- **Canva *Brand Narrative Visual*** (`design/assets/…pdf`): mission, offerings, personas, journey, copy lines. **Superseded by this page (2026-10-12)**; reconciliation tracked in design-34t.38.
 - `comms/2r/brand.md`: narrative, audience, tone.
 - `comms/2r/raw-2026-09-19-re-brand.md`: alchemy, stations.
 - `comms/2r/faq-relation-of-seeds-and-life-itself.md`.

@@ -230,7 +230,7 @@ When: every page. Night, torn in, logo on its disc.
 ```html
 <footer class="site-footer gutter">
   <span class="tear"></span>
-  <div><span class="logo-disc"><img src="system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational renewal, seeding what comes next.</p></div>
+  <div><span class="logo-disc"><img src="system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational rebirth, seeding what comes next.</p></div>
   <div><span class="label">Gather</span><ul><li>…</li></ul></div>
   …
 </footer>

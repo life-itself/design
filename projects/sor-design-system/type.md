@@ -90,7 +90,7 @@ Two ideas did the work, and both came out of reactions to real samples rather th
 
 - **Licence Polyamine and Restora.** Neither is bought. For now pages name the faces and they show only where installed; anyone else sees a fallback. Tracked as `design-34t.2`.
 - **Self-host all four.** Bricolage and Apfel are OFL and can be served directly; the two paid faces need web licences.
-- **Test Restora at working heading size.** Everything reviewed so far was judged as a *billboard* — one line at around 45px. Restora has never been seen at 24px among body copy, which is where it will actually live, and swashes and imperfect letterforms can read busier small than large.
+- **Test Restora at working heading size.** Everything reviewed so far was judged as a *billboard* — one line at around 45px. Restora has never been seen at 24px among body copy, which is where it will actually live, and swashes and imperfect letterforms can read busier small than large. Open-licence stand-ins to compare: [Restora alternatives](examples/type/restora-alternatives.html).
 
 ## Open questions
 
