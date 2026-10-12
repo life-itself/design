@@ -15,7 +15,7 @@ A black swallow in a radiating circle of red fingerprints: many hands around a b
 
 - File: `system/img/logo.png` (the current mark). `logo-inverted.png` is a scripted placeholder for dark grounds, used only by the dark diagram signature until the question below is settled (beads `.24`).
 - Set it on a **white disc** (`.logo-disc`) or a **white square tile**, so it sits on any ground, including night and sunlight.
-- In the header it sits beside the wordmark, set in Polyamine with "of" in Fraunces italic (the site CSS still slants a Polyamine "of"; to update, bead `rbook-8k3.34`):
+- In the header it sits beside the wordmark, set in Polyamine with "of" in Fraunces italic (`.wordmark em` in `components.css`):
 
 ```html
 <a class="wordmark" href="/"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
