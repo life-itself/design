@@ -2,7 +2,7 @@
 
 How Seeds of Renaissance sounds, with the key lines to reuse and examples to copy. Part of the [SoR design system](README.md). The substance (who we are, why, for whom) lives in [brand.md](brand.md); this page is the applied version: what to actually write.
 
-**Status: draft for review (2026-10-05).** Lines marked *decided* come from brand.md or a later decision. Everything else is a proposal.
+**Status: reviewed 2026-10-13 (Rufus).** Lines marked *decided* come from brand.md or a later decision. Everything else is a proposal.
 
 ## The voice in one line
 
@@ -19,8 +19,9 @@ The feel is the same as the visual system's: **grounded hope**. Not doom, not na
 | Dedication | For all the living beings whose heart burns to see a new world emerge. | decided (manifesto) |
 | Short line | Life as an art. | decided (manifesto) |
 | What we are, one sentence | A movement of people making sense of this moment and practising what comes next, together. | proposed (from the home page) |
-| Media house line (banner, channel line) | Exploring crisis and rebirth in this time between worlds. | working; reopened 2026-10-12 (Sylvie: weak): [the media house line](#the-media-house-line) |
-| Podcast intro | This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds. | working; reopened 2026-10-12 (Sylvie: weak): [the media house line](#the-media-house-line) |
+| Media house line (banner, About) | Exploring crisis and rebirth in this time between worlds. | decided 2026-10-13 (kept for the 16 Oct podcast page); Sylvie's redo is open as design-34t.39: [the media house line](#the-media-house-line) |
+| YouTube channel line | Exploring what comes next, one conversation at a time. | decided 2026-10-13 (Rufus); replaces "Podcast, gatherings, magazine" |
+| Podcast intro | This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds. | decided 2026-10-13 with the media house line; same open redo (design-34t.39) |
 | Media House, one line | Language for what you already sense. | proposed (Rufus, 2026-10-08; home page) |
 | Gardens of Change, one line | Find the others who feel the same: monthly calls, courses and local gardens, where we explore and practise what comes next together. | proposed (Rufus, 2026-10-08; home page). Not "company for the journey": the point is finding the others who already feel this, not joining our journey. |
 | To a friend | People who feel the world is falling apart and are tired of the old ways, and instead of doom-scrolling, are figuring out and practising what comes next. | adapted from brand.md |
@@ -31,7 +32,7 @@ The feel is the same as the visual system's: **grounded hope**. Not doom, not na
 
 The line for the podcast, the YouTube banner and channel line, and the About text. It is not the tagline: the tagline speaks for the movement, this line for setting out, exploring, with **crisis** named alongside **rebirth**. It must be on-brand but also powerful, accessible and resonant. Reasoning and the options considered: [voice-notes.md](voice-notes.md).
 
-**Working line** (renewal changed to rebirth 2026-10-12; **reopened 2026-10-12 because Sylvie finds it weak, to be redone**): **Exploring crisis and rebirth in this time between worlds.** The options considered and why: [voice-notes.md](voice-notes.md).
+**Line** (renewal changed to rebirth 2026-10-12; **kept 2026-10-13** for the 16 Oct podcast page; Sylvie finds it weak and a redo stays open as design-34t.39): **Exploring crisis and rebirth in this time between worlds.** The options considered and why: [voice-notes.md](voice-notes.md).
 
 **The ladder.** Write the description first and cut down. The description spells out what *between worlds* means, so the short rungs can stay poetic.
 
@@ -39,7 +40,8 @@ The line for the podcast, the YouTube banner and channel line, and the About tex
 |---|---|
 | Description, 2–3 sentences | Seeds of Renaissance is a conversation exploring crisis and rebirth in this time between worlds: why our civilisation is coming apart, and what might emerge in its place. We talk with thinkers, artists and practitioners about making sense of this moment and practising what comes next. |
 | Spoken intro | This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds. |
-| Banner and channel line | Exploring crisis and rebirth in this time between worlds. |
+| Banner | Exploring crisis and rebirth in this time between worlds. |
+| YouTube channel line | Exploring what comes next, one conversation at a time. (decided 2026-10-13; about setting out, not the movement, so it is not the tagline) |
 
 Keep *civilisational* (the adjective) for the tagline and papers (the tagline reads "civilisational rebirth"); on short lines *worlds*, or the noun (*our civilisation*), carries the scale more lightly.
 
