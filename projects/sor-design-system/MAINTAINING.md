@@ -32,7 +32,7 @@ The issue tree carries only the one-line answer. Longer discussion goes in a fil
 From `projects/sor-design-system`:
 
 ```bash
-python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/build-site.py && fl --yes site
+python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-site.py && fl --yes site
 ```
 
 `build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, woodcuts page, system code and images, examples and the loose files in archive. It leaves out `moodboard/` and the sub-folders of `archive/` (third-party screenshots, uncleared images, large PDFs) and rewrites `.md` links in HTML pages to Flowershow page URLs.
@@ -47,6 +47,7 @@ python3 system/build-specimens.py && python3 system/animals/build-gallery.py && 
 | `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `build-graphics.py`. |
 | `system/woodcuts/` | All woodcut SVGs and the script that draws them. Gallery built by `build-woodcuts.py`. |
 | `system/animals/` | Animal elements (SVG + PNG in four inks), `make-element.sh` to cut a new one, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. |
+| `system/mountains/` | Mountain elements (PNG, plus SVG for the linocut) in their drawn blue, cobalt and black, `elements.json`, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. Working record in `archive/mountains-2026-10/`. |
 | `system/sor.js` | Small behaviours (selected-work picker) |
 | `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
 | `system/build-specimens.py` | Cuts guide.html into `specimens/` |

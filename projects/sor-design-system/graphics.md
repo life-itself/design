@@ -50,4 +50,10 @@ All twenty woodcuts (swallows, mountains, leaves, wind, fruit, people in a circl
 
 Animal woodcuts, linocuts and engravings, cut out of their paper: fox, swan, owls, bear, boar, swallow, hedgehog, snake and more. Each comes in black and the three illustration inks, as an SVG and a transparent 1000px PNG. See every version and open each file in **[the animals gallery](system/animals/gallery.html)**; files, sources and how to add one are in [system/animals/](system/animals/README.md). They follow the same rules as the woodcuts above: one per section at most, punctuation, not wallpaper.
 
+## Mountains
+
+Blue pen, brush and linocut mountains, cut out of their paper: a high peak, a small peak, a peak above mist, a range with contour lines, a 1934 ridge sketch, a brush ridge, and a linocut of peaks over waves (also on its old map). Each comes in the blue it was drawn in, cobalt and black; the linocut also in three lighter blues. See every version in **[the mountains gallery](system/mountains/gallery.html)**; files, colours and how they were made are in [system/mountains/](system/mountains/README.md). A candidate look for a sub-brand.
+
+The drawn blues are an exception for the mountains only (see [colour](colour.md#illustration-inks-graphics-only)): don't retint them in other colours, and don't print other graphics in those blues. Pen and brush drawings are transparent PNGs whose transparency follows the ink, so light hatching stays light; only the linocut has an SVG. Same rules as above: one per section at most.
+
 **Open:** hand-draw the woodcuts, or base them on public-domain prints?

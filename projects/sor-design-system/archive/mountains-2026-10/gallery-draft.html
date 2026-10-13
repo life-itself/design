@@ -1,0 +1,245 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mountain Elements</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: same system as the woodcuts gallery — sticky ground switcher, then large tiles on the chosen ground */
+:root{--bg:#f4f3ef;--fg:#1b1916;--muted:#5f5d63;--rule:#dcdbe3;--chip:#e6e5ec;--accent:#03296f;
+ --ground:#ffffff;--cap:#5f5d63;
+ --display:"Fraunces",Georgia,serif;--body:"Hanken Grotesk",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#131418;--fg:#e9e8ee;--muted:#a3a2ab;--rule:#30313a;--chip:#22232a;--accent:#9fb4ea;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131418;--fg:#e9e8ee;--muted:#a3a2ab;--rule:#30313a;--chip:#22232a;--accent:#9fb4ea;color-scheme:dark}
+body[data-ground="white"]{--ground:#ffffff;--cap:#5f5d63}
+body[data-ground="paper"]{--ground:#fbfaf6;--cap:#625c53}
+body[data-ground="sun"]{--ground:#fbefc4;--cap:#5d5440}
+body[data-ground="red"]{--ground:#c25552;--cap:#fbefc4}
+body[data-ground="night"]{--ground:#171613;--cap:#a49e93}
+body[data-ground="check"]{--ground:repeating-conic-gradient(#e4e4e4 0 25%,#ffffff 0 50%) 0 0/20px 20px;--cap:#5f5d63}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:0 64px}
+header{padding-block:40px 20px;max-width:65ch}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,44px);line-height:1.1;margin:0 0 10px;text-wrap:balance}
+header p{margin:0;color:var(--muted)}
+.tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);padding-block:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:24px}
+.tools span{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-right:6px}
+.tools button{font:inherit;font-size:13px;border:1px solid transparent;background:var(--chip);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer;display:inline-flex;gap:7px;align-items:center}
+.tools button i{width:12px;height:12px;border-radius:50%;border:1px solid var(--rule);display:block}
+.tools button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.tools button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h2{font-family:var(--display);font-weight:400;font-size:24px;margin:8px 0 4px}
+.note{margin:0 0 16px;color:var(--muted);max-width:65ch}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:40px}
+.tile{margin:0;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--ground);display:grid;grid-template-rows:1fr auto;min-width:0}
+.tile .art{padding:24px;display:grid;place-items:center}
+.tile img{max-height:520px;width:auto;max-width:100%}
+figcaption{padding:10px 16px 14px;color:var(--cap);font-size:14px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+figcaption b{font-weight:600}
+figcaption code{font-size:12px;opacity:.85;word-break:break-all}
+.all{display:grid;grid-template-columns:minmax(80px,140px) repeat(3,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:40px}
+.all>*{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.all-head{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);padding:8px 12px}
+.all-name{padding:12px;font-family:var(--display);font-size:17px;line-height:1.2;display:flex;flex-direction:column;gap:2px}
+.all-empty{background:var(--bg)}
+.all-name span{font-family:var(--body);font-size:13px;color:var(--muted)}
+.all .tile .art{padding:12px;height:clamp(140px,26vw,300px)}
+.all .tile img{max-height:100%;height:100%;object-fit:contain}
+@media (max-width:560px){.all{grid-template-columns:repeat(3,minmax(0,1fr))}.all-head:first-child{display:none}.all-name{grid-column:1/-1}}
+.src{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:16px}
+.src figure{margin:0}
+.src img{display:block;border:1px solid var(--rule)}
+.src figcaption{color:var(--muted);padding-inline:0}
+</style>
+
+<header>
+  <h1>Mountain elements</h1>
+  <p>Blue pen-and-ink and linocut mountains for a possible Seeds of Renaissance sub-brand. The paper has been taken out, so each drawing is a transparent PNG that sits on any ground. Switch the ground to check how they print.</p>
+</header>
+
+<div class="tools" role="group" aria-label="Background">
+  <span>Ground</span>
+  <button data-g="white" aria-pressed="true"><i style="background:#fff"></i>White</button>
+  <button data-g="paper" aria-pressed="false"><i style="background:#fbfaf6"></i>Paper</button>
+  <button data-g="sun" aria-pressed="false"><i style="background:#fbefc4"></i>Pale yellow</button>
+  <button data-g="red" aria-pressed="false"><i style="background:#c25552"></i>Print red</button>
+  <button data-g="night" aria-pressed="false"><i style="background:#171613"></i>Night</button>
+  <button data-g="check" aria-pressed="false"><i style="background:repeating-conic-gradient(#ccc 0 25%,#fff 0 50%) 0 0/6px 6px"></i>Transparency</button>
+</div>
+
+<section>
+  <h2>All elements</h2>
+  <p class="note">Every mountain element at once, one row per drawing, one column per ink. Details for each follow below.</p>
+  <div class="all">
+    <div class="all-head"></div><div class="all-head">Drawing's own blue</div><div class="all-head">Cobalt</div><div class="all-head">Black</div>
+    <div class="all-name">High peak<span>pen hatching</span></div>
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-blue.png" alt="High peak, pen blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-cobalt.png" alt="High peak, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-black.png" alt="High peak, black"></div></figure>
+    <div class="all-name">Small peak<span>pen hatching</span></div>
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-violet.png" alt="Small peak, violet blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-cobalt.png" alt="Small peak, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-black.png" alt="Small peak, black"></div></figure>
+    <div class="all-name">Grid peak<span>fine line</span></div>
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-blue.png" alt="Grid peak, deep blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-cobalt.png" alt="Grid peak, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-black.png" alt="Grid peak, black"></div></figure>
+    <div class="all-name">Contour range<span>pen line</span></div>
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-navy.png" alt="Contour range, navy"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-cobalt.png" alt="Contour range, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-black.png" alt="Contour range, black"></div></figure>
+    <div class="all-name">1934 ridge<span>pen hatching</span></div>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-blue.png" alt="1934 ridge, faded blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-cobalt.png" alt="1934 ridge, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-black.png" alt="1934 ridge, black"></div></figure>
+    <div class="all-name">1934 ridge, with note<span>pen hatching</span></div>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-blue.png" alt="1934 ridge, with note, faded blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-cobalt.png" alt="1934 ridge, with note, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-black.png" alt="1934 ridge, with note, black"></div></figure>
+    <div class="all-name">Brush ridge<span>brush and wash</span></div>
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-ultramarine.png" alt="Brush ridge, ultramarine"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-cobalt.png" alt="Brush ridge, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-black.png" alt="Brush ridge, black"></div></figure>
+    <div class="all-name">Peaks and waves<span>linocut, ink only</span></div>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-blue.png" alt="Peaks and waves, blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-cobalt.png" alt="Peaks and waves, cobalt"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-black.png" alt="Peaks and waves, black"></div></figure>
+    <div class="all-name">Peaks and waves<span>lighter blues</span></div>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-mid-blue.png" alt="Peaks and waves, mid blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-light-blue.png" alt="Peaks and waves, light blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-pale-blue.png" alt="Peaks and waves, pale blue"></div></figure>
+    <div class="all-name">Peaks and waves<span>linocut on map</span></div>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-map-blue.png" alt="Peaks and waves on map, blue"></div></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-map-black.png" alt="Peaks and waves on map, black"></div></figure>
+    <div class="all-empty"></div>
+  </div>
+</section>
+
+<section>
+  <h2>High peak</h2>
+  <p class="note">A single steep peak in dense ballpoint hatching, with clouds and a stand of pines.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-blue.png" alt="High peak, pen blue"></div>
+      <figcaption><b>Pen blue</b><span>#10248a</span><code>high-peak-pen-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-cobalt.png" alt="High peak, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>high-peak-pen-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/high-peak-pen-black.png" alt="High peak, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>high-peak-pen-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>Small peak</h2>
+  <p class="note">A compact peak in quick violet-blue ballpoint strokes. Sits well at small sizes.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-violet.png" alt="Small peak, violet blue"></div>
+      <figcaption><b>Violet blue</b><span>#1d14b8</span><code>small-peak-pen-violet.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-cobalt.png" alt="Small peak, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>small-peak-pen-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/small-peak-pen-black.png" alt="Small peak, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>small-peak-pen-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>Grid peak</h2>
+  <p class="note">A tall peak above a band of mist, drawn in fine lines. The grid paper behind it has been removed, and the base fades out softly.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-blue.png" alt="Grid peak, deep blue"></div>
+      <figcaption><b>Deep blue</b><span>#0b2c8f</span><code>peak-grid-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-cobalt.png" alt="Grid peak, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>peak-grid-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peak-grid-black.png" alt="Grid peak, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>peak-grid-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>Contour range</h2>
+  <p class="note">A whole range of peaks in pen, with contour lines drifting through the sky. Busy, so best large or as a background.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-navy.png" alt="Contour range, navy"></div>
+      <figcaption><b>Navy</b><span>#14245f</span><code>range-contours-pen-navy.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-cobalt.png" alt="Contour range, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>range-contours-pen-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/range-contours-pen-black.png" alt="Contour range, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>range-contours-pen-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>1934 ridge</h2>
+  <p class="note">A ridge sketched on the spot in parallel hatching. The handwritten note is removed here.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-blue.png" alt="1934 ridge, faded blue"></div>
+      <figcaption><b>Faded blue</b><span>#2e3977</span><code>ridge-1934-pen-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-cobalt.png" alt="1934 ridge, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>ridge-1934-pen-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-black.png" alt="1934 ridge, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>ridge-1934-pen-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>1934 ridge, with note</h2>
+  <p class="note">The same sketch keeping the note: “26 sept 34, 6h soir, Plateau de Paris”.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-blue.png" alt="1934 ridge, with note, faded blue"></div>
+      <figcaption><b>Faded blue</b><span>#2e3977</span><code>ridge-1934-pen-note-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-cobalt.png" alt="1934 ridge, with note, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>ridge-1934-pen-note-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-1934-pen-note-black.png" alt="1934 ridge, with note, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>ridge-1934-pen-note-black.png</code></figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>Brush ridge</h2>
+  <p class="note">A loose ridge in bold brush strokes and watery wash. The paler wash stays semi-transparent, so the ground shows through it.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-ultramarine.png" alt="Brush ridge, ultramarine"></div>
+      <figcaption><b>Ultramarine</b><span>#0f22b5</span><code>ridge-brush-ultramarine.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-cobalt.png" alt="Brush ridge, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>ridge-brush-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/ridge-brush-black.png" alt="Brush ridge, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>ridge-brush-black.png</code></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Peaks and waves</h2>
+  <p class="note">A bold linocut of jagged peaks over curling waves, printed on an old map. Ink-only versions drop both the sky and the map paper. The two map versions keep the map inside the mountains and remove only the sky. Lighter blues suit pale grounds and backgrounds.</p>
+  <div class="tiles">
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-blue.png" alt="Peaks and waves, pen blue"></div>
+      <figcaption><b>Pen blue</b><span>#10248a</span><code>peaks-waves-linocut-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-cobalt.png" alt="Peaks and waves, cobalt"></div>
+      <figcaption><b>Cobalt</b><span>#03296f</span><code>peaks-waves-linocut-cobalt.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-black.png" alt="Peaks and waves, black"></div>
+      <figcaption><b>Black</b><span>#1b1916</span><code>peaks-waves-linocut-black.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-mid-blue.png" alt="Peaks and waves, mid blue"></div>
+      <figcaption><b>Mid blue</b><span>#2f5bc4</span><code>peaks-waves-linocut-mid-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-light-blue.png" alt="Peaks and waves, light blue"></div>
+      <figcaption><b>Light blue</b><span>#6f93dc</span><code>peaks-waves-linocut-light-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-pale-blue.png" alt="Peaks and waves, pale blue"></div>
+      <figcaption><b>Pale blue</b><span>#a9c0ea</span><code>peaks-waves-linocut-pale-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-map-blue.png" alt="Peaks and waves, blue on map"></div>
+      <figcaption><b>Blue on map</b><span>ink #10248a, map kept</span><code>peaks-waves-linocut-map-blue.png</code></figcaption></figure>
+    <figure class="tile"><div class="art"><img src="elements/peaks-waves-linocut-map-black.png" alt="Peaks and waves, black on map"></div>
+      <figcaption><b>Black on map</b><span>original print</span><code>peaks-waves-linocut-map-black.png</code></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Sources</h2>
+  <p class="note">The original images, kept in the mood board.</p>
+  <div class="src">
+    <figure><img src="source/01-high-peak-pen-blue.webp" alt="Original: High peak, blue pen"><figcaption>01 · High peak, blue pen</figcaption></figure>
+    <figure><img src="source/02-ridge-brush-ultramarine.webp" alt="Original: Ridge, ultramarine brush"><figcaption>02 · Ridge, ultramarine brush</figcaption></figure>
+    <figure><img src="source/03-peak-grid-blue.webp" alt="Original: Peak on grid paper"><figcaption>03 · Peak on grid paper</figcaption></figure>
+    <figure><img src="source/04-small-peak-pen-violet.png" alt="Original: Small peak, violet pen"><figcaption>04 · Small peak, violet pen</figcaption></figure>
+    <figure><img src="source/05-range-contours-pen-navy.webp" alt="Original: Range with contour lines"><figcaption>05 · Range with contour lines</figcaption></figure>
+    <figure><img src="source/06-ridge-1934-pen-blue.webp" alt="Original: Ridge, 26 Sept 1934"><figcaption>06 · Ridge, 26 Sept 1934</figcaption></figure>
+    <figure><img src="source/07-peaks-waves-linocut-map.webp" alt="Original: linocut of peaks and waves on a map"><figcaption>07 · Peaks and waves, linocut on map</figcaption></figure>
+  </div>
+</section>
+
+<script>
+const btns=[...document.querySelectorAll('.tools button')];
+function set(g){document.body.dataset.ground=g;btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.g===g));try{localStorage.setItem('ground',g)}catch(e){}}
+btns.forEach(b=>b.addEventListener('click',()=>set(b.dataset.g)));
+let g='white';try{g=localStorage.getItem('ground')||'white'}catch(e){}
+set(g);
+</script>
+
+</body></html>

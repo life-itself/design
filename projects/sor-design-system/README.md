@@ -42,7 +42,7 @@ A page is a stack of full-width grounds, often joined by torn edges. One night s
 
 ## Woodcut graphics
 
-Printmade marks in ink or chalk, and a red set: the swallow, the seal, seeds and clusters. Animals in black, blue, green and mustard. [Using them →](graphics.md) · [All twenty woodcuts →](woodcuts.html) · [Animals →](system/animals/gallery.html)
+Printmade marks in ink or chalk, and a red set: the swallow, the seal, seeds and clusters. Animals in black, blue, green and mustard. Mountains in their drawn blues. [Using them →](graphics.md) · [All twenty woodcuts →](woodcuts.html) · [Animals →](system/animals/gallery.html) · [Mountains →](system/mountains/gallery.html)
 
 <iframe class="specimen" src="specimens/graphics.html" style="aspect-ratio:1000/1200" loading="lazy" title="Woodcut graphics, rendered"></iframe>
 

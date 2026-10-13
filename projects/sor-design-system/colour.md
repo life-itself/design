@@ -42,6 +42,8 @@ The red is decided: `#e5201c`, the logo red, kept as the site's red (decided 202
 
 These are the colours a woodcut graphic may be printed in besides black (and chalk on night). They are **only** for graphics: never text, buttons, rules or backgrounds. One illustration ink per graphic, and keep them occasional: black stays the default. Every animal in [system/animals/](system/animals/README.md) comes in all four (decided 2026-10-13).
 
+**Exception, mountains only:** the [mountain elements](system/mountains/README.md) also come in the blue each was drawn in (six blues from navy to violet), plus three lighter blues on the linocut, chosen to keep each drawing's character. They are not illustration inks: don't use them on any other graphic. This is an open tension with the rule above, to be settled with the sub-brand question (decided 2026-10-13, Beads `design-34t.43`).
+
 ## Proportion
 
 By area on the home page, leaving out photographs: about 64% white and paper, 14% sunlight, 16% night, 5% ink, 1% red. Photographs carry most of the colour.
