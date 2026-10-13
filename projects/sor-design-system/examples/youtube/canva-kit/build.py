@@ -31,8 +31,8 @@ RINGS = [(120, 700, 700, 15), (0, 720, 480, 40)]         # fingerprint rings: ar
 CLEAR = (10, 40, 710, 480)                                # the prints fade out of this area, behind the words
 
 
-def background():
-    return sw.white(W, H) + sw.prints(SYS, RINGS) + sw.swallows(SYS, **SW)
+def background(wash=False):
+    return sw.white(W, H, wash) + sw.prints(SYS, RINGS) + sw.swallows(SYS, **SW)
 
 
 def logo():
@@ -87,7 +87,9 @@ def guides():
 
 PAGES = {
     "01-background": background(),
+    "01-background-wash": background(wash=True),
     "02-background-with-logo": background() + logo(),
+    "02-background-with-logo-wash": background(wash=True) + logo(),
     "03-swallows": sw.swallows(SYS, **SW),
     "04-fingerprints": sw.prints(SYS, RINGS),
     "05-logo": logo(),

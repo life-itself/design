@@ -1,12 +1,14 @@
 """The swallows-and-fingerprints ground, shared by the podcast thumbnail kit and the Instagram templates.
 
-White, the black swallow engraving rising from the bottom-left corner, the logo's fingerprints
+Sunlight (the system's pale yellow, --sunlight; chosen 13 October 2026 over plain white), the black swallow engraving rising from the bottom-left corner, the logo's fingerprints
 faded to 20% around it, and a clear zone where the words go. Each function returns an SVG fragment;
 `sys` is the relative path from the calling page to system/.
 
 Used by examples/youtube/canva-kit/build.py and examples/social/instagram/build.py.
 """
 
+GROUND = "#fbefc4"               # --sunlight. A paper-to-sunlight wash (GROUND_WASH) is the gentler alternative
+GROUND_WASH = ("#fbfaf6", "#f6e2a4")
 PRINTS_OPACITY = 0.2
 SWALLOWS_ASPECT = 0.922          # height / width of swallows-flock-engraving-black.png
 LOCKUP_ASPECT = 211 / 1200       # height / width of the horizontal lockup
@@ -28,8 +30,13 @@ def defs(W, H, clear=None):
 </defs>"""
 
 
-def white(W, H):
-    return f'<rect width="{W}" height="{H}" fill="#fff"/>'
+def white(W, H, wash=False):
+    """The ground: sunlight, or the paper-to-sunlight wash (white behind the words, warm towards the bottom right)."""
+    if not wash:
+        return f'<rect width="{W}" height="{H}" fill="{GROUND}"/>'
+    a, b = GROUND_WASH
+    return (f'<linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop offset=".3" stop-color="{a}"/><stop offset="1" stop-color="{b}"/></linearGradient>'
+            f'<rect width="{W}" height="{H}" fill="url(#wash)"/>')
 
 
 def prints(sys, rings, opacity=PRINTS_OPACITY):

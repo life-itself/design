@@ -1,6 +1,6 @@
 # Podcast thumbnail: Canva kit
 
-Everything needed to make a Seeds of Renaissance podcast thumbnail in Canva: the black swallows rising from the bottom-left corner through the logo's fingerprints, faded, on white; the quote, the guest's name and the logo above them; the guest on the right. Chosen 12–13 October 2026. The same ground is used for the [Instagram posts](../../social/instagram/README.md). The exploration that led here is archived in [archive/podcast-thumbnails-2026-10/](../../../archive/podcast-thumbnails-2026-10/README.md).
+Everything needed to make a Seeds of Renaissance podcast thumbnail in Canva: the black swallows rising from the bottom-left corner through the logo's fingerprints, faded, on sunlight; the quote, the guest's name and the logo above them; the guest on the right. Chosen 12–13 October 2026. The same ground is used for the [Instagram posts](../../social/instagram/README.md). The exploration that led here is archived in [archive/podcast-thumbnails-2026-10/](../../../archive/podcast-thumbnails-2026-10/README.md).
 
 ![The finished thumbnail](png/example-one-guest.png)
 
@@ -10,7 +10,8 @@ Every PNG is the full thumbnail size (2560 × 1440, twice 1280 × 720, so it sta
 
 | File | What it is | Use |
 |---|---|---|
-| `png/01-background.png` | White, faded fingerprints, swallows | **The usual start.** One layer for the whole background |
+| `png/01-background.png` | Sunlight, faded fingerprints, swallows | **The usual start.** One layer for the whole background |
+| `png/01-background-wash.png`, `02-background-with-logo-wash.png` | The same on a paper-to-sunlight wash | The gentler alternative: white behind the words, warm towards the bottom right |
 | `png/02-background-with-logo.png` | The same with the logo already placed | Even quicker: then add only the photo and the words |
 | `png/03-swallows.png` | The swallows alone, transparent | If you want to move or resize the flock |
 | `png/04-fingerprints.png` | The faded fingerprints alone, transparent | The same, for the fingerprints |
@@ -40,15 +41,15 @@ Every PNG is the full thumbnail size (2560 × 1440, twice 1280 × 720, so it sta
 
 ## The logo
 
-The horizontal lockup (mark and name), straight on the white with no disc, under the guest's name at x 80, y 405, 330 px wide, with **PODCAST** after it on the same line in Polyamine at the height of the name's capitals. It's part of `02-background-with-logo.png` and `05-logo.png`, so in Canva it never needs placing by hand.
+The horizontal lockup (mark and name), straight on the ground with no disc, under the guest's name at x 80, y 405, 330 px wide, with **PODCAST** after it on the same line in Polyamine at the height of the name's capitals. It's part of `02-background-with-logo.png` and `05-logo.png`, so in Canva it never needs placing by hand.
 
 ## Rules in short
 
-- White ground; the swallows rise from the bottom left; the fingerprints stay faint.
+- Sunlight ground (or the wash); the swallows rise from the bottom left; the fingerprints stay faint.
 - One face (or two for a conversation), cut out, black and white, on the right.
 - The quote is the biggest text: three to five words. Don't repeat the video title; the title says the topic, the thumbnail the hook.
 - No other logos, labels or episode numbers; no arrows, shock faces or extra colours.
 
 ## Rebuilding the kit
 
-`./export.sh` runs `build.py` (one page per layer in `src/`) and screenshots each with headless Chrome into `png/`. The ground (white, swallows, fingerprints, logo) is shared with the Instagram kit in `system/swallows.py`; sizes and positions are at the top of `build.py`. The fingerprints are `system/img/fingerprints-red.png`, the new mark's prints without the bird. The guest photo is a placeholder. The swallow engraving is traced from a web image with no rights cleared: re-source or redraw it before public use.
+`./export.sh` runs `build.py` (one page per layer in `src/`) and screenshots each with headless Chrome into `png/`. The ground (sunlight, swallows, fingerprints, logo) is shared with the Instagram kit in `system/swallows.py`; sizes and positions are at the top of `build.py`. The fingerprints are `system/img/fingerprints-red.png`, the new mark's prints without the bird. The guest photo is a placeholder. The swallow engraving is traced from a web image with no rights cleared: re-source or redraw it before public use.
