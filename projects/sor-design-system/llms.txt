@@ -13,10 +13,10 @@ To build something: read BUILD.md first, open the guide for what you are making 
 
 - [feel.md](https://sor-design-system-rufuspollock.flowershow.me/feel.md): grounded hope, what we are not, registers, principles
 - [voice.md](https://sor-design-system-rufuspollock.flowershow.me/voice.md): how we sound, key lines, rewrites, calls to action (draft)
-- [colour.md](https://sor-design-system-rufuspollock.flowershow.me/colour.md): grounds, inks and the one accent, with roles and rules
+- [colour.md](https://sor-design-system-rufuspollock.flowershow.me/colour.md): grounds, inks, the one accent and the illustration inks for graphics, with roles and rules
 - [type.md](https://sor-design-system-rufuspollock.flowershow.me/type.md): the four faces, the scale, and why
 - [layout.md](https://sor-design-system-rufuspollock.flowershow.me/layout.md): grounds and rhythm, torn edges, grid and spacing
-- [graphics.md](https://sor-design-system-rufuspollock.flowershow.me/graphics.md): woodcut swallow, seal, seeds and clusters, and how to use them
+- [graphics.md](https://sor-design-system-rufuspollock.flowershow.me/graphics.md): woodcut swallow, seal, seeds and clusters, the animal woodcuts (gallery at https://sor-design-system-rufuspollock.flowershow.me/system/animals/gallery.html), and how to use them
 - [photography.md](https://sor-design-system-rufuspollock.flowershow.me/photography.md): what to choose and avoid (all current photos are placeholders)
 - [logo.md](https://sor-design-system-rufuspollock.flowershow.me/logo.md): the chosen logo, colourways, lockups, files and placement; every file shown in logos.html
 - [components.md](https://sor-design-system-rufuspollock.flowershow.me/components.md): every component, when to use it, HTML to copy
