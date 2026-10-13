@@ -9,9 +9,9 @@ Whole pages and assets built only from the system: the test that the system is c
 | Kind | What it covers | Guide | Examples | Status | Beads |
 |---|---|---|---|---|---|
 | **Website** | Pages: home, manifesto, gatherings, join, magazine, white paper | [website.md](website.md) | [below](#website) | ✅ **v0.1 done.** Sylvie's notes (white default, torn edges often) still to apply | `.14` |
-| **Social media** | Announcements and posters in 16:9, 4:5, 1:1, 9:16; Instagram, LinkedIn, Substack, link previews, profile banners; the Canva kit | [social.md](social.md) | — | ⏳ **To build**, brief ready | `.15` |
+| **Social media** | Announcements and posters in 16:9, 4:5, 1:1, 9:16; Instagram, LinkedIn, Substack, link previews, profile banners; the Canva kit | [social.md](social.md) | [Instagram kit](examples/social/instagram/README.md) | 🚧 **Instagram done** (4:5, 1:1, Canva kit); stories, LinkedIn, banners to do | `.15` |
 | **YouTube** | Video thumbnails, channel banner, avatar, lower third, watermark | [youtube.md](youtube.md) | [below](#youtube) | 🚧 **First pass done**, polish in progress | `.5` `.6` |
-| **Podcast** | Show art (3000²), episode art, the video guest cover | [podcast.md](podcast.md) | guest cover in [examples/youtube/](examples/youtube/index.html) | 🚧 **Stub**; 16:9 guest cover first pass done | `.16` `.8` |
+| **Podcast** | Episode cover (YouTube), episode posts (Instagram), show art (3000²) | [podcast.md](podcast.md) | [podcast kit](examples/youtube/canva-kit/README.md) | ✅ **Episode cover and posts final** (13 Oct); show art next | `.16` `.8` |
 | **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
 | **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **v0.1 done**: the Wisdom paper; A3 poster later | `.22` `.28` |
 | **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | ✅ **v0.1 done**: signature, type, drawing style, charts with data | `.20` `.25` `.26` |
@@ -38,10 +38,18 @@ Pages for the Seeds of Renaissance website, one per register.
 
 Thumbnails, podcast covers and channel art. What we need, what exists and what's next: [youtube.md](youtube.md).
 
-<iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/522" loading="lazy" title="YouTube examples"></iframe>
+<iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/985" loading="lazy" title="YouTube examples"></iframe>
 
 - [Thumbnails and podcast covers](examples/youtube/index.html), 1280×720, full size and in a feed.
 - [Channel art](examples/youtube/channel.html): banner, avatar, lower third, watermark.
+
+## Social
+
+Instagram posts on the swallows-and-fingerprints ground, as a Canva kit. Rules, sizes and what's left: [social.md](social.md).
+
+<iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
+
+- [Instagram posts](examples/social/instagram/index.html): podcast episode, quote card, announcement, statement, carousel; 4:5 and 1:1. Canva kit: [README](examples/social/instagram/README.md).
 
 ## Diagrams
 

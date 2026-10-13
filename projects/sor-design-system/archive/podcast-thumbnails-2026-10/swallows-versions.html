@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swallows Thumbnail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<style>
+/* Page chrome only. Each thumbnail is a 1280 × 720 SVG built by the script below. */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.55 var(--font-body);padding:0 16px 80px}
+.wrap{max-width:1180px;margin:auto}
+header{padding:44px 0 8px;max-width:72ch}
+h1{font:400 clamp(32px,5vw,56px)/1.02 var(--font-display);margin:8px 0 14px}
+h2{font:400 26px/1.1 var(--font-display);margin:30px 0 6px}
+.eb{font:500 12px var(--font-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header p{color:var(--muted);margin:0 0 12px}
+.v{display:grid;gap:10px;margin-top:22px}
+.fr{border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--rule);line-height:0}
+svg.th{display:block;width:100%;height:auto}
+.cap{font-size:14px;color:var(--muted)}
+.cap b{color:var(--ink);font-weight:600}
+.yt{font-family:Roboto,Arial,sans-serif;border-radius:10px;padding:16px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.yt.light{background:#fff;color:#0f0f0f;box-shadow:0 0 0 1px var(--rule)}
+.yt.dark{background:#0f0f0f;color:#f1f1f1}
+.tf{position:relative;overflow:hidden;line-height:0}
+.dur{position:absolute;right:4px;bottom:4px;background:rgb(0 0 0/.8);color:#fff;font:500 12px/1 Roboto,Arial,sans-serif;padding:3px 4px;border-radius:4px}
+.card{width:360px;max-width:100%;display:grid;gap:10px}.card .tf{border-radius:12px}
+.card b,.side b{font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card b{font-size:16px;line-height:1.375}
+.card small,.side small{display:block;font-size:13px;opacity:.65}
+.side{display:grid;grid-template-columns:168px minmax(0,1fr);gap:8px;width:400px;max-width:100%;line-height:1.4}
+.side .tf{border-radius:8px}.side b{font-size:14px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:12px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <clipPath id="cp-circle" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".5"/></clipPath>
+  <!-- Shoulders dissolve into the white, hiding the photo's cropped edges when faces are moved or mirrored -->
+  <linearGradient id="fadeDown" x1="0" y1="0" x2="0" y2="1"><stop offset=".68" stop-color="#fff"/><stop offset=".92" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <filter id="grey"><feColorMatrix type="saturate" values="0"/></filter>
+  <filter id="blur24" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+  <mask id="mFace" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#fadeDown)"/></mask>
+</defs></svg>
+
+<div class="wrap">
+<header>
+  <div class="eb">Seeds of Renaissance · YouTube · podcast thumbnails</div>
+  <h1>Swallows flying in</h1>
+  <p>Plain white ground. The woodcut flock of swallows flies in from the top left, the quote sits below it, the guest's name under the quote, and the guest on the right. Versions 1 to 3: black swallows, blue swallows, and a larger flock cropped harder by the corner. Versions 4 to 7 build on 1 and 2: two speakers, and the blue version with the words in the same blue. Versions 8 to 11 add the logo's fingerprints, very faded, around the flock.</p>
+  <p>With the swallows in the top-left corner, the logo moves to the bottom left, which YouTube leaves clear (the duration badge is bottom right). Quote, name and photo are placeholders; the engraving is a draft whose rights are not yet cleared.</p>
+</header>
+<div id="out"></div>
+</div>
+
+<script>
+(function () {
+  var IMG = "../../system/img/";
+  var FACE = IMG + "otm-guest-placeholder-cut.png";
+  var SW = { black: "../../system/woodcuts/elements/swallows-flock-engraving-black.png", blue: "../../system/woodcuts/elements/swallows-flock-engraving-blue.png" };
+  var INK = "#1b1916", BLUE = "#274191";
+
+  var ctx = document.createElement("canvas").getContext("2d");
+  function fit(lines, size, maxw) {
+    ctx.font = size + 'px "Polyamine", Georgia, serif';
+    var w = Math.max.apply(null, lines.map(function (l) { return ctx.measureText(l).width; }));
+    return w > maxw ? Math.floor(size * maxw / w) : size;
+  }
+
+  // o: swallows {src, x, y, w, rot}, quote {lines, x, cy, size, maxw}
+  function thumb(o) {
+    var b = '<rect width="1280" height="720" fill="#fff"/>';
+    var q = o.q, size = fit(q.lines, q.size, q.maxw), cap = size * 0.72, top = q.cy - (cap + (q.lines.length - 1) * size) / 2;
+    if (o.prints) {
+      var p = o.prints, pc = p.s / 2;
+      b += '<image href="' + IMG + 'logo.png" x="' + (p.x - pc) + '" y="' + (p.y - pc) + '" width="' + p.s + '" height="' + p.s + '" opacity="' + p.o + '"' + (p.grey ? ' filter="url(#grey)"' : "") + ' transform="rotate(' + (p.rot || 0) + " " + p.x + " " + p.y + ')"/>';
+      b += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + Math.round(p.s * 0.22) + '" fill="#fff" filter="url(#blur6)"/>';
+      // A soft white clearing behind the words: the prints fade out before they reach the text
+      b += '<rect x="' + (q.x - 40) + '" y="' + Math.round(top - 40) + '" width="' + (q.maxw + 90) + '" height="' + Math.round(cap + (q.lines.length - 1) * size + 140) + '" rx="40" fill="#fff" filter="url(#blur24)"/>';
+    }
+    var s = o.sw, h = Math.round(s.w * 0.922), cx = s.x + s.w / 2, cy = s.y + h / 2;
+    b += '<image href="' + s.src + '" x="' + s.x + '" y="' + s.y + '" width="' + s.w + '" height="' + h + '" transform="rotate(' + s.rot + " " + cx + " " + cy + ')"/>';
+    (o.faces || [{ x: 560, y: 10, s: 800 }]).forEach(function (f) {
+      var t = f.flip ? ' transform="translate(' + (2 * f.x + f.s) + ' 0) scale(-1 1)"' : "";
+      b += '<image href="' + FACE + '" x="' + f.x + '" y="' + f.y + '" width="' + f.s + '" height="' + f.s + '"' + t + (f.fade ? ' mask="url(#mFace)"' : "") + "/>";
+    });
+    var ink = o.ink || INK;
+    q.lines.forEach(function (l, i) {
+      b += '<text x="' + q.x + '" y="' + (top + cap + i * size).toFixed(1) + '" font-family="Polyamine, Georgia, serif" font-size="' + size + '" fill="' + ink + '">' + l + "</text>";
+    });
+    var nameY = Math.round(top + cap + (q.lines.length - 1) * size + 78);
+    b += '<text x="' + q.x + '" y="' + nameY + '" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="600" font-size="' + (o.nameSize || 46) + '" fill="' + ink + '">' + (o.name || "Guest Name") + "</text>";
+    // Logo on its white disc, bottom left; a hairline ring so the disc still reads on white
+    b += '<circle cx="128" cy="646" r="38" fill="#fff" stroke="#e0dacf" stroke-width="2"/><image href="' + IMG + 'logo.png" x="92" y="610" width="72" height="72" clip-path="url(#cp-circle)"/>';
+    return '<svg class="th" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' + q.lines.join(" ") + ", " + (o.name || "Guest Name") + '">' + b + "</svg>";
+  }
+
+  var V = [
+    { title: "1 · Black swallows", cap: "The flock in black, entering from the corner and tilted so the birds fly down towards the quote.", dur: "1:12:04",
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 } },
+    { title: "2 · Blue swallows", cap: "The same in the engraving's own blue (#274191): softer, and the quote stays the strongest dark.", dur: "58:31",
+      sw: { src: SW.blue, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 } },
+    { title: "3 · Larger flock", cap: "A bigger flock cropped harder by the corner, so more birds are still arriving; the quote sits a little lower.", dur: "47:22",
+      sw: { src: SW.black, x: -230, y: -360, w: 760, rot: 22 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 420, size: 124, maxw: 520 } },
+
+    { title: "4 · Black swallows, two speakers, overlapping", cap: "Version 1 for a conversation: two faces on the right, one in front and one just behind, turned towards each other. The quote column narrows a little. The second face is the same placeholder mirrored; swap in real photos.", dur: "1:31:10",
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 470 },
+      faces: [{ x: 520, y: 70, s: 640, flip: true, fade: true }, { x: 800, y: 40, s: 700, fade: true }], name: "Name One & Name Two", nameSize: 40 },
+    { title: "5 · Black swallows, two speakers, side by side", cap: "The two faces the same size, side by side and slightly apart: equal voices rather than host and guest.", dur: "1:31:10",
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 440 },
+      faces: [{ x: 480, y: 120, s: 560, flip: true, fade: true }, { x: 800, y: 120, s: 560, fade: true }], name: "Name One & Name Two", nameSize: 40 },
+    { title: "6 · Blue swallows, blue words", cap: "Version 2 with the quote and the name in the swallows' blue (#274191), so birds and words read as one print in one ink. The face stays black and white.", dur: "58:31",
+      sw: { src: SW.blue, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 }, ink: BLUE },
+    { title: "7 · Blue swallows, blue words, two speakers", cap: "The blue version for a conversation, with the overlapping pair from 4.", dur: "1:31:10",
+      sw: { src: SW.blue, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 470 }, ink: BLUE,
+      faces: [{ x: 520, y: 70, s: 640, flip: true, fade: true }, { x: 800, y: 40, s: 700, fade: true }], name: "Name One & Name Two", nameSize: 40 },
+    { title: "8 · Black swallows in the fingerprints", cap: "Version 1 with the logo's ring of fingerprints, very faded, around the flock: the birds fly out of the ring as they do in the logo. The logo's own swallow is masked out. The faint red is a stretch of colour.md.", dur: "1:12:04",
+      prints: { x: 150, y: 90, s: 760, o: 0.2, rot: 15 },
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 } },
+    { title: "9 · Fingerprints in grey", cap: "The same ring in grey instead of red: quieter, more like a print texture, and the logo keeps the only red.", dur: "1:12:04",
+      prints: { x: 150, y: 90, s: 760, o: 0.16, rot: 15, grey: true },
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 } },
+    { title: "10 · A wide arc from the corner", cap: "A much larger ring centred on the corner, so only a quarter arc of fingerprints shows, sweeping round the flock and above the quote.", dur: "1:12:04",
+      prints: { x: 0, y: 0, s: 1180, o: 0.16, rot: 0 },
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 520 } },
+    { title: "11 · Two speakers in the fingerprints", cap: "The overlapping pair from 4 with the faded ring from 8.", dur: "1:31:10",
+      prints: { x: 150, y: 90, s: 760, o: 0.2, rot: 15 },
+      sw: { src: SW.black, x: -130, y: -215, w: 590, rot: 20 }, q: { lines: ["Hope isn't", "optimism"], x: 88, cy: 405, size: 120, maxw: 470 },
+      faces: [{ x: 520, y: 70, s: 640, flip: true, fade: true }, { x: 800, y: 40, s: 700, fade: true }], name: "Name One & Name Two", nameSize: 40 }
+  ];
+
+  function frame(svg, dur) { return '<div class="tf">' + svg + '<span class="dur">' + dur + "</span></div>"; }
+  function build() {
+    var out = document.getElementById("out"), titleText = "Guest Name on why hope is not the same as optimism | Seeds of Renaissance Podcast";
+    V.forEach(function (v) {
+      var svg = thumb(v), sec = document.createElement("section");
+      sec.className = "v";
+      sec.innerHTML = "<h2>" + v.title + '</h2><div class="fr">' + svg + '</div><div class="cap">' + v.cap + "</div>" +
+        '<div class="pair">' + ["light", "dark"].map(function (m) {
+          return '<div class="yt ' + m + '"><div class="card">' + frame(svg, v.dur) + "<div><b>" + titleText + "</b><small>Seeds of Renaissance · 9.2K views</small></div></div>" +
+            '<div class="side">' + frame(svg, v.dur) + "<div><b>" + titleText + "</b><small>Seeds of Renaissance</small></div></div></div>";
+        }).join("") + "</div>";
+      out.appendChild(sec);
+    });
+  }
+  Promise.all([document.fonts.load('100px "Polyamine"'), document.fonts.load('600 46px "Bricolage Grotesque"')])
+    .catch(function () {}).then(function () { return document.fonts.ready; }).then(build);
+})();
+</script>
+</body>
+</html>

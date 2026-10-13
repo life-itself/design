@@ -68,7 +68,7 @@ Whole pages and assets built only from the system: the website is done, YouTube,
 
 Building a paper? [How we build a paper →](publishing.md): design, paper anatomy, editorial craft and the Typst pipeline.
 
-<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/1990" loading="lazy" title="Examples"></iframe>
+<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/2950" loading="lazy" title="Examples"></iframe>
 
 ## Open questions
 

@@ -288,6 +288,7 @@ How the rules in [print.md](print.md) were reached. The approved mockups are kep
 | 2026-10-07 | **Papers are built with Typst** in pdf-report-publishing, not HTML paged media; print.md is the spec, `system/tokens.css` the values |
 | 2026-10-08 | **Papers approved** (design-34t.22): typographic covers by default, imprint on the back of the title page, Polyamine only for cover, title page, contents and chapter titles, heads in Restora, figures bare on the page. One A4 PDF for screen, white pages. Reasoning above |
 | 2026-10-13 | **Logo chosen** (Sylvie): the original swallow kept, with a cut-and-printed edge, 30% bigger, prints pushed out with a white gap; full mark at every size, no simplified small version; wordmark "of" in Fraunces italic tuned toward Polyamine; five colourways (colour, colour-dark, black, white, red) and five lockups. Files in `system/logo/`, shown in logos.html; record in archive/logo-2026-10/ |
+| 2026-10-13 | **Podcast episode cover signed off** (Sylvie and Rufus): white ground; the black swallow flock rising from the bottom-left corner through the logo's fingerprints (prints only, 20%); the hook in Polyamine 112 at x 80; the guest's name in Apfel Grotezk; the horizontal lockup with PODCAST (Polyamine) under the name, no disc; the guest cut out, greyscale, on the right. Same ground for the Instagram posts. Chosen over versions A–D, sixteen backgrounds and the top-left layout ([archive](archive/podcast-thumbnails-2026-10/README.md)); a softer coloured ground is a later option. See [podcast.md](podcast.md). |
 
 ## Next step
 

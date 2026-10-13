@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thumbnail Backgrounds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<style>
+/* Page chrome only. Each background is a 1280 × 720 SVG built by the script below. */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.55 var(--font-body);padding:0 16px 80px}
+.wrap{max-width:1180px;margin:auto}
+header{padding:44px 0 8px}
+header>p,header li{max-width:72ch}
+h1{font:400 clamp(32px,5vw,56px)/1.02 var(--font-display);margin:8px 0 14px}
+h2{font:400 30px/1.05 var(--font-display);margin:6px 0 6px}
+h3{font:400 22px/1.1 var(--font-display);margin:26px 0 6px}
+.eb{font:500 12px var(--font-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header p,.note{color:var(--muted);margin:0 0 12px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:8px 40px;margin:18px 0 8px}
+.cols h3{margin-top:4px}
+.cols ol{margin:0;padding-left:1.2em;display:grid;gap:6px;color:var(--muted);font-size:15px}
+.cols ol b{color:var(--ink);font-weight:600}
+/* Controls: a sticky switch between background only, with the overlay, and the squint test */
+.ctl{position:sticky;top:0;z-index:20;background:var(--paper);padding:12px 0;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ctl span{font:500 12px var(--font-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.ctl button{font:500 14px var(--font-label);border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.ctl button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+section.g{padding:30px 0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,540px),1fr));gap:26px 22px;margin-top:12px}
+figure{margin:0;min-width:0}
+.fr{border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--rule);line-height:0}
+svg.th{display:block;width:100%;height:auto}
+figcaption{margin-top:8px;font-size:14px;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:600}
+figcaption i{font-style:normal;font:500 11px var(--font-label);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--rule);border-radius:4px;padding:1px 5px;margin-left:4px;white-space:nowrap}
+body:not(.with) .ov{display:none}
+body.squint svg.th{filter:blur(7px)}
+/* Feed check at sidebar size */
+.yt{font-family:Roboto,Arial,sans-serif;border-radius:10px;padding:16px;margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px 12px}
+.yt.light{background:#fff;color:#0f0f0f;box-shadow:0 0 0 1px var(--rule)}
+.yt.dark{background:#0f0f0f;color:#f1f1f1}
+.yt .tf{position:relative;border-radius:8px;overflow:hidden;line-height:0;width:168px}
+.yt small{display:block;font-size:12px;opacity:.7;margin-top:4px;line-height:1.3}
+.dur{position:absolute;right:4px;bottom:4px;background:rgb(0 0 0/.8);color:#fff;font:500 12px/1 Roboto,Arial,sans-serif;padding:3px 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <clipPath id="cp-circle" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".5"/></clipPath>
+  <!-- Surface: a fine monochrome grain, laid over a ground with multiply -->
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <filter id="paperfx" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="4" seed="9"/><feColorMatrix type="saturate" values="0"/></filter>
+  <filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="softer" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="22"/></filter>
+  <!-- Photo to a two-tone of night and sunlight -->
+  <filter id="duo"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="table" tableValues=".09 .98"/><feFuncG type="table" tableValues=".086 .94"/><feFuncB type="table" tableValues=".075 .77"/></feComponentTransfer></filter>
+  <filter id="duoBlue"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="table" tableValues=".07 .98"/><feFuncG type="table" tableValues=".14 .94"/><feFuncB type="table" tableValues=".36 .77"/></feComponentTransfer></filter>
+  <!-- Rough edge for torn paper -->
+  <filter id="tear" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="3" seed="2"/><feDisplacementMap in="SourceGraphic" scale="22"/></filter>
+  <!-- Fades: a mask that keeps the right side and dissolves towards the words -->
+  <linearGradient id="fadeR" x1="0" x2="1"><stop offset=".36" stop-color="#fff" stop-opacity="0"/><stop offset=".62" stop-color="#fff"/></linearGradient>
+  <!-- Soft right edge for the brush ridge, whose drawing is cropped there -->
+  <linearGradient id="edgeGrad"><stop offset=".72" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <mask id="mEdge" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#edgeGrad)"/></mask>
+  <mask id="mR" maskUnits="userSpaceOnUse" x="0" y="0" width="1280" height="720"><rect width="1280" height="720" fill="url(#fadeR)"/></mask>
+  <radialGradient id="vig" cx=".62" cy=".45" r=".78"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></radialGradient>
+  <radialGradient id="vigWarm" cx=".7" cy=".45" r=".85"><stop offset=".45" stop-color="#b8862a" stop-opacity="0"/><stop offset="1" stop-color="#b8862a" stop-opacity=".38"/></radialGradient>
+  <radialGradient id="glowSun" cx="960" cy="320" r="580" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fffbef"/><stop offset=".45" stop-color="#fbefc4"/><stop offset="1" stop-color="#f2d68a"/></radialGradient>
+  <radialGradient id="glowNight" cx="960" cy="320" r="560" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4a3a24"/><stop offset=".55" stop-color="#241f19"/><stop offset="1" stop-color="#121110"/></radialGradient>
+  <linearGradient id="dawnSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e6dd"/><stop offset=".55" stop-color="#fbefc4"/><stop offset=".72" stop-color="#fff8e4"/><stop offset="1" stop-color="#f2dca0"/></linearGradient>
+  <linearGradient id="dawnSkyGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ece6d6"/><stop offset=".5" stop-color="#f8e3a6"/><stop offset=".7" stop-color="#fff6dc"/><stop offset="1" stop-color="#eccf84"/></linearGradient>
+  <!-- Mist: sunlight rising from the bottom so the foot of the ridge dissolves into the light -->
+  <linearGradient id="mistUp" x1="0" y1="0" x2="0" y2="1"><stop offset=".6" stop-color="#fdf3d2" stop-opacity="0"/><stop offset=".74" stop-color="#fdf3d2" stop-opacity=".9"/><stop offset="1" stop-color="#f3dda0" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="nightDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121110"/><stop offset=".6" stop-color="#1d1915"/><stop offset=".86" stop-color="#5a4128"/><stop offset="1" stop-color="#2a2119"/></linearGradient>
+  <radialGradient id="sunDisc" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c8"/><stop offset=".8" stop-color="#f7dc8a"/><stop offset="1" stop-color="#f3d27a"/></radialGradient>
+  <radialGradient id="raysFade" cx="960" cy="320" r="760" gradientUnits="userSpaceOnUse"><stop offset=".1" stop-color="#fff"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <mask id="mRays" maskUnits="userSpaceOnUse" x="0" y="0" width="1280" height="720"><rect width="1280" height="720" fill="url(#raysFade)"/></mask>
+  <linearGradient id="scrimL" x1="0" x2="1"><stop offset="0" stop-color="#171613" stop-opacity=".92"/><stop offset=".45" stop-color="#171613" stop-opacity=".7"/><stop offset=".75" stop-color="#171613" stop-opacity="0"/></linearGradient>
+</defs></svg>
+
+<div class="wrap">
+<header>
+  <div class="eb">Seeds of Renaissance · YouTube · podcast thumbnails · backgrounds</div>
+  <h1>Thumbnail backgrounds</h1>
+  <p>Our first thumbnails sit on flat white, yellow or black: one value, one colour, nothing to lead the eye. These sixteen backgrounds try the other way. Each is built in the steps below and grouped by its main idea: light and depth, one big shape, landscape and drawing, light through things. Use the switch to see each one alone, with a face and words on top, or blurred.</p>
+  <div class="cols">
+    <div>
+      <h3>What makes a good background</h3>
+      <ol>
+        <li><b>A value plan.</b> Light and dark placed on purpose: a glow behind the head, calmer tone under the words. Squinting, it reads as two or three big shapes.</li>
+        <li><b>Depth.</b> A gradient, a vignette, a glow or layered hills fading into distance turn a colour into a place.</li>
+        <li><b>Two zones.</b> Rich behind the face, quiet behind the words. Never texture under text.</li>
+        <li><b>Big shapes, not fine detail.</b> At 168 px fine lines turn to mud. One large disc, ridge, ring or shadow survives.</li>
+        <li><b>A light source.</b> A sun, a dawn or light through leaves gives the glow a reason and lifts the head off the ground.</li>
+        <li><b>Surface.</b> Grain, paper or ink makes it feel made, not flat digital colour.</li>
+        <li><b>One recurring motif.</b> So the series is recognised before it is read.</li>
+        <li><b>Contrast with the subject.</b> The face is greyscale, so a warm ground makes it stand out; keep the darkest and lightest areas away from its edges.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Steps</h3>
+      <ol>
+        <li><b>Zones.</b> On 1280 × 720: words left, face right, logo top left, duration badge bottom right.</li>
+        <li><b>Value sketch.</b> Where it is light, where it is dark. Squint-test it.</li>
+        <li><b>Colour family.</b> Sunlight, night, paper, plus the drawings' cobalt and gold.</li>
+        <li><b>Depth layer.</b> A gradient, glow or vignette.</li>
+        <li><b>One motif.</b> Large, low contrast, behind the face, cropped by the frame.</li>
+        <li><b>Surface.</b> Grain, paper or print texture.</li>
+        <li><b>Test.</b> With face and words on top, blurred, and at 168 px in light and dark feeds.</li>
+        <li><b>Systematise.</b> Decide what varies per episode (colour, motif, glow) and what stays fixed.</li>
+      </ol>
+    </div>
+  </div>
+  <p><b>A first finding.</b> A face as big as version A's covers most of any background, which then only shows at the edges. These tests use a slightly smaller face (about 70% of the height) and put each motif around the head, not under it: above it, beside it, or as a ring or horizon that the head breaks.</p>
+  <p>Tags: <i style="font:500 11px var(--font-label);letter-spacing:.1em;border:1px solid var(--rule);border-radius:4px;padding:1px 5px">PALETTE</i> stays within <a href="../../colour.md">colour.md</a>; <i style="font:500 11px var(--font-label);letter-spacing:.1em;border:1px solid var(--rule);border-radius:4px;padding:1px 5px">STRETCH</i> uses tints or colours beyond it (deeper golds, cobalt washes, a faint red) and would need a palette decision. The drawings and the dawn photo are drafts whose rights are not yet cleared.</p>
+</header>
+
+<div class="ctl" role="group" aria-label="View">
+  <span>View</span>
+  <button type="button" data-mode="bg" aria-pressed="true">Background only</button>
+  <button type="button" data-mode="with" aria-pressed="false">With face and words</button>
+  <button type="button" data-mode="squint" aria-pressed="false">Squint test</button>
+</div>
+
+<section class="g" id="combo"><div class="eb">Combination · 2 + 10</div><h2>Dawn ridge</h2><p class="note">The dawn gradient and the band of light across the middle from 2, with the brush ridge from 10 rising out of it. Behind the head the ridge was hidden, so here its main peak stands in the gap between the words and the face, rising from the horizon below the words. Four variations: the plain combination, the ridge emerging from mist, a warmer gold dawn, and a second, paler ridge behind for more distance.</p><div class="grid" data-g="5"></div></section>
+<section class="g"><div class="eb">1 · Light and depth</div><h2>Tone alone, no motif</h2><p class="note">The cheapest step away from flat: a glow behind the head, a vignette, a horizon. Works for every episode and never fights the words.</p><div class="grid" data-g="1"></div></section>
+<section class="g"><div class="eb">2 · One big shape</div><h2>A disc, rays, a ring</h2><p class="note">A single large, simple shape behind the head. It survives at feed size and can become the series signature.</p><div class="grid" data-g="2"></div></section>
+<section class="g"><div class="eb">3 · Landscape and drawing</div><h2>Mountains, drawn and photographed</h2><p class="note">The mountain drawings and the dawn photo as scenery, faded out before they reach the words.</p><div class="grid" data-g="3"></div></section>
+<section class="g"><div class="eb">4 · Light through things</div><h2>Shadows, ink and paper</h2><p class="note">Softer, more handmade: dappled shadow, ink wash, watercolour, torn paper.</p><div class="grid" data-g="4"></div></section>
+
+<section class="g" id="feed"><div class="eb">Feed check</div><h2>All of them at 168 px, with face and words</h2><p class="note">Sidebar size, the hardest test. Which still read as a place, not a flat colour, and which turn to noise?</p>
+  <div class="yt light" id="side-light"></div>
+  <div class="yt dark" id="side-dark"></div>
+</section>
+</div>
+
+<script>
+(function () {
+  var IMG = "../../system/img/";
+  var FACE = IMG + "otm-guest-placeholder-cut.png";
+  var EL = {
+    ridge: "../../system/mountains/elements/ridge-brush-cobalt.png",
+    rangeSun: "../../system/woodcuts/elements/mountain-range-linocut-blue-sun.png",
+    branch: "../../system/woodcuts/elements/flowering-branch-silhouette-ochre.png",
+    wash: "../../moodboard/botanical-flower-illustration/elements/16-blue-ink-wash.png",
+    ring: "../../moodboard/botanical-flower-illustration/elements/17-blue-watercolour-ring.png"
+  };
+  var C = { sunlight: "#fbefc4", paper: "#fbfaf6", night: "#171613", ink: "#1b1916", chalk: "#ece7dc", cobalt: "#16307a" };
+  var W = 1280, H = 720, HX = 960, HY = 320; // HX, HY: where the head sits
+
+  function rect(fill, extra) { return '<rect width="' + W + '" height="' + H + '" fill="' + fill + '"' + (extra || "") + "/>"; }
+  function grain(o) { return rect("#808080", ' filter="url(#grain)" opacity="' + (o || 0.16) + '" style="mix-blend-mode:multiply"'); }
+  function paperTex(o) { return rect("#808080", ' filter="url(#paperfx)" opacity="' + (o || 0.12) + '" style="mix-blend-mode:multiply"'); }
+  function vig(id) { return rect("url(#" + (id || "vig") + ")"); }
+
+  // Pieces of the dawn ridge: the brush ridge faded towards the words, the light band, the horizon line
+  function ridgeImg(x, y, w, o, full) { return '<image href="' + EL.ridge + '" x="' + x + '" y="' + y + '" width="' + w + '" height="' + Math.round(w * 0.888) + '" opacity="' + o + '"' + (full ? ' mask="url(#mEdge)"' : ' mask="url(#mR)"') + "/>"; }
+  function band(cy, rx, ry, o) { return '<ellipse cx="' + HX + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" fill="#fffaf0" filter="url(#softer)" opacity="' + o + '"/>'; }
+  function horizon(y) { return '<path d="M0 ' + (y - 2) + " Q640 " + (y - 14) + " 1280 " + y + '" stroke="#c9a85a" stroke-width="2" fill="none" opacity=".45"/>'; }
+
+  // Deterministic jagged ridge, for layered mountains
+  function rnd(seed) { return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+  function ridge(seed, base, amp, step) {
+    var r = rnd(seed), y = base, d = "M0 " + H + " L0 " + base;
+    for (var x = 0; x <= W + step; x += step) {
+      y = Math.max(base - amp, Math.min(base + amp * 0.4, y + (r() - 0.52) * amp * 0.55));
+      d += " L" + x + " " + y.toFixed(1);
+    }
+    return d + " L" + W + " " + H + " Z";
+  }
+
+  // The backgrounds. Each returns SVG for the background only.
+  var B = [
+    { g: 1, id: "glow", name: "Sunlight glow", tag: "PALETTE", note: "A radial glow behind the head deepening to warm gold at the edges, with grain. The smallest change from flat sunlight.",
+      svg: function () { return rect("url(#glowSun)") + vig("vigWarm") + grain(); }, text: "ink" },
+    { g: 1, id: "dawn", name: "Dawn horizon", tag: "PALETTE", note: "A pale sky warming to a bright band where the sun would be, with a faint horizon line. Depth with almost no drawing.",
+      svg: function () { return rect("url(#dawnSky)") + '<path d="M0 498 Q640 486 1280 500" stroke="#c9a85a" stroke-width="2" fill="none" opacity=".5"/>' + '<ellipse cx="' + HX + '" cy="500" rx="520" ry="120" fill="#fffaf0" filter="url(#softer)" opacity=".9"/>' + grain(); }, text: "ink" },
+    { g: 1, id: "nightglow", name: "Night, warm glow", tag: "STRETCH", note: "Night lit from behind the head, like a lamp in a dark room. The face separates without a scrim.",
+      svg: function () { return rect("url(#glowNight)") + grain(0.22); }, text: "chalk" },
+    { g: 1, id: "nightdawn", name: "Night before dawn", tag: "STRETCH", note: "Night above, a warm band of first light low down, half a sun rising behind the shoulders.",
+      svg: function () { return rect("url(#nightDawn)") + '<circle cx="' + HX + '" cy="690" r="230" fill="#f3d27a" opacity=".85" filter="url(#soft)"/>' + '<rect y="640" width="1280" height="80" fill="#1d1915"/>' + grain(0.22); }, text: "chalk" },
+
+    { g: 2, id: "disc", name: "Sun disc", tag: "PALETTE", note: "One big gold disc behind the head, cropped by nothing. The simplest possible signature.",
+      svg: function () { return rect(C.sunlight) + '<circle cx="' + (HX - 120) + '" cy="' + (HY - 70) + '" r="300" fill="url(#sunDisc)"/>' + vig("vigWarm") + grain(); }, text: "ink" },
+    { g: 2, id: "rays", name: "Sunrise rays", tag: "PALETTE", note: "Broad rays from behind the head, tone on tone, fading out before the words. Echoes the radiating logo.",
+      svg: function () {
+        var g = "", n = 28;
+        for (var i = 0; i < n; i += 2) {
+          var a1 = (i / n) * 2 * Math.PI, a2 = ((i + 1) / n) * 2 * Math.PI, R = 1500;
+          g += '<path d="M' + HX + " " + HY + " L" + (HX + R * Math.cos(a1)).toFixed(0) + " " + (HY + R * Math.sin(a1)).toFixed(0) + " L" + (HX + R * Math.cos(a2)).toFixed(0) + " " + (HY + R * Math.sin(a2)).toFixed(0) + 'Z"/>';
+        }
+        return rect(C.sunlight) + '<g fill="#f3d68a" mask="url(#mRays)" opacity=".75">' + g + "</g>" + '<circle cx="' + HX + '" cy="' + HY + '" r="250" fill="#fff6dc" filter="url(#softer)"/>' + grain();
+      }, text: "ink" },
+    { g: 2, id: "print", name: "Fingerprint ring", tag: "STRETCH", note: "The logo's ring of red fingerprints blown up behind the head, very faint. Ties every episode to the mark; the red is the stretch.",
+      svg: function () { return rect(C.sunlight) + '<image href="' + IMG + 'logo.png" x="' + (HX - 520) + '" y="' + (HY - 520) + '" width="1040" height="1040" opacity=".22" style="mix-blend-mode:multiply"/>' + '<circle cx="' + HX + '" cy="' + HY + '" r="210" fill="' + C.sunlight + '" filter="url(#soft)"/>' + grain(); }, text: "ink" },
+    { g: 2, id: "ripples", name: "Ripples", tag: "PALETTE", note: "Concentric rings spreading from the head, widening as they go: a voice moving outwards. Faint ink on paper.",
+      svg: function () {
+        var g = "", r = 170, gap = 34;
+        for (var i = 0; i < 16; i++) { g += '<circle cx="' + HX + '" cy="' + HY + '" r="' + r.toFixed(0) + '"/>'; r += gap; gap *= 1.12; }
+        return rect(C.paper) + rect("url(#glowSun)", ' opacity=".55"') + '<g fill="none" stroke="#1b1916" stroke-width="3" opacity=".16" mask="url(#mR)">' + g + "</g>" + paperTex() + grain(0.1);
+      }, text: "ink" },
+
+    { g: 3, id: "layers", name: "Layered ridges", tag: "STRETCH", note: "Four ridges in cobalt tints, palest furthest away: atmospheric depth from flat shapes, kept low so the sky stays clear for the words.",
+      svg: function () {
+        return rect("url(#dawnSky)") +
+          '<path d="' + ridge(11, 540, 90, 40) + '" fill="#c9cfdf"/>' +
+          '<path d="' + ridge(23, 590, 70, 46) + '" fill="#9aa6c6"/>' +
+          '<path d="' + ridge(37, 640, 55, 52) + '" fill="#5d70a3"/>' +
+          '<path d="' + ridge(51, 690, 35, 60) + '" fill="#16307a"/>' + grain(0.12);
+      }, text: "ink" },
+    { g: 3, id: "brush", name: "Brush ridge, faded", tag: "PALETTE", note: "The brush ridge liked on the About page, large on the right and dissolving into sunlight before the words.",
+      svg: function () { return rect("url(#glowSun)") + '<image href="' + EL.ridge + '" x="420" y="40" width="900" height="799" opacity=".55" mask="url(#mR)"/>' + grain(); }, text: "ink" },
+    { g: 3, id: "range", name: "Linocut range and sun", tag: "PALETTE", note: "The blue linocut range with its gold sun, the sun placed just above the head like a halo.",
+      svg: function () { return rect(C.sunlight) + '<image href="' + EL.rangeSun + '" x="520" y="60" width="980" height="645" opacity=".6" mask="url(#mR)"/>' + vig("vigWarm") + grain(); }, text: "ink" },
+    { g: 3, id: "photo", name: "Dawn photo, two-tone", tag: "PALETTE", note: "A real mountain dawn reduced to night and sunlight, with a dark scrim under the words. Photographic depth, still on brand.",
+      svg: function () { return '<image href="' + IMG + 'otm-dawn-cloud.jpg" width="1280" height="720" preserveAspectRatio="xMidYMid slice" filter="url(#duo)"/>' + rect("url(#scrimL)") + grain(0.18); }, text: "chalk" },
+
+    { g: 4, id: "leaves", name: "Leaf shadow", tag: "PALETTE", note: "The flowering branch as a soft shadow, as if sun falls through a window onto the wall behind the guest.",
+      svg: function () { return rect("url(#glowSun)") + '<image href="' + EL.branch + '" x="560" y="-140" width="760" height="1010" opacity=".6" filter="url(#soft)" style="mix-blend-mode:multiply" transform="rotate(-8 940 360)"/>' + grain(); }, text: "ink" },
+    { g: 4, id: "wash", name: "Ink wash", tag: "STRETCH", note: "A blue ink wash bleeding behind the head on paper. Watery and soft; blue is the stretch.",
+      svg: function () { return rect(C.paper) + '<image href="' + EL.wash + '" x="540" y="-40" width="860" height="775" opacity=".62" transform="scale(-1 1) translate(-1920 0)"/>' + paperTex(0.16) + grain(0.1); }, text: "ink" },
+    { g: 4, id: "halo", name: "Watercolour halo", tag: "STRETCH", note: "A blue watercolour ring framing the head: a handmade halo.",
+      svg: function () { return rect(C.paper) + '<image href="' + EL.ring + '" x="' + (HX - 470) + '" y="' + (HY - 490) + '" width="940" height="976" opacity=".6"/>' + paperTex(0.14) + grain(0.1); }, text: "ink" },
+    { g: 4, id: "torn", name: "Torn paper", tag: "PALETTE", note: "Two zones made literal: a paper sheet for the words, torn over a sunlight glow for the face.",
+      svg: function () { return rect("url(#glowSun)") + vig("vigWarm") + '<path d="M-40 -40 H600 L560 180 L610 360 L570 540 L620 760 H-40Z" fill="' + C.paper + '" filter="url(#tear)"/>' + '<path d="M-40 -40 H600 L560 180 L610 360 L570 540 L620 760 H-40Z" fill="none" stroke="#000" stroke-opacity=".08" stroke-width="10" filter="url(#tear)" transform="translate(6 0)"/>' + paperTex(0.12) + grain(0.12); }, text: "ink" },
+    { g: 5, label: "2 + 10 · A", id: "dawnridge", name: "Dawn ridge", tag: "PALETTE", cy: 285, note: "The dawn sky with the words high up in it, the brush ridge rising beside the head, and the band of light crossing in front of its foot, like morning haze.",
+      svg: function () { return rect("url(#dawnSky)") + ridgeImg(140, 420, 780, ".6", true) + band(640, 760, 80, ".9") + horizon(640) + grain(); }, text: "ink" },
+    { g: 5, label: "2 + 10 · B", id: "dawnmist", name: "Ridge from the mist", tag: "PALETTE", cy: 285, note: "The same, with mist rising from below: the peaks are sharp, their foot dissolves into the light. The strongest sense of depth.",
+      svg: function () { return rect("url(#dawnSky)") + ridgeImg(130, 410, 800, ".78", true) + rect("url(#mistUp)") + band(640, 820, 70, ".95") + grain(); }, text: "ink" },
+    { g: 5, label: "2 + 10 · C", id: "dawngold", name: "Gold dawn ridge", tag: "PALETTE", cy: 285, note: "A warmer dawn, gold low down, with a soft sun rising on the horizon beside the peak. Cobalt ridge and gold light are the only two colours.",
+      svg: function () { return rect("url(#dawnSkyGold)") + '<circle cx="320" cy="630" r="100" fill="#fff4cf" filter="url(#soft)"/>' + ridgeImg(140, 420, 780, ".62", true) + band(640, 760, 80, ".9") + horizon(640) + vig("vigWarm") + grain(); }, text: "ink" },
+    { g: 5, label: "2 + 10 · D", id: "dawntwo", name: "Two distances", tag: "PALETTE", cy: 285, note: "A second, paler copy of the ridge further back on the right, the nearer one between the words and the face, mist between them. Layered like 9, but drawn by hand.",
+      svg: function () { return rect("url(#dawnSky)") + ridgeImg(760, 250, 640, ".26", true) + band(520, 700, 70, ".7") + ridgeImg(130, 420, 780, ".72", true) + rect("url(#mistUp)") + band(640, 820, 70, ".9") + grain(); }, text: "ink" }
+  ];
+
+  // The test overlay: the A layout (face right, hook left, name, logo top left)
+  var ctx = document.createElement("canvas").getContext("2d");
+  function fit(lines, size, maxw) {
+    ctx.font = size + 'px "Polyamine", Georgia, serif';
+    var w = Math.max.apply(null, lines.map(function (l) { return ctx.measureText(l).width; }));
+    return w > maxw ? Math.floor(size * maxw / w) : size;
+  }
+  function overlay(textColour, cy) {
+    var lines = ["Hope isn't", "optimism"], size = fit(lines, 128, 560), cap = size * 0.72;
+    var top = (cy || 380) - (cap + size) / 2, fill = textColour === "chalk" ? C.chalk : C.ink, o = '<g class="ov">';
+    o += '<image href="' + FACE + '" x="600" y="30" width="760" height="760"/>';
+    lines.forEach(function (l, i) { o += '<text x="64" y="' + (top + cap + i * size).toFixed(1) + '" font-family="Polyamine, Georgia, serif" font-size="' + size + '" fill="' + fill + '">' + l + "</text>"; });
+    o += '<text x="64" y="' + Math.round(top + cap + size + 82) + '" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="600" font-size="46" fill="' + fill + '">Guest Name</text>';
+    o += '<circle cx="110" cy="110" r="46" fill="#fff"/><image href="' + IMG + 'logo.png" x="66" y="66" width="88" height="88" clip-path="url(#cp-circle)"/>';
+    return o + "</g>";
+  }
+  function svg(b, i) {
+    return '<svg class="th" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Background ' + (i + 1) + ": " + b.name + '">' + b.svg() + overlay(b.text, b.cy) + "</svg>";
+  }
+
+  function build() {
+    var durs = ["1:12:04", "58:31", "47:22", "1:02:17"];
+    B.forEach(function (b, i) {
+      b.html = svg(b, i);
+      var f = document.createElement("figure");
+      f.innerHTML = '<div class="fr">' + b.html + "</div><figcaption><b>" + (b.label || i + 1) + " · " + b.name + "</b><i>" + b.tag + "</i> " + b.note + "</figcaption>";
+      document.querySelector('[data-g="' + b.g + '"]').appendChild(f);
+    });
+    // The feed check always shows the overlay
+    ["side-light", "side-dark"].forEach(function (id) {
+      var host = document.getElementById(id);
+      B.forEach(function (b, i) {
+        var d = document.createElement("div");
+        d.innerHTML = '<div class="tf">' + b.html.replace('class="ov"', 'class="ov-on"') + '<span class="dur">' + durs[i % 4] + "</span></div><small>" + (b.label || i + 1) + " · " + b.name + "</small>";
+        host.appendChild(d);
+      });
+    });
+  }
+
+  document.querySelectorAll(".ctl button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var m = btn.dataset.mode;
+      document.querySelectorAll(".ctl button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === btn)); });
+      document.body.classList.toggle("with", m !== "bg");
+      document.body.classList.toggle("squint", m === "squint");
+    });
+  });
+
+  Promise.all([document.fonts.load('100px "Polyamine"'), document.fonts.load('600 46px "Bricolage Grotesque"')])
+    .catch(function () {}).then(function () { return document.fonts.ready; }).then(build);
+})();
+</script>
+</body>
+</html>

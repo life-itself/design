@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Podcast Thumbnails A–D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<style>
+/* Page chrome only. Each thumbnail is a 1280 × 720 SVG built by thumb() below. */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.55 var(--font-body);padding:0 16px 80px}
+.wrap{max-width:1180px;margin:auto}
+header{padding:44px 0 8px;max-width:72ch}
+h1{font:400 clamp(32px,5vw,56px)/1.02 var(--font-display);margin:8px 0 14px}
+h2{font:400 34px/1.05 var(--font-display);margin:6px 0 8px}
+h3{font:400 22px/1.1 var(--font-display);margin:28px 0 6px}
+.eb{font:500 12px var(--font-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header p,.note{color:var(--muted);max-width:72ch;margin:0 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 0 0;padding:0;list-style:none;font-size:15px}
+.toc a{color:var(--ink)}
+section.v{border-top:1px solid var(--rule);padding:40px 0 12px;margin-top:28px}
+svg.th{display:block;width:100%;height:auto}
+.full{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:22px}
+.full figure{margin:0;min-width:0}
+.full .fr{border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--rule)}
+.full figcaption{margin-top:6px;font-size:14px;color:var(--muted)}
+.full figcaption b{color:var(--ink);font-weight:600}
+/* YouTube mock */
+.yt{font-family:Roboto,Arial,sans-serif;border-radius:10px;padding:18px;margin-top:14px}
+.yt.light{background:#fff;color:#0f0f0f;box-shadow:0 0 0 1px var(--rule)}
+.yt.dark{background:#0f0f0f;color:#f1f1f1}
+.yt .tag{font:500 11px var(--font-label);letter-spacing:.12em;text-transform:uppercase;opacity:.55;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,360px);gap:22px 16px;justify-content:start}
+.card{display:grid;gap:10px;width:360px;max-width:100%}
+.tf{position:relative;border-radius:12px;overflow:hidden;line-height:0}
+.dur{position:absolute;right:4px;bottom:4px;background:rgb(0 0 0/.8);color:#fff;font:500 12px/1 Roboto,Arial,sans-serif;padding:3px 4px;border-radius:4px}
+.meta{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;line-height:1.4}
+.av{width:36px;height:36px;border-radius:50%;background:#ddd center/cover}
+.av.sor{background:#fff url(../../system/img/logo.png) center/115% no-repeat;box-shadow:0 0 0 1px #0001}
+.meta b,.side b{font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta b{font-size:16px;line-height:1.375}
+.meta small,.side small{display:block;font-size:14px;opacity:.65}
+.sides{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:10px 22px}
+.side{display:grid;grid-template-columns:168px minmax(0,1fr);gap:8px;line-height:1.4}
+.side .tf{border-radius:8px}
+.side b{font-size:14px}
+.side small{font-size:12px}
+.mini{display:grid;gap:0}
+.mini .yt{margin-top:14px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.mini .side{width:400px;max-width:100%}
+.verdict{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:15px}
+.verdict li::before{content:"· ";color:var(--muted)}
+@media (max-width:420px){.card{width:100%}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <clipPath id="cp-circle" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".5"/></clipPath>
+</defs></svg>
+
+<div class="wrap">
+<header>
+  <div class="eb">Seeds of Renaissance · YouTube · podcast episode thumbnails</div>
+  <h1>Podcast thumbnails, versions A to D</h1>
+  <p>Four directions for the podcast episode cover, following the <a href="brief.md">brief</a>: one face, three to five words, the guest's name and the logo top left on its white disc. The bottom right stays clear for YouTube's duration badge. Each version is shown at 1280 × 720 and then at real size in a YouTube feed, beside thumbnails from other channels.</p>
+  <p>The guest photo, quotes and names are placeholders. The photo is cut out from its background so the ground can carry the brand. The woodcut and mountain drawings are traced drafts whose rights are not yet cleared.</p>
+  <ul class="toc"><li><a href="#before">Before: current covers</a></li><li><a href="#a">A · Face-led</a></li><li><a href="#b">B · Quote-led</a></li><li><a href="#c">C · Background-led</a></li><li><a href="#d">D · Colour-coded</a></li><li><a href="#feed">All in the feed</a></li></ul>
+</header>
+
+<section class="v" id="before">
+  <div class="eb">Starting point</div>
+  <h2>The current guest cover and the Grove covers</h2>
+  <p class="note">At 168 px the current guest cover's title still reads, but the "Podcast" label and the name beside the logo shrink to a few pixels. The Grove covers hold a calm series look, but the face is about a third of the height and the thin title fades at sidebar size. Full pages: <a href="../../examples/youtube/index.html">templates</a> and <a href="grove/podcast.html">Grove covers</a>.</p>
+  <div class="mini" id="before-mini"></div>
+</section>
+
+<section class="v" id="a">
+  <div class="eb">Version A</div>
+  <h2>Face-led</h2>
+  <p class="note">A huge face, cropped at the shoulders, takes the right half. The hook sits on the left in three to five words of Polyamine, with the name below it. Sunlight ground.</p>
+  <div class="full" data-set="a"></div>
+  <div class="mini" data-mini="a"></div>
+</section>
+
+<section class="v" id="b">
+  <div class="eb">Version B</div>
+  <h2>Quote-led</h2>
+  <p class="note">The words lead and fill most of the frame. The face is smaller, in a circle (on paper) or an arch (on night), with sunlight behind the cut-out.</p>
+  <div class="full" data-set="b"></div>
+  <div class="mini" data-mini="b"></div>
+</section>
+
+<section class="v" id="c">
+  <div class="eb">Version C</div>
+  <h2>Background-led</h2>
+  <p class="note">The A layout with one of the new graphic elements as a quiet backdrop behind the face, never behind the words: the brush ridge, the linocut range and the flowering branch. The face is smaller here, about two-thirds of the height, so the element shows around it.</p>
+  <div class="full" data-set="c"></div>
+  <div class="mini" data-mini="c"></div>
+</section>
+
+<section class="v" id="d">
+  <div class="eb">Version D</div>
+  <h2>Colour-coded</h2>
+  <p class="note">One layout, the ground changing by theme. The four system grounds come first. The fifth, a cobalt taken from the mountain drawings, is outside the palette and shown only as a test: colour.md allows four grounds and rules out blue for action.</p>
+  <div class="full" data-set="d"></div>
+  <div class="mini" data-mini="d"></div>
+</section>
+
+<section class="v" id="feed">
+  <div class="eb">The real test</div>
+  <h2>All versions in the feed</h2>
+  <p class="note">At real size among other channels' thumbnails. The other channels are made-up stand-ins in common YouTube styles. Scroll the page at arm's length: the ones you still recognise are the ones that work.</p>
+  <h3>Home feed, light (360 px)</h3><div class="yt light"><div class="grid" id="feed-light"></div></div>
+  <h3>Home feed, dark (360 px)</h3><div class="yt dark"><div class="grid" id="feed-dark"></div></div>
+  <h3>Up next, light (168 px)</h3><div class="yt light"><div class="sides" id="side-light"></div></div>
+  <h3>Up next, dark (168 px)</h3><div class="yt dark"><div class="sides" id="side-dark"></div></div>
+</section>
+</div>
+
+<script>
+(function () {
+  var IMG = "../../system/img/";
+  var FACE = IMG + "otm-guest-placeholder-cut.png";
+  var EL = {
+    ridge: "../../system/mountains/elements/ridge-brush-cobalt.png",
+    range: "../../system/woodcuts/elements/mountain-range-linocut-blue.png",
+    branch: "../../system/woodcuts/elements/flowering-branch-silhouette-ochre.png"
+  };
+  var C = { sunlight: "#fbefc4", paper: "#fbfaf6", white: "#ffffff", night: "#171613", ink: "#1b1916", chalk: "#ece7dc", cobalt: "#16307a" };
+  var W = 1280, H = 720, PAD = 64;
+
+  // Measure Polyamine so each hook fits its column; the size only ever shrinks.
+  var ctx = document.createElement("canvas").getContext("2d");
+  function fit(lines, size, maxw) {
+    ctx.font = size + 'px "Polyamine", Georgia, serif';
+    var w = Math.max.apply(null, lines.map(function (l) { return ctx.measureText(l).width; }));
+    return w > maxw ? Math.floor(size * maxw / w) : size;
+  }
+  var uidN = 0;
+  function uid() { return "cp" + (++uidN); }
+  function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  // Hook: lines of Polyamine centred on cy, left-aligned at x. Returns svg and the block's bottom.
+  function hook(lines, x, cy, size, maxw, fill, lh) {
+    lh = lh || 1.0;
+    size = fit(lines, size, maxw);
+    var cap = size * 0.72, blockH = cap + (lines.length - 1) * size * lh;
+    var top = cy - blockH / 2, out = "";
+    lines.forEach(function (l, i) {
+      out += '<text x="' + x + '" y="' + (top + cap + i * size * lh).toFixed(1) + '" font-family="Polyamine, Georgia, serif" font-size="' + size + '" fill="' + fill + '">' + esc(l) + "</text>";
+    });
+    return { svg: out, bottom: top + blockH };
+  }
+  function name(t, x, y, fill, anchor) {
+    return '<text x="' + x + '" y="' + y + '" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="600" font-size="46" fill="' + fill + '"' + (anchor ? ' text-anchor="' + anchor + '"' : "") + ">" + esc(t) + "</text>";
+  }
+  // The logo on its white disc, always top left: 92 px disc.
+  function logo() {
+    return '<circle cx="' + (PAD + 46) + '" cy="' + (PAD + 46) + '" r="46" fill="#fff"/>' +
+      '<image href="' + IMG + 'logo.png" x="' + (PAD + 2) + '" y="' + (PAD + 2) + '" width="88" height="88" clip-path="url(#cp-circle)"/>';
+  }
+  function face(x, y, s, extra) { return '<image href="' + FACE + '" x="' + x + '" y="' + y + '" width="' + s + '" height="' + s + '"' + (extra || "") + "/>"; }
+  function svg(body, label) {
+    return '<svg class="th" viewBox="0 0 ' + W + " " + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' + esc(label) + '">' + body + "</svg>";
+  }
+
+  // Face-led skeleton, shared by A, C and D: face right, hook left, name under the hook.
+  function faceLed(o) {
+    var ground = C[o.ground] || o.ground, text = o.text || C.ink;
+    var b = '<rect width="' + W + '" height="' + H + '" fill="' + ground + '"/>';
+    if (o.back) b += o.back;
+    b += face(o.fx || 510, o.fy || -40, o.fs || 900);
+    var h = hook(o.hook, PAD, o.cy || 380, o.size || 128, o.maxw || 560, text, o.lh);
+    b += h.svg + name(o.name, PAD, Math.round(h.bottom + 82), o.nameFill || text) + logo();
+    return svg(b, o.hook.join(" ") + ", " + o.name);
+  }
+
+  var T = {
+    a1: { set: "a", cap: "<b>A · Face-led.</b> Sunlight, the face as large as the frame allows.", dur: "1:12:04",
+      title: "Guest Name on why hope is not the same as optimism | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "sunlight", hook: ["Hope isn't", "optimism"], name: "Guest Name" }); } },
+    a2: { set: "a", cap: "<b>A · Face-led, a question.</b> The same skeleton with an open question as the hook.", dur: "58:31",
+      title: "Guest Name: a conversation about life after modernity | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "sunlight", hook: ["What comes", "after", "modernity?"], name: "Guest Name", size: 112, cy: 360 }); } },
+
+    b1: { set: "b", cap: "<b>B · Quote-led, circle.</b> Paper ground; the words take two-thirds of the frame, the face sits in a sunlight circle.", dur: "1:18:40",
+      title: "Guest Name on the meaning crisis | Seeds of Renaissance Podcast",
+      svg: function () {
+        var cx = 1066, cy = 236, r = 150, id = uid();
+        var b = '<rect width="1280" height="720" fill="' + C.paper + '"/>' +
+          '<clipPath id="' + id + '"><circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"/></clipPath>' +
+          '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + C.sunlight + '"/>' +
+          '<g clip-path="url(#' + id + ')">' + face(cx - 200, cy - 150, 400) + "</g>";
+        var h = hook(["What comes", "after", "modernity?"], PAD, 452, 150, 780, C.ink, 0.98);
+        b += h.svg + name("Guest Name", cx, cy + r + 66, C.ink, "middle") + logo();
+        return svg(b, "What comes after modernity? Guest Name");
+      } },
+    b2: { set: "b", cap: "<b>B · Quote-led, arch.</b> Night ground for the words, the face in a sunlight arch on the right, above the badge.", dur: "1:04:09",
+      title: "Guest Name on the stories we live by | Seeds of Renaissance Podcast",
+      svg: function () {
+        var ax = 856, ay = 64, aw = 360, ah = 500, ry = 130, id = uid();
+        var arch = "M" + ax + " " + (ay + ah) + "V" + (ay + ry) + "A" + aw / 2 + " " + ry + " 0 0 1 " + (ax + aw) + " " + (ay + ry) + "V" + (ay + ah) + "Z";
+        var b = '<rect width="1280" height="720" fill="' + C.night + '"/>' +
+          '<clipPath id="' + id + '"><path d="' + arch + '"/></clipPath>' +
+          '<path d="' + arch + '" fill="' + C.sunlight + '"/>' +
+          '<g clip-path="url(#' + id + ')">' + face(ax - 90, ay + 50, 540) + "</g>";
+        var h = hook(["We've lost", "the plot"], PAD, 380, 160, 740, C.chalk);
+        b += h.svg + name("Guest Name", PAD, Math.round(h.bottom + 90), C.chalk) + logo();
+        return svg(b, "We've lost the plot, Guest Name");
+      } },
+
+    c1: { set: "c", cap: "<b>C · Brush ridge.</b> Paper, the cobalt brush ridge from the About page behind the face.", dur: "47:22",
+      title: "Guest Name on belonging to a place | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "paper", hook: ["The land", "remembers", "us"], name: "Guest Name", size: 120, fx: 600, fy: 60, fs: 700, maxw: 530,
+        back: '<image href="' + EL.ridge + '" x="520" y="90" width="800" height="710"/>' }); } },
+    c2: { set: "c", cap: "<b>C · Linocut range.</b> Sunlight, the blue linocut range behind the shoulders.", dur: "1:02:17",
+      title: "Guest Name on slowness and the long view | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "sunlight", hook: ["Slow is", "the new", "radical"], name: "Guest Name", size: 120, fx: 600, fy: 60, fs: 700, maxw: 530,
+        back: '<image href="' + EL.range + '" x="560" y="250" width="760" height="413"/>' }); } },
+    c3: { set: "c", cap: "<b>C · Flowering branch.</b> Sunlight, the ochre branch silhouette as a quiet field behind the face.", dur: "39:50",
+      title: "Guest Name on tending what grows | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "sunlight", hook: ["Tend what", "grows"], name: "Guest Name", fx: 600, fy: 60, fs: 700, maxw: 530,
+        back: '<image href="' + EL.branch + '" x="640" y="-60" width="640" height="850" opacity=".7"/>' }); } },
+
+    d1: { set: "d", cap: "<b>D · Sunlight</b>: land, ecology, place.", dur: "52:10",
+      title: "Guest Name on soil, seed and settlement | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "sunlight", hook: ["Soil is", "a promise"], name: "Guest Name" }); } },
+    d2: { set: "d", cap: "<b>D · Night</b>: mind, meaning, the inner life.", dur: "1:21:33",
+      title: "Guest Name on attention and the divided mind | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "night", text: C.chalk, hook: ["Attention", "is a moral", "act"], name: "Guest Name", size: 116 }); } },
+    d3: { set: "d", cap: "<b>D · Paper</b>: culture, history, the long view.", dur: "44:58",
+      title: "Guest Name on the end of an era | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "paper", hook: ["Every age", "ends"], name: "Guest Name" }); } },
+    d4: { set: "d", cap: "<b>D · White</b>: practice, community, how-to.", dur: "36:12",
+      title: "Guest Name on building communities that last | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "white", hook: ["Start with", "twelve", "people"], name: "Guest Name", size: 116 }); } },
+    d5: { set: "d", cap: "<b>D · Cobalt (outside the palette)</b>: a test of a saturated ground taken from the mountain drawings.", dur: "1:07:45",
+      title: "Guest Name on politics after progress | Seeds of Renaissance Podcast",
+      svg: function () { return faceLed({ ground: "cobalt", text: "#ffffff", hook: ["Politics", "after", "progress"], name: "Guest Name", size: 116 }); } }
+  };
+
+  // Stand-ins for other channels, in common YouTube styles. Fictional channels.
+  function other(photo, pos, body) {
+    return svg('<image href="' + IMG + photo + '" width="1280" height="720" preserveAspectRatio="xMidYMid slice" style="object-position:' + pos + '"/>' + body, "Another channel");
+  }
+  var heavy = 'font-family="Arial Black, Arial, sans-serif" font-weight="900"';
+  var O = [
+    { ch: "Mind Unbound", av: "#c0392b", dur: "21:40", title: "I tried living like a Stoic for 30 days (it changed everything)", meta: "1.2M views · 2 weeks ago",
+      svg: other("fire.jpg", "50% 50%", '<rect width="1280" height="720" fill="rgb(0 0 0/.25)"/><text x="60" y="250" ' + heavy + ' font-size="150" fill="#ffe600" stroke="#000" stroke-width="10" paint-order="stroke">30 DAYS</text><text x="60" y="400" ' + heavy + ' font-size="110" fill="#fff" stroke="#000" stroke-width="10" paint-order="stroke">AS A STOIC</text>') },
+    { ch: "The Long Table", av: "#2d6a4f", dur: "2:03:11", title: "The meaning crisis, and what comes next | Full conversation", meta: "310K views · 1 month ago",
+      svg: other("eclipse.jpg", "50% 50%", '<rect width="1280" height="720" fill="rgb(0 0 0/.35)"/><text x="640" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="120" fill="#fff">The Meaning Crisis</text>') },
+    { ch: "Deep Field", av: "#2b59c3", dur: "48:02", title: "Why we stopped believing in the future", meta: "88K views · 4 days ago",
+      svg: svg('<rect width="1280" height="720" fill="#2b59c3"/><image href="' + IMG + 'walking.jpg" x="640" width="640" height="720" preserveAspectRatio="xMidYMid slice"/><text x="60" y="300" ' + heavy + ' font-size="96" fill="#fff">WHY WE</text><text x="60" y="410" ' + heavy + ' font-size="96" fill="#fff">STOPPED</text><text x="60" y="520" ' + heavy + ' font-size="96" fill="#ffd400">BELIEVING</text>', "Another channel") },
+    { ch: "Soil Stories", av: "#8d6e63", dur: "15:27", title: "A conversation on soil, seeds and patience", meta: "12K views · 3 weeks ago",
+      svg: other("field.jpg", "50% 50%", '<text x="60" y="660" font-family="Georgia, serif" font-style="italic" font-size="64" fill="#fff">a conversation on soil</text>') }
+  ];
+
+  function frame(svgStr, dur) {
+    var f = document.createElement("div"); f.className = "tf"; f.innerHTML = svgStr;
+    var d = document.createElement("span"); d.className = "dur"; d.textContent = dur; f.appendChild(d);
+    return f;
+  }
+  function card(svgStr, dur, title, ch, meta, avClass, avColour) {
+    var c = document.createElement("div"); c.className = "card";
+    c.appendChild(frame(svgStr, dur));
+    var m = document.createElement("div"); m.className = "meta";
+    m.innerHTML = '<span class="av ' + (avClass || "") + '"' + (avColour ? ' style="background:' + avColour + '"' : "") + '></span><div><b></b><small></small><small></small></div>';
+    m.querySelector("b").textContent = title;
+    m.querySelectorAll("small")[0].textContent = ch;
+    m.querySelectorAll("small")[1].textContent = meta;
+    c.appendChild(m); return c;
+  }
+  function side(svgStr, dur, title, ch, meta) {
+    var r = document.createElement("div"); r.className = "side";
+    r.appendChild(frame(svgStr, dur));
+    var m = document.createElement("div"); m.innerHTML = "<b></b><small></small><small></small>";
+    m.querySelector("b").textContent = title;
+    m.querySelectorAll("small")[0].textContent = ch;
+    m.querySelectorAll("small")[1].textContent = meta;
+    r.appendChild(m); return r;
+  }
+  var SOR = "Seeds of Renaissance";
+
+  function build() {
+    var keys = Object.keys(T);
+    keys.forEach(function (k) { T[k].html = T[k].svg(); });
+
+    // Full size, per version
+    keys.forEach(function (k) {
+      var t = T[k], fig = document.createElement("figure");
+      fig.innerHTML = '<div class="fr">' + t.html + "</div><figcaption>" + t.cap + "</figcaption>";
+      document.querySelector('[data-set="' + t.set + '"]').appendChild(fig);
+    });
+
+    // Per version: each thumbnail at 360 and 168, on light and dark
+    ["a", "b", "c", "d"].forEach(function (s) {
+      var host = document.querySelector('[data-mini="' + s + '"]');
+      ["light", "dark"].forEach(function (mode) {
+        var p = document.createElement("div"); p.className = "yt " + mode;
+        keys.filter(function (k) { return T[k].set === s; }).forEach(function (k) {
+          var t = T[k];
+          p.appendChild(card(t.html, t.dur, t.title, SOR, "9.2K views · 5 days ago", "sor"));
+          p.appendChild(side(t.html, t.dur, t.title, SOR, "9.2K views"));
+        });
+        host.appendChild(p);
+      });
+    });
+
+    // Mixed feed: ours interleaved with the stand-ins
+    var ours = ["a1", "b1", "c1", "d2", "b2", "c2", "d1", "a2", "c3", "d5", "d3", "d4"];
+    var mixed = [];
+    ours.forEach(function (k, i) { mixed.push({ k: k }); if (i % 3 === 1) mixed.push({ o: O[(i / 3 | 0) % O.length] }); });
+    ["light", "dark"].forEach(function (mode) {
+      var g = document.getElementById("feed-" + mode), sd = document.getElementById("side-" + mode);
+      mixed.forEach(function (m) {
+        if (m.k) {
+          var t = T[m.k], label = m.k.toUpperCase().replace(/(\d)/, " $1");
+          g.appendChild(card(t.html, t.dur, "[" + label + "] " + t.title, SOR, "9.2K views · 5 days ago", "sor"));
+          sd.appendChild(side(t.html, t.dur, "[" + label + "] " + t.title, SOR, "9.2K views"));
+        } else {
+          var o = m.o;
+          g.appendChild(card(o.svg, o.dur, o.title, o.ch, o.meta, "", o.av));
+          sd.appendChild(side(o.svg, o.dur, o.title, o.ch, o.meta));
+        }
+      });
+    });
+  }
+
+  // The current covers, taken live from their own pages so this stays in step with them.
+  function before() {
+    var host = document.getElementById("before-mini"), items = [];
+    var p1 = fetch("../../examples/youtube/index.html").then(function (r) { return r.text(); }).then(function (t) {
+      var d = new DOMParser().parseFromString(t, "text/html");
+      [["t5", "We are already practising it, with Guest Name | Seeds of Renaissance Podcast Ep. 12", "1:12:04"],
+       ["t6", "The land remembers us, with Guest Name | Seeds of Renaissance Podcast Ep. 13", "58:31"]].forEach(function (x) {
+        var th = d.getElementById(x[0]); if (!th) return;
+        th.removeAttribute("id");
+        items.push({ html: th.parentNode.outerHTML, title: "[Current guest cover] " + x[1], dur: x[2] });
+      });
+    });
+    var p2 = fetch("grove/podcast.html").then(function (r) { return r.text(); }).then(function (t) {
+      var d = new DOMParser().parseFromString(t, "text/html");
+      var defs = d.querySelector('body > svg[aria-hidden="true"]');
+      if (defs) document.body.insertBefore(document.importNode(defs, true), document.body.firstChild);
+      d.querySelectorAll("section.v").forEach(function (sec) {
+        var s = sec.querySelector(".full svg"); if (!s) return;
+        s.setAttribute("class", "th"); // its own class "thumb" clashes with the .thumb component
+        items.push({ html: s.outerHTML, title: "[Grove · " + sec.querySelector("h2").textContent + "] What grows after the end | Seeds of Renaissance Podcast", dur: "1:12:40" });
+      });
+    });
+    return Promise.all([p1, p2]).catch(function () {}).then(function () {
+      ["light", "dark"].forEach(function (mode) {
+        var p = document.createElement("div"); p.className = "yt " + mode;
+        items.forEach(function (it) {
+          p.appendChild(card(it.html, it.dur, it.title, SOR, "9.2K views · 5 days ago", "sor"));
+          p.appendChild(side(it.html, it.dur, it.title, SOR, "9.2K views"));
+        });
+        host.appendChild(p);
+      });
+    });
+  }
+
+  Promise.all([document.fonts.load('100px "Polyamine"'), document.fonts.load('600 46px "Bricolage Grotesque"')])
+    .catch(function () {}).then(function () { return document.fonts.ready; }).then(function () { build(); return before(); });
+})();
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 
 **See them:** [thumbnails and podcast covers](examples/youtube/index.html) · [channel art](examples/youtube/channel.html).
 
-<iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/522" loading="lazy" title="YouTube examples"></iframe>
+<iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/985" loading="lazy" title="YouTube examples"></iframe>
 
 **Scope:** this page covers what is specific to YouTube: video thumbnails (feed sizes, the duration badge), channel art, lower thirds. General 16:9 announcements and posters for any channel live in [social.md](social.md); podcast show art in [podcast.md](podcast.md).
 
@@ -14,7 +14,7 @@ Thumbnails and channel art for the Seeds of Renaissance YouTube channel: what ex
 |---|---|---|
 | **1 · Landscape poster** | Announces a gathering or event: date, title, photograph. Also works as an event banner on other platforms. | Have it: the *gathering* template |
 | **2 · Video cover** | Generic videos (talks, essays, explainers), including a quote-card variant. | Have it: the *talk* and *manifesto* templates |
-| **3 · Podcast episode cover** | Podcast episodes: the **guest's portrait**, their name, the episode title or a quote, the podcast and SoR lockup. | Now a mini project: [podcast-thumbnails.md](podcast-thumbnails.md). **First pass done** (`.thumb--guest`, dawn and valley backdrops) in [examples/youtube/](examples/youtube/index.html); needs polish. Composition from the rough mockup in `archive/otm-thumbnail-rough.html` |
+| **3 · Podcast episode cover** | Podcast episodes: the guest, their name, the episode's hook, the logo with PODCAST. | **Done** (signed off 13 October 2026): the swallows-and-fingerprints cover. Rules and how to make one: [podcast.md](podcast.md); Canva files: the [podcast kit](examples/youtube/canva-kit/README.md). Replaces the earlier `.thumb--guest` and paper podcast templates |
 | **4 · Channel art** | Banner with mobile crop, avatar, watermark, lower third. | **First pass done** in [examples/youtube/channel.html](examples/youtube/channel.html): banner (paper and night, desktop/mobile/TV views, safe-area guides), channel page mocks, avatar options (swallow-on-white recommended; the logo fails under 48px), lower third, watermark, About panel |
 
 Later, if needed: a vertical Shorts cover (1080 × 1920).
@@ -23,7 +23,8 @@ Later, if needed: a vertical Shorts cover (1080 × 1920).
 
 | Work | By | Status | Where |
 |---|---|---|---|
-| **Thumbnail templates** (gathering, podcast, manifesto, talk) in the current system | Sylvie, ported to the system 2026-10-05 | Current; needs an accuracy pass | [examples/youtube/](examples/youtube/index.html) · original [artifact](https://claude.ai/artifact/QEUjrhcpFTu5h9xjHP5Hco), source `archive/sor-brand-mockups/youtube/` |
+| **Thumbnail templates** (gathering, manifesto, talk) in the current system | Sylvie, ported to the system 2026-10-05 | Current; need a pass to match the podcast cover | [examples/youtube/](examples/youtube/index.html) · original [artifact](https://claude.ai/artifact/QEUjrhcpFTu5h9xjHP5Hco), source `archive/sor-brand-mockups/youtube/` |
+| **Podcast episode cover** (swallows and fingerprints) | Sylvie and Rufus with Claude, 12–13 October 2026 | **Final** | [podcast.md](podcast.md) · [podcast kit](examples/youtube/canva-kit/README.md) · exploration in [archive/podcast-thumbnails-2026-10/](archive/podcast-thumbnails-2026-10/README.md) |
 | **Channel directions, round 4**: banner, mobile crop, channel page, podcast video cover, lower third and watermark, About text and links | Uriel | Earlier exploration, before the current system | [artifact](https://claude.ai/artifact/UyEW5burVcqNSzQj8GT2f1) · archived copy [archive/youtube-channel-directions-round-4.html](archive/youtube-channel-directions-round-4.html) |
 
 ### Uriel's round 4: three directions
@@ -75,8 +76,8 @@ Tokens `--thumb-*` in [system/tokens.css](system/tokens.css) and the `.thumb` co
 
 ## Next
 
-1. **Known:** at 168px the duration badge covers the end of the gathering title ("Find your peopl…"); the podcast label is ~5px there.
-2. **Thumbnail accuracy pass**: check each template at real feed sizes (360px and 168px) with the duration badge in place; fix label sizes; use real episode titles and guests; decide which labels must be readable.
+1. **Known:** at 168px the duration badge covers the end of the gathering title ("Find your peopl…").
+2. **Bring gathering, manifesto and talk in line with the podcast cover** (the logo lockup without a disc, Apfel names, the 168 px check): check each template at real feed sizes (360px and 168px) with the duration badge in place; fix label sizes; use real episode titles and guests; decide which labels must be readable.
 3. **Channel art review**: banner and mobile crop, avatar (needs the small logo), podcast video cover, lower third and watermark, using the asset list from round 4.
 
 ## Brief: polishing the YouTube work in a new session
@@ -87,7 +88,7 @@ For a fresh Claude session (or a person) picking up the YouTube work. Current st
 
 **Where to work**
 
-- Thumbnails and the podcast guest cover (`.thumb--guest`): [examples/youtube/index.html](examples/youtube/index.html)
+- Thumbnails: [examples/youtube/index.html](examples/youtube/index.html). The podcast cover is final and lives in [podcast.md](podcast.md) and its kit; leave it alone here
 - Channel art (banner, avatar, lower third, watermark, About): [examples/youtube/channel.html](examples/youtube/channel.html)
 - Styles: `system/components.src.css`, in the "Thumbnails" and "YouTube channel art" blocks. Rebuild with `python3 system/build-css.py`; never edit `components.css`. Tokens: `--thumb-*` and `--yt-*` in `system/tokens.css`.
 - Composition reference for the podcast cover: `archive/otm-thumbnail-rough.html`. Keep its idea (dark mountain backdrop, guest portrait greyscale on the right, title and guest name on the left), not its styling. Placeholder images: `system/img/otm-*.jpg`.

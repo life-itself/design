@@ -2,7 +2,9 @@
 
 Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.15`.
 
-**Stub.** Nothing built yet beyond the 16:9 gathering thumbnail in [examples/youtube/](examples/youtube/index.html), which is really an announcement and moves here.
+**Instagram posts done** (13 October 2026): podcast episode, quote card, announcement, statement and carousel, 4:5 and 1:1, on the swallows-and-fingerprints ground of the [podcast cover](podcast.md), as a Canva kit: [examples/social/instagram/](examples/social/instagram/README.md) ([preview](examples/social/instagram/index.html)). Still to do: stories (9:16), LinkedIn, link previews and banners. The 16:9 gathering thumbnail in [examples/youtube/](examples/youtube/index.html) is really an announcement and moves here.
+
+<iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
 
 ## Organised by shape, not platform
 
@@ -39,7 +41,7 @@ One design, set on a few fixed artboards. The rules are the same on every platfo
 
 For making on-brand graphics without code: the Canva brand kit and templates, recreating the coded versions above. Beads `design-34t.19`.
 
-**Stub.** Waits on the font licences (beads `design-34t.2`).
+**Stub.** Waits on the font licences (beads `design-34t.2`). First piece done: the [podcast thumbnail Canva kit](examples/youtube/canva-kit/README.md) (2026-10-12), with full-canvas PNG layers and step-by-step instructions; a model for the other templates. Second: the [Instagram post kit](examples/social/instagram/README.md) (2026-10-12): podcast episode, quote card, announcement, statement and carousel in 4:5 and 1:1, on the swallows-and-fingerprints background, with free-standing elements, guides and a [preview](examples/social/instagram/index.html).
 
 ### What we need
 
