@@ -1,6 +1,6 @@
 # Woodcut graphics
 
-Printmade marks, slightly rough at the edge. Black on light grounds, chalk on night. Never coloured, except the occasional red seed. Part of the [SoR design system](README.md); see them rendered in [guide.html](guide.html#graphics).
+Printmade marks, slightly rough at the edge. Black on light grounds, chalk on night. Sometimes printed in one of the three [illustration inks](colour.md#illustration-inks-graphics-only) (blue, deep green, mustard), and the occasional red seed. Part of the [SoR design system](README.md); see them rendered in [guide.html](guide.html#graphics).
 
 <iframe class="specimen" src="specimens/graphics.html" style="aspect-ratio:1000/1200" loading="lazy" title="Graphics, rendered"></iframe>
 
@@ -38,11 +38,16 @@ There is a set in black (ink) and a set in red (`system/woodcuts/seeds-red.svg`,
 ## Rules
 
 - One graphic moment per section at most. They are punctuation, not wallpaper.
-- Don't recolour them, outline them or add drop shadows.
+- Don't recolour them beyond black, chalk, the illustration inks and the red set. Don't outline them or add drop shadows.
+- One ink per graphic. Two or more on a page is fine if each graphic keeps to one.
 - Don't mix in drawn suns or icon-set icons; the sun marks of an earlier version were rejected.
 
 ## The wider set
 
 All twenty woodcuts (swallows, mountains, leaves, wind, fruit, people in a circle, seeds) are shown on any ground in **[woodcuts.html](woodcuts.html)**. The SVG files, the script that draws them and notes on each are in [system/woodcuts/](system/woodcuts/README.md); any file can be inlined as-is and takes the ink of its ground. Rebuild the page with `python3 system/build-woodcuts.py`. Only the symbols above are in the system sprite so far; add others to `system/graphics.svg` and run `python3 system/build-graphics.py`.
+
+## Animals
+
+Animal woodcuts, linocuts and engravings, cut out of their paper: fox, swan, owls, bear, boar, swallow, hedgehog, snake and more. Each comes in black and the three illustration inks, as an SVG and a transparent 1000px PNG. See every version and open each file in **[the animals gallery](system/animals/gallery.html)**; files, sources and how to add one are in [system/animals/](system/animals/README.md). They follow the same rules as the woodcuts above: one per section at most, punctuation, not wallpaper.
 
 **Open:** hand-draw the woodcuts, or base them on public-domain prints?

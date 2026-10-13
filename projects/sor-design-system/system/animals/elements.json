@@ -1,0 +1,107 @@
+[
+ {
+  "slug": "fox-sitting-linocut",
+  "title": "Fox sitting",
+  "desc": "A fox sitting upright and looking up, solid black with the chest, ear and tail tip left uncut.",
+  "entry": "01",
+  "source": "Linocut"
+ },
+ {
+  "slug": "foxes-walking-engraving",
+  "title": "Two foxes walking",
+  "desc": "Two foxes trotting one after the other in fine broken line.",
+  "entry": "02",
+  "source": "Engraving, watermarked stock (draft)"
+ },
+ {
+  "slug": "swan-wings-open-linocut",
+  "title": "Swan, wings open",
+  "desc": "A swan with an S-curved neck and wings spread, white cut feather lines.",
+  "entry": "03",
+  "source": "Linocut"
+ },
+ {
+  "slug": "bird-flowering-stem-linocut",
+  "title": "Bird with a flowering stem",
+  "desc": "A blackbird diving with a long looping stem of bell flowers in its beak.",
+  "entry": "04",
+  "source": "Linocut"
+ },
+ {
+  "slug": "snail-engraving",
+  "title": "Snail",
+  "desc": "A snail reaching out with its horns, the shell in fine engraved spirals and the body stippled.",
+  "entry": "05",
+  "source": "Wood engraving"
+ },
+ {
+  "slug": "barn-owl-framed-woodcut",
+  "title": "Barn owl, framed",
+  "desc": "A barn owl standing face-on on a rock, inside its double frame with the H·R monogram.",
+  "entry": "06",
+  "source": "Woodcut"
+ },
+ {
+  "slug": "barn-owl-woodcut",
+  "title": "Barn owl",
+  "desc": "The same owl on its own, frame and monogram removed.",
+  "entry": "06",
+  "source": "Woodcut"
+ },
+ {
+  "slug": "barn-owl-flying-stamp",
+  "title": "Barn owl in flight",
+  "desc": "A barn owl seen from above, wings swept wide, in fine line with dotted feathers.",
+  "entry": "07",
+  "source": "Rubber stamp"
+ },
+ {
+  "slug": "bear-standing-woodcut",
+  "title": "Bear standing",
+  "desc": "A bear up on its hind legs, looking up, with wood grain streaking through the fur.",
+  "entry": "08",
+  "source": "Woodcut"
+ },
+ {
+  "slug": "wild-boar-linocut",
+  "title": "Wild boar",
+  "desc": "A wild boar trotting, its bristly coat in rows of short white cuts.",
+  "entry": "09",
+  "source": "Linocut"
+ },
+ {
+  "slug": "swallow-flight-linocut",
+  "title": "Swallow in flight",
+  "desc": "A swallow swooping, wings wide and tail forked. Bird only.",
+  "entry": "10",
+  "source": "Linocut"
+ },
+ {
+  "slug": "swallow-flight-gouges-linocut",
+  "title": "Swallow in flight, with gouges",
+  "desc": "The same swallow, keeping the gouge marks that fly out around it.",
+  "entry": "10",
+  "source": "Linocut"
+ },
+ {
+  "slug": "hedgehog-curled-linocut",
+  "title": "Hedgehog asleep",
+  "desc": "A hedgehog curled into an oval, asleep, with fine white spines sweeping round its body.",
+  "entry": "11",
+  "source": "Linocut"
+ },
+ {
+  "slug": "snake-coiled-watercolour",
+  "title": "Coiled snake",
+  "desc": "A snake rising from a double coil, its scales in dark green over a pale belly. From a watercolour, so the ink versions print in two tones: solid scales over a light tint of the same ink.",
+  "entry": "12",
+  "source": "Natural history watercolour",
+  "extra": [
+   [
+    "colour",
+    "Original colours",
+    "watercolour"
+   ]
+  ]
+ }
+]

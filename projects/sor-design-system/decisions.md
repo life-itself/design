@@ -287,6 +287,7 @@ How the rules in [print.md](print.md) were reached. The approved mockups are kep
 | 2026-10-08 | **Wisdom cover:** series line "White Paper No. N"; wordmark "of" in Fraunces italic (exception to four faces); one-colour (ink) mark allowed small at the foot of covers; credit one line, one size; covers should carry less. Reasoning under Q3 above |
 | 2026-10-07 | **Papers are built with Typst** in pdf-report-publishing, not HTML paged media; print.md is the spec, `system/tokens.css` the values |
 | 2026-10-08 | **Papers approved** (design-34t.22): typographic covers by default, imprint on the back of the title page, Polyamine only for cover, title page, contents and chapter titles, heads in Restora, figures bare on the page. One A4 PDF for screen, white pages. Reasoning above |
+| 2026-10-13 | **Logo chosen** (Sylvie): the original swallow kept, with a cut-and-printed edge, 30% bigger, prints pushed out with a white gap; full mark at every size, no simplified small version; wordmark "of" in Fraunces italic tuned toward Polyamine; five colourways (colour, colour-dark, black, white, red) and five lockups. Files in `system/logo/`, shown in logos.html; record in archive/logo-2026-10/ |
 
 ## Next step
 

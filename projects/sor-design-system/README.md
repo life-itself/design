@@ -54,7 +54,7 @@ Real people outdoors, doing things together, beside engraving and printmaking. P
 
 ## Logo
 
-Provisional. Set on a white disc or tile, so it sits on any ground. [Versions and placement →](logo.md)
+The swallow rising through red fingerprints, in five colourways and five lockups. [Rules and placement →](logo.md) · [Every logo file →](logos.html)
 
 <iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
 

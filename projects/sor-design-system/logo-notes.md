@@ -1,5 +1,7 @@
 # Logo (proposed)
 
+Early notes, October 2026. The logo was settled on 13 October 2026: see [logo.md](logo.md). Issues 2 to 4 below are resolved there.
+
 A black swallow at the centre of a radiating circle of red fingerprints, on white.
 
 ## Origin and flexibility

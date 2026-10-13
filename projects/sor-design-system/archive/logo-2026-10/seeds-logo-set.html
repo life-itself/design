@@ -1,0 +1,504 @@
+<title>Seeds Logo Set</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,100..900,0..100,0..1&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..900&family=Playfair+Display:ital,wght@1,400..900&family=Cormorant:ital,wght@1,300..700&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Layout: a working brand sheet. A text column for notes, a matrix of grounds for the mark, then a lockup bench with live controls beside a large proof. */
+:root {
+  --page: #fbfaf6; --text: #1b1916; --muted: #5d584f; --rule: #e0dacf; --chip: #ffffff;
+  --red: #e5201c;
+  /* brand grounds: fixed in both themes, they are what the mark is tested on */
+  --g-white: #ffffff; --g-paper: #fbfaf6; --g-sunlight: #fbefc4; --g-night: #171613; --g-red: #e5201c;
+  --ok: #2f6b3a; --ok-bg: #e4efe4; --no: #8a2a1d; --no-bg: #f5e1dc;
+  --sans: "Apfel Grotezk", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --page: #1f1d1a; --text: #ece7dc; --muted: #a49e93; --rule: #38342e; --chip: #2a2723;
+    --ok: #9fd3a6; --ok-bg: #22352a; --no: #f0a99a; --no-bg: #3a2420; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --page: #1f1d1a; --text: #ece7dc; --muted: #a49e93; --rule: #38342e; --chip: #2a2723;
+  --ok: #9fd3a6; --ok-bg: #22352a; --no: #f0a99a; --no-bg: #3a2420; color-scheme: dark; }
+body { background: var(--page); color: var(--text); font: 16px/1.55 var(--sans); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 80px; display: grid; gap: 64px; }
+header { display: grid; gap: 12px; max-width: 66ch; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 500 clamp(30px, 5vw, 44px)/1.1 var(--sans); margin: 0; text-wrap: balance; }
+h2 { font: 500 22px/1.25 var(--sans); margin: 0; text-wrap: balance; }
+h3 { font: 500 15px/1.3 var(--sans); margin: 0; }
+p { margin: 0; max-width: 66ch; }
+.lede, .note { color: var(--muted); }
+.note { font-size: 14px; }
+section { display: grid; gap: 22px; border-top: 1px solid var(--rule); padding-top: 28px; }
+.sec-head { display: grid; gap: 8px; }
+
+/* matrix */
+.matrix-wrap { overflow-x: auto; }
+.matrix { display: grid; grid-template-columns: 150px repeat(5, minmax(120px, 1fr)); gap: 10px; min-width: 760px; }
+.matrix .colhead { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); align-self: end; }
+.matrix .rowhead { display: grid; gap: 2px; align-content: center; font-size: 14px; }
+.matrix .rowhead span { font-size: 12px; color: var(--muted); }
+.cell { display: grid; gap: 6px; }
+.swatch { aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; border: 1px solid var(--rule); position: relative; }
+.swatch img { width: 78%; height: 78%; object-fit: contain; }
+.swatch.no img { opacity: .9; }
+.chip { justify-self: start; font-size: 11px; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; }
+.chip.ok { color: var(--ok); background: var(--ok-bg); }
+.chip.no { color: var(--no); background: var(--no-bg); }
+.g-white { background: var(--g-white); } .g-paper { background: var(--g-paper); } .g-sunlight { background: var(--g-sunlight); }
+.g-night { background: var(--g-night); border-color: var(--g-night); } .g-red { background: var(--g-red); border-color: var(--g-red); }
+
+/* bench */
+.bench { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .bench { grid-template-columns: 1fr; } }
+.panel { display: grid; gap: 16px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); }
+@media (max-width: 860px) { .panel { position: static; } }
+.ctl { display: grid; gap: 4px; }
+.ctl label { display: flex; justify-content: space-between; font-size: 13px; }
+.ctl label output { color: var(--muted); font-variant-numeric: tabular-nums; }
+.ctl input[type=range] { width: 100%; accent-color: var(--text); }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.seg button, .btn { font: 500 13px var(--sans); color: var(--text); background: var(--chip); border: 1px solid var(--rule); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--page); border-color: var(--text); }
+.seg button:focus-visible, .btn:focus-visible, input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.settings { font: 12px/1.5 ui-monospace, Menlo, monospace; color: var(--muted); background: var(--chip); border: 1px solid var(--rule); padding: 10px; white-space: pre-wrap; word-break: break-word; margin: 0; }
+.proofs { display: grid; gap: 18px; min-width: 0; }
+.proof { border: 1px solid var(--rule); padding: clamp(18px, 4vw, 44px); display: grid; place-items: center; min-width: 0; }
+.proof svg { width: 100%; height: auto; display: block; }
+.proof.narrow svg { width: min(100%, 420px); }
+.proof-label { font-size: 13px; color: var(--muted); }
+.proof-label b { color: var(--text); font-weight: 500; }
+.sizes { display: flex; flex-wrap: wrap; gap: 22px; align-items: end; }
+.sizes figure { margin: 0; display: grid; gap: 6px; }
+.sizes figcaption { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+input[type=text] { font: 14px var(--sans); color: var(--text); background: var(--chip); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; flex: 1; min-width: 0; }
+.presets { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.presets li { display: flex; gap: 8px; align-items: center; justify-content: space-between; font-size: 13px; border-top: 1px solid var(--rule); padding-top: 6px; }
+.presets li span { color: var(--muted); font-size: 12px; }
+select { font: 14px var(--sans); color: var(--text); background: var(--chip); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; width: 100%; }
+.ctl.fr[hidden] { display: none; }
+.controls.row { display: flex; flex-wrap: wrap; gap: 14px 28px; }
+.seg .note { align-self: center; margin-right: 4px; }
+.tiers { display: grid; gap: 0; border: 1px solid var(--rule); }
+.tier { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 20px; padding: 18px; border-top: 1px solid var(--rule); align-items: center; }
+.tier:first-child { border-top: 0; }
+@media (max-width: 640px) { .tier { grid-template-columns: 1fr; } }
+.tier h3 + p { font-size: 13px; color: var(--muted); }
+.tier-row { display: flex; flex-wrap: wrap; gap: 22px; align-items: end; padding: 16px; border-radius: 4px; }
+.tier-row figure { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.tier-row figcaption { font-size: 12px; font-variant-numeric: tabular-nums; }
+.tier-row img { display: block; }
+.lk-grid { display: grid; gap: 18px; }
+.lk-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 760px) { .lk-row { grid-template-columns: 1fr; } }
+.lk-row .rowhead span { word-break: break-all; }
+.lk-cells { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.lk-tile { aspect-ratio: 16 / 9; max-width: 100%; display: grid; place-items: center; border: 1px solid var(--rule); padding: 8%; }
+.lk-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.compare figure { margin: 0; display: grid; gap: 6px; }
+.compare img { width: 100%; border: 1px solid var(--rule); background: #fbfaf6; }
+</style>
+
+<div class="wrap">
+  <aside style="border:1px solid var(--rule);background:var(--chip);padding:14px 18px;display:grid;gap:4px;max-width:72ch" role="note">
+    <b style="font-weight:500">Moved, 13 October 2026.</b>
+    <span class="note">The final logos now live in the SoR design system: <a href="https://sor-design-system-rufuspollock.flowershow.me/logos.html">Logos</a> (every file, with downloads) and <a href="https://sor-design-system-rufuspollock.flowershow.me/logo">logo rules</a>. This page is kept as the record of how the lockups were set. Its settings are the ones the final files use.</span>
+  </aside>
+  <header>
+    <div class="eyebrow">Seeds of Renaissance · logo · chosen 13 Oct 2026</div>
+    <h1>Seeds of Renaissance logo set</h1>
+    <p class="lede">Version #4: the swallow 30% bigger with a cut-and-printed edge, prints pushed a little with the bird in front. Step 1 is every colourway of the mark on the brand's grounds. Step 2 sets it with the wordmark: Polyamine capitals with a smaller italic "of", adjustable live.</p>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>1. The mark in every colourway</h2>
+      <p class="note">Five colourways tried on the five grounds the brand uses. Green marks a pairing to use, red one to avoid. Now sharp: the bird is a vector shape and the fingerprints come from the 1254 px original. Files: <code>examples/logo/final/img/mark-*.svg</code> and <code>.png</code> (1130 px, @2x 2260 px).</p>
+    </div>
+    <div class="matrix-wrap"><div class="matrix" id="matrix"></div></div>
+    <div class="compare">
+      <figure><img src="img/crisp-before.png" alt="Close-up of the mark before: soft, blurred edges"><figcaption class="proof-label"><b>Before</b> · built from the 600 px logo, enlarged</figcaption></figure>
+      <figure><img src="img/crisp-after.png" alt="Close-up of the mark after: sharp fingerprint ridges and a crisp bird"><figcaption class="proof-label"><b>Now</b> · 1254 px fingerprints, vector bird</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>2. Final lockups on every ground</h2>
+      <p class="note">Your saved "Final version" settings, made into fixed files: the capitals and the "of" are outlines, the mark is the full #4. Each lockup comes in five colourways. Green marks a pairing to use, red one to avoid. Files: <code>examples/logo/final/lockups/</code> (SVG, plus PNG at 1200 and 2400 px wide, transparent).</p>
+    </div>
+    <div class="seg" id="lk" role="group" aria-label="Lockup">
+      <button type="button" data-v="horizontal" aria-pressed="true">Horizontal</button>
+      <button type="button" data-v="two-lines-left" aria-pressed="false">Two lines, mark left</button>
+      <button type="button" data-v="two-lines-right" aria-pressed="false">Two lines, mark right</button>
+      <button type="button" data-v="stacked" aria-pressed="false">Stacked</button>
+      <button type="button" data-v="wordmark" aria-pressed="false">Wordmark alone</button>
+    </div>
+    <div class="lk-grid" id="lkGrid"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>3. The mark at every size</h2>
+      <p class="note">The full mark, every fingerprint, at every size: no simplified versions. Shown at real pixel size. Files: <code>examples/logo/final/img/sizes/</code> (16 to 1024 px, @2x up to 128), plus <code>favicon.ico</code>.</p>
+    </div>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>4. Mark and wordmark: the bench</h2>
+      <p class="note">The capitals are Polyamine, drawn as shapes, with its own kerning. The "of" is Fraunces italic, so its size, weight and position can be adjusted here. Change the sliders until it looks right, then copy the settings into chat and I'll fix them in the final files.</p>
+    </div>
+    <div class="compare">
+      <figure><img src="img/wordmark-reference.png" alt="Reference wordmark: SEEDS of RENAISSANCE, with an italic lowercase of"><figcaption class="proof-label"><b>Reference</b> · your screenshot</figcaption></figure>
+    </div>
+    <div class="bench">
+      <div class="panel" aria-label="Lockup controls">
+        <div class="ctl"><h3>Colourway</h3>
+          <div class="seg" id="cw">
+            <button type="button" data-v="colour" aria-pressed="true">Colour</button>
+            <button type="button" data-v="colour-dark" aria-pressed="false">Colour, dark</button>
+            <button type="button" data-v="black" aria-pressed="false">Black</button>
+            <button type="button" data-v="white" aria-pressed="false">White</button>
+          </div>
+        </div>
+        <div class="ctl"><h3>Ground</h3>
+          <div class="seg" id="gr">
+            <button type="button" data-v="white" aria-pressed="false">White</button>
+            <button type="button" data-v="paper" aria-pressed="true">Paper</button>
+            <button type="button" data-v="sunlight" aria-pressed="false">Sunlight</button>
+            <button type="button" data-v="night" aria-pressed="false">Night</button>
+          </div>
+        </div>
+        <h3>"of"</h3>
+        <div class="ctl"><label for="ofFace">Typeface</label>
+          <select id="ofFace">
+            <option value="fraunces">Fraunces, tuned (current)</option>
+            <option value="bodoni">Bodoni Moda italic</option>
+            <option value="playfair">Playfair Display italic</option>
+            <option value="cormorant">Cormorant italic</option>
+            <option value="instrument">Instrument Serif italic</option>
+          </select>
+        </div>
+        <div class="ctl fr"><label for="ofOpsz">Contrast: thin top and bottom of the o <output id="ofOpszO"></output></label><input type="range" id="ofOpsz" min="9" max="144" step="1" value="144"></div>
+        <div class="ctl fr"><label for="ofSoft">Roundness of the ends <output id="ofSoftO"></output></label><input type="range" id="ofSoft" min="0" max="100" step="1" value="0"></div>
+        <div class="ctl fr"><label for="ofWonk">Quirky f (Fraunces "wonk") <output id="ofWonkO"></output></label><input type="range" id="ofWonk" min="0" max="1" step="1" value="0"></div>
+        <div class="ctl"><label for="ofSize">Size <output id="ofSizeO"></output></label><input type="range" id="ofSize" min="0.6" max="1.8" step="0.01" value="1.38"></div>
+        <div class="ctl"><label for="ofWeight">Weight <output id="ofWeightO"></output></label><input type="range" id="ofWeight" min="100" max="700" step="10" value="420"></div>
+        <div class="ctl"><label for="ofShift">Raise or lower <output id="ofShiftO"></output></label><input type="range" id="ofShift" min="-0.3" max="0.3" step="0.01" value="0"></div>
+        <div class="ctl"><label for="ofGap">Space before it <output id="ofGapO"></output></label><input type="range" id="ofGap" min="0" max="2" step="0.05" value="1"></div>
+        <div class="ctl"><label for="ofGapR">Space after it <output id="ofGapRO"></output></label><input type="range" id="ofGapR" min="0" max="2" step="0.05" value="1"></div>
+        <h3>Capitals</h3>
+        <div class="ctl"><label for="track">Letter spacing <output id="trackO"></output></label><input type="range" id="track" min="-40" max="200" step="5" value="0"></div>
+        <h3>Mark</h3>
+        <div class="ctl"><label for="markH">Size beside the name <output id="markHO"></output></label><input type="range" id="markH" min="1.2" max="4" step="0.05" value="2.4"></div>
+        <div class="ctl"><label for="markGap">Gap to the name <output id="markGapO"></output></label><input type="range" id="markGap" min="0.2" max="2" step="0.05" value="0.7"></div>
+        <div class="ctl"><label for="markH2">Size beside two lines <output id="markH2O"></output></label><input type="range" id="markH2" min="0.6" max="1.8" step="0.02" value="1.1"></div>
+        <div class="ctl"><label for="lineGap">Space between the two lines <output id="lineGapO"></output></label><input type="range" id="lineGap" min="1.1" max="2" step="0.02" value="1.42"></div>
+        <div class="ctl"><label for="markS">Size above the name <output id="markSO"></output></label><input type="range" id="markS" min="0.2" max="0.8" step="0.01" value="0.42"></div>
+        <div class="row">
+          <button type="button" class="btn" id="copy">Copy settings</button>
+          <button type="button" class="btn" id="reset">Reset</button>
+          <span class="note" id="copied" role="status"></span>
+        </div>
+        <pre class="settings" id="settings"></pre>
+        <div class="ctl" id="presetBox" hidden>
+          <h3>Saved settings</h3>
+          <p class="note">Saved with the page, so Claude can read them.</p>
+          <div class="row"><input id="presetName" type="text" placeholder="Name, e.g. Sylvie v2" aria-label="Name for these settings"><button type="button" class="btn" id="savePreset">Save</button></div>
+          <span class="note" id="presetMsg" role="status"></span>
+          <ul class="presets" id="presets"></ul>
+        </div>
+      </div>
+
+      <div class="proofs">
+        <div class="proof-label"><b>Close-up</b> · the "of" next to Polyamine's own O and F, to match its contrast and endings</div>
+        <div class="proof" id="p-c"></div>
+        <div class="proof-label"><b>Horizontal</b> · site header, email signature, letterhead</div>
+        <div class="proof" id="p-h"></div>
+        <div class="proof-label"><b>Stacked</b> · footer, covers, posters</div>
+        <div class="proof narrow" id="p-s"></div>
+        <div class="proof-label"><b>Stacked, two lines</b> · square spaces, social cards</div>
+        <div class="proof narrow" id="p-s2"></div>
+        <div class="proof-label"><b>Two lines, mark on the left</b> · header on narrow screens, social profiles</div>
+        <div class="proof" id="p-2l"></div>
+        <div class="proof-label"><b>Two lines, mark on the right</b> · the name leads, the mark closes</div>
+        <div class="proof" id="p-2r"></div>
+        <div class="proof-label"><b>Wordmark alone</b> · where the mark already appears nearby</div>
+        <div class="proof" id="p-w"></div>
+        <div class="proof-label"><b>Horizontal at real sizes</b> · height of the mark in px</div>
+        <div class="proof"><div class="sizes" id="p-sizes"></div></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head">
+      <h2>5. Variation: the mark as the "o"</h2>
+      <p class="note">The ring is already round, so the mark takes the place of the "o" in "of", followed by an upright Polyamine F. The name and the mark become one thing. It uses the colourway, ground and capital spacing from section 4.</p>
+    </div>
+    <div class="bench">
+      <div class="panel" aria-label="Mark-as-o controls">
+        <div class="ctl"><label for="oSize">Mark size <output id="oSizeO"></output></label><input type="range" id="oSize" min="0.6" max="2.4" step="0.02" value="1.2"></div>
+        <div class="ctl"><label for="oShift">Raise or lower <output id="oShiftO"></output></label><input type="range" id="oShift" min="-0.6" max="0.6" step="0.01" value="0"></div>
+        <div class="ctl"><label for="oF">F size <output id="oFO"></output></label><input type="range" id="oF" min="0.5" max="1.2" step="0.01" value="1"></div>
+        <div class="ctl"><label for="oFgap">Space between mark and F <output id="oFgapO"></output></label><input type="range" id="oFgap" min="-0.2" max="0.6" step="0.01" value="0.06"></div>
+        <div class="ctl"><label for="oGap">Space around the pair <output id="oGapO"></output></label><input type="range" id="oGap" min="0.3" max="2" step="0.05" value="1"></div>
+        <p class="note">Saved and copied together with the settings in section 4.</p>
+      </div>
+      <div class="proofs">
+        <div class="proof-label"><b>One line</b></div>
+        <div class="proof" id="o-1"></div>
+        <div class="proof-label"><b>Two lines</b></div>
+        <div class="proof narrow" id="o-2"></div>
+        <div class="proof-label"><b>At real sizes</b> · cap height in px</div>
+        <div class="proof"><div class="sizes" id="o-sizes"></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const GROUNDS = [["white", "White"], ["paper", "Paper"], ["sunlight", "Sunlight"], ["night", "Night"], ["red", "Red"]];
+const WAYS = [
+  ["colour", "Colour", "the main logo", { white: 1, paper: 1, sunlight: 1, night: 0, red: 0 }],
+  ["colour-dark", "Colour, dark", "red prints, white bird", { white: 0, paper: 0, sunlight: 0, night: 1, red: 0 }],
+  ["black", "Black", "one colour, light grounds", { white: 1, paper: 1, sunlight: 1, night: 0, red: 1 }],
+  ["white", "White", "one colour, dark grounds", { white: 0, paper: 0, sunlight: 0, night: 1, red: 1 }],
+  ["red", "Red", "one colour, light grounds", { white: 1, paper: 1, sunlight: 1, night: 0, red: 0 }],
+];
+const m = document.getElementById("matrix");
+m.innerHTML = `<div></div>` + GROUNDS.map(([, n]) => `<div class="colhead">${n}</div>`).join("") +
+  WAYS.map(([k, n, sub, ok]) => `<div class="rowhead">${n}<span>${sub}</span></div>` +
+    GROUNDS.map(([g, gn]) => `<div class="cell"><div class="swatch g-${g}${ok[g] ? "" : " no"}"><img src="img/mark-${k}.png?v=3" alt="${n} mark on ${gn.toLowerCase()}"></div><span class="chip ${ok[g] ? "ok" : "no"}">${ok[g] ? "Use" : "Avoid"}</span></div>`).join("")).join("");
+
+/* ---------- final lockups ---------- */
+const LK_GROUNDS = [["white", "White", "#ffffff"], ["paper", "Paper", "#fbfaf6"], ["sunlight", "Sunlight", "#fbefc4"], ["night", "Night", "#171613"], ["red", "Red", "#e5201c"]];
+const LK_WAYS = [
+  ["colour", "Colour", { white: 1, paper: 1, sunlight: 1, night: 0, red: 0 }],
+  ["colour-dark", "Colour, dark", { white: 0, paper: 0, sunlight: 0, night: 1, red: 0 }],
+  ["black", "Black", { white: 1, paper: 1, sunlight: 1, night: 0, red: 1 }],
+  ["white", "White", { white: 0, paper: 0, sunlight: 0, night: 1, red: 1 }],
+  ["red", "Red", { white: 1, paper: 1, sunlight: 1, night: 0, red: 0 }],
+];
+let lk = "horizontal";
+function drawLk() {
+  document.getElementById("lkGrid").innerHTML = LK_WAYS.map(([w, n, ok]) =>
+    `<div class="lk-row"><div class="rowhead">${n}<span>seeds-logo-${lk}-${w}.svg</span></div><div class="lk-cells">` +
+    LK_GROUNDS.map(([g, gn, bg]) => `<div class="cell"><div class="lk-tile" style="background:${bg}"><img src="lockups/seeds-logo-${lk}-${w}-1200.png?v=3" alt="${n} ${lk.replace(/-/g, " ")} lockup on ${gn.toLowerCase()}"></div><span class="chip ${ok[g] ? "ok" : "no"}">${gn} · ${ok[g] ? "Use" : "Avoid"}</span></div>`).join("") +
+    `</div></div>`).join("");
+  document.querySelectorAll("#lk button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === lk));
+}
+document.querySelectorAll("#lk button").forEach(b => b.addEventListener("click", () => { lk = b.dataset.v; drawLk(); }));
+drawLk();
+
+/* ---------- sizes ---------- */
+const SZ_ROWS = [["colour", "Colour on paper", "#fbfaf6", "#5d584f"], ["colour-dark", "Colour, dark on night", "#171613", "#a49e93"],
+  ["black", "Black on white", "#ffffff", "#5d584f"], ["white", "White on night", "#171613", "#a49e93"]];
+function drawTiers() {
+  document.getElementById("tiers").innerHTML = SZ_ROWS.map(([way, n, bg, fg]) =>
+    `<div class="tier"><div><h3>${n}</h3></div><div class="tier-row" style="background:${bg}">` +
+    [256, 128, 96, 64, 48, 32, 24, 16].map(px => `<figure><img src="img/sizes/seeds-mark-${way}-${px}${px <= 128 ? "@2x" : ""}.png?v=3" width="${px}" height="${px}" alt="Mark at ${px} px"><figcaption style="color:${fg}">${px} px</figcaption></figure>`).join("") +
+    `</div></div>`).join("");
+}
+drawTiers();
+
+/* ---------- lockup bench ---------- */
+const INK = { colour: "#1b1916", "colour-dark": "#ffffff", black: "#1b1916", white: "#ffffff" };
+const GROUND = { white: "#ffffff", paper: "#fbfaf6", sunlight: "#fbefc4", night: "#171613" };
+// defaults = the saved "Final version" (13 Oct 2026)
+const DEF = { cw: "colour", gr: "paper", ofFace: "fraunces", ofOpsz: 101, ofSoft: 39, ofWonk: 0, ofSize: 1.15, ofWeight: 350, ofShift: 0.17, ofGap: 0.8, ofGapR: 0.8, track: 20, markH: 2.7, markGap: 0.35, markS: 0.4, markH2: 1.1, lineGap: 1.4, oMark: "full", oSize: 1.2, oShift: 0, oF: 1, oFgap: 0.06, oGap: 1 };
+const st = Object.assign({}, DEF);
+try { Object.assign(st, JSON.parse(localStorage.getItem("sor-lockup") || "{}")); } catch (e) {}
+let G = null;
+const NS = "http://www.w3.org/2000/svg";
+
+function word(name, x, y, track) {
+  const w = G[name];
+  const paths = w.glyphs.map((g, i) => `<path transform="translate(${x + i * track} ${y})" d="${g.d}"/>`).join("");
+  return { svg: paths, width: w.width + track * (w.glyphs.length - 1) };
+}
+const FACES = {
+  fraunces: { family: "Fraunces", w: [100, 900], axes: () => `'opsz' ${st.ofOpsz}, 'SOFT' ${st.ofSoft}, 'WONK' ${st.ofWonk}` },
+  bodoni: { family: "Bodoni Moda", w: [400, 900], axes: () => `'opsz' 96` },
+  playfair: { family: "Playfair Display", w: [400, 900], axes: () => "normal" },
+  cormorant: { family: "Cormorant", w: [300, 700], axes: () => "normal" },
+  instrument: { family: "Instrument Serif", w: [400, 400], axes: () => "normal" },
+};
+function face() { const f = FACES[st.ofFace] || FACES.fraunces; return f; }
+function ofWeight() { const f = face(); return Math.min(f.w[1], Math.max(f.w[0], st.ofWeight)); }
+function ofAttrs(fs) {
+  const f = face();
+  return `font-family="${f.family}, Georgia, serif" font-style="italic" font-weight="${ofWeight()}" font-size="${fs}" style="font-variation-settings:${f.axes()}"`;
+}
+let probe;
+function ofWidth(fs) {
+  if (!probe) {
+    probe = document.createElementNS(NS, "svg"); probe.setAttribute("width", "0"); probe.setAttribute("height", "0");
+    probe.style.position = "absolute"; document.body.appendChild(probe);
+  }
+  probe.innerHTML = `<text ${ofAttrs(fs)}>of</text>`;
+  return probe.querySelector("text").getComputedTextLength();
+}
+function ofText(x, y, fs) { return `<text x="${x}" y="${y}" ${ofAttrs(fs)}>of</text>`; }
+function line(words, x, y) {
+  // words: ["SEEDS","of","RENAISSANCE"] or subsets; returns svg + width
+  const C = G.cap, fs = st.ofSize * C;
+  let out = "", cx = x;
+  words.forEach((w, i) => {
+    if (i) cx += w === "of" ? G.space * st.ofGap : words[i - 1] === "of" ? G.space * st.ofGapR : G.space;
+    if (w === "of") { out += ofText(cx, y - st.ofShift * C, fs); cx += ofWidth(fs); }
+    else { const r = word(w, cx, y, st.track); out += r.svg; cx += r.width; }
+  });
+  return { svg: out, width: cx - x };
+}
+function frame(inner, x0, y0, w, h, ink, pad) {
+  return `<svg viewBox="${x0 - pad} ${y0 - pad} ${w + 2 * pad} ${h + 2 * pad}" xmlns="${NS}" role="img" aria-label="Seeds of Renaissance logo"><g fill="${ink}">${inner}</g></svg>`;
+}
+function mark(x, y, s, drawing) {
+  const f = !drawing || drawing === "full" ? `img/mark-${st.cw}.png?v=3` : `img/mark-${drawing}-${st.cw}.png`;
+  return `<image href="${f}" x="${x}" y="${y}" width="${s}" height="${s}"/>`;
+}
+function glyph(name, x, y, sc) { return `<g transform="translate(${x} ${y}) scale(${sc})">${word(name, 0, 0, 0).svg}</g>`; }
+function oLine(words, x, y) {
+  // like line(), with "of" drawn as the mark followed by a Polyamine F
+  const C = G.cap; let out = "", cx = x;
+  words.forEach((w, i) => {
+    if (i) cx += (w === "of" || words[i - 1] === "of") ? G.space * st.oGap : G.space;
+    if (w === "of") {
+      const m = st.oSize * C, cy = y - C / 2 - st.oShift * C;
+      out += mark(cx, cy - m / 2, m); cx += m + st.oFgap * C;
+      out += glyph("F", cx, y, st.oF); cx += G.F.width * st.oF;
+    } else { const r = word(w, cx, y, st.track); out += r.svg; cx += r.width; }
+  });
+  return { svg: out, width: cx - x };
+}
+
+function draw() {
+  if (!G) return;
+  const C = G.cap, ink = INK[st.cw], pad = C * 0.25;
+  const L = line(["SEEDS", "of", "RENAISSANCE"], 0, 0);
+  // horizontal: mark centred on the capitals' middle
+  const M = st.markH * C, gap = st.markGap * C;
+  const hx = M + gap;
+  const h = frame(mark(0, -C / 2 - M / 2, M) + line(["SEEDS", "of", "RENAISSANCE"], hx, 0).svg, 0, -C / 2 - M / 2, hx + L.width, M, ink, pad);
+  // stacked: mark above, centred
+  const S = st.markS * L.width, sg = C * 0.9;
+  const s = frame(mark(L.width / 2 - S / 2, -C - sg - S, S) + L.svg, 0, -C - sg - S, L.width, S + sg + C + C * 0.35, ink, pad);
+  // two lines
+  const l1w = line(["SEEDS", "of"], 0, 0).width, l2w = line(["RENAISSANCE"], 0, 0).width;
+  const W2 = Math.max(l1w, l2w), lg = C * 1.45, S2 = st.markS * 1.3 * W2;
+  const s2 = frame(mark(W2 / 2 - S2 / 2, -C - sg - S2, S2) + line(["SEEDS", "of"], (W2 - l1w) / 2, 0).svg + line(["RENAISSANCE"], (W2 - l2w) / 2, lg).svg,
+    0, -C - sg - S2, W2, S2 + sg + C + lg + C * 0.35, ink, pad);
+  const w = frame(L.svg, 0, -C, L.width, C * 1.35, ink, pad);
+  // two lines beside the mark
+  const lgap = st.lineGap * C, blockH = C + lgap, M3 = st.markH2 * blockH, g3 = st.markGap * C;
+  const a1 = line(["SEEDS", "of"], 0, 0).width, a2 = line(["RENAISSANCE"], 0, 0).width, W3 = Math.max(a1, a2);
+  const midY = (-C + lgap) / 2, top3 = Math.min(-C, midY - M3 / 2), h3 = Math.max(blockH + C * 0.3, M3);
+  const l2l = frame(mark(0, midY - M3 / 2, M3) + line(["SEEDS", "of"], M3 + g3, 0).svg + line(["RENAISSANCE"], M3 + g3, lgap).svg,
+    0, top3, M3 + g3 + W3, h3, ink, pad);
+  const l2r = frame(line(["SEEDS", "of"], W3 - a1, 0).svg + line(["RENAISSANCE"], W3 - a2, lgap).svg + mark(W3 + g3, midY - M3 / 2, M3),
+    0, top3, W3 + g3 + M3, h3, ink, pad);
+  // mark as the o
+  const O1 = oLine(["SEEDS", "of", "RENAISSANCE"], 0, 0);
+  const oTop = Math.min(-C, -C / 2 - st.oShift * C - st.oSize * C / 2), oBot = Math.max(C * 0.3, -C / 2 - st.oShift * C + st.oSize * C / 2);
+  const o1 = frame(O1.svg, 0, oTop, O1.width, oBot - oTop, ink, pad);
+  const b1 = oLine(["SEEDS", "of"], 0, 0).width, b2 = oLine(["RENAISSANCE"], 0, 0).width, WO = Math.max(b1, b2);
+  const o2 = frame(oLine(["SEEDS", "of"], (WO - b1) / 2, 0).svg + oLine(["RENAISSANCE"], (WO - b2) / 2, lgap).svg, 0, oTop, WO, lgap + C * 0.3 - oTop, ink, pad);
+  const fs = st.ofSize * C;
+  let cxp = 0, cu = "";
+  [["S"], ["of"], ["O"], ["F"], ["R"]].forEach(([k], i) => {
+    if (i) cxp += k === "of" ? G.space * st.ofGap : i === 2 ? G.space * st.ofGapR * 2.2 : G.space * 0.25;
+    if (k === "of") { cu += ofText(cxp, -st.ofShift * C, fs); cxp += ofWidth(fs); }
+    else { const r = word(k, cxp, 0, 0); cu += r.svg; cxp += r.width; }
+  });
+  const c = frame(cu, 0, -C * 1.15, cxp, C * 1.6, ink, pad);
+  const bg = GROUND[st.gr];
+  [["p-c", c], ["p-h", h], ["p-s", s], ["p-s2", s2], ["p-2l", l2l], ["p-2r", l2r], ["p-w", w], ["o-1", o1], ["o-2", o2]].forEach(([id, svg]) => { const el = document.getElementById(id); el.innerHTML = svg; el.style.background = bg; });
+  const osz = document.getElementById("o-sizes");
+  osz.parentElement.style.background = bg;
+  const ovbH = oBot - oTop + 2 * pad, ovbW = O1.width + 2 * pad;
+  osz.innerHTML = [48, 32, 24, 16, 12].map(px => { const hp = px * ovbH / C;
+    return `<figure><div style="height:${hp}px;width:${hp * ovbW / ovbH}px">${o1}</div><figcaption style="color:${st.gr === "night" ? "#a49e93" : "#5d584f"}">${px} px caps</figcaption></figure>`; }).join("");
+  osz.querySelectorAll("svg").forEach(el => { el.style.width = "100%"; el.style.height = "100%"; });
+  const sizes = document.getElementById("p-sizes");
+  sizes.parentElement.style.background = bg;
+  sizes.innerHTML = [96, 64, 48, 32, 24].map(px => {
+    const vbH = M + 2 * pad, vbW = hx + L.width + 2 * pad, hpx = px * vbH / M;
+    return `<figure><div style="height:${hpx}px;width:${hpx * vbW / vbH}px">${h}</div><figcaption style="color:${st.gr === "night" ? "#a49e93" : "#5d584f"}">${px} px</figcaption></figure>`;
+  }).join("");
+  sizes.querySelectorAll("svg").forEach(el => { el.style.width = "100%"; el.style.height = "100%"; });
+  // outputs
+  const fmt = { ofSize: v => `${Math.round(v * 100)}% of cap`, ofWeight: v => v, ofShift: v => `${v > 0 ? "+" : ""}${Math.round(v * 100)}% of cap`, ofGap: v => `${v.toFixed(2)}× space`, ofGapR: v => `${v.toFixed(2)}× space`,
+    ofOpsz: v => v >= 120 ? `${v} (high)` : v, ofSoft: v => v === 0 ? "0 (sharp)" : v, ofWonk: v => v ? "on" : "off",
+    track: v => `${v} units`, markH: v => `${v.toFixed(2)}× cap`, markGap: v => `${v.toFixed(2)}× cap`, markS: v => `${Math.round(v * 100)}% of name width`,
+    markH2: v => `${v.toFixed(2)}× two-line height`, lineGap: v => `${v.toFixed(2)}× cap`,
+    oSize: v => `${v.toFixed(2)}× cap`, oShift: v => `${v > 0 ? "+" : ""}${Math.round(v * 100)}% of cap`, oF: v => `${Math.round(v * 100)}%`, oFgap: v => `${v.toFixed(2)}× cap`, oGap: v => `${v.toFixed(2)}× space` };
+  Object.keys(fmt).forEach(k => { document.getElementById(k).value = st[k]; document.getElementById(k + "O").textContent = fmt[k](+st[k]); });
+  ["cw", "gr"].forEach(k => document.querySelectorAll(`#${k} button`).forEach(b => b.setAttribute("aria-pressed", b.dataset.v === st[k])));
+  document.getElementById("ofFace").value = st.ofFace;
+  document.querySelectorAll(".ctl.fr").forEach(el => { el.hidden = st.ofFace !== "fraunces"; });
+  document.getElementById("settings").textContent = settingsText();
+  try { localStorage.setItem("sor-lockup", JSON.stringify(st)); } catch (e) {}
+}
+function settingsText() {
+  return `Lockup settings (Polyamine units, cap height ${G.cap})\n` +
+    `of: ${face().family} italic${st.ofFace === "fraunces" ? ` (opsz ${st.ofOpsz}, SOFT ${st.ofSoft}, WONK ${st.ofWonk})` : ""}, size ${Math.round(st.ofSize * 100)}% of cap, weight ${ofWeight()}, shift ${Math.round(st.ofShift * 100)}%, space before ${(+st.ofGap).toFixed(2)}×, after ${(+st.ofGapR).toFixed(2)}×\n` +
+    `capitals: tracking ${st.track}\n` +
+    `mark beside: ${(+st.markH).toFixed(2)}× cap, gap ${(+st.markGap).toFixed(2)}× cap\n` +
+    `mark above: ${Math.round(st.markS * 100)}% of name width\n` +
+    `two lines: mark ${(+st.markH2).toFixed(2)}× block height, line gap ${(+st.lineGap).toFixed(2)}× cap\n` +
+    `mark as o: size ${(+st.oSize).toFixed(2)}× cap, shift ${Math.round(st.oShift * 100)}%, F ${Math.round(st.oF * 100)}%, mark–F gap ${(+st.oFgap).toFixed(2)}×, around ${(+st.oGap).toFixed(2)}×\n` +
+    `seen with: ${st.cw} on ${st.gr}`;
+}
+Object.keys(DEF).filter(k => !["cw", "gr", "ofFace", "oMark"].includes(k)).forEach(k =>
+  document.getElementById(k).addEventListener("input", e => { st[k] = +e.target.value; draw(); }));
+["cw", "gr"].forEach(k => document.querySelectorAll(`#${k} button`).forEach(b => b.addEventListener("click", () => {
+  st[k] = b.dataset.v;
+  if (k === "cw") { if (["colour-dark", "white"].includes(st.cw) && st.gr !== "night") st.gr = "night"; if (["colour", "black"].includes(st.cw) && st.gr === "night") st.gr = "paper"; }
+  draw();
+})));
+document.getElementById("ofFace").addEventListener("change", e => { st.ofFace = e.target.value; draw(); });
+document.getElementById("reset").addEventListener("click", () => { Object.assign(st, DEF); draw(); });
+document.getElementById("copy").addEventListener("click", () => {
+  const t = settingsText(), msg = document.getElementById("copied");
+  navigator.clipboard.writeText(t).then(() => { msg.textContent = "Copied"; }, () => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("settings"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); msg.textContent = "Selected: press Cmd+C";
+  });
+});
+/* saved settings: kept with the page (db), so they survive and Claude can read them */
+(async () => {
+  const db = window.claude ? await window.claude.use("db") : null;
+  if (!db) return;
+  const user = await window.claude.use("user");
+  const box = document.getElementById("presetBox"), list = document.getElementById("presets"), msg = document.getElementById("presetMsg");
+  box.hidden = false;
+  const col = db.collection("presets");
+  const fmtDate = t => { try { return new Date(t).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); } catch (e) { return ""; } };
+  col.orderBy("savedAt", "desc").limit(30).onSnapshot(snap => {
+    list.innerHTML = "";
+    if (!snap.docs.length) { list.innerHTML = `<li><span>Nothing saved yet. Name your settings and press Save.</span></li>`; return; }
+    snap.docs.forEach(d => {
+      const p = d.data() || {}, li = document.createElement("li");
+      const name = document.createElement("div"); name.textContent = p.name || "Untitled";
+      const when = document.createElement("span"); when.textContent = " " + fmtDate(p.savedAt); name.appendChild(when);
+      const b = document.createElement("button"); b.type = "button"; b.className = "btn"; b.textContent = "Load";
+      b.addEventListener("click", () => { Object.assign(st, DEF, p.settings || {}); draw(); msg.textContent = `Loaded "${p.name || "Untitled"}"`; });
+      li.append(name, b); list.appendChild(li);
+    });
+  }, () => { msg.textContent = "Saved settings can't be shown right now."; });
+  document.getElementById("savePreset").addEventListener("click", async () => {
+    const name = document.getElementById("presetName").value.trim() || "Untitled";
+    try {
+      const by = user ? await user.id().catch(() => null) : null;
+      await col.add({ name, settings: { ...st }, summary: settingsText(), savedAt: Date.now(), by });
+      msg.textContent = `Saved "${name}"`; document.getElementById("presetName").value = "";
+    } catch (e) { msg.textContent = "Couldn't save. You may only have view access to this page."; }
+  });
+})();
+fetch("wordmark-glyphs.json").then(r => r.json()).then(d => { G = d; return Promise.all(Object.values(FACES).map(f => document.fonts.load(`italic 400 100px "${f.family}"`).catch(() => {}))); }).then(draw);
+document.fonts && document.fonts.ready.then(draw);
+</script>

@@ -74,5 +74,5 @@ Papers as one A4 PDF, read on screen. How to make one: [print.md](print.md).
 
 - **Sub-brands (major).** Are *Mythos*, the papers, courses, *Gardens of Change* and *The Greenhouse* sub-brands with their own lockups and accents, or Seeds of Renaissance with a label? This shapes podcast, social, print and email. Beads `.11`.
 - **Font licences.** Polyamine and Restora must be bought before anything public, PDFs and Canva included. Beads `.2`.
-- **Logo.** A small version for avatars and favicons; possibly a redrawn swallow. See [logo.md](logo.md).
+- **Logo.** Done 13 October 2026: every file in [logos.html](logos.html), rules in [logo.md](logo.md).
 - **Photography.** Every photo so far is a placeholder. See [photography.md](photography.md).

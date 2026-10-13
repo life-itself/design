@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · Logos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="system/fonts.css">
+<link rel="stylesheet" href="system/tokens.css">
+<link rel="stylesheet" href="system/components.css">
+<style>
+/* Every logo file, shown on the ground it is made for, with links to the files. Files: system/logo/ (README there). */
+html, body { margin: 0; background: var(--paper) }
+.lg-head { padding-block: clamp(40px, 6cqi, 80px) 24px; display: grid; gap: 14px; max-width: 900px }
+.lg-head h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.lg-head p { font-size: var(--t-intro); max-width: 56ch }
+.lg-head ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: var(--t-small); color: var(--muted); max-width: 70ch }
+.lg-group { padding-block: 32px 8px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px }
+.lg-grid > *, .lg-sizes { min-width: 0 }
+.lg-group > h2 { color: var(--muted); display: block }
+.lg-group > p { font-size: var(--t-small); color: var(--muted); max-width: 70ch; margin: 0 }
+.lg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: var(--gap-m) }
+.lg-grid.wide { grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr)) }
+.lg-plate { display: grid; gap: 8px; align-content: start; margin: 0 }
+.lg-art { aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; padding: 10%; border: 1px solid var(--rule) }
+.wide .lg-art { aspect-ratio: 16 / 9; padding: 7% }
+.lg-art { min-width: 0; overflow: hidden }
+.lg-art img { width: 100%; height: 100%; object-fit: contain; display: block }
+.lg-plate figcaption { display: grid; gap: 2px; font-size: var(--t-small) }
+.lg-plate figcaption b { font-weight: 500 }
+.lg-plate figcaption span { color: var(--muted); font-size: var(--t-meta) }
+.lg-files { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .08em; text-transform: uppercase }
+.lg-files a { color: var(--ink); text-underline-offset: 3px }
+.lg-sizes { display: flex; flex-wrap: wrap; gap: 20px; align-items: end; padding: 20px; border: 1px solid var(--rule) }
+.lg-sizes figure { margin: 0; display: grid; gap: 6px; justify-items: center }
+.lg-sizes figcaption { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: .08em }
+.lg-sizes a { color: inherit }
+.g-white { background: var(--white) } .g-paper { background: var(--paper) } .g-sun { background: var(--sunlight) }
+.g-night { background: var(--night); border-color: var(--night) } .g-red { background: #e5201c; border-color: #e5201c }
+.g-night figcaption, .lg-sizes.g-night { color: var(--chalk) }
+</style>
+</head>
+<body class="sor gutter" style="padding-bottom:64px">
+<main>
+  <header class="lg-head">
+    <span class="label">Seeds of Renaissance · design system</span>
+    <h1>Logos</h1>
+    <p>Every version of the logo, shown on the ground it is made for. Each one links to its files: SVG for any size, PNG with a transparent background.</p>
+    <ul>
+      <li>Rules for using them: <a class="link" href="logo.md">logo.md</a>. All files and how they are rebuilt: <a class="link" href="system/logo/README.md">system/logo/</a>.</li>
+      <li><b>Colour</b> on white, paper or pale yellow. <b>Colour, dark</b> (white bird and name) on night and dark photographs. <b>Black</b> and <b>white</b> where colour fights the page; both also work on the logo red. <b>Red</b> on light grounds.</li>
+    </ul>
+  </header>
+
+  <section class="lg-group">
+    <h2 class="label">Mark and name</h2>
+    <p>The horizontal lockup is the main logo. The others are for spaces it doesn't fit.</p>
+    <div id="lockups"></div>
+  </section>
+
+  <section class="lg-group">
+    <h2 class="label">The mark</h2>
+    <p>The swallow in its ring of fingerprints, on its own. PNG at 1130 px.</p>
+    <div class="lg-grid" id="marks"></div>
+  </section>
+
+  <section class="lg-group">
+    <h2 class="label">The mark at every size</h2>
+    <p>The same full mark, drawn for each size, shown at real size. Use these for avatars and icons rather than shrinking the big file. Each size links to its PNG; <code>@2x</code> files (up to 128 px) are in the same folder. Favicon: <a class="link" href="system/logo/favicon.ico">favicon.ico</a>.</p>
+    <div class="lg-grid wide" id="sizes" style="grid-template-columns: 1fr"></div>
+  </section>
+</main>
+<script>
+const WAYS = [
+  ["colour", "Colour", "g-paper", "on white, paper, pale yellow"],
+  ["colour-dark", "Colour, dark", "g-night", "on night, dark photographs"],
+  ["black", "Black", "g-white", "on light grounds, and on red"],
+  ["white", "White", "g-night", "on night, and on red"],
+  ["red", "Red", "g-white", "on light grounds"],
+];
+const LOCKUPS = [
+  ["horizontal", "Horizontal", "the main logo: header, letterhead, email signature"],
+  ["two-lines-left", "Two lines, mark left", "narrow headers, social profiles"],
+  ["two-lines-right", "Two lines, mark right", "the name leads, the mark closes"],
+  ["stacked", "Stacked", "footer, covers, posters"],
+  ["wordmark", "Wordmark alone", "where the mark is already nearby"],
+];
+const L = "system/logo/";
+const link = (href, text) => `<a href="${href}">${text}</a>`;
+document.getElementById("lockups").innerHTML = LOCKUPS.map(([k, n, use]) =>
+  `<h3 class="label" style="margin:22px 0 10px;display:block">${n} <span style="color:var(--muted)">· ${use}</span></h3><div class="lg-grid wide">` +
+  WAYS.map(([w, wn, g, on]) => { const f = `${L}lockups/seeds-logo-${k}-${w}`;
+    return `<figure class="lg-plate"><div class="lg-art ${g}"><img src="${f}-1200.png" alt="${n} logo, ${wn.toLowerCase()}" loading="lazy"></div>` +
+      `<figcaption><b>${wn}</b><span>${on}</span><span class="lg-files">${link(f + ".svg", "SVG")}${link(f + "-1200.png", "PNG 1200")}${link(f + "-2400.png", "PNG 2400")}</span></figcaption></figure>`; }).join("") +
+  `</div>`).join("");
+document.getElementById("marks").innerHTML = WAYS.map(([w, wn, g, on]) => { const f = `${L}mark/seeds-mark-${w}`;
+  return `<figure class="lg-plate"><div class="lg-art ${g}"><img src="${f}.png" alt="The mark, ${wn.toLowerCase()}" loading="lazy"></div>` +
+    `<figcaption><b>${wn}</b><span>${on}</span><span class="lg-files">${link(f + ".svg", "SVG")}${link(f + ".png", "PNG 1130")}</span></figcaption></figure>`; }).join("");
+const PX = [512, 256, 128, 96, 64, 48, 32, 24, 16];
+document.getElementById("sizes").innerHTML = WAYS.map(([w, wn, g]) =>
+  `<div><h3 class="label" style="margin:10px 0;display:block">${wn}</h3><div class="lg-sizes ${g}">` +
+  PX.map(px => { const f = `${L}mark/sizes/seeds-mark-${w}-${px}`, show = px <= 128 ? `${f}@2x.png` : `${f}.png`;
+    return `<figure><a href="${f}.png"><img src="${show}" width="${Math.min(px, 256)}" height="${Math.min(px, 256)}" alt="${wn} mark at ${px} px" loading="lazy"></a><figcaption>${link(f + ".png", px + " px")}</figcaption></figure>`; }).join("") +
+  `</div></div>`).join("");
+</script>
+</body>
+</html>

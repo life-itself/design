@@ -1,0 +1,528 @@
+<title>Seeds Logo Variants</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+/* Layout: a specimen sheet. Narrow text column, wide grid of square tiles; tiles keep fixed grounds in both themes. */
+:root {
+  --page: #fbfaf6;        /* --paper */
+  --text: #1b1916;        /* --ink */
+  --muted: #5d584f;
+  --rule: #e0dacf;
+  --red: #e5201c;
+  --tile-light: #ffffff;  /* specimen grounds: same in both themes */
+  --tile-night: #171613;
+  --tile-text-light: #5d584f;
+  --tile-text-night: #a49e93;
+  --chip: #ffffff;
+  --sans: "Apfel Grotezk", "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #1f1d1a; --text: #ece7dc; --muted: #a49e93; --rule: #38342e; --chip: #2a2723; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #1f1d1a; --text: #ece7dc; --muted: #a49e93; --rule: #38342e; --chip: #2a2723; color-scheme: dark;
+}
+body { background: var(--page); color: var(--text); font: 16px/1.55 var(--sans); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 80px; display: grid; gap: 64px; }
+header { display: grid; gap: 12px; max-width: 64ch; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 500 clamp(30px, 5vw, 46px)/1.1 var(--sans); margin: 0; text-wrap: balance; }
+h1 em { font-family: var(--serif); font-weight: 300; }
+h2 { font: 500 22px/1.25 var(--sans); margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 64ch; }
+.lede { color: var(--muted); }
+section { display: grid; gap: 20px; border-top: 1px solid var(--rule); padding-top: 28px; }
+.sec-head { display: grid; gap: 8px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.tile { aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; border: 1px solid var(--rule); }
+.tile img { width: 86%; height: 86%; object-fit: contain; }
+.tile.bird img { width: 74%; height: 74%; }
+.light { background: var(--tile-light); }
+.night { background: var(--tile-night); border-color: var(--tile-night); }
+.check { background-color: var(--tile-light); background-image: conic-gradient(#e9e6df 25%, transparent 0 50%, #e9e6df 0 75%, transparent 0); background-size: 18px 18px; }
+.disc { width: 86%; aspect-ratio: 1; border-radius: 50%; background: #fff; display: grid; place-items: center; }
+.disc img { width: 92%; height: 92%; }
+figcaption { font-size: 13px; color: var(--muted); }
+figcaption b { color: var(--text); font-weight: 500; }
+.angles { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.angles span { font-size: 13px; color: var(--muted); margin-right: 4px; }
+.angles button { font: 500 14px var(--sans); color: var(--text); background: var(--chip); border: 1px solid var(--rule); padding: 6px 14px; border-radius: 999px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.angles button[aria-pressed="true"] { background: var(--text); color: var(--page); border-color: var(--text); }
+.angles button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.small { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.strip { display: flex; align-items: end; gap: 18px; padding: 18px; border: 1px solid var(--rule); flex-wrap: wrap; }
+.strip .av { border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.strip .av img { width: 92%; height: 92%; }
+.strip.night { background: var(--tile-night); }
+.note { font-size: 14px; color: var(--muted); }
+.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; max-width: 70ch; font-size: 15px; }
+.steps b { font-weight: 500; }
+.grid.six { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.controls { display: grid; gap: 10px; }
+.grid.ladder { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.pick { all: unset; display: grid; gap: 8px; cursor: pointer; min-width: 0; }
+.pick .tile img { width: 92%; height: 92%; }
+.pick .cap { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pick .cap b { color: var(--text); font-weight: 500; }
+.board-wrap { overflow-x: auto; border: 1px solid var(--rule); }
+.board { border-collapse: collapse; width: 100%; min-width: 640px; background: var(--tile-light); }
+.board th { font: 500 12px var(--sans); color: var(--tile-text-light); text-align: center; padding: 10px 6px; font-variant-numeric: tabular-nums; }
+.board th:first-child, .board td:first-child { text-align: left; padding-left: 14px; white-space: nowrap; }
+.board td { padding: 10px 6px; text-align: center; vertical-align: middle; border-top: 1px solid #ece8e0; color: #1b1916; font-size: 13px; }
+.board .av, .feed .av { border-radius: 50%; background: #fff; display: inline-grid; place-items: center; overflow: hidden; vertical-align: middle; }
+.board .av img, .feed .av img { width: 100%; height: 100%; }
+.board.dark { background: var(--tile-night); }
+.board.dark th { color: var(--tile-text-night); }
+.board.dark td { color: #ece7dc; border-top-color: #2b2824; }
+.board.dark .av, .feed.dark .av { background: var(--tile-night); box-shadow: inset 0 0 0 1px #2b2824; }
+.board.t-blur .av img, .feed.t-blur .av img { filter: blur(1.4px); }
+.board.t-grey .av img, .feed.t-grey .av img { filter: grayscale(1); }
+.board.t-far { zoom: .5; }
+.feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0; border: 1px solid var(--rule); background: var(--tile-light); color: #1b1916; }
+.feed.dark { background: var(--tile-night); color: #ece7dc; }
+.feed .post { display: flex; gap: 10px; align-items: flex-start; padding: 14px; border-bottom: 1px solid #ece8e0; min-width: 0; }
+.feed.dark .post { border-bottom-color: #2b2824; }
+.feed .post div { min-width: 0; font-size: 13px; line-height: 1.4; }
+.feed .post b { font-weight: 500; }
+.feed .post .meta { color: #8a847a; font-size: 12px; }
+.steps.lettered { list-style: none; padding-left: 0; }
+.grid.ladder.seven { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 720px) { .grid.ladder.seven { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile.zoom { overflow: hidden; }
+.tile.zoom img { width: 300%; height: 300%; max-width: none; object-fit: contain; }
+.pick[aria-pressed="true"] .tile { outline: 2px solid var(--text); outline-offset: 2px; }
+.pick:focus-visible .tile { outline: 2px solid var(--red); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Seeds of Renaissance · logo workbench · 13 Oct 2026</div>
+    <h1>Seeds <em>of</em> Renaissance mark, variants</h1>
+    <p class="lede">The current mark on every ground it has to work on, then the current swallow at a range of bigger sizes in the ring. Earlier tries (a rougher edge and three other birds) are kept below for reference.</p>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>1. Current mark</h2>
+      <p class="note">Separated into its two inks (red fingerprints, black swallow) so each version has a transparent background and can sit on any ground.</p>
+    </div>
+    <div class="grid">
+      <figure><div class="tile light"><img src="img/logo-colour.png" alt="Current mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img src="img/logo-black.png" alt="Current mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img src="img/logo-white.png" alt="Current mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img src="img/logo-colour-dark.png" alt="Current mark with red prints and a white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+      <figure><div class="tile night"><div class="disc"><img src="img/logo-colour.png" alt="Current mark on a white disc on black"></div></div><figcaption><b>On its disc</b> · the current rule for dark grounds</figcaption></figure>
+      <figure><div class="tile check"><img src="img/logo-colour.png" alt="Current mark on a transparency grid"></div><figcaption><b>Transparent PNG</b> · check the cut</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>2. The current swallow, bigger</h2>
+      <p class="note">The original bird, unchanged in shape and direction, scaled up about its own centre. Fingerprints that would touch it are removed whole, so the ring opens up around it rather than being clipped. Choose a size to see it on every ground.</p>
+    </div>
+    <div class="grid ladder" id="ladder">
+      <button type="button" class="pick" id="z100" data-a="100" aria-pressed="false"><span class="tile light"><img src="img/size-100.png" alt=""></span><span class="cap"><b>As now</b></span></button>
+      <button type="button" class="pick" id="z110" data-a="110" aria-pressed="false"><span class="tile light"><img src="img/size-110.png" alt=""></span><span class="cap"><b>+10%</b></span></button>
+      <button type="button" class="pick" id="z120" data-a="120" aria-pressed="false"><span class="tile light"><img src="img/size-120.png" alt=""></span><span class="cap"><b>+20%</b></span></button>
+      <button type="button" class="pick" id="z130" data-a="130" aria-pressed="true"><span class="tile light"><img src="img/size-130.png" alt=""></span><span class="cap"><b>+30%</b></span></button>
+      <button type="button" class="pick" id="z140" data-a="140" aria-pressed="false"><span class="tile light"><img src="img/size-140.png" alt=""></span><span class="cap"><b>+40%</b></span></button>
+      <button type="button" class="pick" id="z150" data-a="150" aria-pressed="false"><span class="tile light"><img src="img/size-150.png" alt=""></span><span class="cap"><b>+50%</b></span></button>
+      <button type="button" class="pick" id="z165" data-a="165" aria-pressed="false"><span class="tile light"><img src="img/size-165.png" alt=""></span><span class="cap"><b>+65%</b></span></button>
+    </div>
+    <div class="grid" id="sizeGrid">
+      <figure><div class="tile light"><img data-v="" src="img/size-130.png" alt="Mark in colour on white"></div><figcaption><b>Colour</b> · on white · <span class="zlabel">+30%</span></figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/size-130-black.png" alt="Mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/size-130-white.png" alt="Mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/size-130-dark.png" alt="Mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Now</b></figcaption></figure>
+      <figure><div class="strip" id="zStrip" data-src="img/size-130.png"></div><figcaption><b>Bigger bird</b> · follows the size chosen</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>3. Bigger bird, keeping the fingerprints</h2>
+      <p class="note">In section 2, every print the bigger bird touches is deleted, so the inner rings thin out. These three methods keep the prints.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Deleted.</b> As in section 2, for comparison.</li>
+      <li><b>Pushed out.</b> Each print in the way slides outward along its own ray until it's clear. None are lost; a few pile up, as real stamping would.</li>
+      <li><b>Bird in front.</b> Every print stays where it was, and the bird sits on top with a thin white gap cut around it, flying through the prints.</li>
+      <li><b>Pushed a little, then in front.</b> Prints can move only a short way. Any still in the way are cut by the white gap. The prints come right up to the bird.</li>
+    </ol>
+    <div class="controls">
+      <div class="angles" role="group" aria-label="Method" data-keep="m">
+        <span>Method</span>
+        <button type="button" id="k-remove" data-a="remove" aria-pressed="false">Deleted</button>
+        <button type="button" id="k-push" data-a="push" aria-pressed="false">Pushed out</button>
+        <button type="button" id="k-front" data-a="front" aria-pressed="false">Bird in front</button>
+        <button type="button" id="k-mix" data-a="mix" aria-pressed="true">Pushed a little, then in front</button>
+      </div>
+      <div class="angles" role="group" aria-label="Bird size" data-keep="s">
+        <span>Bird size</span>
+        <button type="button" id="k-120" data-a="120" aria-pressed="true">+20%</button>
+        <button type="button" id="k-130" data-a="130" aria-pressed="false">+30%</button>
+      </div>
+    </div>
+    <div class="grid" id="keepCompare">
+      <figure><div class="tile light"><img src="img/logo-colour.png" alt="Current mark, for comparison"></div><figcaption><b>Now</b> · for comparison</figcaption></figure>
+      <figure><div class="tile light"><img data-v="" src="img/keep-mix-120.png" alt="Bigger bird in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/keep-mix-120-black.png" alt="Bigger bird in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/keep-mix-120-white.png" alt="Bigger bird in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/keep-mix-120-dark.png" alt="Bigger bird with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Now</b></figcaption></figure>
+      <figure><div class="strip" id="kStrip" data-src="img/keep-mix-120.png"></div><figcaption><b>This version</b> · follows the choice above</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>4. +30%, rougher bird, prints kept</h2>
+      <p class="note">The bird 30% bigger, with the cut-and-printed edge, and the fingerprints kept using the methods from section 3. The other edges are here to compare. The close-up shows the edge at three times the size.</p>
+    </div>
+    <div class="controls">
+      <div class="angles" role="group" aria-label="Edge" data-rough="t">
+        <span>Edge</span>
+        <button type="button" id="r-smooth" data-a="smooth" aria-pressed="false">Smooth (now)</button>
+        <button type="button" id="r-cut" data-a="cut" aria-pressed="false">Knife-cut</button>
+        <button type="button" id="r-bleed" data-a="bleed" aria-pressed="false">Ink bleed</button>
+        <button type="button" id="r-cutprint" data-a="cutprint" aria-pressed="true">Cut and printed</button>
+        <button type="button" id="r-carved" data-a="carved" aria-pressed="false">Carved line</button>
+      </div>
+      <div class="angles" role="group" aria-label="Fingerprints" data-rough="m">
+        <span>Prints</span>
+        <button type="button" id="r-push" data-a="push" aria-pressed="false">Pushed out</button>
+        <button type="button" id="r-front" data-a="front" aria-pressed="false">Bird in front</button>
+        <button type="button" id="r-mix" data-a="mix" aria-pressed="true">Pushed a little, then in front</button>
+      </div>
+    </div>
+    <div class="grid" id="roughGrid">
+      <figure><div class="tile light"><img src="img/logo-colour.png" alt="Current mark, for comparison"></div><figcaption><b>Now</b> · for comparison</figcaption></figure>
+      <figure><div class="tile light"><img data-v="" src="img/rough-cutprint-mix.png" alt="New mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light zoom"><img data-v="" src="img/rough-cutprint-mix.png" alt="Close-up of the bird's edge"></div><figcaption><b>Close-up</b> · the edge, 3×</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/rough-cutprint-mix-black.png" alt="New mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/rough-cutprint-mix-white.png" alt="New mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/rough-cutprint-mix-dark.png" alt="New mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Now</b></figcaption></figure>
+      <figure><div class="strip" id="rStrip" data-src="img/rough-cutprint-mix.png"></div><figcaption><b>This version</b> · follows the choice above</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="small-test">
+    <div class="sec-head">
+      <h2>5. Small sizes: the simplification ladder</h2>
+      <p class="note">Starting from #4, each step makes the prints fewer, bolder and further apart, so the mark survives at small sizes. The idea is a family: the full mark large, a simpler step for avatars, the simplest for favicons. Use the tests to choose which step works at which size.</p>
+    </div>
+    <ol class="steps lettered">
+      <li><b>#4.</b> As chosen: rough bird +30%, all prints.</li>
+      <li><b>A. Pale prints faded out.</b> Only the strong reds stay, made more solid.</li>
+      <li><b>B. Outer rings only.</b> A, without the crowd of prints right around the bird.</li>
+      <li><b>C. About 40 bold prints</b> in two rings, still with fingerprint texture.</li>
+      <li><b>D. 20 bigger prints</b> in two rings. Smooth bird with a slightly thicker tail, so it doesn't break up.</li>
+      <li><b>E. 12 solid dots</b> in one ring. The bird bigger again.</li>
+      <li><b>F. A solid red ring.</b> The simplest possible: for favicons only.</li>
+    </ol>
+    <div class="grid ladder seven">
+      <figure><div class="tile light"><img src="img/ladder-base.png" alt="Step #4"></div><figcaption><b>#4</b></figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-A.png" alt="Step A"></div><figcaption><b>A</b> · pale faded out</figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-B.png" alt="Step B"></div><figcaption><b>B</b> · outer rings</figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-C.png" alt="Step C"></div><figcaption><b>C</b> · ~40 prints</figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-D.png" alt="Step D"></div><figcaption><b>D</b> · 20 prints</figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-E.png" alt="Step E"></div><figcaption><b>E</b> · 12 dots</figcaption></figure>
+      <figure><div class="tile light"><img src="img/ladder-F.png" alt="Step F"></div><figcaption><b>F</b> · solid ring</figcaption></figure>
+    </div>
+
+    <div class="controls">
+      <div class="angles" role="group" aria-label="Ground" data-test="g">
+        <span>Ground</span>
+        <button type="button" id="g-light" data-a="light" aria-pressed="true">Light</button>
+        <button type="button" id="g-dark" data-a="dark" aria-pressed="false">Dark</button>
+      </div>
+      <div class="angles" role="group" aria-label="Tests" data-test="t">
+        <span>Test</span>
+        <button type="button" id="t-none" data-a="none" aria-pressed="true">None</button>
+        <button type="button" id="t-blur" data-a="blur" aria-pressed="false">Squint (blur)</button>
+        <button type="button" id="t-grey" data-a="grey" aria-pressed="false">Greyscale</button>
+        <button type="button" id="t-far" data-a="far" aria-pressed="false">Far away</button>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <table class="board" id="board">
+        <thead><tr><th></th><th>176</th><th>96</th><th>64</th><th>48</th><th>32</th><th>24</th><th>16 px</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="sec-head">
+      <h2>In a feed</h2>
+      <p class="note">How each step reads next to text at the sizes social apps use for channel and comment avatars.</p>
+    </div>
+    <div class="feed" id="feed"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier try: the current swallow with a rougher edge</h2>
+      <p class="note">Same bird, same direction. Its perfectly smooth vector edge is what makes it feel commercial, so each treatment breaks that edge in a different way, the way a cut block or a print would. Fingerprints that would touch the bigger bird are removed whole, not clipped.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Knife-cut.</b> The outline redrawn as short straight facets, like a blade going through lino. The scallops on the wing stay.</li>
+      <li><b>Ink bleed.</b> The edge pushed slightly in and out, like ink spreading on paper from a block. The same quality as the fingerprints.</li>
+      <li><b>Cut and printed.</b> Both together: facets, then a lighter bleed.</li>
+      <li><b>Carved line.</b> Cut and printed, plus a broken white line carved just inside the edge, a common woodcut device.</li>
+      <li><b>Grain.</b> Cut and printed, plus a few thin white grain marks across the thick parts.</li>
+    </ol>
+    <div class="grid six">
+      <figure><div class="tile light bird"><img src="img/bird-smooth.png" alt="Current swallow, smooth"></div><figcaption><b>Now</b> · smooth</figcaption></figure>
+      <figure><div class="tile light bird"><img src="img/bird-cut.png" alt="Swallow with knife-cut facets"></div><figcaption><b>Knife-cut</b></figcaption></figure>
+      <figure><div class="tile light bird"><img src="img/bird-bleed.png" alt="Swallow with ink-bleed edge"></div><figcaption><b>Ink bleed</b></figcaption></figure>
+      <figure><div class="tile light bird"><img src="img/bird-cutprint.png" alt="Swallow cut and printed"></div><figcaption><b>Cut and printed</b></figcaption></figure>
+      <figure><div class="tile light bird"><img src="img/bird-carved.png" alt="Swallow with a carved inner line"></div><figcaption><b>Carved line</b></figcaption></figure>
+      <figure><div class="tile light bird"><img src="img/bird-grain.png" alt="Swallow with grain marks"></div><figcaption><b>Grain</b></figcaption></figure>
+    </div>
+    <div class="controls">
+      <div class="angles" role="group" aria-label="Edge treatment" data-pick="t">
+        <span>Edge</span>
+        <button type="button" id="t-smooth" data-a="smooth" aria-pressed="false">Smooth</button>
+        <button type="button" id="t-cut" data-a="cut" aria-pressed="false">Knife-cut</button>
+        <button type="button" id="t-bleed" data-a="bleed" aria-pressed="false">Ink bleed</button>
+        <button type="button" id="t-cutprint" data-a="cutprint" aria-pressed="true">Cut and printed</button>
+        <button type="button" id="t-carved" data-a="carved" aria-pressed="false">Carved line</button>
+        <button type="button" id="t-grain" data-a="grain" aria-pressed="false">Grain</button>
+      </div>
+      <div class="angles" role="group" aria-label="Bird size" data-pick="s">
+        <span>Bird size</span>
+        <button type="button" id="s-100" data-a="100" aria-pressed="false">As now</button>
+        <button type="button" id="s-120" data-a="120" aria-pressed="true">+20%</button>
+        <button type="button" id="s-135" data-a="135" aria-pressed="false">+35%</button>
+      </div>
+    </div>
+    <div class="grid" id="markGrid">
+      <figure><div class="tile light"><img data-v="" src="img/m-cutprint-120.png" alt="Mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/m-cutprint-120-black.png" alt="Mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/m-cutprint-120-white.png" alt="Mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/m-cutprint-120-dark.png" alt="Mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Now</b></figcaption></figure>
+      <figure><div class="strip" id="mStrip" data-src="img/m-cutprint-120.png"></div><figcaption><b>This version</b> · follows the choice above</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier try: swallow C, the pencil sketch</h2>
+      <p class="note">The lower bird of the two-swallow sketch. Background removed and the exact outline filled solid black. It already flies up to the right, so it isn't turned. The ragged trailing edge of the near wing comes straight from the pencil feathers.</p>
+    </div>
+    <div class="grid">
+      <figure><div class="tile light bird"><img src="img/source-swallow-c.png" alt="Source pencil sketch of a swallow climbing to the right"></div><figcaption><b>Source</b> · pencil sketch</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-c.png" alt="Swallow C filled solid black"></div><figcaption><b>Solid</b> · transparent background</figcaption></figure>
+      <figure><div class="tile night bird"><img src="img/swallow-c-white.png" alt="Swallow C in white on black"></div><figcaption><b>Solid, white</b> · on black</figcaption></figure>
+    </div>
+    <div class="angles" role="group" aria-label="Swallow C size" data-group="c">
+      <span>Bird size</span>
+      <button type="button" id="c230" data-a="230" aria-pressed="true">Like the current bird</button>
+      <button type="button" id="c270" data-a="270" aria-pressed="false">Bigger</button>
+    </div>
+    <div class="grid" id="ringGridC">
+      <figure><div class="tile light"><img data-v="" src="img/ring-c-230.png" alt="Swallow C mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/ring-c-230-black.png" alt="Swallow C mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/ring-c-230-white.png" alt="Swallow C mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/ring-c-230-dark.png" alt="Swallow C mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Now</b></figcaption></figure>
+      <figure><div class="strip" id="cStrip" data-src="img/ring-c-230.png"></div><figcaption><b>Swallow C</b> · follows the size above</figcaption></figure>
+      <figure><div class="strip night" id="cStripNight" data-src="img/ring-c-230.png"></div><figcaption><b>Swallow C</b> · on night</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier try: swallow A, the engraving</h2>
+      <p class="note">Source: Rawpixel public-domain engraving no. 6304685. Background removed, every white area inside the outline filled so it reads as one black shape, mirrored to fly left to right, then rotated nose-up.</p>
+    </div>
+    <div class="grid">
+      <figure><div class="tile light bird"><img src="img/source-rawpixel-6304685.jpg" alt="Original engraving of a swallow flying left"></div><figcaption><b>Source</b> · engraving, flying left</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-solid-25.png" alt="Solid swallow climbing at 25 degrees"></div><figcaption><b>Solid</b> · climbing 25°</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-solid-35.png" alt="Solid swallow climbing at 35 degrees"></div><figcaption><b>Solid</b> · climbing 35°</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-solid-45.png" alt="Solid swallow climbing at 45 degrees"></div><figcaption><b>Solid</b> · climbing 45°</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-engraved-35.png" alt="Engraved swallow with line texture, 35 degrees"></div><figcaption><b>Engraved</b> · lines kept, 35° (for comparison)</figcaption></figure>
+      <figure><div class="tile night bird"><img src="img/swallow-solid-35-white.png" alt="White solid swallow on black"></div><figcaption><b>Solid, white</b> · on black</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier try: swallow A in the ring</h2>
+      <p class="note">A quick placement, not a final composition: the bird is dropped into the existing ring at the same spot as the old one.</p>
+    </div>
+    <div class="angles" role="group" aria-label="Climb angle">
+      <span>Climb angle</span>
+      <button type="button" id="a25" data-a="25" aria-pressed="false">25°</button>
+      <button type="button" id="a35" data-a="35" aria-pressed="true">35°</button>
+      <button type="button" id="a45" data-a="45" aria-pressed="false">45°</button>
+    </div>
+    <div class="grid" id="ringGrid">
+      <figure><div class="tile light"><img data-v="" src="img/ring-new-35.png" alt="New mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/ring-new-35-black.png" alt="New mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/ring-new-35-white.png" alt="New mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/ring-new-35-dark.png" alt="New mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier try: swallow B, the top-left bird</h2>
+      <p class="note">From the three-swallows image. Filled solid, background removed, mirrored to fly right. Its own pose already climbs, so the angle here is extra tilt on top of that. The source is small (about 140 px), so the edge is smoothed; a final version needs redrawing as a vector.</p>
+    </div>
+    <div class="grid">
+      <figure><div class="tile light bird"><img src="img/source-swallow-b.png" alt="Source swallow, flying left"></div><figcaption><b>Source</b> · top-left bird, flying left</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-b-0.png" alt="Swallow B solid, no extra tilt"></div><figcaption><b>Solid</b> · mirrored, no extra tilt</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-b-15.png" alt="Swallow B solid, tilted 15 degrees"></div><figcaption><b>Solid</b> · +15°</figcaption></figure>
+      <figure><div class="tile check bird"><img src="img/swallow-b-30.png" alt="Swallow B solid, tilted 30 degrees"></div><figcaption><b>Solid</b> · +30°</figcaption></figure>
+    </div>
+    <div class="angles" role="group" aria-label="Swallow B tilt" data-group="b">
+      <span>Extra tilt</span>
+      <button type="button" id="b0" data-a="0" aria-pressed="false">0°</button>
+      <button type="button" id="b15" data-a="15" aria-pressed="true">15°</button>
+      <button type="button" id="b30" data-a="30" aria-pressed="false">30°</button>
+    </div>
+    <div class="grid" id="ringGridB">
+      <figure><div class="tile light"><img data-v="" src="img/ring-b-15.png" alt="Swallow B mark in colour on white"></div><figcaption><b>Colour</b> · on white</figcaption></figure>
+      <figure><div class="tile light"><img data-v="-black" src="img/ring-b-15-black.png" alt="Swallow B mark in black on white"></div><figcaption><b>Black</b> · on white</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-white" src="img/ring-b-15-white.png" alt="Swallow B mark in white on black"></div><figcaption><b>White</b> · on black</figcaption></figure>
+      <figure><div class="tile night"><img data-v="-dark" src="img/ring-b-15-dark.png" alt="Swallow B mark with red prints and white swallow on black"></div><figcaption><b>Colour, dark</b> · red prints, white swallow</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Earlier tries, small</h2>
+      <p class="note">Avatar sizes: 176, 98, 48 and 24 px on the white disc. The small mark is still its own job (see logo-v2.md).</p>
+    </div>
+    <div class="small">
+      <figure><div class="strip" data-src="img/logo-colour.png"></div><figcaption><b>Current</b></figcaption></figure>
+      <figure><div class="strip" id="newStrip" data-src="img/ring-new-35.png"></div><figcaption><b>Swallow A</b> · follows the angle above</figcaption></figure>
+      <figure><div class="strip" id="bStrip" data-src="img/ring-b-15.png"></div><figcaption><b>Swallow B</b> · follows its tilt above</figcaption></figure>
+      <figure><div class="strip night" data-src="img/logo-colour.png"></div><figcaption><b>Current</b> · on night</figcaption></figure>
+      <figure><div class="strip night" id="newStripNight" data-src="img/ring-new-35.png"></div><figcaption><b>Swallow A</b> · on night</figcaption></figure>
+      <figure><div class="strip night" id="bStripNight" data-src="img/ring-b-15.png"></div><figcaption><b>Swallow B</b> · on night</figcaption></figure>
+    </div>
+  </section>
+</div>
+
+<script>
+const SIZES = [176, 98, 48, 24];
+function fill(strip) {
+  strip.innerHTML = SIZES.map(s =>
+    `<div class="av" style="width:${s}px;height:${s}px"><img src="${strip.dataset.src}" alt=""></div>`).join("");
+}
+document.querySelectorAll(".strip").forEach(fill);
+
+const GROUPS = {
+  a: { prefix: "ring-new", grid: "ringGrid", strips: ["newStrip", "newStripNight"] },
+  b: { prefix: "ring-b", grid: "ringGridB", strips: ["bStrip", "bStripNight"] },
+  c: { prefix: "ring-c", grid: "ringGridC", strips: ["cStrip", "cStripNight"] },
+};
+function setAngle(g, a) {
+  const G = GROUPS[g];
+  document.querySelectorAll(`.angles[data-group="${g}"] button`).forEach(b => b.setAttribute("aria-pressed", b.dataset.a === a));
+  document.querySelectorAll(`#${G.grid} img`).forEach(img => { img.src = `img/${G.prefix}-${a}${img.dataset.v}.png`; });
+  G.strips.forEach(id => { const s = document.getElementById(id); s.dataset.src = `img/${G.prefix}-${a}.png`; fill(s); });
+  try { localStorage.setItem(`sor-logo-angle-${g}`, a); } catch (e) {}
+}
+const pick = { t: "cutprint", s: "120" };
+function setMark() {
+  document.querySelectorAll(".angles[data-pick] button").forEach(b =>
+    b.setAttribute("aria-pressed", pick[b.closest(".angles").dataset.pick] === b.dataset.a));
+  const stem = `img/m-${pick.t}-${pick.s}`;
+  document.querySelectorAll("#markGrid img").forEach(img => { img.src = `${stem}${img.dataset.v}.png`; });
+  const s = document.getElementById("mStrip"); s.dataset.src = `${stem}.png`; fill(s);
+  try { localStorage.setItem("sor-logo-mark", JSON.stringify(pick)); } catch (e) {}
+}
+document.querySelectorAll(".angles[data-pick]").forEach(grp =>
+  grp.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { pick[grp.dataset.pick] = b.dataset.a; setMark(); })));
+try { Object.assign(pick, JSON.parse(localStorage.getItem("sor-logo-mark") || "{}")); setMark(); } catch (e) {}
+
+const ROWS = [["now", "Now"], ["base", "#4"], ["A", "A"], ["B", "B"], ["C", "C"], ["D", "D"], ["E", "E"], ["F", "F"]];
+const BIG = { now: ["logo-colour", "logo-colour-dark"] };
+const test = { g: "light", t: "none" };
+function srcFor(k, s, dark) {
+  if (s > 64) {
+    const b = BIG[k] || [`ladder-${k}`, `ladder-${k}-dark`];
+    return `img/${dark ? b[1] : b[0]}.png`;
+  }
+  return `img/sm/${k}${dark ? "-dark" : ""}-${s}.png`;
+}
+function av(k, s, dark) { return `<span class="av" style="width:${s}px;height:${s}px"><img src="${srcFor(k, s, dark)}" alt=""></span>`; }
+function drawBoard() {
+  const dark = test.g === "dark";
+  const board = document.getElementById("board"), feed = document.getElementById("feed");
+  board.className = `board${dark ? " dark" : ""} t-${test.t}`;
+  feed.className = `feed${dark ? " dark" : ""} t-${test.t === "far" ? "none" : test.t}`;
+  board.querySelector("tbody").innerHTML = ROWS.map(([k, label]) =>
+    `<tr><td>${label}</td>${[176, 96, 64, 48, 32, 24, 16].map(s => `<td>${av(k, s, dark)}</td>`).join("")}</tr>`).join("");
+  feed.innerHTML = ROWS.map(([k, label]) =>
+    `<div class="post">${av(k, 40, dark).replace("-40.png", "-48.png")}<div><b>Seeds of Renaissance</b> <span class="meta">· step ${label}</span><br>Rebirth starts with many hands. New episode out now.<div class="meta">${av(k, 24, dark)} Reply · 2 days ago</div></div></div>`).join("");
+  document.querySelectorAll(".angles[data-test] button").forEach(b =>
+    b.setAttribute("aria-pressed", test[b.closest(".angles").dataset.test] === b.dataset.a));
+}
+document.querySelectorAll(".angles[data-test]").forEach(grp =>
+  grp.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { test[grp.dataset.test] = b.dataset.a; drawBoard(); })));
+drawBoard();
+
+const rough = { t: "cutprint", m: "mix" };
+function setRough() {
+  document.querySelectorAll(".angles[data-rough] button").forEach(b =>
+    b.setAttribute("aria-pressed", rough[b.closest(".angles").dataset.rough] === b.dataset.a));
+  const stem = `img/rough-${rough.t}-${rough.m}`;
+  document.querySelectorAll("#roughGrid img[data-v]").forEach(img => { img.src = `${stem}${img.dataset.v}.png`; });
+  const s = document.getElementById("rStrip"); s.dataset.src = `${stem}.png`; fill(s);
+  try { localStorage.setItem("sor-logo-rough", JSON.stringify(rough)); } catch (e) {}
+}
+document.querySelectorAll(".angles[data-rough]").forEach(grp =>
+  grp.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { rough[grp.dataset.rough] = b.dataset.a; setRough(); })));
+try { Object.assign(rough, JSON.parse(localStorage.getItem("sor-logo-rough") || "{}")); setRough(); } catch (e) {}
+
+const keep = { m: "mix", s: "120" };
+function setKeep() {
+  document.querySelectorAll(".angles[data-keep] button").forEach(b =>
+    b.setAttribute("aria-pressed", keep[b.closest(".angles").dataset.keep] === b.dataset.a));
+  const stem = `img/keep-${keep.m}-${keep.s}`;
+  document.querySelectorAll("#keepCompare img[data-v]").forEach(img => { img.src = `${stem}${img.dataset.v}.png`; });
+  const s = document.getElementById("kStrip"); s.dataset.src = `${stem}.png`; fill(s);
+  try { localStorage.setItem("sor-logo-keep", JSON.stringify(keep)); } catch (e) {}
+}
+document.querySelectorAll(".angles[data-keep]").forEach(grp =>
+  grp.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { keep[grp.dataset.keep] = b.dataset.a; setKeep(); })));
+try { Object.assign(keep, JSON.parse(localStorage.getItem("sor-logo-keep") || "{}")); setKeep(); } catch (e) {}
+
+function setSize(z) {
+  document.querySelectorAll("#ladder .pick").forEach(b => b.setAttribute("aria-pressed", b.dataset.a === z));
+  document.querySelectorAll("#sizeGrid img").forEach(img => { img.src = `img/size-${z}${img.dataset.v}.png`; });
+  document.querySelector(".zlabel").textContent = z === "100" ? "as now" : `+${z - 100}%`;
+  const s = document.getElementById("zStrip"); s.dataset.src = `img/size-${z}.png`; fill(s);
+  try { localStorage.setItem("sor-logo-size", z); } catch (e) {}
+}
+document.querySelectorAll("#ladder .pick").forEach(b => b.addEventListener("click", () => setSize(b.dataset.a)));
+try { const z = localStorage.getItem("sor-logo-size"); if (z) setSize(z); } catch (e) {}
+
+document.querySelectorAll(".angles[data-group], .angles:not([data-pick]):not([data-keep]):not([data-rough]):not([data-test])").forEach(grp => {
+  const g = grp.dataset.group || "a";
+  grp.dataset.group = g;
+  grp.querySelectorAll("button").forEach(b => b.addEventListener("click", () => setAngle(g, b.dataset.a)));
+  try { const saved = localStorage.getItem(`sor-logo-angle-${g}`); if (saved) setAngle(g, saved); } catch (e) {}
+});
+</script>

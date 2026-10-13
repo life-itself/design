@@ -1,0 +1,305 @@
+[
+ {
+  "slug": "swallows-flock-engraving",
+  "title": "Flock of swallows",
+  "desc": "About eleven barn swallows rising in a loose diagonal flock, in fine 19th-century engraving line: hatched wings, stippled breasts, white throats. Our main motif. Fine line, so use it large.",
+  "entry": "22",
+  "source": "Pinterest engraving",
+  "variants": [
+   {
+    "file": "swallows-flock-engraving-blue",
+    "colour": "Blue (original)",
+    "hex": "#274191"
+   },
+   {
+    "file": "swallows-flock-engraving-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   }
+  ]
+ },
+ {
+  "slug": "pomegranates-linocut",
+  "title": "Pomegranates",
+  "desc": "Two pomegranates, one whole and one cut open, as a two-colour linocut: black key block over a flat red that sits slightly out of register.",
+  "entry": "01",
+  "source": "Pinterest linocut",
+  "variants": [
+   {
+    "file": "pomegranates-linocut-black-red-logo",
+    "colour": "Black + logo red",
+    "hex": "#e5201c"
+   },
+   {
+    "file": "pomegranates-linocut-black-red-print",
+    "colour": "Black + print red",
+    "hex": "#c25552"
+   }
+  ]
+ },
+ {
+  "slug": "oak-leaf-acorn-twig-linocut",
+  "title": "Oak leaf and acorn on a twig",
+  "desc": "One oak leaf and one acorn on a sweeping twig. Solid black, thin cut veins, cut-out acorn cup.",
+  "entry": "11",
+  "source": "Pinterest linocut",
+  "variants": [
+   {
+    "file": "oak-leaf-acorn-twig-linocut-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   }
+  ]
+ },
+ {
+  "slug": "acorn-single-linocut",
+  "title": "Acorn",
+  "desc": "A single acorn with a ribbed nut, speckled cap and stray gouge marks around the edge.",
+  "entry": "10",
+  "source": "Stock linocut set (watermarked, draft)",
+  "variants": [
+   {
+    "file": "acorn-single-linocut-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "acorn-single-linocut-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "oak-leaf-linocut-a",
+  "title": "Oak leaf, down-right",
+  "desc": "An oak leaf angled down and to the right, with white cut veins and stray cuts.",
+  "entry": "10",
+  "source": "Stock linocut set (watermarked, draft)",
+  "variants": [
+   {
+    "file": "oak-leaf-linocut-a-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "oak-leaf-linocut-a-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "oak-leaf-linocut-b",
+  "title": "Oak leaf, up-right",
+  "desc": "An oak leaf angled up and to the right, with white cut veins and stray cuts.",
+  "entry": "10",
+  "source": "Stock linocut set (watermarked, draft)",
+  "variants": [
+   {
+    "file": "oak-leaf-linocut-b-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "oak-leaf-linocut-b-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "acorns-pair-oak-leaf-linocut",
+  "title": "Two acorns with an oak leaf",
+  "desc": "A pair of acorns with crosshatched cups and a small oak leaf above.",
+  "entry": "10",
+  "source": "Stock linocut set (watermarked, draft)",
+  "variants": [
+   {
+    "file": "acorns-pair-oak-leaf-linocut-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "acorns-pair-oak-leaf-linocut-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "pinecone-linocut",
+  "title": "Pinecone, bold",
+  "desc": "A tilted pinecone in strong black and white, with chunky outlined scales that go ragged at the tip.",
+  "entry": "20",
+  "source": "Pinterest linocut",
+  "variants": [
+   {
+    "file": "pinecone-linocut-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "pinecone-linocut-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "pinecone-hanging-twig-pen",
+  "title": "Pinecone hanging from a twig",
+  "desc": "A pinecone hanging from a pine twig with long, fine needles. A thin pen drawing, best used large.",
+  "entry": "19",
+  "source": "Pinterest pen drawing",
+  "variants": [
+   {
+    "file": "pinecone-hanging-twig-pen-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "pinecone-hanging-twig-pen-green",
+    "colour": "Faded green",
+    "hex": "#3b5a45"
+   }
+  ]
+ },
+ {
+  "slug": "hanging-fruit-silhouette",
+  "title": "Hanging fruit and leaves",
+  "desc": "Two round fruit with leaf clusters as a cut-paper silhouette. Thin white gaps do the drawing. Vertical, so it suits a margin or divider.",
+  "entry": "12",
+  "source": "Craft-shop stencil (draft)",
+  "variants": [
+   {
+    "file": "hanging-fruit-silhouette-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "hanging-fruit-silhouette-blue",
+    "colour": "Faded dark blue",
+    "hex": "#2f4465"
+   }
+  ]
+ },
+ {
+  "slug": "round-flowers-stem-ink",
+  "title": "Round flowers on a branching stem",
+  "desc": "Pom-pom flower heads on a long, thin branching stem. Light and airy, with heavy dots on a hairline.",
+  "entry": "13",
+  "source": "Pinterest ink drawing",
+  "variants": [
+   {
+    "file": "round-flowers-stem-ink-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "round-flowers-stem-ink-red",
+    "colour": "Print red",
+    "hex": "#c25552"
+   }
+  ]
+ },
+ {
+  "slug": "tulips-brush",
+  "title": "Tulips in loose brush line",
+  "desc": "Five tulip-like flowers in loose, tapering brush strokes. Source image was AI-generated, so mood reference.",
+  "entry": "14",
+  "source": "Pinterest (AI-generated)",
+  "variants": [
+   {
+    "file": "tulips-brush-blue",
+    "colour": "Cobalt blue",
+    "hex": "#03296f"
+   }
+  ]
+ },
+ {
+  "slug": "lily-stem-brush",
+  "title": "Lily stem",
+  "desc": "A lily stem in a few swelling brush lines, with leaves left partly open.",
+  "entry": "17",
+  "source": "Pinterest ink study",
+  "variants": [
+   {
+    "file": "lily-stem-brush-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   }
+  ]
+ },
+ {
+  "slug": "wildflowers-pen",
+  "title": "Wildflowers",
+  "desc": "Three wildflowers and two buds in scratchy pen line with dark centres. Clip-art crop, so a draft.",
+  "entry": "18",
+  "source": "Pinterest clip-art preview (draft)",
+  "variants": [
+   {
+    "file": "wildflowers-pen-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   }
+  ]
+ },
+ {
+  "slug": "flowering-branch-silhouette",
+  "title": "Flowering branch, cropped",
+  "desc": "A flowering branch as a flat silhouette, cropped so it runs off the frame. Works as a background or tile.",
+  "entry": "15",
+  "source": "Pinterest silhouette",
+  "variants": [
+   {
+    "file": "flowering-branch-silhouette-ochre",
+    "colour": "Ochre",
+    "hex": "#b49856"
+   },
+   {
+    "file": "flowering-branch-silhouette-pale-yellow",
+    "colour": "Pale yellow (sunlight)",
+    "hex": "#fbefc4"
+   }
+  ]
+ },
+ {
+  "slug": "mountain-range-linocut-sun",
+  "title": "Mountain range with a gold sun",
+  "desc": "A range of three peaks carved in strong black and white, with short cut strokes for the plain below and a small gold sun above.",
+  "entry": "21",
+  "source": "Pinterest linocut with gold leaf",
+  "variants": [
+   {
+    "file": "mountain-range-linocut-black-sun",
+    "colour": "Black + gold sun",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "mountain-range-linocut-blue-sun",
+    "colour": "Cobalt blue + gold sun",
+    "hex": "#03296f"
+   }
+  ]
+ },
+ {
+  "slug": "mountain-range-linocut",
+  "title": "Mountain range",
+  "desc": "The same range of peaks without the sun, cropped tight to the mountains and the plain.",
+  "entry": "21",
+  "source": "Pinterest linocut with gold leaf",
+  "variants": [
+   {
+    "file": "mountain-range-linocut-black",
+    "colour": "Black",
+    "hex": "#1b1916"
+   },
+   {
+    "file": "mountain-range-linocut-blue",
+    "colour": "Cobalt blue",
+    "hex": "#03296f"
+   }
+  ]
+ }
+]

@@ -1,6 +1,6 @@
 # Colour
 
-Colours have roles, not just values. Four grounds, three inks and one accent, used in that order of frequency. Values live in [system/tokens.css](system/tokens.css); see them rendered in [guide.html](guide.html#colour). Part of the [SoR design system](README.md).
+Colours have roles, not just values. Four grounds, three inks and one accent, used in that order of frequency, plus three illustration inks that only woodcut graphics may use. Values live in [system/tokens.css](system/tokens.css); see them rendered in [guide.html](guide.html#colour). Part of the [SoR design system](README.md).
 
 <iframe class="specimen" src="specimens/colour.html" style="aspect-ratio:1000/622" loading="lazy" title="Colour, rendered"></iframe>
 
@@ -32,6 +32,16 @@ Colours have roles, not just values. Four grounds, three inks and one accent, us
 
 The red is decided: `#e5201c`, the logo red, kept as the site's red (decided 2026-10-12; see the [planning record](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md)).
 
+## Illustration inks (graphics only)
+
+| Token | Value | Role |
+|---|---|---|
+| `--print-blue` | `#03296f` | Cobalt. A woodcut printed in blue. |
+| `--print-green` | `#1f3d2b` | Deep green. A woodcut printed in green. |
+| `--print-mustard` | `#c9a227` | Mustard yellow. A woodcut printed in mustard. |
+
+These are the colours a woodcut graphic may be printed in besides black (and chalk on night). They are **only** for graphics: never text, buttons, rules or backgrounds. One illustration ink per graphic, and keep them occasional: black stays the default. Every animal in [system/animals/](system/animals/README.md) comes in all four (decided 2026-10-13).
+
 ## Proportion
 
 By area on the home page, leaving out photographs: about 64% white and paper, 14% sunlight, 16% night, 5% ink, 1% red. Photographs carry most of the colour.
@@ -47,7 +57,8 @@ By area on the home page, leaving out photographs: about 64% white and paper, 14
 - Make a red button, red heading or red background.
 - Highlight words in yellow, or use a bright yellow anywhere (tried: rejected).
 - Add a second dark section, or a gradient other than the hero scrim.
-- Use blue for action (#1F338A was tried and rejected as too cool and corporate).
+- Use blue for action (#1F338A was tried and rejected as too cool and corporate). The illustration blue is for graphics only.
+- Use an illustration ink for text, a button or a background.
 
 ## History
 

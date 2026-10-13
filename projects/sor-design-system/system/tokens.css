@@ -24,6 +24,11 @@
   /* ── The one accent ─────────────────────────────────────────── */
   --red: #e5201c;        /* the logo red: only an occasional link in running text, and footnote marks */
 
+  /* ── Illustration inks (woodcut graphics only: never text, buttons or grounds) ── */
+  --print-blue: #03296f;    /* cobalt */
+  --print-green: #1f3d2b;   /* deep green */
+  --print-mustard: #c9a227; /* mustard yellow */
+
   /* ── Type families ──────────────────────────────────────────── */
   --font-display: "Polyamine", "Fraunces", Georgia, serif;          /* headlines, titles, wordmark: anything up to ~10 words */
   --font-quote: "Restora", "Fraunces", Georgia, serif;              /* display text that runs longer than ~10 words: pull quotes, standout passages */
