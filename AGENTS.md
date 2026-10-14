@@ -6,6 +6,8 @@ Follow the project documentation and preserve existing content when making chang
 
 This repository uses Beads with an embedded Dolt database. In each clone, configure Git hooks with `git config core.hooksPath .beads/hooks`. At session start, run `git pull`, `bd dolt pull`, and `bd status`. Git hooks also pull Beads after merges and branch checkouts. At session end, commit work and run `git push`; the repo-local pre-push hook also pushes Beads Dolt data. If that hook reports a sync failure, run `bd dolt push` manually. JSONL export is for interchange and viewers; Dolt remotes provide cross-machine sync.
 
+Assign tasks with the person's ID from the planning repo's `people/` (lowercase first name, e.g. `--assignee rufus`), and set `export BEADS_ACTOR=<id>` in `~/.zshenv` so your actor matches, or `bd close` refuses your own tasks. Don't `--force` around a name mismatch; fix the name. See [Beads assignee conventions](https://github.com/life-itself/planning/blob/main/docs/bd-task-conventions.md#assignees).
+
 ## Changelog
 
 At session end, only log new features or significant reader-facing changes
