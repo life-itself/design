@@ -5,7 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 DS=../sor-design-system
-DS_URL=https://sor-design-system-rufuspollock.flowershow.me
+DS_URL=https://design.seedsofrenaissance.org
 
 rm -rf _site && mkdir -p _site/home _site/system/img
 cp README.md _site/

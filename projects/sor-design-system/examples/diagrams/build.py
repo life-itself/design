@@ -501,7 +501,7 @@ def for_artifact(html):
     """The publisher adds the document skeleton: keep the head's contents and the body's."""
     head = html[html.index("<title>"):html.index("</head>")]
     body = html[html.index("<body>") + 6:html.index("</body>")]
-    return head + body.replace(f'href="{GUIDE}', 'href="https://sor-design-system-rufuspollock.flowershow.me/diagrams')
+    return head + body.replace(f'href="{GUIDE}', 'href="https://design.seedsofrenaissance.org/diagrams')
 
 if __name__ == "__main__":
     if len(sys.argv) == 3 and sys.argv[1] == "--bundle":

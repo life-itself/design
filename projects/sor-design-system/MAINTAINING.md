@@ -5,7 +5,7 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 ## Where it lives
 
 - **Source:** `life-itself/design`, folder `projects/sor-design-system/`. The single home for SoR brand and design-system work.
-- **Published** at https://sor-design-system-rufuspollock.flowershow.me (Flowershow, from GitHub: branch `design-system-site`). Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
+- **Published** at https://design.seedsofrenaissance.org (Flowershow, from GitHub: branch `design-system-site`; custom domain via a DNS-only CNAME `design` → `cname.vercel-dns.com` in the `seedsofrenaissance.org` Cloudflare zone). The old address https://sor-design-system-rufuspollock.flowershow.me still works. Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
 - **Tracking:** beads `design-34t`.
 
 ## How the site is put together
