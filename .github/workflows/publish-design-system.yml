@@ -27,10 +27,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install ImageMagick (gallery thumbnails call `magick`)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q imagemagick
+          command -v magick || printf '#!/bin/sh\nexec convert "$@"\n' | sudo tee /usr/local/bin/magick >/dev/null && sudo chmod +x /usr/local/bin/magick
+
       - name: Build site
         working-directory: projects/sor-design-system
         run: |
           python3 system/build-specimens.py
+          python3 system/animals/build-gallery.py
+          python3 system/mountains/build-gallery.py
           python3 system/build-site.py
 
       - name: Push site to design-system-site branch

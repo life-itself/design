@@ -5,7 +5,7 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 ## Where it lives
 
 - **Source:** `life-itself/design`, folder `projects/sor-design-system/`. The single home for SoR brand and design-system work.
-- **Published** at https://sor-design-system-rufuspollock.flowershow.me (Flowershow, CLI publishing). Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
+- **Published** at https://sor-design-system-rufuspollock.flowershow.me (Flowershow, from GitHub: branch `design-system-site`). Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
 - **Tracking:** beads `design-34t`.
 
 ## How the site is put together
@@ -29,11 +29,15 @@ The issue tree carries only the one-line answer. Longer discussion goes in a fil
 
 ## Publish
 
-From `projects/sor-design-system`:
+Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflows/publish-design-system.yml) runs on any push that touches `projects/sor-design-system/`, builds `site/` and force-pushes it to the `design-system-site` branch, which Flowershow publishes. Nobody needs `fl` or a Flowershow login. It can also be run by hand from the Actions tab. Check a run there if the site looks stale.
+
+To build locally (for a preview, or to debug the workflow), from `projects/sor-design-system`:
 
 ```bash
-python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-site.py && fl --yes site
+python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-site.py
 ```
+
+Keep the workflow's build steps in step with this list. The gallery builders need ImageMagick (`magick`).
 
 `build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, woodcuts page, system code and images, examples and the loose files in archive. It leaves out `moodboard/` and the sub-folders of `archive/` (third-party screenshots, uncleared images, large PDFs) and rewrites `.md` links in HTML pages to Flowershow page URLs.
 
