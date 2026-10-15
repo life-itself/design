@@ -1,6 +1,21 @@
 # Print
 
-Papers as PDF: what goes in one, how it looks, and how we build it. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
+Papers as PDF: what goes in one, how it looks, and how we build it. Part of the [SoR design system](README.md).
+
+## Make one with your agent
+
+Paste this into your AI agent, in whichever repo you're working in, and fill in the brackets. It typesets the final text as a PDF with the [Typst pipeline](#process) and gives you the PDF and the marked-up Markdown.
+
+```text
+Make the PDF of [the paper] for Seeds of Renaissance. The text is in [path to the
+Markdown or document]; the figures are in [path], the cover art is [path, or none].
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system (or, if that folder isn't there,
+https://design.seedsofrenaissance.org/AGENTS.md). Follow its "Paper" route and
+read only what it names. Don't change anything in the design repo.
+Give me the PDF and the paper's Markdown as you marked it up. Ask me for anything
+you need that you can't find. Then tell me what you checked and what you guessed.
+```
 
 <div class="not-prose my-6 grid gap-4 grid-cols-2 sm:grid-cols-4">
   <a href="examples/print/index.html#front"><img src="examples/print/img/wisdom-01-cover.jpg" alt="Front cover of Wisdom and Wanting What's Good" class="border border-stone-300"></a>
@@ -43,7 +58,7 @@ Take a pull quote. The design system says how it looks and how often it may appe
 
 The PDF is published with the paper (for 2R papers on secondrenaissance.net, with the web page), not kept here. Then publish and announce: for 2R papers, see `2rbook/docs/publishing-a-white-paper.md`.
 
-For an AI agent: read this page and the Typst `sor` style; every value below is in `system/tokens.css`.
+Every value below is in `system/tokens.css` (the `--print-*` tokens).
 
 ## Anatomy of a paper
 

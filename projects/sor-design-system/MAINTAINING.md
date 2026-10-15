@@ -2,6 +2,30 @@
 
 For whoever edits and publishes this folder. Readers start at [README.md](README.md); agents at [AGENTS.md](AGENTS.md), the roadmap by job; people briefing agents at [prompts.md](prompts.md).
 
+## Change the system
+
+With an agent, paste this, in the design repo or anywhere the repo is checked out:
+
+```text
+Change the Seeds of Renaissance design system: [what, and why; who decided it, if it's a rule].
+Work in ~/src/life-itself/design/projects/sor-design-system. Follow the "Maintain"
+route in its AGENTS.md and read only what it names.
+Keep the guide, its route in AGENTS.md, its prompt in prompts.md and llms.txt
+in step where the change touches them, and check the paths other repos read.
+Show me the change before committing. Then tell me what you checked and what you guessed.
+```
+
+The common changes, and what each needs:
+
+- **Add a graphic.** Check it isn't in the set already. The files in `system/graphics/<set>/elements/`, in the set's formats (woodcuts: SVG, with `id`s no other file in the set uses, since the gallery inlines them all); an entry in the set's `elements.json`, edited by hand in its own indentation (fields: [system/graphics/README.md](system/graphics/README.md); the maker in `source`); a row in the set's README. Then `python3 system/build/build-galleries.py && python3 system/build/build-reference.py`, and check its gallery page. A new set also goes in `FAMILIES` in `build-galleries.py`.
+- **Change a token.** In `system/tokens.css` only, keeping its role comment true. Find where the old value is written out (`grep -rn '<old value>' --include=*.md --include=*.html --include=*.py . | grep -v archive/`): guides that quote it, kits and examples that bake it in (rebuild those with their `export.sh` or `build.py`), `guide.html` (then rebuild the specimens). If `components.src.css` changed, run `python3 system/build/build-css.py`. The website takes the new value when its design pin is bumped.
+- **Record a decision.** See [Recording decisions](#recording-decisions): the answer in the planning repo, the rule as applied in the guide here, linked.
+- **Add or change a guide, kit or example.** Change its route in [AGENTS.md](AGENTS.md) and its prompt in [prompts.md](prompts.md) (and the copy at the top of the guide) in the same commit; `llms.txt` if a page is added, renamed or moved.
+
+**Keep in step.** Before committing: the builds run clean (see [Publish](#publish)); `git status` shows only what you meant to change; the guide, the route, the prompt and `llms.txt` agree. Generated files are never edited by hand: `graphics/<set>.md`, `logos.md`, the tables between `<!-- … -->` markers in `graphics.md` and `reference.md`, `specimens/`, `components.css`, `site/`. A published path that moves gets a redirect in the `MOVED` map in `system/build/build-site.py`. Paths other repos read (listed under "The roadmap and the prompts" below) don't move without telling that repo.
+
+**Test a route** after changing it: give a fresh agent only its prompt, working from another repo or a scratch folder, and fix what it trips on.
+
 ## Where it lives
 
 - **Source:** `life-itself/design`, folder `projects/sor-design-system/`. The single home for SoR brand and design-system work.

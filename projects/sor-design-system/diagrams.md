@@ -1,6 +1,22 @@
 # Diagrams
 
-Diagrams, figures, charts and frameworks: in papers, on slides, on the website, and above all shared on their own. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
+Diagrams, figures, charts and frameworks: in papers, on slides, on the website, and above all shared on their own. Part of the [SoR design system](README.md).
+
+## Make one with your agent
+
+Paste this into your AI agent, in whichever repo you're working in, and fill in the brackets. It gives you the figure as an SVG for the page and a PNG for sharing, with alt text and the script that builds them.
+
+```text
+Make a diagram for Seeds of Renaissance: [what it shows, its parts and how they connect].
+It's for [a paper / a post / slides]. [Path to a sketch or notes, if any.]
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system (or, if that folder isn't there,
+https://design.seedsofrenaissance.org/AGENTS.md). Follow its "Diagram" route and
+read only what it names. Don't change anything in the design repo.
+Give me the SVG for the page, the PNG for sharing, alt text, and the script that
+builds them. Ask me for anything you need that you can't find. Then tell me what
+you checked and what you guessed.
+```
 
 <div class="not-prose my-6 grid gap-4 sm:grid-cols-2">
   <a href="examples/diagrams/index.html#wisdom-gap"><img src="examples/diagrams/img/wisdom-gap-figure.png" alt="The Wisdom Gap: two rising curves, the space between them shaded in the red tint" class="border border-stone-300"></a>
@@ -19,13 +35,11 @@ After the FT, the Economist and Tufte: restraint over decoration. One face, Apfe
 
 Figures are not drawn in a diagram tool. Sketch it (paper, whiteboard, a photo), then build it as SVG with Claude.
 
-1. **Start from the closest example** in [`examples/diagrams/build.py`](examples/diagrams/build.py): `poly_svg` (panels and brackets), `gap_svg` (curves and a shaded area), `chart_line`, `chart_bars`, `chart_dumbbell`. Copy the function and change the content. For a figure in a paper, follow the paper's own builder (for the Wisdom paper: `2rbook/wisdom/assets/build-*.py`).
-2. **Set text as outlines** with `apfel` and `apfel_m` from [`system/build/outline.py`](system/build/outline.py), so the SVG renders without the fonts installed.
-3. **Sign it** with `signature(theme, url=…)` from `outline.py`: the URL, a publication line ("Wisdom · White paper No. 6") or `None`.
-4. **Export** with `write_figure()` from `outline.py` (see [Exports](#exports)).
+1. **Copy [`examples/diagrams/figure.py`](examples/diagrams/figure.py)** into your own repo: a whole figure (title, subtitle, panels, arrows, signature) in the house style. Change its content. For curves and a shaded area, layers with brackets, or charts, borrow the drawing from the examples in [`examples/diagrams/build.py`](examples/diagrams/build.py) (`gap_svg`, `poly_svg`, `chart_line`, `chart_bars`, `chart_dumbbell`).
+2. **Text is set as outlines** with `text()` (Apfel Grotezk, from [`system/build/outline.py`](system/build/outline.py)), so the SVG renders without the fonts installed.
+3. **Sign it** in `FIGURE`: the URL, a publication line ("Wisdom · White paper No. 6") or `None`.
+4. **Run it** (it needs `fonttools` and `uharfbuzz`): it writes the tight SVG for the page and the padded PNG for sharing (see [Exports](#exports)).
 5. **Check** it against the list at the end, and look at it at 400 px and in greyscale.
-
-For an AI agent: read this page and the example function you start from; every value below is also in that code.
 
 ## Type
 
@@ -48,7 +62,7 @@ Nothing below about 26 px, so the smallest text is still about 7 px in a feed. N
 - **Lines:** ink, solid, round caps. 4 px for what the figure is about, 2 px for scaffolding (axes, brackets, connectors). No dashes.
 - **Arrowheads:** solid triangles; the line stops at the base of the head.
 - **Panels:** groups are panels with no outline and square corners, in the red tint, as wide as their longest line plus padding. Padding 40 px on all four sides (to the top of the heading's capitals, to the text, from the last baseline).
-- **Red:** full red (`#e5201c`) for the marks that matter (a line, a bar, a ring); the **red tint** for panels and the key area: the logo red at 16% on white (`#fbdbdb`), 40% on night (`#6b1a17`). Red text only for the label of that key area. This is the one red ground the system allows ([BUILD.md](BUILD.md#rules-that-apply-everywhere)).
+- **Red:** full red (`#e5201c`) for the marks that matter (a line, a bar, a ring); the **red tint** for panels and the key area: the logo red at 16% on white (`#fbdbdb`), 40% on night (`#6b1a17`). Red text only for the label of that key area. This is the one red ground the system allows ([rules everywhere](AGENTS.md#rules-everywhere)).
 - **Labelling an area:** centred in it, one line, nudged a touch if exact centre reads as off.
 - **Black and white:** the tint prints light grey and red prints darker, so nothing relies on colour alone.
 - **Canvas and ground:** draw on 1600 px wide with a 72 px margin; a narrower figure gets a narrower canvas. The content spans margin to margin, so its right edge lines up with the signature's. The drawing's ground is transparent; on dark grounds ink becomes chalk and the tint its night value.
