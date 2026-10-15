@@ -27,7 +27,7 @@ layout: plain
 .sg-facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; font-size: var(--t-small); max-width: 760px; padding-top: 6px }
 .sg-facts dt { color: var(--muted); padding-top: 2px }
 .sg-note { font-size: var(--t-small); color: var(--muted); max-width: 70ch }
-.sg-bar { position: sticky; top: var(--sg-top, 0px); z-index: 5; background: var(--paper); border-block: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; padding-block: 10px; margin-bottom: 28px }
+.sg-bar { position: sticky; top: var(--sg-top, 64px); z-index: 5; background: var(--paper); border-block: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; padding-block: 10px; margin-bottom: 28px }
 .sg-grp { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
 .sg-grp > .sg-label { color: var(--muted); margin-right: 4px }
 .sg-btn { font: 500 var(--t-label)/1 var(--font-label); letter-spacing: var(--track-button); text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; border-radius: 0 }
