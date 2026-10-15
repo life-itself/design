@@ -74,7 +74,7 @@ Each artifact keeps all versions in claude.ai (open its version history). Source
 | v2 | Woodcut swallow and elements sheet; pale yellow as background only |
 | v1 | Joy layer with bright yellow, drawn suns, highlighting (bright yellow and highlighting rejected) |
 
-### Seeds Woodcuts · `../system/woodcuts/gallery.html`
+### Seeds Woodcuts · `../woodcuts.html` (was `system/woodcuts/gallery.html`, removed 2026-10-15 as a stale duplicate)
 | Version | Change |
 |---|---|
 | v2 | Seeds in red added |

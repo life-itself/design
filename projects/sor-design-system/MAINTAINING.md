@@ -49,10 +49,10 @@ Keep the workflow's build steps in step with this list. The gallery builders nee
 | [system/components.src.css](system/components.src.css) | Components, readable source. Run `python3 system/build-css.py` to make `components.css`. |
 | `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed). Built by `build-fonts.py`. |
 | `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `build-graphics.py`. |
-| `system/woodcuts/` | All woodcut SVGs and the script that draws them. Gallery built by `build-woodcuts.py`. |
+| `system/woodcuts/` | All woodcut SVGs and the script that draws them. Their gallery is `woodcuts.html` at the top level, built by `system/build-woodcuts.py`. |
 | `system/animals/` | Animal elements (SVG + PNG in four inks), `make-element.sh` to cut a new one, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. |
 | `system/mountains/` | Mountain elements (PNG, plus SVG for the linocut) in their drawn blue, cobalt and black, `elements.json`, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. Working record in `archive/mountains-2026-10/`. |
-| `system/botanicals/`, `system/washes/`, `system/geometry/`, `system/marks/` | Four graphic sets (transparent PNGs at 1000px, SVG only where small): each has `elements/`, `elements.json`, a README and a `gallery.html` with gitignored `thumbs/`. One builder for all four: `system/build-element-galleries.py`, with `system/element-gallery-shell.html`. Sources: [moodboard/botanical-flower-illustration](moodboard/botanical-flower-illustration/removal-candidates.md) (images not committed). |
+| `system/botanicals/`, `system/washes/`, `system/geometry/`, `system/marks/`, `system/prints/` | Five graphic sets (transparent PNGs at 1000px; SVG only where small, except prints, which all have SVGs): each has `elements/`, `elements.json`, a README and a `gallery.html` with gitignored `thumbs/`. One builder for all five: `system/build-element-galleries.py`, with `system/element-gallery-shell.html`. Sources: [moodboard/botanical-flower-illustration](moodboard/botanical-flower-illustration/removal-candidates.md) and, for prints, [moodboard/woodcuts](moodboard/woodcuts/woodcuts-moodboard.md) (images not committed). |
 | `system/sor.js` | Small behaviours (selected-work picker) |
 | `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
 | `system/build-specimens.py` | Cuts guide.html into `specimens/` |
