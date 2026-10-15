@@ -4,7 +4,7 @@ Pages for the Seeds of Renaissance website. Part of the [SoR design system](READ
 
 ## Make or change a page with your agent
 
-The website is its own repo, `sor-website`. Its pages are written in Markdown, and the site's styles come from this design system, so a page written in plain Markdown already looks right: what you bring is the words, the pictures and the order. Paste this into your agent in that repo and fill in the brackets:
+The website is its own repo, sor-website. Its pages are written in Markdown, and the site's styles come from this design system, so a page written in plain Markdown already looks right: what you bring is the words, the pictures and the order. Paste this into your agent in that repo and fill in the brackets:
 
 ```text
 [Make / change] the [which] page on the Seeds of Renaissance website, on brand.
@@ -28,18 +28,18 @@ Examples to copy: [website pages](examples.md#website).
 
    | Making… | Copy |
    |---|---|
-   | A landing or home page | [examples/web/home.html](examples/web/home.html) |
-   | A long text (manifesto, essay) | [examples/web/manifesto.html](examples/web/manifesto.html) |
-   | An events or community page | [examples/web/gatherings.html](examples/web/gatherings.html) |
-   | A sign-up or "how to join" page | [examples/web/join.html](examples/web/join.html) |
-   | A publication page (magazine, podcast) | [examples/web/magazine.html](examples/web/magazine.html) |
-   | A research paper | [examples/web/white-paper.html](examples/web/white-paper.html) |
+   | A landing or home page | [Home page](examples/web/home.html) |
+   | A long text (manifesto, essay) | [Manifesto](examples/web/manifesto.html) |
+   | An events or community page | [Gatherings](examples/web/gatherings.html) |
+   | A sign-up or "how to join" page | [Join](examples/web/join.html) |
+   | A publication page (magazine, podcast) | [Magazine](examples/web/magazine.html) |
+   | A research paper | [White paper](examples/web/white-paper.html) |
 
 2. **Keep the shell**: the `<head>` links, `<body class="sor">`, `graphics.js` first in the body, `sor.js` last, the site header and footer.
 
 3. **Compose sections from the list below.** Each section is a full-width ground with the page gutter. Use only classes from `system/components.css`. If you need something the system lacks, add it to `system/components.src.css` (token-based, no page-specific colours), run `python3 system/build/build-css.py`, and say so.
 
-4. **Write real copy.** Use [voice.md](voice.md) for how we sound (key lines, button text, titles) and [brand.md](brand.md) for who we are and what we offer; real page copy is in [content/](content/).
+4. **Write real copy.** Use [Voice](voice.md) for how we sound (key lines, button text, titles) and [Brand](brand.md) for who we are and what we offer. Old-site pages to draw on are in [content](content/README.md).
 
 5. **Check against the list** at the bottom before you call it done.
 

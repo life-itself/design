@@ -23,7 +23,7 @@ The [Instagram templates](examples/social/instagram/README.md) show what it will
 
 ## Make or change a website page
 
-Paste this into your agent in the `sor-website` repo. It writes the page in Markdown; the site's styles, synced from the design system, make it look right.
+Paste this into your agent in the sor-website repo. It writes the page in Markdown; the site's styles, synced from the design system, make it look right.
 
 ```text
 [Make / change] the [which] page on the Seeds of Renaissance website, on brand.
