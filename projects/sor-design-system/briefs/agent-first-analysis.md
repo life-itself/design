@@ -7,7 +7,7 @@ Phase 1 of [the brief](agent-first-design-system.md) (beads `design-34t.57`), 20
 1. **The content is fine; the route fails.** Given a kit, fresh agents made an on-brand Instagram post and thumbnail in under a minute. They lost their time finding the way: a front door that says nothing, three maps, stale files that contradict the kits, and nothing on how the website repo uses the system.
 2. **One roadmap for agents, in the repo, organised by job:** `projects/sor-design-system/AGENTS.md`. Each job's route says read, use, copy, ask the person for, check, watch out. Other repos point to it with a short block in their own `AGENTS.md`; `llms.txt` points to it for agents with only a link.
 3. **Prompts for people to paste**, one per job, on a "Use with an agent" page; each one only sends the agent to its route.
-4. **People reach a kit in two clicks**: home → kit page → download. The kit pages get real downloads (zips built at publish).
+4. **A person with an agent reaches the prompt in one click**: home → "A social post" → the Social guide opens with the prompt to paste (copy button). The templates page shows what the agent will make; the Canva download sits lower, for the separate Canva job (its own bead).
 5. **Start here (BUILD) goes in a later step**, its rules moved into the roadmap and a short "brand in five minutes" page. A skill comes later, as a thin pointer to the roadmap.
 
 ## 1. Best practice, briefly
