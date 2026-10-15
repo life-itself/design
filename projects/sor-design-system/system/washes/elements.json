@@ -1,6 +1,6 @@
 {
  "title": "Watercolour washes",
- "lede": "Nine loose watercolour and ink washes, cut out of their paper as transparent PNGs, long side up to 1000px. The paint stays translucent, so each one takes the colour of its ground: use them on light grounds, where the pale areas stay quiet. PNG only.",
+ "lede": "Ten loose watercolour and ink washes, cut out of their paper as transparent PNGs, long side up to 1000px. The paint stays translucent, so each one takes the colour of its ground: use them on light grounds, where the pale areas stay quiet. PNG only.",
  "elements": [
   {
    "slug": "red-watercolour-flower",
@@ -72,6 +72,14 @@
    "kind": "digital glow",
    "desc": "Five blue fingertips with a soft glow. Lettering removed.",
    "source": "bfi-20",
+   "svg": false
+  },
+  {
+   "slug": "green-watercolour-flower",
+   "title": "Green watercolour flower",
+   "kind": "watercolour",
+   "desc": "A single green flower on a thin stem, in olive and moss washes with a touch of yellow. Signature and date removed.",
+   "source": "bfi-32",
    "svg": false
   }
  ]

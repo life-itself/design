@@ -21,5 +21,6 @@ In [`elements/`](elements/). Names read `subject-style`. Long side up to 1000px.
 | `watercolour-figure-blue` | Watercolour figure, blue: The same figure with its colour shifted to blue. | PNG | bfi-18 |
 | `red-watercolour-blooms` | Red watercolour blooms: Three red blooms with thin stems and a few drops. | PNG | bfi-19 |
 | `blue-handprint` | Blue handprint: Five blue fingertips with a soft glow. Lettering removed. | PNG | bfi-20 |
+| `green-watercolour-flower` | Green watercolour flower: A single green flower on a thin stem, in olive and moss washes with a touch of yellow. Signature and date removed. | PNG | bfi-32 |
 
 Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in [[moodboard/botanical-flower-illustration/removal-candidates|removal-candidates]].

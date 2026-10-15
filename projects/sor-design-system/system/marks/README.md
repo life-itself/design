@@ -23,5 +23,7 @@ In [`elements/`](elements/). Names read `subject-style`. PNGs 1000px on the long
 | `kolam-knot` | Kolam knot: A looping line woven around a grid of dots, in the manner of a kolam. | PNG, SVG | bfi-21 |
 | `checkerboard` | Checkerboard: Black squares with slightly rounded corners, white made transparent. | PNG, SVG | bfi-10 |
 | `checkerboard-3-rows` | Checkerboard, 3 rows: A strip of three rows of twelve checks. | PNG, SVG | bfi-10 |
+| `mark-1268-loops` | Mark 1268: Four looping, ampersand-like shapes around a small square, in solid black. | PNG, SVG | bfi-30 |
+| `mark-4684-rosette` | Mark 4684: A rosette of overlapping circles in fine black line. PNG only: the fine lines make a heavy trace. | PNG | bfi-31 |
 
 Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in [[moodboard/botanical-flower-illustration/removal-candidates|removal-candidates]].

@@ -62,7 +62,7 @@ Botanical illustrations in colour, cut out of their paper: red alstroemeria, cri
 
 ## Watercolour washes
 
-Loose watercolour and ink washes: a red bloom, green and blue ink washes, blue flowers, a blue ring, a figure in red and in blue, red blooms and a blue handprint. Nine elements, PNG only. The paint is translucent, so each wash takes the colour of its ground: **use them on light grounds** (white, paper, sunlight); on night they mostly disappear. See **[the washes gallery](system/washes/gallery.html)**; files in [system/washes/](system/washes/README.md).
+Loose watercolour and ink washes: a red bloom, green and blue ink washes, blue flowers, a blue ring, a figure in red and in blue, red blooms, a green flower and a blue handprint. Ten elements, PNG only. The paint is translucent, so each wash takes the colour of its ground: **use them on light grounds** (white, paper, sunlight); on night they mostly disappear. See **[the washes gallery](system/washes/gallery.html)**; files in [system/washes/](system/washes/README.md).
 
 ## Geometry
 
@@ -70,7 +70,7 @@ Line figures in black: the exact Metatron's cube (rebuilt from geometry, so its 
 
 ## Marks and patterns
 
-Interlaced and knot marks (rings, bands, spirals, a radial wedge spiral, a wave ring), a kolam line pattern and two checkerboards, in black. Eleven elements as 1000px PNGs, with SVGs where they are small and clean (under 150 KB). See **[the marks gallery](system/marks/gallery.html)**; files in [system/marks/](system/marks/README.md).
+Interlaced and knot marks (rings, bands, loops, spirals, a radial wedge spiral, a wave ring, a circle rosette), a kolam line pattern and two checkerboards, in black. Thirteen elements as 1000px PNGs, with SVGs where they are small and clean (under 150 KB). See **[the marks gallery](system/marks/gallery.html)**; files in [system/marks/](system/marks/README.md).
 
 ## Prints
 

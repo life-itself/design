@@ -1,6 +1,6 @@
 {
  "title": "Marks and patterns",
- "lede": "Eight interlaced and knot marks, a kolam line pattern and two checkerboards, in black ink (#1b1916) on a transparent ground. PNGs at 1000px; SVGs where they are small and clean (under 150 KB).",
+ "lede": "Ten interlaced and knot marks, a kolam line pattern and two checkerboards, in black ink (#1b1916) on a transparent ground. PNGs at 1000px; SVGs where they are small and clean (under 150 KB).",
  "elements": [
   {
    "slug": "mark-5312-rings",
@@ -89,6 +89,22 @@
    "desc": "A strip of three rows of twelve checks.",
    "source": "bfi-10",
    "svg": true
+  },
+  {
+   "slug": "mark-1268-loops",
+   "title": "Mark 1268",
+   "kind": "ampersand loops",
+   "desc": "Four looping, ampersand-like shapes around a small square, in solid black.",
+   "source": "bfi-30",
+   "svg": true
+  },
+  {
+   "slug": "mark-4684-rosette",
+   "title": "Mark 4684",
+   "kind": "circle rosette",
+   "desc": "A rosette of overlapping circles in fine black line. PNG only: the fine lines make a heavy trace.",
+   "source": "bfi-31",
+   "svg": false
   }
  ]
 }
