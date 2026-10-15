@@ -2,11 +2,12 @@
 
 > The brand and design system for Seeds of Renaissance: feel, voice, colour, type, layout, woodcut graphics, photography, logo, components and whole-page examples, with the CSS to build from. Version 0.1. Every .md link below is raw markdown.
 
-To build something: read BUILD.md first, open the guide for what you are making (website, social and Canva, YouTube, podcast, slides, print, diagrams, email), copy the closest example, use only the tokens and classes in system/, and check against the lists in BUILD.md and the guide. Topic pages hold the detail; you rarely need them for a first draft.
+To make something: read AGENTS.md first. It is the roadmap: find your job, read only what its route names, copy its example, check its list. Its paths are relative to this site (and to projects/sor-design-system/ in the life-itself/design repo, which agents with a checkout should read instead). Topic pages hold the detail; you rarely need them for a first draft.
 
 ## Start
 
-- [BUILD.md](https://design.seedsofrenaissance.org/BUILD.md): start here. Rules in one paragraph, which guide to use for what you are making, rules that apply everywhere, checklist.
+- [AGENTS.md](https://design.seedsofrenaissance.org/AGENTS.md): start here. The roadmap for agents: rules that apply everywhere, then one route per job (social post, website page, episode cover, slides, diagram, paper, email, assets, check, maintain)
+- [BUILD.md](https://design.seedsofrenaissance.org/BUILD.md): the brief in one paragraph, the rules and the checklist, for people
 - [examples.md](https://design.seedsofrenaissance.org/examples.md): every kind of thing we make, with its guide and examples to copy
 
 ## Topics
@@ -42,6 +43,7 @@ To build something: read BUILD.md first, open the guide for what you are making 
 
 ## Optional
 
+- [prompts.md](https://design.seedsofrenaissance.org/prompts.md): prompts people paste into agents, and the block to add to another repo's AGENTS.md
 - [guide.html](https://design.seedsofrenaissance.org/guide.html): the whole system rendered on one page (visual; HTML)
 - [about.md](https://design.seedsofrenaissance.org/about.md): where the source lives, how to contribute, where older material is kept
 - [MAINTAINING.md](https://design.seedsofrenaissance.org/MAINTAINING.md): how this site is built and published

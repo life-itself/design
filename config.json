@@ -68,6 +68,10 @@
         ]
       },
       {
+        "name": "Use with an agent",
+        "href": "/prompts"
+      },
+      {
         "name": "Foundations",
         "links": [
           {

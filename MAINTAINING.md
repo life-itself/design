@@ -1,6 +1,6 @@
 # Maintaining the design system
 
-For whoever edits and publishes this folder. Readers start at [README.md](README.md); builders at [BUILD.md](BUILD.md).
+For whoever edits and publishes this folder. Readers start at [README.md](README.md); agents at [AGENTS.md](AGENTS.md), the roadmap by job; people briefing agents at [prompts.md](prompts.md).
 
 ## Where it lives
 
@@ -16,6 +16,8 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 - **`specimens/<chapter>.html`** are cut from guide.html by `system/build/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. A group inside a chapter with an id like `<div id="examples-web">` also gets its own specimen (used on examples.md and youtube.md). Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
 - **`custom.css`** styles the specimen frames on Flowershow. Flowershow pages never load `components.css` (its generic class names would clash with the site theme); the system's CSS only runs inside the specimen frames, the guide and the examples.
 - **Navbar** (`config.json`) follows the three ways in on the home page: **Start here** (BUILD), **Make** (one guide per format), **Assets** (logo, logo files, graphics, photography), **Foundations** (feel, voice, colour, type, layout, components, the guide), **Brand** and **Examples**. A page goes in the nav only once it is usable; the graphics galleries and the logo files are reached from graphics.md (the logo files also from Assets).
+- **The roadmap and the prompts.** [AGENTS.md](AGENTS.md) routes agents by job (read, use, copy, ask, check); [prompts.md](prompts.md) holds the prompts people paste, each sending the agent to a route. [llms.txt](llms.txt) points to the roadmap first. When a guide, kit or example changes, change its route and its prompt in the same commit. Other repos read some paths directly (`sor-website/scripts/sync-design.py` copies `system/tokens.css`, `components.css`, `graphics.js`, `sor.js`, `system/fonts/` and `system/img/`): moving one breaks that repo's next sync.
+- **Kit downloads** are zipped from each kit's `png/` by `build-site.py` (the `KITS` map), into the folders its README lists.
 - **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, social, youtube, podcast, slides, print, diagrams), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
 
 ## Pages state rules, not progress

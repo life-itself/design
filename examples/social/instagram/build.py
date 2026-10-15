@@ -2,9 +2,8 @@
 """Build the Instagram post templates (swallows and fingerprints from the bottom left).
 
 The same background as the podcast thumbnail's bottom-left layout (examples/youtube/canva-kit, the
-shared recipe in system/build/swallows.py): white, the black swallow engraving rising from the bottom-left
-corner, the logo's fingerprints faded around it. Words sit above the birds; the lockup is top right
-for now (provisional).
+shared recipe in system/build/swallows.py): sunlight, the black swallow engraving rising from the bottom-left
+corner, the logo's fingerprints faded around it. Words sit above the birds; the logo lockup sits under the words.
 
 Writes one HTML page per PNG into src/; export.sh screenshots them into png/.
 Every PNG is the full post size, so in Canva each one is dropped in and stretched to fill the page.

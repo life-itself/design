@@ -2,6 +2,8 @@
 
 Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
 
+**With an agent:** copy the prompt in [Use with an agent](prompts.md#make-a-social-post). **By hand, in Canva:** [download the Instagram kit](examples/social/instagram/sor-instagram-kit.zip) and follow [its steps](examples/social/instagram/README.md#make-a-post-in-canva).
+
 **Instagram posts:** podcast episode, quote card, announcement, statement and carousel, 4:5 and 1:1, on the swallows-and-fingerprints ground of the [podcast cover](podcast.md), as a Canva kit: [examples/social/instagram/](examples/social/instagram/README.md) ([preview](examples/social/instagram/index.html)). For a 16:9 announcement, start from the gathering thumbnail in [examples/youtube/](examples/youtube/index.html).
 
 <iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
