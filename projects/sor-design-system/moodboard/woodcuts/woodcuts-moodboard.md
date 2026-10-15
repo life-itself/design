@@ -210,7 +210,7 @@ Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not 
 
 - Source: Pinterest (link not captured).
 - User's note: make it a mountain range element, with and without the sun, in black and in the cobalt blue of the tulips (14).
-- Noticing: a real linocut on white paper. Three peaks carved in black with white gouge strokes for the snow faces and ridges, and short horizontal dashes below for the plain or water. A small gold-leaf disc for the sun is the only colour, sitting high and to the left, with a lot of empty sky. Ink is solid with a slightly rough edge. A direct improvement on our `mountain-range.svg`, and the gold sun is another example of "colour as an event". Made into `elements/mountain-range-linocut-*`.
+- Noticing: a real linocut on white paper. Three peaks carved in black with white gouge strokes for the snow faces and ridges, and short horizontal dashes below for the plain or water. A small gold-leaf disc for the sun is the only colour, sitting high and to the left, with a lot of empty sky. Ink is solid with a slightly rough edge. A direct improvement on our `mountain-range.svg`, and the gold sun is another example of "colour as an event". Made into `system/prints/elements/mountain-range-linocut-*`.
 
 ### 22. Flock of swallows, blue engraving
 

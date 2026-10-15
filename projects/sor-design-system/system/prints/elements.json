@@ -1,0 +1,246 @@
+{
+ "title": "Print elements",
+ "lede": "17 woodcut, linocut and engraving prints traced from the woodcuts mood board, 30 versions in all: fruit, oak and acorns, pinecones, flowers, a mountain range and a flock of swallows. Transparent SVG and PNG. They keep the colours they were printed in, because they are often used under a transparency.",
+ "elements": [
+  {
+   "slug": "swallows-flock-engraving-blue",
+   "title": "Flock of swallows, blue (original)",
+   "kind": "engraving \u00b7 #274191",
+   "desc": "About eleven barn swallows rising in a loose diagonal flock, in fine 19th-century engraving line: hatched wings, stippled breasts, white throats. Our main motif. Fine line, so use it large.",
+   "source": "mood board 22: Pinterest engraving",
+   "svg": true
+  },
+  {
+   "slug": "swallows-flock-engraving-black",
+   "title": "Flock of swallows, black",
+   "kind": "engraving \u00b7 #1b1916",
+   "desc": "About eleven barn swallows rising in a loose diagonal flock, in fine 19th-century engraving line: hatched wings, stippled breasts, white throats. Our main motif. Fine line, so use it large.",
+   "source": "mood board 22: Pinterest engraving",
+   "svg": true
+  },
+  {
+   "slug": "pomegranates-linocut-black-red-logo",
+   "title": "Pomegranates, black + logo red",
+   "kind": "linocut \u00b7 #1b1916 + #e5201c",
+   "desc": "Two pomegranates, one whole and one cut open, as a two-colour linocut: black key block over a flat red that sits slightly out of register.",
+   "source": "mood board 01: Pinterest linocut",
+   "svg": true
+  },
+  {
+   "slug": "pomegranates-linocut-black-red-print",
+   "title": "Pomegranates, black + print red",
+   "kind": "linocut \u00b7 #1b1916 + #c25552",
+   "desc": "Two pomegranates, one whole and one cut open, as a two-colour linocut: black key block over a flat red that sits slightly out of register.",
+   "source": "mood board 01: Pinterest linocut",
+   "svg": true
+  },
+  {
+   "slug": "oak-leaf-acorn-twig-linocut-black",
+   "title": "Oak leaf and acorn on a twig, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "One oak leaf and one acorn on a sweeping twig. Solid black, thin cut veins, cut-out acorn cup.",
+   "source": "mood board 11: Pinterest linocut",
+   "svg": true
+  },
+  {
+   "slug": "acorn-single-linocut-black",
+   "title": "Acorn, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "A single acorn with a ribbed nut, speckled cap and stray gouge marks around the edge.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "acorn-single-linocut-green",
+   "title": "Acorn, faded green",
+   "kind": "linocut \u00b7 #3b5a45",
+   "desc": "A single acorn with a ribbed nut, speckled cap and stray gouge marks around the edge.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "oak-leaf-linocut-a-black",
+   "title": "Oak leaf, down-right, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "An oak leaf angled down and to the right, with white cut veins and stray cuts.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "oak-leaf-linocut-a-green",
+   "title": "Oak leaf, down-right, faded green",
+   "kind": "linocut \u00b7 #3b5a45",
+   "desc": "An oak leaf angled down and to the right, with white cut veins and stray cuts.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "oak-leaf-linocut-b-black",
+   "title": "Oak leaf, up-right, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "An oak leaf angled up and to the right, with white cut veins and stray cuts.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "oak-leaf-linocut-b-green",
+   "title": "Oak leaf, up-right, faded green",
+   "kind": "linocut \u00b7 #3b5a45",
+   "desc": "An oak leaf angled up and to the right, with white cut veins and stray cuts.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "acorns-pair-oak-leaf-linocut-black",
+   "title": "Two acorns with an oak leaf, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "A pair of acorns with crosshatched cups and a small oak leaf above.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "acorns-pair-oak-leaf-linocut-green",
+   "title": "Two acorns with an oak leaf, faded green",
+   "kind": "linocut \u00b7 #3b5a45",
+   "desc": "A pair of acorns with crosshatched cups and a small oak leaf above.",
+   "source": "mood board 10: Stock linocut set (watermarked, draft)",
+   "svg": true
+  },
+  {
+   "slug": "pinecone-linocut-black",
+   "title": "Pinecone, bold, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "A tilted pinecone in strong black and white, with chunky outlined scales that go ragged at the tip.",
+   "source": "mood board 20: Pinterest linocut",
+   "svg": true
+  },
+  {
+   "slug": "pinecone-linocut-green",
+   "title": "Pinecone, bold, faded green",
+   "kind": "linocut \u00b7 #3b5a45",
+   "desc": "A tilted pinecone in strong black and white, with chunky outlined scales that go ragged at the tip.",
+   "source": "mood board 20: Pinterest linocut",
+   "svg": true
+  },
+  {
+   "slug": "pinecone-hanging-twig-pen-black",
+   "title": "Pinecone hanging from a twig, black",
+   "kind": "pen drawing \u00b7 #1b1916",
+   "desc": "A pinecone hanging from a pine twig with long, fine needles. A thin pen drawing, best used large.",
+   "source": "mood board 19: Pinterest pen drawing",
+   "svg": true
+  },
+  {
+   "slug": "pinecone-hanging-twig-pen-green",
+   "title": "Pinecone hanging from a twig, faded green",
+   "kind": "pen drawing \u00b7 #3b5a45",
+   "desc": "A pinecone hanging from a pine twig with long, fine needles. A thin pen drawing, best used large.",
+   "source": "mood board 19: Pinterest pen drawing",
+   "svg": true
+  },
+  {
+   "slug": "hanging-fruit-silhouette-black",
+   "title": "Hanging fruit and leaves, black",
+   "kind": "silhouette \u00b7 #1b1916",
+   "desc": "Two round fruit with leaf clusters as a cut-paper silhouette. Thin white gaps do the drawing. Vertical, so it suits a margin or divider.",
+   "source": "mood board 12: Craft-shop stencil (draft)",
+   "svg": true
+  },
+  {
+   "slug": "hanging-fruit-silhouette-blue",
+   "title": "Hanging fruit and leaves, faded dark blue",
+   "kind": "silhouette \u00b7 #2f4465",
+   "desc": "Two round fruit with leaf clusters as a cut-paper silhouette. Thin white gaps do the drawing. Vertical, so it suits a margin or divider.",
+   "source": "mood board 12: Craft-shop stencil (draft)",
+   "svg": true
+  },
+  {
+   "slug": "round-flowers-stem-ink-black",
+   "title": "Round flowers on a branching stem, black",
+   "kind": "ink drawing \u00b7 #1b1916",
+   "desc": "Pom-pom flower heads on a long, thin branching stem. Light and airy, with heavy dots on a hairline.",
+   "source": "mood board 13: Pinterest ink drawing",
+   "svg": true
+  },
+  {
+   "slug": "round-flowers-stem-ink-red",
+   "title": "Round flowers on a branching stem, print red",
+   "kind": "ink drawing \u00b7 #c25552",
+   "desc": "Pom-pom flower heads on a long, thin branching stem. Light and airy, with heavy dots on a hairline.",
+   "source": "mood board 13: Pinterest ink drawing",
+   "svg": true
+  },
+  {
+   "slug": "tulips-brush-blue",
+   "title": "Tulips in loose brush line, cobalt blue",
+   "kind": "brush drawing (AI source) \u00b7 #03296f",
+   "desc": "Five tulip-like flowers in loose, tapering brush strokes. Source image was AI-generated, so mood reference.",
+   "source": "mood board 14: Pinterest (AI-generated)",
+   "svg": true
+  },
+  {
+   "slug": "lily-stem-brush-black",
+   "title": "Lily stem, black",
+   "kind": "brush drawing \u00b7 #1b1916",
+   "desc": "A lily stem in a few swelling brush lines, with leaves left partly open.",
+   "source": "mood board 17: Pinterest ink study",
+   "svg": true
+  },
+  {
+   "slug": "wildflowers-pen-black",
+   "title": "Wildflowers, black",
+   "kind": "pen drawing \u00b7 #1b1916",
+   "desc": "Three wildflowers and two buds in scratchy pen line with dark centres. Clip-art crop, so a draft.",
+   "source": "mood board 18: Pinterest clip-art preview (draft)",
+   "svg": true
+  },
+  {
+   "slug": "flowering-branch-silhouette-ochre",
+   "title": "Flowering branch, cropped, ochre",
+   "kind": "silhouette \u00b7 #b49856",
+   "desc": "A flowering branch as a flat silhouette, cropped so it runs off the frame. Works as a background or tile.",
+   "source": "mood board 15: Pinterest silhouette",
+   "svg": true
+  },
+  {
+   "slug": "flowering-branch-silhouette-pale-yellow",
+   "title": "Flowering branch, cropped, pale yellow (sunlight)",
+   "kind": "silhouette \u00b7 #fbefc4",
+   "desc": "A flowering branch as a flat silhouette, cropped so it runs off the frame. Works as a background or tile.",
+   "source": "mood board 15: Pinterest silhouette",
+   "svg": true
+  },
+  {
+   "slug": "mountain-range-linocut-black-sun",
+   "title": "Mountain range with a gold sun, black + gold sun",
+   "kind": "linocut \u00b7 #1b1916 + sun #dbb06a",
+   "desc": "A range of three peaks carved in strong black and white, with short cut strokes for the plain below and a small gold sun above.",
+   "source": "mood board 21: Pinterest linocut with gold leaf",
+   "svg": true
+  },
+  {
+   "slug": "mountain-range-linocut-blue-sun",
+   "title": "Mountain range with a gold sun, cobalt blue + gold sun",
+   "kind": "linocut \u00b7 #03296f + sun #dbb06a",
+   "desc": "A range of three peaks carved in strong black and white, with short cut strokes for the plain below and a small gold sun above.",
+   "source": "mood board 21: Pinterest linocut with gold leaf",
+   "svg": true
+  },
+  {
+   "slug": "mountain-range-linocut-black",
+   "title": "Mountain range, black",
+   "kind": "linocut \u00b7 #1b1916",
+   "desc": "The same range of peaks without the sun, cropped tight to the mountains and the plain.",
+   "source": "mood board 21: Pinterest linocut with gold leaf",
+   "svg": true
+  },
+  {
+   "slug": "mountain-range-linocut-blue",
+   "title": "Mountain range, cobalt blue",
+   "kind": "linocut \u00b7 #03296f",
+   "desc": "The same range of peaks without the sun, cropped tight to the mountains and the plain.",
+   "source": "mood board 21: Pinterest linocut with gold leaf",
+   "svg": true
+  }
+ ]
+}

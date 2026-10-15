@@ -46,6 +46,8 @@ These are the colours a woodcut graphic may be printed in besides black (and cha
 
 **Exception, botanicals and washes:** the [botanicals](system/botanicals/README.md) and [watercolour washes](system/washes/README.md) keep the colours they were painted in (reds, blues, greens, olive and ochre) and are not illustration inks. Don't retint them and don't use their colours on other graphics. This widens the same open tension (Beads `design-34t.43`). The [geometry](system/geometry/README.md) and [marks](system/marks/README.md) are plain black line work in `--ink` and follow the usual ink rules (decided 2026-10-15).
 
+**Exception, prints:** the [print elements](system/prints/README.md) (pomegranates, acorns, pinecones, flowers, the mountain range with its gold sun, the swallow flock) keep the colours they were made in: black, the logo red and a softer print red, a faded green, a faded dark blue, cobalt, a swallow blue, ochre, pale yellow and a gold sun. They are not illustration inks and are not retinted to the tokens, because they are often used under a transparency that softens ink and colour together, so the exact colours matter. How that transparency works is still to be settled (decided 2026-10-15, Beads `design-34t.52`).
+
 ## Proportion
 
 By area on the home page, leaving out photographs: about 64% white and paper, 14% sunlight, 16% night, 5% ink, 1% red. Photographs carry most of the colour.

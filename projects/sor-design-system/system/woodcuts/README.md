@@ -38,7 +38,7 @@ Gallery of everything: https://claude.ai/artifact/U3qepgEKdybBfPVu2YT3ny (source
 
 ## Elements from the woodcuts mood board
 
-Transparent, ready-to-use elements traced from the images on [[moodboard/woodcuts/woodcuts-moodboard]], in [`elements/`](elements/README.md). Each has an `.svg` and a 1000px transparent `.png`, named `subject-style-colour`. Colours are fixed in each file (they do not follow `currentColor`), so they show in any viewer.
+The elements traced from [[moodboard/woodcuts/woodcuts-moodboard]] are now their own set: [[prints/README|system/prints/]].
 
 ## Using them
 

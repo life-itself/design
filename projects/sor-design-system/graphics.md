@@ -72,6 +72,12 @@ Line figures in black: the exact Metatron's cube (rebuilt from geometry, so its 
 
 Interlaced and knot marks (rings, bands, spirals, a radial wedge spiral, a wave ring), a kolam line pattern and two checkerboards, in black. Eleven elements as 1000px PNGs, with SVGs where they are small and clean (under 150 KB). See **[the marks gallery](system/marks/gallery.html)**; files in [system/marks/](system/marks/README.md).
 
+## Prints
+
+Woodcut, linocut and engraving prints traced from the [woodcuts mood board](moodboard/woodcuts/woodcuts-moodboard.md): pomegranates in black and red, oak leaves and acorns, pinecones, hanging fruit, round flowers, a lily, wildflowers, tulips, a flowering branch, a mountain range with and without a gold sun, and a flock of swallows. Seventeen elements in thirty versions, each as an SVG and a transparent 1000px PNG. See **[the prints gallery](system/prints/gallery.html)**; files, colours and sources in [system/prints/](system/prints/README.md).
+
+They **keep the colours they were printed in** (see [colour](colour.md#illustration-inks-graphics-only)): don't retint them to the illustration inks. They are often used with a transparency over them, which softens both the ink and the colour, so the exact colours matter. How that transparency is applied is not settled yet (Beads `design-34t.52`). Same rules otherwise: one per section at most.
+
 **Rules for these four sets** are the same as for the woodcuts: one per section at most, punctuation, not wallpaper. The geometry and marks are black line work, so don't tint them; the botanicals and washes keep their painted colours and are not retinted. Elements are cropped close to their edges, so add space in the layout instead of expecting it in the file.
 
 **Open:** hand-draw the woodcuts, or base them on public-domain prints?

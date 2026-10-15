@@ -16,7 +16,7 @@ for f in src/*.html; do
 done
 # Elements that are plain copies of system files
 cp ../../../system/img/fingerprints-red.png png/element-fingerprint-ring.png
-cp ../../../system/woodcuts/elements/swallows-flock-engraving-black.png png/element-swallows-flock-black.png
+cp ../../../system/prints/elements/swallows-flock-engraving-black.png png/element-swallows-flock-black.png
 cp ../../../system/logo/lockups/seeds-logo-horizontal-colour-2400.png png/element-logo-lockup.png
 cp ../../../system/logo/mark/seeds-mark-colour.png png/element-logo-mark.png
 ls png | wc -l

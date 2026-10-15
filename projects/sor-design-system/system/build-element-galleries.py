@@ -1,11 +1,11 @@
-"""Build gallery.html for the four graphic sets (botanicals, washes, geometry, marks)
+"""Build gallery.html for the graphic sets (botanicals, washes, geometry, marks, prints)
 from each set's elements.json and element-gallery-shell.html.
 Usage: python3 system/build-element-galleries.py. Also makes thumbs/ (gitignored) in each set.
 Images load from elements/ and thumbs/ next to each page, so publish those folders with it."""
 import json, html, pathlib, subprocess
 here = pathlib.Path(__file__).parent
 e_ = html.escape
-SETS = ["botanicals", "washes", "geometry", "marks"]
+SETS = ["botanicals", "washes", "geometry", "marks", "prints"]
 shell = (here / "element-gallery-shell.html").read_text()
 
 def kb(p):
