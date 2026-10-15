@@ -43,4 +43,5 @@ To build something: read BUILD.md first, open the guide for what you are making 
 ## Optional
 
 - [guide.html](https://design.seedsofrenaissance.org/guide.html): the whole system rendered on one page (visual; HTML)
+- [about.md](https://design.seedsofrenaissance.org/about.md): where the source lives, how to contribute, where older material is kept
 - [MAINTAINING.md](https://design.seedsofrenaissance.org/MAINTAINING.md): how this site is built and published

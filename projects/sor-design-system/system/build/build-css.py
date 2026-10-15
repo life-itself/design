@@ -1,7 +1,7 @@
 """Build components.css from components.src.css by inlining the textures in textures.txt
 (the torn-edge mask and the paper grain, both SVG data URIs)."""
 import pathlib
-here = pathlib.Path(__file__).parent
+here = pathlib.Path(__file__).resolve().parent.parent
 tex = dict(l.split("=", 1) for l in (here / "textures.txt").read_text().splitlines() if l)
 css = (here / "components.src.css").read_text()
 for k, v in tex.items():

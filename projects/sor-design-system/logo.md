@@ -29,7 +29,7 @@ All in [system/logo/](system/logo/README.md); see them on the **[logo files](log
 | Other lockups | `lockups/seeds-logo-{two-lines-left, two-lines-right, stacked, wordmark}-<colourway>` |
 | The mark alone | `mark/seeds-mark-<colourway>.svg` / `.png` (1130 px) |
 | Avatars, icons | `mark/sizes/seeds-mark-<colourway>-<px>.png`, 16 to 1024 px; `favicon.ico` |
-| Pages and code | `system/img/logo.png` (600 px) and `logo-256.png`, the colour mark; `logo-inverted*.png`, the colour-dark mark |
+| Pages and code | `mark/sizes/seeds-mark-colour-512.png` (or `-256`), the colour mark; `seeds-mark-colour-dark-<px>.png` on dark grounds |
 
 SVGs scale freely; the fingerprints inside them are sharp up to about 1130 px, enough for screens and A4 print. For anything larger than A4 (posters, banners), ask for the original fingerprint artwork.
 
@@ -54,7 +54,7 @@ On night, use `colour-dark` or `white`; no disc needed.
 - In the site header it sits beside the wordmark, set in Polyamine with "of" in Fraunces italic (`.wordmark em` in `components.css`). Match the wordmark settings above, or use the lockup file:
 
 ```html
-<a class="wordmark" href="/"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
+<a class="wordmark" href="/"><img src="system/logo/mark/sizes/seeds-mark-colour-512.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
 ```
 
 - In the footer it sits above the name.

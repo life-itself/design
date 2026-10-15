@@ -11,4 +11,4 @@ The square artwork for the Seeds of Renaissance podcast, 3000 × 3000. Rules: [p
 
 **Episode art in Canva.** Make the Instagram 1:1 podcast post from the [Instagram kit](../social/instagram/README.md) (1080 × 1080). Download it as PNG; in the download panel, set the size to about 2.78× (3000 × 3000), or resize a copy of the design to 3000 × 3000 (Canva Pro). Upload it with the episode.
 
-**Rebuilding.** `./export.sh` runs `build.py` (the show art, a 1000 × 1000 artboard rendered at 3×) and renders the Instagram 1:1 podcast template at 3000 × 3000. The ground comes from `system/swallows.py`, shared with the YouTube and Instagram kits. Polyamine must be licensed before the art is published; the swallow engraving needs its rights cleared.
+**Rebuilding.** `./export.sh` runs `build.py` (the show art, a 1000 × 1000 artboard rendered at 3×) and renders the Instagram 1:1 podcast template at 3000 × 3000. The ground comes from `system/swallows.py`, shared with the YouTube and Instagram kits. Polyamine must be licensed before the art is published.

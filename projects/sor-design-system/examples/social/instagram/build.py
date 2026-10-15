@@ -2,7 +2,7 @@
 """Build the Instagram post templates (swallows and fingerprints from the bottom left).
 
 The same background as the podcast thumbnail's bottom-left layout (examples/youtube/canva-kit, the
-shared recipe in system/swallows.py): white, the black swallow engraving rising from the bottom-left
+shared recipe in system/build/swallows.py): white, the black swallow engraving rising from the bottom-left
 corner, the logo's fingerprints faded around it. Words sit above the birds; the lockup is top right
 for now (provisional).
 
@@ -13,7 +13,7 @@ import sys as _sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-_sys.path.insert(0, str(HERE.parents[2] / "system"))
+_sys.path.insert(0, str(HERE.parents[2] / "system" / "build"))
 import swallows as sw  # noqa: E402
 
 SRC = HERE / "src"

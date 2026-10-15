@@ -14,7 +14,7 @@ from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 
-SYSTEM = pathlib.Path(__file__).resolve().parent
+SYSTEM = pathlib.Path(__file__).resolve().parent.parent
 URL = "seedsofrenaissance.org"
 NAME = "Seeds of Renaissance"
 INK, CHALK, WHITE, NIGHT, RED = "#1b1916", "#ece7dc", "#ffffff", "#171613", "#e5201c"
@@ -64,7 +64,7 @@ def signature(theme, url=URL, mark_ref=None):
     the mark is embedded."""
     ink = THEMES[theme]["ink"]
     r, m = DISC / 2, DISC * (0.85 if theme == "light" else 1)
-    img = "img/logo-256.png" if theme == "light" else "img/logo-inverted-256.png"
+    img = "logo/mark/sizes/seeds-mark-colour-256.png" if theme == "light" else "logo/mark/sizes/seeds-mark-colour-dark-256.png"
     if mark_ref:
         mark = f'<use href="#{mark_ref}-{theme}" x="{r - m / 2:.1f}" y="{r - m / 2:.1f}" width="{m:.1f}" height="{m:.1f}"/>'
     else:

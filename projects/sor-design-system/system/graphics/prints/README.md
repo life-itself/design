@@ -1,8 +1,8 @@
 # Print elements
 
-Woodcut, linocut and engraving prints for Seeds of Renaissance: fruit, oak leaves and acorns, pinecones, flowers, a mountain range (with and without a gold sun) and a flock of swallows. Each was traced from an image on [[moodboard/woodcuts/woodcuts-moodboard]]: the paper is removed and the ink kept. See also [[woodcuts/README|woodcuts]], [[animals/README|animals]] and [[mountains/README|mountains]].
+Woodcut, linocut and engraving prints for Seeds of Renaissance: fruit, oak leaves and acorns, pinecones, flowers, a mountain range (with and without a gold sun) and a flock of swallows. Each was traced from an image on the moodboard folder `woodcuts/woodcuts-moodboard` ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/woodcuts/woodcuts-moodboard)): the paper is removed and the ink kept. See also [[woodcuts/README|woodcuts]], [[animals/README|animals]] and [[mountains/README|mountains]].
 
-Gallery with every file and a link to each: [graphics/prints](../../../graphics/prints.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
+Gallery with every file and a link to each: [graphics/prints](../../../graphics/prints.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
 
 ## Colours: kept as printed
 
@@ -27,8 +27,8 @@ In [`elements/`](elements/). Every name has an `.svg` and a 1000px-wide transpar
 
 | File (.svg and .png) | What it is | Colour | Mood board | Source |
 |---|---|---|---|---|
-| `swallows-flock-engraving-blue` | Flock of swallows | Blue (original) (`#274191`) | 22 | Pinterest engraving |
-| `swallows-flock-engraving-black` | Flock of swallows | Black (`#1b1916`) | 22 | Pinterest engraving |
+| `swallows-flock-engraving-blue` | Flock of swallows | Blue (original) (`#274191`) | 22 | 19th-century engraving, public domain |
+| `swallows-flock-engraving-black` | Flock of swallows | Black (`#1b1916`) | 22 | 19th-century engraving, public domain |
 | `pomegranates-linocut-black-red-logo` | Pomegranates | Black + logo red (`#1b1916 + #e5201c`) | 01 | Pinterest linocut |
 | `pomegranates-linocut-black-red-print` | Pomegranates | Black + print red (`#1b1916 + #c25552`) | 01 | Pinterest linocut |
 | `oak-leaf-acorn-twig-linocut-black` | Oak leaf and acorn on a twig | Black (`#1b1916`) | 11 | Pinterest linocut |

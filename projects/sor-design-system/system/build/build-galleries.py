@@ -1,5 +1,5 @@
 """Build the graphics library: one gallery page per set, the hub cards and rules table in graphics.md,
-and the logo files page. Usage: python3 system/build-galleries.py (thumbnails need ImageMagick `magick`, or `sips` on macOS).
+and the logo files page. Usage: python3 system/build/build-galleries.py (thumbnails need ImageMagick `magick`, or `sips` on macOS).
 
 Reads system/graphics/<set>/elements.json (one schema for every set, see system/graphics/README.md) and
 system/graphics/gallery-shell.html. Writes:
@@ -10,7 +10,7 @@ system/graphics/gallery-shell.html. Writes:
 Pages use site-absolute paths (/system/graphics/...), so they work only on the published site."""
 import html, json, pathlib, re, shutil, subprocess
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 G = ROOT / "system" / "graphics"
 e_ = html.escape
 
@@ -25,12 +25,14 @@ FAMILIES = [
 ]
 GROUNDS = {"white": "White", "paper": "Paper", "sunlight": "Sunlight", "night": "Night"}
 TINTS = [("blue", "Blue"), ("green", "Deep green"), ("mustard", "Mustard")]  # illustration inks, for inline sets
-RIGHTS = {"ours": "Ours", "not-cleared": "Not cleared", "draft": "Draft"}
+RIGHTS = {"ours": "Ours", "public-domain": "Public domain", "not-cleared": "Not cleared", "draft": "Draft"}
 RIGHTS_NOTE = {
     "ours": "Ours to use anywhere.",
+    "public-domain": "Public domain: free to use anywhere.",
     "not-cleared": "Traced or cut from mood board images whose rights are not cleared: fine for mockups and drafts; redraw, re-source or clear before anything goes public.",
     "draft": "Draft: redraw or re-source before it goes on anything live.",
 }
+TAG = {"ours": "free to use", "public-domain": "free to use", "not-cleared": "not cleared", "draft": "redraw or re-source before public use"}
 BRAND = [  # cards linking out of the library
     ("Logo files", "/logos", "Five colourways, five lockups, the mark at every size.", "SVG and PNG",
      [("system/logo/lockups/seeds-logo-horizontal-colour-1200.png", "g-paper")]),
@@ -55,20 +57,29 @@ def css():
     root = " ".join(l.strip() for l in root.splitlines() if l.strip())
     lib = re.sub(r"/\*.*?\*/", "", (G / "library.css").read_text(), flags=re.S)
     lib = "\n".join(l for l in lib.splitlines() if l.strip())
-    fonts = ('@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700'
-             '&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&display=swap");\n'
-             '@import url("/system/fonts.css");')
-    return f"{fonts}\n.sg {{ {root} }}\n{lib}"
+    # No font imports: the page uses the Flowershow theme's faces; the plates are images and SVG
+    return f".sg {{ {root} }}\n{lib}"
+
+
+_warned = []
 
 
 def thumb(name, f):
     src, dst = G / name / f"elements/{f}.png", G / name / f"thumbs/{f}.png"
     if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
-        dst.parent.mkdir(exist_ok=True)
         if shutil.which("magick"):
-            subprocess.run(["magick", str(src), "-resize", "600x600>", "-strip", f"PNG32:{dst}"], check=True)
-        else:  # macOS without ImageMagick
-            subprocess.run(["sips", "-Z", "600", str(src), "--out", str(dst)], check=True, capture_output=True)
+            cmd = ["magick", str(src), "-resize", "600x600>", "-strip", f"PNG32:{dst}"]
+        elif shutil.which("sips"):  # macOS without ImageMagick
+            cmd = ["sips", "-Z", "600", str(src), "--out", str(dst)]
+        else:
+            cmd = None
+        if cmd is None:
+            if not _warned:
+                print("WARNING: no `magick` (ImageMagick) or `sips`: skipping thumbnail generation, keeping existing thumbs.")
+                _warned.append(1)
+        else:
+            dst.parent.mkdir(exist_ok=True)
+            subprocess.run(cmd, check=True, capture_output=True)
     return f"/system/graphics/{name}/thumbs/{f}.png"
 
 
@@ -154,7 +165,7 @@ def card(s, el):
         hexv = f' <code>{e_(v["hex"])}</code>' if v.get("hex") else (f' <span class="sg-muted">{e_(v["note"])}</span>' if v.get("note") else "")
         rows.append(f'<div class="sg-row"><span class="sg-v" data-v="{v["ink"]}"><span class="sg-sw" style="background:{swatch(v.get("hex"), v["ink"])}"></span>{e_(v["name"])}</span>{hexv}'
                     f'<span class="sg-files">{files(s, el, v)}</span></div>')
-    tag = f'<p class="sg-tag" title="{e_(RIGHTS_NOTE[rights])}">{RIGHTS[rights]}: {"redraw or re-source before public use" if rights == "draft" else "not cleared"}</p>' if rights != s["rights"] else ""
+    tag = f'<p class="sg-tag" title="{e_(RIGHTS_NOTE[rights])}">{RIGHTS[rights]}: {TAG[rights]}</p>' if rights != s["rights"] else ""
     kind = " · ".join(x for x in [el.get("kind", ""), el.get("source", "")] if x)
     wide = " sg-wide" if el.get("wide") else ""
     return (f'<article class="sg-el{wide}" id="{el["slug"]}" data-q="{e_(q)}">'
@@ -247,13 +258,13 @@ def hub(sets, style):
             cards.append(f'<a class="sg-card" href="/graphics/{n}"><div class="sg-thumbs">{"".join(thumbs)}</div>'
                          f'<h3>{e_(s["title"])}</h3><p>{e_(s["use_for"])}</p>'
                          f'<p class="sg-meta"><span class="sg-label">{count}</span><span class="sg-label">{e_(s["formats"])}</span><span class="sg-label">{RIGHTS[s["rights"]]}</span></p></a>')
-        fams.append(f'<section class="sg-fam"><header><h2 class="sg-label">{fam}</h2><p>{e_(blurb)}</p></header><div class="sg-cards">{"".join(cards)}</div></section>')
+        fams.append(f'<section class="sg-fam"><header><h2>{fam}</h2><p>{e_(blurb)}</p></header><div class="sg-cards">{"".join(cards)}</div></section>')
     brand = []
     for t, h, use, fmt, imgs in BRAND:
         th = "".join(f'<div class="{c}"><img src="/{p}" alt="" loading="lazy"></div>' for p, c in imgs)
         brand.append(f'<a class="sg-card" href="{h}"><div class="sg-thumbs one">{th}</div><h3>{e_(t)}</h3><p>{e_(use)}</p>'
                      f'<p class="sg-meta"><span class="sg-label">{e_(fmt)}</span><span class="sg-label">Ours</span></p></a>')
-    fams.append('<section class="sg-fam"><header><h2 class="sg-label">Brand marks</h2><p>The logo and the marks built from it. Rules in their own guides.</p></header>'
+    fams.append('<section class="sg-fam"><header><h2>Brand marks</h2><p>The logo and the marks built from it. Rules in their own guides.</p></header>'
                 f'<div class="sg-cards">{"".join(brand)}</div></section>')
     has_sprite = any(sets[n].get("render") == "symbol" for _, _, _, ns in FAMILIES for n in ns)
     cards_html = flat(f'<style>{style}</style>\n<div class="sg not-prose" style="padding-inline:0;background:none">'
@@ -295,7 +306,7 @@ def logos(sets, style):
             f = f"{L}lockups/seeds-logo-{k}-{w}"
             plates.append(f'<figure class="sg-lp"><div class="sg-la {g}"><img src="{f}-1200.png" alt="{n} logo, {wn.lower()}" loading="lazy"></div>'
                           f'<figcaption><b>{wn}</b><span>{on}</span><span class="sg-lfiles">{a(f + ".svg", "SVG")}{a(f + "-1200.png", "PNG 1200")}{a(f + "-2400.png", "PNG 2400")}</span></figcaption></figure>')
-        lock.append(f'<h3 class="sg-label">{n} <span class="sg-muted">· {use}</span></h3><div class="sg-lgrid wide">{"".join(plates)}</div>')
+        lock.append(f'<h3>{n} <span class="sg-muted">· {use}</span></h3><div class="sg-lgrid wide">{"".join(plates)}</div>')
     marks = "".join(f'<figure class="sg-lp"><div class="sg-la {g}"><img src="{L}mark/seeds-mark-{w}.png" alt="The mark, {wn.lower()}" loading="lazy"></div>'
                     f'<figcaption><b>{wn}</b><span>{on}</span><span class="sg-lfiles">{a(f"{L}mark/seeds-mark-{w}.svg", "SVG")}{a(f"{L}mark/seeds-mark-{w}.png", "PNG 1130")}</span></figcaption></figure>'
                     for w, wn, g, on in WAYS)
@@ -307,7 +318,7 @@ def logos(sets, style):
             show = f"{f}@2x.png" if px <= 128 else f"{f}.png"
             d = min(px, 256)
             figs.append(f'<figure><a href="{f}.png"><img src="{show}" width="{d}" height="{d}" alt="{wn} mark at {px} px" loading="lazy"></a><figcaption>{a(f + ".png", f"{px} px")}</figcaption></figure>')
-        sizes.append(f'<h3 class="sg-label">{wn}</h3><div class="sg-sizes {g}">{"".join(figs)}</div>')
+        sizes.append(f'<h3>{wn}</h3><div class="sg-sizes {g}">{"".join(figs)}</div>')
     body = f'''<style>{style}</style>
 <div class="sg" data-sg="logos">
 <div class="sg-in">
@@ -325,7 +336,7 @@ def logos(sets, style):
 </div>
 </div>'''
     (ROOT / "logos.md").write_text('---\ntitle: "Logo files"\ndescription: "Every Seeds of Renaissance logo file, on the ground it is made for: five colourways, five lockups, the mark at every size."\nlayout: plain\n---\n'
-                                   "<!-- GENERATED by system/build-galleries.py. Edit the logo tables there. -->\n" + flat(body) + "\n")
+                                   "<!-- GENERATED by system/build/build-galleries.py. Edit the logo tables there. -->\n" + flat(body) + "\n")
 
 
 if __name__ == "__main__":

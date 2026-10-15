@@ -2,7 +2,7 @@
 Docs, guide, specimens, graphics galleries, system code and images, examples. Leaves out moodboard/ and archive/
 (the working record, linked on GitHub)."""
 import pathlib, re, shutil
-root = pathlib.Path(__file__).resolve().parent.parent
+root = pathlib.Path(__file__).resolve().parent.parent.parent
 site = root / "site"
 keep = site / ".flowershow"
 saved = keep.read_text() if keep.exists() else None
@@ -16,7 +16,7 @@ for f in list(root.glob("*.md")) + list(root.glob("*.html")) + [root / "config.j
 for d in ["examples", "specimens", "content", "graphics"]:
     shutil.copytree(root / d, site / d)
 # No .gitignore: the sets ignore thumbs/ in the repo, but the site branch must commit them for the galleries
-shutil.copytree(root / "system", site / "system", ignore=shutil.ignore_patterns("*.py", "*.sh", "*-shell.html", ".gitignore", "fonts", "textures.txt", "__pycache__", "preview-*.png", "sw.json"))
+shutil.copytree(root / "system", site / "system", ignore=shutil.ignore_patterns("build", "*.py", "*.sh", "*-shell.html", ".gitignore", "fonts", "textures.txt", "__pycache__", "preview-*.png", "sw.json"))
 (site / "type").mkdir()
 shutil.copy2(root / "type" / "research-notes.md", site / "type" / "research-notes.md")
 # archive/ is not published: it is the working record, read on GitHub. Links to it from pages go there.

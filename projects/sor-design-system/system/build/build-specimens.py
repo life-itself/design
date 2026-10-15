@@ -7,7 +7,7 @@ Each specimen lays out at a virtual 1000px and scales to its frame (CSS zoom), s
 is a fixed ratio of its width: embed with aspect-ratio 1000 / height (heights printed by
 measuring in a browser; see MAINTAINING.md). Below 600px it lays out natively and scrolls."""
 import pathlib, re
-root = pathlib.Path(__file__).resolve().parent.parent
+root = pathlib.Path(__file__).resolve().parent.parent.parent
 src = (root / "guide.html").read_text()
 out = root / "specimens"
 out.mkdir(exist_ok=True)
@@ -47,7 +47,7 @@ for name, body in sections.items():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Generated from guide.html by system/build-specimens.py. Do not edit. -->
+<!-- Generated from guide.html by system/build/build-specimens.py. Do not edit. -->
 {fix(head)}
 {extra}
 </head>

@@ -1,8 +1,8 @@
 # Botanical elements
 
-Botanical illustrations for Seeds of Renaissance: plants and flowers in colour, cut out of their paper as transparent PNGs. Made from [[moodboard/botanical-flower-illustration/removal-candidates|the botanical flower mood board]], where each image was cut out, cropped to a tight box and renamed. See also [[animals/README|animals]], [[mountains/README|mountains]] and [[woodcuts/README|woodcuts]].
+Botanical illustrations for Seeds of Renaissance: plants and flowers in colour, cut out of their paper as transparent PNGs. Made from the botanical flower mood board (moodboard folder `botanical-flower-illustration/removal-candidates`, [on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/botanical-flower-illustration/removal-candidates)), where each image was cut out, cropped to a tight box and renamed. See also [[animals/README|animals]], [[mountains/README|mountains]] and [[woodcuts/README|woodcuts]].
 
-Gallery with every file and a link to each: [graphics/botanicals](../../../graphics/botanicals.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
+Gallery with every file and a link to each: [graphics/botanicals](../../../graphics/botanicals.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
 
 They keep their **painted colours** and are PNG only: a trace would flatten the washes and hatching. They are not retinted. See the colour rule in [[colour#Illustration inks (graphics only)|colour]].
 
@@ -20,4 +20,4 @@ In [`elements/`](elements/). Names read `subject-style`. Long side up to 1000px.
 | `pale-star-orchid-lithograph` | Pale star orchid: A hanging spray of pale yellow star orchids beside dark strap leaves and a pseudobulb. | PNG | bfi-06 |
 | `chinese-peaches-scroll` | Chinese peaches: Three red-flushed peaches on a gnarled branch with curling grey-green leaves. Inscription and seals removed. | PNG | bfi-08 |
 
-Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in [[moodboard/botanical-flower-illustration/removal-candidates|removal-candidates]].
+Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in removal-candidates (moodboard folder `botanical-flower-illustration/removal-candidates`, [on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/botanical-flower-illustration/removal-candidates)).

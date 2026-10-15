@@ -56,4 +56,4 @@ One idea per post; five to ten words on the image at most, the rest in the capti
 
 ## Rebuilding
 
-`./export.sh` runs `build.py` (one page per PNG in `src/`) and screenshots each with headless Chrome into `png/`. Positions and sizes are at the top of `build.py` and in the template list `T`. The swallow engraving is traced from a web image with no rights cleared: re-source or redraw it before public use.
+`./export.sh` runs `build.py` (one page per PNG in `src/`) and screenshots each with headless Chrome into `png/`. Positions and sizes are at the top of `build.py` and in the template list `T`.

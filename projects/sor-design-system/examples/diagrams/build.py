@@ -14,7 +14,7 @@ Run:  python build.py                 -> index.html, img/*.png (PNGs need Google
 Needs: fonttools, uharfbuzz."""
 import base64, math, pathlib, re, shutil, subprocess, sys, tempfile
 here = pathlib.Path(__file__).resolve().parent
-sys.path.insert(0, str(here.parent.parent / "system"))
+sys.path.insert(0, str(here.parent.parent / "system" / "build"))
 from outline import SYSTEM, DISC, THEMES, RED, signature, b64, apfel, apfel_m
 apfel_cap = apfel.cap
 
@@ -179,7 +179,7 @@ GOOGLE = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wgh
 
 def defs():
     marks = "".join(f'<symbol id="mark-{th}" viewBox="0 0 256 256"><image width="256" height="256" href="{b64(SYSTEM / img)}"/></symbol>'
-                    for th, img in (("light", "img/logo-256.png"), ("dark", "img/logo-inverted-256.png")))
+                    for th, img in (("light", "logo/mark/sizes/seeds-mark-colour-256.png"), ("dark", "logo/mark/sizes/seeds-mark-colour-dark-256.png")))
     return f'<svg class="defs" aria-hidden="true"><defs>{marks}</defs></svg>'
 
 CSS = """

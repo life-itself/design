@@ -38,9 +38,9 @@ jobs:
       - name: Build site
         working-directory: projects/sor-design-system
         run: |
-          python3 system/build-specimens.py
-          python3 system/build-galleries.py
-          python3 system/build-site.py
+          python3 system/build/build-specimens.py
+          python3 system/build/build-galleries.py
+          python3 system/build/build-site.py
 
       - name: Commit site on top of the design-system-site branch
         env:

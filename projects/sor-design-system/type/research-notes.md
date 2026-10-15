@@ -136,7 +136,7 @@ Two ideas did the work, and both came out of reactions to real samples rather th
 | Body | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), Mathieu Triay | free, SIL OFL |
 | Label | [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk), Collletttivo | free, SIL OFL |
 
-Two paid, two free. All four should be self-hosted: Bricolage and Apfel are OFL and can be served directly; the two paid faces need web licences. Until then, `system/build-fonts.py` embeds Apfel only and declares the paid faces as `local()`, so they show only where installed.
+Two paid, two free. All four should be self-hosted: Bricolage and Apfel are OFL and can be served directly; the two paid faces need web licences. Until then, `system/build/build-fonts.py` embeds Apfel only and declares the paid faces as `local()`, so they show only where installed.
 
 ### The rounds archive
 
