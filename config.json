@@ -75,6 +75,10 @@
         "name": "Foundations",
         "links": [
           {
+            "name": "Five-minute tour",
+            "href": "/walkthrough"
+          },
+          {
             "name": "Feel",
             "href": "/feel"
           },
