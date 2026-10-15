@@ -1,0 +1,368 @@
+{
+ "title": "Prints",
+ "family": "woodcut",
+ "lede": "Woodcut, linocut and engraving prints traced from the woodcuts mood board: pomegranates, oak leaves and acorns, pinecones, hanging fruit, round flowers, a lily, wildflowers, tulips, a flowering branch, a mountain range with and without a gold sun, and a flock of swallows. Each as an SVG and a transparent 1000px PNG.",
+ "use_for": "Printed texture at size: covers, grounds under a transparency, the podcast flock.",
+ "colour_rule": "As printed: never retint them to the illustration inks. Often used under a transparency; keep it subtle. The gold sun and the pale-yellow branch are kept by choice.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "SVG and PNG",
+ "rights": "not-cleared",
+ "cover": [
+  "swallows-flock-engraving",
+  "pomegranates-linocut",
+  "pinecone-linocut",
+  "round-flowers-stem-ink",
+  "lily-stem-brush",
+  "mountain-range-linocut-sun"
+ ],
+ "elements": [
+  {
+   "slug": "swallows-flock-engraving",
+   "title": "Flock of swallows",
+   "kind": "engraving",
+   "desc": "About eleven barn swallows rising in a loose diagonal flock, in fine 19th-century engraving line: hatched wings, stippled breasts, white throats. Our main motif. Fine line, so use it large.",
+   "source": "Mood board 22: Pinterest engraving",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Swallow blue",
+     "hex": "#274191",
+     "file": "swallows-flock-engraving-blue"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "swallows-flock-engraving-black"
+    }
+   ]
+  },
+  {
+   "slug": "pomegranates-linocut",
+   "title": "Pomegranates",
+   "kind": "linocut",
+   "desc": "Two pomegranates, one whole and one cut open, as a two-colour linocut: black key block over a flat red that sits slightly out of register.",
+   "source": "Mood board 01: Pinterest linocut",
+   "versions": [
+    {
+     "ink": "logo-red",
+     "name": "Black and logo red",
+     "hex": "#1b1916 + #e5201c",
+     "file": "pomegranates-linocut-black-red-logo"
+    },
+    {
+     "ink": "print-red",
+     "name": "Black and print red",
+     "hex": "#1b1916 + #c25552",
+     "file": "pomegranates-linocut-black-red-print"
+    }
+   ]
+  },
+  {
+   "slug": "oak-leaf-acorn-twig-linocut",
+   "title": "Oak leaf and acorn on a twig",
+   "kind": "linocut",
+   "desc": "One oak leaf and one acorn on a sweeping twig. Solid black, thin cut veins, cut-out acorn cup.",
+   "source": "Mood board 11: Pinterest linocut",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "oak-leaf-acorn-twig-linocut-black"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "acorn-single-linocut",
+   "title": "Acorn",
+   "kind": "linocut",
+   "desc": "A single acorn with a ribbed nut, speckled cap and stray gouge marks around the edge.",
+   "source": "Mood board 10: Stock linocut set (watermarked, draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "acorn-single-linocut-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "acorn-single-linocut-green"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "oak-leaf-linocut-a",
+   "title": "Oak leaf, down-right",
+   "kind": "linocut",
+   "desc": "An oak leaf angled down and to the right, with white cut veins and stray cuts.",
+   "source": "Mood board 10: Stock linocut set (watermarked, draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "oak-leaf-linocut-a-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "oak-leaf-linocut-a-green"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "oak-leaf-linocut-b",
+   "title": "Oak leaf, up-right",
+   "kind": "linocut",
+   "desc": "An oak leaf angled up and to the right, with white cut veins and stray cuts.",
+   "source": "Mood board 10: Stock linocut set (watermarked, draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "oak-leaf-linocut-b-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "oak-leaf-linocut-b-green"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "acorns-pair-oak-leaf-linocut",
+   "title": "Two acorns with an oak leaf",
+   "kind": "linocut",
+   "desc": "A pair of acorns with crosshatched cups and a small oak leaf above.",
+   "source": "Mood board 10: Stock linocut set (watermarked, draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "acorns-pair-oak-leaf-linocut-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "acorns-pair-oak-leaf-linocut-green"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "pinecone-linocut",
+   "title": "Pinecone, bold",
+   "kind": "linocut",
+   "desc": "A tilted pinecone in strong black and white, with chunky outlined scales that go ragged at the tip.",
+   "source": "Mood board 20: Pinterest linocut",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "pinecone-linocut-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "pinecone-linocut-green"
+    }
+   ]
+  },
+  {
+   "slug": "pinecone-hanging-twig-pen",
+   "title": "Pinecone hanging from a twig",
+   "kind": "pen drawing",
+   "desc": "A pinecone hanging from a pine twig with long, fine needles. A thin pen drawing, best used large.",
+   "source": "Mood board 19: Pinterest pen drawing",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "pinecone-hanging-twig-pen-black"
+    },
+    {
+     "ink": "green",
+     "name": "Faded green",
+     "hex": "#3b5a45",
+     "file": "pinecone-hanging-twig-pen-green"
+    }
+   ]
+  },
+  {
+   "slug": "hanging-fruit-silhouette",
+   "title": "Hanging fruit and leaves",
+   "kind": "silhouette",
+   "desc": "Two round fruit with leaf clusters as a cut-paper silhouette. Thin white gaps do the drawing. Vertical, so it suits a margin or divider.",
+   "source": "Mood board 12: Craft-shop stencil (draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "hanging-fruit-silhouette-black"
+    },
+    {
+     "ink": "blue",
+     "name": "Faded dark blue",
+     "hex": "#2f4465",
+     "file": "hanging-fruit-silhouette-blue"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "round-flowers-stem-ink",
+   "title": "Round flowers on a branching stem",
+   "kind": "ink drawing",
+   "desc": "Pom-pom flower heads on a long, thin branching stem. Light and airy, with heavy dots on a hairline.",
+   "source": "Mood board 13: Pinterest ink drawing",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "round-flowers-stem-ink-black"
+    },
+    {
+     "ink": "red",
+     "name": "Print red",
+     "hex": "#c25552",
+     "file": "round-flowers-stem-ink-red"
+    }
+   ]
+  },
+  {
+   "slug": "tulips-brush",
+   "title": "Tulips in loose brush line",
+   "kind": "brush drawing (AI source)",
+   "desc": "Five tulip-like flowers in loose, tapering brush strokes. Source image was AI-generated, so mood reference.",
+   "source": "Mood board 14: Pinterest (AI-generated)",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Cobalt",
+     "hex": "#03296f",
+     "file": "tulips-brush-blue"
+    }
+   ]
+  },
+  {
+   "slug": "lily-stem-brush",
+   "title": "Lily stem",
+   "kind": "brush drawing",
+   "desc": "A lily stem in a few swelling brush lines, with leaves left partly open.",
+   "source": "Mood board 17: Pinterest ink study",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "lily-stem-brush-black"
+    }
+   ]
+  },
+  {
+   "slug": "wildflowers-pen",
+   "title": "Wildflowers",
+   "kind": "pen drawing",
+   "desc": "Three wildflowers and two buds in scratchy pen line with dark centres. Clip-art crop, so a draft.",
+   "source": "Mood board 18: Pinterest clip-art preview (draft)",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "wildflowers-pen-black"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "flowering-branch-silhouette",
+   "title": "Flowering branch, cropped",
+   "kind": "silhouette",
+   "desc": "A flowering branch as a flat silhouette, cropped so it runs off the frame. Works as a background or tile.",
+   "source": "Mood board 15: Pinterest silhouette",
+   "versions": [
+    {
+     "ink": "ochre",
+     "name": "Ochre",
+     "hex": "#b49856",
+     "file": "flowering-branch-silhouette-ochre"
+    },
+    {
+     "ink": "pale-yellow",
+     "name": "Pale yellow",
+     "hex": "#fbefc4",
+     "file": "flowering-branch-silhouette-pale-yellow"
+    }
+   ]
+  },
+  {
+   "slug": "mountain-range-linocut-sun",
+   "title": "Mountain range with a gold sun",
+   "kind": "linocut",
+   "desc": "A range of three peaks carved in strong black and white, with short cut strokes for the plain below and a small gold sun above.",
+   "source": "Mood board 21: Pinterest linocut with gold leaf",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black and gold",
+     "hex": "#1b1916 + #dbb06a",
+     "file": "mountain-range-linocut-black-sun"
+    },
+    {
+     "ink": "blue",
+     "name": "Cobalt and gold",
+     "hex": "#03296f + #dbb06a",
+     "file": "mountain-range-linocut-blue-sun"
+    }
+   ]
+  },
+  {
+   "slug": "mountain-range-linocut",
+   "title": "Mountain range",
+   "kind": "linocut",
+   "desc": "The same range of peaks without the sun, cropped tight to the mountains and the plain.",
+   "source": "Mood board 21: Pinterest linocut with gold leaf",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mountain-range-linocut-black"
+    },
+    {
+     "ink": "blue",
+     "name": "Cobalt",
+     "hex": "#03296f",
+     "file": "mountain-range-linocut-blue"
+    }
+   ]
+  }
+ ]
+}

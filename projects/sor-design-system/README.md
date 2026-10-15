@@ -31,7 +31,7 @@ All of them on one page: [Examples](examples.md).
 
 ## Get an asset
 
-- **[Logo](logo.md)**: the rules and where it goes. **[Every logo file](logos.html)**: five colourways, five lockups, SVG and PNG.
+- **[Logo](logo.md)**: the rules and where it goes. **[Every logo file](logos.md)**: five colourways, five lockups, SVG and PNG.
 - **[Graphics](graphics.md)**: the library. Woodcut swallows, seeds and seals, animals, mountains, botanicals, washes, line geometry, marks and prints, each with its gallery and rules.
 - **[Photography](photography.md)**: what to choose and avoid.
 - **Fonts**: the four faces and where they come from, in [Type](type.md).

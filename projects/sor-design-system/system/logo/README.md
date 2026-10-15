@@ -1,6 +1,6 @@
 # Logo files
 
-Every file of the Seeds of Renaissance logo. See them all on their grounds, with links, in [logos.html](../../logos.html). Rules for using them: [logo.md](../../logo.md).
+Every file of the Seeds of Renaissance logo. See them all on their grounds, with links, in [the logo files page](../../logos.md). Rules for using them: [logo.md](../../logo.md).
 
 | Folder | What | Formats |
 |---|---|---|

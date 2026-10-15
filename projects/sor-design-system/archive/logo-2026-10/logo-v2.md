@@ -1,6 +1,6 @@
 # Logo v2: a hand-drawn swallow, rising
 
-**Done, 13 October 2026, differently from this plan:** the original swallow was kept, given a cut-and-printed edge and made 30% bigger, and the full mark is used at every size (no small version). The result is in [logo.md](../../logo.md) and [logos.html](../../logos.html); how it was reached, in [archive/logo-2026-10/](README.md). The plan below is kept as written.
+**Done, 13 October 2026, differently from this plan:** the original swallow was kept, given a cut-and-printed edge and made 30% bigger, and the full mark is used at every size (no small version). The result is in [logo.md](../../logo.md) and [the logo files page](../../logos.md); how it was reached, in [archive/logo-2026-10/](README.md). The plan below is kept as written.
 
 A small project to replace the stock swallow at the centre of the SoR mark with our own drawn swallow, and to give the mark a small version that works at 48px and below. Part of the [SoR design system](../../README.md); current logo and its open questions: [logo.md](../../logo.md), [logo-notes.md](logo-notes.md). Task state lives in Beads (`design-34t.40` and its children), not here.
 
@@ -17,7 +17,7 @@ A small project to replace the stock swallow at the centre of the SoR mark with 
 
 Comparison page: [archive/logo-2026-10/logo-v2-woodcut-swallows.html](logo-v2-woodcut-swallows.html) (open it through a local server so the images load). It shows four code-drawn woodcut swallows mirrored into the ring at 320px; small-mark treatments at 176/98/48/24px on light and dark; the swallow on its own and in the seal.
 
-- **The existing woodcuts are AI first drafts drawn in code**, not real cuts ([system/woodcuts/](../../system/woodcuts/) README says so). Fine for decoration, too weak for a logo.
+- **The existing woodcuts are AI first drafts drawn in code**, not real cuts ([system/graphics/woodcuts/](../../system/graphics/woodcuts/) README says so). Fine for decoration, too weak for a logo.
 - **Perched and above are out.** Perched isn't a flight pose; above reads as a moth.
 - **Flight and bold are the right kind of side view, but the pose is wrong.** Mirrored, they face right, but the big wing sweeps back along the top and the lower wing hangs down and back, so the bird reads as gliding or diving. Rotating it (the page uses −14°) can't fix a pose, and flipping it vertically turns it upside down. We need a bird drawn in a rising pose.
 - **At small sizes the fingerprints survive and the bird doesn't.** At 48 and 24px the red prints still read as a ring; any detailed bird turns to noise. The "swallow alone" and "solid red ring" treatments held at 24px; the 12-dot ring held to 48px.

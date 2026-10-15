@@ -51,7 +51,7 @@ For making on-brand graphics without code: the Canva brand kit and templates, re
 
 **The brand kit holds:**
 
-1. The four faces (Polyamine and Restora once licensed), the colours with their names (white, paper, sunlight, night, ink, muted, chalk, logo red), the logo and its disc version, and the woodcuts as SVGs (from `system/woodcuts/`).
+1. The four faces (Polyamine and Restora once licensed), the colours with their names (white, paper, sunlight, night, ink, muted, chalk, logo red), the logo and its disc version, and the woodcuts as SVGs (from `system/graphics/woodcuts/`).
 2. Templates matching the kinds above: announcement in 16:9, 4:5, 1:1 and 9:16; quote card; text post; carousel.
 3. The rules from [BUILD.md](BUILD.md#rules-that-apply-everywhere), in plain words.
 

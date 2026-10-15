@@ -51,7 +51,7 @@ def prints(sys, rings, opacity=PRINTS_OPACITY):
 
 def swallows(sys, x, y, w, rot):
     h = round(w * SWALLOWS_ASPECT)
-    return (f'<image href="{sys}/prints/elements/swallows-flock-engraving-black.png" x="{x}" y="{y}" width="{w}" height="{h}" '
+    return (f'<image href="{sys}/graphics/prints/elements/swallows-flock-engraving-black.png" x="{x}" y="{y}" width="{w}" height="{h}" '
             f'transform="rotate({rot} {x + w / 2} {y + h / 2})"/>')
 
 

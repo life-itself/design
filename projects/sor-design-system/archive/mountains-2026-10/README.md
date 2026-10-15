@@ -1,6 +1,6 @@
 # Mountains, working record (October 2026)
 
-How the [mountain elements](../../system/mountains/README.md) were made, 12–13 October 2026. Not published. The current set is in `system/mountains/`.
+How the [mountain elements](../../system/graphics/mountains/README.md) were made, 12–13 October 2026. Not published. The current set is in `system/graphics/mountains/`.
 
 - **Working gallery:** https://claude.ai/artifact/8bus8CMBYwRgsbSvxxJPSJ (Claude artifact; versions 1–5 are the drafts, later versions the built gallery). `gallery-draft.html` is the hand-written draft before the gallery was generated from `elements.json`.
 - **Sources:** the original images are on the mood board, `moodboard/mountains/`, entries 01–07.

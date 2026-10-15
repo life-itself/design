@@ -1,13 +1,13 @@
 # Logo, October 2026: how the final mark and lockups were made
 
-The working record behind the logo chosen on 13 October 2026 (Sylvie, with Claude). The result lives in [system/logo/](../../system/logo/README.md) and [logos.html](../../logos.html); the rules in [logo.md](../../logo.md). Nothing here is current.
+The working record behind the logo chosen on 13 October 2026 (Sylvie, with Claude). The result lives in [system/logo/](../../system/logo/README.md) and [the logo files page](../../logos.md); the rules in [logo.md](../../logo.md). Nothing here is current.
 
 ## The two working pages (Claude artifacts)
 
 | Page | What it holds | Status |
 |---|---|---|
 | [Seeds Logo Variants](https://claude.ai/artifact/KckQRr1YDZunWiJZo4Pj9s) | The exploration, in order: three other swallows tried and dropped (an engraving, a photo silhouette, a pencil sketch), rough edges, bigger bird sizes, ways to keep the fingerprints around a bigger bird, the small-size simplification ladder | Record. Local copy: [seeds-logo-variants.html](seeds-logo-variants.html) (the page only; its images are on the artifact) |
-| [Seeds Logo Set](https://claude.ai/artifact/2dYhoHf82ntvn2FQWFHcuE) | The chosen mark in every colourway, the lockup bench with live controls for the "of", saved settings ("Final version") | Superseded by logos.html; marked as moved. Local copy: [seeds-logo-set.html](seeds-logo-set.html) |
+| [Seeds Logo Set](https://claude.ai/artifact/2dYhoHf82ntvn2FQWFHcuE) | The chosen mark in every colourway, the lockup bench with live controls for the "of", saved settings ("Final version") | Superseded by logos.md; marked as moved. Local copy: [seeds-logo-set.html](seeds-logo-set.html) |
 
 The earlier comparison of code-drawn woodcut swallows (12 October) is [logo-v2-woodcut-swallows.html](logo-v2-woodcut-swallows.html), moved here from `examples/logo/`.
 

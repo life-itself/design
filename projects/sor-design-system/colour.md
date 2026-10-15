@@ -42,15 +42,9 @@ These are the colours a woodcut or animal graphic may be printed in besides blac
 
 ### Which colours each graphic set may use
 
-The illustration inks are for the woodcuts and the animals. Painted and printed sets keep the colours they were made in: never retint them, and never use their colours on other graphics. The geometry and marks are plain ink. Every set: [graphics.md](graphics.md).
+The illustration inks are for the woodcuts and the animals. Painted and printed sets keep the colours they were made in: never retint them, and never use their colours on other graphics. The line figures and marks are plain ink.
 
-| Graphic set | Colours | Rule |
-|---|---|---|
-| [Woodcuts](system/woodcuts/README.md), [animals](system/animals/README.md) | Black (chalk on night) and the three illustration inks; woodcut seeds also in the logo red | One ink per graphic. Every animal comes in all four |
-| [Mountains](system/mountains/README.md) | The blue each was drawn in (six blues from navy to violet), cobalt and black; the linocut also in three lighter blues | The drawn blues are for the mountains only |
-| [Botanicals](system/botanicals/README.md), [washes](system/washes/README.md) | The colours they were painted in: reds, blues, greens, olive and ochre | Not retinted |
-| [Prints](system/prints/README.md) | The colours they were made in: black, the logo red and a softer print red, a faded green, a faded dark blue, cobalt, a swallow blue, ochre, pale yellow and a gold sun | Not retinted. Often used under a transparency that softens ink and colour together, so the exact colours matter; until the method is set, keep it subtle |
-| [Geometry](system/geometry/README.md), [marks](system/marks/README.md) | `--ink` only | Plain black line work: don't tint |
+Each set's colours, grounds and rights are in one table: [graphics.md](graphics.md#rules).
 
 ## Proportion
 

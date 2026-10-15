@@ -44,7 +44,7 @@ logo = b64(SYS / "img/logo.png")
 
 
 def mountain(name, colour):
-    svg = (SYS / f"woodcuts/{name}.svg").read_text().replace("color:#1b1916", f"color:{colour}")
+    svg = (SYS / f"graphics/woodcuts/elements/{name}.svg").read_text().replace("color:#1b1916", f"color:{colour}")
     return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
 
 
@@ -249,8 +249,8 @@ for name, tree, stroke in [
         f'{recolour(tree, stroke)}</svg></body></html>')
     print(name, round(w), round(h))
 
-# ---- the sunflower spiral (c-spiral from system/woodcuts/seeds.svg) -------
-sheet = (SYS / "woodcuts/seeds.svg").read_text()
+# ---- the sunflower spiral (c-spiral from system/graphics/woodcuts/elements/seeds.svg) -------
+sheet = (SYS / "graphics/woodcuts/elements/seeds.svg").read_text()
 spiral_defs = sheet[sheet.index("<defs>"):sheet.rindex("</defs>") + len("</defs>")]
 for name, colour in [("seeds-spiral-ink", "#1b1916"), ("seeds-spiral-red", "#e5201c"), ("seeds-spiral-chalk", "#ece7dc")]:
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="600" height="600" style="color:{colour}">'

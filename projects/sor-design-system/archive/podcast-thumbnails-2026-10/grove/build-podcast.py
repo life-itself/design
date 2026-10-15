@@ -25,7 +25,7 @@ FONTS = "\n".join([
     (SYS / "fonts.css").read_text().splitlines()[2],  # Apfel Grotezk 500
 ])
 
-sheet = (SYS / "woodcuts/seeds.svg").read_text()
+sheet = (SYS / "graphics/woodcuts/elements/seeds.svg").read_text()
 DEFS = (sheet[sheet.index("<defs>") + 6:sheet.rindex("</defs>")]
         + f'<image id="spk" href="data:image/jpeg;base64,{b64(SYS / "img/otm-guest-placeholder.jpg")}" width="800" height="800"/>'
         + f'<image id="logo" href="data:image/png;base64,{b64(SYS / "img/logo.png")}" width="600" height="600"/>')

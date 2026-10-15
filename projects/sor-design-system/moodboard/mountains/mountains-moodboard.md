@@ -1,6 +1,6 @@
 # Mountains mood board
 
-Blue pen-and-ink mountain drawings, collected as a possible Seeds of Renaissance sub-brand. Elements cut from these live in [[system/mountains/README|system/mountains]].
+Blue pen-and-ink mountain drawings, collected as a possible Seeds of Renaissance sub-brand. Elements cut from these live in [[system/graphics/mountains/README|system/graphics/mountains]].
 
 ## 01 High peak, blue pen
 

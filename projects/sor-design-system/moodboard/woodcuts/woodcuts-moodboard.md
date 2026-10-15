@@ -1,6 +1,6 @@
 # Woodcuts mood board
 
-Pinterest finds that show the kind of woodcut / block-print elements we want on the website. Focused on improving the woodcuts in `system/woodcuts/` (see [[../../system/woodcuts/README]]), separate from the general [[moodboard]]. Descriptions are in the user's own words where given.
+Pinterest finds that show the kind of woodcut / block-print elements we want on the website. Focused on improving the woodcuts in `system/graphics/woodcuts/` (see [[../../system/graphics/woodcuts/README]]), separate from the general [[moodboard]]. Descriptions are in the user's own words where given.
 
 Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not committed for now** (see `.gitignore` in this folder); we keep adding and decide later what to commit. This file is committed so the notes survive.
 
@@ -50,7 +50,7 @@ Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not 
 
 - Source: Pinterest (link not captured; send it if you want it recorded).
 - User's note: pomegranates; what I like is the black with the splashes of red in it.
-- Noticing: two-colour print. A black key block carries all the line and detail, and a red block sits underneath, deliberately a little out of register so it peeks past the black outlines. The red is flat, with no tints. Paper is off-white with visible grain. Cuts are chunky and irregular (leaf veins, seed cells, short dash marks around the edges), and white is left uncut as highlight. Compare our current [[../../system/woodcuts/fruit-pomegranate.svg]], which is single colour. This fits the "colour as an event" pattern in [[moodboard]]: red as a rare second colour on a monochrome base.
+- Noticing: two-colour print. A black key block carries all the line and detail, and a red block sits underneath, deliberately a little out of register so it peeks past the black outlines. The red is flat, with no tints. Paper is off-white with visible grain. Cuts are chunky and irregular (leaf veins, seed cells, short dash marks around the edges), and white is left uncut as highlight. Compare our current [[../../system/graphics/woodcuts/elements/fruit-pomegranate.svg]], which is single colour. This fits the "colour as an event" pattern in [[moodboard]]: red as a rare second colour on a monochrome base.
 
 ### 02. Apple, vertical-line engraving on speckled paper
 
@@ -58,7 +58,7 @@ Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not 
 
 - Source: https://fr.pinterest.com/pin/242912973648274043/ (posted as "cheo.engrave", labelled Ho Chi Minh).
 - User's note: an apple in woodcut.
-- Noticing: single black ink on a warm, speckled, recycled-looking paper. Form is built entirely from vertical lines that swell and pinch (beaded, broken strokes) instead of outlines or hatching: thick and dense at the base for shadow, thin and dotted toward the top for light. Leaves use the same trick with dashes running off a curved midrib. No fill, no outline, so the shape appears from line density alone. The wobbly, hand-torn red-brown border and the handwritten caption add to the printed-ephemera feel. Compare our [[../../system/woodcuts/fruit-apple.svg]].
+- Noticing: single black ink on a warm, speckled, recycled-looking paper. Form is built entirely from vertical lines that swell and pinch (beaded, broken strokes) instead of outlines or hatching: thick and dense at the base for shadow, thin and dotted toward the top for light. Leaves use the same trick with dashes running off a curved midrib. No fill, no outline, so the shape appears from line density alone. The wobbly, hand-torn red-brown border and the handwritten caption add to the printed-ephemera feel. Compare our [[../../system/graphics/woodcuts/elements/fruit-apple.svg]].
 
 ### 03. Apple, solid black block with white cuts
 
@@ -106,7 +106,7 @@ Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not 
 
 - Source: Pinterest (link not captured).
 - User's note: acorn.
-- Noticing: a single black print on soft grey-white paper, and the most tactile of the set. The ink has a heavy sandy, speckled grain throughout, with the paper showing through the black in tiny dots, which makes even the solid areas feel printed. Oak leaves are black with a few thin white cut veins and lobed, slightly wobbly outlines. The two acorns carry a pattern of small cut cells on their cups. The twig has little knots and nodes, and ends in a rough cut. One clear subject centred on a lot of empty paper, with no border. Simple and small-scale, so it looks like a hand-pulled linocut or stamp. A good target for the texture we want in the SVGs, since our digital shapes tend to be too clean. Compare [[../../system/woodcuts/leaf-sprig.svg]].
+- Noticing: a single black print on soft grey-white paper, and the most tactile of the set. The ink has a heavy sandy, speckled grain throughout, with the paper showing through the black in tiny dots, which makes even the solid areas feel printed. Oak leaves are black with a few thin white cut veins and lobed, slightly wobbly outlines. The two acorns carry a pattern of small cut cells on their cups. The twig has little knots and nodes, and ends in a rough cut. One clear subject centred on a lot of empty paper, with no border. Simple and small-scale, so it looks like a hand-pulled linocut or stamp. A good target for the texture we want in the SVGs, since our digital shapes tend to be too clean. Compare [[../../system/graphics/woodcuts/elements/leaf-sprig.svg]].
 
 ### 09. Pomegranates, deep red, rough-edged single colour
 
@@ -210,7 +210,7 @@ Images live in `images/` next to this file, named `wc-NN-short-slug.ext`. **Not 
 
 - Source: Pinterest (link not captured).
 - User's note: make it a mountain range element, with and without the sun, in black and in the cobalt blue of the tulips (14).
-- Noticing: a real linocut on white paper. Three peaks carved in black with white gouge strokes for the snow faces and ridges, and short horizontal dashes below for the plain or water. A small gold-leaf disc for the sun is the only colour, sitting high and to the left, with a lot of empty sky. Ink is solid with a slightly rough edge. A direct improvement on our `mountain-range.svg`, and the gold sun is another example of "colour as an event". Made into `system/prints/elements/mountain-range-linocut-*`.
+- Noticing: a real linocut on white paper. Three peaks carved in black with white gouge strokes for the snow faces and ridges, and short horizontal dashes below for the plain or water. A small gold-leaf disc for the sun is the only colour, sitting high and to the left, with a lot of empty sky. Ink is solid with a slightly rough edge. A direct improvement on our `mountain-range.svg`, and the gold sun is another example of "colour as an event". Made into `system/graphics/prints/elements/mountain-range-linocut-*`.
 
 ### 22. Flock of swallows, blue engraving
 

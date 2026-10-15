@@ -1,0 +1,171 @@
+{
+ "title": "Watercolour washes",
+ "family": "painted",
+ "lede": "Loose watercolour and ink washes: a red bloom, green and blue ink washes, blue flowers, a blue ring, a figure in red and in blue, red blooms, a green flower and a blue handprint. The paint is translucent, so each wash takes the colour of its ground. PNG only, long side up to 1000px.",
+ "use_for": "A soft patch of colour behind a title, a quote or a portrait.",
+ "colour_rule": "As painted, translucent: each wash takes the colour of its ground. Never retint them.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "PNG",
+ "rights": "not-cleared",
+ "notes": "On night the washes mostly disappear, so keep them to light grounds.",
+ "elements": [
+  {
+   "slug": "red-watercolour-flower",
+   "title": "Red watercolour flower",
+   "kind": "watercolour wash",
+   "desc": "A loose red bloom on a thin stem. The washes stay translucent, so it takes the colour of its ground.",
+   "source": "Mood board bfi-09",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "red-watercolour-flower"
+    }
+   ]
+  },
+  {
+   "slug": "green-ink-wash",
+   "title": "Green ink wash",
+   "kind": "ink wash",
+   "desc": "Abstract olive and moss green washes with dark pooled edges. Runs off the top and left.",
+   "source": "Mood board bfi-14",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "green-ink-wash"
+    }
+   ]
+  },
+  {
+   "slug": "blue-watercolour-flowers",
+   "title": "Blue watercolour flowers",
+   "kind": "watercolour",
+   "desc": "Two translucent blue blooms with dark centres and a scatter of ink dots.",
+   "source": "Mood board bfi-15",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "blue-watercolour-flowers"
+    }
+   ]
+  },
+  {
+   "slug": "blue-ink-wash",
+   "title": "Blue ink wash",
+   "kind": "ink wash",
+   "desc": "A deep blue ink bloom with lace-like edges. Runs off the top and left. Typography removed.",
+   "source": "Mood board bfi-16",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "blue-ink-wash"
+    }
+   ]
+  },
+  {
+   "slug": "blue-watercolour-ring",
+   "title": "Blue watercolour ring",
+   "kind": "watercolour",
+   "desc": "A soft blue ring with a halo and brush marks inside, open in the centre.",
+   "source": "Mood board bfi-17",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "blue-watercolour-ring"
+    }
+   ]
+  },
+  {
+   "slug": "watercolour-figure-red",
+   "title": "Watercolour figure, red",
+   "kind": "watercolour wash",
+   "desc": "A loose figure in pink-red wash with white gaps where the paper shows.",
+   "source": "Mood board bfi-18",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "watercolour-figure-red"
+    }
+   ]
+  },
+  {
+   "slug": "watercolour-figure-blue",
+   "title": "Watercolour figure, blue",
+   "kind": "watercolour wash",
+   "desc": "The same figure with its colour shifted to blue.",
+   "source": "Mood board bfi-18",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "watercolour-figure-blue"
+    }
+   ]
+  },
+  {
+   "slug": "red-watercolour-blooms",
+   "title": "Red watercolour blooms",
+   "kind": "watercolour",
+   "desc": "Three red blooms with thin stems and a few drops.",
+   "source": "Mood board bfi-19",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "red-watercolour-blooms"
+    }
+   ]
+  },
+  {
+   "slug": "blue-handprint",
+   "title": "Blue handprint",
+   "kind": "digital glow",
+   "desc": "Five blue fingertips with a soft glow. Lettering removed.",
+   "source": "Mood board bfi-20",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "blue-handprint"
+    }
+   ]
+  },
+  {
+   "slug": "green-watercolour-flower",
+   "title": "Green watercolour flower",
+   "kind": "watercolour",
+   "desc": "A single green flower on a thin stem, in olive and moss washes with a touch of yellow. Signature and date removed.",
+   "source": "Mood board bfi-32",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "green-watercolour-flower"
+    }
+   ]
+  }
+ ]
+}

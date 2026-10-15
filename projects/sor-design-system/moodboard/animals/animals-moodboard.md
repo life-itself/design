@@ -1,6 +1,6 @@
 # Animals mood board
 
-Woodcuts, linocuts and engravings of animals, collected for Seeds of Renaissance. Elements cut from these live in [[system/animals/README|system/animals]]. See also [[moodboard/woodcuts/woodcuts-moodboard]].
+Woodcuts, linocuts and engravings of animals, collected for Seeds of Renaissance. Elements cut from these live in [[system/graphics/animals/README|system/graphics/animals]]. See also [[moodboard/woodcuts/woodcuts-moodboard]].
 
 ## 01 Fox sitting, linocut
 

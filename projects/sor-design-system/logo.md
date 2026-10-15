@@ -1,6 +1,6 @@
 # Logo
 
-A black swallow rising through a radiating circle of red fingerprints: many hands around a bird in flight. Every file, shown on its ground with links: **[logos.html](logos.html)**. Part of the [SoR design system](README.md).
+A black swallow rising through a radiating circle of red fingerprints: many hands around a bird in flight. Every file, shown on its ground with links: **[logo files](logos.md)**. Part of the [SoR design system](README.md).
 
 <iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
 
@@ -21,7 +21,7 @@ A black swallow rising through a radiating circle of red fingerprints: many hand
 
 ## Files
 
-All in [system/logo/](system/logo/README.md); see them in **[logos.html](logos.html)**.
+All in [system/logo/](system/logo/README.md); see them on the **[logo files](logos.md)** page.
 
 | Use | File |
 |---|---|
