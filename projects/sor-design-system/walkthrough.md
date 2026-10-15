@@ -19,7 +19,7 @@ People who feel that something is ending, and something new is trying to emerge,
 
 What they should feel: *"These people are honest. They're living it. I'm not alone in seeing what I see."*
 
-More: [who we are here for](brand.md#who-we-are-here-for).
+More: [Brand: who we are here for](brand.md#who-we-are-here-for), with the four personas.
 
 ## The feel: grounded hope
 
