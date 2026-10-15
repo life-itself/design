@@ -4,7 +4,7 @@ The whole Seeds of Renaissance design system in one read, in the order a designe
 
 ## Who we are
 
-Seeds of Renaissance is a media house and a set of spaces of belonging for people who sense an old world ending and want to help seed the new. The tagline: **Vision and movement for civilisational rebirth.**
+Seeds of Renaissance is a **vision and movement for civilisational rebirth**. We offer mythos and language for what people already feel, together with the ideas, the practice and the company to help birth the new. It takes two forms:
 
 - **Media House**: the podcast and YouTube channel, a yearly printed magazine, essays and white papers, the manifesto and the Greenhouse newsletter. This is how people find us and make sense of the moment.
 - **Gardens of Change**: courses and events, community gardens and local gardens. This is where people belong and practise.
