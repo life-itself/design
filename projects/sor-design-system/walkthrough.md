@@ -6,16 +6,16 @@ The whole Seeds of Renaissance design system in one read, in the order a designe
 
 Seeds of Renaissance is a **vision and movement for civilisational rebirth**. We offer content and community:
 
-- **Content: the Media House**. The podcast and YouTube channel, a yearly printed magazine, essays and white papers, the manifesto and the Greenhouse newsletter. This is how people find us and make sense of the moment.
-- **Community: Gardens of Change**. Courses and events, community gardens and local gardens. This is where people belong and practise.
+- **Content: the Media House**. It helps people discover, engage with, and learn about the wisdom needed to understand, embody, and collaborate around civilisational renewal: the podcast and YouTube channel, a yearly printed magazine, essays and white papers, the manifesto and the Greenhouse Newsletter.
+- **Community: Gardens of Change**, our spaces of belonging. Courses and events, community gardens and local gardens, where people connect, practise and collaborate. This is where hope turns into action.
 
-At heart it is a movement and a community, not a publication. It holds together intellect and art, rigour and spirituality, darkness and hope.
+We offer mythos and language for what is already being felt: the death of an old paradigm and the birth of a new. At heart it is a movement and a community, not a publication. It holds together intellect and art, rigour and spirituality, darkness and hope.
 
 More: [Brand](brand.md).
 
 ## Who we speak to
 
-People who feel that something is ending, and something new is trying to emerge, before they can name it. They are intellectually curious and practically hungry, allergic to hype, and looking for grounded hope. Four personas: the meaning seeker, the post-disillusionment renewer, the awakening professional and the disillusioned young seeker.
+Those who sense the impending death of old paradigms and long for the ideas, the practice, and the company to help birth the new, often before they can name it. They are intellectually curious and practically hungry, allergic to hype, and looking for grounded hope. Four personas: the Meaning Seeker, the Post-Disillusionment Renewer, the Awakening Professional and the Disillusioned Youth.
 
 What they should feel: *"These people are honest. They're living it. I'm not alone in seeing what I see."*
 

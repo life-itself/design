@@ -4,7 +4,9 @@ How Seeds of Renaissance sounds: the key lines to reuse and examples to copy. Pa
 
 ## The voice in one line
 
-**A poet-philosopher who thinks clearly.** The lyrical leads, rigour grounds it. We speak from *within* the moment, not above it, with kind authority and gentle curiosity. People should feel held, not lectured.
+**A poet-philosopher who thinks clearly.** The lyrical leads, rigour grounds it. We speak from *within* the moment, not above it. People should feel held, not lectured.
+
+In the brand narrative's words: *with kind authority and gentle somatic curiosity, SoR asks the questions you want the answers to. A mutual searching and calm humility lead to the confidence built on rigorous inquiry and study.*
 
 The feel is the same as the visual system's: **grounded hope**. Not doom, not naive optimism; hope that has done the hard thinking.
 
@@ -17,12 +19,16 @@ The feel is the same as the visual system's: **grounded hope**. Not doom, not na
 | Dedication | For all the living beings whose heart burns to see a new world emerge. |
 | Short line | Life as an art. |
 | What we are, one sentence | A movement of people making sense of this moment and practising what comes next, together. |
+| Mission | Seeds of Renaissance is a media house and space of belonging offering mythos and language for what is already being felt: the death of an old paradigm and the birth of a new. |
 | Media house line (banner, About) | Exploring crisis and rebirth in this time between worlds. |
 | YouTube channel line | Exploring what comes next, one conversation at a time. |
 | Podcast intro | This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds. |
 | Media House, one line | Language for what you already sense. |
 | Gardens of Change, one line | Find the others who feel the same: monthly calls, courses and local gardens, where we explore and practise what comes next together. |
-| To a friend | People who feel the world is falling apart and are tired of the old ways, and instead of doom-scrolling, are figuring out and practising what comes next. |
+| Newsletter sign-off | Seeds of Renaissance: sense-making and practice for civilisational rebirth. |
+| To a friend | Seeds of Renaissance is a project for people who feel like the world's kind of falling apart and are tired of the old ways of thought and governance and want something new, but instead of just doom-scrolling about it, we're trying to figure out and actually practice what comes next. |
+| To a journalist | Seeds of Renaissance is a media and movement building project exploring what a wiser, more regenerative civilisation could look like. By combining long-form analysis, practice courses, and community gatherings, we are building a web of like-minded people across the globe ready to help a new paradigm emerge. |
+| To a potential course participant | You already sense something's off with how we're living, whether it be the pace, the disconnection from community, and/or the lack of meaning. We offer a place to actually work through that, not just read about it. You'll leave with practices, not just ideas. |
 
 Gardens of Change is about finding the others who already feel this, not joining our journey: don't write "company for the journey".
 
