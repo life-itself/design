@@ -21,7 +21,7 @@ Working in another repo? Its own rules win where they differ (how it builds, wha
 | You're making… | Route |
 |---|---|
 | A social post: Instagram, LinkedIn, an event announcement | [Social post](#social-post) |
-| A page or section on the website | [Website page](#website-page) |
+| A page on the website, or a change to one | [Website page](#website-page) |
 | A podcast or YouTube cover, thumbnail or show art | [Episode cover](#episode-cover) |
 | Slides | [Slides](#slides) |
 | A diagram, figure or chart | [Diagram](#diagram) |
@@ -47,10 +47,18 @@ Instagram feed posts (4:5, 1:1) from the Instagram kit. Other shapes (16:9, link
 
 ## Website page
 
-- **Read:** `website.md` (sections and checklist), `components.md` (the HTML for each section), `voice.md`.
-- **Copy:** the closest page in `examples/web/` (table in `website.md`).
-- **In the `sor-website` repo:** pages are Flowershow Markdown with raw HTML, and the CSS is synced from this repo at a pinned commit (`scripts/sync-design.py`). Keep Flowershow's page header, put sections inside `<div class="sor">`, use only classes already synced, don't copy the page shell, and don't use woodcuts outside Home (Markdown pages have no sprite). Check an asset exists at the pin (`git show <pin>:<path>`) before using it. That repo's `AGENTS.md` wins.
-- **Check:** the list at the end of `website.md`.
+The website is the `sor-website` repo: Flowershow Markdown pages, with the CSS, fonts and scripts synced from this folder at a pinned commit. So a plain Markdown page is already on brand; what you add is the words, the images and the order. That repo's `AGENTS.md` wins where it differs.
+
+First read that repo's `AGENTS.md` and `README.md` (how it builds, what you may edit, how it marks TODOs), and open the page if it exists. Then, which of three cases are you in?
+
+- **Writing or changing a page** (most jobs, including section pages such as Podcast or Events): plain Markdown with `title` and `description` in the frontmatter. No HTML (other than that repo's TODO comments), classes or inline styles.
+  - **Read:** in `voice.md`, "The voice in one line", "Register by place", "Calls to action", "Words" and any section on the page's subject (for Podcast, "YouTube and podcast"); `brand.md` for who we are, what we offer and who we speak to. The key lines in `voice.md` are the approved copy to build from.
+  - **Use:** short sections with plain headings, short paragraphs, links with button text from "Calls to action". Images are clean (rule 6), one idea each; every current photograph is a placeholder (`photography.md`), so leave a TODO rather than an uncleared image.
+  - **Ask the person for:** facts only they have (dates, names, links, the feed or player). Don't name guests until they are confirmed.
+- **A new kind of page** (an episode, a type of post, a page with its own layout, not one page): don't hand-write component HTML into the page. The content goes in the site's `src/` with frontmatter, and its build script (`scripts/build-content.py`) renders it. A new layout starts here, as a mockup in `examples/web/` built from `components.md` (see `website.md`), then becomes a template in that script.
+- **Changing how the site looks** (a colour, the type, a section): change it here (see [Maintain](#maintain)), then bump the pin in `sor-website`. CSS for the site alone goes in its `scripts/site-overrides.css`.
+- **Check:** the copy is real and in our voice, with anything unconfirmed marked as that repo marks TODOs; images are clean; no inline styles or colours; that repo's own checks pass (`scripts/check-links.py` and `scripts/prepublish-scan.py`). For a mockup here, the list at the end of `website.md`.
+- **Watch out:** the site only has what exists at its pin, which can be behind this folder: check with `git show <pin>:projects/sor-design-system/<path>` in this repo. Woodcuts need the sprite, which only Home has.
 
 ## Episode cover
 

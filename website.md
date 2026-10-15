@@ -1,10 +1,28 @@
 # Website
 
-Pages for the Seeds of Renaissance website, built in HTML and CSS from the system. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first for the rules that apply everywhere.
+Pages for the Seeds of Renaissance website. Part of the [SoR design system](README.md).
 
-Examples: [examples/web/](examples.md#website).
+## Make or change a page with your agent
 
-## How to build a page
+The website is its own repo, `sor-website`. Its pages are written in Markdown, and the site's styles come from this design system, so a page written in plain Markdown already looks right: what you bring is the words, the pictures and the order. Paste this into your agent in that repo and fill in the brackets:
+
+```text
+[Make / change] the [which] page on the Seeds of Renaissance website, on brand.
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system. Follow its "Website page" route
+and read only what it names. This repo's own AGENTS.md wins where they differ.
+Don't change anything in the design repo.
+Write real copy in our voice and mark anything you're unsure of with a TODO.
+Ask me for facts you can't find. Then tell me what you checked and what you guessed.
+```
+
+The rest of this guide is for **designing** a page: working it out as an HTML mockup here, from the system's sections, before it becomes a template on the site. Read the [rules that apply everywhere](BUILD.md#rules-that-apply-everywhere) first.
+
+## Designing a page
+
+Examples to copy: [website pages](examples.md#website).
+
+### How to build a page
 
 1. **Pick the closest example** and copy it:
 
@@ -25,7 +43,7 @@ Examples: [examples/web/](examples.md#website).
 
 5. **Check against the list** at the bottom before you call it done.
 
-## The page shell
+### The page shell
 
 ```html
 <!doctype html>
@@ -58,7 +76,7 @@ Examples: [examples/web/](examples.md#website).
 
 Google Fonts loads Bricolage Grotesque, plus two fallbacks: Fraunces, for Polyamine and Restora (not yet licensed), and Hanken Grotesk, if Apfel Grotezk fails to load ([type.md](type.md#fallbacks-and-licences)). Adjust the `system/` paths to where the page sits. Woodcuts are inline SVG: `<svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg>`.
 
-## Sections
+### Sections
 
 Each links to its HTML in [components.md](components.md); see them rendered in [guide.html](guide.html).
 
@@ -78,7 +96,7 @@ Each links to its HTML in [components.md](components.md); see them rendered in [
 
 **A typical landing page:** header → photo hero → statement (white) → pathways (paper) → selected work (night) → printed object (sun) → calendar (white) → interlude (sun) → engage (white) → footer.
 
-## Check before you finish
+### Check before you finish
 
 Everything in [BUILD.md](BUILD.md#check-before-you-finish), plus:
 
