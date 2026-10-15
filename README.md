@@ -55,4 +55,4 @@ All of them on one page: [Examples](examples.md).
 
 <iframe class="specimen" src="specimens/colour.html" style="aspect-ratio:1000/622" loading="lazy" title="Colour, rendered"></iframe>
 
-Maintaining this site (build, publish, where things came from): [MAINTAINING.md](MAINTAINING.md).
+How to contribute, and where older material is kept: [About this site](about.md).

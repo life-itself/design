@@ -1,8 +1,8 @@
 # Mountains
 
-Blue pen, brush and linocut mountains for Seeds of Renaissance, a candidate look for a sub-brand. Each image from [[moodboard/mountains/mountains-moodboard]] is turned into a transparent element: the paper is removed and the ink kept. See also [[animals/README|animals]] and [[woodcuts/README|woodcuts]].
+Blue pen, brush and linocut mountains for Seeds of Renaissance, a candidate look for a sub-brand. Each image from the moodboard folder `mountains/mountains-moodboard` ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/mountains/mountains-moodboard)) is turned into a transparent element: the paper is removed and the ink kept. See also [[animals/README|animals]] and [[woodcuts/README|woodcuts]].
 
-Gallery with every file and a link to each: [graphics/mountains](../../../graphics/mountains.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
+Gallery with every file and a link to each: [graphics/mountains](../../../graphics/mountains.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
 
 ## Colours
 
@@ -49,7 +49,7 @@ pngquant --quality 80-100 --speed 1 --strip --force --skip-if-larger --output OU
 
 The red channel measures how much blue ink is on the paper, so it becomes the alpha; the colour is then flat. On tinted or unevenly lit paper, flatten the paper first (`archive/mountains-2026-10/flatten-mask.sh`). The linocut SVG is traced from the same mask with `potrace` as in `../animals/make-element.sh`. Per-image notes (grid removal, the fade, the caption crop) are in `archive/mountains-2026-10/README.md`.
 
-To add a mountain: put the source on the mood board, cut it as above in the drawn blue, cobalt and black, add an element to `elements.json` (schema: [[../README|system/graphics/README]]) and a row to this README, then run `python3 system/build-galleries.py`.
+To add a mountain: put the source on the mood board, cut it as above in the drawn blue, cobalt and black, add an element to `elements.json` (schema: [[../README|system/graphics/README]]) and a row to this README, then run `python3 system/build/build-galleries.py`.
 
 ## Status
 

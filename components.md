@@ -4,7 +4,7 @@ Every component in [system/components.css](system/components.css), with when to 
 
 <iframe class="specimen" src="specimens/components.html" style="aspect-ratio:1000/2435" loading="lazy" title="Components, rendered"></iframe>
 
-Edit the readable source `system/components.src.css`, then run `python3 system/build-css.py`.
+Edit the readable source `system/components.src.css`, then run `python3 system/build/build-css.py`.
 
 Photographs sit flat in a plain `<figure>`; the postcard `.print` is retired ([layout.md](layout.md#material)).
 
@@ -41,7 +41,7 @@ When: every page. Use `--centred` over a full-bleed photo hero.
 
 ```html
 <header class="site-header gutter">
-  <a class="wordmark" href="/"><img src="system/img/logo.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
+  <a class="wordmark" href="/"><img src="system/logo/mark/sizes/seeds-mark-colour-512.png" alt=""><span>Seeds <em>of</em> Renaissance</span></a>
   <nav class="label"><a href="#">Gather</a><a href="#">Listen</a><a href="#" aria-current="page">Read</a><a href="#">Magazine</a><a href="#">Join</a></nav>
 </header>
 ```
@@ -232,7 +232,7 @@ When: every page. Night, torn in, logo on its disc.
 ```html
 <footer class="site-footer gutter">
   <span class="tear"></span>
-  <div><span class="logo-disc"><img src="system/img/logo.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational rebirth, seeding what comes next.</p></div>
+  <div><span class="logo-disc"><img src="system/logo/mark/sizes/seeds-mark-colour-512.png" alt=""></span><b>Seeds of Renaissance</b><p>A movement for civilisational rebirth, seeding what comes next.</p></div>
   <div><span class="label">Gather</span><ul><li>…</li></ul></div>
   …
 </footer>

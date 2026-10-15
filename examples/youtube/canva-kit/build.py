@@ -5,7 +5,7 @@ Writes one HTML page per layer into src/, then export.sh screenshots each one in
 Every layer is a full 1280 × 720 canvas, so in Canva each PNG is dropped in and stretched
 to fill the page, and everything lands in the right place.
 
-The ground itself (white, swallows, fingerprints, logo) comes from system/swallows.py,
+The ground itself (white, swallows, fingerprints, logo) comes from system/build/swallows.py,
 shared with the Instagram templates. The earlier top-left layout is archived in
 archive/podcast-thumbnails-2026-10/.
 """
@@ -13,7 +13,7 @@ import sys as _sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-_sys.path.insert(0, str(HERE.parents[2] / "system"))
+_sys.path.insert(0, str(HERE.parents[2] / "system" / "build"))
 import swallows as sw  # noqa: E402
 
 SRC = HERE / "src"

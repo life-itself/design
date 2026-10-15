@@ -20,7 +20,7 @@ After the FT, the Economist and Tufte: restraint over decoration. One face, Apfe
 Figures are not drawn in a diagram tool. Sketch it (paper, whiteboard, a photo), then build it as SVG with Claude.
 
 1. **Start from the closest example** in [`examples/diagrams/build.py`](examples/diagrams/build.py): `poly_svg` (panels and brackets), `gap_svg` (curves and a shaded area), `chart_line`, `chart_bars`, `chart_dumbbell`. Copy the function and change the content. For a figure in a paper, follow the paper's own builder (for the Wisdom paper: `2rbook/wisdom/assets/build-*.py`).
-2. **Set text as outlines** with `apfel` and `apfel_m` from [`system/outline.py`](system/outline.py), so the SVG renders without the fonts installed.
+2. **Set text as outlines** with `apfel` and `apfel_m` from [`system/build/outline.py`](system/build/outline.py), so the SVG renders without the fonts installed.
 3. **Sign it** with `signature(theme, url=…)` from `outline.py`: the URL, a publication line ("Wisdom · White paper No. 6") or `None`.
 4. **Export** with `write_figure()` from `outline.py` (see [Exports](#exports)).
 5. **Check** it against the list at the end, and look at it at 400 px and in greyscale.
@@ -73,11 +73,11 @@ Every figure is signed inside the image, so it stays attributed when it is cropp
 - **Size:** at 1600 px, the mark 64 px and the text 20 px (about 540 px wide). Scale the figure, never the signature.
 - **Light grounds:** the mark on its white disc. **Dark grounds:** the `colour-dark` mark, no disc ([logo.md](logo.md#colourways)).
 - **Too small for the mark:** drop it and keep the text; there is no small version of the mark. Life Itself is not shown on figures ([logo.md](logo.md#which-mark-where)).
-- **Ready-made files** in `system/img/`: `signature.svg`, `signature-dark.svg`, `signature-name.svg`, `signature-name-dark.svg`, each with `.png` and `@2x.png`, transparent. Rebuild with `system/build-signature.py`.The URL files read seedsofrenaissance.org.
+- **Ready-made files** in `system/img/`: `signature.svg`, `signature-dark.svg`, `signature-name.svg`, `signature-name-dark.svg`, each with `.png` and `@2x.png`, transparent. Rebuild with `system/build/build-signature.py`. The URL files read seedsofrenaissance.org.
 
 ## Exports
 
-Draw tight; the margin is added on export. `write_figure()` in `system/outline.py` writes both from one drawing:
+Draw tight; the margin is added on export. `write_figure()` in `system/build/outline.py` writes both from one drawing:
 
 - **For a page** (papers, the web): `name.svg`, cropped to the drawing, transparent, text outlined. The page supplies the space around it. Commit this one.
 - **For sharing alone** (Substack, social, slides): `name.share.png` and `@2x`, the full canvas with its 72 px margin on white. Built on demand; not committed.

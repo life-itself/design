@@ -1,8 +1,8 @@
 # Line figures and marks
 
-Line geometry and printed marks for Seeds of Renaissance: sacred-geometry figures, interlaced and knot marks, a kolam line pattern and checkerboards, as transparent black line work. Made from [[moodboard/botanical-flower-illustration/removal-candidates|the botanical flower mood board]], where each image was cut out, cropped to a tight box and renamed. See also the other sets in [[../README|system/graphics/]].
+Line geometry and printed marks for Seeds of Renaissance: sacred-geometry figures, interlaced and knot marks, a kolam line pattern and checkerboards, as transparent black line work. Made from the botanical flower mood board (moodboard folder `botanical-flower-illustration/removal-candidates`, [on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/botanical-flower-illustration/removal-candidates)), where each image was cut out, cropped to a tight box and renamed. See also the other sets in [[../README|system/graphics/]].
 
-Gallery with every file and a link to each: [graphics/lines](../../../graphics/lines.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json`.
+Gallery with every file and a link to each: [graphics/lines](../../../graphics/lines.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json`.
 
 Drawn in black ink (`--ink`, `#1b1916`) on a transparent ground. The colour is fixed in the files, so use them on light grounds; they don't turn chalk on night. The Metatron's cube is rebuilt from geometry, so it is exact and its SVG is tiny; the others are traced from small sources. SVGs are kept only where they are small and clean (under 150 KB); the finest line work is PNG only. Catalogue numbers in the sources (5312, 795 and so on) are kept in the names and removed from the images.
 
@@ -30,4 +30,4 @@ In [`elements/`](elements/). Names read `subject` or `subject-style`. PNGs 1000p
 | `mark-1268-loops` | Mark 1268: Four looping, ampersand-like shapes around a small square, in solid black. | PNG, SVG | bfi-30 |
 | `mark-4684-rosette` | Mark 4684: A rosette of overlapping circles in fine black line. PNG only: the fine lines make a heavy trace. | PNG | bfi-31 |
 
-Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in [[moodboard/botanical-flower-illustration/removal-candidates|removal-candidates]].
+Source images are `bfi-NN-*` files in the mood board folder (not committed, and not yet cleared for public use). Elements the owner chose not to ship are listed in removal-candidates (moodboard folder `botanical-flower-illustration/removal-candidates`, [on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/botanical-flower-illustration/removal-candidates)).

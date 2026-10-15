@@ -1,8 +1,8 @@
 # Woodcuts
 
-Graphic elements for Seeds of Renaissance, drawn to look like woodcut or linocut prints: a black shape, white carved lines, and a slightly rough printed edge. See also [[design-system-plan]] and [[moodboard]].
+Graphic elements for Seeds of Renaissance, drawn to look like woodcut or linocut prints: a black shape, white carved lines, and a slightly rough printed edge. See also [design-system-plan](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/design-system-plan-2026-10.md) and the moodboard folder ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard)).
 
-Gallery with every file and a link to each: [graphics/woodcuts](../../../graphics/woodcuts.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
+Gallery with every file and a link to each: [graphics/woodcuts](../../../graphics/woodcuts.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
 
 ![[preview-1.png]]
 ![[preview-2.png]]
@@ -38,7 +38,7 @@ Gallery with every file and a link to each: [graphics/woodcuts](../../../graphic
 
 ## Elements from the woodcuts mood board
 
-The elements traced from [[moodboard/woodcuts/woodcuts-moodboard]] are now their own set: [[../prints/README|system/graphics/prints/]].
+The elements traced from the moodboard folder `woodcuts/woodcuts-moodboard` ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/woodcuts/woodcuts-moodboard)) are now their own set: [[../prints/README|system/graphics/prints/]].
 
 ## Using them
 

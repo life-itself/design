@@ -1,8 +1,8 @@
 # Animals
 
-Woodcut and linocut animals for Seeds of Renaissance. Each image from [[moodboard/animals/animals-moodboard]] is turned into a transparent element: the paper is removed and the ink kept, then printed in four inks. See also [[woodcuts/README|woodcuts]] and [[mountains/README|mountains]].
+Woodcut and linocut animals for Seeds of Renaissance. Each image from the moodboard folder `animals/animals-moodboard` ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/animals/animals-moodboard)) is turned into a transparent element: the paper is removed and the ink kept, then printed in four inks. See also [[woodcuts/README|woodcuts]] and [[mountains/README|mountains]].
 
-Gallery with every file and a link to each: [graphics/animals](../../../graphics/animals.md) on the design system site, built with every set by `python3 system/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
+Gallery with every file and a link to each: [graphics/animals](../../../graphics/animals.md) on the design system site, built with every set by `python3 system/build/build-galleries.py` from `elements.json` (which also makes the gitignored `thumbs/`).
 
 ![[preview.png]]
 
@@ -48,6 +48,6 @@ The paper is flattened (divided by a blurred local maximum) so uneven light does
 
 For a painted or photographic source (not a clean print), use `make-tonal.sh SOURCE NAME [crop] [edge%] [erase boxes]` instead. It keeps the original colours as `NAME-original.png` and prints each ink in three tones. It needs a dark edge round the animal; where a pale edge meets the paper the outline can come out a little ragged (the bottom of the spotted butterfly's hindwings).
 
-To add an animal: put the source in [[moodboard/animals/animals-moodboard]], run `make-element.sh`, check the result on a light ground, add an element to `elements.json` (schema: [[../README|system/graphics/README]]) and a row to this README, optimise the PNGs, then run `python3 system/build-galleries.py`.
+To add an animal: put the source in the moodboard folder `animals/animals-moodboard` ([on GitHub](https://github.com/life-itself/design/tree/main/projects/sor-design-system/moodboard/animals/animals-moodboard)), run `make-element.sh`, check the result on a light ground, add an element to `elements.json` (schema: [[../README|system/graphics/README]]) and a row to this README, optimise the PNGs, then run `python3 system/build/build-galleries.py`.
 
 PNGs are optimised with `pngquant --quality 80-100 --strip`. They can be regenerated from the SVGs at any time (`magick -background none -density 72 X.svg -trim +repage -resize 1000x PNG32:X.png`). The exception is `snake-coiled-watercolour-colour.png`, which has no SVG and is kept lossless.

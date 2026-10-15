@@ -19,7 +19,7 @@ All podcast images share one ground:
 - **The logo's fingerprints**, without the bird (`system/img/fingerprints-red.png`), faded to **20%** around the birds and filling the corner. They fade out before they reach the words.
 - **The logo**: the horizontal lockup, mark and name, straight on the ground, **no disc**. On podcast images it is followed by **PODCAST** on the same line, in Polyamine at the height of the name's capitals. It always sits **under the guest's name**.
 
-The recipe is code in `system/swallows.py`, shared by the YouTube and Instagram kits, so both stay the same.
+The recipe is code in `system/build/swallows.py`, shared by the YouTube and Instagram kits, so both stay the same.
 
 ## The episode cover (YouTube, 1280 × 720)
 
@@ -68,12 +68,11 @@ Apple Podcasts (and Spotify for video episodes) can show a square image per epis
 | Episode posts | 1080 × 1350 and 1080 × 1080 | The [Instagram kit](examples/social/instagram/README.md) |
 | Show art | 3000 × 3000, JPG or PNG, RGB | [examples/podcast/](examples/podcast/README.md) |
 | Episode art | 3000 × 3000 | The Instagram 1:1 podcast template at 3000 px, [examples/podcast/](examples/podcast/README.md) |
-| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | On the same ground, built with `system/swallows.py` like the kits; shapes in [social.md](social.md) |
+| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | On the same ground, built with `system/build/swallows.py` like the kits; shapes in [social.md](social.md) |
 
 ## Before you publish
 
 - **Fonts:** Polyamine (the hook, PODCAST) is not yet licensed. Export final PNGs from a machine that has it, or from Canva once it is in the brand kit.
-- **Swallow engraving:** the flock was traced from a web image and its rights are not cleared. Check before publishing anything that uses it.
 - **Guests:** the photos and words on the examples are placeholders; use the real guest and episode.
 
 How the cover was arrived at (versions A–D, sixteen backgrounds, the swallows versions): [archive/podcast-thumbnails-2026-10/](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/podcast-thumbnails-2026-10/README.md).

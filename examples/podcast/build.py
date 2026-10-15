@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the podcast's square artwork: the show art (one image for the whole podcast).
 
-Pure sunlight, the swallows and fingerprints from the bottom left (system/swallows.py, as on the
+Pure sunlight, the swallows and fingerprints from the bottom left (system/build/swallows.py, as on the
 episode cover), the mark, SEEDS of RENAISSANCE big, PODCAST small: in a podcast app everyone
 already knows it's a podcast, so the name leads.
 
@@ -12,7 +12,7 @@ import sys as _sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-_sys.path.insert(0, str(HERE.parents[1] / "system"))
+_sys.path.insert(0, str(HERE.parents[1] / "system" / "build"))
 import swallows as sw  # noqa: E402
 
 SRC = HERE / "src"

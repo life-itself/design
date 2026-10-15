@@ -18,7 +18,7 @@ Each set folder holds `elements/` (the files), `elements.json` (the set and its 
 ## Build
 
 ```bash
-python3 system/build-galleries.py
+python3 system/build/build-galleries.py
 ```
 
 From `projects/sor-design-system`. It writes `graphics/<set>.md` (one gallery page per set), the cards and the rules table in `graphics.md` (between the `<!-- library:… -->` markers) and `logos.md`, and makes the thumbnails (ImageMagick `magick`, or `sips` on macOS). The pages are Flowershow pages with `layout: plain`, so they keep the site navbar; their behaviour (ground and ink switchers, search, copy path) is `library.js`, loaded as a page script, and their look is `library.css` with the system tokens, inlined into each page and scoped to `.sg`. The frame of a gallery page is `gallery-shell.html`. Never edit the generated pages by hand.
@@ -64,6 +64,6 @@ From `projects/sor-design-system`. It writes `graphics/<set>.md` (one gallery pa
 
 1. Put the files in the set's `elements/`: a transparent PNG, 1000px on the long side, and an SVG where it is small and clean.
 2. Add it to the set's `elements.json` and a row to its README.
-3. Run `python3 system/build-galleries.py` and check the gallery page.
+3. Run `python3 system/build/build-galleries.py` and check the gallery page.
 
-A new set: a new folder with the same parts, then add it to `FAMILIES` in `system/build-galleries.py`.
+A new set: a new folder with the same parts, then add it to `FAMILIES` in `system/build/build-galleries.py`.
