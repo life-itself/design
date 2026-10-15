@@ -1,14 +1,14 @@
 # Podcast
 
-Every image for the Seeds of Renaissance podcast: the episode cover for YouTube, the episode posts for Instagram, and show art. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.16`.
+Every image for the Seeds of Renaissance podcast: the episode cover for YouTube, the episode posts for Instagram, and show art. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
 
-**Final** (13 October 2026): the episode cover, the square show art and square episode art. Make an episode cover in Canva with the [podcast kit](examples/youtube/canva-kit/README.md); show art and episode art files: [examples/podcast/](examples/podcast/README.md).
+Make an episode cover in Canva with the [podcast kit](examples/youtube/canva-kit/README.md); show art and episode art files: [examples/podcast/](examples/podcast/README.md).
 
 ![The podcast episode cover](examples/youtube/canva-kit/web/example-one-guest.jpg)
 
 ## One brand, no named shows
 
-The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. *Over the Mountains* is retired as a show name (2026-10-05, see [brand.md](brand.md#names)). Kinds of episode (guest interviews, Rufus–Sylvie conversations) are formats, shown by playlist and the episode's own words, not by separate lockups. The podcast goes out on YouTube as video and on podcast apps as audio; YouTube is one channel for it ([youtube.md](youtube.md) has the channel's own specs).
+The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. *Over the Mountains* is retired as a show name (see [brand.md](brand.md#names)). Kinds of episode (guest interviews, Rufus–Sylvie conversations) are formats, shown by playlist and the episode's own words, not by separate lockups. The podcast goes out on YouTube as video and on podcast apps as audio; YouTube is one channel for it ([youtube.md](youtube.md) has the channel's own specs).
 
 ## The look: swallows and fingerprints
 
@@ -60,24 +60,22 @@ Apple Podcasts (and Spotify for video episodes) can show a square image per epis
 
 ![Episode art](examples/podcast/web/episode-art-example.jpg)
 
-## What we need
+## Sizes
 
-| Item | Size | Status |
+| Item | Size | Where |
 |---|---|---|
-| Episode cover | 1280 × 720 | **Done**: the [podcast kit](examples/youtube/canva-kit/README.md) |
-| Episode posts | 1080 × 1350 and 1080 × 1080 | **Done**: the [Instagram kit](examples/social/instagram/README.md) |
-| Show art | 3000 × 3000, JPG or PNG, RGB | **Done**: [examples/podcast/](examples/podcast/README.md) |
-| Episode art | 3000 × 3000 | **Done**: the Instagram 1:1 podcast template at 3000 px, [examples/podcast/](examples/podcast/README.md) |
-| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | Later: see [social.md](social.md) |
+| Episode cover | 1280 × 720 | The [podcast kit](examples/youtube/canva-kit/README.md) |
+| Episode posts | 1080 × 1350 and 1080 × 1080 | The [Instagram kit](examples/social/instagram/README.md) |
+| Show art | 3000 × 3000, JPG or PNG, RGB | [examples/podcast/](examples/podcast/README.md) |
+| Episode art | 3000 × 3000 | The Instagram 1:1 podcast template at 3000 px, [examples/podcast/](examples/podcast/README.md) |
+| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | On the same ground, built with `system/swallows.py` like the kits; shapes in [social.md](social.md) |
 
-## Open
+## Before you publish
 
-- **Fonts:** Polyamine (the hook, PODCAST) must be licensed before covers are published (beads `.2`); export final PNGs from a machine that has it, or from Canva once it is in the brand kit.
-- **Swallow engraving:** traced from a web image with no rights cleared; re-source or redraw it.
-- **Real guests:** the photo and words on the examples are placeholders.
+- **Fonts:** Polyamine (the hook, PODCAST) is not yet licensed. Export final PNGs from a machine that has it, or from Canva once it is in the brand kit.
+- **Swallow engraving:** the flock was traced from a web image and its rights are not cleared. Check before publishing anything that uses it.
+- **Guests:** the photos and words on the examples are placeholders; use the real guest and episode.
 
 How the cover was arrived at (versions A–D, sixteen backgrounds, the swallows versions): [archive/podcast-thumbnails-2026-10/](archive/podcast-thumbnails-2026-10/README.md).
 
-## Next
-
-Audiogram and clip covers (1080 × 1920 and 1080 × 1080) for short clips, on the same ground; see [social.md](social.md). Build them with `system/swallows.py` like the kits.
+Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

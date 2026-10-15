@@ -6,7 +6,7 @@ Gallery with every version and a link to each file: https://claude.ai/artifact/8
 
 ## Colours
 
-Every mountain comes in **the blue it was drawn in**, **cobalt** (`--print-blue`) and **black** (`--ink`). The drawn blues were chosen by Sylvie to keep each drawing's character, and are used only for the mountains. They sit outside the system's [[colour#Illustration inks (graphics only)|illustration inks]], which is an open tension (Beads `design-34t.43`). The linocut also has three lighter blues for pale grounds and backgrounds. Don't retint them in other colours.
+Every mountain comes in **the blue it was drawn in**, **cobalt** (`--print-blue`) and **black** (`--ink`). The drawn blues were chosen by Sylvie to keep each drawing's character, and are used only for the mountains. They sit outside the system's [[colour#Illustration inks (graphics only)|illustration inks]]. The linocut also has three lighter blues for pale grounds and backgrounds. Don't retint them in other colours.
 
 | Colour | Hex | Used on |
 |---|---|---|
@@ -53,4 +53,4 @@ To add a mountain: put the source on the mood board, cut it as above in the draw
 
 ## Status
 
-Sources are from the web, with no rights cleared. Fine for exploring the sub-brand; re-source or redraw before public use. Two blue woodcut prints and the source links are still to add (Beads `design-34t.44`).
+Sources are from the web, with no rights cleared. Fine for exploring the sub-brand; re-source or redraw before public use.

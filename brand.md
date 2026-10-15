@@ -1,14 +1,12 @@
 # Seeds of Renaissance — Brand
 
-*Single source for the brand's substance: why, what, for whom, how we sound. Consolidated 2026-09-28. **No visual design here:** no palette, type or layout. Visual design lives in the [design system](README.md).*
+*Single source for the brand's substance: why, what, for whom. **No visual design here:** no palette, type or layout; that lives in the [design system](README.md). How we write: [voice.md](voice.md).*
 
 ## One line
 
-**Tagline: Vision and movement for civilisational rebirth.** (Rufus, 2026-10-12; was "...civilisational renewal", 2026-09-28)
+**Tagline: Vision and movement for civilisational rebirth.**
 
 Hero line: *For those who sense the old world is ending and want to help seed the new.*
-
-Earlier taglines: *Vision and movement for civilisational renewal* (to 2026-10-12); *Planting the seeds of civilisational renewal.*
 
 **Essence: a movement and a community.** Media (podcast, magazine, essays) is how people find us and make sense. Belonging and practice together are what we are. The site should feel like joining a living movement of people, not subscribing to a publication.
 
@@ -38,7 +36,7 @@ It is **a constellation, not a programme.** People share an orientation, each fi
 
 **Media House** (discover, engage, make sense)
 
-- **Podcast / YouTube**: one brand, *Seeds of Renaissance*, on one channel and one podcast feed. Kinds of episode (interviews, Rufus–Sylvie conversations, later perhaps *Temple of the Sacred World* material) are formats shown by playlist and artwork tag, not separate shows. *Over the Mountains* is retired as a show name ([decision, 2026-10-05](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md#appendix-a-podcast-naming-one-brand-2026-10-05)). The channel is where the voices meet in motion.
+- **Podcast / YouTube**: one brand, *Seeds of Renaissance*, on one channel and one podcast feed. Kinds of episode (interviews, Rufus–Sylvie conversations, later perhaps *Temple of the Sacred World* material) are formats shown by playlist and artwork tag, not separate shows. *Over the Mountains* is retired as a show name ([why](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md#appendix-a-podcast-naming-one-brand-2026-10-05)). The channel is where the voices meet in motion.
 - **Magazine**: a yearly art-led print periodical where artists, writers and philosophers gather. #1 *Impermanence* (2024), #2 *Mythos* (2026).
 - **Essays and white papers**: long-form, rigorous thinking on the moment and what comes next.
 - **Manifesto**: the vision and principles of the movement, plus the art collective.
@@ -75,10 +73,10 @@ Some already know these ideas conceptually but not how to live them. Others feel
 
 Personas:
 
-- **Meaning seeker** (mid-30s–50s): therapist, teacher, tech, health, consultant. Reads McGilchrist, listens to Hagens and Vervaeke. Aesthetically sensitive.
+- **Meaning seeker** (mid-30s–50s): therapist, teacher, tech, health, consultant. Reads McGilchrist, listens to Hagens and Vervaeke. Aesthetically sensitive; wants the people they follow to have done the reading.
 - **Post-disillusionment renewer** (40s–60s): ex-church, ex-corporate, ex-academic, ex-activist. Allergic to hype. Trusts people who admit they don't have it figured out.
-- **Awakening professional**: successful and feels the system is off. Hasn't found their people.
-- **Disillusioned young seeker** (18–30): searching for meaning, belonging, a larger vision and real community.
+- **Awakening professional**: successful and feels the system is off. Hasn't found their people. Has little time, so needs clear, digestible pieces.
+- **Disillusioned young seeker** (18–30): searching for meaning, belonging, a larger vision and real community. Values authenticity.
 
 What they want to feel: *"These people are honest. They're living it. I'm not alone in seeing what I see."*
 
@@ -90,24 +88,11 @@ Depth, rigour, wisdom and taking the long view. Integration of theory and practi
 
 ## Personality
 
-**Authentic, grounded hope. Deep, elegant, mature, ambitious.**
-
-In short: **honest, rigorous hope**. Neither doom nor naive optimism. It is hope that has done the hard thinking and still opens toward something.
+**Authentic, grounded hope, with depth.** In short: **honest, rigorous hope**. Neither doom nor naive optimism. It is hope that has done the hard thinking and still opens toward something.
 
 ## Voice and register
 
-**Poet-philosopher and lucid thinker.** The lyrical leads and rigour grounds it. We speak with kind authority and gentle curiosity, **from within** the crisis rather than above it, and we hold grief and possibility at once. People should feel held, not lectured.
-
-**Register varies by place and is set deliberately:**
-
-| Where | Register |
-|---|---|
-| **Home, about, offers, navigation** | **Lucid and plain-spoken.** No jargon ("metacrisis", "interbeing", "metamodern"). Accessible without being shallow. Meets the person at the sensing |
-| **Manifesto, magazine, art** | **Full poetic and mystical voice is welcome.** Ritual, the sacred, interbeing, myth, the doula at the threshold |
-| **Essays and papers** | **Rigorous.** Clear argument, footnotes, frameworks, intellectual credibility |
-| **Podcast** | Conversational, where the voices meet |
-
-**Written pattern:** a lyrical opener that lands emotionally → a clear, lucid body → an implication or invitation.
+**Poet-philosopher and lucid thinker.** The lyrical leads and rigour grounds it. We speak with kind authority and gentle curiosity, **from within** the crisis rather than above it, and we hold grief and possibility at once. People should feel held, not lectured. Register varies by place and is set deliberately: plain on entry pages, poetic in the manifesto, magazine and art, rigorous in essays and papers, conversational on the podcast. The working guide, with key lines, register by place and words: [voice.md](voice.md).
 
 **Avoid:** cold intellectualism, activist urgency, hype, insider jargon on entry pages, wellness or spiritual-lifestyle gloss, corporate polish.
 
@@ -125,38 +110,27 @@ Public descriptions of the podcast's formats go by **host and format**. Framing 
 Copy lines:
 
 - Instagram: *"Ideas & practices for a world being reborn. Podcast · Courses · Community"*
-- YouTube: *"Exploring crisis and rebirth in this time between worlds."* (working, reopened 2026-10-12; see [voice.md](voice.md#the-media-house-line))
-- Podcast intro: *"This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds."* (working, reopened 2026-10-12; see [voice.md](voice.md#the-media-house-line))
-
-*Rebirth* on headline lines, *renewal* in papers and essays (decided 2026-10-12). See [voice.md](voice.md#key-lines).
+- YouTube banner: *"Exploring crisis and rebirth in this time between worlds."* ([the media house line](voice.md#the-media-house-line))
+- Podcast intro: *"This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds."*
 - To a friend: *"…a project for people who feel like the world's kind of falling apart and are tired of the old ways of thought and governance and want something new, but instead of just doom-scrolling about it, we're trying to figure out and actually practice what comes next."*
+
+*Rebirth* on headline lines, *renewal* in papers and essays. All the key lines: [voice.md](voice.md#key-lines).
 
 ## Names
 
 | Thing | Name |
 |---|---|
 | Movement / public brand | **Seeds of Renaissance** (replaces "Second Renaissance" as the brand) |
-| The vision / historical moment | **Second Renaissance** for now, but it feels weak as a term (Rufus, 2026-10-07); open. Seeds of Renaissance is the brand either way |
-| White paper series | **Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6). Decided 2026-10-07; see [print.md](print.md#covers-and-credits) |
+| The vision / historical moment | **Second Renaissance**, a working name that may change. Seeds of Renaissance is the brand either way |
+| White paper series | **Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6). See [print.md](print.md#covers-and-credits) |
 | Steward | **Life Itself**: originating collective and current steward. Seeds is designed to grow far wider and is not a funnel into Life Itself |
 | Arms | **Media House** (media) · **Gardens of Change** (community) |
-| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name (2026-10-05). Intro: "This is Seeds of Renaissance, a conversation for a civilisational rebirth…" |
+| Podcast | **Seeds of Renaissance**: one name, no named stations; *Over the Mountains* retired as a show name. Intro: "This is Seeds of Renaissance, a conversation exploring crisis and rebirth in this time between worlds." |
+| Domain | **seedsofrenaissance.org** (replaces secondrenaissance.net, which redirects) |
 | People | Catalysts and pioneers (public); no label in discovery. See [voice.md](voice.md#what-we-call-people) |
 
 Handles: Instagram `@seedsofrenaissance` · YouTube `@SeedsOfRenaissance` · X `@SeedRenaissance` · LinkedIn `seedsofrenaissance`.
 
-## Open
+Sources: the [2R brand narrative](https://docs.google.com/document/d/1sWb8n6hryXfbT0uB5hGvAct9dqbYPNLJ594JIzAo4uc/edit) (Sylvie) is this page's backbone, without its colour notes; the [SoR Manifesto](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit) for the key language. This page supersedes the Canva *Brand Narrative Visual*.
 
-- The vision name: "Second Renaissance" feels weak. What do we call what we point toward?
-- Domain.
-- All visual identity, including the mark.
-
-## Sources
-
-- **2R brand narrative** (Google Doc, Sylvie): [link](https://docs.google.com/document/d/1sWb8n6hryXfbT0uB5hGvAct9dqbYPNLJ594JIzAo4uc/edit). This doc's backbone: ambition, why, what/how, difference, who, values, personality. Its colour notes are deliberately not carried over.
-- **SoR Manifesto** (Google Doc): [link](https://docs.google.com/document/d/13ClquJ8mXP2njNb0qGr2yJjbn6p23_f28J7yVvvBSDo/edit). Preface, manifesto, essay.
-- **Canva *Brand Narrative Visual*** (`design/assets/…pdf`): mission, offerings, personas, journey, copy lines. **Superseded by this page (2026-10-12)**; reconciliation tracked in design-34t.38.
-- `comms/2r/brand.md`: narrative, audience, tone.
-- `comms/2r/raw-2026-09-19-re-brand.md`: alchemy, stations.
-- `comms/2r/faq-relation-of-seeds-and-life-itself.md`.
-- `planning/projects/2608-seeds-of-renaissance-rebrand.md`: stations, handles.
+Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

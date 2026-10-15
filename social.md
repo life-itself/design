@@ -1,8 +1,8 @@
 # Social media
 
-Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. Status: [examples.md](examples.md#status) · beads `design-34t.15`.
+Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
 
-**Instagram posts done** (13 October 2026): podcast episode, quote card, announcement, statement and carousel, 4:5 and 1:1, on the swallows-and-fingerprints ground of the [podcast cover](podcast.md), as a Canva kit: [examples/social/instagram/](examples/social/instagram/README.md) ([preview](examples/social/instagram/index.html)). Still to do: stories (9:16), LinkedIn, link previews and banners. The 16:9 gathering thumbnail in [examples/youtube/](examples/youtube/index.html) is really an announcement and moves here.
+**Instagram posts:** podcast episode, quote card, announcement, statement and carousel, 4:5 and 1:1, on the swallows-and-fingerprints ground of the [podcast cover](podcast.md), as a Canva kit: [examples/social/instagram/](examples/social/instagram/README.md) ([preview](examples/social/instagram/index.html)). For a 16:9 announcement, start from the gathering thumbnail in [examples/youtube/](examples/youtube/index.html).
 
 <iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
 
@@ -20,11 +20,11 @@ One design, set on a few fixed artboards. The rules are the same on every platfo
 | Banners | LinkedIn 1584 × 396 · X 1500 × 500 · Bluesky 3000 × 1000 · Substack header | Profile headers |
 | LinkedIn document | 1080 × 1350 pages as a PDF | Carousel-style explainers |
 
-## What we need
+## Kinds of post
 
-1. **An announcement**: date, title, one photo or woodcut, logo on its disc. Designed once, set in 16:9, 4:5, 1:1 and 9:16.
+1. **An announcement**: date, title, one photo or woodcut, the logo (on its disc over a busy photograph). Designed once, set in 16:9, 4:5, 1:1 and 9:16.
 2. **A quote card**: a line from the manifesto, a guest, an essay. Restora once it passes ~10 words.
-3. **A text-only post** (Instagram template from the old website plan): a short statement on paper or sunlight.
+3. **A text-only post**: a short statement on paper or sunlight.
 4. **Text over photo**: one strong photo, a short Polyamine line, a scrim only if needed.
 5. **A carousel**: a cover, three to six inner slides, a closing slide with the call to action.
 6. **Profile banners** for LinkedIn, X, Bluesky and Substack, and the site's link preview image.
@@ -35,25 +35,26 @@ One design, set on a few fixed artboards. The rules are the same on every platfo
 - Keep to one idea per post. Five to ten words of Polyamine at most on the image; the rest goes in the caption.
 - Respect platform safe areas: the top and bottom ~250px of a 9:16 story are covered by the interface.
 - A paper's cover is not a social image: make 1:1, 4:5 and 16:9 crops from its art, with the title and the mark on its disc inside the safe area ([logo.md](logo.md#which-mark-where)).
-- Sub-brand question: *Mythos* and others may get their own lockup (beads `design-34t.11`). The podcast does not: it is Seeds of Renaissance.
+- The podcast has no lockup of its own: it is Seeds of Renaissance. Whether *Mythos* and others get their own lockups is not yet settled; until then, use the Seeds of Renaissance logo.
+- Fixed-size artboards follow the thumbnail pattern in [youtube.md](youtube.md): an artboard, size tokens in `system/tokens.css`, a frame that scales it to fit. Use real copy from [voice.md](voice.md).
 
 ## Canva
 
-For making on-brand graphics without code: the Canva brand kit and templates, recreating the coded versions above. Beads `design-34t.19`.
+For making on-brand graphics without code: the Canva brand kit and templates, recreating the coded versions.
 
-**Stub.** Waits on the font licences (beads `design-34t.2`). First piece done: the [podcast thumbnail Canva kit](examples/youtube/canva-kit/README.md) (2026-10-12), with full-canvas PNG layers and step-by-step instructions; a model for the other templates. Second: the [Instagram post kit](examples/social/instagram/README.md) (2026-10-12): podcast episode, quote card, announcement, statement and carousel in 4:5 and 1:1, on the swallows-and-fingerprints background, with free-standing elements, guides and a [preview](examples/social/instagram/index.html).
+**Kits to start from:**
 
-### What we need
+- The [podcast thumbnail Canva kit](examples/youtube/canva-kit/README.md): full-canvas PNG layers and step-by-step instructions. The model for other templates.
+- The [Instagram post kit](examples/social/instagram/README.md): podcast episode, quote card, announcement, statement and carousel in 4:5 and 1:1, on the swallows-and-fingerprints background, with free-standing elements, guides and a [preview](examples/social/instagram/index.html).
 
-1. **Brand kit**: the four faces (upload Polyamine and Restora once licensed; Bricolage Grotesque and Apfel Grotezk are free), the colours with their names (white, paper, sunlight, night, ink, muted, chalk, logo red), the logo and its disc version, and the woodcuts as SVGs (from `system/woodcuts/`).
-2. **Templates** matching [social.md](above): announcement in 16:9, 4:5, 1:1 and 9:16; quote card; text post; carousel.
-3. **A one-page "how to stay on brand in Canva"** note: the rules from [BUILD.md](BUILD.md#rules-that-apply-everywhere) in plain words.
-4. Store the font files and source assets in the shared Drive.
+**Fonts:** Polyamine and Restora are not yet licensed, so they can't be uploaded to Canva. Bricolage Grotesque and Apfel Grotezk are free.
 
-Build the coded versions first (above), then recreate them as Canva templates.
+**The brand kit holds:**
 
-## Brief for a new session
+1. The four faces (Polyamine and Restora once licensed), the colours with their names (white, paper, sunlight, night, ink, muted, chalk, logo red), the logo and its disc version, and the woodcuts as SVGs (from `system/woodcuts/`).
+2. Templates matching the kinds above: announcement in 16:9, 4:5, 1:1 and 9:16; quote card; text post; carousel.
+3. The rules from [BUILD.md](BUILD.md#rules-that-apply-everywhere), in plain words.
 
-Build fixed-size artboards the way the thumbnails were built (see [youtube.md](youtube.md): artboard, `--thumb-*` tokens, `.thumb-frame` scaling): add `--social-*` tokens and a "Social" block to `system/components.src.css`, and make `examples/social/index.html` showing every item above at full size and as it appears in a feed. Use real copy from [voice.md](voice.md). Finish: update this page and [examples.md](examples.md#status), beads, commit, push, republish.
+Keep font files and source assets in the shared Drive. Build a coded version first, then recreate it as a Canva template.
 
-**Prompt:** *Read projects/sor-design-system/social.md, section "Brief for a new session", and follow it.*
+Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

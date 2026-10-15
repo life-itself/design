@@ -71,3 +71,17 @@ Write the description first, then cut down. The heavy words go where there is ro
 - **Spoken intro** and **banner** stay plain.
 
 The current ladder is in [voice.md](voice.md#the-media-house-line).
+
+## Internal
+
+Team-only material, kept off [voice.md](voice.md#what-we-call-people) because it is not for public copy.
+
+**Internal journey stages** (2026-10-12, Rufus and Sylvie):
+
+- **Explorer**: newcomer; comes to a call or course. Never a public label.
+- **Catalyst**: active participant, e.g. hosts or runs calls.
+- **Pioneer**: deeply committed.
+
+You start as a catalyst and become a pioneer. This layer is for the journey, the funnel and later CRM tags. "Catalyst" is also a programme name (calls and catalysts), which fits: catalysts run calls.
+
+**In reserve:** *doulas*, possibly for a deeper circle later; not in public use.

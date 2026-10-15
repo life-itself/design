@@ -1,11 +1,5 @@
-# Courses 🚧
+# Courses
 
-Stub. Courses are a sub-brand of Seeds of Renaissance: course pages, cover art, lesson and certificate materials. Low priority; logged so it is not lost. Part of the [SoR design system](README.md).
+Courses are part of Gardens of Change: practices people can take into their lives ([brand.md](brand.md#offerings)). Their materials include course pages, cover art and thumbnails, lesson slides, workbooks and email sequences. Part of the [SoR design system](README.md).
 
-## To decide
-
-- How far the sub-brand departs from the parent: name lockup, colour accent, or just a label on the parent system
-- Surfaces: course landing page, course cover/thumbnail, lesson slides, workbook (print), email sequence
-- Platform and any constraints it imposes on type, colour and layout
-
-Reuse first: [website](website.md), [slides](slides.md), [print](print.md), [email](email.md).
+Until a dedicated courses guide exists, use the parent system as it stands: [website.md](website.md) for course pages, [slides.md](slides.md) for lessons, [print.md](print.md) for workbooks, [email.md](email.md) for sequences, and the rules in [BUILD.md](BUILD.md).

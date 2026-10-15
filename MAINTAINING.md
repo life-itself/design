@@ -14,8 +14,12 @@ For whoever edits and publishes this folder. Readers start at [README.md](README
 - **[guide.html](guide.html)** holds the visuals: the whole system rendered with the real CSS, one chapter per topic. It is the only place the visuals are edited.
 - **`specimens/<chapter>.html`** are cut from guide.html by `system/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. A group inside a chapter with an id like `<div id="examples-web">` also gets its own specimen (used on examples.md and youtube.md). Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
 - **`custom.css`** styles the specimen frames on Flowershow. Flowershow pages never load `components.css` (its generic class names would clash with the site theme); the system's CSS only runs inside the specimen frames, the guide and the examples.
-- **Navbar** (`config.json`): **System** holds the building blocks (feel, colour, type, logo…), **Guides** how to make each kind of thing (website, print, diagrams…), **Examples** links straight to the example pages to copy.
-- **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, youtube; next slides, print), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
+- **Navbar** (`config.json`) follows the three ways in on the home page: **Start here** (BUILD), **Make** (one guide per format), **Assets** (logo, logo files, graphics, photography), **Foundations** (feel, voice, colour, type, layout, components, the guide), **Brand** and **Examples**. A page goes in the nav only once it is usable; per-set graphics galleries are reached from graphics.md, not the nav.
+- **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, social, youtube, podcast, slides, print, diagrams), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
+
+## Pages state rules, not progress
+
+Published pages say how things are now. No status tables, "Open"/"Next"/"To do" sections, 🚧, briefs or prompts for agent sessions, beads ids, or "(decided <date>, <name>)" on rules. Progress, open questions and session briefs go in beads (`design-34t`); the reasoning behind a rule goes in the decision record (see below), linked once at the foot of the page. A known constraint a maker must respect (unlicensed fonts, uncleared images) stays, as one plain sentence.
 
 ## Specimen heights
 
@@ -29,7 +33,7 @@ The issue tree carries only the one-line answer. Longer discussion goes in a fil
 
 ## Publish
 
-Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflows/publish-design-system.yml) runs on any push that touches `projects/sor-design-system/`, builds `site/` and force-pushes it to the `design-system-site` branch, which Flowershow publishes. Nobody needs `fl` or a Flowershow login. It can also be run by hand from the Actions tab. Check a run there if the site looks stale.
+Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflows/publish-design-system.yml) runs on any push that touches `projects/sor-design-system/`, builds `site/` and commits it on top of the `design-system-site` branch, which Flowershow publishes. Never force-push that branch: Flowershow syncs commit by commit and ignored the force-pushed builds of 13–15 October. Nobody needs `fl` or a Flowershow login. It can also be run by hand from the Actions tab. Check a run there if the site looks stale.
 
 To build locally (for a preview, or to debug the workflow), from `projects/sor-design-system`:
 
@@ -70,7 +74,7 @@ Work out a change in HTML mockups first, then carry it into the format's own bui
 
 ## Where things came from
 
-- The former `life-itself/sor-brand` repo, merged here 2026-10-05 with history and since folded in: [decisions.md](decisions.md) (design-system plan and decision log), [logo-notes.md](logo-notes.md), `moodboard/` (references and images, not published), `archive/sor-brand-mockups/` (the mockups the system was extracted from: Direction E v7 and the four-page v2) and `archive/sor-brand-STATUS.md`.
+- The former `life-itself/sor-brand` repo, merged here 2026-10-05 with history and since folded in: [decisions.md](decisions.md) (the decision log; the plan it came with is [archive/design-system-plan-2026-10.md](archive/design-system-plan-2026-10.md)), `archive/logo-2026-10/logo-notes.md`, `moodboard/` (references and images, not published), `archive/sor-brand-mockups/` (the mockups the system was extracted from: Direction E v7 and the four-page v2) and `archive/sor-brand-STATUS.md`.
 - The old website design project (`2026-sor-website`, directions and moodboard, 2026-09): `archive/website-2026-09/`. Its brand substance and page copy now live here as [brand.md](brand.md) and `content/`.
 - [type/](type/): the two type selection rounds and research notes.
 - Brand substance (who we are, offers, voice) stays in [brand.md](brand.md).

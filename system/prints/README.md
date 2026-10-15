@@ -6,7 +6,7 @@ On the design system site: `system/prints/gallery.html`, built with the other se
 
 ## Colours: kept as printed
 
-These elements **keep the colours they were made in** and are not retinted to the system tokens (decided 2026-10-15, see [[colour#Illustration inks (graphics only)|colour]]). They are often used with a transparency over them, which takes the edge off both the ink and the colour (for example the red and black of the pomegranates), so the exact colours matter. How transparency is applied to graphics is still to be worked out in the system (Beads, see [[decisions]]).
+These elements **keep the colours they were made in** and are not retinted to the system tokens (see [[colour#Illustration inks (graphics only)|colour]]). They are often used with a transparency over them, which takes the edge off both the ink and the colour (for example the red and black of the pomegranates), so the exact colours matter. Until the system sets how, keep the transparency subtle.
 
 | Colour | Hex | Used on |
 |---|---|---|
