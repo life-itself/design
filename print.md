@@ -51,7 +51,7 @@ Take a pull quote. The design system says how it looks and how often it may appe
 
 1. **Final text in Markdown**, one master per paper (for 2R papers, `2rbook/<topic>/essay.md`); title page, imprint and back-cover fields live only in its front matter.
 2. **Editorial pass**: mark summary boxes, epigraphs and pull quotes, using the editorial craft skill. If the authors already marked summaries and quotes, add only the obvious.
-3. **Figures**: redraw in house style and sign them ([diagrams.md](diagrams.md)).
+3. **Figures**: redraw in house style and sign them ([Diagrams](diagrams.md)).
 4. **Cover**: plain typographic by default; a paper with its own art gets a bespoke cover, designed from the art and built as HTML ([below](#covers-and-credits)). Promo crops come from the art, not from the cover.
 5. **Render** with Typst in [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing): `typst/build-paper.sh <paper>`. The PDF follows the anatomy in the `sor` style, with the cover as page 1. The `sor` style takes its sizes from the `--print-*` tokens in `system/tokens.css`; change a value there, then rebuild.
 6. **Check** against the [anatomy](#anatomy-of-a-paper), the [examples](examples/print/index.html), the front matter and the list at the end.
@@ -102,7 +102,7 @@ A4, white, no fill. Margins 22mm top, 26mm bottom, 24mm and 20mm sides; text 118
 - **Running heads**: the same on every page, across the text column: the paper's title at the left, the chapter and folio at the right. None on the title page, imprint, contents and chapter openings; openings carry the folio at the foot.
 - **Paragraphs** spaced by half a line, not indented.
 - **Emphasis** in the body: an oblique Bricolage (the upright slanted 11°), for titles of works and a stressed word. Bricolage has no italic.
-- **Figures** sit bare on the page, the width of the text column, at its left edge; cropped to their drawing; then "Fig. 1" in Apfel and a caption. They carry their own signature ([diagrams.md](diagrams.md)).
+- **Figures** sit bare on the page, the width of the text column, at its left edge; cropped to their drawing; then "Fig. 1" in Apfel and a caption. They carry their own signature ([Diagrams](diagrams.md)).
 - **Quotes**: displayed in Restora italic, the source below in Apfel.
 - **Summary box** ("In brief"): a 0.4pt rule in `--muted`, the label set on the rule.
 - **Footnotes** numbered from 1 in each paper, linked both ways.
@@ -112,7 +112,7 @@ A4, white, no fill. Margins 22mm top, 26mm bottom, 24mm and 20mm sides; text 118
 
 ## Covers and credits
 
-Which mark goes where: [logo.md](logo.md#which-mark-where).
+Which mark goes where: [Logo](logo.md#which-mark-where).
 
 - **Papers are the Seeds of Renaissance series**, numbered on from the Second Renaissance series (*Wisdom and Wanting What's Good* is No. 6).
 - **Front cover, top to bottom:** series line ("Seeds *of* Renaissance · White Paper No. 6", small, in the wordmark face, "of" in Fraunces italic); title; subtitle; part line if any ("Wisdom · Part 1", small); the art at full size; optional one-line blurb, smaller than the credit; authors with the Life Itself credit, one line, one size; optionally the one-colour mark, small, centred at the foot.
@@ -120,7 +120,7 @@ Which mark goes where: [logo.md](logo.md#which-mark-where).
 - **Plain typographic cover** when a paper has no art: the same order, ink on white, a woodcut in place of the art.
 - **On the front, only the one-colour mark** in the cover's ink, never the red one. The colour mark with its wordmark, and the Life Itself logo, go on the back.
 - **Cover art may bring its own palette** (Wisdom's is blue and gold); the series line takes the cover's ink, not the logo red.
-- **Export covers at print resolution**: A4 at 300 dpi is 2480 × 3508 px. Social images are crops from the art, not the cover ([social.md](social.md#rules-for-social)).
+- **Export covers at print resolution**: A4 at 300 dpi is 2480 × 3508 px. Social images are crops from the art, not the cover ([Social](social.md#rules-for-social)).
 
 ## The PDF
 

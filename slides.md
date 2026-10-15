@@ -48,7 +48,7 @@ Both on a fixed 1920 × 1080 artboard, sharing one set of slide types.
 - Red only as the logo's own red, a red seed or woodcut, and the house diagrams.
 - Polyamine under ~10 words, Restora beyond; four faces only.
 - Photographs flat and square. Reuse the system's grounds, torn edges, woodcuts, plates and logo.
-- Real SoR copy, from [voice.md](voice.md), [brand.md](brand.md) and the manifesto.
+- Real SoR copy, from [Voice](voice.md), [Brand](brand.md) and the manifesto.
 - The HTML decks are the reference. A deck made another way (for example the Claude Slides artifact type, which exports .pptx and PDF) follows the same rules.
 
 Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

@@ -85,8 +85,8 @@ Every figure is signed inside the image, so it stays attributed when it is cropp
 - **What:** the mark, then "SEEDS OF RENAISSANCE" and one optional slot, set in Apfel Grotezk at 60% ink, one line. The slot holds the URL, a publication line, or nothing.
 - **Where:** bottom right, its right edge on the drawing's right edge. Same corner on every figure.
 - **Size:** at 1600 px, the mark 64 px and the text 20 px (about 540 px wide). Scale the figure, never the signature.
-- **Light grounds:** the mark on its white disc. **Dark grounds:** the `colour-dark` mark, no disc ([logo.md](logo.md#colourways)).
-- **Too small for the mark:** drop it and keep the text; there is no small version of the mark. Life Itself is not shown on figures ([logo.md](logo.md#which-mark-where)).
+- **Light grounds:** the mark on its white disc. **Dark grounds:** the `colour-dark` mark, no disc ([Logo](logo.md#colourways)).
+- **Too small for the mark:** drop it and keep the text; there is no small version of the mark. Life Itself is not shown on figures ([Logo](logo.md#which-mark-where)).
 - **Ready-made files** in `system/img/`: `signature.svg`, `signature-dark.svg`, `signature-name.svg`, `signature-name-dark.svg`, each with `.png` and `@2x.png`, transparent. Rebuild with `system/build/build-signature.py`. The URL files read seedsofrenaissance.org.
 
 ## Exports
