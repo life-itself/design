@@ -20,13 +20,13 @@ finish it in Canva. Ask me for anything you need that you can't find. Then tell 
 what you checked and what you guessed.
 ```
 
-By hand: make it in Canva with the [podcast kit](examples/youtube/canva-kit/README.md). Show art and episode art files: [examples/podcast/](examples/podcast/README.md).
+By hand: make it in Canva with the [podcast kit](examples/youtube/canva-kit/README.md). Show art and episode art: [the podcast art files](examples/podcast/README.md).
 
 ![The podcast episode cover](examples/youtube/canva-kit/web/example-one-guest.jpg)
 
 ## One brand, no named shows
 
-The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. *Over the Mountains* is retired as a show name (see [brand.md](brand.md#names)). Kinds of episode (guest interviews, Rufus–Sylvie conversations) are formats, shown by playlist and the episode's own words, not by separate lockups. The podcast goes out on YouTube as video and on podcast apps as audio; YouTube is one channel for it ([youtube.md](youtube.md) has the channel's own specs).
+The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. *Over the Mountains* is retired as a show name (see [Brand](brand.md#names)). Kinds of episode (guest interviews, Rufus–Sylvie conversations) are formats, shown by playlist and the episode's own words, not by separate lockups. The podcast goes out on YouTube as video and on podcast apps as audio; YouTube is one channel for it ([YouTube](youtube.md) has the channel's own specs).
 
 ## The look: swallows and fingerprints
 
@@ -84,9 +84,9 @@ Apple Podcasts (and Spotify for video episodes) can show a square image per epis
 |---|---|---|
 | Episode cover | 1280 × 720 | The [podcast kit](examples/youtube/canva-kit/README.md) |
 | Episode posts | 1080 × 1350 and 1080 × 1080 | The [Instagram kit](examples/social/instagram/README.md) |
-| Show art | 3000 × 3000, JPG or PNG, RGB | [examples/podcast/](examples/podcast/README.md) |
-| Episode art | 3000 × 3000 | The Instagram 1:1 podcast template at 3000 px, [examples/podcast/](examples/podcast/README.md) |
-| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | On the same ground, built with `system/build/swallows.py` like the kits; shapes in [social.md](social.md) |
+| Show art | 3000 × 3000, JPG or PNG, RGB | [Podcast art files](examples/podcast/README.md) |
+| Episode art | 3000 × 3000 | The Instagram 1:1 podcast template at 3000 px, [the podcast art files](examples/podcast/README.md) |
+| Audiogram or clip cover | 1080 × 1920 and 1080 × 1080 | On the same ground, built with `system/build/swallows.py` like the kits; shapes in [Social](social.md) |
 
 ## Before you publish
 
