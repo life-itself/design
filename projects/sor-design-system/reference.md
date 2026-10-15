@@ -254,7 +254,7 @@ The HTML to copy for each one is in [Components](components.md); all of them ren
 | [Long reading](components.md#long-reading) | `.reading` | Articles, the manifesto |
 | [Contents](components.md#contents) | `.contents` | A magazine's table of contents, or any numbered list of works |
 | [Footer](components.md#footer) | `.site-footer` | Every page |
-| [More components](components.md#more-components) | `.actions`, `.prints`, `.swallows`, `.table-wrap`, `.hero-banner`, `.steps` and 7 more | Copy the markup from the example pages named |
+| [More components](components.md#more-components) | `.actions`, `.swallows`, `.table-wrap`, `.hero-banner`, `.steps`, `.voices` and 6 more | Copy the markup from the example pages named |
 
 <!-- /reference:components -->
 

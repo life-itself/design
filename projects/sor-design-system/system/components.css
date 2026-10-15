@@ -75,9 +75,8 @@
 :where(.sor) figure { margin: 0; display: grid; gap: 10px }
 :where(.sor) figcaption { font-size: var(--t-caption); line-height: 1.45; color: var(--muted); font-style: italic }
 .fig-no { font-family: var(--font-label); font-style: normal; font-size: var(--t-meta); font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase; margin-right: 8px; color: var(--muted) }
-.print { background: var(--white); padding: 12px 12px 14px; box-shadow: var(--shadow-print); transform: rotate(var(--tilt)); position: relative; z-index: 2 }
-.print img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
-.print--left { transform: rotate(calc(-1 * var(--tilt))) }
+/* Photographs sit flat: no mount, tilt or shadow. The postcard .print / .prints is retired (layout.md) */
+.hero-split > figure img, .page-hero > figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover }
 
 /* ── Woodcut graphics (symbols from graphics.js) ──────────────── */
 .woodcut { color: var(--ink) }
@@ -110,7 +109,7 @@
 .hero-photo .label { color: #fff }
 .hero-photo .flock { color: #fff; z-index: 3; right: 8%; top: 10% }
 
-/* Split: statement beside a laid-down print */
+/* Split: statement beside a plain photograph */
 .hero-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--gap-l); align-items: center; padding-block: clamp(40px, 6cqi, 88px); overflow: hidden; position: relative }
 .hero-split .text { display: grid; gap: 18px; justify-items: start; position: relative; z-index: 3 }
 .hero-split h1 { font-family: var(--font-display); font-size: var(--t-hero); line-height: var(--lh-display) }
@@ -151,6 +150,8 @@
 .selected li[aria-current] b, .selected li:hover b { opacity: 1 }
 .selected .picture { position: sticky; top: 12px }
 .selected .picture img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover }
+/* Each item's own picture (.pic, added by sor.js from data-img): shown inline where there is no hover (narrow, touch) */
+.selected li .pic { display: none }
 .night .seal-corner { position: absolute; right: var(--gutter); top: clamp(28px, 4cqi, 56px); width: 84px }
 
 /* ── Printed object (magazine, book) ──────────────────────────── */
@@ -230,14 +231,6 @@
 .swallows { display: block; width: 140px; height: auto; color: var(--ink) }
 .interlude .swallows { width: 140px }
 
-/* Prints: two photographs laid on the page, overlapping (gatherings hero). Children: two .print figures, optional .seal */
-.prints { position: relative; min-height: clamp(300px, 40cqi, 520px) }
-.prints > .print { position: absolute; padding: 10px 10px 12px }
-.prints > .print:nth-of-type(1) { width: 72%; left: 0; top: 4%; transform: rotate(calc(-1.4 * var(--tilt))) }
-.prints > .print:nth-of-type(2) { width: 52%; right: 0; bottom: 0; transform: rotate(calc(1.6 * var(--tilt))) }
-.prints > .print:nth-of-type(2) img { aspect-ratio: 4 / 5 }
-.prints > .seal { position: absolute; width: clamp(90px, 14cqi, 170px); right: -2%; top: -6%; z-index: 1 }
-
 /* Places table: where groups meet */
 .table-wrap { overflow-x: auto }
 .hubs { width: 100%; border-collapse: collapse; font-size: 16px }
@@ -307,7 +300,6 @@
 .notes { font-size: 14.5px; color: var(--muted); margin: 0; padding: 16px 0 0 20px; display: grid; gap: 6px; border-top: 1px solid var(--rule) }
 
 @container (max-width: 800px) {
-  .prints > .seal { width: 80px; right: 0; top: -4% }
   .hero-split .flock { left: auto; right: var(--gutter); top: 12px; width: 110px }
   .hero-banner > img { aspect-ratio: 4 / 3 }
   .steps, .voices, .issue-hero, .spread, .whitepaper { grid-template-columns: 1fr }
@@ -326,7 +318,12 @@
   .hero-split, .page-hero, .statement, .selected, .object-feature, .engage, .band { grid-template-columns: 1fr }
   .pathways { grid-template-columns: 1fr 1fr }
   .events { grid-template-columns: 1fr }
-  .selected .picture, .night .seal-corner { display: none }
+  .night .seal-corner { display: none }
+  .selected .picture { display: none }
+  .selected li:has(> .pic) { grid-template-columns: 88px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 18px; align-items: start }
+  .selected li:has(> .pic) > * { grid-column: 2 }
+  .selected li > .pic { display: block; grid-column: 1; grid-row: 1 / span 3; width: 88px; aspect-ratio: 4 / 5; object-fit: cover }
+  .selected li b { opacity: 1 }
   .calendar .row { grid-template-columns: 1fr; gap: 4px }
   .site-footer { grid-template-columns: 1fr 1fr }
   .contents li { grid-template-columns: 1fr auto }
@@ -334,6 +331,15 @@
 }
 @container (max-width: 480px) {
   .pathways, .site-footer { grid-template-columns: 1fr }
+}
+/* Touch screens of any width: no hover to swap the picture, so each item shows its own */
+@media (hover: none) {
+  .selected .picture { display: none }
+  .selected li:has(> .pic) { grid-template-columns: 88px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 18px; align-items: start }
+  .selected li:has(> .pic) > * { grid-column: 2 }
+  .selected li > .pic { display: block; grid-column: 1; grid-row: 1 / span 3; width: 88px; aspect-ratio: 4 / 5; object-fit: cover }
+  .selected li b { opacity: 1 }
+  .selected { grid-template-columns: 1fr }
 }
 @media (prefers-reduced-motion: reduce) {
   .pathway img, .selected li b { transition: none }

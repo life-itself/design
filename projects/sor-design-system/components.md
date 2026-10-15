@@ -2,7 +2,7 @@
 
 Every component in [system/components.css](system/components.css), with when to use it and the HTML to copy. See them all rendered in [guide.html](guide.html#components), and in whole pages in [examples/](examples/). Part of the [SoR design system](README.md); start from [BUILD.md](BUILD.md).
 
-<iframe class="specimen" src="specimens/components.html" style="aspect-ratio:1000/2435" loading="lazy" title="Components, rendered"></iframe>
+<iframe class="specimen" src="specimens/components.html" style="aspect-ratio:1000/2426" loading="lazy" title="Components, rendered"></iframe>
 
 Edit the readable source `system/components.src.css`, then run `python3 system/build/build-css.py`.
 
@@ -119,7 +119,7 @@ When: the four ways to take part. Each keeps its seed (Gather sunflower, Practis
 
 ## Selected work (night)
 
-When: the page's one deep section: podcast, essays, art. Hover or focus a row to change the picture (`sor.js`).
+When: the page's one deep section: podcast, essays, art. Hover or focus a row to change the picture (`sor.js`). On phones and touch screens, where there is no hover, each row shows its own picture beside it instead (`sor.js` adds it from `data-img`).
 
 ```html
 <section class="night gutter">
@@ -245,8 +245,7 @@ Copy the markup from the example pages named.
 | Class | When | Example |
 |---|---|---|
 | `.actions` | A wrapping row of buttons | gatherings, magazine |
-| `.prints` | Two photographs overlapping, optional `.seal` in the corner: an events hero. Built on the retired postcard `.print`: avoid on new pages | [gatherings.html](examples/web/gatherings.html) |
-| `.hero-split .flock` | A swallow flock inside a split hero | gatherings |
+| `.hero-split .flock` | A swallow flock inside a split hero | [gatherings.html](examples/web/gatherings.html) |
 | `.swallows` | A small inline pair of swallows above a line | gatherings |
 | `.table-wrap` + `.hubs` | "Where we gather" table; rows stack on phones | gatherings |
 | `.hero-banner` | Full-bleed photo on night, label and title set low left; follow with `.tear--bottom` | [join.html](examples/web/join.html) |

@@ -46,6 +46,8 @@ python3 system/build/build-specimens.py && python3 system/build/build-galleries.
 
 Keep the workflow's build steps in step with this list. The gallery builder makes thumbnails with ImageMagick (`magick`), or `sips` on macOS.
 
+When the Wisdom paper is rebuilt, re-render the print example's page images with `python3 examples/print/build.py` (needs `pdftoppm`; check the page numbers in it first); it is not part of the site build.
+
 `build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, graphics galleries, system code and images and examples. It leaves out `moodboard/` and `archive/`: those are the working record and stay on GitHub, and links to `archive/` from pages are rewritten to their GitHub addresses. It also rewrites `.md` links in HTML pages to Flowershow page URLs, and gives the guide and every example a small fixed link back to the site.
 
 ## Code
