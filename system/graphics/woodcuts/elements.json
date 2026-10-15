@@ -1,0 +1,395 @@
+{
+ "title": "Woodcuts",
+ "family": "woodcut",
+ "render": "inline",
+ "lede": "Woodcut graphics drawn in code: a black shape, white carved lines and a slightly rough printed edge. Swallows, mountains, leaves, wind, fruit, people in a circle, seeds and sprouts. Every file is an SVG on a transparent ground, and its ink follows the page's text colour.",
+ "use_for": "Punctuation anywhere: one per section, beside a heading, a quote or a list.",
+ "colour_rule": "Ink of the ground: ink on light grounds, chalk on night, or one of the three illustration inks. The red seeds are the one red graphic; keep them occasional.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight",
+  "night"
+ ],
+ "registers": [
+  "Study",
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "SVG",
+ "rights": "ours",
+ "notes": "The carved lines are real cut-outs: the ground shows through them, as in a print.",
+ "cover": [
+  "swallow-bold",
+  "mountain-peak",
+  "leaf-ginkgo",
+  "fruit-pomegranate",
+  "circle-of-chairs-above",
+  "sprout-from-soil"
+ ],
+ "elements": [
+  {
+   "slug": "swallow-flight",
+   "title": "Swallow in flight",
+   "kind": "swallow",
+   "desc": "The main woodcut swallow, side view in flight (used on the website mockups).",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "swallow-flight"
+    }
+   ]
+  },
+  {
+   "slug": "swallow-above",
+   "title": "Swallow from above",
+   "kind": "swallow",
+   "desc": "Swallow seen from above, wings spread. Still a little moth-like: prefer the flight or bold swallow.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "swallow-above"
+    }
+   ]
+  },
+  {
+   "slug": "swallow-perched",
+   "title": "Swallow perched",
+   "kind": "swallow",
+   "desc": "Swallow perched on a branch. Reads more like a generic songbird: prefer the flight or bold swallow.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "swallow-perched"
+    }
+   ]
+  },
+  {
+   "slug": "swallow-bold",
+   "title": "Bold swallow",
+   "kind": "swallow",
+   "desc": "The main swallow as a bold linocut with a few strong cuts.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "swallow-bold"
+    }
+   ]
+  },
+  {
+   "slug": "mountain-peak",
+   "title": "Snow peak",
+   "kind": "mountain",
+   "desc": "A single snow peak.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "mountain-peak"
+    }
+   ]
+  },
+  {
+   "slug": "mountain-range",
+   "title": "Mountain range",
+   "kind": "mountain",
+   "desc": "A range of peaks with mist.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "mountain-range"
+    }
+   ]
+  },
+  {
+   "slug": "mountain-moon",
+   "title": "Mountain and moon",
+   "kind": "mountain",
+   "desc": "A mountain with a rising moon.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "mountain-moon"
+    }
+   ]
+  },
+  {
+   "slug": "leaf-single",
+   "title": "Leaf",
+   "kind": "leaf",
+   "desc": "A leaf with its veins.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "leaf-single"
+    }
+   ]
+  },
+  {
+   "slug": "leaf-ginkgo",
+   "title": "Ginkgo leaf",
+   "kind": "leaf",
+   "desc": "A ginkgo leaf.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "leaf-ginkgo"
+    }
+   ]
+  },
+  {
+   "slug": "leaf-sprig",
+   "title": "Sprig",
+   "kind": "leaf",
+   "desc": "A stem with five leaves.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "leaf-sprig"
+    }
+   ]
+  },
+  {
+   "slug": "wind-gusts",
+   "title": "Gusts",
+   "kind": "wind",
+   "desc": "Curling gusts of wind.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "wind-gusts"
+    }
+   ]
+  },
+  {
+   "slug": "wind-leaves",
+   "title": "Wind and leaves",
+   "kind": "wind",
+   "desc": "Wind carrying leaves.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "wind-leaves"
+    }
+   ]
+  },
+  {
+   "slug": "fruit-apple",
+   "title": "Apple",
+   "kind": "fruit",
+   "desc": "Apple with a leaf.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "fruit-apple"
+    }
+   ]
+  },
+  {
+   "slug": "fruit-pear",
+   "title": "Pear",
+   "kind": "fruit",
+   "desc": "Pear.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "fruit-pear"
+    }
+   ]
+  },
+  {
+   "slug": "fruit-pomegranate",
+   "title": "Pomegranate",
+   "kind": "fruit",
+   "desc": "Pomegranate cut open, full of seeds.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "fruit-pomegranate"
+    }
+   ]
+  },
+  {
+   "slug": "fruit-cherries",
+   "title": "Cherries",
+   "kind": "fruit",
+   "desc": "A pair of cherries.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "fruit-cherries"
+    }
+   ]
+  },
+  {
+   "slug": "circle-of-chairs",
+   "title": "Circle of chairs",
+   "kind": "people",
+   "desc": "People sitting on chairs in a circle, around a small fire.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "circle-of-chairs"
+    }
+   ]
+  },
+  {
+   "slug": "circle-of-chairs-above",
+   "title": "Circle from above",
+   "kind": "people",
+   "desc": "The same circle seen from above, carved into a dark floor.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "circle-of-chairs-above"
+    }
+   ]
+  },
+  {
+   "slug": "seeds-red",
+   "title": "Seeds in red",
+   "kind": "seeds",
+   "desc": "The same seeds in the logo and link red (#E5201C).",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "red",
+     "name": "Logo red",
+     "hex": "#e5201c",
+     "file": "seeds-red"
+    }
+   ],
+   "wide": true
+  },
+  {
+   "slug": "seeds",
+   "title": "Seeds and clusters",
+   "kind": "seeds",
+   "desc": "The woodcut seeds and seed clusters (sunflower, bean, maple key, acorn, pumpkin, stone, wheat, dandelion; spiral, scatter, row).",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "seeds"
+    }
+   ],
+   "wide": true
+  },
+  {
+   "slug": "leaves-rising",
+   "title": "Leaves rising",
+   "kind": "leaves in the air",
+   "desc": "Three leaves rising on the air, large to small, like the swallow flock.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "leaves-rising"
+    }
+   ]
+  },
+  {
+   "slug": "leaves-falling",
+   "title": "Leaves falling",
+   "kind": "leaves in the air",
+   "desc": "Five leaves tumbling down, some turned edge-on.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "leaves-falling"
+    }
+   ]
+  },
+  {
+   "slug": "sprout-from-soil",
+   "title": "Sprout from the soil",
+   "kind": "sprout",
+   "desc": "A sprout breaking out of a mound of soil, with the seed, roots and buried shoot carved into it.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "sprout-from-soil"
+    }
+   ]
+  },
+  {
+   "slug": "sprout-growing",
+   "title": "Sprout growing",
+   "kind": "sprout",
+   "desc": "The same sprout growing in five stages: seed, hooked shoot, closed leaves, open leaves, first true leaves.",
+   "source": "Drawn in code (wc.py)",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "sprout-growing"
+    }
+   ],
+   "wide": true
+  }
+ ]
+}

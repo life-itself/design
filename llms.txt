@@ -17,9 +17,9 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [colour.md](https://design.seedsofrenaissance.org/colour.md): grounds, inks, the one accent and the illustration inks for graphics, with roles and rules
 - [type.md](https://design.seedsofrenaissance.org/type.md): the four faces, the scale, and why
 - [layout.md](https://design.seedsofrenaissance.org/layout.md): grounds and rhythm, torn edges, grid and spacing
-- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): the graphics library: woodcut swallow, seal, seeds and clusters, animals, mountains, botanicals, washes, geometry, marks and prints; what each is for, its colours and its gallery
+- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): the graphics library: the sprite (swallow, seal, seeds), woodcuts, animals, prints, botanicals, washes, line figures and marks, mountains; what each is for, its colours, grounds and rights, and a gallery per set (graphics/<set>). Machine-readable: system/graphics/<set>/elements.json
 - [photography.md](https://design.seedsofrenaissance.org/photography.md): what to choose and avoid (all current photos are placeholders)
-- [logo.md](https://design.seedsofrenaissance.org/logo.md): the chosen logo, colourways, lockups, files and placement; every file shown in logos.html
+- [logo.md](https://design.seedsofrenaissance.org/logo.md): the chosen logo, colourways, lockups, files and placement; every file shown on the logo files page (logos.md)
 - [components.md](https://design.seedsofrenaissance.org/components.md): every component, when to use it, HTML to copy
 
 ## Guides by kind
@@ -38,6 +38,7 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [system/tokens.css](https://design.seedsofrenaissance.org/system/tokens.css): every colour, face, size and space
 - [system/components.src.css](https://design.seedsofrenaissance.org/system/components.src.css): components, readable source
 - [system/components.css](https://design.seedsofrenaissance.org/system/components.css): components, built (link this one)
+- [system/graphics/README.md](https://design.seedsofrenaissance.org/system/graphics/README.md): the graphics library files and the elements.json schema; each set at system/graphics/<set>/elements.json
 
 ## Optional
 

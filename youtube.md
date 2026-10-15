@@ -48,6 +48,6 @@ Tokens `--thumb-*` in [system/tokens.css](system/tokens.css) and the `.thumb` co
 - **Lower third:** a torn white slip with the podcast in Apfel, the guest's name in Polyamine and one line about them.
 - **Links:** Instagram @seedsofrenaissance · Facebook facebook.com/seeds0frenaissance · X @SeedRenaissance · LinkedIn linkedin.com/company/seedsofrenaissance · Linktree linktr.ee/seedsofrenaissance · Website secondrenaissance.net · YouTube and Substack. YouTube shows up to 14 links with custom titles.
 
-Earlier channel directions (Uriel, round 4, before the current system): [archive/youtube-channel-directions-round-4.html](archive/youtube-channel-directions-round-4.html).
+Earlier channel directions (Uriel, round 4, before the current system): [archive/youtube-channel-directions-round-4.html](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/youtube-channel-directions-round-4.html).
 
 Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

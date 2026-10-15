@@ -1,0 +1,226 @@
+{
+ "title": "Sprite",
+ "family": "woodcut",
+ "render": "symbol",
+ "lede": "The swallow, the seal, the seeds and three seed clusters as inline SVG symbols. Include system/graphics.js at the top of the body, then draw one with <svg><use href=\"#id\"/></svg>. The four pathway seeds stay with their pathways everywhere: site, thumbnails, slides.",
+ "use_for": "Site furniture: the hero flock, the closing seal, pathway seeds, dividers.",
+ "colour_rule": "Ink of the ground (currentColor): ink on light grounds, chalk on night.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight",
+  "night"
+ ],
+ "registers": [
+  "Study",
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "Inline SVG symbols",
+ "rights": "ours",
+ "cover": [
+  "wsw",
+  "seal",
+  "s-sunflower",
+  "s-wheat",
+  "s-bean",
+  "s-samara"
+ ],
+ "elements": [
+  {
+   "slug": "wsw",
+   "title": "Swallow",
+   "kind": "swallow",
+   "desc": "The swallow. Single, or three in flight as a flock over a hero (.flock).",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "wsw"
+    }
+   ]
+  },
+  {
+   "slug": "seal",
+   "title": "Swallow seal",
+   "kind": "seal",
+   "desc": "Closes a long text (.seal), or sits in the corner of the night section (.seal-corner).",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "seal"
+    }
+   ]
+  },
+  {
+   "slug": "s-sunflower",
+   "title": "Sunflower seed",
+   "kind": "pathway seed",
+   "desc": "The seed for Gather.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-sunflower"
+    }
+   ]
+  },
+  {
+   "slug": "s-wheat",
+   "title": "Wheat",
+   "kind": "pathway seed",
+   "desc": "The seed for Practise.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-wheat"
+    }
+   ]
+  },
+  {
+   "slug": "s-bean",
+   "title": "Bean",
+   "kind": "pathway seed",
+   "desc": "The seed for Belong.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-bean"
+    }
+   ]
+  },
+  {
+   "slug": "s-samara",
+   "title": "Maple key",
+   "kind": "pathway seed",
+   "desc": "The seed for Seed / Gardens of Change.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-samara"
+    }
+   ]
+  },
+  {
+   "slug": "s-acorn",
+   "title": "Acorn",
+   "kind": "seed",
+   "desc": "Free to use.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-acorn"
+    }
+   ]
+  },
+  {
+   "slug": "s-pumpkin",
+   "title": "Pumpkin seed",
+   "kind": "seed",
+   "desc": "Free to use.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-pumpkin"
+    }
+   ]
+  },
+  {
+   "slug": "s-stone",
+   "title": "Stone fruit",
+   "kind": "seed",
+   "desc": "Free to use.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-stone"
+    }
+   ]
+  },
+  {
+   "slug": "s-dandelion",
+   "title": "Dandelion",
+   "kind": "seed",
+   "desc": "Free to use.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "s-dandelion"
+    }
+   ]
+  },
+  {
+   "slug": "c-spiral",
+   "title": "Sunflower spiral",
+   "kind": "cluster",
+   "desc": "Behind a page title (.page-hero .spiral).",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "c-spiral"
+    }
+   ]
+  },
+  {
+   "slug": "c-scatter",
+   "title": "A handful scattered",
+   "kind": "cluster",
+   "desc": "Above an interlude.",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "c-scatter"
+    }
+   ]
+  },
+  {
+   "slug": "c-row",
+   "title": "A sown row",
+   "kind": "cluster",
+   "desc": "A divider (.seed-row).",
+   "source": "system/graphics.svg",
+   "versions": [
+    {
+     "ink": "ground",
+     "name": "Ink of the ground",
+     "hex": null,
+     "file": "c-row"
+    }
+   ]
+  }
+ ]
+}

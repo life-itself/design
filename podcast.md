@@ -15,7 +15,7 @@ The podcast is **Seeds of Renaissance**: one name, one feed, no named stations. 
 All podcast images share one ground:
 
 - **Sunlight**, the system's pale yellow (`--sunlight`, #fbefc4), flat. Chosen over plain white (too stark, and lost on YouTube's white page). A **paper-to-sunlight wash** (white behind the words, warm towards the bottom right) is the gentler alternative; both kits include it. Nothing behind the words.
-- **The black swallows** (the woodcut flock, `system/prints/elements/swallows-flock-engraving-black.png`) rising from the **bottom-left corner**, cropped by the edges so the flock is still arriving.
+- **The black swallows** (the woodcut flock, `system/graphics/prints/elements/swallows-flock-engraving-black.png`) rising from the **bottom-left corner**, cropped by the edges so the flock is still arriving.
 - **The logo's fingerprints**, without the bird (`system/img/fingerprints-red.png`), faded to **20%** around the birds and filling the corner. They fade out before they reach the words.
 - **The logo**: the horizontal lockup, mark and name, straight on the ground, **no disc**. On podcast images it is followed by **PODCAST** on the same line, in Polyamine at the height of the name's capitals. It always sits **under the guest's name**.
 
@@ -76,6 +76,6 @@ Apple Podcasts (and Spotify for video episodes) can show a square image per epis
 - **Swallow engraving:** the flock was traced from a web image and its rights are not cleared. Check before publishing anything that uses it.
 - **Guests:** the photos and words on the examples are placeholders; use the real guest and episode.
 
-How the cover was arrived at (versions A–D, sixteen backgrounds, the swallows versions): [archive/podcast-thumbnails-2026-10/](archive/podcast-thumbnails-2026-10/README.md).
+How the cover was arrived at (versions A–D, sixteen backgrounds, the swallows versions): [archive/podcast-thumbnails-2026-10/](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/podcast-thumbnails-2026-10/README.md).
 
 Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

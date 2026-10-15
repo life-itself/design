@@ -92,4 +92,4 @@ Draw tight; the margin is added on export. `write_figure()` in `system/outline.p
 - [ ] Signed bottom right, the content's right edge lined up with the signature's.
 - [ ] Exported with `write_figure()`: tight SVG for the page, padded PNG for sharing.
 
-How these rules were reached, with the options tried: [design system plan](archive/design-system-plan-2026-10.md#working-through-publication-branding-2026-10-07) and the tryouts in `archive/diagrams-*-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)
+How these rules were reached, with the options tried: [design system plan](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/design-system-plan-2026-10.md#working-through-publication-branding-2026-10-07) and the tryouts in `archive/diagrams-*-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

@@ -1,6 +1,6 @@
 # Podcast thumbnail: Canva kit
 
-Everything needed to make a Seeds of Renaissance podcast thumbnail in Canva: the black swallows rising from the bottom-left corner through the logo's fingerprints, faded, on sunlight; the quote, the guest's name and the logo above them; the guest on the right. Chosen 12–13 October 2026. The same ground is used for the [Instagram posts](../../social/instagram/README.md). The exploration that led here is archived in [archive/podcast-thumbnails-2026-10/](../../../archive/podcast-thumbnails-2026-10/README.md).
+Everything needed to make a Seeds of Renaissance podcast thumbnail in Canva: the black swallows rising from the bottom-left corner through the logo's fingerprints, faded, on sunlight; the quote, the guest's name and the logo above them; the guest on the right. Chosen 12–13 October 2026. The same ground is used for the [Instagram posts](../../social/instagram/README.md). The exploration that led here is archived in [archive/podcast-thumbnails-2026-10/](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/podcast-thumbnails-2026-10/README.md).
 
 ![The finished thumbnail](png/example-one-guest.png)
 

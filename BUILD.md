@@ -52,6 +52,6 @@ Everything that exists, by kind: [examples.md](examples.md).
 - [layout.md](layout.md): grounds, rhythm, torn edges, grid and spacing
 - [graphics.md](graphics.md): the graphics library: woodcuts, animals, mountains, botanicals, washes, geometry, marks and prints, with their galleries
 - [photography.md](photography.md): what to choose and avoid
-- [logo.md](logo.md): versions and placement; every file in [logos.html](logos.html)
+- [logo.md](logo.md): versions and placement; every file on the [logo files](logos.md) page
 - [brand.md](brand.md): who we are, what we offer, who we speak to
 - [components.md](components.md): every component with HTML

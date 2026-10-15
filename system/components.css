@@ -471,8 +471,8 @@
 .chan-banner__flock { position: absolute; left: 90px; top: calc(50% - 170px); width: 360px; height: auto; color: currentColor }
 .chan-banner__range {
   position: absolute; right: 36px; top: calc(50% + var(--yt-strip-h) / 2 - 270px); width: 432px; height: 270px; background: currentColor;
-  -webkit-mask: url("woodcuts/mountain-range.svg") center bottom / contain no-repeat;
-          mask: url("woodcuts/mountain-range.svg") center bottom / contain no-repeat;
+  -webkit-mask: url("graphics/woodcuts/elements/mountain-range.svg") center bottom / contain no-repeat;
+          mask: url("graphics/woodcuts/elements/mountain-range.svg") center bottom / contain no-repeat;
 }
 .chan-guides { display: none; position: absolute; inset: 0; z-index: 5; pointer-events: none; font-family: var(--font-label); font-size: 30px; font-weight: 700; letter-spacing: var(--track-meta); text-transform: uppercase }
 .show-guides .chan-guides { display: block }

@@ -1,0 +1,680 @@
+{
+ "title": "Animals",
+ "family": "woodcut",
+ "lede": "Animal woodcuts, linocuts and engravings, cut out of their paper. Each comes in black and the three illustration inks, as a traced SVG and a transparent 1000px PNG; the snake and the butterflies also in their original colours, PNG only.",
+ "use_for": "A creature to carry a story: social posts, podcast and magazine pages, section openers.",
+ "colour_rule": "Black or one of the three illustration inks; a few also in their original colours. Never retint them in other colours.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "SVG and PNG",
+ "rights": "not-cleared",
+ "cover": [
+  "fox-sitting-linocut",
+  "swan-wings-open-linocut",
+  "barn-owl-woodcut",
+  "hedgehog-curled-linocut",
+  "swallow-flight-linocut",
+  "wild-boar-linocut"
+ ],
+ "elements": [
+  {
+   "slug": "fox-sitting-linocut",
+   "title": "Fox sitting",
+   "kind": "linocut",
+   "desc": "A fox sitting upright and looking up, solid black with the chest, ear and tail tip left uncut.",
+   "source": "Mood board 01",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "foxes-walking-engraving",
+   "title": "Two foxes walking",
+   "kind": "engraving, watermarked stock (draft)",
+   "desc": "Two foxes trotting one after the other in fine broken line.",
+   "source": "Mood board 02",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ],
+   "rights": "draft"
+  },
+  {
+   "slug": "swan-wings-open-linocut",
+   "title": "Swan, wings open",
+   "kind": "linocut",
+   "desc": "A swan with an S-curved neck and wings spread, white cut feather lines.",
+   "source": "Mood board 03",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "bird-flowering-stem-linocut",
+   "title": "Bird with a flowering stem",
+   "kind": "linocut",
+   "desc": "A blackbird diving with a long looping stem of bell flowers in its beak.",
+   "source": "Mood board 04",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "snail-engraving",
+   "title": "Snail",
+   "kind": "wood engraving",
+   "desc": "A snail reaching out with its horns, the shell in fine engraved spirals and the body stippled.",
+   "source": "Mood board 05",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "barn-owl-framed-woodcut",
+   "title": "Barn owl, framed",
+   "kind": "woodcut",
+   "desc": "A barn owl standing face-on on a rock, inside its double frame with the H·R monogram.",
+   "source": "Mood board 06",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "barn-owl-woodcut",
+   "title": "Barn owl",
+   "kind": "woodcut",
+   "desc": "The same owl on its own, frame and monogram removed.",
+   "source": "Mood board 06",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "barn-owl-flying-stamp",
+   "title": "Barn owl in flight",
+   "kind": "rubber stamp",
+   "desc": "A barn owl seen from above, wings swept wide, in fine line with dotted feathers.",
+   "source": "Mood board 07",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "bear-standing-woodcut",
+   "title": "Bear standing",
+   "kind": "woodcut",
+   "desc": "A bear up on its hind legs, looking up, with wood grain streaking through the fur.",
+   "source": "Mood board 08",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "wild-boar-linocut",
+   "title": "Wild boar",
+   "kind": "linocut",
+   "desc": "A wild boar trotting, its bristly coat in rows of short white cuts.",
+   "source": "Mood board 09",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "swallow-flight-linocut",
+   "title": "Swallow in flight",
+   "kind": "linocut",
+   "desc": "A swallow swooping, wings wide and tail forked. Bird only.",
+   "source": "Mood board 10",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "swallow-flight-gouges-linocut",
+   "title": "Swallow in flight, with gouges",
+   "kind": "linocut",
+   "desc": "The same swallow, keeping the gouge marks that fly out around it.",
+   "source": "Mood board 10",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "hedgehog-curled-linocut",
+   "title": "Hedgehog asleep",
+   "kind": "linocut",
+   "desc": "A hedgehog curled into an oval, asleep, with fine white spines sweeping round its body.",
+   "source": "Mood board 11",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  },
+  {
+   "slug": "snake-coiled-watercolour",
+   "title": "Coiled snake",
+   "kind": "natural history watercolour",
+   "desc": "A snake rising from a double coil, its scales in dark green over a pale belly. From a watercolour, so the ink versions print in two tones: solid scales over a light tint of the same ink.",
+   "source": "Mood board 12",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "colour",
+     "name": "Original colours",
+     "hex": null,
+     "note": "watercolour"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-dark-spotted-photo",
+   "title": "Butterfly, dark with spotted hindwings",
+   "kind": "photographic plate",
+   "desc": "A dark birdwing-like butterfly, veined forewings over pale hindwings ringed with black spots. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-swallowtail-striped-photo",
+   "title": "Butterfly, striped swallowtail",
+   "kind": "photographic plate",
+   "desc": "A pale swallowtail with bold black stripes across the forewings and tailed hindwings. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-pale-tailed-photo",
+   "title": "Butterfly, pale with one tail",
+   "kind": "photographic plate",
+   "desc": "A pale butterfly with dark wingtips, one long tail on the lower left wing. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-dark-edged-photo",
+   "title": "Butterfly, pale with dark edges",
+   "kind": "photographic plate",
+   "desc": "Pale wings with dark veins and heavy black borders around the hindwings. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-banded-photo",
+   "title": "Butterfly, banded",
+   "kind": "photographic plate",
+   "desc": "Broad dark bands across pale wings, with spotted hindwings. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "butterfly-spotted-photo",
+   "title": "Butterfly, spotted",
+   "kind": "photographic plate",
+   "desc": "Pale wings scattered with round black spots and a beaded black border. Lettering across the source removed. Printed in three tones of each ink.",
+   "source": "Mood board 13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    },
+    {
+     "ink": "original",
+     "name": "Original greys",
+     "hex": null,
+     "note": "photograph"
+    }
+   ]
+  },
+  {
+   "slug": "loon-swimming-linocut",
+   "title": "Loon",
+   "kind": "linocut",
+   "desc": "A loon on the water, its back a grid of small white cuts, with curved ripples beneath.",
+   "source": "Mood board 14",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "blue",
+     "name": "Blue",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "green",
+     "name": "Deep green",
+     "hex": "#1f3d2b"
+    },
+    {
+     "ink": "mustard",
+     "name": "Mustard",
+     "hex": "#c9a227"
+    }
+   ]
+  }
+ ]
+}

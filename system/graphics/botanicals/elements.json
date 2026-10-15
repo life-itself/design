@@ -1,0 +1,125 @@
+{
+ "title": "Botanicals",
+ "family": "painted",
+ "lede": "Botanical illustrations in colour, cut out of their paper: red alstroemeria, crimson flax, two tulips, spotted and star orchids, and a scroll painting of peaches. Long side up to 1000px, PNG only: a trace would flatten the washes and hatching.",
+ "use_for": "Colour and life on gathering and magazine pages; one plant per section.",
+ "colour_rule": "As painted. Never retint them, and never use their colours on other graphics.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "PNG",
+ "rights": "not-cleared",
+ "elements": [
+  {
+   "slug": "alstroemeria-print",
+   "title": "Red alstroemeria",
+   "kind": "colour print",
+   "desc": "Red blooms and pink buds on slender stems, with hatched green leaves, in the manner of a colour woodblock print.",
+   "source": "Mood board bfi-01",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "alstroemeria-print"
+    }
+   ]
+  },
+  {
+   "slug": "crimson-flax-plate",
+   "title": "Crimson flax",
+   "kind": "vintage plate",
+   "desc": "Two crimson flowers and a bud on thin grey-green stems, from an old colour plate. Caption removed.",
+   "source": "Mood board bfi-02",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "crimson-flax-plate"
+    }
+   ]
+  },
+  {
+   "slug": "broken-tulips-watercolour",
+   "title": "Broken tulips",
+   "kind": "watercolour",
+   "desc": "A white tulip flamed with red and a deep burgundy one, on long stems with soft green leaves.",
+   "source": "Mood board bfi-03",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "broken-tulips-watercolour"
+    }
+   ]
+  },
+  {
+   "slug": "open-tulip-watercolour",
+   "title": "Open tulip",
+   "kind": "watercolour",
+   "desc": "A single tulip fully open, pink fading to yellow, with dark stamens and one curling olive leaf.",
+   "source": "Mood board bfi-04",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "open-tulip-watercolour"
+    }
+   ]
+  },
+  {
+   "slug": "spotted-orchids-lithograph",
+   "title": "Spotted orchids",
+   "kind": "lithograph",
+   "desc": "Three spotted orchid blooms in yellow and maroon, with twisting green leaves.",
+   "source": "Mood board bfi-05",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "spotted-orchids-lithograph"
+    }
+   ]
+  },
+  {
+   "slug": "pale-star-orchid-lithograph",
+   "title": "Pale star orchid",
+   "kind": "lithograph",
+   "desc": "A hanging spray of pale yellow star orchids beside dark strap leaves and a pseudobulb.",
+   "source": "Mood board bfi-06",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "pale-star-orchid-lithograph"
+    }
+   ]
+  },
+  {
+   "slug": "chinese-peaches-scroll",
+   "title": "Chinese peaches",
+   "kind": "scroll painting",
+   "desc": "Three red-flushed peaches on a gnarled branch with curling grey-green leaves. Inscription and seals removed.",
+   "source": "Mood board bfi-08",
+   "versions": [
+    {
+     "ink": "painted",
+     "name": "As painted",
+     "hex": null,
+     "file": "chinese-peaches-scroll"
+    }
+   ]
+  }
+ ]
+}

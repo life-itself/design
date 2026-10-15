@@ -61,4 +61,4 @@ The rules that carry the feel, in short. When a new page is in doubt, check it a
 
 ## References
 
-Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [the archived plan](archive/design-system-plan-2026-10.md#references).
+Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [the archived plan](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/design-system-plan-2026-10.md#references).

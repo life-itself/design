@@ -1,0 +1,224 @@
+{
+ "title": "Mountains",
+ "family": "landscape",
+ "lede": "Blue pen, brush and linocut mountains, cut out of their paper: a high peak, a small peak, a peak above mist, a range with contour lines, a 1934 ridge sketch, a brush ridge, and a linocut of peaks over waves. Each in the blue it was drawn in, cobalt and black; the linocut also in three lighter blues. A candidate look for a sub-brand.",
+ "use_for": "Landscape and distance: a sub-brand look, covers, and grounds for titles.",
+ "colour_rule": "The blue each was drawn in, cobalt or black. The drawn blues are for the mountains only: don't retint the mountains, and don't print other graphics in those blues.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Conversation",
+  "Gathering"
+ ],
+ "formats": "PNG; the linocut also SVG",
+ "rights": "not-cleared",
+ "notes": "Pen and brush drawings are PNG only: their transparency follows the ink, so light hatching stays light.",
+ "elements": [
+  {
+   "slug": "high-peak-pen",
+   "title": "High peak",
+   "kind": "pen hatching",
+   "desc": "A single steep peak in dense ballpoint hatching, with clouds and a stand of pines.",
+   "source": "Mood board 01",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Pen blue",
+     "hex": "#10248a"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "small-peak-pen",
+   "title": "Small peak",
+   "kind": "pen hatching",
+   "desc": "A compact peak in quick violet-blue ballpoint strokes. Holds up at small sizes.",
+   "source": "Mood board 04",
+   "versions": [
+    {
+     "ink": "violet",
+     "name": "Violet blue",
+     "hex": "#1d14b8"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "peak-grid",
+   "title": "Grid peak",
+   "kind": "fine line",
+   "desc": "A tall peak above a band of mist, in fine lines. The grid paper behind it is removed and the base fades out softly.",
+   "source": "Mood board 03",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Deep blue",
+     "hex": "#0b2c8f"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "range-contours-pen",
+   "title": "Contour range",
+   "kind": "pen line",
+   "desc": "A whole range of peaks in pen, with contour lines drifting through the sky. Busy, so best large or as a background.",
+   "source": "Mood board 05",
+   "versions": [
+    {
+     "ink": "navy",
+     "name": "Navy",
+     "hex": "#14245f"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "ridge-1934-pen",
+   "title": "1934 ridge",
+   "kind": "pen hatching",
+   "desc": "A ridge sketched on the spot in parallel hatching, dated 26 September 1934. The handwritten note is removed.",
+   "source": "Mood board 06",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Faded blue",
+     "hex": "#2e3977"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "ridge-brush",
+   "title": "Brush ridge",
+   "kind": "brush and wash",
+   "desc": "A loose ridge in bold brush strokes and watery wash. The paler wash stays semi-transparent, so the ground shows through it.",
+   "source": "Mood board 02",
+   "versions": [
+    {
+     "ink": "ultramarine",
+     "name": "Ultramarine",
+     "hex": "#0f22b5"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    }
+   ]
+  },
+  {
+   "slug": "peaks-waves-linocut",
+   "title": "Peaks and waves",
+   "kind": "linocut",
+   "desc": "Jagged peaks over curling waves, a bold linocut. Ink only: the sky and the map it was printed on are removed. The lighter blues suit pale grounds and backgrounds.",
+   "source": "Mood board 07",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Pen blue",
+     "hex": "#10248a"
+    },
+    {
+     "ink": "cobalt",
+     "name": "Cobalt",
+     "hex": "#03296f"
+    },
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916"
+    },
+    {
+     "ink": "mid-blue",
+     "name": "Mid blue",
+     "hex": "#2f5bc4"
+    },
+    {
+     "ink": "light-blue",
+     "name": "Light blue",
+     "hex": "#6f93dc"
+    },
+    {
+     "ink": "pale-blue",
+     "name": "Pale blue",
+     "hex": "#a9c0ea"
+    }
+   ]
+  },
+  {
+   "slug": "peaks-waves-linocut-map",
+   "title": "Peaks and waves on a map",
+   "kind": "linocut on map",
+   "desc": "The same linocut keeping the old map inside the mountains; only the sky is removed. The black is the original print.",
+   "source": "Mood board 07",
+   "versions": [
+    {
+     "ink": "blue",
+     "name": "Pen blue on map",
+     "hex": "#10248a"
+    },
+    {
+     "ink": "black",
+     "name": "Original print",
+     "hex": null,
+     "note": "original colours"
+    }
+   ]
+  }
+ ]
+}

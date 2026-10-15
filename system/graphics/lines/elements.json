@@ -1,0 +1,283 @@
+{
+ "title": "Line figures and marks",
+ "family": "line",
+ "lede": "Line geometry and printed marks in black: the exact Metatron's cube, the egg of life, a seed rosette, interlaced and knot marks, a kolam line pattern and two checkerboards. 1000px PNGs, with SVGs where they are small and clean.",
+ "use_for": "Structure and quiet order: essays, papers, diagrams, section breaks.",
+ "colour_rule": "Black only (--ink), fixed in the file: they don't follow the page colour or turn chalk on night. Don't tint them.",
+ "grounds": [
+  "white",
+  "paper",
+  "sunlight"
+ ],
+ "registers": [
+  "Study",
+  "Conversation"
+ ],
+ "formats": "PNG; SVG where small",
+ "rights": "not-cleared",
+ "cover": [
+  "metatron-cube",
+  "mark-5312-rings",
+  "egg-of-life",
+  "kolam-knot",
+  "mark-3956-knot",
+  "checkerboard"
+ ],
+ "elements": [
+  {
+   "slug": "metatron-cube",
+   "title": "Metatron’s cube",
+   "kind": "true vector",
+   "desc": "The full cube: thirteen circles joined by every line between their centres, in even black lines. Rebuilt from geometry, so it is exact.",
+   "source": "Mood board bfi-07",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "metatron-cube"
+    }
+   ]
+  },
+  {
+   "slug": "egg-of-life",
+   "title": "Egg of life",
+   "kind": "line figure",
+   "desc": "Seven circles around a central one.",
+   "source": "Mood board bfi-13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "egg-of-life"
+    }
+   ]
+  },
+  {
+   "slug": "metatron-cube-circles",
+   "title": "Metatron’s cube with circles",
+   "kind": "line figure",
+   "desc": "Metatron’s cube drawn with its circles, for a looser look than the exact one.",
+   "source": "Mood board bfi-13",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "metatron-cube-circles"
+    }
+   ]
+  },
+  {
+   "slug": "seed-rosette",
+   "title": "Seed rosette",
+   "kind": "line figure",
+   "desc": "Overlapping circles forming a rosette. PNG only: a trace of the fine lines is heavier than the image.",
+   "source": "Mood board bfi-11",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "seed-rosette"
+    }
+   ]
+  },
+  {
+   "slug": "mark-5312-rings",
+   "title": "Mark 5312",
+   "kind": "interlaced rings",
+   "desc": "Six looping bands, striped, interlaced around a ring of dots.",
+   "source": "Mood board bfi-12",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-5312-rings"
+    }
+   ]
+  },
+  {
+   "slug": "mark-795-bands",
+   "title": "Mark 795",
+   "kind": "interlaced bands",
+   "desc": "Six bold loops interlaced around an open hexagon, with three thin inner lines.",
+   "source": "Mood board bfi-22",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-795-bands"
+    }
+   ]
+  },
+  {
+   "slug": "mark-3956-knot",
+   "title": "Mark 3956",
+   "kind": "five-loop knot",
+   "desc": "Five solid loops woven around a small star-shaped centre.",
+   "source": "Mood board bfi-23",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-3956-knot"
+    }
+   ]
+  },
+  {
+   "slug": "mark-4672-cross",
+   "title": "Mark 4672",
+   "kind": "concentric cross",
+   "desc": "A circle of fine concentric lines around a woven diamond. PNG only: the fine lines make a heavy trace.",
+   "source": "Mood board bfi-24",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-4672-cross"
+    }
+   ]
+  },
+  {
+   "slug": "mark-885-knot",
+   "title": "Mark 885",
+   "kind": "woven knot",
+   "desc": "Four looped bands woven around a central square.",
+   "source": "Mood board bfi-26",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-885-knot"
+    }
+   ]
+  },
+  {
+   "slug": "spiral-knot",
+   "title": "Spiral knot",
+   "kind": "spiral bands",
+   "desc": "Four interlocking spiral bands, in even black lines.",
+   "source": "Mood board bfi-25",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "spiral-knot"
+    }
+   ]
+  },
+  {
+   "slug": "wave-ring",
+   "title": "Wave ring",
+   "kind": "wavy ring",
+   "desc": "An eight-lobed ring of wavy bands, enlarged from a small logo.",
+   "source": "Mood board bfi-27",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "wave-ring"
+    }
+   ]
+  },
+  {
+   "slug": "radial-spiral-4779",
+   "title": "Mark 4779",
+   "kind": "radial spiral",
+   "desc": "Radiating wedges spiralling around an open, notched centre.",
+   "source": "Mood board bfi-29",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "radial-spiral-4779"
+    }
+   ]
+  },
+  {
+   "slug": "kolam-knot",
+   "title": "Kolam knot",
+   "kind": "line pattern",
+   "desc": "A looping line woven around a grid of dots, in the manner of a kolam.",
+   "source": "Mood board bfi-21",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "kolam-knot"
+    }
+   ]
+  },
+  {
+   "slug": "checkerboard",
+   "title": "Checkerboard",
+   "kind": "pattern",
+   "desc": "Black squares with slightly rounded corners, white made transparent.",
+   "source": "Mood board bfi-10",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "checkerboard"
+    }
+   ]
+  },
+  {
+   "slug": "checkerboard-3-rows",
+   "title": "Checkerboard, 3 rows",
+   "kind": "pattern",
+   "desc": "A strip of three rows of twelve checks.",
+   "source": "Mood board bfi-10",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "checkerboard-3-rows"
+    }
+   ]
+  },
+  {
+   "slug": "mark-1268-loops",
+   "title": "Mark 1268",
+   "kind": "ampersand loops",
+   "desc": "Four looping, ampersand-like shapes around a small square, in solid black.",
+   "source": "Mood board bfi-30",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-1268-loops"
+    }
+   ]
+  },
+  {
+   "slug": "mark-4684-rosette",
+   "title": "Mark 4684",
+   "kind": "circle rosette",
+   "desc": "A rosette of overlapping circles in fine black line. PNG only: the fine lines make a heavy trace.",
+   "source": "Mood board bfi-31",
+   "versions": [
+    {
+     "ink": "black",
+     "name": "Black",
+     "hex": "#1b1916",
+     "file": "mark-4684-rosette"
+    }
+   ]
+  }
+ ]
+}

@@ -124,4 +124,4 @@ Which mark goes where: [logo.md](logo.md#which-mark-where).
 - [ ] White pages; red only for links and note marks.
 - [ ] Imprint has the version, licence and how to cite; the back cover the same version.
 
-How these rules were reached: [design system plan](archive/design-system-plan-2026-10.md#working-through-papers-2026-10-07-to-08) and the approved mockups in `archive/print-mockups-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)
+How these rules were reached: [design system plan](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/design-system-plan-2026-10.md#working-through-papers-2026-10-07-to-08) and the approved mockups in `archive/print-mockups-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

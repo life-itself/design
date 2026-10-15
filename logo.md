@@ -1,6 +1,6 @@
 # Logo
 
-A black swallow rising through a radiating circle of red fingerprints: many hands around a bird in flight. Every file, shown on its ground with links: **[logos.html](logos.html)**. Part of the [SoR design system](README.md).
+A black swallow rising through a radiating circle of red fingerprints: many hands around a bird in flight. Every file, shown on its ground with links: **[logo files](logos.md)**. Part of the [SoR design system](README.md).
 
 <iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
 
@@ -21,7 +21,7 @@ A black swallow rising through a radiating circle of red fingerprints: many hand
 
 ## Files
 
-All in [system/logo/](system/logo/README.md); see them in **[logos.html](logos.html)**.
+All in [system/logo/](system/logo/README.md); see them on the **[logo files](logos.md)** page.
 
 | Use | File |
 |---|---|
@@ -62,7 +62,7 @@ On night, use `colour-dark` or `white`; no disc needed.
 
 ## Which mark where
 
-Seeds is the brand. Life Itself, its steward and the authors' home, is credited in text. At most one logo on any surface. Reasoning: [design system plan](archive/design-system-plan-2026-10.md#working-through-publication-branding-2026-10-07).
+Seeds is the brand. Life Itself, its steward and the authors' home, is credited in text. At most one logo on any surface. Reasoning: [design system plan](https://github.com/life-itself/design/blob/main/projects/sor-design-system/archive/design-system-plan-2026-10.md#working-through-publication-branding-2026-10-07).
 
 | Surface | Seeds | Life Itself |
 |---|---|---|
