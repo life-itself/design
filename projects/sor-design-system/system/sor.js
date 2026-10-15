@@ -13,7 +13,7 @@
     items.forEach(function (li) {
       if (li.querySelector('.pic')) return;
       var pic = document.createElement('img');
-      pic.className = 'pic'; pic.loading = 'lazy'; pic.alt = li.dataset.alt || ''; pic.src = li.dataset.img;
+      pic.className = 'pic'; pic.alt = li.dataset.alt || ''; pic.src = li.dataset.img;
       li.insertBefore(pic, li.firstChild);
     });
     items.forEach(function (li) { ['mouseenter', 'focus', 'click'].forEach(function (ev) { li.addEventListener(ev, function () { pick(li) }) }) });
