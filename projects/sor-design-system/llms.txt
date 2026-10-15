@@ -16,7 +16,7 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [colour.md](https://design.seedsofrenaissance.org/colour.md): grounds, inks, the one accent and the illustration inks for graphics, with roles and rules
 - [type.md](https://design.seedsofrenaissance.org/type.md): the four faces, the scale, and why
 - [layout.md](https://design.seedsofrenaissance.org/layout.md): grounds and rhythm, torn edges, grid and spacing
-- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): woodcut swallow, seal, seeds and clusters, the animal woodcuts (gallery at https://design.seedsofrenaissance.org/system/animals/gallery.html), the blue mountains (gallery at https://design.seedsofrenaissance.org/system/mountains/gallery.html), and how to use them
+- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): woodcut swallow, seal, seeds and clusters, the animal woodcuts (gallery at https://design.seedsofrenaissance.org/system/animals/gallery.html), the blue mountains (gallery at https://design.seedsofrenaissance.org/system/mountains/gallery.html), coloured botanicals, watercolour washes, line geometry and marks (galleries at https://design.seedsofrenaissance.org/system/botanicals/gallery.html, /system/washes/gallery.html, /system/geometry/gallery.html and /system/marks/gallery.html), and how to use them
 - [photography.md](https://design.seedsofrenaissance.org/photography.md): what to choose and avoid (all current photos are placeholders)
 - [logo.md](https://design.seedsofrenaissance.org/logo.md): the chosen logo, colourways, lockups, files and placement; every file shown in logos.html
 - [components.md](https://design.seedsofrenaissance.org/components.md): every component, when to use it, HTML to copy

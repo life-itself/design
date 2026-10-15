@@ -1,0 +1,38 @@
+{
+ "title": "Geometry elements",
+ "lede": "Four line figures in black ink (#1b1916) on a transparent ground: the exact Metatron’s cube, the egg of life, a looser Metatron’s cube and a seed rosette. PNGs at 1000px; SVGs where they are small and clean.",
+ "elements": [
+  {
+   "slug": "metatron-cube",
+   "title": "Metatron’s cube",
+   "kind": "true vector",
+   "desc": "The full cube: thirteen circles joined by every line between their centres, in even black lines. Rebuilt from geometry, so it is exact.",
+   "source": "bfi-07",
+   "svg": true
+  },
+  {
+   "slug": "egg-of-life",
+   "title": "Egg of life",
+   "kind": "line figure",
+   "desc": "Seven circles around a central one.",
+   "source": "bfi-13",
+   "svg": true
+  },
+  {
+   "slug": "metatron-cube-circles",
+   "title": "Metatron’s cube with circles",
+   "kind": "line figure",
+   "desc": "Metatron’s cube drawn with its circles, for a looser look than the exact one.",
+   "source": "bfi-13",
+   "svg": true
+  },
+  {
+   "slug": "seed-rosette",
+   "title": "Seed rosette",
+   "kind": "line figure",
+   "desc": "Overlapping circles forming a rosette. PNG only: a trace of the fine lines is heavier than the image.",
+   "source": "bfi-11",
+   "svg": false
+  }
+ ]
+}

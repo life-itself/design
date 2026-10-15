@@ -44,7 +44,7 @@ There is a set in black (ink) and a set in red (`system/woodcuts/seeds-red.svg`,
 
 ## The wider set
 
-All twenty woodcuts (swallows, mountains, leaves, wind, fruit, people in a circle, seeds) are shown on any ground in **[woodcuts.html](woodcuts.html)**. The SVG files, the script that draws them and notes on each are in [system/woodcuts/](system/woodcuts/README.md); any file can be inlined as-is and takes the ink of its ground. Rebuild the page with `python3 system/build-woodcuts.py`. Only the symbols above are in the system sprite so far; add others to `system/graphics.svg` and run `python3 system/build-graphics.py`.
+All twenty-four woodcuts (swallows, mountains, leaves, wind, fruit, people in a circle, seeds, leaves in the air, sprouts) are shown on any ground in **[woodcuts.html](woodcuts.html)**. The SVG files, the script that draws them and notes on each are in [system/woodcuts/](system/woodcuts/README.md); any file can be inlined as-is and takes the ink of its ground. Rebuild the page with `python3 system/build-woodcuts.py`. Only the symbols above are in the system sprite so far; add others to `system/graphics.svg` and run `python3 system/build-graphics.py`.
 
 ## Animals
 
@@ -55,5 +55,23 @@ Animal woodcuts, linocuts and engravings, cut out of their paper: fox, swan, owl
 Blue pen, brush and linocut mountains, cut out of their paper: a high peak, a small peak, a peak above mist, a range with contour lines, a 1934 ridge sketch, a brush ridge, and a linocut of peaks over waves (also on its old map). Each comes in the blue it was drawn in, cobalt and black; the linocut also in three lighter blues. See every version in **[the mountains gallery](system/mountains/gallery.html)**; files, colours and how they were made are in [system/mountains/](system/mountains/README.md). A candidate look for a sub-brand.
 
 The drawn blues are an exception for the mountains only (see [colour](colour.md#illustration-inks-graphics-only)): don't retint them in other colours, and don't print other graphics in those blues. Pen and brush drawings are transparent PNGs whose transparency follows the ink, so light hatching stays light; only the linocut has an SVG. Same rules as above: one per section at most.
+
+## Botanicals
+
+Botanical illustrations in colour, cut out of their paper: red alstroemeria, crimson flax, two tulips, spotted and star orchids and a scroll painting of peaches. Seven elements, long side up to 1000px, PNG only (a trace would flatten the washes and hatching). See them in **[the botanicals gallery](system/botanicals/gallery.html)**; files and sources in [system/botanicals/](system/botanicals/README.md). They keep the colours they were painted in: don't retint them (see [colour](colour.md#illustration-inks-graphics-only)).
+
+## Watercolour washes
+
+Loose watercolour and ink washes: a red bloom, green and blue ink washes, blue flowers, a blue ring, a figure in red and in blue, red blooms and a blue handprint. Nine elements, PNG only. The paint is translucent, so each wash takes the colour of its ground: **use them on light grounds** (white, paper, sunlight); on night they mostly disappear. See **[the washes gallery](system/washes/gallery.html)**; files in [system/washes/](system/washes/README.md).
+
+## Geometry
+
+Line figures in black: the exact Metatron's cube (rebuilt from geometry, so its SVG is tiny), the egg of life, a looser Metatron's cube and a seed rosette. Four elements as 1000px PNGs, with SVGs where they are small. They take the ink of their ground like the woodcuts. See **[the geometry gallery](system/geometry/gallery.html)**; files in [system/geometry/](system/geometry/README.md).
+
+## Marks and patterns
+
+Interlaced and knot marks (rings, bands, spirals, a radial wedge spiral, a wave ring), a kolam line pattern and two checkerboards, in black. Eleven elements as 1000px PNGs, with SVGs where they are small and clean (under 150 KB). See **[the marks gallery](system/marks/gallery.html)**; files in [system/marks/](system/marks/README.md).
+
+**Rules for these four sets** are the same as for the woodcuts: one per section at most, punctuation, not wallpaper. The geometry and marks are black line work, so don't tint them; the botanicals and washes keep their painted colours and are not retinted. Elements are cropped close to their edges, so add space in the layout instead of expecting it in the file.
 
 **Open:** hand-draw the woodcuts, or base them on public-domain prints?

@@ -39,6 +39,7 @@ jobs:
           python3 system/build-specimens.py
           python3 system/animals/build-gallery.py
           python3 system/mountains/build-gallery.py
+          python3 system/build-element-galleries.py
           python3 system/build-site.py
 
       - name: Push site to design-system-site branch

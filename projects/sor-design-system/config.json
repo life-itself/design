@@ -49,6 +49,22 @@
             "href": "/woodcuts.html"
           },
           {
+            "name": "Botanicals",
+            "href": "/system/botanicals/gallery.html"
+          },
+          {
+            "name": "Washes",
+            "href": "/system/washes/gallery.html"
+          },
+          {
+            "name": "Geometry",
+            "href": "/system/geometry/gallery.html"
+          },
+          {
+            "name": "Marks",
+            "href": "/system/marks/gallery.html"
+          },
+          {
             "name": "Photography",
             "href": "/photography"
           },

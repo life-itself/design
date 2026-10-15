@@ -34,7 +34,7 @@ Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflow
 To build locally (for a preview, or to debug the workflow), from `projects/sor-design-system`:
 
 ```bash
-python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-site.py
+python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-element-galleries.py && python3 system/build-site.py
 ```
 
 Keep the workflow's build steps in step with this list. The gallery builders need ImageMagick (`magick`).
@@ -52,6 +52,7 @@ Keep the workflow's build steps in step with this list. The gallery builders nee
 | `system/woodcuts/` | All woodcut SVGs and the script that draws them. Gallery built by `build-woodcuts.py`. |
 | `system/animals/` | Animal elements (SVG + PNG in four inks), `make-element.sh` to cut a new one, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. |
 | `system/mountains/` | Mountain elements (PNG, plus SVG for the linocut) in their drawn blue, cobalt and black, `elements.json`, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. Working record in `archive/mountains-2026-10/`. |
+| `system/botanicals/`, `system/washes/`, `system/geometry/`, `system/marks/` | Four graphic sets (transparent PNGs at 1000px, SVG only where small): each has `elements/`, `elements.json`, a README and a `gallery.html` with gitignored `thumbs/`. One builder for all four: `system/build-element-galleries.py`, with `system/element-gallery-shell.html`. Sources: [moodboard/botanical-flower-illustration](moodboard/botanical-flower-illustration/removal-candidates.md) (images not committed). |
 | `system/sor.js` | Small behaviours (selected-work picker) |
 | `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
 | `system/build-specimens.py` | Cuts guide.html into `specimens/` |

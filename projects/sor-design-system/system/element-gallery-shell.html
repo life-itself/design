@@ -1,0 +1,56 @@
+<title>@@TITLE@@</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+/* Layout: one plate per element on a switchable ground, with file links. Same printed-page look as the animals and mountains galleries; one light look by choice. GENERATED page: edit element-gallery-shell.html and the set's elements.json, then run system/build-element-galleries.py. */
+:root{--white:#ffffff;--paper:#fbfaf6;--sunlight:#fbefc4;--night:#171613;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;--ground:var(--white);
+--serif:"Fraunces",Georgia,serif;--sans:"Bricolage Grotesque",system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans);padding-inline:16px;padding-block:32px 64px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font:600 clamp(32px,6vw,52px)/1.05 var(--serif);margin:0 0 12px;text-wrap:balance}
+.lede{max-width:62ch;color:var(--muted);margin:0 0 16px}
+.sets{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 24px;font-size:14px}
+a{color:var(--ink);text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--paper);border-block:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-bottom:28px}
+.lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--white);color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:36px 20px}
+.tile{margin:0;min-width:0}
+.stage{background:var(--ground);border:1px solid var(--rule);height:300px;display:flex;align-items:center;justify-content:center;padding:18px}
+.stage img{max-width:100%;max-height:100%;object-fit:contain}
+.tile h2{font:600 20px/1.2 var(--serif);margin:12px 0 2px}
+.kind{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.desc{margin:0 0 6px;font-size:14px;max-width:44ch}
+.links{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
+.kb{font-size:12px;color:var(--muted)}
+.cp{font:inherit;font-size:12px;border:1px solid var(--rule);background:var(--white);color:var(--ink);padding:2px 8px;border-radius:999px;cursor:pointer}
+.foot{margin-top:56px;color:var(--muted);font-size:14px;max-width:62ch}
+code{font:12px var(--mono)}
+</style>
+<div class="wrap" id="app" data-ground="white">
+<h1>@@H1@@</h1>
+<p class="lede">@@LEDE@@</p>
+<nav class="sets" aria-label="Element sets">@@SETS@@</nav>
+<div class="bar"><div class="grp"><span class="lab">Ground</span><div class="seg"><button type="button" data-g="white" aria-pressed="true">White</button><button type="button" data-g="paper" aria-pressed="false">Paper</button><button type="button" data-g="sunlight" aria-pressed="false">Sunlight</button><button type="button" data-g="night" aria-pressed="false">Night</button></div></div></div>
+<div class="grid">@@CARDS@@</div>
+<p class="foot">Built from <code>system/@@SET@@/elements.json</code> by <code>system/build-element-galleries.py</code>. Draft sources: not yet cleared for public use.</p>
+</div>
+<script>
+(function(){
+var app=document.getElementById('app');
+var G={white:'#ffffff',paper:'#fbfaf6',sunlight:'#fbefc4',night:'#171613'};
+function ground(g){app.setAttribute('data-ground',g);app.style.setProperty('--ground',G[g]);[].forEach.call(document.querySelectorAll('[data-g]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-g')===g)});try{localStorage.setItem('el-ground',g)}catch(e){}}
+[].forEach.call(document.querySelectorAll('[data-g]'),function(b){b.addEventListener('click',function(){ground(b.getAttribute('data-g'))})});
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(!b)return;var t=b.getAttribute('data-copy'),old=b.textContent;
+function done(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1200)}
+function fb(){var s=document.createElement('code');s.textContent=t;b.replaceWith(s);var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r)}
+try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}});
+try{var g=localStorage.getItem('el-ground');if(g&&G[g])ground(g)}catch(e){}
+})();
+</script>

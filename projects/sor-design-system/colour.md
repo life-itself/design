@@ -44,6 +44,8 @@ These are the colours a woodcut graphic may be printed in besides black (and cha
 
 **Exception, mountains only:** the [mountain elements](system/mountains/README.md) also come in the blue each was drawn in (six blues from navy to violet), plus three lighter blues on the linocut, chosen to keep each drawing's character. They are not illustration inks: don't use them on any other graphic. This is an open tension with the rule above, to be settled with the sub-brand question (decided 2026-10-13, Beads `design-34t.43`).
 
+**Exception, botanicals and washes:** the [botanicals](system/botanicals/README.md) and [watercolour washes](system/washes/README.md) keep the colours they were painted in (reds, blues, greens, olive and ochre) and are not illustration inks. Don't retint them and don't use their colours on other graphics. This widens the same open tension (Beads `design-34t.43`). The [geometry](system/geometry/README.md) and [marks](system/marks/README.md) are plain black line work in `--ink` and follow the usual ink rules (decided 2026-10-15).
+
 ## Proportion
 
 By area on the home page, leaving out photographs: about 64% white and paper, 14% sunlight, 16% night, 5% ink, 1% red. Photographs carry most of the colour.
