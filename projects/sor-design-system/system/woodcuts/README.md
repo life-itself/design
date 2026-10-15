@@ -30,6 +30,10 @@ Gallery of everything: https://claude.ai/artifact/U3qepgEKdybBfPVu2YT3ny (source
 | `circle-of-chairs.svg` | People sitting on chairs in a circle, around a small fire |
 | `circle-of-chairs-above.svg` | The same circle seen from above, carved into a dark floor |
 | `seeds-red.svg` | The same seeds in the logo and link red (#E5201C) |
+| `leaves-rising.svg` | Three leaves rising on the air, large to small, like the swallow flock |
+| `leaves-falling.svg` | Five leaves tumbling down, some turned edge-on |
+| `sprout-from-soil.svg` | A sprout breaking out of a mound of soil, with the seed, roots and buried shoot carved into it |
+| `sprout-growing.svg` | The same sprout growing in five stages: seed, hooked shoot, closed leaves, open leaves, first true leaves |
 | `seeds.svg` | The woodcut seeds and seed clusters (sunflower, bean, maple key, acorn, pumpkin, stone, wheat, dandelion; spiral, scatter, row) |
 
 ## Elements from the woodcuts mood board

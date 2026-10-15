@@ -20,13 +20,13 @@ The canvas's version history holds every step (labels such as "About with elemen
 ## What we learned
 
 - **Woodcuts drawn in code feel dead.** Even, symmetrical, formula curves with a roughening filter don't carry the life of a hand-cut print. The mood board pieces feel alive because of the hand. Elements should start from hand-made marks (our own, public-domain prints, or carefully chosen sources) and use code only to clean and trace them.
-- **The growing sprout idea worked** (`woodcut-drafts/sprout-growing.svg`): growth over time reads as rebirth and renewal. Worth redrawing by hand.
+- **The growing sprout idea worked** (`system/woodcuts/sprout-growing.svg`): growth over time reads as rebirth and renewal. Worth redrawing by hand.
 - **Placement that works:** one element per section at most, in the empty space beside a heading or under a short text, faded when it sits near reading text; several sections stay bare.
 - **Two directions to compare:** woodcut (About · elements v1) against botanical (About · botanical v1), on the same page and text.
 
 ## `woodcut-drafts/`
 
-The code-drawn woodcuts from 12 October, moved here from `system/woodcuts/drafts/`: round 1 (`review.html`: leaves rising and falling, a sprout from the soil, the sprout growing in five stages) and round 2 in colour (`colour.html`: flowers, tulips, pomegranate, sprout and leaves in mustard, ochre, brick, deep blue, sage and others, plus mock page sections). `wc_new.py` and `wc_colour.py` draw them; they read the old plates from `system/woodcuts/`, so rebuilding needs those in place.
+The code-drawn woodcuts from 12 October, moved here from `system/woodcuts/drafts/`. `review.html` shows round 1: leaves rising and falling, a sprout from the soil, the sprout growing in five stages. Sylvie kept all four, so their SVGs are now in the library (`system/woodcuts/`, see [woodcuts.html](../../woodcuts.html)); `wc_new.py` here is the script that drew them. Round 2, the same shapes in colour, was dropped and deleted.
 
 ## Open from this work
 

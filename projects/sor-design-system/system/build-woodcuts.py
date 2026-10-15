@@ -10,6 +10,7 @@ desc = dict(re.findall(r"^\| `([\w-]+)\.svg` \| (.+?) \|$", readme, re.M))
 GROUPS = [
     ("Swallows", "swallow"), ("Mountains", "mountain"), ("Leaves", "leaf"), ("Wind", "wind"),
     ("Fruit", "fruit"), ("People", "circle"), ("Seeds", "seeds"),
+    ("Leaves in the air", "leaves"), ("Sprouts", "sprout"),
 ]
 STRONG = {"mountain-peak", "leaf-single", "leaf-ginkgo", "leaf-sprig", "fruit-apple", "fruit-pear",
           "fruit-pomegranate", "fruit-cherries", "swallow-bold", "circle-of-chairs-above"}
@@ -31,7 +32,7 @@ for title, prefix in GROUPS:
     for name in names:
         n += 1
         status = ' <span class="wc-tag">strong</span>' if name in STRONG else (f' <span class="wc-tag wc-weak">weak: {WEAK[name]}</span>' if name in WEAK else "")
-        wide = " wc-wide" if prefix == "seeds" else ""
+        wide = " wc-wide" if prefix == "seeds" or name == "sprout-growing" else ""
         plates.append(f'''    <figure class="wc-plate{wide}">
       <div class="wc-art">{inline(name)}</div>
       <figcaption><span class="fig-no">Plate {n}</span>{html.escape(desc.get(name, ""))}{status}<br><code>system/woodcuts/{name}.svg</code></figcaption>
