@@ -1,10 +1,23 @@
 # Social media
 
-Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
+Posts, announcements and posters for every social channel except YouTube's own channel art: Instagram, LinkedIn, Substack, X and Bluesky, link previews, and event announcements in any shape. Part of the [SoR design system](README.md).
 
-**With an agent:** copy the prompt in [Use with an agent](prompts.md#make-a-social-post). **By hand, in Canva:** [download the Instagram kit](examples/social/instagram/sor-instagram-kit.zip) and follow [its steps](examples/social/instagram/README.md#make-a-post-in-canva).
+## Make one with your agent
 
-**Instagram posts:** podcast episode, quote card, announcement, statement and carousel, 4:5 and 1:1, on the swallows-and-fingerprints ground of the [podcast cover](podcast.md), as a Canva kit: [examples/social/instagram/](examples/social/instagram/README.md) ([preview](examples/social/instagram/index.html)). For a 16:9 announcement, start from the gathering thumbnail in [examples/youtube/](examples/youtube/index.html).
+Paste this into your AI agent, in whichever repo you're working in, and fill in the brackets. It finds what it needs in the design system and gives you the image, a caption and the steps to finish it in Canva.
+
+```text
+Make an Instagram post (4:5) for Seeds of Renaissance announcing [what], [when], [where].
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system (or, if that folder isn't there,
+https://design.seedsofrenaissance.org/AGENTS.md). Follow its "Social post" route and
+read only what it names. Don't change anything in the design repo.
+Give me the PNG, a caption in our voice, and the steps to finish it in Canva.
+Ask me for anything you need that you can't find. Then tell me what you checked
+and what you guessed.
+```
+
+Instagram posts come from the [Instagram templates](examples/social/instagram/README.md): podcast episode, quote card, announcement, statement and carousel, in 4:5 and 1:1. For a 16:9 announcement, start from the gathering thumbnail in the [YouTube examples](examples/youtube/index.html).
 
 <iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
 
@@ -47,7 +60,7 @@ For making on-brand graphics without code: the Canva brand kit and templates, re
 **Kits to start from:**
 
 - The [podcast thumbnail Canva kit](examples/youtube/canva-kit/README.md): full-canvas PNG layers and step-by-step instructions. The model for other templates.
-- The [Instagram post kit](examples/social/instagram/README.md): podcast episode, quote card, announcement, statement and carousel in 4:5 and 1:1, on the swallows-and-fingerprints background, with free-standing elements, guides and a [preview](examples/social/instagram/index.html).
+- The [Instagram post kit](examples/social/instagram/README.md): podcast episode, quote card, announcement, statement and carousel in 4:5 and 1:1, on the swallows-and-fingerprints background, with free-standing elements and guides.
 
 **Fonts:** Polyamine and Restora are not yet licensed, so they can't be uploaded to Canva. Bricolage Grotesque and Apfel Grotezk are free.
 

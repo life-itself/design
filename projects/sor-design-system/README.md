@@ -14,18 +14,16 @@ How Seeds of Renaissance looks and sounds, with the rules, the files and the exa
 
 ## Make something
 
-Read [Start here](BUILD.md) once: the brief in one paragraph, the rules that apply everywhere and a checklist. Then:
+What are you making? Each guide has the rules for it and an example to copy.
 
-| Making… | Guide | Copy from |
-|---|---|---|
-| A web page | [Website](website.md) | [Website pages](examples.md#website) |
-| A social post, announcement or banner | [Social and Canva](social.md) | [Instagram kit](examples/social/instagram/README.md) |
-| A YouTube thumbnail or channel art | [YouTube](youtube.md) | [Thumbnails](examples/youtube/index.html) · [Channel art](examples/youtube/channel.html) |
-| A podcast cover, show art or episode art | [Podcast](podcast.md) | [Episode cover kit](examples/youtube/canva-kit/README.md) · [Show art](examples/podcast/README.md) |
-| A slide deck | [Slides](slides.md) | [Decks](examples/slides/index.html) |
-| A paper (PDF) or poster | [Print and papers](print.md) | [The Wisdom paper](examples/print/index.html) |
-| A diagram, figure or chart | [Diagrams](diagrams.md) | [Figures](examples/diagrams/index.html) |
-| The newsletter | [Email](email.md) | |
+- **[A social post](social.md)**: Instagram, LinkedIn, an event announcement, a banner
+- **[A web page](website.md)** for the Seeds of Renaissance website
+- **[A podcast cover](podcast.md)**: the episode's YouTube cover, show art, episode art
+- **[YouTube channel art](youtube.md)** and other video thumbnails
+- **[Slides](slides.md)**
+- **[A paper or poster](print.md)**, as a PDF
+- **[A diagram, figure or chart](diagrams.md)**
+- **[The newsletter](email.md)**
 
 All of them on one page: [Examples](examples.md).
 

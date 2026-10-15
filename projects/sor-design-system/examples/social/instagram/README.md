@@ -1,10 +1,16 @@
-# Instagram posts: Canva kit
+# Instagram templates
 
-Templates and elements for Seeds of Renaissance Instagram posts, on the same background as the podcast thumbnail's bottom-left layout: sunlight, the black swallows rising from the bottom-left corner, the logo's fingerprints faded around them. Words sit above the birds, and the logo (mark and name, no disc) sits under the words, as on the [podcast cover](../../youtube/canva-kit/README.md) signed off on 13 October 2026. Preview: [index.html](index.html).
+Five templates for Seeds of Renaissance Instagram posts: podcast episode, quote card, announcement, statement and carousel. Each sits on the same ground as the podcast cover: sunlight, black swallows rising from the bottom left, the logo's fingerprints faded around them. The words sit above the birds and the logo under the words.
 
-**[Download the kit](sor-instagram-kit.zip)** (zip, 14 MB): backgrounds, logo and elements, guides and examples, in the folders below. Working with an AI agent instead? Copy the prompt in [Use with an agent](../../../prompts.md#make-a-social-post).
+<div class="not-prose my-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
+<figure><img src="/examples/social/instagram/png/example-podcast-4x5.png" alt="Podcast episode post"><figcaption class="mt-1 text-xs text-stone-500">Podcast episode</figcaption></figure>
+<figure><img src="/examples/social/instagram/png/example-quote-4x5.png" alt="Quote card"><figcaption class="mt-1 text-xs text-stone-500">Quote card</figcaption></figure>
+<figure><img src="/examples/social/instagram/png/example-announcement-4x5.png" alt="Announcement"><figcaption class="mt-1 text-xs text-stone-500">Announcement</figcaption></figure>
+<figure><img src="/examples/social/instagram/png/example-statement-4x5.png" alt="Statement"><figcaption class="mt-1 text-xs text-stone-500">Statement</figcaption></figure>
+<figure><img src="/examples/social/instagram/png/example-carousel-1-cover-4x5.png" alt="Carousel cover"><figcaption class="mt-1 text-xs text-stone-500">Carousel</figcaption></figure>
+</div>
 
-![Podcast episode post](png/example-podcast-4x5.png)
+**With your agent:** paste the prompt on [Social](../../../social.md#make-one-with-your-agent); it uses these templates. **In Canva:** [download the kit](sor-instagram-kit.zip) (zip, 14 MB) and follow [the steps below](#make-a-post-in-canva).
 
 ## Sizes
 
@@ -48,7 +54,7 @@ For a carousel, make one design with several pages: the cover and closing slides
 
 ## Set up once
 
-- **Fonts in the Canva brand kit**: Polyamine and Restora (upload; they must be licensed before anything is published, beads `.2`), Bricolage Grotesque (free, Google Fonts; announcements and carousel text) and Apfel Grotezk (free, Collletttivo; names and labels). The files are in `system/fonts/`.
+- **Fonts in the Canva brand kit**: Polyamine and Restora (upload once they are licensed), Bricolage Grotesque (free, Google Fonts; announcements and carousel text) and Apfel Grotezk (free, Collletttivo; names and labels). The files are in `system/fonts/`.
 - **Colours**: ink `#1b1916`, muted `#5d584f`. The red comes only from the logo and the fingerprints.
 - Save one design per template as a **team template**.
 
