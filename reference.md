@@ -3,9 +3,9 @@ title: "Reference"
 description: "Everything in the Seeds of Renaissance design system, one row each: graphics, logo files, fonts, colours, sizes, components, kits and examples, with where the files are."
 ---
 
-Everything in the system, one row each, with where its files are. For when and how to use a thing, follow its link to the rules.
+For when and how to use a thing, follow its link to the rules.
 
-Paths are in the `life-itself/design` repo, inside `projects/sor-design-system/`. The same paths work on this site: `https://design.seedsofrenaissance.org/<path>`. Font files are in the repo only.
+Paths are in the `life-itself/design` repo, inside `projects/sor-design-system/`. The same paths work on this site, after `design.seedsofrenaissance.org/`, except the font files, which are in the repo only.
 
 [Graphics](#graphics) · [Logo](#logo) · [Fonts](#fonts) · [Colours](#colours) · [Type sizes](#type-sizes) · [Spacing](#spacing) · [Fixed sizes](#fixed-sizes) · [Components](#components) · [Kits](#kits) · [Examples](#examples) · [Code](#code)
 
@@ -44,7 +44,7 @@ Every file shown on its ground: [Logo files](logos.md). Which version goes where
 | Stacked | [colour](system/logo/lockups/seeds-logo-stacked-colour.svg) · [colour-dark](system/logo/lockups/seeds-logo-stacked-colour-dark.svg) · [black](system/logo/lockups/seeds-logo-stacked-black.svg) · [white](system/logo/lockups/seeds-logo-stacked-white.svg) · [red](system/logo/lockups/seeds-logo-stacked-red.svg) | SVG; PNG 1200 and 2400px | `system/logo/lockups/seeds-logo-stacked-<colourway>.svg` |
 | Wordmark, the name alone | [colour](system/logo/lockups/seeds-logo-wordmark-colour.svg) · [colour-dark](system/logo/lockups/seeds-logo-wordmark-colour-dark.svg) · [black](system/logo/lockups/seeds-logo-wordmark-black.svg) · [white](system/logo/lockups/seeds-logo-wordmark-white.svg) · [red](system/logo/lockups/seeds-logo-wordmark-red.svg) | SVG; PNG 1200 and 2400px | `system/logo/lockups/seeds-logo-wordmark-<colourway>.svg` |
 | The mark alone | [colour](system/logo/mark/seeds-mark-colour.svg) · [colour-dark](system/logo/mark/seeds-mark-colour-dark.svg) · [black](system/logo/mark/seeds-mark-black.svg) · [white](system/logo/mark/seeds-mark-white.svg) · [red](system/logo/mark/seeds-mark-red.svg) | SVG; PNG 1130px | `system/logo/mark/seeds-mark-<colourway>.svg` |
-| The mark drawn for small sizes | 16 to 1024px: 16, 24, 32, 48, 64, 96, 128, 180, 256, 512, 1024 | PNG; @2x up to 128 | `system/logo/mark/sizes/seeds-mark-<colourway>-<px>.png` |
+| The mark drawn for each size | 16, 24, 32, 48, 64, 96, 128, 180, 256, 512, 1024px | PNG; @2x up to 128 | `system/logo/mark/sizes/seeds-mark-<colourway>-<px>.png` |
 | Favicon | [favicon.ico](system/logo/favicon.ico) | ICO: 16, 32, 48px | `system/logo/favicon.ico` |
 
 <!-- /reference:logos -->
@@ -58,9 +58,9 @@ Four faces. Which one to use: [Type](type.md). Fallbacks: Fraunces for Polyamine
 | Face | Token and role | Weights | Files | Licence |
 |---|---|---|---|---|
 | [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font) | `--font-display`: headlines, titles, wordmark: anything up to ~10 words | One weight (Regular) | `Polyamine-Regular.woff2` in `system/fonts/` (repo only) | Commercial, not yet licensed: drafts only. Shows only where installed; elsewhere Fraunces. |
-| [Restora](https://www.myfonts.com/collections/restora-font-nasir-udin) | `--font-quote`: display text that runs longer than ~10 words: pull quotes, standout passages; `--font-poem`: the poetic voice: Restora italic. Four faces only; Fraunces is just the fallback | Eight weights, thin to black, with italics | `Restora-ExtraLight.woff2`, `Restora-ThinItalic.woff2` in `system/fonts/` (repo only) | Commercial, not yet licensed: drafts only. Shows only where installed; elsewhere Fraunces. |
+| [Restora](https://www.myfonts.com/collections/restora-font-nasir-udin) | `--font-quote`: display text that runs longer than ~10 words: pull quotes, standout passages; `--font-poem`: the poetic voice: Restora italic | Eight weights, thin to black, with italics | `Restora-ExtraLight.woff2`, `Restora-ThinItalic.woff2` in `system/fonts/` (repo only) | Commercial, not yet licensed: drafts only. Shows only where installed; elsewhere Fraunces. |
 | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) | `--font-body`: everything you read | 300 to 700 (variable); light 300 for statements | None in the repo: [Google Fonts](https://fonts.google.com/specimen/Bricolage+Grotesque) | Free (SIL OFL). Loaded from Google Fonts. |
-| [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk) | `--font-label`: eyebrows, buttons, dates, captions numbers | Regular 400, Mittel 500, Fett 700 | `ApfelGrotezk-Fett.otf`, `ApfelGrotezk-Mittel.otf`, `ApfelGrotezk-Regular.otf` in `system/fonts/` (repo only) | Free (SIL OFL). Embedded in `system/fonts.css`, so it loads anywhere. |
+| [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk) | `--font-label`: eyebrows, buttons, dates, captions numbers | Regular 400, Mittel 500, Fett 700 | `ApfelGrotezk-Regular.otf`, `ApfelGrotezk-Mittel.otf`, `ApfelGrotezk-Fett.otf` in `system/fonts/` (repo only) | Free (SIL OFL). Embedded in `system/fonts.css`, so it loads anywhere. |
 
 <!-- /reference:fonts -->
 
@@ -80,9 +80,9 @@ From [system/tokens.css](system/tokens.css). Use the token, not the hex, whereve
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#5d584f;border:1px solid rgb(0 0 0 / .18)"></span> | `--muted` | `#5d584f` | Ink | Secondary text, captions, labels |
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#e0dacf;border:1px solid rgb(0 0 0 / .18)"></span> | `--rule` | `#e0dacf` | Ink | Hairlines on light grounds |
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#ece7dc;border:1px solid rgb(0 0 0 / .18)"></span> | `--chalk` | `#ece7dc` | On night | Text on night |
-| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#a49e93;border:1px solid rgb(0 0 0 / .18)"></span> | `--night-muted` | `#a49e93` | On night |  |
-| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#38342e;border:1px solid rgb(0 0 0 / .18)"></span> | `--night-rule` | `#38342e` | On night |  |
-| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#e5201c;border:1px solid rgb(0 0 0 / .18)"></span> | `--red` | `#e5201c` | The one accent | The logo red: only an occasional link in running text, and footnote marks |
+| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#a49e93;border:1px solid rgb(0 0 0 / .18)"></span> | `--night-muted` | `#a49e93` | On night | Secondary text on night |
+| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#38342e;border:1px solid rgb(0 0 0 / .18)"></span> | `--night-rule` | `#38342e` | On night | Hairlines on night |
+| <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#e5201c;border:1px solid rgb(0 0 0 / .18)"></span> | `--red` | `#e5201c` | Accent | The logo red: only an occasional link in running text, and footnote marks |
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#03296f;border:1px solid rgb(0 0 0 / .18)"></span> | `--print-blue` | `#03296f` | Illustration inks | Cobalt |
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#1f3d2b;border:1px solid rgb(0 0 0 / .18)"></span> | `--print-green` | `#1f3d2b` | Illustration inks | Deep green |
 | <span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;background:#c9a227;border:1px solid rgb(0 0 0 / .18)"></span> | `--print-mustard` | `#c9a227` | Illustration inks | Mustard yellow |
@@ -235,7 +235,7 @@ The HTML to copy for each one is in [Components](components.md); all of them ren
 
 | Component | Class | When |
 |---|---|---|
-| [Base and type roles](components.md#base-and-type-roles) | `.sor`, `.gutter`, `.section`, `.ground-white`, `.display`, `.label` and 2 more | A table of classes |
+| [Base and type roles](components.md#base-and-type-roles) | `.sor`, `.gutter`, `.section`, `.ground-white`, `.display`, `.label` and 2 more | Listed in a table on the page |
 | [Buttons, links, fields](components.md#buttons-links-fields) | `.btn` | One solid button per section for the main action; outline for secondary actions; `.text-link` inside lists |
 | [Site header](components.md#site-header) | `.site-header` | Every page |
 | [Photo hero](components.md#photo-hero) | `.hero-photo` | The one statement of a landing page, over a strong landscape photograph |
