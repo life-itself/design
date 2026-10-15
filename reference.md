@@ -2,7 +2,7 @@
 title: "Reference"
 description: "Everything in the Seeds of Renaissance design system, one row each: graphics, logo files, fonts, colours, sizes, components, kits and examples, with where the files are."
 ---
-<style>table code { white-space: nowrap } table td:last-child { min-width: 12em }</style>
+<style>table code { white-space: nowrap !important } table td:last-child { min-width: 12em }</style>
 
 For when and how to use a thing, follow its link to the rules.
 
