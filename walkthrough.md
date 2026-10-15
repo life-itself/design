@@ -4,10 +4,10 @@ The whole Seeds of Renaissance design system in one read, in the order a designe
 
 ## Who we are
 
-Seeds of Renaissance is a **vision and movement for civilisational rebirth**. We offer mythos and language for what people already feel, together with the ideas, the practice and the company to help birth the new. It takes two forms:
+Seeds of Renaissance is a **vision and movement for civilisational rebirth**. We offer content and community:
 
-- **Media House**: the podcast and YouTube channel, a yearly printed magazine, essays and white papers, the manifesto and the Greenhouse newsletter. This is how people find us and make sense of the moment.
-- **Gardens of Change**: courses and events, community gardens and local gardens. This is where people belong and practise.
+- **Content: the Media House**. The podcast and YouTube channel, a yearly printed magazine, essays and white papers, the manifesto and the Greenhouse newsletter. This is how people find us and make sense of the moment.
+- **Community: Gardens of Change**. Courses and events, community gardens and local gardens. This is where people belong and practise.
 
 At heart it is a movement and a community, not a publication. It holds together intellect and art, rigour and spirituality, darkness and hope.
 
