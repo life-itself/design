@@ -1,0 +1,172 @@
+{
+  "siteName": "SoR Design System",
+  "description": "The Seeds of Renaissance brand and design system: feel, voice, colour, type, graphics, components and examples.",
+  "logo": "system/img/logo.png",
+  "nav": {
+    "title": "SoR Design System",
+    "links": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "Build",
+        "href": "/BUILD"
+      },
+      {
+        "name": "Guide",
+        "href": "/guide.html"
+      },
+      {
+        "name": "System",
+        "links": [
+          {
+            "name": "Feel",
+            "href": "/feel"
+          },
+          {
+            "name": "Voice",
+            "href": "/voice"
+          },
+          {
+            "name": "Colour",
+            "href": "/colour"
+          },
+          {
+            "name": "Type",
+            "href": "/type"
+          },
+          {
+            "name": "Layout",
+            "href": "/layout"
+          },
+          {
+            "name": "Graphics",
+            "href": "/graphics"
+          },
+          {
+            "name": "Woodcuts",
+            "href": "/woodcuts.html"
+          },
+          {
+            "name": "Botanicals",
+            "href": "/system/botanicals/gallery.html"
+          },
+          {
+            "name": "Washes",
+            "href": "/system/washes/gallery.html"
+          },
+          {
+            "name": "Geometry",
+            "href": "/system/geometry/gallery.html"
+          },
+          {
+            "name": "Marks",
+            "href": "/system/marks/gallery.html"
+          },
+          {
+            "name": "Prints",
+            "href": "/system/prints/gallery.html"
+          },
+          {
+            "name": "Photography",
+            "href": "/photography"
+          },
+          {
+            "name": "Logo",
+            "href": "/logo"
+          },
+          {
+            "name": "Logo files",
+            "href": "/logos.html"
+          },
+          {
+            "name": "Components",
+            "href": "/components"
+          }
+        ]
+      },
+      {
+        "name": "Guides",
+        "links": [
+          {
+            "name": "Website",
+            "href": "/website"
+          },
+          {
+            "name": "Social 🚧",
+            "href": "/social"
+          },
+          {
+            "name": "YouTube 🚧",
+            "href": "/youtube"
+          },
+          {
+            "name": "Podcast 🚧",
+            "href": "/podcast"
+          },
+          {
+            "name": "Slides 🚧",
+            "href": "/slides"
+          },
+          {
+            "name": "Print",
+            "href": "/print"
+          },
+          {
+            "name": "Diagrams",
+            "href": "/diagrams"
+          },
+          {
+            "name": "Email 🚧",
+            "href": "/email"
+          },
+          {
+            "name": "Courses 🚧",
+            "href": "/courses"
+          },
+          {
+            "name": "Magazine 🚧",
+            "href": "/magazine"
+          }
+        ]
+      },
+      {
+        "name": "Examples",
+        "links": [
+          {
+            "name": "All examples and status",
+            "href": "/examples"
+          },
+          {
+            "name": "Website pages",
+            "href": "/examples#website"
+          },
+          {
+            "name": "YouTube",
+            "href": "/examples/youtube/index.html"
+          },
+          {
+            "name": "Print: a paper",
+            "href": "/examples/print/index.html"
+          },
+          {
+            "name": "Diagrams",
+            "href": "/examples/diagrams/index.html"
+          }
+        ]
+      }
+    ]
+  },
+  "social": [
+    {
+      "label": "youtube",
+      "href": "https://www.youtube.com/@SeedsOfRenaissance"
+    },
+    {
+      "label": "instagram",
+      "href": "https://instagram.com/seedsofrenaissance"
+    }
+  ],
+  "showSidebar": false
+}

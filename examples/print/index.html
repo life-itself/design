@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print examples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<style>
+/* Layout: one reading column for text, pages in a grid that stacks on phones. */
+:root { --ink:#1b1916; --muted:#5d584f; --rule:#e0dacf; --paper:#fbfaf6; --scrim:rgb(23 22 19 / .92);
+  --font-body:"Bricolage Grotesque",system-ui,sans-serif; --font-label:"Apfel Grotezk","Hanken Grotesk",system-ui,sans-serif }
+/* page chrome only: the pages are images of the PDF */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink:#ece7dc; --muted:#a49e93; --rule:#38342e; --paper:#171613; color-scheme: dark } }
+:root[data-theme="dark"] { --ink:#ece7dc; --muted:#a49e93; --rule:#38342e; --paper:#171613; color-scheme: dark }
+* { box-sizing: border-box }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5 }
+a { color: inherit }
+main { max-width: 1400px; margin-inline: auto; padding: 32px 16px 96px }
+h1 { font-weight: 600; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; margin: 0 0 12px; letter-spacing: -.01em; text-wrap: balance }
+h2 { font-weight: 600; font-size: 26px; margin: 0 0 6px; text-wrap: balance }
+.label { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .08em; font-size: 12px; color: var(--muted); margin: 0 }
+.intro { max-width: 70ch; display: grid; gap: 10px; margin-bottom: 24px }
+.intro p { margin: 0 }
+.intro ul { margin: 0; padding-left: 1.2em }
+section { margin-top: 56px }
+.fnote { margin: 0 0 16px; color: var(--muted); max-width: 80ch }
+.pages { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 28px 20px }
+figure { margin: 0; min-width: 0 }
+figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; max-width: 46ch }
+figcaption b { color: var(--ink); font-weight: 600 }
+.zoom { all: unset; display: block; cursor: zoom-in; width: 100% }
+.zoom:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px }
+.pg { display: block; width: 100%; height: auto; aspect-ratio: 210 / 297; background: #ffffff; box-shadow: 0 1px 0 var(--rule), 0 12px 28px -18px rgb(27 25 22 / .45); border: 1px solid var(--rule) }
+dialog { padding: 0; border: 0; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; background: var(--scrim); overflow: auto }
+dialog .inner { width: fit-content; max-width: 100%; margin: 0 auto; padding: 48px 16px }
+dialog img { display: block; max-width: 100%; height: auto; background: #ffffff }
+dialog .close { position: fixed; top: 12px; right: 16px; font: 500 14px var(--font-body); background: #ffffff; color: #1b1916; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer }
+</style>
+</head>
+<body>
+<main>
+  <div class="intro">
+    <p class="label">SoR design system · Print</p>
+    <h1>A paper, page by page</h1>
+    <p>Pages from <i>Wisdom and Wanting What’s Good</i> (Seeds of Renaissance White Paper No. 6), the first paper built in the system: one A4 PDF, made for reading on screen, typeset with Typst in <code>pdf-report-publishing</code>. Copy these.</p>
+    <ul>
+      <li>The whole paper: <a href="https://secondrenaissance.net/assets/wisdom/wisdom-and-wanting-whats-good.pdf">the PDF</a> (40 pages).</li>
+      <li>What goes in a paper and the rules: <a href="../../print">print.md</a>. How to build one: <a href="../../publishing">publishing.md</a>.</li>
+    </ul>
+    <p class="fnote">Click a page to see it larger.</p>
+  </div>
+
+  <section id="front">
+    <h2>Front matter</h2>
+    <div class="pages">
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-01-cover.jpg" alt="Front cover: the title over a painted blue heart" loading="lazy"></button>
+        <figcaption><b>Front cover.</b> Wisdom’s cover is bespoke, built from its art. A paper without its own art gets the plain typographic cover.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-02-title.png" alt="Title page" loading="lazy"></button>
+        <figcaption><b>Title page.</b> Series line, title, subtitle, part line, authors and the Life Itself credit in text. No logo, no art.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-03-imprint.png" alt="Imprint page, small print at the foot" loading="lazy"></button>
+        <figcaption><b>Imprint.</b> Small print at the foot, the rest left empty: the series, edition and version, credits, licence, how to cite.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-05-contents.png" alt="Annotated contents" loading="lazy"></button>
+        <figcaption><b>Annotated contents.</b> Each section with a one-line summary, linked to its page. No running head.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="text">
+    <h2>The text</h2>
+    <div class="pages">
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-12-chapter-opening.png" alt="Chapter 1 opening page" loading="lazy"></button>
+        <figcaption><b>Chapter opening.</b> Number and title in Polyamine, the rest of the title in Restora italic, a woodcut, the epigraph, then the first section and its summary box. Folio at the foot only.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-08-body-figure.png" alt="Body page with the Wisdom Gap figure" loading="lazy"></button>
+        <figcaption><b>Body with a figure.</b> Running head across the text column; sections in Restora, sub-sections a size down. The figure sits bare at the text’s left edge, its number and caption below. Footnotes at the foot.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-13-body-quotes.png" alt="Body page with displayed quotations" loading="lazy"></button>
+        <figcaption><b>Body with quotations.</b> Displayed quotes in Restora italic, the source in Apfel. Paragraphs spaced, not indented. Links and note marks in red.</figcaption></figure>
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-15-summary-box.png" alt="Body page with an In brief summary box" loading="lazy"></button>
+        <figcaption><b>Summary box.</b> “In brief” at the top of a section, drawn with a fine muted rule so it reads as an aside.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="back">
+    <h2>Back cover</h2>
+    <div class="pages">
+      <figure><button class="zoom" aria-label="Open larger"><img class="pg" src="img/wisdom-40-back-cover.png" alt="Back cover on night" loading="lazy"></button>
+        <figcaption><b>Back cover.</b> The one night: a hook line, what the paper argues, the inverted mark with the wordmark, the colophon and the Life Itself Sensemaking Studio logo.</figcaption></figure>
+    </div>
+  </section>
+</main>
+<dialog id="zoom"><button class="close">Close</button><div class="inner"></div></dialog>
+<script>
+const dlg = document.getElementById('zoom'), inner = dlg.querySelector('.inner');
+document.querySelectorAll('.zoom').forEach(z => z.addEventListener('click', () => {
+  const img = z.querySelector('img').cloneNode(); img.removeAttribute('class'); img.loading = 'eager';
+  inner.replaceChildren(img); dlg.showModal();
+}));
+dlg.querySelector('.close').addEventListener('click', () => dlg.close());
+dlg.addEventListener('click', e => { if (e.target === dlg || e.target === inner) dlg.close() });
+</script>
+</body>
+</html>

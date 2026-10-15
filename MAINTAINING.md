@@ -1,0 +1,78 @@
+# Maintaining the design system
+
+For whoever edits and publishes this folder. Readers start at [README.md](README.md); builders at [BUILD.md](BUILD.md).
+
+## Where it lives
+
+- **Source:** `life-itself/design`, folder `projects/sor-design-system/`. The single home for SoR brand and design-system work.
+- **Published** at https://design.seedsofrenaissance.org (Flowershow, from GitHub: branch `design-system-site`; custom domain via a DNS-only CNAME `design` → `cname.vercel-dns.com` in the `seedsofrenaissance.org` Cloudflare zone). The old address https://sor-design-system-rufuspollock.flowershow.me still works. Preview copy as a Claude artifact: https://claude.ai/artifact/MtNi8BxiybVhuXZCzwo6it.
+- **Tracking:** beads `design-34t`.
+
+## How the site is put together
+
+- **Markdown pages** hold the rules and the reasoning. Flowershow renders them with its own layout and the navbar from `config.json`. The sidebar is off. Each `.md` is also served raw at its `.md` URL, which is what agents read; [llms.txt](llms.txt) lists them in reading order.
+- **[guide.html](guide.html)** holds the visuals: the whole system rendered with the real CSS, one chapter per topic. It is the only place the visuals are edited.
+- **`specimens/<chapter>.html`** are cut from guide.html by `system/build-specimens.py` and embedded at the top of the topic pages and on the home with an `<iframe class="specimen">`. A group inside a chapter with an id like `<div id="examples-web">` also gets its own specimen (used on examples.md and youtube.md). Never edit them by hand. They hide each chapter's heading and "more" links, since the embedding page has its own.
+- **`custom.css`** styles the specimen frames on Flowershow. Flowershow pages never load `components.css` (its generic class names would clash with the site theme); the system's CSS only runs inside the specimen frames, the guide and the examples.
+- **Navbar** (`config.json`): **System** holds the building blocks (feel, colour, type, logo…), **Guides** how to make each kind of thing (website, print, diagrams…), **Examples** links straight to the example pages to copy.
+- **Examples** are standalone HTML pages under `examples/<kind>/`, one folder per kind (web, youtube; next slides, print), each kind with an `index.html` gallery where it has several. [examples.md](examples.md) lists them all.
+
+## Specimen heights
+
+A specimen lays out at a virtual 1000px width and scales to its frame, so its height is a fixed ratio of its width. Each `<iframe>` carries `style="aspect-ratio:1000/H"`, where H is the specimen's height at 1000px plus about 10px. After changing a chapter in guide.html, re-measure: open any specimen locally, then in the browser console load each one into a 1000px-wide iframe and read `document.body.scrollHeight`. Update H wherever that specimen is embedded (`grep -n 'specimens/<name>' *.md`). Below 600px wide, frames fall back to a fixed height and scroll inside.
+
+## Recording decisions
+
+(2026-10-12.) A decision is recorded in the planning repo's project issue tree (e.g. [2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) for the brand) as the question with a ✅ answer, who decided and the date. The design docs here (voice.md, colour.md, logo.md, etc.) hold the rule as applied, with a link back to the planning answer, and don't re-argue it. Write one decision to both in one go. There is no separate decision tree in this repo; [decisions.md](decisions.md) keeps only design-internal reasoning and history, and notes such as voice-notes.md keep the options considered.
+
+The issue tree carries only the one-line answer. Longer discussion goes in a file next to the issue tree (e.g. `projects/2608-seeds-of-renaissance-rebrand/YYYY-MM-DD-slug.md`), linked from the answer. Existing design-side reasoning files such as voice-notes.md stay and are linked.
+
+## Publish
+
+Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflows/publish-design-system.yml) runs on any push that touches `projects/sor-design-system/`, builds `site/` and force-pushes it to the `design-system-site` branch, which Flowershow publishes. Nobody needs `fl` or a Flowershow login. It can also be run by hand from the Actions tab. Check a run there if the site looks stale.
+
+To build locally (for a preview, or to debug the workflow), from `projects/sor-design-system`:
+
+```bash
+python3 system/build-specimens.py && python3 system/animals/build-gallery.py && python3 system/mountains/build-gallery.py && python3 system/build-element-galleries.py && python3 system/build-site.py
+```
+
+Keep the workflow's build steps in step with this list. The gallery builders need ImageMagick (`magick`).
+
+`build-site.py` assembles `site/` (gitignored): the docs, guide, specimens, woodcuts page, system code and images, examples and the loose files in archive. It leaves out `moodboard/` and the sub-folders of `archive/` (third-party screenshots, uncleared images, large PDFs) and rewrites `.md` links in HTML pages to Flowershow page URLs.
+
+## Code
+
+| Path | What |
+|---|---|
+| [system/tokens.css](system/tokens.css) | Every colour, face, size and space, with its role. Change the system here. |
+| [system/components.src.css](system/components.src.css) | Components, readable source. Run `python3 system/build-css.py` to make `components.css`. |
+| `system/fonts.css` | Apfel Grotezk embedded (OFL); Polyamine and Restora by name only (unlicensed). Built by `build-fonts.py`. |
+| `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `build-graphics.py`. |
+| `system/woodcuts/` | All woodcut SVGs and the script that draws them. Their gallery is `woodcuts.html` at the top level, built by `system/build-woodcuts.py`. |
+| `system/animals/` | Animal elements (SVG + PNG in four inks), `make-element.sh` to cut a new one, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. |
+| `system/mountains/` | Mountain elements (PNG, plus SVG for the linocut) in their drawn blue, cobalt and black, `elements.json`, `build-gallery.py` for `gallery.html` and its gitignored `thumbs/`. Working record in `archive/mountains-2026-10/`. |
+| `system/botanicals/`, `system/washes/`, `system/geometry/`, `system/marks/`, `system/prints/` | Five graphic sets (transparent PNGs at 1000px; SVG only where small, except prints, which all have SVGs): each has `elements/`, `elements.json`, a README and a `gallery.html` with gitignored `thumbs/`. One builder for all five: `system/build-element-galleries.py`, with `system/element-gallery-shell.html`. Sources: [moodboard/botanical-flower-illustration](moodboard/botanical-flower-illustration/removal-candidates.md) and, for prints, [moodboard/woodcuts](moodboard/woodcuts/woodcuts-moodboard.md) (images not committed). |
+| `system/sor.js` | Small behaviours (selected-work picker) |
+| `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
+| `system/build-specimens.py` | Cuts guide.html into `specimens/` |
+| `system/build-site.py` | Assembles `site/` for Flowershow |
+
+Preview locally: run the `static` launch config (python http.server on 8790) from the repo root and open `/projects/sor-design-system/`. Markdown pages are not rendered locally; open the HTML pages and specimens directly.
+
+## Changing the look
+
+Work out a change in HTML mockups first, then carry it into the format's own build. HTML is quick to iterate and review, and uses `system/tokens.css` directly; the builds (Typst for papers, `build.py` for diagrams) then follow the settled values.
+
+- Make the mockup as a loose page, show it, decide. Then update the tokens and the guide, rebuild the real thing, and refresh its examples.
+- When it's settled, move the mockup to `archive/<format>-<what>-<yyyy-mm>.html` as the record, fix its `../` paths and list it in `archive/README.md`. Examples show only finished work.
+- Starting points: papers, [archive/print-mockups-2026-10.html](archive/print-mockups-2026-10.html) (A4 pages at 1:1, prints as a proof); diagrams, `archive/diagrams-*-2026-10.html`.
+
+## Where things came from
+
+- The former `life-itself/sor-brand` repo, merged here 2026-10-05 with history and since folded in: [decisions.md](decisions.md) (design-system plan and decision log), [logo-notes.md](logo-notes.md), `moodboard/` (references and images, not published), `archive/sor-brand-mockups/` (the mockups the system was extracted from: Direction E v7 and the four-page v2) and `archive/sor-brand-STATUS.md`.
+- The old website design project (`2026-sor-website`, directions and moodboard, 2026-09): `archive/website-2026-09/`. Its brand substance and page copy now live here as [brand.md](brand.md) and `content/`.
+- [type/](type/): the two type selection rounds and research notes.
+- Brand substance (who we are, offers, voice) stays in [brand.md](brand.md).
+
+Shared by the SoR [experiences](../sor-experiences-2026/) and the website. The experiences carry their own working palette in [common.md](../sor-experiences-2026/experiences/00-home/common.md#colour), not yet reconciled with this system.

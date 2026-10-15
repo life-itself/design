@@ -1,0 +1,110 @@
+{
+ "title": "Marks and patterns",
+ "lede": "Ten interlaced and knot marks, a kolam line pattern and two checkerboards, in black ink (#1b1916) on a transparent ground. PNGs at 1000px; SVGs where they are small and clean (under 150 KB).",
+ "elements": [
+  {
+   "slug": "mark-5312-rings",
+   "title": "Mark 5312",
+   "kind": "interlaced rings",
+   "desc": "Six looping bands, striped, interlaced around a ring of dots.",
+   "source": "bfi-12",
+   "svg": true
+  },
+  {
+   "slug": "mark-795-bands",
+   "title": "Mark 795",
+   "kind": "interlaced bands",
+   "desc": "Six bold loops interlaced around an open hexagon, with three thin inner lines.",
+   "source": "bfi-22",
+   "svg": true
+  },
+  {
+   "slug": "mark-3956-knot",
+   "title": "Mark 3956",
+   "kind": "five-loop knot",
+   "desc": "Five solid loops woven around a small star-shaped centre.",
+   "source": "bfi-23",
+   "svg": true
+  },
+  {
+   "slug": "mark-4672-cross",
+   "title": "Mark 4672",
+   "kind": "concentric cross",
+   "desc": "A circle of fine concentric lines around a woven diamond. PNG only: the fine lines make a heavy trace.",
+   "source": "bfi-24",
+   "svg": false
+  },
+  {
+   "slug": "mark-885-knot",
+   "title": "Mark 885",
+   "kind": "woven knot",
+   "desc": "Four looped bands woven around a central square.",
+   "source": "bfi-26",
+   "svg": true
+  },
+  {
+   "slug": "spiral-knot",
+   "title": "Spiral knot",
+   "kind": "spiral bands",
+   "desc": "Four interlocking spiral bands, in even black lines.",
+   "source": "bfi-25",
+   "svg": true
+  },
+  {
+   "slug": "wave-ring",
+   "title": "Wave ring",
+   "kind": "wavy ring",
+   "desc": "An eight-lobed ring of wavy bands, enlarged from a small logo.",
+   "source": "bfi-27",
+   "svg": true
+  },
+  {
+   "slug": "radial-spiral-4779",
+   "title": "Mark 4779",
+   "kind": "radial spiral",
+   "desc": "Radiating wedges spiralling around an open, notched centre.",
+   "source": "bfi-29",
+   "svg": true
+  },
+  {
+   "slug": "kolam-knot",
+   "title": "Kolam knot",
+   "kind": "line pattern",
+   "desc": "A looping line woven around a grid of dots, in the manner of a kolam.",
+   "source": "bfi-21",
+   "svg": true
+  },
+  {
+   "slug": "checkerboard",
+   "title": "Checkerboard",
+   "kind": "pattern",
+   "desc": "Black squares with slightly rounded corners, white made transparent.",
+   "source": "bfi-10",
+   "svg": true
+  },
+  {
+   "slug": "checkerboard-3-rows",
+   "title": "Checkerboard, 3 rows",
+   "kind": "pattern",
+   "desc": "A strip of three rows of twelve checks.",
+   "source": "bfi-10",
+   "svg": true
+  },
+  {
+   "slug": "mark-1268-loops",
+   "title": "Mark 1268",
+   "kind": "ampersand loops",
+   "desc": "Four looping, ampersand-like shapes around a small square, in solid black.",
+   "source": "bfi-30",
+   "svg": true
+  },
+  {
+   "slug": "mark-4684-rosette",
+   "title": "Mark 4684",
+   "kind": "circle rosette",
+   "desc": "A rosette of overlapping circles in fine black line. PNG only: the fine lines make a heavy trace.",
+   "source": "bfi-31",
+   "svg": false
+  }
+ ]
+}

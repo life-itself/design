@@ -1,0 +1,30 @@
+/* Example page chrome for the slide decks: intro, the strip of thumbnails, every slide, and present mode.
+   Not part of the system; the slides themselves are .slide components from slides.css. */
+html, body { margin: 0; background: #fbfaf6 }
+.deck-page { max-width: 1320px; margin-inline: auto; display: grid; gap: 28px; padding-bottom: 72px }
+.deck-intro { display: grid; gap: 14px; max-width: 66ch; padding-top: clamp(32px, 5cqi, 64px) }
+.deck-intro h1 { font-family: var(--font-display); font-size: var(--t-title); line-height: .98 }
+.deck-intro p { font-size: var(--t-intro) }
+.deck-intro ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--muted); font-size: var(--t-small) }
+.deck-intro .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px }
+.deck-sec { display: block; margin-top: 24px; color: var(--muted) }
+.deck-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 14px }
+.deck-strip button { all: unset; cursor: pointer; display: grid; gap: 6px; min-width: 0 }
+.deck-strip button:focus-visible .slide-frame { outline: 2px solid var(--ink); outline-offset: 3px }
+.deck-strip .slide-frame { box-shadow: 0 0 0 1px var(--rule) }
+.deck-strip small { font-family: var(--font-label); font-size: var(--t-meta); letter-spacing: var(--track-meta); text-transform: uppercase; color: var(--muted) }
+.deck-list { display: grid; gap: 44px }
+.deck-list figure { min-width: 0; gap: 12px }
+.deck-list .slide-frame { box-shadow: 0 0 0 1px var(--rule), var(--shadow-print) }
+.deck-list figcaption { font-style: normal; max-width: 90ch }
+.deck-list figcaption b { color: var(--ink); font-weight: 600 }
+.deck-list code { font-size: .92em }
+/* Presenter: one slide fitted to the window; arrows, space, Esc */
+.present { position: fixed; inset: 0; z-index: 100; background: #0d0c0a; display: grid; place-items: center }
+.present[hidden] { display: none }
+.present .slide-frame { width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9 }
+.present .hint { position: absolute; left: 0; right: 0; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); text-align: center; font-family: var(--font-label); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #8a847a; pointer-events: none }
+.present .close { position: absolute; right: 14px; top: calc(14px + env(safe-area-inset-top, 0px)); color: #ece7dc; border-color: #ece7dc; z-index: 2 }
+.deck-nav { display: flex; gap: 18px; flex-wrap: wrap; padding-top: 18px; font-family: var(--font-label); font-size: var(--t-button); font-weight: 700; letter-spacing: .1em; text-transform: uppercase }
+.deck-nav a { text-underline-offset: 4px }
+.deck-nav a[aria-current] { text-decoration: none; color: var(--muted) }

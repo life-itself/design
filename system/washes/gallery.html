@@ -1,0 +1,86 @@
+<title>Watercolour washes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+/* Layout: one plate per element on a switchable ground, with file links. Same printed-page look as the animals and mountains galleries; one light look by choice. GENERATED page: edit element-gallery-shell.html and the set's elements.json, then run system/build-element-galleries.py. */
+:root{--white:#ffffff;--paper:#fbfaf6;--sunlight:#fbefc4;--night:#171613;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;--ground:var(--white);
+--serif:"Fraunces",Georgia,serif;--sans:"Bricolage Grotesque",system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans);padding-inline:16px;padding-block:32px 64px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font:600 clamp(32px,6vw,52px)/1.05 var(--serif);margin:0 0 12px;text-wrap:balance}
+.lede{max-width:62ch;color:var(--muted);margin:0 0 16px}
+.sets{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 24px;font-size:14px}
+a{color:var(--ink);text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--paper);border-block:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-bottom:28px}
+.lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--white);color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:36px 20px}
+.tile{margin:0;min-width:0}
+.stage{background:var(--ground);border:1px solid var(--rule);height:300px;display:flex;align-items:center;justify-content:center;padding:18px}
+.stage img{max-width:100%;max-height:100%;object-fit:contain}
+.tile h2{font:600 20px/1.2 var(--serif);margin:12px 0 2px}
+.kind{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.desc{margin:0 0 6px;font-size:14px;max-width:44ch}
+.links{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
+.kb{font-size:12px;color:var(--muted)}
+.cp{font:inherit;font-size:12px;border:1px solid var(--rule);background:var(--white);color:var(--ink);padding:2px 8px;border-radius:999px;cursor:pointer}
+.foot{margin-top:56px;color:var(--muted);font-size:14px;max-width:62ch}
+code{font:12px var(--mono)}
+</style>
+<div class="wrap" id="app" data-ground="white">
+<h1>Watercolour washes</h1>
+<p class="lede">Ten loose watercolour and ink washes, cut out of their paper as transparent PNGs, long side up to 1000px. The paint stays translucent, so each one takes the colour of its ground: use them on light grounds, where the pale areas stay quiet. PNG only.</p>
+<nav class="sets" aria-label="Element sets"><a href="../botanicals/gallery.html">Botanicals</a> · <a href="../washes/gallery.html" aria-current=page>Washes</a> · <a href="../geometry/gallery.html">Geometry</a> · <a href="../marks/gallery.html">Marks</a> · <a href="../prints/gallery.html">Prints</a></nav>
+<div class="bar"><div class="grp"><span class="lab">Ground</span><div class="seg"><button type="button" data-g="white" aria-pressed="true">White</button><button type="button" data-g="paper" aria-pressed="false">Paper</button><button type="button" data-g="sunlight" aria-pressed="false">Sunlight</button><button type="button" data-g="night" aria-pressed="false">Night</button></div></div></div>
+<div class="grid"><figure class="tile">
+<a class="stage" href="elements/red-watercolour-flower.png" target="_blank" rel="noopener" aria-label="Open Red watercolour flower, PNG"><img src="thumbs/red-watercolour-flower.png" alt="Red watercolour flower" loading="lazy"></a>
+<h2>Red watercolour flower</h2><p class="kind">watercolour wash</p><p class="desc">A loose red bloom on a thin stem. The washes stay translucent, so it takes the colour of its ground.</p>
+<div class="links"><a href="elements/red-watercolour-flower.png" target="_blank" rel="noopener">PNG</a> <span class="kb">121 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/red-watercolour-flower">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/green-ink-wash.png" target="_blank" rel="noopener" aria-label="Open Green ink wash, PNG"><img src="thumbs/green-ink-wash.png" alt="Green ink wash" loading="lazy"></a>
+<h2>Green ink wash</h2><p class="kind">ink wash</p><p class="desc">Abstract olive and moss green washes with dark pooled edges. Runs off the top and left.</p>
+<div class="links"><a href="elements/green-ink-wash.png" target="_blank" rel="noopener">PNG</a> <span class="kb">752 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/green-ink-wash">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/blue-watercolour-flowers.png" target="_blank" rel="noopener" aria-label="Open Blue watercolour flowers, PNG"><img src="thumbs/blue-watercolour-flowers.png" alt="Blue watercolour flowers" loading="lazy"></a>
+<h2>Blue watercolour flowers</h2><p class="kind">watercolour</p><p class="desc">Two translucent blue blooms with dark centres and a scatter of ink dots.</p>
+<div class="links"><a href="elements/blue-watercolour-flowers.png" target="_blank" rel="noopener">PNG</a> <span class="kb">687 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/blue-watercolour-flowers">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/blue-ink-wash.png" target="_blank" rel="noopener" aria-label="Open Blue ink wash, PNG"><img src="thumbs/blue-ink-wash.png" alt="Blue ink wash" loading="lazy"></a>
+<h2>Blue ink wash</h2><p class="kind">ink wash</p><p class="desc">A deep blue ink bloom with lace-like edges. Runs off the top and left. Typography removed.</p>
+<div class="links"><a href="elements/blue-ink-wash.png" target="_blank" rel="noopener">PNG</a> <span class="kb">942 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/blue-ink-wash">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/blue-watercolour-ring.png" target="_blank" rel="noopener" aria-label="Open Blue watercolour ring, PNG"><img src="thumbs/blue-watercolour-ring.png" alt="Blue watercolour ring" loading="lazy"></a>
+<h2>Blue watercolour ring</h2><p class="kind">watercolour</p><p class="desc">A soft blue ring with a halo and brush marks inside, open in the centre.</p>
+<div class="links"><a href="elements/blue-watercolour-ring.png" target="_blank" rel="noopener">PNG</a> <span class="kb">548 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/blue-watercolour-ring">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/watercolour-figure-red.png" target="_blank" rel="noopener" aria-label="Open Watercolour figure, red, PNG"><img src="thumbs/watercolour-figure-red.png" alt="Watercolour figure, red" loading="lazy"></a>
+<h2>Watercolour figure, red</h2><p class="kind">watercolour wash</p><p class="desc">A loose figure in pink-red wash with white gaps where the paper shows.</p>
+<div class="links"><a href="elements/watercolour-figure-red.png" target="_blank" rel="noopener">PNG</a> <span class="kb">271 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/watercolour-figure-red">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/watercolour-figure-blue.png" target="_blank" rel="noopener" aria-label="Open Watercolour figure, blue, PNG"><img src="thumbs/watercolour-figure-blue.png" alt="Watercolour figure, blue" loading="lazy"></a>
+<h2>Watercolour figure, blue</h2><p class="kind">watercolour wash</p><p class="desc">The same figure with its colour shifted to blue.</p>
+<div class="links"><a href="elements/watercolour-figure-blue.png" target="_blank" rel="noopener">PNG</a> <span class="kb">326 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/watercolour-figure-blue">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/red-watercolour-blooms.png" target="_blank" rel="noopener" aria-label="Open Red watercolour blooms, PNG"><img src="thumbs/red-watercolour-blooms.png" alt="Red watercolour blooms" loading="lazy"></a>
+<h2>Red watercolour blooms</h2><p class="kind">watercolour</p><p class="desc">Three red blooms with thin stems and a few drops.</p>
+<div class="links"><a href="elements/red-watercolour-blooms.png" target="_blank" rel="noopener">PNG</a> <span class="kb">129 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/red-watercolour-blooms">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/blue-handprint.png" target="_blank" rel="noopener" aria-label="Open Blue handprint, PNG"><img src="thumbs/blue-handprint.png" alt="Blue handprint" loading="lazy"></a>
+<h2>Blue handprint</h2><p class="kind">digital glow</p><p class="desc">Five blue fingertips with a soft glow. Lettering removed.</p>
+<div class="links"><a href="elements/blue-handprint.png" target="_blank" rel="noopener">PNG</a> <span class="kb">68 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/blue-handprint">Copy path</button></div></figure><figure class="tile">
+<a class="stage" href="elements/green-watercolour-flower.png" target="_blank" rel="noopener" aria-label="Open Green watercolour flower, PNG"><img src="thumbs/green-watercolour-flower.png" alt="Green watercolour flower" loading="lazy"></a>
+<h2>Green watercolour flower</h2><p class="kind">watercolour</p><p class="desc">A single green flower on a thin stem, in olive and moss washes with a touch of yellow. Signature and date removed.</p>
+<div class="links"><a href="elements/green-watercolour-flower.png" target="_blank" rel="noopener">PNG</a> <span class="kb">763 KB</span> · <span class="kb">PNG only</span> <button type="button" class="cp" data-copy="projects/sor-design-system/system/washes/elements/green-watercolour-flower">Copy path</button></div></figure></div>
+<p class="foot">Built from <code>system/washes/elements.json</code> by <code>system/build-element-galleries.py</code>. Draft sources: not yet cleared for public use.</p>
+</div>
+<script>
+(function(){
+var app=document.getElementById('app');
+var G={white:'#ffffff',paper:'#fbfaf6',sunlight:'#fbefc4',night:'#171613'};
+function ground(g){app.setAttribute('data-ground',g);app.style.setProperty('--ground',G[g]);[].forEach.call(document.querySelectorAll('[data-g]'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-g')===g)});try{localStorage.setItem('el-ground',g)}catch(e){}}
+[].forEach.call(document.querySelectorAll('[data-g]'),function(b){b.addEventListener('click',function(){ground(b.getAttribute('data-g'))})});
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(!b)return;var t=b.getAttribute('data-copy'),old=b.textContent;
+function done(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1200)}
+function fb(){var s=document.createElement('code');s.textContent=t;b.replaceWith(s);var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r)}
+try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}});
+try{var g=localStorage.getItem('el-ground');if(g&&G[g])ground(g)}catch(e){}
+})();
+</script>

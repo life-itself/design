@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Instagram Post Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../../system/fonts.css">
+<link rel="stylesheet" href="../../../system/tokens.css">
+<style>
+/* Page chrome only: the posts are PNGs built by build.py and export.sh */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.55 var(--font-body);padding:0 16px 80px}
+.wrap{max-width:1180px;margin:auto}
+header{padding:44px 0 8px;max-width:72ch}
+h1{font:400 clamp(32px,5vw,56px)/1.02 var(--font-display);margin:8px 0 14px}
+h2{font:400 30px/1.05 var(--font-display);margin:40px 0 8px}
+.eb{font:500 12px var(--font-label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header p,.note{color:var(--muted);margin:0 0 12px;max-width:72ch}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+.ctl button{font:500 14px var(--font-label);border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.ctl button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:22px 18px;margin-top:14px}
+figure{margin:0;min-width:0}
+figure img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 0 0 1px var(--rule)}
+figcaption{margin-top:6px;font-size:14px;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:600}
+figcaption a{color:var(--muted)}
+/* Phone mocks */
+.phones{display:flex;flex-wrap:wrap;gap:28px;margin-top:14px;align-items:flex-start}
+.phone{width:390px;max-width:100%;border-radius:28px;padding:14px 0;font-family:-apple-system,system-ui,sans-serif;font-size:14px;box-shadow:0 0 0 1px var(--rule)}
+.phone.light{background:#fff;color:#000}.phone.dark{background:#000;color:#f5f5f5}
+.post{margin-bottom:18px}
+.post .top{display:flex;align-items:center;gap:10px;padding:0 12px 10px;font-weight:600}
+.post .av{width:32px;height:32px;border-radius:50%;background:#fff url(../../../system/img/logo.png) center/115% no-repeat;box-shadow:0 0 0 1px #0002}
+.post img{display:block;width:100%;height:auto}
+.post .cap{padding:8px 12px 0;line-height:1.35}
+.profile{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.profile img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eb">Seeds of Renaissance · social · Instagram</div>
+  <h1>Instagram post templates</h1>
+  <p>Posts on the same background as the podcast thumbnail's bottom-left layout: sunlight, the black swallows rising from the bottom-left corner, the logo's fingerprints faded around them. The words sit above the birds, with the logo under them, as on the podcast cover. Portrait 4:5 (1080 × 1350, Instagram's default) and square 1:1 (1080 × 1080).</p>
+  <p>Every piece is a PNG for Canva: backgrounds without text, separate layers, a finished example and a guides overlay for each template. How to use them: <a href="./">README</a>. Copy, dates and the guest photo are samples.</p>
+  <div class="ctl" role="group" aria-label="View"><button type="button" data-g="0" aria-pressed="true">Finished</button><button type="button" data-g="1" aria-pressed="false">With guides</button></div>
+</header>
+
+<h2>Templates</h2>
+<p class="note">Podcast episode, quote card, announcement, statement, and a carousel (cover, inner slide, closing slide).</p>
+<div class="grid" id="templates"></div>
+
+<h2>Backgrounds</h2>
+<p class="note">Start from these in Canva. The quiet one keeps only the fingerprints, for carousel inner slides and text-heavy posts.</p>
+<div class="grid" id="bgs"></div>
+
+<h2>On a phone</h2>
+<p class="note">At real size in the feed (light and dark) and in the profile grid, which crops posts to 3:4.</p>
+<div class="phones">
+  <div class="phone light" id="feed-light"></div>
+  <div class="phone dark" id="feed-dark"></div>
+  <div class="phone light"><div class="profile" id="profile"></div></div>
+</div>
+</div>
+
+<script>
+(function () {
+  var P = "png/";
+  var T = [
+    ["podcast-4x5", "Podcast episode", "4:5. The guest's sharpest line, name, and the face rising from the bottom right."],
+    ["podcast-1x1", "Podcast episode, square", "1:1. The same, tighter."],
+    ["quote-4x5", "Quote card", "4:5. Restora for quotes past about ten words; Polyamine if shorter. Source in Apfel."],
+    ["quote-1x1", "Quote card, square", "1:1."],
+    ["announcement-4x5", "Announcement", "4:5. Series label, a two-to-four-word title, when, one line of detail."],
+    ["statement-4x5", "Statement", "4:5. One short line in Polyamine, nothing else."],
+    ["statement-1x1", "Statement, square", "1:1."],
+    ["carousel-1-cover-4x5", "Carousel cover", "4:5. A question as the title, a count and a swipe prompt."],
+    ["carousel-2-inner-4x5", "Carousel inner slide", "4:5. On the quiet background: a big number and one idea in Bricolage."],
+    ["carousel-5-close-4x5", "Carousel closing slide", "4:5. The call to action."]
+  ];
+  var B = [["bg-4x5", "Background 4:5"], ["bg-4x5-quiet", "Quiet 4:5 (fingerprints only)"],
+           ["bg-1x1", "Background 1:1"], ["bg-1x1-quiet", "Quiet 1:1"]];
+  var guides = false;
+
+  function render() {
+    var t = document.getElementById("templates"); t.innerHTML = "";
+    T.forEach(function (x) {
+      var f = document.createElement("figure"), src = P + "example-" + x[0] + (guides ? "-with-guides" : "") + ".png";
+      f.innerHTML = '<img loading="lazy" alt=""><figcaption><b></b> <span></span> <a>PNG</a> · <a>guides</a></figcaption>';
+      f.querySelector("img").src = src; f.querySelector("img").alt = x[1];
+      f.querySelector("b").textContent = x[1]; f.querySelector("span").textContent = x[2];
+      var a = f.querySelectorAll("a"); a[0].href = P + "example-" + x[0] + ".png"; a[1].href = P + "guides-" + x[0] + ".png";
+      t.appendChild(f);
+    });
+  }
+  var bgs = document.getElementById("bgs");
+  B.forEach(function (x) {
+    var f = document.createElement("figure");
+    f.innerHTML = '<a><img loading="lazy" alt=""></a><figcaption><b></b></figcaption>';
+    f.querySelector("a").href = P + x[0] + ".png"; f.querySelector("img").src = P + x[0] + ".png";
+    f.querySelector("img").alt = x[1]; f.querySelector("b").textContent = x[1];
+    bgs.appendChild(f);
+  });
+  var caps = {
+    "podcast-4x5": "New episode. Guest Name on why hope is not the same as optimism. Link in bio.",
+    "quote-4x5": "From the manifesto.",
+    "announcement-4x5": "Find the others. Our Global Connection Call is next Thursday: an hour, online, everyone welcome.",
+    "carousel-1-cover-4x5": "What comes after modernity? Five slides.",
+    "statement-4x5": "Seeds of Renaissance: vision and movement for civilisational rebirth."
+  };
+  ["feed-light", "feed-dark"].forEach(function (id) {
+    var host = document.getElementById(id);
+    Object.keys(caps).forEach(function (k) {
+      var d = document.createElement("div"); d.className = "post";
+      d.innerHTML = '<div class="top"><span class="av"></span>seedsofrenaissance</div><img alt=""><div class="cap"><b>seedsofrenaissance</b> <span></span></div>';
+      d.querySelector("img").src = P + "example-" + k + ".png"; d.querySelector("span").textContent = caps[k];
+      host.appendChild(d);
+    });
+  });
+  var prof = document.getElementById("profile");
+  ["podcast-4x5", "quote-4x5", "announcement-4x5", "statement-4x5", "carousel-1-cover-4x5", "carousel-5-close-4x5", "podcast-1x1", "quote-1x1", "statement-1x1"].forEach(function (k) {
+    var i = document.createElement("img"); i.src = P + "example-" + k + ".png"; i.alt = ""; prof.appendChild(i);
+  });
+  document.querySelectorAll(".ctl button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      guides = b.dataset.g === "1";
+      document.querySelectorAll(".ctl button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<title>Woodcut Animals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+/* Layout: one plate per animal, its four ink versions side by side on a switchable ground, then a full file list. Same system as the woodcut elements gallery; one light printed-page look by choice. */
+:root{--white:#ffffff;--paper:#fbfaf6;--sunlight:#fbefc4;--night:#171613;--ink:#1b1916;--muted:#5d584f;--rule:#e0dacf;--ground:var(--white);
+--serif:"Fraunces",Georgia,serif;--sans:"Bricolage Grotesque",system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans);padding-inline:16px;padding-block:32px 64px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font:600 clamp(32px,6vw,52px)/1.05 var(--serif);margin:0 0 12px;text-wrap:balance}
+.lede{max-width:62ch;color:var(--muted);margin:0 0 16px}
+.toc{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 24px;font-size:14px}
+a{color:var(--ink);text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ink)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--paper);border-block:1px solid var(--rule);padding-block:10px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-bottom:28px}
+.lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--white);color:var(--ink);padding:5px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+input[type=search]{font:inherit;font-size:15px;padding:6px 12px;border:1px solid var(--rule);border-radius:6px;background:var(--white);color:var(--ink);min-width:0;width:min(220px,100%)}
+.count{margin-left:auto;font-size:14px;color:var(--muted)}
+.grid{display:grid;gap:48px}
+.el{min-width:0;scroll-margin-top:90px}
+.el h2{font:600 24px/1.2 var(--serif);margin:0 0 4px}
+.el header p{margin:0;font-size:15px;max-width:60ch}
+.el .meta{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:14px;margin-top:14px}
+.tile{margin:0;min-width:0}
+.stage{background:var(--ground);border:1px solid var(--rule);height:250px;display:flex;align-items:center;justify-content:center;padding:18px}
+.stage img{max-width:100%;max-height:100%;object-fit:contain}
+[data-ground=night] .stage{border-color:#38342e}
+[data-ground=night] .tile[data-ink=black] img{filter:invert(.9)}
+figcaption{font-size:13px;line-height:1.5;margin-top:6px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;border:1px solid var(--rule);margin-right:6px;vertical-align:-1px}
+.cn{color:var(--ink)}
+code,.fn{font:12px var(--mono);overflow-wrap:anywhere}
+.links{display:flex;gap:10px;margin-left:auto}
+.cp{font:inherit;font-size:13px;border:0;background:none;color:var(--muted);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;cursor:pointer;padding:0}
+.empty{color:var(--muted)}
+h2.sec{font:600 28px/1.2 var(--serif);margin:64px 0 6px}
+.tw{overflow-x:auto;border-top:1px solid var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:left;padding:10px 12px 8px 0;border-bottom:1px solid var(--rule)}
+td{padding:7px 12px 7px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+td:first-child{font-variant-numeric:tabular-nums;color:var(--muted)}
+.kb{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.note{font-size:13px;color:var(--muted);margin-top:28px;max-width:70ch}
+</style>
+<div class="wrap" id="app" data-ground="white">
+<h1>Woodcut animals</h1>
+<p class="lede">@@N_EL@@ animals in @@N_V@@ versions: black, blue, deep green and mustard, plus the original colours where the source was painted. Every version has a transparent PNG (1000px wide) and a traced SVG. Click an image or PNG to open the full file; SVG opens the vector.</p>
+<nav class="toc" aria-label="Animals">@@TOC@@<a href="#files">All files</a></nav>
+<div class="bar">
+<div class="grp"><span class="lab" id="gl">Ground</span>
+<div class="seg" role="group" aria-labelledby="gl"><button type="button" data-g="white" aria-pressed="true">White</button><button type="button" data-g="paper" aria-pressed="false">Paper</button><button type="button" data-g="sunlight" aria-pressed="false">Sunlight</button><button type="button" data-g="night" aria-pressed="false">Night</button></div></div>
+<div class="grp"><span class="lab" id="il">Ink</span>
+<div class="seg" role="group" aria-labelledby="il"><button type="button" data-i="all" aria-pressed="true">All</button><button type="button" data-i="black" aria-pressed="false">Black</button><button type="button" data-i="blue" aria-pressed="false">Blue</button><button type="button" data-i="green" aria-pressed="false">Green</button><button type="button" data-i="mustard" aria-pressed="false">Mustard</button></div></div>
+<div class="grp"><label for="q" class="lab">Find</label><input id="q" type="search" placeholder="owl, swallow…" autocomplete="off"></div>
+<span class="count" id="count" aria-live="polite"></span>
+</div>
+<div class="grid" id="grid">@@CARDS@@</div>
+<p class="empty" id="none" hidden>No animal matches that search.</p>
+<h2 class="sec" id="files">All files</h2>
+<p class="lede">Every version, with its file name in <code>system/animals/elements/</code>.</p>
+<div class="tw"><table><thead><tr><th>Board</th><th>Animal</th><th>Ink</th><th>File name</th><th>PNG</th><th>SVG</th></tr></thead><tbody id="rows">@@ROWS@@</tbody></table></div>
+<p class="note">Black turns pale on Night so it reads, as ink does on the site. The two walking foxes come from a small watermarked stock image, so treat them as a draft. Sources and process: <code>system/animals/README.md</code>; mood board: <code>moodboard/animals/animals-moodboard.md</code>.</p>
+</div>
+<script>
+(function(){
+var app=document.getElementById('app'),q=document.getElementById('q'),els=[].slice.call(document.querySelectorAll('.el')),rows=[].slice.call(document.querySelectorAll('#rows tr')),cnt=document.getElementById('count'),none=document.getElementById('none'),ink='all';
+var G={white:'#ffffff',paper:'#fbfaf6',sunlight:'#fbefc4',night:'#171613'};
+function press(attr,v){[].forEach.call(document.querySelectorAll('['+attr+']'),function(b){b.setAttribute('aria-pressed',b.getAttribute(attr)===v)})}
+function ground(g){app.setAttribute('data-ground',g);app.style.setProperty('--ground',G[g]);press('data-g',g);try{localStorage.setItem('an-ground',g)}catch(e){}}
+function apply(){var t=q.value.trim().toLowerCase(),n=0;function hit(s){return !t||t.split(/\s+/).every(function(w){return s.indexOf(w)>-1})}
+els.forEach(function(e){var ok=hit(e.getAttribute('data-search'));e.hidden=!ok;if(ok)n++;[].forEach.call(e.querySelectorAll('.tile'),function(f){f.hidden=ink!=='all'&&f.getAttribute('data-ink')!==ink})});
+rows.forEach(function(r){r.hidden=!hit(r.getAttribute('data-search'))||(ink!=='all'&&r.getAttribute('data-search').indexOf(ink==='green'?'deep green':ink)<0)});
+cnt.textContent=n+' of '+els.length+' animals';none.hidden=n>0}
+[].forEach.call(document.querySelectorAll('[data-g]'),function(b){b.addEventListener('click',function(){ground(b.getAttribute('data-g'))})});
+[].forEach.call(document.querySelectorAll('[data-i]'),function(b){b.addEventListener('click',function(){ink=b.getAttribute('data-i');press('data-i',ink);apply()})});
+q.addEventListener('input',apply);apply();
+document.addEventListener('click',function(ev){var b=ev.target.closest('.cp');if(!b)return;var t=b.getAttribute('data-copy'),old=b.textContent;
+function done(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1200)}
+function fb(){var s=document.createElement('code');s.textContent=t;b.replaceWith(s);var r=document.createRange();r.selectNodeContents(s);var sel=getSelection();sel.removeAllRanges();sel.addRange(r)}
+try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}});
+try{var g=localStorage.getItem('an-ground');if(g&&G[g])ground(g)}catch(e){}
+})();
+</script>

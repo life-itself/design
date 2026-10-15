@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seeds of Renaissance · Slides: Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
+<link rel="stylesheet" href="../../system/fonts.css">
+<link rel="stylesheet" href="../../system/tokens.css">
+<link rel="stylesheet" href="../../system/components.css">
+<link rel="stylesheet" href="slides.css">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body class="sor">
+<script src="../../system/graphics.js"></script>
+
+<main class="deck-page gutter">
+<header class="deck-intro">
+  <nav class="deck-nav"><a href="index.html">Slides</a><a href="study.html" aria-current="page">Study</a><a href="gathering.html">Gathering</a></nav>
+  <span class="label muted">Templates · Slides · Study register · Draft</span>
+  <h1>Study deck</h1>
+  <p>For white papers, research talks and seminars: rigour leads. A fifteen-slide talk on <em>Wisdom and Wanting What’s Good</em> (White paper No. 6), as a mock to work out both the design and the talk.</p>
+  <ul>
+    <li>Every content slide states a claim as a sentence in Restora, then shows the evidence: a figure, a short list, a table or a quote.</li>
+    <li>Polyamine on the cover only. White ground; woodcuts only on section slides; the one night is the closing slide, as on the paper’s back cover.</li>
+    <li>Figures are the house diagrams, unchanged: they carry their own title and signature. Photographs sit flat and square.</li>
+  </ul>
+  <div class="actions"><button class="btn btn--solid" id="present-btn" type="button">Present</button><a class="btn" href="#deck">See every slide</a></div>
+</header>
+
+<span class="label deck-sec">The deck at a glance</span>
+<div class="deck-strip" id="strip"></div>
+
+<span class="label deck-sec" id="deck">Every slide</span>
+<div class="deck-list" id="slides">
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--cover">
+    <div class="slide__text">
+      <span class="slide__label">Seeds of Renaissance · White paper No. 6</span>
+      <h2 class="slide__title">Wisdom and Wanting What’s Good</h2>
+      <p class="slide__sub">Collective wisdom for a time of crisis and renewal</p>
+      <div class="slide__by">Rufus Pollock and Rosie Bell<span class="slide__label">Life Itself Sensemaking Studio · October 2026</span></div>
+    </div>
+    <img class="slide__object" src="img/wisdom-cover.jpg" alt="The paper’s cover: a blue painted heart with leaves growing from it">
+  </div></div>
+  <figcaption><b>1 · Cover.</b> The one Polyamine in a study deck. Series line, title, subtitle, authors; the paper’s own cover flat on the right with a hairline edge. <code>.slide--cover</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--statement">
+    <span class="slide__label">The argument</span>
+    <h2 class="slide__claim">Modernity has staged a heist.</h2>
+    <p>The field of legitimate knowledge has been stripped of all that’s good and beautiful, leaving only what can be measured.</p>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>2</span></div>
+  </div></div>
+  <figcaption><b>2 · Statement.</b> One claim set alone in Restora, one plain line under it. The talk’s thesis, or a turn in the argument. <code>.slide--statement</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--study slide--contents">
+    <span class="slide__label">Contents</span>
+    <h2 class="slide__claim">Four steps in the argument</h2>
+    <ol>
+      <li><span class="n">1</span><span><b>The wisdom gap</b><small>Our power grows faster than our capacity to use it well</small></span></li>
+      <li><span class="n">2</span><span><b>Questions of quantity</b><small>How modern decision-making reduced value to measurement</small></span></li>
+      <li><span class="n">3</span><span><b>Knowing beyond measurement</b><small>Valueception, and the work of Christopher Alexander</small></span></li>
+      <li><span class="n">4</span><span><b>Who’s wise, and how do we know?</b><small>Peer-selected networks, and what they mean for democracy</small></span></li>
+    </ol>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>3</span></div>
+  </div></div>
+  <figcaption><b>3 · Contents.</b> The parts in order, numbered because they are a sequence, each with one line on what it argues. <code>.slide--study.slide--contents</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--plain">
+    <span class="slide__label">Part one</span>
+    <h2 class="slide__title">The wisdom gap</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-sunflower"/></svg>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>4</span></div>
+  </div></div>
+  <figcaption><b>4 · Section.</b> White ground, the part title in Restora, one small woodcut, as a chapter opens in the paper. <code>.slide--section.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--figure">
+    <img src="img/wisdom-gap-figure.svg" alt="Technological power rises steeply over time while our capacity to use it well rises slowly; the gap between them widens">
+    <div class="slide__foot"><span></span><span>5</span></div>
+  </div></div>
+  <figcaption><b>5 · Figure.</b> A house diagram fills the slide as it is: its title is already the claim and it signs itself, so the slide adds only its number. <code>.slide--figure</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--figure">
+    <img src="img/dimensions-of-wisdom.svg" alt="Wisdom, a practical capacity, branches into valueception (sensing what’s good), sensemaking (discerning paths towards the good) and will (the resolve to act)">
+    <div class="slide__foot"><span></span><span>6</span></div>
+  </div></div>
+  <figcaption><b>6 · Figure.</b> The second figure: a concept map. Same treatment. <code>.slide--figure</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--plain">
+    <span class="slide__label">Part two</span>
+    <h2 class="slide__title">Questions of quantity</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-wheat"/></svg>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>7</span></div>
+  </div></div>
+  <figcaption><b>7 · Section.</b> <code>.slide--section.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--study">
+    <span class="slide__label">Questions of quantity</span>
+    <h2 class="slide__claim">Modern societies trust two ways of knowing, and sideline a third</h2>
+    <ul class="slide__list">
+      <li><b>Rationality:</b> deriving outcomes by logic.</li>
+      <li><b>Empiricism:</b> objective facts about the world, usually by measurement.</li>
+      <li><b>Valueception:</b> sensing what is good. Dismissed as “subjective”, and so left uncultivated.</li>
+    </ul>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>8</span></div>
+  </div></div>
+  <figcaption><b>8 · Claim and list.</b> The headline says what to see; the list is the evidence, in short full sentences, one level, ink square markers. <code>.slide--study</code> + <code>.slide__list</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--quote slide--plain">
+    <blockquote>
+      <p>“The meta-crisis is a profound misunderstanding of the nature of what is valuable … pursuing an abstract definition of value, quantitative, financialised, to the detriment of the actual, living field of embodied, intrinsic value.”</p>
+      <span class="slide__label">Zak Stein</span>
+    </blockquote>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>9</span></div>
+  </div></div>
+  <figcaption><b>9 · Quote.</b> A long quotation in Restora, the source in Apfel. No mark: the words carry it. <code>.slide--quote.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--plain">
+    <span class="slide__label">Part three</span>
+    <h2 class="slide__title">Knowing beyond measurement</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>10</span></div>
+  </div></div>
+  <figcaption><b>10 · Section.</b> <code>.slide--section.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--split slide--plain">
+    <div class="slide__text">
+      <span class="slide__label">Case study</span>
+      <h2 class="slide__claim">For Alexander, a good building is not a matter of taste</h2>
+      <p>“The difference between a good building and a bad building … is an objective matter.”</p>
+      <p class="slide__cap"><span class="slide__fig">Fig. 1</span>Notre-Dame from the banks of the Seine.</p>
+    </div>
+    <div class="slide__pic">
+      <img class="slide__photo" src="img/notre-dame.jpg" alt="Notre-Dame seen along a tree-lined quay on the Seine, people sitting by the water">
+    </div>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>11</span></div>
+  </div></div>
+  <figcaption><b>11 · Claim and photograph.</b> The claim and its evidence (here a quotation) on the left; the photograph bleeds off the right edge, flat, with a straight edge in this register. <code>.slide--split.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--section slide--plain">
+    <span class="slide__label">Part four</span>
+    <h2 class="slide__title">Who’s wise, and how do we know?</h2>
+    <svg class="slide__mark woodcut" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-samara"/></svg>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>12</span></div>
+  </div></div>
+  <figcaption><b>12 · Section.</b> Past ten words would move to a smaller size; here five. <code>.slide--section.slide--plain</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--study">
+    <span class="slide__label">Who’s wise</span>
+    <h2 class="slide__claim">Some fields already choose by discernment, through peers</h2>
+    <table class="slide__table">
+      <colgroup><col style="width: 25%"><col style="width: 33%"><col></colgroup>
+      <thead><tr><th>Field</th><th>Who decides</th><th>On what basis</th></tr></thead>
+      <tbody>
+        <tr><td>Courts</td><td>Judges, chosen by experienced peers</td><td>Judgement: evidence weighed with experience and intuition</td></tr>
+        <tr><td>Contemplative lineages</td><td>Teachers, recognised by practitioners</td><td>“Who were your teachers? Who were theirs?”</td></tr>
+        <tr><td>Wine, music, sport</td><td>Experts, appointed by experts</td><td>Similarly discerning peers can tell</td></tr>
+      </tbody>
+    </table>
+    <p class="slide__note">All are open to corruption. So wisdom has to be cultivated widely, not only at the top.</p>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>13</span></div>
+  </div></div>
+  <figcaption><b>13 · Claim and table.</b> Rows on hairlines, column heads as Apfel tags, a one-line note under the table. For comparisons a list would flatten. <code>.slide--study</code> + <code>.slide__table</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--statement">
+    <span class="slide__label">Conclusion</span>
+    <h2 class="slide__claim">What we need, it is within us to discern.</h2>
+    <p>The task is not to invent wisdom anew, but to renew and reintegrate it.</p>
+    <div class="slide__foot"><span>Wisdom and Wanting What’s Good</span><span>14</span></div>
+  </div></div>
+  <figcaption><b>14 · Statement.</b> The same type as slide 2, closing the argument. <code>.slide--statement</code></figcaption>
+</figure>
+
+<figure>
+  <div class="slide-frame"><div class="slide slide--closing slide--night">
+    <div class="slide__text">
+      <span class="slide__label">Seeds of Renaissance · White paper No. 6</span>
+      <h2 class="slide__claim">Read the paper</h2>
+      <p>Wisdom and Wanting What’s Good, by Rufus Pollock and Rosie Bell. Free to read and share under CC BY 4.0.</p>
+      <div class="links"><span>secondrenaissance.net/papers</span></div>
+    </div>
+    <span class="slide__disc"><img src="../../system/img/logo.png" alt="Seeds of Renaissance"></span>
+  </div></div>
+  <figcaption><b>15 · Closing.</b> The deck’s one night, as on the paper’s back cover: where to read it, the licence, the logo on its disc. <code>.slide--closing.slide--night</code></figcaption>
+</figure>
+
+</div>
+</main>
+
+<div class="present" id="present" hidden>
+  <button class="btn close" id="present-close" type="button">Close</button>
+  <div class="slide-frame" id="present-frame"></div>
+  <span class="hint">← → to move · Esc to close</span>
+</div>
+
+<script src="deck.js"></script>
+<script src="../../system/sor.js"></script>
+</body>
+</html>
