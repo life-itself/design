@@ -6,6 +6,8 @@ Every component in [system/components.css](system/components.css), with when to 
 
 Edit the readable source `system/components.src.css`, then run `python3 system/build-css.py`.
 
+Photographs sit flat in a plain `<figure>`; the postcard `.print` is retired ([layout.md](layout.md#material)).
+
 ## Base and type roles
 
 | Class | What |
@@ -64,24 +66,24 @@ When: the one statement of a landing page, over a strong landscape photograph. F
 
 ## Split hero
 
-When: a landing page without a strong landscape photo. Statement beside a laid-down print.
+When: a landing page without a strong landscape photo. Statement beside a plate.
 
 ```html
 <section class="hero-split gutter ground-sun">
   <div class="text"><span class="label muted">…</span><h1>…</h1><p>…</p><a class="btn btn--solid" href="#">…</a></div>
-  <figure class="print"><img src="…" alt="…"><figcaption><span class="fig-no">Fig. 1</span>…</figcaption></figure>
+  <figure><img src="…" alt="…"><figcaption><span class="fig-no">Fig. 1</span>…</figcaption></figure>
 </section>
 ```
 
 ## Page title
 
-When: inner pages. Title, dedication in the poetic voice, a print; a seed spiral behind.
+When: inner pages. Title, dedication in the poetic voice, a plate; a seed spiral behind.
 
 ```html
 <section class="page-hero gutter ground-sun">
   <svg class="spiral woodcut" viewBox="0 0 200 200" aria-hidden="true"><use href="#c-spiral"/></svg>
   <div><span class="label muted">Manifesto</span><h1>A Manifesto for Civilizational Renewal</h1><p class="dedication poem">For all the living beings…</p></div>
-  <figure class="print">…</figure>
+  <figure>…</figure>
 </section>
 ```
 
@@ -236,14 +238,14 @@ When: every page. Night, torn in, logo on its disc.
 </footer>
 ```
 
-## From the four-page mockup
+## More components
 
-Added when porting the gatherings, join, magazine and white paper pages. Copy the markup from those examples.
+Copy the markup from the example pages named.
 
 | Class | When | Example |
 |---|---|---|
 | `.actions` | A wrapping row of buttons | gatherings, magazine |
-| `.prints` | Two prints laid down overlapping, optional `.seal` in the corner: an events hero | [gatherings.html](examples/web/gatherings.html) |
+| `.prints` | Two photographs overlapping, optional `.seal` in the corner: an events hero. Built on the retired postcard `.print`: avoid on new pages | [gatherings.html](examples/web/gatherings.html) |
 | `.hero-split .flock` | A swallow flock inside a split hero | gatherings |
 | `.swallows` | A small inline pair of swallows above a line | gatherings |
 | `.table-wrap` + `.hubs` | "Where we gather" table; rows stack on phones | gatherings |

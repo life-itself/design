@@ -1,6 +1,6 @@
 # Diagrams
 
-Diagrams, figures, charts and frameworks: in papers, on slides, on the website, and above all shared on their own. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. **v0.1, 2026-10-08.**
+Diagrams, figures, charts and frameworks: in papers, on slides, on the website, and above all shared on their own. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
 
 <div class="not-prose my-6 grid gap-4 sm:grid-cols-2">
   <a href="examples/diagrams/index.html#wisdom-gap"><img src="examples/diagrams/img/wisdom-gap-figure.png" alt="The Wisdom Gap: two rising curves, the space between them shaded in the red tint" class="border border-stone-300"></a>
@@ -61,7 +61,7 @@ The same type, ink and red; colour is emphasis, not decoration.
 - **The title says what to see;** the subtitle says what is measured, in what units.
 - **Label directly:** names at line ends, values at bar tips, the newer value beside each dot. A key only when unavoidable. Never a number on every point.
 - **Quiet scaffolding:** hairline gridlines in one direction, the zero line in ink, ticks in Apfel at 60% ink. An event is a pale band behind the data, labelled at its top.
-- **Forms:** lines for change over time, ranked bars for comparison, two dots per row for before and after. One axis only, never two.
+- **Forms:** lines for change over time, ranked bars for comparison, two dots per row for before and after. One axis only, never two. Add other forms (stacked bars, small multiples, maps) only when a real chart needs them.
 - **Source** bottom left, level with the signature ("Source: …"), as the FT and the Economist do. Publish the data beside the figure.
 
 ## The signature
@@ -71,9 +71,9 @@ Every figure is signed inside the image, so it stays attributed when it is cropp
 - **What:** the mark, then "SEEDS OF RENAISSANCE" and one optional slot, set in Apfel Grotezk at 60% ink, one line. The slot holds the URL, a publication line, or nothing.
 - **Where:** bottom right, its right edge on the drawing's right edge. Same corner on every figure.
 - **Size:** at 1600 px, the mark 64 px and the text 20 px (about 540 px wide). Scale the figure, never the signature.
-- **Light grounds:** the mark on its white disc. **Dark:** a placeholder until the mark on dark is settled ([logo.md](logo.md#open)).
-- **Too small for the mark:** drop it and keep the text. Life Itself is not shown on figures ([logo.md](logo.md#which-mark-where)).
-- **Ready-made files** in `system/img/`: `signature.svg`, `signature-dark.svg`, `signature-name.svg`, `signature-name-dark.svg`, each with `.png` and `@2x.png`, transparent. Rebuild with `system/build-signature.py` (the URL is a placeholder until the domain is decided, [brand.md](brand.md#open)).
+- **Light grounds:** the mark on its white disc. **Dark grounds:** the `colour-dark` mark, no disc ([logo.md](logo.md#colourways)).
+- **Too small for the mark:** drop it and keep the text; there is no small version of the mark. Life Itself is not shown on figures ([logo.md](logo.md#which-mark-where)).
+- **Ready-made files** in `system/img/`: `signature.svg`, `signature-dark.svg`, `signature-name.svg`, `signature-name-dark.svg`, each with `.png` and `@2x.png`, transparent. Rebuild with `system/build-signature.py`.The URL files read seedsofrenaissance.org.
 
 ## Exports
 
@@ -92,10 +92,4 @@ Draw tight; the margin is added on export. `write_figure()` in `system/outline.p
 - [ ] Signed bottom right, the content's right edge lined up with the signature's.
 - [ ] Exported with `write_figure()`: tight SVG for the page, padded PNG for sharing.
 
-## Open
-
-- The red tint may be a touch strong on large panels at full size; if so, try 12% for panels (beads, low priority).
-- More chart forms as real charts need them (stacked bars, small multiples, maps).
-- A small one-colour swallow for figures too small for the mark ([logo.md](logo.md#open), item 3).
-
-How these rules were reached, with the options tried: [decisions.md](decisions.md#working-through-publication-branding-2026-10-07) and the tryouts in `archive/diagrams-*-2026-10.html`.
+How these rules were reached, with the options tried: [design system plan](archive/design-system-plan-2026-10.md#working-through-publication-branding-2026-10-07) and the tryouts in `archive/diagrams-*-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

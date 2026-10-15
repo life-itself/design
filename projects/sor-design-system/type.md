@@ -1,98 +1,57 @@
 # Type
 
-The typefaces, and where each one is used. Settled over two rounds in September 2026; the reasoning, and everything rejected, is in [type/research-notes.md](type/research-notes.md).
+The typefaces, and where each one is used. Four faces, no more. Part of the shared [SoR design system](README.md), used by the [experiences](../sor-experiences-2026/) and the [website](website.md). Experience-only notes live in [common.md](../sor-experiences-2026/experiences/00-home/common.md#type). How the faces were chosen, and everything rejected: [type/research-notes.md](type/research-notes.md).
 
 <iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
 
-Part of the shared [SoR design system](README.md), used by the [experiences](../sor-experiences-2026/) and the [website](website.md). Experience-only notes live in [common.md](../sor-experiences-2026/experiences/00-home/common.md#type).
+## The faces
 
-Tracking: beads `design-2pk` (closed).
-
-## In the system (v0.1, 2026-10-05)
-
-What the [design system](BUILD.md) actually uses, taken from the approved mockups. Tokens in [system/tokens.css](system/tokens.css); specimens and scale in [guide.html](guide.html#type).
+Tokens in [system/tokens.css](system/tokens.css); specimens and scale in [guide.html](guide.html#type).
 
 | Role | Token | Face | Used for |
 |---|---|---|---|
-| Display | `--font-display` | Polyamine | Every headline and title up to ~10 words: hero, page titles, section headlines, card and list titles, wordmark |
-| Quote | `--font-quote` | Restora | Display text past ~10 words, where Polyamine stops being readable: pull quotes (`.pull`), standout passages, long titles |
-| Body | `--font-body` | Bricolage Grotesque | All reading; light (300) for statement paragraphs |
-| Label | `--font-label` | Apfel Grotezk | Eyebrows, buttons, dates, figure numbers: 11–14px, uppercase, tracked .1–.16em |
-| Poem | `--font-poem` | Restora italic (Fraunces until installed) | Dedications, a line set alone, one emphasised sentence |
+| Display | `--font-display` | [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font) | Every headline and title up to ~10 words: hero, page titles, section headlines, card and list titles, wordmark |
+| Quote | `--font-quote` | [Restora](https://www.myfonts.com/collections/restora-font-nasir-udin) | Display text past ~10 words: pull quotes (`.pull`), standout passages, long titles |
+| Body | `--font-body` | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) | All reading; light (300) for statement paragraphs |
+| Label | `--font-label` | [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk) | Eyebrows, buttons, dates, captions, credits, figure numbers: 11–14px, uppercase, tracked .1–.16em |
+| Poem | `--font-poem` | Restora italic | Dedications, a line set alone, one emphasised sentence |
 
-Scale tokens: `--t-hero` 40–96, `--t-title` 40–84, `--t-section` 36–64, `--t-card` 24–32, `--t-quote` 26–38, `--t-lead` 20–28, `--t-reading` 19, `--t-body` 17, `--t-caption` 14, `--t-label` 12.
+## The rule: length decides
 
-**The rule: length decides (agreed 2026-10-05, Rufus and Sylvie).** Polyamine is used almost everywhere for display: all heroes and big titles, section headlines, card titles. It is not readable at length, so once display text runs past about ten words it moves to Restora: pull quotes, a bigger passage that should come through, a long title. This replaces the plan below, which reserved Polyamine for the hero only. **Four faces only:** the poetic italic is Restora too, not a fifth face (Fraunces is only the fallback while Restora is unlicensed).
+**Polyamine for almost all display.** Heroes, big titles, section headlines, card titles: if it is display text under about ten words, it is Polyamine.
 
-**Fixed 2026-10-05:** the mockups named "Appful Grotesque", which matched no font, so labels showed in the fallback (Hanken Grotesk). The system embeds Apfel Grotezk (Regular, Mittel, Fett) in `system/fonts.css`.
+**Restora beyond that.** Polyamine is not readable at length, so once display text runs past about ten words it moves to Restora: pull quotes, a bigger passage that should come through, a long title. The poetic italic is Restora too, not a fifth face.
 
-## The rounds
+**Bricolage for reading. Apfel Grotezk for small uppercase labels.**
 
-| | What | Read and share | Archived here |
-|---|---|---|---|
-| **One** | Heading and billboard faces, nineteen candidates | [artifact](https://claude.ai/artifact/V3NjX27AqKMjKeiwxLSfgR) | [type/round-01-headings.html](type/round-01-headings.html) |
-| **Two** | Body faces, then eyebrow faces | [artifact](https://claude.ai/artifact/Gr3K5DYxpoB6hP4XZ1nR9L) | [type/round-02-body.html](type/round-02-body.html) |
+Papers and other print follow their own type table: [print.md](print.md).
 
-Both pages are **archived in this repo** as standalone HTML with the fonts embedded, so they open offline and do not depend on the artifacts surviving. The artifact links are for reading and sharing. No need to archive them again. Each page carries the verdict every candidate got, so a later round can check what has already been turned down. Rebuild either with its `build-round-0N.py`.
+## Scale
 
-## The four faces
+| Token | Size (px) |
+|---|---|
+| `--t-hero` | 40–96 |
+| `--t-title` | 40–84 |
+| `--t-section` | 36–64 |
+| `--t-card` | 24–32 |
+| `--t-quote` | 26–38 |
+| `--t-lead` | 20–28 |
+| `--t-reading` | 19 |
+| `--t-body` | 17 |
+| `--t-caption` | 14 |
+| `--t-label` | 12 |
 
-| Role | Face | Licence |
-|---|---|---|
-| **Billboard** | [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font) | commercial, UICreative — $36 personal, $189 business |
-| **Heading** | [Restora](https://www.myfonts.com/collections/restora-font-nasir-udin), Nasir Udin | commercial, ~$139 |
-| **Body** | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), Mathieu Triay | free, SIL OFL |
-| **Eyebrow / meta** | [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk), Collletttivo | free, SIL OFL |
+## Fallbacks and licences
 
-Two paid, two free. Neither paid face is licensed yet — see [Before shipping](#before-shipping).
+Bricolage Grotesque and Apfel Grotezk are free (SIL OFL). Apfel Grotezk (Regular, Mittel, Fett) is embedded in `system/fonts.css`, so it loads anywhere.
 
-## How to apply them
+Polyamine and Restora are commercial and not yet licensed. Pages name them and they show only where installed; everyone else sees **Fraunces** (then Georgia) for display, quotes and the poetic italic. Fraunces is only the fallback, never a face of its own. If Apfel Grotezk fails to load, labels fall back to Hanken Grotesk.
 
-Provisional. The patterning below is what we believe now; it gets worked out properly against real page layouts in a later session, from exemplars rather than in the abstract.
+## Using them
 
-### Polyamine — billboard only
+- **Polyamine** is a face for a statement, not a sentence. It has a single weight, so it does not step down: keep it at card-title size or larger.
+- **Restora** has eight weights, thin to black, with matching italics. Build hierarchy from size and weight within Restora; there is no separate subheading face.
+- **Bricolage**: no bold, no italic. Emphasis comes from rhythm and space.
+- **Apfel Grotezk** covers the small interface chrome: section labels, eyebrows above headings, captions, credits, invitation lines.
 
-The hero, and display type on landing pages and the experience pages. Used **sparingly**: it is the loudest thing in the system and loses its force if it appears often.
-
-Three limits, all learned from looking at it rather than from theory:
-
-- **Five to ten words maximum** at any given size. It is a face for a statement, not for a sentence.
-- **Not for pull quotes.** It does not hold at that length or in that position.
-- **Not for small headings.** It ships no weight range at all, so there is nothing to step down to. It only works large.
-
-In an ordinary article, Polyamine appears in the hero and nowhere else. H1 to H4 in running text are Restora.
-
-### Restora — headings, and the larger quotes
-
-The working heading face: headings and subheadings inside running text, pull quotes, and larger quotations. Eight weights thin to black with matching italics, so hierarchy comes from size and weight within Restora rather than from bringing in another face.
-
-There is **no separate subheading face**. Subheads are Restora, smaller or at a different weight.
-
-### Bricolage Grotesque — body
-
-All long reading. One weight, no bold, no italic: emphasis comes from rhythm and space.
-
-### Apfel Grotezk — eyebrows and meta
-
-Section labels, eyebrows above headings, captions, credits, small interface chrome, invitation lines. Typically 11–14px, uppercase, letterspaced around 0.08–0.14em.
-
-## Why this combination
-
-Two ideas did the work, and both came out of reactions to real samples rather than being planned.
-
-**The display faces are sleek, so the body supplies the ballast.** Stated during the first round: *"if you take that, then you have to compensate with something more weighty and grounded in the body."* The body is not a neutral container. That rules out pairing the display serifs with a quiet workhorse — neutral is not the same as grounded, and a neutral body would leave the page with no weight anywhere.
-
-**The contrast is a change of kind, not of degree.** Round two tested that principle and corrected it. Every serif but one was rejected, including the slab put forward as the most genuinely weighty option, and a **sans** came first. The answer was not more weight inside the same family of shapes but a different skeleton.
-
-**Nothing may look backwards.** The most-used rejection across both rounds: *"it looks like you're going backwards rather than forwards — we're rebirthing, emerging forwards. We're not talking about the last Renaissance, we're talking about a new one."* This killed several beautifully drawn faces. Bricolage's ink traps help here, since ink traps only exist in faces drawn recently.
-
-## Before shipping
-
-- **Licence Polyamine and Restora.** Neither is bought. For now pages name the faces and they show only where installed; anyone else sees a fallback. Tracked as `design-34t.2`.
-- **Self-host all four.** Bricolage and Apfel are OFL and can be served directly; the two paid faces need web licences.
-- **Test Restora at working heading size.** Everything reviewed so far was judged as a *billboard* — one line at around 45px. Restora has never been seen at 24px among body copy, which is where it will actually live, and swashes and imperfect letterforms can read busier small than large. Open-licence stand-ins to compare: [Restora alternatives](examples/type/restora-alternatives.html).
-
-## Open questions
-
-- Is "light, widely spaced capitals" (in [common.md](../sor-experiences-2026/experiences/00-home/common.md#type)) a real requirement, or an artefact of Polyamine being the face we started from?
-- The Book's illuminated gold letters are a separate problem, still on Cinzel Decorative as a sketch.
+Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

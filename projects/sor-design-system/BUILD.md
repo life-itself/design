@@ -13,16 +13,16 @@ Who we're speaking to: see [feel.md](feel.md#who-we-design-for). How we sound: [
 | Making… | Guide | Copy from |
 |---|---|---|
 | A web page | [website.md](website.md) | [examples/web/](examples.md#website) |
-| A post, announcement or poster for social media (Instagram, LinkedIn, Substack, X, link previews; 16:9, 4:5, 1:1, 9:16) | [social.md](social.md) | stub |
+| A post, announcement or banner for social media (Instagram, LinkedIn, Substack, X, link previews; 16:9, 4:5, 1:1, 9:16) | [social.md](social.md) | [Instagram kit](examples/social/instagram/index.html) |
 | A YouTube thumbnail or channel art | [youtube.md](youtube.md) | [examples/youtube/](examples.md#youtube) |
-| Podcast show art or an episode cover | [podcast.md](podcast.md) | stub (episode cover in [examples/youtube/](examples/youtube/index.html)) |
-| A slide deck | [slides.md](slides.md) | in progress |
+| A podcast cover, show art or episode art | [podcast.md](podcast.md) | [episode cover kit](examples/youtube/canva-kit/README.md), [show art](examples/podcast/README.md) |
+| A slide deck | [slides.md](slides.md) | [examples/slides/](examples/slides/index.html) |
 | A printed or PDF paper, a poster | [print.md](print.md) | [examples/print/](examples.md#print) |
 | A diagram, figure or chart | [diagrams.md](diagrams.md) | [examples/diagrams/](examples.md#diagrams); signature in `system/img/` |
-| The newsletter (The Greenhouse) | [email.md](email.md) | stub |
-| Something in Canva | [social.md](social.md#canva) | stub |
+| The newsletter (The Greenhouse) | [email.md](email.md) | none yet: follow the guide |
+| Something in Canva | [social.md](social.md#canva) | the Instagram and podcast kits above |
 
-What exists for each, and its status: [examples.md](examples.md#status).
+Everything that exists, by kind: [examples.md](examples.md).
 
 ## Rules that apply everywhere
 
@@ -32,7 +32,7 @@ What exists for each, and its status: [examples.md](examples.md#status).
 4. **No bright yellow, no highlighting, no gradients** except a scrim to make text readable on a photo.
 5. **The hand is our texture:** torn edges, paper grain, woodcuts. Not filters, not stock textures.
 6. **Real copy in our voice** ([voice.md](voice.md)); images captioned like plates where there's room.
-7. **Images are clean.** A photograph sits flat and square on the page, full-bleed or in its column. No postcard look: no white mount, tilt or drop shadow (decided 2026-10-08, Rufus: wrong vibe).
+7. **Images are clean.** A photograph sits flat and square on the page, full-bleed or in its column. No postcard look: no white mount, tilt or drop shadow.
 8. **Use the tokens** in `system/tokens.css`. If a format needs a fixed scale (thumbnails, slides, print), add it as tokens there, like `--thumb-*`.
 
 ## Check before you finish
@@ -50,7 +50,8 @@ What exists for each, and its status: [examples.md](examples.md#status).
 - [colour.md](colour.md): roles, proportion, do and don't
 - [type.md](type.md): the faces, scale, and how to apply them
 - [layout.md](layout.md): grounds, rhythm, torn edges, grid and spacing
-- [graphics.md](graphics.md): woodcut swallow, seal, seeds and clusters; the full set in [woodcuts.html](woodcuts.html)
+- [graphics.md](graphics.md): the graphics library: woodcuts, animals, mountains, botanicals, washes, geometry, marks and prints, with their galleries
 - [photography.md](photography.md): what to choose and avoid
-- [logo.md](logo.md): versions and placement
+- [logo.md](logo.md): versions and placement; every file in [logos.html](logos.html)
+- [brand.md](brand.md): who we are, what we offer, who we speak to
 - [components.md](components.md): every component with HTML

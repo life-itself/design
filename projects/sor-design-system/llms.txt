@@ -7,16 +7,17 @@ To build something: read BUILD.md first, open the guide for what you are making 
 ## Start
 
 - [BUILD.md](https://design.seedsofrenaissance.org/BUILD.md): start here. Rules in one paragraph, which guide to use for what you are making, rules that apply everywhere, checklist.
-- [examples.md](https://design.seedsofrenaissance.org/examples.md): every kind of thing we make, its guide, examples and status
+- [examples.md](https://design.seedsofrenaissance.org/examples.md): every kind of thing we make, with its guide and examples to copy
 
 ## Topics
 
+- [brand.md](https://design.seedsofrenaissance.org/brand.md): why Seeds of Renaissance exists, offers, who we speak to, names
 - [feel.md](https://design.seedsofrenaissance.org/feel.md): grounded hope, what we are not, registers, principles
-- [voice.md](https://design.seedsofrenaissance.org/voice.md): how we sound, key lines, rewrites, calls to action (draft)
+- [voice.md](https://design.seedsofrenaissance.org/voice.md): how we sound, key lines, rewrites, calls to action
 - [colour.md](https://design.seedsofrenaissance.org/colour.md): grounds, inks, the one accent and the illustration inks for graphics, with roles and rules
 - [type.md](https://design.seedsofrenaissance.org/type.md): the four faces, the scale, and why
 - [layout.md](https://design.seedsofrenaissance.org/layout.md): grounds and rhythm, torn edges, grid and spacing
-- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): woodcut swallow, seal, seeds and clusters, the animal woodcuts (gallery at https://design.seedsofrenaissance.org/system/animals/gallery.html), the blue mountains (gallery at https://design.seedsofrenaissance.org/system/mountains/gallery.html), coloured botanicals, watercolour washes, line geometry and marks (galleries at https://design.seedsofrenaissance.org/system/botanicals/gallery.html, /system/washes/gallery.html, /system/geometry/gallery.html and /system/marks/gallery.html), and how to use them
+- [graphics.md](https://design.seedsofrenaissance.org/graphics.md): the graphics library: woodcut swallow, seal, seeds and clusters, animals, mountains, botanicals, washes, geometry, marks and prints; what each is for, its colours and its gallery
 - [photography.md](https://design.seedsofrenaissance.org/photography.md): what to choose and avoid (all current photos are placeholders)
 - [logo.md](https://design.seedsofrenaissance.org/logo.md): the chosen logo, colourways, lockups, files and placement; every file shown in logos.html
 - [components.md](https://design.seedsofrenaissance.org/components.md): every component, when to use it, HTML to copy
@@ -26,12 +27,11 @@ To build something: read BUILD.md first, open the guide for what you are making 
 - [website.md](https://design.seedsofrenaissance.org/website.md): web pages: page shell, section menu, checklist
 - [social.md](https://design.seedsofrenaissance.org/social.md): social media in every shape; Instagram posts done as a Canva kit (examples/social/instagram/)
 - [youtube.md](https://design.seedsofrenaissance.org/youtube.md): YouTube thumbnails and channel art
-- [podcast.md](https://design.seedsofrenaissance.org/podcast.md): every podcast image: the episode cover for YouTube (final, Canva kit in examples/youtube/canva-kit/), Instagram episode posts, show art (next); the swallows-and-fingerprints ground
-- [slides.md](https://design.seedsofrenaissance.org/slides.md): slide decks (brief)
-- [print.md](https://design.seedsofrenaissance.org/print.md): papers as PDF and posters: covers, anatomy of a paper
-- [publishing.md](https://design.seedsofrenaissance.org/publishing.md): how we build a paper, PDF and web: design, anatomy, editorial craft, pipeline
-- [diagrams.md](https://design.seedsofrenaissance.org/diagrams.md): diagrams, figures and charts: type, drawing style, charts, the signature, how to build one as SVG (v0.1); examples at https://design.seedsofrenaissance.org/examples/diagrams/index.html
-- [email.md](https://design.seedsofrenaissance.org/email.md): the newsletter (stub)
+- [podcast.md](https://design.seedsofrenaissance.org/podcast.md): every podcast image: the episode cover (Canva kit in examples/youtube/canva-kit/), Instagram episode posts, show art and episode art (examples/podcast/); the swallows-and-fingerprints ground
+- [slides.md](https://design.seedsofrenaissance.org/slides.md): slide decks: the slide types; decks to copy in examples/slides/
+- [print.md](https://design.seedsofrenaissance.org/print.md): papers as PDF and posters: covers, anatomy of a paper, and the process (design, editorial craft, Typst pipeline)
+- [diagrams.md](https://design.seedsofrenaissance.org/diagrams.md): diagrams, figures and charts: type, drawing style, charts, the signature, how to build one as SVG; examples at https://design.seedsofrenaissance.org/examples/diagrams/index.html
+- [email.md](https://design.seedsofrenaissance.org/email.md): the newsletter: constraints to design within
 
 ## Code
 

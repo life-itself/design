@@ -18,7 +18,7 @@ sys.path.insert(0, str(here.parent.parent / "system"))
 from outline import SYSTEM, DISC, THEMES, RED, signature, b64, apfel, apfel_m
 apfel_cap = apfel.cap
 
-URL = "seeds-domain.tbd/wisdom"  # a paper's page; placeholder until the domain is decided
+URL = "seedsofrenaissance.org"
 W, M = 1600, 72                  # export width, margin
 SIG_GAP, SIG_FOOT = 36, 56       # figure to signature, signature to bottom edge
 SIG = {th: signature(th, URL, mark_ref="mark") for th in THEMES}

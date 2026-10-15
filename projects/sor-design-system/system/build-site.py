@@ -15,7 +15,8 @@ for f in list(root.glob("*.md")) + list(root.glob("*.html")) + [root / "config.j
     shutil.copy2(f, site / f.name)
 for d in ["examples", "specimens", "content"]:
     shutil.copytree(root / d, site / d)
-shutil.copytree(root / "system", site / "system", ignore=shutil.ignore_patterns("*.py", "fonts", "textures.txt", "__pycache__", "preview-*.png", "sw.json"))
+# No .gitignore: the sets ignore thumbs/ in the repo, but the site branch must commit them for the galleries
+shutil.copytree(root / "system", site / "system", ignore=shutil.ignore_patterns("*.py", "*.sh", "*-shell.html", ".gitignore", "fonts", "textures.txt", "__pycache__", "preview-*.png", "sw.json"))
 (site / "type").mkdir()
 shutil.copy2(root / "type" / "research-notes.md", site / "type" / "research-notes.md")
 shutil.copytree(root / "archive", site / "archive", ignore=lambda d, names: [n for n in names if (pathlib.Path(d) / n).is_dir()])

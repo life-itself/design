@@ -4,7 +4,7 @@ Line geometry for Seeds of Renaissance: sacred-geometry figures as transparent b
 
 Gallery with every file and a link to each: `system/geometry/gallery.html` on the design system site (built by `python3 system/build-element-galleries.py` from `elements.json`; it also makes the gitignored `thumbs/`).
 
-Drawn in black ink (`--ink`, `#1b1916`) on a transparent ground, so they take the ink of their ground when inlined. The Metatron's cube is rebuilt from geometry, so it is exact and its SVG is tiny; the others are traced from small sources. SVGs are kept only where they are small (under 150 KB); the finest line work is PNG only.
+Drawn in black ink (`--ink`, `#1b1916`) on a transparent ground. The colour is fixed in the files, so use them on light grounds; they don't turn chalk on night. The Metatron's cube is rebuilt from geometry, so it is exact and its SVG is tiny; the others are traced from small sources. SVGs are kept only where they are small (under 150 KB); the finest line work is PNG only.
 
 ## Elements
 

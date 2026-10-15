@@ -2,22 +2,23 @@
 
 Whole pages and assets built only from the system: the test that the system is complete, and the thing to copy. To make something new, copy the closest example and follow [BUILD.md](BUILD.md). Part of the [SoR design system](README.md).
 
-## Status
+## By kind
 
-✅ done · 🚧 in progress · ⏳ to build. Each kind has a guide (how to make it) and, once built, examples to copy. Detail in beads under `design-34t` (IDs in the last column).
+Each kind has a guide (how to make it) and examples to copy. Each has its own folder under `examples/`.
 
-| Kind | What it covers | Guide | Examples | Status | Beads |
-|---|---|---|---|---|---|
-| **Website** | Pages: home, manifesto, gatherings, join, magazine, white paper | [website.md](website.md) | [below](#website) | ✅ **v0.1 done.** Sylvie's notes (white default, torn edges often) still to apply | `.14` |
-| **Social media** | Announcements and posters in 16:9, 4:5, 1:1, 9:16; Instagram, LinkedIn, Substack, link previews, profile banners; the Canva kit | [social.md](social.md) | [Instagram kit](examples/social/instagram/README.md) | 🚧 **Instagram done** (4:5, 1:1, Canva kit); stories, LinkedIn, banners to do | `.15` |
-| **YouTube** | Video thumbnails, channel banner, avatar, lower third, watermark | [youtube.md](youtube.md) | [below](#youtube) | 🚧 **First pass done**, polish in progress | `.5` `.6` |
-| **Podcast** | Episode cover (YouTube), episode posts (Instagram), show art and episode art (3000²) | [podcast.md](podcast.md) | [podcast kit](examples/youtube/canva-kit/README.md) | ✅ **Episode cover, posts, show art and episode art final** (13 Oct) | `.16` `.8` |
-| **Slides** | Talk and workshop decks | [slides.md](slides.md) | — | 🚧 **Brief ready**, in progress | `.12` |
-| **Print** | Papers as PDF, A3 posters, later magazine pages | [print.md](print.md) | [below](#print) | ✅ **v0.1 done**: the Wisdom paper; A3 poster later | `.22` `.28` |
-| **Diagrams** | Figures, charts and frameworks, in papers and shared alone; the signature | [diagrams.md](diagrams.md) | [below](#diagrams) | ✅ **v0.1 done**: signature, type, drawing style, charts with data | `.20` `.25` `.26` |
-| **Email** | The Greenhouse newsletter | [email.md](email.md) | — | ⏳ **To build** | `.18` |
+| Kind | Guide | Examples |
+|---|---|---|
+| **Website** | [website.md](website.md) | [Six pages](#website) |
+| **YouTube** | [youtube.md](youtube.md) | [Thumbnails](examples/youtube/index.html) · [channel art](examples/youtube/channel.html) |
+| **Podcast** | [podcast.md](podcast.md) | [Podcast kit](examples/youtube/canva-kit/README.md) · [show art](examples/podcast/README.md) |
+| **Social media** | [social.md](social.md) | [Instagram kit](examples/social/instagram/README.md) |
+| **Slides** | [slides.md](slides.md) | [Study and Gathering decks](examples/slides/index.html) |
+| **Print** | [print.md](print.md) | [The Wisdom paper](examples/print/index.html) |
+| **Diagrams** | [diagrams.md](diagrams.md) | [Figures and charts](examples/diagrams/index.html) |
 
-Each kind has its own folder under `examples/`.
+Email has a guide, [email.md](email.md), but no template yet.
+
+Photographs in the examples are placeholders ([photography.md](photography.md)). Polyamine and Restora are not yet licensed: nothing public, PDFs and Canva included, until they are.
 
 ## Website
 
@@ -36,20 +37,39 @@ Pages for the Seeds of Renaissance website, one per register.
 
 ## YouTube
 
-Thumbnails, podcast covers and channel art. What we need, what exists and what's next: [youtube.md](youtube.md).
+Thumbnails, podcast covers and channel art. How to make them: [youtube.md](youtube.md).
 
 <iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/985" loading="lazy" title="YouTube examples"></iframe>
 
 - [Thumbnails and podcast covers](examples/youtube/index.html), 1280×720, full size and in a feed.
 - [Channel art](examples/youtube/channel.html): banner, avatar, lower third, watermark.
 
+## Podcast
+
+The episode cover, episode posts, show art and episode art, all on the swallows-and-fingerprints ground. How to make them: [podcast.md](podcast.md).
+
+<div class="not-prose my-6 grid gap-4 sm:grid-cols-2">
+  <a href="examples/youtube/canva-kit/README.md"><img src="examples/youtube/canva-kit/web/example-one-guest.jpg" alt="A podcast episode cover" class="border border-stone-300"></a>
+  <a href="examples/podcast/README.md"><img src="examples/podcast/web/show-art.jpg" alt="Podcast show art" class="border border-stone-300"></a>
+</div>
+
+- [Podcast kit](examples/youtube/canva-kit/README.md): the episode cover in Canva, with PNG layers, guides and step-by-step positions. Seen with the other thumbnails in [examples/youtube/](examples/youtube/index.html).
+- [Show art and episode art](examples/podcast/README.md), 3000 × 3000.
+- Episode posts for Instagram are in the [Instagram kit](examples/social/instagram/README.md).
+
 ## Social
 
-Instagram posts on the swallows-and-fingerprints ground, as a Canva kit. Rules, sizes and what's left: [social.md](social.md).
+Instagram posts on the swallows-and-fingerprints ground, as a Canva kit. Rules and sizes: [social.md](social.md).
 
 <iframe class="specimen" src="specimens/examples-social.html" style="aspect-ratio:1000/523" loading="lazy" title="Social examples"></iframe>
 
 - [Instagram posts](examples/social/instagram/index.html): podcast episode, quote card, announcement, statement, carousel; 4:5 and 1:1. Canva kit: [README](examples/social/instagram/README.md).
+
+## Slides
+
+Decks on a fixed 1920 × 1080 artboard, in two registers. How to make one: [slides.md](slides.md).
+
+- [Slide examples](examples/slides/index.html): [Study](examples/slides/study.html), fifteen slides on the Wisdom paper, and [Gathering](examples/slides/gathering.html), ten slides for a community call.
 
 ## Diagrams
 
@@ -77,10 +97,3 @@ Papers as one A4 PDF, read on screen. How to make one: [print.md](print.md).
 
 - [Print examples](examples/print/index.html): the Wisdom paper page by page (covers, title page, imprint, contents, a chapter opening, body pages with a figure, quotes and a summary box), and a link to the whole PDF.
 - Built with Typst in `pdf-report-publishing` (`typst/build-paper.sh`), from the `--print-*` tokens.
-
-## Open across all of them
-
-- **Sub-brands (major).** Are *Mythos*, the papers, courses, *Gardens of Change* and *The Greenhouse* sub-brands with their own lockups and accents, or Seeds of Renaissance with a label? This shapes podcast, social, print and email. Beads `.11`.
-- **Font licences.** Polyamine and Restora must be bought before anything public, PDFs and Canva included. Beads `.2`.
-- **Logo.** Done 13 October 2026: every file in [logos.html](logos.html), rules in [logo.md](logo.md).
-- **Photography.** Every photo so far is a placeholder. See [photography.md](photography.md).

@@ -112,3 +112,45 @@ Things that cost time to learn, worth not relearning.
 ## What was not tested
 
 Everything in round one was judged as a **billboard** — one line at around 45px on black. Restora has never been seen at working heading size among body copy, which is where it will actually live. "Restora is more readable" remains a reasonable hypothesis rather than an observation.
+
+## Moved from type.md
+
+Reasoning and history that used to sit on [the type page](../type.md), kept here so the page can state only the rules.
+
+### Why this combination
+
+Two ideas did the work, and both came out of reactions to real samples rather than being planned.
+
+**The display faces are sleek, so the body supplies the ballast.** Stated during the first round: *"if you take that, then you have to compensate with something more weighty and grounded in the body."* The body is not a neutral container. That rules out pairing the display serifs with a quiet workhorse — neutral is not the same as grounded, and a neutral body would leave the page with no weight anywhere.
+
+**The contrast is a change of kind, not of degree.** Round two tested that principle and corrected it. Every serif but one was rejected, including the slab put forward as the most genuinely weighty option, and a **sans** came first. The answer was not more weight inside the same family of shapes but a different skeleton.
+
+**Nothing may look backwards.** The most-used rejection across both rounds: *"it looks like you're going backwards rather than forwards — we're rebirthing, emerging forwards. We're not talking about the last Renaissance, we're talking about a new one."* This killed several beautifully drawn faces. Bricolage's ink traps help here, since ink traps only exist in faces drawn recently.
+
+### Licences and prices
+
+| Role | Face | Licence |
+|---|---|---|
+| Display | [Polyamine](https://uicreative.net/products/polyamine-modern-classy-serif-font), UICreative | commercial: $36 personal, $189 business |
+| Quote and poem | [Restora](https://www.myfonts.com/collections/restora-font-nasir-udin), Nasir Udin | commercial, ~$139 |
+| Body | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), Mathieu Triay | free, SIL OFL |
+| Label | [Apfel Grotezk](https://www.collletttivo.it/typefaces/apfel-grotezk), Collletttivo | free, SIL OFL |
+
+Two paid, two free. All four should be self-hosted: Bricolage and Apfel are OFL and can be served directly; the two paid faces need web licences. Until then, `system/build-fonts.py` embeds Apfel only and declares the paid faces as `local()`, so they show only where installed.
+
+### The rounds archive
+
+Each archived round page carries the verdict every candidate got, so a later round can check what has already been turned down. Rebuild either with its `build-round-0N.py`.
+
+### How the rule changed
+
+- **The first plan (September 2026)** used Polyamine as a billboard face only: the hero and landing-page display, used sparingly, five to ten words at most, never for pull quotes or small headings. In an ordinary article Polyamine appeared in the hero and nowhere else, and H1 to H4 in running text were Restora.
+- **The length rule (2026-10-05, Rufus and Sylvie)** replaced it, from the approved mockups: Polyamine for almost all display under about ten words, Restora beyond that and for the poetic italic. Four faces only; Fraunces is only the fallback.
+- **The "Appful Grotesque" fix (2026-10-05).** The mockups named "Appful Grotesque", which matched no font, so labels showed in the fallback (Hanken Grotesk). The system now embeds Apfel Grotezk.
+- Labels were first specified as letterspaced around 0.08–0.14em; the system uses .1–.16em.
+
+### Still unexamined
+
+- Restora at working heading size among body copy (see [What was not tested](#what-was-not-tested)). Swashes and imperfect letterforms can read busier small than large. Open-licence stand-ins to compare: [Restora alternatives](../examples/type/restora-alternatives.html).
+- Whether "light, widely spaced capitals" (in [common.md](../../sor-experiences-2026/experiences/00-home/common.md#type)) is a real requirement, or an artefact of Polyamine being the face we started from.
+- The Book's illuminated gold letters are a separate problem, still sketched in Cinzel Decorative.

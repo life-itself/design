@@ -1,6 +1,6 @@
 # Print
 
-Papers as PDF, and later posters and magazine pages. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first. **v0.1, 2026-10-08.**
+Papers as PDF: what goes in one, how it looks, and how we build it. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
 
 <div class="not-prose my-6 grid gap-4 grid-cols-2 sm:grid-cols-4">
   <a href="examples/print/index.html#front"><img src="examples/print/img/wisdom-01-cover.jpg" alt="Front cover of Wisdom and Wanting What's Good" class="border border-stone-300"></a>
@@ -15,20 +15,35 @@ Papers as PDF, and later posters and magazine pages. Part of the [SoR design sys
 
 Typeset, not word-processed. One A4 PDF, read on screen, white pages. Bricolage for the text, spaced paragraphs on a 118mm measure; Restora for section heads, quotes and epigraphs; Polyamine only for the cover, title page, contents and chapter titles; Apfel for running heads, folios and labels. Chapters open with a woodcut. Figures sit bare on the page. Red only for links and note marks. The back cover is the one night.
 
-## Making a paper
+## Process
 
-The whole process is in [How we build a paper](publishing.md). In short:
+How a paper goes from finished text to a PDF and a web page. Read this first if you're briefed to build one.
 
-1. **Final text in Markdown**, one master per paper (for 2R papers, `2rbook/<topic>/essay.md`); title page, imprint and back-cover fields in its front matter.
-2. **Editorial pass**: mark summary boxes, epigraphs and pull quotes (the `pdf-report` skill in `pdf-report-publishing`, step 5).
+A paper should read as typeset and crafted, not word-processed, on paper and on screen. One text, marked once, gives every output: the PDF, the web page, the launch images.
+
+### Three layers and a pipeline
+
+| Layer | Question it answers | Where it lives |
+|---|---|---|
+| **Design system** | What does it look like? Colours, faces, components, what a pull quote or summary box looks like | This system: [colour](colour.md), [type](type.md), [components](components.md), [diagrams](diagrams.md) |
+| **Paper anatomy** | What is a paper made of, and in what order? Title page, imprint, contents, chapters, back matter; how often a pull quote may appear | [Anatomy of a paper](#anatomy-of-a-paper), with [examples](examples/print/index.html) |
+| **Editorial craft** | Given this text, what do we pull out and emphasise? Standfirsts, pull quotes, summary boxes, epigraphs, emphasis | A skill in [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing) (`skills/pdf-report`, step 5) |
+| **Pipeline** | How do marked text and a style become a PDF or a page? | Typst, in `pdf-report-publishing` |
+
+Take a pull quote. The design system says how it looks and how often it may appear. The craft says which sentence to pick: verbatim, 12 to 30 words, a claim. The pipeline turns the mark into a page.
+
+### Steps
+
+1. **Final text in Markdown**, one master per paper (for 2R papers, `2rbook/<topic>/essay.md`); title page, imprint and back-cover fields live only in its front matter.
+2. **Editorial pass**: mark summary boxes, epigraphs and pull quotes, using the editorial craft skill. If the authors already marked summaries and quotes, add only the obvious.
 3. **Figures**: redraw in house style and sign them ([diagrams.md](diagrams.md)).
-4. **Cover**: plain typographic by default; a paper with its own art gets a bespoke cover, built as HTML ([below](#covers-and-credits)).
-5. **Render** with Typst in [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing): `typst/build-paper.sh <paper>`. The `sor` style takes its sizes from the `--print-*` tokens in `system/tokens.css`; change a value there, then rebuild.
-6. **Check** against the [anatomy](#anatomy-of-a-paper), the [examples](examples/print/index.html) and the list at the end.
+4. **Cover**: plain typographic by default; a paper with its own art gets a bespoke cover, designed from the art and built as HTML ([below](#covers-and-credits)). Promo crops come from the art, not from the cover.
+5. **Render** with Typst in [`pdf-report-publishing`](https://github.com/life-itself/pdf-report-publishing): `typst/build-paper.sh <paper>`. The PDF follows the anatomy in the `sor` style, with the cover as page 1. The `sor` style takes its sizes from the `--print-*` tokens in `system/tokens.css`; change a value there, then rebuild.
+6. **Check** against the [anatomy](#anatomy-of-a-paper), the [examples](examples/print/index.html), the front matter and the list at the end.
 
-The PDF is published with the paper (for 2R papers on secondrenaissance.net), not kept here.
+The PDF is published with the paper (for 2R papers on secondrenaissance.net, with the web page), not kept here. Then publish and announce: for 2R papers, see `2rbook/docs/publishing-a-white-paper.md`.
 
-For an AI agent: read this page, `publishing.md` and the Typst `sor` style; every value below is in `system/tokens.css`.
+For an AI agent: read this page and the Typst `sor` style; every value below is in `system/tokens.css`.
 
 ## Anatomy of a paper
 
@@ -109,9 +124,4 @@ Which mark goes where: [logo.md](logo.md#which-mark-where).
 - [ ] White pages; red only for links and note marks.
 - [ ] Imprint has the version, licence and how to cite; the back cover the same version.
 
-## Open
-
-- An A3 event poster, when an event needs one (`design-34t.28`).
-- Later: a magazine page or spread, a printed flyer.
-
-How these rules were reached: [decisions.md](decisions.md#working-through-papers-2026-10-07-to-08) and the approved mockups in `archive/print-mockups-2026-10.html`.
+How these rules were reached: [design system plan](archive/design-system-plan-2026-10.md#working-through-papers-2026-10-07-to-08) and the approved mockups in `archive/print-mockups-2026-10.html`. Decisions: [planning 2608](https://github.com/life-itself/planning/blob/main/projects/2608-seeds-of-renaissance-rebrand.md) · [decision log](decisions.md)

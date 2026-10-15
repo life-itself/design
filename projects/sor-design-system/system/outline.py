@@ -15,7 +15,7 @@ from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 
 SYSTEM = pathlib.Path(__file__).resolve().parent
-URL = "seeds-domain.tbd"  # placeholder until the domain is decided (brand.md Open)
+URL = "seedsofrenaissance.org"
 NAME = "Seeds of Renaissance"
 INK, CHALK, WHITE, NIGHT, RED = "#1b1916", "#ece7dc", "#ffffff", "#171613", "#e5201c"
 THEMES = {"light": dict(ground=WHITE, ink=INK), "dark": dict(ground=NIGHT, ink=CHALK)}

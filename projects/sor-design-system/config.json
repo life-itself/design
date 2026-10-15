@@ -6,19 +6,69 @@
     "title": "SoR Design System",
     "links": [
       {
-        "name": "Home",
-        "href": "/"
-      },
-      {
-        "name": "Build",
+        "name": "Start here",
         "href": "/BUILD"
       },
       {
-        "name": "Guide",
-        "href": "/guide.html"
+        "name": "Make",
+        "links": [
+          {
+            "name": "Website",
+            "href": "/website"
+          },
+          {
+            "name": "Social and Canva",
+            "href": "/social"
+          },
+          {
+            "name": "YouTube",
+            "href": "/youtube"
+          },
+          {
+            "name": "Podcast",
+            "href": "/podcast"
+          },
+          {
+            "name": "Slides",
+            "href": "/slides"
+          },
+          {
+            "name": "Print and papers",
+            "href": "/print"
+          },
+          {
+            "name": "Diagrams",
+            "href": "/diagrams"
+          },
+          {
+            "name": "Email",
+            "href": "/email"
+          }
+        ]
       },
       {
-        "name": "System",
+        "name": "Assets",
+        "links": [
+          {
+            "name": "Logo",
+            "href": "/logo"
+          },
+          {
+            "name": "Logo files",
+            "href": "/logos.html"
+          },
+          {
+            "name": "Graphics",
+            "href": "/graphics"
+          },
+          {
+            "name": "Photography",
+            "href": "/photography"
+          }
+        ]
+      },
+      {
+        "name": "Foundations",
         "links": [
           {
             "name": "Feel",
@@ -41,120 +91,22 @@
             "href": "/layout"
           },
           {
-            "name": "Graphics",
-            "href": "/graphics"
-          },
-          {
-            "name": "Woodcuts",
-            "href": "/woodcuts.html"
-          },
-          {
-            "name": "Botanicals",
-            "href": "/system/botanicals/gallery.html"
-          },
-          {
-            "name": "Washes",
-            "href": "/system/washes/gallery.html"
-          },
-          {
-            "name": "Geometry",
-            "href": "/system/geometry/gallery.html"
-          },
-          {
-            "name": "Marks",
-            "href": "/system/marks/gallery.html"
-          },
-          {
-            "name": "Prints",
-            "href": "/system/prints/gallery.html"
-          },
-          {
-            "name": "Photography",
-            "href": "/photography"
-          },
-          {
-            "name": "Logo",
-            "href": "/logo"
-          },
-          {
-            "name": "Logo files",
-            "href": "/logos.html"
-          },
-          {
             "name": "Components",
             "href": "/components"
+          },
+          {
+            "name": "The whole system on one page",
+            "href": "/guide.html"
           }
         ]
       },
       {
-        "name": "Guides",
-        "links": [
-          {
-            "name": "Website",
-            "href": "/website"
-          },
-          {
-            "name": "Social 🚧",
-            "href": "/social"
-          },
-          {
-            "name": "YouTube 🚧",
-            "href": "/youtube"
-          },
-          {
-            "name": "Podcast 🚧",
-            "href": "/podcast"
-          },
-          {
-            "name": "Slides 🚧",
-            "href": "/slides"
-          },
-          {
-            "name": "Print",
-            "href": "/print"
-          },
-          {
-            "name": "Diagrams",
-            "href": "/diagrams"
-          },
-          {
-            "name": "Email 🚧",
-            "href": "/email"
-          },
-          {
-            "name": "Courses 🚧",
-            "href": "/courses"
-          },
-          {
-            "name": "Magazine 🚧",
-            "href": "/magazine"
-          }
-        ]
+        "name": "Brand",
+        "href": "/brand"
       },
       {
         "name": "Examples",
-        "links": [
-          {
-            "name": "All examples and status",
-            "href": "/examples"
-          },
-          {
-            "name": "Website pages",
-            "href": "/examples#website"
-          },
-          {
-            "name": "YouTube",
-            "href": "/examples/youtube/index.html"
-          },
-          {
-            "name": "Print: a paper",
-            "href": "/examples/print/index.html"
-          },
-          {
-            "name": "Diagrams",
-            "href": "/examples/diagrams/index.html"
-          }
-        ]
+        "href": "/examples"
       }
     ]
   },

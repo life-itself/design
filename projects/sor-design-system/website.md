@@ -2,7 +2,7 @@
 
 Pages for the Seeds of Renaissance website, built in HTML and CSS from the system. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first for the rules that apply everywhere.
 
-Examples: [examples/web/](examples.md#website). Status: see [examples.md](examples.md#status).
+Examples: [examples/web/](examples.md#website).
 
 ## How to build a page
 
@@ -19,7 +19,7 @@ Examples: [examples/web/](examples.md#website). Status: see [examples.md](exampl
 
 2. **Keep the shell**: the `<head>` links, `<body class="sor">`, `graphics.js` first in the body, `sor.js` last, the site header and footer.
 
-3. **Compose sections from the menu below.** Each section is a full-width ground with the page gutter. Use only classes from `system/components.css`. If you need something the system lacks, add it to `system/components.src.css` (token-based, no page-specific colours), run `python3 system/build-css.py`, and say so.
+3. **Compose sections from the list below.** Each section is a full-width ground with the page gutter. Use only classes from `system/components.css`. If you need something the system lacks, add it to `system/components.src.css` (token-based, no page-specific colours), run `python3 system/build-css.py`, and say so.
 
 4. **Write real copy.** Use [voice.md](voice.md) for how we sound (key lines, button text, titles) and [brand.md](brand.md) for who we are and what we offer; real page copy is in [content/](content/).
 
@@ -34,6 +34,7 @@ Examples: [examples/web/](examples.md#website). Status: see [examples.md](exampl
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Page name · Seeds of Renaissance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&display=swap">
 <link rel="stylesheet" href="system/fonts.css">
 <link rel="stylesheet" href="system/tokens.css">
@@ -55,29 +56,25 @@ Examples: [examples/web/](examples.md#website). Status: see [examples.md](exampl
 </html>
 ```
 
-Adjust the `system/` paths to where the page sits. Woodcuts are inline SVG: `<svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg>`.
+Google Fonts loads Bricolage Grotesque, plus two fallbacks: Fraunces, for Polyamine and Restora (not yet licensed), and Hanken Grotesk, if Apfel Grotezk fails to load ([type.md](type.md#fallbacks-and-licences)). Adjust the `system/` paths to where the page sits. Woodcuts are inline SVG: `<svg class="seed-icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-bean"/></svg>`.
 
-## Section menu
+## Sections
 
-| Section | Class | Ground | Use for |
-|---|---|---|---|
-| Header | `.site-header` (or `--centred` over a photo hero) | paper | every page |
-| Photo hero | `.hero-photo` | photograph, torn white edge | the one statement of a landing page |
-| Split hero | `.hero-split` + `.print` | sunlight | when there's no strong landscape photo |
-| Page title | `.page-hero` | sunlight | inner pages: title, dedication, a plate |
-| Statement | `.statement` | white | what we believe, a short manifesto paragraph |
-| Pathways | `.pathways` | paper | four ways in, each with its seed |
-| Selected work | `.night` + `.selected` | **night** | podcast, essays, art: the page's one deep section |
-| Printed object | `.object-feature` | sunlight | magazine, book |
-| Calendar | `.calendar` | white | upcoming dates |
-| Events | `.events` | paper | gatherings with photos |
-| Band | `.band` | sunlight | one call to action across the page |
-| Interlude | `.interlude` | sunlight | a single poetic line with a seed cluster |
-| Engage | `.engage` | white | newsletter, join, support |
-| Long reading | `.reading` (`.drop`, `.pull`, `.verse`, `.litany`) | white | articles, manifesto |
-| Footer | `.site-footer` | **night** | every page |
+Each links to its HTML in [components.md](components.md); see them rendered in [guide.html](guide.html).
 
-The full list, with HTML to copy, is in [components.md](components.md). See every component rendered in [guide.html](guide.html).
+- [Header](components.md#site-header) (paper): every page; `--centred` over a photo hero.
+- [Photo hero](components.md#photo-hero) (photograph, torn white edge): the one statement of a landing page.
+- [Split hero](components.md#split-hero) (sunlight): when there's no strong landscape photo.
+- [Page title](components.md#page-title) (sunlight): inner pages.
+- [Statement](components.md#statement) (white): what we believe.
+- [Pathways](components.md#pathways) (paper): four ways in, each with its seed.
+- [Selected work](components.md#selected-work-night) (**night**): the page's one deep section.
+- [Printed object](components.md#printed-object) (sunlight): magazine, book.
+- [Calendar](components.md#calendar) (white) and [events](components.md#events) (paper): upcoming dates; gatherings with photos.
+- [Band](components.md#band) and [interlude](components.md#interlude) (sunlight): one call to action; a single poetic line.
+- [Engage](components.md#engage) (white): newsletter, join, support.
+- [Long reading](components.md#long-reading) (white): articles, manifesto.
+- [Footer](components.md#footer) (**night**): every page.
 
 **A typical landing page:** header → photo hero → statement (white) → pathways (paper) → selected work (night) → printed object (sun) → calendar (white) → interlude (sun) → engage (white) → footer.
 

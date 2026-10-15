@@ -1,7 +1,9 @@
 name: Publish SoR design system
 
-# Builds projects/sor-design-system/site/ and force-pushes it as the root of the
-# `design-system-site` branch. Flowershow is connected to that branch.
+# Builds projects/sor-design-system/site/ and commits it on top of the
+# `design-system-site` branch. Flowershow is connected to that branch and syncs
+# by commit, so each build is a normal commit with the previous build as parent
+# (never a force-pushed fresh history, which Flowershow did not pick up).
 on:
   push:
     branches: [main]
@@ -42,12 +44,21 @@ jobs:
           python3 system/build-element-galleries.py
           python3 system/build-site.py
 
-      - name: Push site to design-system-site branch
-        working-directory: projects/sor-design-system/site
+      - name: Commit site on top of the design-system-site branch
+        env:
+          REMOTE: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         run: |
-          git init -q -b design-system-site
+          pub="$RUNNER_TEMP/pub"
+          if git ls-remote --exit-code --heads "$REMOTE" design-system-site >/dev/null; then
+            git clone -q --depth 1 --branch design-system-site "$REMOTE" "$pub"
+          else
+            git init -q -b design-system-site "$pub"
+          fi
+          rsync -a --delete --exclude .git projects/sor-design-system/site/ "$pub/"
+          cd "$pub"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
+          if git diff --cached --quiet; then echo "No changes to publish"; exit 0; fi
           git commit -q -m "Build of ${GITHUB_SHA::7}"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" design-system-site
+          git push -q "$REMOTE" HEAD:design-system-site

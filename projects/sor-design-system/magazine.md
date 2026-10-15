@@ -1,11 +1,5 @@
-# Magazine 🚧
+# Magazine
 
-Stub, possible. A magazine would be a sub-brand of Seeds of Renaissance: masthead, cover, issue layouts, web edition. Low priority and not yet confirmed; logged so it is not lost. Part of the [SoR design system](README.md).
+The Seeds of Renaissance magazine is a yearly, art-led print periodical where artists, writers and philosophers gather: #1 *Impermanence* (2024), #2 *Mythos* (2026). Subscriptions are €35 a year. What it is and where it sits in the brand: [brand.md](brand.md#offerings). Part of the [SoR design system](README.md).
 
-## To decide
-
-- Whether it happens at all, and whether print, web or both
-- How far the masthead departs from the parent logo and type
-- Cover and issue templates; how essays, diagrams and woodcuts sit on the page
-
-Reuse first: [print](print.md), [type](type.md), [layout](layout.md), [diagrams](diagrams.md), [woodcuts](woodcuts.html).
+Until a dedicated magazine guide exists, design it with [print.md](print.md) for printed pages, [website.md](website.md) for the web edition, and the system rules in [BUILD.md](BUILD.md): [type](type.md), [layout](layout.md), [diagrams](diagrams.md), [woodcuts](woodcuts.html). The magazine is where the full poetic voice is welcome ([voice.md](voice.md#register-by-place)).

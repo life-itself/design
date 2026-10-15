@@ -1,77 +1,58 @@
 # Seeds of Renaissance Design System
 
-How Seeds of Renaissance looks and why, with the code and examples to build from. **Version 0.1, 5 October 2026.** Live at https://design.seedsofrenaissance.org. Every photograph shown is a mood board placeholder, not cleared for public use.
+How Seeds of Renaissance looks and sounds, with the rules, the files and the examples to build from. Version 0.1. The photographs shown are mood board placeholders, not cleared for public use.
 
 <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
-  <a href="guide.html" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">See it</div><div class="mt-2 text-xl font-semibold text-stone-900">Read the whole system</div><p class="mt-2 text-sm text-stone-600">Every chapter rendered on one page: feel, colour, type, graphics, components, examples.</p></a>
-  <a href="/BUILD" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Build</div><div class="mt-2 text-xl font-semibold text-stone-900">Build with it</div><p class="mt-2 text-sm text-stone-600">The brief for people and AI agents: the rules, the page shell, sections to compose, a checklist.</p></a>
-  <a href="/examples" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Copy</div><div class="mt-2 text-xl font-semibold text-stone-900">See the examples</div><p class="mt-2 text-sm text-stone-600">Website pages, YouTube thumbnails and channel art. Slides next.</p></a>
+  <a href="#make-something" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Make</div><div class="mt-2 text-xl font-semibold text-stone-900">I'm making something</div><p class="mt-2 text-sm text-stone-600">A web page, a post, a thumbnail, slides, a paper, a diagram. Pick the format: its guide, an example to copy, and a Canva kit where there is one.</p></a>
+  <a href="#get-an-asset" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Assets</div><div class="mt-2 text-xl font-semibold text-stone-900">I need a file</div><p class="mt-2 text-sm text-stone-600">The logo in every colourway and lockup, the graphics library, photographs, fonts and the CSS.</p></a>
+  <a href="#understand-the-brand" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Brand</div><div class="mt-2 text-xl font-semibold text-stone-900">I want to understand it</div><p class="mt-2 text-sm text-stone-600">Who we are and who we speak to, the feel, the voice, and the foundations: colour, type, layout.</p></a>
 </div>
 
-**Setting up an AI agent?** Point it at [llms.txt](llms.txt), or hand it [BUILD.md](BUILD.md). Every page here is also served as raw markdown: add `.md` to its URL.
+**Briefing an AI agent?** Point it at [llms.txt](llms.txt) or hand it [BUILD.md](BUILD.md). Every page is also served as raw markdown: add `.md` to its URL.
 
 <iframe class="specimen" src="specimens/cover.html" style="aspect-ratio:1000/482" title="Grounded hope, set in ink and paper"></iframe>
 
-## Feel
+## Make something
 
-Every colour, face and layout decision is judged against one phrase: grounded hope. [The feel, registers and principles →](feel.md)
+Read [Start here](BUILD.md) once: the brief in one paragraph, the rules that apply everywhere and a checklist. Then:
+
+| Making… | Guide | Copy from |
+|---|---|---|
+| A web page | [Website](website.md) | [Website pages](examples.md#website) |
+| A social post, announcement or banner | [Social and Canva](social.md) | [Instagram kit](examples/social/instagram/index.html) |
+| A YouTube thumbnail or channel art | [YouTube](youtube.md) | [Thumbnails](examples/youtube/index.html) · [Channel art](examples/youtube/channel.html) |
+| A podcast cover, show art or episode art | [Podcast](podcast.md) | [Episode cover kit](examples/youtube/canva-kit/README.md) · [Show art](examples/podcast/README.md) |
+| A slide deck | [Slides](slides.md) | [Decks](examples/slides/index.html) |
+| A paper (PDF) or poster | [Print and papers](print.md) | [The Wisdom paper](examples/print/index.html) |
+| A diagram, figure or chart | [Diagrams](diagrams.md) | [Figures](examples/diagrams/index.html) |
+| The newsletter | [Email](email.md) | |
+
+All of them on one page: [Examples](examples.md).
+
+## Get an asset
+
+- **[Logo](logo.md)**: the rules and where it goes. **[Every logo file](logos.html)**: five colourways, five lockups, SVG and PNG.
+- **[Graphics](graphics.md)**: the library. Woodcut swallows, seeds and seals, animals, mountains, botanicals, washes, line geometry, marks and prints, each with its gallery and rules.
+- **[Photography](photography.md)**: what to choose and avoid.
+- **Fonts**: the four faces and where they come from, in [Type](type.md).
+- **Code**: [tokens.css](system/tokens.css) (every colour, face, size and space) and [components.css](system/components.css), with the HTML to copy in [Components](components.md).
+
+## Understand the brand
+
+- **[Brand](brand.md)**: why Seeds of Renaissance exists, what we offer, who we speak to, our names.
+- **[Feel](feel.md)**: grounded hope; the three registers; what we are not.
+- **[Voice](voice.md)**: how we sound, the key lines, calls to action, rewrites.
+
+### Foundations
 
 <iframe class="specimen" src="specimens/feel.html" style="aspect-ratio:1000/374" loading="lazy" title="Feel, rendered"></iframe>
 
-## Voice
-
-A poet-philosopher who thinks clearly: the lyrical leads, rigour grounds it. Key lines to reuse, principles, rewrites, calls to action and YouTube titles. Draft for review. [Voice and tone →](voice.md)
-
-## Colour
-
-Four grounds, three inks and one accent. Colour comes from photographs; buttons are black; the logo red is only for an occasional link. [Roles, proportion, do and don't →](colour.md)
+- **[Colour](colour.md)**: four grounds, three inks and one accent. Colour comes from photographs; buttons are black; the logo red is only for an occasional link.
+- **[Type](type.md)**: four faces. Length decides: Polyamine while it's short, Restora when it runs long. Bricolage Grotesque for reading, Apfel Grotezk for labels.
+- **[Layout](layout.md)**: a page is a stack of full-width grounds, often joined by torn edges. One night section per page, plus the footer.
+- **[Components](components.md)**: headers, heroes, statements, pathways, calendars, bands, footers, each with the HTML to copy.
+- **[The whole system on one page](guide.html)**: every chapter rendered with the real CSS.
 
 <iframe class="specimen" src="specimens/colour.html" style="aspect-ratio:1000/622" loading="lazy" title="Colour, rendered"></iframe>
 
-## Type
-
-Four faces. Length decides: Polyamine while it's short, Restora when it runs long. Bricolage Grotesque for reading, Apfel Grotezk for labels. [Faces, scale and research →](type.md)
-
-<iframe class="specimen" src="specimens/type.html" style="aspect-ratio:1000/1479" loading="lazy" title="Type, rendered"></iframe>
-
-## Layout and rhythm
-
-A page is a stack of full-width grounds, often joined by torn edges. One night section per page, plus the footer. [Sections, grounds, grid and spacing →](layout.md)
-
-<iframe class="specimen" src="specimens/rhythm.html" style="aspect-ratio:1000/536" loading="lazy" title="Grounds and rhythm, rendered"></iframe>
-
-## Woodcut graphics
-
-Printmade marks in ink or chalk, and a red set: the swallow, the seal, seeds and clusters. Animals in black, blue, green and mustard. Mountains in their drawn blues. Also coloured botanicals, watercolour washes, line geometry and marks. [Using them →](graphics.md) · [All twenty woodcuts →](woodcuts.html) · [Animals →](system/animals/gallery.html) · [Mountains →](system/mountains/gallery.html) · [Botanicals →](system/botanicals/gallery.html) · [Washes →](system/washes/gallery.html) · [Geometry →](system/geometry/gallery.html) · [Marks →](system/marks/gallery.html) · [Prints →](system/prints/gallery.html)
-
-<iframe class="specimen" src="specimens/graphics.html" style="aspect-ratio:1000/1200" loading="lazy" title="Woodcut graphics, rendered"></iframe>
-
-## Photography
-
-Real people outdoors, doing things together, beside engraving and printmaking. Photographs carry the colour. [What to choose and avoid →](photography.md)
-
-<iframe class="specimen" src="specimens/photography.html" style="aspect-ratio:1000/380" loading="lazy" title="Photography, rendered"></iframe>
-
-## Logo
-
-The swallow rising through red fingerprints, in five colourways and five lockups. [Rules and placement →](logo.md) · [Every logo file →](logos.html)
-
-<iframe class="specimen" src="specimens/logo.html" style="aspect-ratio:1000/262" loading="lazy" title="Logo, rendered"></iframe>
-
-## Components
-
-Headers, heroes, statements, pathways, calendars, bands, footers and more: each a real component with the HTML to copy. [All components →](components.md) · [Rendered in the guide →](guide.html#components)
-
-## Examples
-
-Whole pages and assets built only from the system: the website is done, YouTube, podcast and slides are under way, social, print and email come next. To make something new, copy the closest one. [All examples and their status →](examples.md)
-
-Building a paper? [How we build a paper →](publishing.md): design, paper anatomy, editorial craft and the Typst pipeline.
-
-<iframe class="specimen" src="specimens/templates.html" style="aspect-ratio:1000/2950" loading="lazy" title="Examples"></iframe>
-
-## Open questions
-
-**Sub-brands** is the big one: are *Mythos*, the papers, courses and *Gardens of Change* sub-brands with their own lockups and accents? Also: font licences, the logo's small version, photography (all placeholders), woodcut sourcing. [Details →](examples.md#open-across-all-of-them) · Tracking: beads `design-34t`.
-
-Maintaining this site (publishing, build scripts, where things came from): [MAINTAINING.md](MAINTAINING.md).
+Maintaining this site (build, publish, where things came from): [MAINTAINING.md](MAINTAINING.md).

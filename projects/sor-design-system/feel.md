@@ -6,7 +6,7 @@ Every colour, face and layout decision is judged against one phrase, not against
 
 ## Grounded hope
 
-Hope stays the destination, and it is earned by going through the dark rather than around it. A glowing sunrise painting is hope without ground; Dark Mountain is ground without much hope. We sit between: a skilled, caring presence at an ending and at a birth (the doula is a candidate guiding image, still open).
+Hope stays the destination, and it is earned by going through the dark rather than around it. A glowing sunrise painting is hope without ground; Dark Mountain is ground without much hope. We sit between: a skilled, caring presence at an ending and at a birth.
 
 **Light: dawn-leaning.** We are more about renaissance than hospicing an ending, though we do both.
 
@@ -32,12 +32,7 @@ Hope stays the destination, and it is earned by going through the dark rather th
 
 ## Who we design for
 
-People who sense the old world is ending before they can name it, and want to help seed the new: intellectually curious and practically hungry, allergic to hype, looking for grounded hope. Four personas (full detail in [brand.md](brand.md#who-we-are-here-for), from the brand narrative):
-
-- **The meaning seeker** (mid-30s to 50s): therapist, teacher, tech, health. Reads McGilchrist. Aesthetically sensitive; wants the people they follow to have done the reading.
-- **The post-disillusionment renewer** (40s to 60s): ex-church, ex-corporate, ex-academic, ex-activist. Allergic to hype; trusts people who admit they don't have it figured out.
-- **The awakening professional**: successful and feels the system is off; little time, so needs clear, digestible pieces.
-- **The disillusioned young seeker** (18 to 30): searching for meaning, belonging and a larger vision; values authenticity.
+People who sense the old world is ending before they can name it, and want to help seed the new: intellectually curious and practically hungry, allergic to hype, looking for grounded hope. The four personas are in [brand.md](brand.md#who-we-are-here-for).
 
 What they should feel: *"These people are honest. They're living it. I'm not alone in seeing what I see."* What this means for design: plain, honest entry points; real people in real places, not stock or glossy; depth one step away for those who want it.
 
@@ -53,17 +48,17 @@ What they should feel: *"These people are honest. They're living it. I'm not alo
 
 ## Eight principles
 
-The rules that carry the feel. When a new page is in doubt, check it against these.
+The rules that carry the feel, in short. When a new page is in doubt, check it against these; the working rules are in [BUILD.md](BUILD.md#rules-that-apply-everywhere).
 
-1. **Ink and paper first.** Pages are mostly white, paper and ink. Colour arrives in photographs, not in the interface.
-2. **Buttons are ink.** Every button is black, solid or outlined. On night they turn chalk.
-3. **Red is rare.** The logo red appears only as an occasional link in running text, and footnote marks. Never a button, never a background.
-4. **Pale yellow is light, not paint.** Sunlight is a ground for a whole section. Never text, never a highlighter, never a bright yellow.
-5. **One night per page.** At most one dark section, plus the footer. Dark and light always meet at a torn edge, never a straight line or a gradient.
-6. **Polyamine for anything short.** Every headline, title and hero is Polyamine, as long as it stays under about ten words. When display text runs longer, it moves to Restora. Reading is Bricolage.
-7. **Figures are plates.** Images are numbered and captioned like plates in a book: **Fig. 2** then an italic caption.
+1. **Ink and paper first.** Mostly white, paper and ink; colour arrives in photographs, not the interface.
+2. **Buttons are ink.** Black, solid or outlined; chalk on night.
+3. **Red is rare.** An occasional link in running text, and footnote marks; never a button or a background.
+4. **Pale yellow is light, not paint.** A ground for a whole section; never text, a highlighter or bright yellow.
+5. **One night per page,** plus the footer, meeting the light at a torn edge, never a straight line or a gradient.
+6. **Length decides the face.** Polyamine under about ten words, Restora beyond, Bricolage for reading ([type.md](type.md)).
+7. **Figures are plates.** Numbered and captioned like plates in a book: **Fig. 2** then an italic caption.
 8. **The hand is our texture.** Paper grain, torn edges, woodcut seeds and swallows, the fingerprints in the logo. Imperfection is made, not filtered on.
 
 ## References
 
-Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [decisions.md](decisions.md).
+Dark Mountain (seriousness, literary depth, torn ink edges); Emergence Magazine (visible structure, but too sleek and nature-mystical); Christopher Alexander and Iain McGilchrist (rigorous yet warm writing); wabi-sabi; Ally Capellino and Muji (good materials, no logos); a handmade potter's bowl; dawn and dusk. Full list and reasoning: [the archived plan](archive/design-system-plan-2026-10.md#references).

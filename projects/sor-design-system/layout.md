@@ -9,7 +9,7 @@ A page is a stack of grounds. Rhythm comes from changing the ground, not from bo
 - Every section runs full width, with the page gutter as side padding (`.gutter`, 16–56px) and vertical padding of 44–96px (`.section`).
 - Each section opens with a small muted label (`<span class="label">Coming up</span>`), then its content. Labels **name** the section; they are not numbered.
 - Give each section a ground: `.ground-white`, `.ground-paper`, `.ground-sun` or `.night`.
-- **Sections are full width; content is not.** A section's ground can span the whole screen, but the content inside is capped, centred, so text is never too wide on large screens: `--measure` (680px) for long-form reading, a wider container for headlines and grids. The problem to avoid is text lines stretching across a wide screen, not the colour reaching the edges (decided 2026-10-08, Rufus).
+- **Sections are full width; content is not.** A section's ground can span the whole screen, but the content inside is capped, centred, so text is never too wide on large screens: `--measure` (680px) for long-form reading, a wider container for headlines and grids. The problem to avoid is text lines stretching across a wide screen, not the colour reaching the edges.
 
 ## Rhythm of grounds
 
@@ -51,6 +51,6 @@ Rule: give the tear the colour of the ground it tears **out of**.
 ## Material
 
 - **Paper grain** sits over the whole page (`.sor::after`, multiply, 14%).
-- **Photographs sit clean**: flat, square, no mount, tilt or shadow. The postcard style (`.print`) is retired (decided 2026-10-08).
+- **Photographs sit clean**: flat, square, no mount, tilt or shadow. The postcard style (`.print`) is retired: don't use it.
 - **Printed objects** (magazine, book) get a deeper shadow (`--shadow-object`).
 - No rounded corners, no card shadows, no borders around sections.
