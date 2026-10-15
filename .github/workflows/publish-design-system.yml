@@ -40,6 +40,7 @@ jobs:
         run: |
           python3 system/build/build-specimens.py
           python3 system/build/build-galleries.py
+          python3 system/build/build-reference.py
           python3 system/build/build-site.py
 
       - name: Commit site on top of the design-system-site branch

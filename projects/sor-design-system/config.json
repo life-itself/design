@@ -50,6 +50,10 @@
         "name": "Assets",
         "links": [
           {
+            "name": "Reference",
+            "href": "/reference"
+          },
+          {
             "name": "Logo",
             "href": "/logo"
           },

@@ -36,6 +36,7 @@ To make something: read AGENTS.md first. It is the roadmap: find your job, read 
 
 ## Code
 
+- [reference.md](https://design.seedsofrenaissance.org/reference.md): everything in one place, one row each with its path: graphic sets, logo files, fonts, every token with its value, components, kits, examples
 - [system/tokens.css](https://design.seedsofrenaissance.org/system/tokens.css): every colour, face, size and space
 - [system/components.src.css](https://design.seedsofrenaissance.org/system/components.src.css): components, readable source
 - [system/components.css](https://design.seedsofrenaissance.org/system/components.css): components, built (link this one)
