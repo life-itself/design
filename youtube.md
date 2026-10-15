@@ -2,6 +2,8 @@
 
 Thumbnails and channel art for the Seeds of Renaissance YouTube channel. Part of the [SoR design system](README.md); all examples by kind in [examples.md](examples.md).
 
+**With your agent:** a podcast episode's thumbnail is its cover: paste the [episode cover prompt](podcast.md#make-an-episode-cover-with-your-agent). For any other video, paste the prompt for [anything else](prompts.md#make-anything-else), asking for "a YouTube thumbnail for [the video]": the agent follows the rules below.
+
 **See them:** [thumbnails and podcast covers](examples/youtube/index.html) · [channel art](examples/youtube/channel.html).
 
 <iframe class="specimen" src="specimens/examples-youtube.html" style="aspect-ratio:1000/985" loading="lazy" title="YouTube examples"></iframe>

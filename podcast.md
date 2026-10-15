@@ -1,8 +1,26 @@
 # Podcast
 
-Every image for the Seeds of Renaissance podcast: the episode cover for YouTube, the episode posts for Instagram, and show art. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
+Every image for the Seeds of Renaissance podcast: the episode cover for YouTube, the episode posts for Instagram, and show art. Part of the [SoR design system](README.md).
 
-Make an episode cover in Canva with the [podcast kit](examples/youtube/canva-kit/README.md); show art and episode art files: [examples/podcast/](examples/podcast/README.md).
+## Make an episode cover with your agent
+
+Paste this into your AI agent, in whichever repo you're working in, and fill in the brackets. It gives you the cover, a video title, the description's opening lines and the steps to finish it in Canva. A photo of the guest already cut out (a transparent PNG) gives the best result; without one, the agent leaves the guest for you to add in Canva.
+
+```text
+Make the YouTube cover (1280 × 720) for the Seeds of Renaissance podcast episode
+with [guest], about [what the episode is about, in a line].
+The hook: "[a phrase they say in the episode, three to five words]".
+The guest's photo: [path to the photo, ideally cut out].
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system (or, if that folder isn't there,
+https://design.seedsofrenaissance.org/AGENTS.md). Follow its "Episode cover" route and
+read only what it names. Don't change anything in the design repo.
+Give me the PNG, a video title, the description's opening lines, and the steps to
+finish it in Canva. Ask me for anything you need that you can't find. Then tell me
+what you checked and what you guessed.
+```
+
+By hand: make it in Canva with the [podcast kit](examples/youtube/canva-kit/README.md). Show art and episode art files: [examples/podcast/](examples/podcast/README.md).
 
 ![The podcast episode cover](examples/youtube/canva-kit/web/example-one-guest.jpg)
 

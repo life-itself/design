@@ -1,8 +1,24 @@
 # Slides
 
-Slide decks in the Seeds of Renaissance system: talks, calls, workshops, pitches. Part of the [SoR design system](README.md); read [BUILD.md](BUILD.md) first.
+Slide decks in the Seeds of Renaissance system: talks, calls, workshops, pitches. Part of the [SoR design system](README.md).
 
-**See them:** [example decks](examples/slides/index.html): [Study](examples/slides/study.html), fifteen slides on the Wisdom paper, and [Gathering](examples/slides/gathering.html), ten slides for a community call. Copy the closer one.
+## Make a deck with your agent
+
+Paste this into your AI agent, in whichever repo you're working in, and fill in the brackets. It gives you a deck to present from the browser and a PDF.
+
+```text
+Make a slide deck for Seeds of Renaissance: [the talk, the event and date, the speakers].
+Here is the outline: [the outline or text, or a path to it].
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system (or, if that folder isn't there,
+https://design.seedsofrenaissance.org/AGENTS.md). Follow its "Slides" route and
+read only what it names. Don't change anything in the design repo.
+Give me the deck as an HTML page I can present from, and a PDF.
+Ask me for anything you need that you can't find. Then tell me what you checked
+and what you guessed.
+```
+
+**See them:** [example decks](examples/slides/index.html): [Study](examples/slides/study.html), fifteen slides on the Wisdom paper, and [Gathering](examples/slides/gathering.html), ten slides for a community call. By hand, copy the closer one; open it in Chrome and print it to save a PDF, one slide per page.
 
 ## Two registers
 

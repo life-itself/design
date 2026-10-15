@@ -28,3 +28,14 @@ html, body { margin: 0; background: #fbfaf6 }
 .deck-nav { display: flex; gap: 18px; flex-wrap: wrap; padding-top: 18px; font-family: var(--font-label); font-size: var(--t-button); font-weight: 700; letter-spacing: .1em; text-transform: uppercase }
 .deck-nav a { text-underline-offset: 4px }
 .deck-nav a[aria-current] { text-decoration: none; color: var(--muted) }
+/* Print, or save as PDF: one slide per 1920 × 1080 page, nothing else */
+@media print {
+  @page { size: 1920px 1080px; margin: 0 }
+  html, body { background: none }
+  body > *:not(main), main > *:not(#slides), #slides figcaption, .present { display: none !important }
+  main, #slides, #slides figure { display: block !important; margin: 0 !important; padding: 0 !important; max-width: none !important }
+  #slides figure { break-after: page }
+  #slides figure:last-child { break-after: auto }
+  #slides .slide-frame { width: auto; aspect-ratio: auto; box-shadow: none }
+  #slides .slide-frame > .slide { position: relative; transform: none }
+}
