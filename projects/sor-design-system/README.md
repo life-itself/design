@@ -5,7 +5,7 @@ How Seeds of Renaissance looks and sounds, with the rules, the files and the exa
 <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
   <a href="#make-something" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Make</div><div class="mt-2 text-xl font-semibold text-stone-900">I'm making something</div><p class="mt-2 text-sm text-stone-600">A social post, a web page, a podcast cover, slides, a paper, a diagram. Pick what you're making: its guide, with the rules and an example to copy.</p></a>
   <a href="#get-an-asset" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Assets</div><div class="mt-2 text-xl font-semibold text-stone-900">I need a file</div><p class="mt-2 text-sm text-stone-600">The logo in every colourway and lockup, the graphics library, photographs, fonts and the CSS.</p></a>
-  <a href="#understand-the-brand" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Brand</div><div class="mt-2 text-xl font-semibold text-stone-900">I want to understand it</div><p class="mt-2 text-sm text-stone-600">Who we are and who we speak to, the feel, the voice, and the foundations: colour, type, layout.</p></a>
+  <a href="walkthrough" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Brand</div><div class="mt-2 text-xl font-semibold text-stone-900">I want to understand it</div><p class="mt-2 text-sm text-stone-600">A five-minute tour: who we are and who we speak to, the feel, the voice, then colour, type, graphics and layout.</p></a>
 </div>
 
 **Working with an AI agent?** Copy a prompt from [Use with an agent](prompts.md). Agents start at [the roadmap](AGENTS.md), which tells them what to read for each job.
@@ -36,6 +36,8 @@ All of them on one page: [Examples](examples.md).
 - **Code**: [tokens.css](system/tokens.css) (every colour, face, size and space) and [components.css](system/components.css), with the HTML to copy in [Components](components.md).
 
 ## Understand the brand
+
+Start with **[the five-minute tour](walkthrough.md)**: the whole system in one read, with a picture of each part. The pages below are the in-depth version.
 
 - **[Brand](brand.md)**: why Seeds of Renaissance exists, what we offer, who we speak to, our names.
 - **[Feel](feel.md)**: grounded hope; the three registers; what we are not.
