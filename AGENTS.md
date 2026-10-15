@@ -87,6 +87,7 @@ A podcast episode is published as a YouTube video, so its thumbnail is the episo
 
 ## Assets
 
+- **Look it up:** `reference.md` lists every graphic set, logo file, font, token, component, kit and example, one row each with its path.
 - **Logo:** `logo.md` says which version goes where; the files are in `system/logo/`, all shown on `logos.md`.
 - **Graphics:** `graphics.md` lists the sets and their rules; files and `elements.json` in `system/graphics/<set>/`.
 - **Photographs:** `photography.md`. Every current photograph is a placeholder, not cleared for use.

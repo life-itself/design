@@ -4,7 +4,7 @@ How Seeds of Renaissance looks and sounds, with the rules, the files and the exa
 
 <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
   <a href="#make-something" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Make</div><div class="mt-2 text-xl font-semibold text-stone-900">I'm making something</div><p class="mt-2 text-sm text-stone-600">A social post, a web page, a podcast cover, slides, a paper, a diagram. Pick what you're making: its guide, with the rules and an example to copy.</p></a>
-  <a href="#get-an-asset" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Assets</div><div class="mt-2 text-xl font-semibold text-stone-900">I need a file</div><p class="mt-2 text-sm text-stone-600">The logo in every colourway and lockup, the graphics library, photographs, fonts and the CSS.</p></a>
+  <a href="reference" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Assets</div><div class="mt-2 text-xl font-semibold text-stone-900">I need a file</div><p class="mt-2 text-sm text-stone-600">Everything on one page: every logo file, graphic, font, colour and size, with where to find it.</p></a>
   <a href="walkthrough" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Brand</div><div class="mt-2 text-xl font-semibold text-stone-900">I want to understand it</div><p class="mt-2 text-sm text-stone-600">A five-minute tour: who we are and who we speak to, the feel, the voice, then colour, type, graphics and layout.</p></a>
 </div>
 
@@ -29,6 +29,7 @@ All of them on one page: [Examples](examples.md).
 
 ## Get an asset
 
+- **[Reference](reference.md)**: everything on one page, one row each, with where its files are.
 - **[Logo](logo.md)**: the rules and where it goes. **[Every logo file](logos.md)**: five colourways, five lockups, SVG and PNG.
 - **[Graphics](graphics.md)**: the library. Woodcut swallows, seeds and seals, animals, mountains, botanicals, washes, line geometry, marks and prints, each with its gallery and rules.
 - **[Photography](photography.md)**: what to choose and avoid.

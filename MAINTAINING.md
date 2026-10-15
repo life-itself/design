@@ -41,7 +41,7 @@ Merge to `main`. The workflow [publish-design-system.yml](../../.github/workflow
 To build locally (for a preview, or to debug the workflow), from `projects/sor-design-system`:
 
 ```bash
-python3 system/build/build-specimens.py && python3 system/build/build-galleries.py && python3 system/build/build-site.py
+python3 system/build/build-specimens.py && python3 system/build/build-galleries.py && python3 system/build/build-reference.py && python3 system/build/build-site.py
 ```
 
 Keep the workflow's build steps in step with this list. The gallery builder makes thumbnails with ImageMagick (`magick`), or `sips` on macOS.
@@ -58,6 +58,7 @@ Keep the workflow's build steps in step with this list. The gallery builder make
 | `system/graphics.svg` / `graphics.js` | Woodcut symbols for `<use>`. Built by `system/build/build-graphics.py`. |
 | `system/graphics/<set>/` | The graphics library, one folder per set (sprite, woodcuts, animals, prints, botanicals, washes, lines, mountains): `elements/`, `elements.json`, a README and gitignored `thumbs/`. Schema and how to add an element: [system/graphics/README.md](system/graphics/README.md). |
 | `system/build/build-galleries.py` | Builds the library from every `elements.json`: a gallery page per set (`graphics/<set>.md`), the cards and rules table in `graphics.md`, and `logos.md`. Frame `system/graphics/gallery-shell.html`, look `library.css`, behaviour `library.js`. |
+| `system/build/build-reference.py` | Fills the tables in [reference.md](reference.md) from `tokens.css`, every `elements.json`, `system/logo/`, `system/fonts/`, the headings of `components.md` and `examples/`. The words around the tables are edited in reference.md. |
 | `system/build/` | The builders (`build-*.py`) and the modules they share with the example builds (`outline.py`, `swallows.py`). Not published |
 | `system/sor.js` | Small behaviours (selected-work picker) |
 | `system/img/` | The logo, and placeholder photos from the mood board (not cleared) |
