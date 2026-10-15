@@ -14,6 +14,17 @@ After a round of restructuring (three ways in on the home page, regrouped nav, g
 4. **The repo is the better source for agents.** Work happens in other repos (the website, social, papers). A person says to their agent "go to the design repo and find what you need to be on brand". An agent with a checkout should read the files in Git, not parse the published pages; the site is more for humans. Today the routes are site-first.
 5. **The use cases weren't thought through.** The work should start from who comes, what they are doing and the quickest way to get it done. Some repetition is fine if it serves a path. Maintainers need their own path too.
 
+## Four kinds of use (Rufus, 2026-10-15)
+
+The site serves four different needs, and each wants its own kind of page (the Diátaxis split):
+
+1. **Walkthrough: understand the whole system.** A compact tour, on one page or nearly, from the brand narrative through the feel, colour, type and graphics to an example or two, as a designer would want it, like the original brand deck. Two depths: at a glance (five minutes) and in depth.
+2. **How-to: apply it.** "I'm making X": the job routes, guides, prompts and kits. What people do day to day. Most of the work so far.
+3. **Reference: find a thing.** An index to look things up: all the woodcuts, all the fonts, every token, every logo file, every component.
+4. **Maintain: change it.** Add a graphic, change a token, record a decision, keep everything in step.
+
+The home page and nav should make these four obvious.
+
 ## Goal
 
 A design system that is best practice for people and for agents, and above all for people working with agents:

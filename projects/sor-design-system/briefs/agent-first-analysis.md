@@ -61,6 +61,17 @@ Rank is often × value, with weekly-or-more and high value first.
 | 10 | When I'm new to SoR, I want the brand in five minutes (feel, voice, what we are not), so I can make sensible choices on my own | C, A | Rare | Medium |
 | 11 | When I write the newsletter, I want its constraints and an example, so I can send it on brand | A, C | Monthly | Low (no example yet) |
 
+**Four kinds of use.** The jobs above are mostly how-to. Rufus named three more needs the site must serve, each a kind of page rather than a job:
+
+| Kind | Job story | Today |
+|---|---|---|
+| Walkthrough | When I want to understand the system as a whole, I want a compact tour from the brand narrative through feel, colour, type and graphics to an example, at a glance or in depth, so I can see how it fits together before I make anything | Only `guide.html` (the whole system rendered, no narrative) and the Brand, Feel and Voice pages (3,700 words) |
+| How-to | When I'm making X, I want the route for X, so I can make it on brand quickly | Jobs 1–9 and 11; the social route shipped |
+| Reference | When I need a thing (all the woodcuts, all the fonts, every token, every logo file), I want one index to look it up, so I can find it without reading guidance | Scattered: Logo files and Graphics galleries exist; fonts sit in Type, tokens in a CSS file, components in Components; no index |
+| Maintain | When I change the system, I want the steps and what to keep in step, so I can change it without breaking pages or other repos | Job 6; `MAINTAINING.md` and the roadmap's Maintain route |
+
+The home page's three doors (make, file, understand) map roughly to how-to, reference and walkthrough; maintain sits under About. Making all four explicit is part of the home and nav step.
+
 The top two for Phase 2 are as the brief guessed: **1, the website page** and **2, the social post**. Number 4 (check) and number 6 (maintain) are not separate pathways so much as the end of every pathway and the reason the others stay true.
 
 ## 3. Walking the current paths
