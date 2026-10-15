@@ -103,5 +103,96 @@
     "watercolour"
    ]
   ]
+ },
+ {
+  "slug": "butterfly-dark-spotted-photo",
+  "title": "Butterfly, dark with spotted hindwings",
+  "desc": "A dark birdwing-like butterfly, veined forewings over pale hindwings ringed with black spots. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "butterfly-swallowtail-striped-photo",
+  "title": "Butterfly, striped swallowtail",
+  "desc": "A pale swallowtail with bold black stripes across the forewings and tailed hindwings. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "butterfly-pale-tailed-photo",
+  "title": "Butterfly, pale with one tail",
+  "desc": "A pale butterfly with dark wingtips, one long tail on the lower left wing. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "butterfly-dark-edged-photo",
+  "title": "Butterfly, pale with dark edges",
+  "desc": "Pale wings with dark veins and heavy black borders around the hindwings. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "butterfly-banded-photo",
+  "title": "Butterfly, banded",
+  "desc": "Broad dark bands across pale wings, with spotted hindwings. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "butterfly-spotted-photo",
+  "title": "Butterfly, spotted",
+  "desc": "Pale wings scattered with round black spots and a beaded black border. Lettering across the source removed. Printed in three tones of each ink.",
+  "entry": "13",
+  "source": "Photographic plate",
+  "extra": [
+   [
+    "original",
+    "Original greys",
+    "photograph"
+   ]
+  ]
+ },
+ {
+  "slug": "loon-swimming-linocut",
+  "title": "Loon",
+  "desc": "A loon on the water, its back a grid of small white cuts, with curved ripples beneath.",
+  "entry": "14",
+  "source": "Linocut"
  }
 ]

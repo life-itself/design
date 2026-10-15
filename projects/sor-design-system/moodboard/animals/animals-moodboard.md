@@ -73,3 +73,15 @@ A hedgehog curled into an oval, asleep, its face and paws tucked in. Hundreds of
 ![[images/12-snake-coiled-watercolour.png]]
 
 A snake rising from a double coil, painted in dark green-grey scales over a pale yellow belly. A natural history watercolour rather than a print, with a plate number ("79") in the corner. Source link: not yet given.
+
+## 13 Six butterflies, photographic plate
+
+![[images/13-butterflies-six.png]]
+
+Six butterflies in two columns, in soft black and grey on cream paper, like an old natural history plate: a dark birdwing with spotted hindwings, a striped swallowtail, a pale butterfly with one tail, a pale one with dark edges, a banded one and a spotted one. Faint script lettering on the left edge and across the last butterfly. Source link: not yet given.
+
+## 14 Loon swimming, linocut
+
+![[images/14-loon-swimming-linocut.png]]
+
+A loon on the water, its back a grid of small white cuts, a striped collar and white streaks along the flank, with curved strokes for the ripples. White paper. Source link: not yet given.

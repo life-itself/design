@@ -34,6 +34,9 @@ In [`elements/`](elements/). Every name has an `.svg` (vector, traced) and a 100
 | `hedgehog-curled-linocut-{black,blue,green,mustard}` | Hedgehog curled up asleep, fine sweeping spines | mood board 11 |
 | `snake-coiled-watercolour-{black,blue,green,mustard}` | Coiled snake, two-tone: solid scales over a 22% tint of the same ink | mood board 12 |
 | `snake-coiled-watercolour-colour` (PNG only) | Same snake in its original watercolour colours, plate number removed | mood board 12 |
+| `butterfly-{dark-spotted,swallowtail-striped,pale-tailed,dark-edged,banded,spotted}-photo-{black,blue,green,mustard}` | Six butterflies, each a separate element, printed in three tones of the ink (solid, half and a light tint) | mood board 13 |
+| `butterfly-…-photo-original` (PNG only) | Each butterfly in its original greys | mood board 13 |
+| `loon-swimming-linocut-{black,blue,green,mustard}` | Loon swimming, with ripples | mood board 14 |
 
 ## How they are made
 
@@ -42,6 +45,8 @@ In [`elements/`](elements/). Every name has an `.svg` (vector, traced) and a 100
 ```
 
 The paper is flattened (divided by a blurred local maximum) so uneven light does not turn grey (skip this with `NOFLAT=1` for clean white sources with large solid areas, like 04), then thresholded and traced with `potrace` (`brew install potrace`). Solid linocuts suit a threshold around 70–75; thin engraved lines around 65–70.
+
+For a painted or photographic source (not a clean print), use `make-tonal.sh SOURCE NAME [crop] [edge%] [erase boxes]` instead. It keeps the original colours as `NAME-original.png` and prints each ink in three tones. It needs a dark edge round the animal; where a pale edge meets the paper the outline can come out a little ragged (the bottom of the spotted butterfly's hindwings).
 
 To add an animal: put the source in [[moodboard/animals/animals-moodboard]], run `make-element.sh`, check the result on a light ground, add a row to `elements.json` and this README, optimise the PNGs, then run `python3 build-gallery.py`.
 
