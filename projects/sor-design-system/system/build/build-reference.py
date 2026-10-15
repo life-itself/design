@@ -27,6 +27,7 @@ FONTS = [
 ]
 EXAMPLE_KINDS = [("web", "Website"), ("youtube", "YouTube"), ("social", "Social"), ("slides", "Slides"),
                  ("diagrams", "Diagrams"), ("print", "Print")]
+USE = {"--night-muted": "secondary text on night", "--night-rule": "hairlines on night"}  # tokens.css leaves these bare
 GENERIC = {"section", "gutter", "night", "label", "muted", "woodcut", "seal-corner"}
 SWATCH = ('<span style="display:inline-block;width:2.2em;height:1.4em;vertical-align:middle;'
           'background:{};border:1px solid rgb(0 0 0 / .18)"></span>')
@@ -74,8 +75,8 @@ def colours():
     for _, block in tokens():
         for group, name, value, use in block:
             if is_colour(value):
-                g = re.sub(r"\s*\(.*", "", group)
-                rows.append((SWATCH.format(value), f"`{name}`", f"`{value}`", g, use))
+                g = re.sub(r"\s*\(.*|^The one ", "", group)
+                rows.append((SWATCH.format(value), f"`{name}`", f"`{value}`", g, use or USE.get(name, "")))
     return table(["", "Token", "Hex", "Group", "Use"], rows)
 
 
@@ -124,7 +125,7 @@ def logos():
     ways = " · ".join(f"[{c}](system/logo/mark/seeds-mark-{c}.svg)" for c in COLOURWAYS if (L / f"mark/seeds-mark-{c}.svg").exists())
     rows.append(("The mark alone", ways, "SVG; PNG 1130px", "`system/logo/mark/seeds-mark-<colourway>.svg`"))
     sizes = sorted({int(m.group(1)) for p in (L / "mark/sizes").glob("*.png") if (m := re.search(r"-(\d+)(?:@2x)?\.png$", p.name))})
-    rows.append(("The mark drawn for small sizes", f"{sizes[0]} to {sizes[-1]}px: " + ", ".join(map(str, sizes)),
+    rows.append(("The mark drawn for each size", ", ".join(map(str, sizes)) + "px",
                  "PNG; @2x up to 128", "`system/logo/mark/sizes/seeds-mark-<colourway>-<px>.png`"))
     rows.append(("Favicon", "[favicon.ico](system/logo/favicon.ico)", "ICO: 16, 32, 48px", "`system/logo/favicon.ico`"))
     return table(["Version", "Colourways (SVG)", "Formats", "Path"], rows)
@@ -134,9 +135,11 @@ def fonts():
     toks = {n: u for _, b in tokens()[:1] for g, n, v, u in b}
     rows = []
     for face, names, weights, prefix, licence, src in FONTS:
-        role = "; ".join(f"`{n}`: {toks.get(n, '')}" for n in names)
+        role = "; ".join(f"`{n}`: " + toks.get(n, "").split(". ")[0] for n in names)
         if prefix:
-            fs = sorted(p.name for p in (ROOT / "system/fonts").glob(prefix + "*"))
+            order = ["Regular", "Mittel", "Fett"]  # by weight
+            fs = sorted((p.name for p in (ROOT / "system/fonts").glob(prefix + "*")),
+                        key=lambda f: next((i for i, w in enumerate(order) if w in f), len(order)))
             files = ", ".join(f"`{f}`" for f in fs) + " in `system/fonts/` (repo only)"
         else:
             files = "None in the repo: [Google Fonts](" + src + ")"
@@ -159,7 +162,7 @@ def components():
             names = re.findall(r"^\| `\.([\w-]+)`", body, re.M)
             cls = ", ".join(f"`.{c}`" for c in names[:6]) + (f" and {len(names) - 6} more" if len(names) > 6 else "")
         when = re.search(r"^When: (.+?)(?:\.\s|\.?$)", body, re.M) or re.search(r"^(\w[^\n]+?)\.?$", body, re.M)
-        rows.append((f"[{name}](components.md#{anchor})", cls, when.group(1) if when else "A table of classes"))
+        rows.append((f"[{name}](components.md#{anchor})", cls, when.group(1) if when else "Listed in a table on the page"))
     return table(["Component", "Class", "When"], rows)
 
 
