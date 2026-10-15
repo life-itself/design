@@ -1,7 +1,7 @@
 """Assemble ../site/ (gitignored): the publishable design system, for `fl --yes site`.
 Docs, guide, specimens, graphics galleries, system code and images, examples. Leaves out moodboard/ and archive/
 (the working record, linked on GitHub)."""
-import pathlib, re, shutil
+import pathlib, re, shutil, zipfile
 root = pathlib.Path(__file__).resolve().parent.parent.parent
 site = root / "site"
 keep = site / ".flowershow"
@@ -14,7 +14,19 @@ if saved:
 for f in list(root.glob("*.md")) + list(root.glob("*.html")) + [root / "config.json", root / "custom.css", root / "llms.txt"]:
     shutil.copy2(f, site / f.name)
 for d in ["examples", "specimens", "content", "graphics"]:
-    shutil.copytree(root / d, site / d)
+    # No .gitignore: the kits ignore *.zip in the repo, but the site branch must commit the kit downloads below
+    shutil.copytree(root / d, site / d, ignore=shutil.ignore_patterns(".gitignore"))
+# Kit downloads: each kit's png/ zipped into the numbered folders its README describes. Fixed timestamps, so an
+# unchanged kit gives a byte-identical zip and no new commit on the site branch.
+KITS = {"examples/social/instagram": ("sor-instagram-kit.zip", [("bg-", "1-backgrounds"), ("element-", "2-elements"),
+        ("layer-", "3-full-page-layers"), ("guides-", "4-guides"), ("example-", "5-examples")])}
+for kit, (name, folders) in KITS.items():
+    with zipfile.ZipFile(site / kit / name, "w", zipfile.ZIP_STORED) as z:
+        for png in sorted((root / kit / "png").glob("*.png")):
+            folder = next(f for prefix, f in folders if png.name.startswith(prefix))
+            info = zipfile.ZipInfo(f"{name[:-4]}/{folder}/{png.name}", date_time=(2026, 1, 1, 0, 0, 0))
+            info.external_attr = 0o644 << 16
+            z.writestr(info, png.read_bytes())
 # No .gitignore: the sets ignore thumbs/ in the repo, but the site branch must commit them for the galleries
 shutil.copytree(root / "system", site / "system", ignore=shutil.ignore_patterns("build", "*.py", "*.sh", "*-shell.html", ".gitignore", "fonts", "textures.txt", "__pycache__", "preview-*.png", "sw.json"))
 (site / "type").mkdir()

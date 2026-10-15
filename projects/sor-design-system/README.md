@@ -8,7 +8,7 @@ How Seeds of Renaissance looks and sounds, with the rules, the files and the exa
   <a href="#understand-the-brand" class="block border border-stone-300 bg-white p-6 no-underline hover:border-stone-900"><div class="text-xs font-semibold uppercase tracking-widest text-stone-500">Brand</div><div class="mt-2 text-xl font-semibold text-stone-900">I want to understand it</div><p class="mt-2 text-sm text-stone-600">Who we are and who we speak to, the feel, the voice, and the foundations: colour, type, layout.</p></a>
 </div>
 
-**Briefing an AI agent?** Point it at [llms.txt](llms.txt) or hand it [BUILD.md](BUILD.md). Every page is also served as raw markdown: add `.md` to its URL.
+**Working with an AI agent?** Copy a prompt from [Use with an agent](prompts.md). Agents start at [the roadmap](AGENTS.md), which tells them what to read for each job.
 
 <iframe class="specimen" src="specimens/cover.html" style="aspect-ratio:1000/482" title="Grounded hope, set in ink and paper"></iframe>
 
@@ -19,7 +19,7 @@ Read [Start here](BUILD.md) once: the brief in one paragraph, the rules that app
 | Making… | Guide | Copy from |
 |---|---|---|
 | A web page | [Website](website.md) | [Website pages](examples.md#website) |
-| A social post, announcement or banner | [Social and Canva](social.md) | [Instagram kit](examples/social/instagram/index.html) |
+| A social post, announcement or banner | [Social and Canva](social.md) | [Instagram kit](examples/social/instagram/README.md) |
 | A YouTube thumbnail or channel art | [YouTube](youtube.md) | [Thumbnails](examples/youtube/index.html) · [Channel art](examples/youtube/channel.html) |
 | A podcast cover, show art or episode art | [Podcast](podcast.md) | [Episode cover kit](examples/youtube/canva-kit/README.md) · [Show art](examples/podcast/README.md) |
 | A slide deck | [Slides](slides.md) | [Decks](examples/slides/index.html) |

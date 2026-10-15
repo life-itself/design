@@ -2,6 +2,8 @@
 
 Templates and elements for Seeds of Renaissance Instagram posts, on the same background as the podcast thumbnail's bottom-left layout: sunlight, the black swallows rising from the bottom-left corner, the logo's fingerprints faded around them. Words sit above the birds, and the logo (mark and name, no disc) sits under the words, as on the [podcast cover](../../youtube/canva-kit/README.md) signed off on 13 October 2026. Preview: [index.html](index.html).
 
+**[Download the kit](sor-instagram-kit.zip)** (zip, 14 MB): backgrounds, logo and elements, guides and examples, in the folders below. Working with an AI agent instead? Copy the prompt in [Use with an agent](../../../prompts.md#make-a-social-post).
+
 ![Podcast episode post](png/example-podcast-4x5.png)
 
 ## Sizes
@@ -11,7 +13,7 @@ Templates and elements for Seeds of Renaissance Instagram posts, on the same bac
 
 Instagram's profile grid crops posts to 3:4, trimming a little off the top and bottom of a 4:5 post. Everything important sits well inside that.
 
-## What's in the download
+## What's in the kit
 
 | Folder | Files | Use |
 |---|---|---|
