@@ -19,11 +19,25 @@ Ask me for anything you need that you can't find. Then tell me what you checked
 and what you guessed.
 ```
 
-Doing it by hand instead: the [Instagram kit](examples/social/instagram/README.md) has the backgrounds, the logo, guides and step-by-step instructions for Canva.
+The [Instagram templates](examples/social/instagram/README.md) show what it will make.
+
+## Make or change a website page
+
+Paste this into your agent in the `sor-website` repo. It writes the page in Markdown; the site's styles, synced from the design system, make it look right.
+
+```text
+[Make / change] the [which] page on the Seeds of Renaissance website, on brand.
+Use the Seeds of Renaissance design system: the roadmap is AGENTS.md in
+~/src/life-itself/design/projects/sor-design-system. Follow its "Website page" route
+and read only what it names. This repo's own AGENTS.md wins where they differ.
+Don't change anything in the design repo.
+Write real copy in our voice and mark anything you're unsure of with a TODO.
+Ask me for facts you can't find. Then tell me what you checked and what you guessed.
+```
 
 ## Make anything else
 
-For any other job (a web page, a thumbnail, slides, a diagram), the agent finds its route in the roadmap.
+For any other job (a thumbnail, slides, a diagram, a paper), the agent finds its route in the roadmap.
 
 ```text
 Make [what you need] for Seeds of Renaissance, on brand.

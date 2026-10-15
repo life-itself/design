@@ -106,7 +106,7 @@ The design system doesn't know how its main consumer works. `sor-website` is Flo
 
 Two consequences:
 
-- **The website route needs its own branch**: in `sor-website`, keep Flowershow's header, put sections from `components.md` into the Markdown inside `<div class="sor">`, use only synced classes, no woodcuts outside Home (no sprite), check an asset exists at the pin (`git show <pin>:path`) before using it, and ignore the page shell. A short table of which components each site page uses (podcast: intro, where to listen, latest and start-here episodes, band) would save most of the 26 calls. Changing a component means changing the design repo, then bumping the pin.
+- **The website route is mostly about words, not markup.** On the site, plain Markdown is already on brand (the synced CSS styles Flowershow's pages), and `sor-website` decided against hand-written component HTML per page (`docs/templating-findings.md`): new kinds of page get a template in its build script. So the route has three cases: write or change a page in plain Markdown (voice, brand, real copy); a new kind of page (source plus build script, designed first as a mockup here); a change to the look (here, then bump the pin). `website.md` is about designing mockups, and now says so.
 - **Moving files breaks the website.** The pin is 42 commits behind (23 of them touch the design system). Today's graphics move took away two paths `sync-design.py` reads (`system/woodcuts/mountain-range.svg`, `system/img/logo.png`), so the next bump will fail. Paths other repos read are a contract, and the maintainer path has to say which they are.
 
 ### Walking as a person (no agent)
